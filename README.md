@@ -2,7 +2,11 @@
 
 Android simplificado instalado en la memoria interna de TV boxes, con una APK común para Android TV, WebView, video local y administración propia. El primer destino es **P291 / `gxlx2_p291_1g`**. El segundo equipo P271 es únicamente una referencia de diagnóstico.
 
-**Estado al 7/9/2026:** el usuario abrió el menú OEM, seleccionó la ROM completa 0.1.1 y confirmó Update. Tras Copying apareció la preparación Android al **2 %, inmóvil por más de diez minutos**. No repetir Update ni la entrada 0.7 como solución. La firma está comprobada contra el certificado OTA del P291, pero **recovery, instalación y respaldo original siguen sin confirmar**. [Nuevo resultado](diagnostico/primer-tv-update-20260907-1326/HALLAZGOS.md). Git local conserva el hilo; GitHub aún no publicado.
+**Estado al 7/9/2026:** el usuario abrió el menú OEM, seleccionó la ROM completa 0.1.1 y confirmó Update. Tras Copying apareció la preparación Android al **2 %, inmóvil por más de diez minutos**. No repetir Update ni la entrada 0.7 como solución. La firma está comprobada contra el certificado OTA del P291, pero **recovery, instalación y respaldo original siguen sin confirmar**. [Nuevo resultado](diagnostico/primer-tv-update-20260907-1326/HALLAZGOS.md). Git local conserva el hilo; publicación pública autorizada en tablerosapp-ctrl/mxqpro4k, en preparación.
+
+- [Empezar desde Claude Desktop / Fable 5.1](docs/ENTREGA-FABLE.md): contexto y revisión independiente H2.
+- [Colaboración y dos hipótesis](docs/COLABORACION.md): responsabilidades, evidencia y formato de retorno.
+- [Publicación y uso del clon](docs/PUBLICACION.md): historial saneado y dependencias que permanecen locales.
 
 - [Mapa visual del proyecto](docs/index.html): grafo navegable de componentes, archivos y roadmap; funciona sin internet.
 - [Estado y siguiente paso](docs/ESTADO.md): qué se sabe, qué falta y qué hacer según el resultado del TV.

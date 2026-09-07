@@ -1,0 +1,13 @@
+# Mensaje para Fable 5.1 en Claude Desktop
+
+Revisá el repositorio público https://github.com/tablerosapp-ctrl/mxqpro4k. Trabajamos sobre un TV box P291 y necesitamos una revisión independiente de la hipótesis H2, coordinada con Codex, que revisará H1. Primero leé docs/COLABORACION.md y el estado actual; registrá el commit público que recibiste.
+
+Queremos instalar en su memoria interna una ROM Android simplificada desde un pendrive, conservar drivers de video y APIs para APK Flutter/WebView, videos locales y actualización propia. No buscamos solo actualizar Chrome en el Android existente. El primer TV no tendrá red como requisito. Su ADB local ya funciona como shell UID2000; no habilites root ni cambies autenticación.
+
+Estado comprobado: la captura0.6 obtuvo el APK exacto de OTAUpgrade y otacerts del P291. La firma integral de nuestra ROM0.1.1 verifica en PC contra ese almacén. El recovery interno, sus claves y el bootloader instalado no se extrajeron. Al elegir y confirmar el ZIP completo en el menú OEM aparece Copying y luego preparación Android al2%, detenida más de diez minutos. No se observó recovery ni instalación; no hay respaldo original del TV confirmado. El resultado del último ciclo manual indicado todavía no fue comunicado.
+
+Tu línea H2 está en docs/hipotesis/H2-PREPARACION-RECOVERY.md. Auditá la cadena de preparación persistente: copia a /data/cache/update.zip, uncrypt_file, block.map, setupBcb, bootloader e ingreso al recovery interno. Contrastá el código del APK real con AOSP9 y con la referencia Amlogic, sin confundir referencias con el firmware instalado. Identificá si tenemos un error en la interpretación o en el paquete, y qué evidencia mínima permitiría distinguirlo.
+
+Antes de proponer una prueba física, devolvé: evidencia a favor/en contra, supuesto más débil, dato que refutaría H2, cambios concretos si los hubiera y condición de detención. No repitas Update ni propongas otra APK que solo solicite reboot. No presentes como instalado lo verificado en PC, ni el pstore de intentos viejos como un registro del intento actual. H1 y H2 pueden coexistir.
+
+Podés responder mediante issue, fork/PR o texto para el usuario. No necesitás credenciales de esta cuenta GitHub. No publiques claves, firmware, APK de terceros o logs crudos. Si falta un archivo imprescindible, indicá su ruta y por qué cambiaría la conclusión; primero usá las conclusiones saneadas, hashes y fuentes ya incluidas.

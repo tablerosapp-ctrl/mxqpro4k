@@ -52,3 +52,9 @@ Leer primero [README](README.md), [estado](docs/ESTADO.md), [especificación](do
 - debugfs Cygwin: cd al directorio, write con basename, cd /. Verificar fsck/contenido/metadatos/SELinux. No volver a usar destinos absolutos en write.
 - No sobrescribir releases verificadas para documentar. Rutas de herramientas/scripts existentes se conservan por dependencias. Claves de desarrollo no se imprimen ni publican.
 - Limpieza completada: docs/evidencia/limpieza-resultado.json, 6615135611 bytes. Se quitaron cachés, ZIP sin firma, payload extraído, imagen Armbian expandida y copia defectuosa debugfs; fuentes/logs/finales/respaldos conservados. Armbian puede regenerarse del gzip comprobado. No ejecutar otra limpieza automáticamente.
+
+## Publicación y colaboración solicitadas
+
+- El usuario pide primero documentación/Git actualizados y repositorio PUBLICO en tablerosapp-ctrl/mxqpro4k. Claude Desktop/Fable5.1 se usará en otraPC y otra cuenta; entregar URL y docs/ENTREGA-FABLE.md. No fingir acceso directo a ese modelo ni una revisión todavía no recibida.
+- Dos líneas independientes: H1 cierre de Android para Codex; H2 preparación persistente/recovery para Fable. Estado, falsación y contrato en docs/COLABORACION.md y docs/hipotesis/. No efectuar otra prueba física como parte de publicar o revisar documentación.
+- Publicar espejo de main saneado mediante docs/herramientas/publicar-github.py. Mantener historia operativa/guardas/artefactos originales. Configuración privada en privado/publicacion-redacciones.json; espejo y recibo en .publicacion/. No enviar el Git operativo directamente al remoto público. No force-push; revisar aportes remotos antes de exportar otra vez. Ver docs/PUBLICACION.md.

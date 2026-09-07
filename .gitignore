@@ -154,3 +154,6 @@ Desktop.ini
 /rom-simplificada/instalador/fixture-entrada-0.7*/
 /rom-simplificada/instalador/host-classes-0.7/
 /rom-simplificada/compilacion/acceso-usb-0.7/*.log
+
+# Espejo de publicación saneado y configuración privada del operador.
+/.publicacion/

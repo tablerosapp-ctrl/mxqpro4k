@@ -106,23 +106,32 @@ mxqpro4k/
 │   │   ├── limpieza-resultado.json
 │   │   └── mapa-ui.json
 │   ├── herramientas/
+│   │   ├── __pycache__/
+│   │   │   └── publicar-github.cpython-312.pyc
 │   │   ├── aplicar-limpieza.ps1
 │   │   ├── generar-mapa.py
 │   │   ├── mapa-template.html
 │   │   ├── planificar-limpieza.py
+│   │   ├── publicar-github.py
 │   │   └── verificar-documentacion.py
+│   ├── hipotesis/
+│   │   ├── H1-CIERRE-ANDROID.md
+│   │   └── H2-PREPARACION-RECOVERY.md
 │   ├── historico/
 │   │   ├── AGENTS-hasta-20260906-2004.md
 │   │   ├── INSTALACION-USB-hasta-0.3.md
 │   │   ├── INSTALADOR-hasta-0.3.md
 │   │   └── README.md
+│   ├── COLABORACION.md
 │   ├── DECISIONES.md
 │   ├── DESARROLLO.md
+│   ├── ENTREGA-FABLE.md
 │   ├── ESPECIFICACION.md
 │   ├── ESTADO.md
 │   ├── GIT.md
 │   ├── LIMPIEZA.md
 │   ├── proyecto.json
+│   ├── PUBLICACION.md
 │   └── ROADMAP.md
 ├── images/
 │   └── Armbian_26.05.0_amlogic_s905l2_noble_6.12.91_server_2026.06.01.img.gz

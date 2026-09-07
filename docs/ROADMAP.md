@@ -35,3 +35,7 @@ Relacionar el cambio con REQ → decisión → componente → prueba → etapa. 
 
 
 **Actualización 7/9:** captura 0.6 completa, APK y certificados del P291 analizados. Entrada 0.7 probada: menú abierto y ZIP real confirmado, preparación detenida al 2 %; recovery e instalación pendientes. [Hallazgos](../diagnostico/primer-tv-complemento-20260907-003114/HALLAZGOS.md) · [Flujo Git](GIT.md).
+
+## Revisión conjunta antes de otra prueba
+
+El usuario pidió dos hipótesis en paralelo, tras publicar el estado. [H1](hipotesis/H1-CIERRE-ANDROID.md) corresponde a cierre Android y [H2](hipotesis/H2-PREPARACION-RECOVERY.md) a preparación/entrada recovery. Ambas están abiertas; la revisión de Fable aún no fue recibida. No se cierra M1 por preparar estos documentos. [Contrato de colaboración](COLABORACION.md).

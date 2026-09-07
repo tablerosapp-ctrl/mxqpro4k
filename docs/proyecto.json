@@ -10,7 +10,9 @@
     "state": "docs/ESTADO.md",
     "decisions": "docs/DECISIONES.md",
     "roadmap": "docs/ROADMAP.md",
-    "delivery_receipt": "preparacion-usb/entrada-oem-07-estado.json"
+    "delivery_receipt": "preparacion-usb/entrada-oem-07-estado.json",
+    "collaboration": "docs/COLABORACION.md",
+    "publication": "docs/PUBLICACION.md"
   },
   "components": [
     {
@@ -232,7 +234,11 @@
         "diagnostico/primer-tv-complemento-20260907-003114/analisis-actualizador/ANALISIS.md",
         "rom-simplificada/instalador/EVIDENCIA-TESTS-0.6.json",
         "diagnostico/primer-tv-update-20260907-1326/HALLAZGOS.md",
-        "diagnostico/primer-tv-update-20260907-1326/resumen-saneado.json"
+        "diagnostico/primer-tv-update-20260907-1326/resumen-saneado.json",
+        "docs/COLABORACION.md",
+        "docs/ENTREGA-FABLE.md",
+        "docs/hipotesis/H1-CIERRE-ANDROID.md",
+        "docs/hipotesis/H2-PREPARACION-RECOVERY.md"
       ],
       "x": 4,
       "y": 1,
@@ -888,5 +894,10 @@
   ],
   "delivery_label": "Acceso 0.7 probado · Update detenido al 2 %",
   "date_label": "Resultado físico comunicado el 7 de septiembre de 2026",
-  "next_step_label": "No repetir Update. Un ciclo manual de alimentación para salir del bloqueo; conservar USB y comunicar si aparece Android, recovery o instalación."
+  "next_step_label": "Compartir repositorio y entrega con Claude Desktop; contrastar H1 cierre Android y H2 preparación/recovery antes de otra prueba.",
+  "public_repository": {
+    "url": "https://github.com/tablerosapp-ctrl/mxqpro4k",
+    "visibility_requested": "public",
+    "status": "preparing"
+  }
 }

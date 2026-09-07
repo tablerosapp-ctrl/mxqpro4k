@@ -188,6 +188,10 @@ Requisitos: .
 - [rom-simplificada/instalador/EVIDENCIA-TESTS-0.6.json](../rom-simplificada/instalador/EVIDENCIA-TESTS-0.6.json)
 - [diagnostico/primer-tv-update-20260907-1326/HALLAZGOS.md](../diagnostico/primer-tv-update-20260907-1326/HALLAZGOS.md)
 - [diagnostico/primer-tv-update-20260907-1326/resumen-saneado.json](../diagnostico/primer-tv-update-20260907-1326/resumen-saneado.json)
+- [docs/COLABORACION.md](../docs/COLABORACION.md)
+- [docs/ENTREGA-FABLE.md](../docs/ENTREGA-FABLE.md)
+- [docs/hipotesis/H1-CIERRE-ANDROID.md](../docs/hipotesis/H1-CIERRE-ANDROID.md)
+- [docs/hipotesis/H2-PREPARACION-RECOVERY.md](../docs/hipotesis/H2-PREPARACION-RECOVERY.md)
 
 ### C-APP · APK del producto
 
@@ -235,7 +239,7 @@ Implementación pendiente; especificación en [ESPECIFICACION](ESPECIFICACION.md
 | actualizacion-chrome | 51 | 0.417 |
 | analisis-rom | 15 | 1.822 |
 | diagnostico | 151 | 0.018 |
-| docs | 21 | 0.000 |
+| docs | 28 | 0.000 |
 | dossier-s905l2.html | 1 | 0.000 |
 | images | 1 | 1.352 |
 | platform-tools-latest-windows.zip | 1 | 0.008 |
