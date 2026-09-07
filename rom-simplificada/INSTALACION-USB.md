@@ -1,37 +1,37 @@
 # Pendrive · instrucciones vigentes
 
-Acceso USB0.5 produjo dos capturas parciales: el límite de APK detuvo la recopilación antes de OTAUpgrade y se encontró un defecto en la comprobación SHA de binarios. Ambas carpetas ya están conservadas en la PC. La versión **0.6** obtiene únicamente los archivos que faltan, **sin reiniciar**. La ROM sigue siendo0.1.1 y no está instalada.
+La captura 0.6 terminó correctamente y ya se analizó. Se verificó la firma completa de la ROM con el certificado OTA del primer P291. **La ROM aún no está instalada; su aceptación por el recovery interno no está demostrada.**
 
-**Copia0.6 verificada el7/9/2026 a las00:22 ART**, código0 y lectura SHA coincidente. [Recibo de entrega](../preparacion-usb/evidencia-06-estado.json) · [Estado](../docs/ESTADO.md).
+Acceso USB 0.7 quedó copiado y leído en el Kingston el 7/9/2026 a las 12:34 ART, con código 0 y SHA coincidente. [Recibo de entrega](../preparacion-usb/entrada-oem-07-estado.json). Solo comprueba el pendrive y abre el menú de actualización original. El primer ensayo de ese menú usó un ZIP vacío; el siguiente usará la ROM completa, con comprobaciones previas. No hay otro recopilador general ni una solución demostrada al atasco del reinicio.
 
-## Pasos con Acceso USB0.6
+## Pasos con Acceso USB 0.7
 
 1. Con Android iniciado en el **primer TV P291**, conectar el Kingston.
-2. Instalar **AccesoUSB-0.6.apk**, actualizando la aplicación anterior.
-3. Pulsar **«Guardar archivos que faltan (no reinicia)»**.
-4. Esperar la confirmación de guardado. Android permanece encendido. Si hay un error, conservar el mensaje y los archivos parciales sin repetir la captura.
-5. Conectar el Kingston a la PC para analizar la carpeta nueva **TVBASE-evidencia-…**.
+2. Instalar **AccesoUSB-0.7.apk**, actualizando Acceso USB.
+3. Pulsar **«Abrir actualización local»**. Esperar la comprobación: lee el ZIP completo y puede tardar varios minutos.
+4. En el menú original, pulsar **Select**, elegir **TVBASE-P291-A9-0.1.1-RECOVERY.zip**, pulsar **Update** y confirmar **Update**.
+5. Mantener conectados la alimentación y el pendrive durante la instalación y el respaldo. Si se detiene o queda sin señal, conservar fase, mensaje y tiempo; avisar antes de repetir o cortar la corriente.
 
-El complemento comprueba primero un SHA conocido, copia los certificados OTA públicos y el APK **OTAUpgrade** identificado en este P291, y guarda la configuración de arranque accesible. No copia Servicios de Google ni repite pstore. El APK y los certificados son obligatorios para declarar completo el complemento; la configuración puede registrar permisos denegados.
+La APK 0.7 no instala la ROM ni pulsa Update. El actualizador original prepara el paquete y solicita recovery al confirmar. No activar opciones de borrado si aparecen; el fabricante oculta algunas preferencias y no se garantiza conservar sus datos. El primer Update puede escribir una orden en cache antes de mostrar la confirmación.
 
-No hay que abrir Update ni elegir el ZIP durante este paso. La recopilación no solicita reinicio ni instalación. El registro recuperado apunta a un atasco del cierre del sistema, pero aún no se ha identificado su causa exacta ni demostrado una vía de instalación.
+El flujo OEM solicita recovery interno. `recovery.img` externo permanece guardado; no se afirma que esta vía lo cargue. La barra de progreso o el apagado no prueban que se haya escrito la ROM. No se requiere WiFi, internet ni Ethernet.
 
 ## Archivos y conservación
 
 ```text
 TVBASE/
-├── AccesoUSB-0.6.apk
-├── recovery.img
+├── AccesoUSB-0.7.apk
 ├── TVBASE-P291-A9-0.1.1-RECOVERY.zip
+├── recovery.img
 ├── TVBASE-MEDIA.txt
 ├── LEEME-AHORA.txt
-├── TVBASE-evidencia-…/        # conservar todas, incluidas parciales0.5
+├── TVBASE-evidencia-…/        # conservar todas, incluidas parciales
 ├── TVBASE-diagnostico-…txt
 └── … versiones .no-usar y carpetas de Android
 ```
 
-No se ha obtenido un respaldo original del TV. Conservar cualquier carpeta **TVBASE-respaldo-…** que llegue a generarse. El respaldo `usb-antes.img` de la PC corresponde al antiguo pendrive, no al TV.
+No se ha obtenido un respaldo original del TV. Conservar cualquier carpeta **TVBASE-respaldo-…** que aparezca. `usb-antes.img` de la PC corresponde al antiguo pendrive.
 
-Preparador vigente en PC: [preparar-evidencia-06.ps1](../preparacion-usb/preparar-evidencia-06.ps1). Copia por archivos, con identidad estable y lectura SHA; no formatea ni modifica particiones. No ejecutarlo otra vez por rutina.
+Preparador en PC: [preparar-entrada-oem-07.ps1](../preparacion-usb/preparar-entrada-oem-07.ps1). Copia por archivos con identidad estable, firma y SHA; no formatea ni cambia particiones. Su ejecución requiere las pruebas finales y el recibo propio para acreditar la entrega.
 
-[Hallazgos de las dos capturas](../diagnostico/primer-tv-evidencia-20260907-000948/HALLAZGOS.md) · [Defecto SHA y reproducción](instalador/MKSH-HALLAZGO-0.5.md) · [Implementación de la ROM](instalador/README.md).
+[Estado completo](../docs/ESTADO.md) · [Captura 0.6](../diagnostico/primer-tv-complemento-20260907-003114/HALLAZGOS.md) · [Firma contra el P291](../diagnostico/primer-tv-complemento-20260907-003114/certificados-ota.json) · [Receta de la ROM](instalador/README.md).

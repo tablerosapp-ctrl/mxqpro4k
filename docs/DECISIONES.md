@@ -21,6 +21,8 @@ Cada decisión identifica su alcance. Las referencias de AOSP/Amlogic explican e
 | ADR-15 | Recopilar directamente OTAUpgrade acreditado en este P291 y dar prioridad a sus certificados | SYSTEM_UPDATE_SETTINGS resolvió GMS y el límite4 dejó afuera OTAUpgrade. El complemento0.6 excluye esos splits y no repite datos de arranque ya adquiridos. |
 | ADR-16 | Nombres de funciones propios, SHA estricto y pruebas con mksh real | El alias hash de Android produjo valores vacíos en0.5; Bash no detectó la colisión. Validar64hex en cada resultado y un contenido conocido antes de copiar. Mantener un límite nunca justifica declarar éxito de una captura incompleta. |
 
+| ADR-17 | Captura P291 completa, firma integral verificada con su otacerts y entrada explícita al menú OEM con el ZIP real | La misma vía antes solo recibió un ZIP vacío. 0.7 comprueba perfil/USB/ROM/APK y abre MainActivity; no inicia Update ni corrige el reinicio. La OEM prepara BCB/mapa mediante framework y solicita recovery interno; éxito real y claves internas pendientes. |
+
 ## Incidentes que no deben repetirse
 
 - **USB y formato:** tres grabaciones fallaron con errores nativos y redetección. Cambiar letra no cambió la conexión. La cuarta funcionó tras cambiar físicamente de ruta. «No aparece en Explorador» no equivalía a «no existe el disco». El volumen pudo recuperarse. No atribuir causa precisa sin evidencia.
@@ -29,7 +31,7 @@ Cada decisión identifica su alcance. Las referencias de AOSP/Amlogic explican e
 - **Sin señal tras recovery:** no demuestra instalación oculta, apagado físico ni recovery averiado. El LED no funciona. No inferir root de UID shell/userdebug/test-keys.
 - **debugfs:** el port Cygwin creó nombres literales con barras al usar destinos absolutos de `write`. Usar `cd`, nombre simple y verificar contenido, metadatos y fsck. Se conservan comandos/causa/logs; la imagen defectuosa local fue eliminada en la limpieza.
 - **Preservación de recovery:** auditar scripts y servicios del siguiente arranque además de la lista de particiones que escribe el ZIP.
-- **Versiones:** no copiar la APK nueva bajo nombre viejo. Los preparadores0.2/0.3/0.4 son históricos; el actual es `preparar-evidencia-05.ps1`.
+- **Versiones:** no copiar la APK nueva bajo nombre viejo. Los preparadores0.2/0.3/0.4 son históricos; el nuevo es `preparar-entrada-oem-07.ps1`, con su propio recibo y pruebas.
 
 ## Evidencia de la entrada alternativa
 
@@ -43,3 +45,5 @@ El [verificador de recovery AOSP](https://android.googlesource.com/platform/boot
 Evidencia de ADR-13: [análisis de informes0.4](../diagnostico/primer-tv-reportes-20260906-233826/HALLAZGOS.md). Implementación/criterios de ADR-14: [historial local y GitHub](GIT.md).
 
 La nueva evidencia0.5 y sus límites están en [hallazgos](../diagnostico/primer-tv-evidencia-20260907-000948/HALLAZGOS.md). La reproducción del defecto SHA se documenta en [MKSH-HALLAZGO-0.5](../rom-simplificada/instalador/MKSH-HALLAZGO-0.5.md).
+
+Evidencia de ADR-17: [captura completa P291](../diagnostico/primer-tv-complemento-20260907-003114/HALLAZGOS.md), [firma integral contra certificados reales](../diagnostico/primer-tv-complemento-20260907-003114/certificados-ota.json) y [análisis del actualizador](../diagnostico/primer-tv-complemento-20260907-003114/analisis-actualizador/ANALISIS.md). No confundir confianza del Android instalado con las claves de recovery ni inferir que un apagado prepara correctamente BCB/block.map.

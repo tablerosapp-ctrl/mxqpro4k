@@ -1,0 +1,108 @@
+{
+  "schema": "tvbase.certificados-ota.v1",
+  "fecha_comprobacion_local": "2026-09-07",
+  "alcance": "Auditoría en PC de certificados públicos capturados del primer TV P291 y del ZIP experimental existente. No se contactó al TV, no se modificó el USB y no se alteraron claves ni artefactos.",
+  "resultado": {
+    "firma_integral_zip_valida_con_certificado_capturado_del_primer_tv": true,
+    "aosp_android_9_verifyPackage_aceptaria_con_este_almacen": true,
+    "clasificacion_conclusion_framework": "Inferencia de la implementación AOSP Android 9, respaldada por verificación criptográfica local del archivo real; no ejecución física del framework del fabricante.",
+    "necesita_refirma_para_coincidir_con_otacerts_actual": false,
+    "confianza_del_recovery_interno_del_primer_tv": "desconocida",
+    "instalacion_o_arranque_demostrados": false
+  },
+  "primer_tv_otacerts": {
+    "nombre": "otacerts.zip",
+    "bytes": 1073,
+    "sha256": "7dd077650421772a3114c9132cd3da989b65f073459b7d8023e7138f2323a6c8",
+    "numero_certificados": 1,
+    "entrada": "testkey.x509.pem",
+    "entrada_pem_sha256": "a4384ba815b9499a5ce349b4e33c1755278873fe2eac150a068823f526e6dbde",
+    "certificado_der_sha256": "a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc",
+    "clave_publica_spki_sha256": "ef57b690165cb561b5026922c00d2d6574e8b184fa7d161e076f06e06e6d35db",
+    "algoritmo_clave_publica": "RSA",
+    "bits_clave_publica": 2048,
+    "exponente_publico": 3,
+    "igualdad_byte_a_byte_con_testkey_publica_aosp_local": true
+  },
+  "rom_comprobada": {
+    "archivo": "rom-simplificada/salida/TVBASE-P291-A9-0.1.1-RECOVERY.zip",
+    "bytes": 573089164,
+    "sha256": "e7279a7901bc0b513ccc5d3a66a1b5bf483908a4cffd30f34f5d8d463fc95205",
+    "certificado_pkcs7_der_igual_al_capturado": true,
+    "certificado_META_INF_com_android_otacert_igual_al_capturado": true,
+    "compatibility_zip_presente": false,
+    "verificacion_python": {
+      "resultado": "aprobado",
+      "codigo_existente": "rom-simplificada/instalador/empaquetar.py",
+      "funciones": ["der", "children", "verify_signature"],
+      "ejecucion": "Se extrajeron únicamente estas funciones por AST para evitar ejecutar el empaquetador. Se suministró el certificado leído del otacerts.zip capturado del primer TV, sin recurrir a una clave privada.",
+      "comprobaciones": [
+        "Footer OTA y tamaño del comentario EOCD coherentes",
+        "Una única cabecera EOCD dentro del comentario y su cabecera",
+        "PKCS7 con un certificado y un firmante; SHA256/RSA sin atributos firmados",
+        "Igualdad DER del certificado del firmante con el certificado capturado",
+        "Firma RSA PKCS1v1.5 válida del SHA256 de toda la región firmada del ZIP"
+      ]
+    },
+    "verificacion_independiente_openjdk": {
+      "resultado": "aprobado",
+      "codigo_existente": "rom-simplificada/instalador/VerifyWholeZip.java",
+      "runtime": "OpenJDK 21.0.12.1+1",
+      "implementacion": "sun.security.pkcs.PKCS7.verify",
+      "salida": "OpenJDK PKCS7: whole-file SHA256/RSA signature verified",
+      "alcance": "Comprueba criptografía de la firma integral con otra implementación. La selección del ancla de confianza del primer TV está comprobada por la verificación Python y la comparación pública separada."
+    }
+  },
+  "actualizador_apk_capturado": {
+    "nombre": "OTAUpgrade.apk",
+    "bytes": 190988,
+    "sha256": "9ffb822fc76974ee9df8c5493f0929638b69140f71506946cb410bab489a1d9c",
+    "verificador": "apksigner build-tools 37; verify --verbose --print-certs --min-sdk-version 28 --max-sdk-version 28",
+    "codigo_salida": 0,
+    "firma_v3_verificada": true,
+    "certificado_firmante_der_sha256": "c8a2e9bccf597c2fb6dc66bee293fc13f2fc47ec77bc6b2b0d52c11f51192ab8",
+    "clave_publica_firmante_spki_sha256": "3d3df7dc9bf26e02d4cd76256d41d45e41a4dedebe7feb95c40e3697681be8a7",
+    "misma_clave_publica_que_otacerts": false,
+    "interpretacion": "La firma de la APK y las claves que autorizan paquetes OTA son mecanismos distintos. Una diferencia entre ambas no demuestra rechazo de la ROM."
+  },
+  "comparaciones_limitadas": {
+    "segundo_tv_p271": {
+      "otacerts_bytes": 1073,
+      "otacerts_sha256": "7dd077650421772a3114c9132cd3da989b65f073459b7d8023e7138f2323a6c8",
+      "archivo_otacerts_identico_al_primer_tv": true,
+      "alcance": "Únicamente identidad de los bytes del almacén público. No extrapola firmware, hardware, particiones ni claves del recovery del segundo TV al primero."
+    },
+    "system_del_candidato_original": {
+      "fuente": "analisis-rom/candidato-android9.img; lectura de /etc/security/otacerts.zip mediante Sparse/Ext4 existentes, sin montar ni modificar la imagen",
+      "otacerts_bytes": 963,
+      "otacerts_sha256": "5022a66664b6399a344f42a3023bceb4c1aed06c3d84a65a7e36f398b61bed1b",
+      "entrada": "testkey.x509.pem",
+      "entrada_pem_sha256": "d31122e7e86d4ecf062cc2f44207f7e5d7fd6bd47839e76637df35316e2b2014",
+      "certificado_der_sha256": "780742cedda75adb6e7881cb247a0cf98491825bfa3d70f20762e6d5921adcae",
+      "clave_publica_spki_sha256": "111fefc06078f9eeeedfb576af57b8cfea124788caded3843f76ef2def65db60",
+      "misma_clave_publica_que_primer_tv": false,
+      "alcance": "El nombre testkey.x509.pem no acredita igualdad de clave. Esta diferencia pertenece al candidato original; no cambia lo observado en el Android actual del P291. Se debe revisar el almacén del sistema final al definir futuras actualizaciones."
+    }
+  },
+  "base_primaria": {
+    "version": "AOSP android-9.0.0_r1",
+    "fuente": "https://android.googlesource.com/platform/frameworks/base/+/android-9.0.0_r1/core/java/android/os/RecoverySystem.java",
+    "copia_local_publica": "tools/firmar-ota/RecoverySystem-aosp9.java",
+    "bytes_fuente": 47968,
+    "sha256_fuente": "05e24633b21d8043e46c271d954e0ed31c8205b3c993e4ccfcbf068d1c138ec8",
+    "semantica_relevante": [
+      "DEFAULT_KEYSTORE es /system/etc/security/otacerts.zip.",
+      "getTrustedCerts lee certificados X509 de las entradas del ZIP.",
+      "verifyPackage compara la clave pública del certificado PKCS7 con las claves públicas del almacén; no compara nombres de archivos ni subjects.",
+      "Luego verifica la firma PKCS7 de toda la región firmada del archivo OTA.",
+      "La comprobación de compatibilidad adicional devuelve true cuando no existe compatibility.zip."
+    ]
+  },
+  "limites": [
+    "No se ejecutó RecoverySystem.verifyPackage en el TV ni se afirmó que el fabricante conserve el framework sin modificaciones.",
+    "La confianza del Android arrancado no revela el contenido de /res/keys del recovery interno.",
+    "No se comprobó aceptación por el bootloader, arranque de recovery, compatibilidad de drivers ni instalación de la ROM.",
+    "No se repitió ningún reinicio y no se escribió en particiones del TV.",
+    "El resumen incluye únicamente huellas de archivos y material público de certificados; omite identificadores privados del equipo y contenido crudo de los informes."
+  ]
+}

@@ -2,7 +2,7 @@
 
 Android simplificado instalado en la memoria interna de TV boxes, con una APK común para Android TV, WebView, video local y administración propia. El primer destino es **P291 / `gxlx2_p291_1g`**. El segundo equipo P271 es únicamente una referencia de diagnóstico.
 
-**Estado al7/9/2026:** dos capturas0.5 analizadas. El registro apunta a que el reinicio se atasca al cerrar el sistema. La herramienta0.5 dejó fuera el APK del actualizador por su límite y tenía un defecto SHA reproducido con mksh; Acceso USB0.6 ya está copiado y verificado en el Kingston para recoger directamente lo faltante sin reiniciar. **La ROM sigue sin instalar y no hay respaldo original del TV confirmado.** Git local conserva el historial; GitHub aún no publicado.
+**Estado al 7/9/2026:** captura 0.6 completa y analizada. La firma de la ROM 0.1.1 coincide con el certificado OTA del primer P291. Acceso USB 0.7 ya está copiado y verificado en el Kingston para comprobar el ZIP y abrir el menú original; el antiguo intento de ese menú usó un ZIP vacío. **La ROM sigue sin instalar, el recovery interno no está validado y no hay respaldo original del TV confirmado.** Git local conserva el historial; GitHub aún no publicado.
 
 - [Mapa visual del proyecto](docs/index.html): grafo navegable de componentes, archivos y roadmap; funciona sin internet.
 - [Estado y siguiente paso](docs/ESTADO.md): qué se sabe, qué falta y qué hacer según el resultado del TV.

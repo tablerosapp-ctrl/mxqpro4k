@@ -1,8 +1,8 @@
 {
-  "date_utc": "2026-09-07T03:23:10.840177+00:00",
+  "date_utc": "2026-09-07T15:36:28.008065+00:00",
   "state": "passed",
-  "links_checked": 172,
-  "component_paths_checked": 67,
+  "links_checked": 188,
+  "component_paths_checked": 74,
   "graph_valid": true,
   "roadmap_acyclic": true,
   "html_embedded_data_matches": true,
@@ -13,8 +13,8 @@
       "matched": true
     },
     {
-      "name": "AccesoUSB-0.6.apk",
-      "sha256": "7664b019051ed4e042a64e4e987501bbf3823224a839793a5811545991c1acd6",
+      "name": "AccesoUSB-0.7.apk",
+      "sha256": "a81c1cc8d871ae883f3d79f6e030b588e753b5ee633496da3087aa1a021f90a5",
       "matched": true
     },
     {
@@ -24,12 +24,14 @@
     },
     {
       "name": "LEEME-AHORA.txt",
-      "sha256": "8939b00748b608a0ab2f822bc39fd6c348f1ae1eb1158e9be51715fd0fdfe897",
+      "sha256": "ec8297fca66a5c9f9604ce46afc6048eff1187af49a3351b232c065c43aaadc5",
       "matched": true
     }
   ],
   "cleanup_bytes": 6615135611.0,
-  "caches_regenerated_since_cleanup": [],
+  "caches_regenerated_since_cleanup": [
+    "rom-simplificada/inspeccion/__pycache__"
+  ],
   "errors": [],
   "scope": "Documentos vigentes y archivos locales; no prueba ejecución del TV ni enlaces web remotos."
 }

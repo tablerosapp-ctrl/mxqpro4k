@@ -67,3 +67,7 @@ La [auditoría del índice](evidencia/git-inicial.json) no encontró binarios ni
 ## Corrección del recopilador0.6
 
 Se conserva0.5 íntegra y se agrega0.6 en un directorio propio. El cambio documenta dos fallos reales: selección de GMS que agotó la cuota antes de OTAUpgrade, y alias `hash` de mksh que produjo digests vacíos. Los informes crudos siguen fuera de Git; sus hallazgos saneados, la reproducción, las pruebas finales y el recibo USB quedan versionados. El registro del reinicio previo acota el atasco al cierre del sistema sin identificar aún su causa. No se registra una instalación de ROM como conseguida.
+
+## Captura completa y entrada OEM 0.7
+
+Se incorporan la captura 0.6 saneada, la auditoría de firma contra el certificado real P291, el análisis del APK OEM y la entrada 0.7. Sus fuentes, pruebas y recibo de lectura USB identifican el entregable. El menú OEM no es un método nuevo: antes se había usado con un ZIP vacío; ahora se prepara su primer intento con la ROM completa. El historial sigue distinguiendo firma válida, apertura de menú e instalación física pendiente. GitHub permanece sin configurar.

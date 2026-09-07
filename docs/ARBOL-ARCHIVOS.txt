@@ -80,6 +80,12 @@ mxqpro4k/
 │   │   ├── actualizador-local.png
 │   │   ├── HALLAZGOS.md
 │   │   └── preparando-2-por-ciento.png
+│   ├── primer-tv-complemento-20260907-003114/
+│   │   ├── analisis-actualizador/
+│   │   │   └── ANALISIS.md
+│   │   ├── certificados-ota.json
+│   │   ├── HALLAZGOS.md
+│   │   └── resumen-saneado.json
 │   ├── primer-tv-evidencia-20260907-000948/
 │   │   ├── HALLAZGOS.md
 │   │   └── resumen-saneado.json
@@ -124,6 +130,8 @@ mxqpro4k/
 │   ├── boot-original/ [11 archivos; 0.2 MB; agrupado]
 │   ├── entrada-amlogic-20260906-200427/ [2 archivos; 0.0 MB; agrupado]
 │   ├── entrada-amlogic-estado.json
+│   ├── entrada-oem-07-20260907-123446/ [3 archivos; 0.0 MB; agrupado]
+│   ├── entrada-oem-07-estado.json
 │   ├── estado-grabacion-anterior-20260904-225502.json
 │   ├── estado-grabacion.json
 │   ├── estado-recuperacion.json
@@ -142,6 +150,7 @@ mxqpro4k/
 │   ├── instalador-android-estado.json
 │   ├── INVESTIGACION-USB.md
 │   ├── preparar-entrada-amlogic.ps1
+│   ├── preparar-entrada-oem-07.ps1
 │   ├── preparar-evidencia-05.ps1
 │   ├── preparar-evidencia-06.ps1
 │   ├── preparar-instalador-android.ps1
@@ -186,6 +195,18 @@ mxqpro4k/
 │   │   │   ├── Evidencia.java
 │   │   │   ├── EvidenciaScripts.java
 │   │   │   └── generar-scripts.py
+│   │   ├── acceso-usb-0.7/
+│   │   │   ├── __pycache__/
+│   │   │   │   └── generar-scripts.cpython-312.pyc
+│   │   │   ├── scripts/
+│   │   │   │   ├── etapa-0.sh
+│   │   │   │   └── etapa-1.sh
+│   │   │   ├── Acceso.java
+│   │   │   ├── AdbLocal.java
+│   │   │   ├── AndroidManifest.xml
+│   │   │   ├── Entrada.java
+│   │   │   ├── EntradaScripts.java
+│   │   │   └── generar-scripts.py
 │   │   ├── inicio/
 │   │   │   ├── AndroidManifest.xml
 │   │   │   └── Inicio.java
@@ -195,6 +216,8 @@ mxqpro4k/
 │   │       │       └── config_webview_packages.xml
 │   │       └── AndroidManifest.xml
 │   ├── inspeccion/
+│   │   ├── __pycache__/
+│   │   │   └── inventariar-ext4.cpython-312.pyc
 │   │   ├── boot-ramdisk/
 │   │   │   ├── default.prop
 │   │   │   ├── init.environ.rc
@@ -238,17 +261,23 @@ mxqpro4k/
 │   │   ├── ADB-TESTS.json
 │   │   ├── AdbHarness.java
 │   │   ├── candidato-bootloader-modos.json
+│   │   ├── compilar-entrada07.py
 │   │   ├── compilar-evidencia05.py
 │   │   ├── compilar-evidencia06.py
 │   │   ├── corregir-recovery-0.1.1.py
 │   │   ├── empaquetar.py
 │   │   ├── ENTRADA-TESTS-0.4.txt
+│   │   ├── ENTRADA-TESTS-0.7.json
 │   │   ├── EntradaHarness.java
+│   │   ├── EntradaHarness07.java
 │   │   ├── EVIDENCIA-TESTS-0.5.json
 │   │   ├── EVIDENCIA-TESTS-0.6.json
 │   │   ├── EvidenciaHarness.java
 │   │   ├── EvidenciaHarness06.java
 │   │   ├── FIRMA-OPENJDK-OK.txt
+│   │   ├── fixture-entrada-0.7-1_s4zo4j/ [63 archivos; 2.4 MB; agrupado]
+│   │   ├── fixture-entrada-0.7-8b1lf2ee/ [6 archivos; 0.2 MB; agrupado]
+│   │   ├── fixture-entrada-0.7-ua18a52i/ [117 archivos; 4.5 MB; agrupado]
 │   │   ├── fixture-evidencia-0.5/ [4 archivos; 0.0 MB; agrupado]
 │   │   ├── fixture-evidencia-0.5-9od8zo7l/ [5 archivos; 0.0 MB; agrupado]
 │   │   ├── fixture-evidencia-0.5-gnoxosbc/ [124 archivos; 0.6 MB; agrupado]
@@ -262,8 +291,10 @@ mxqpro4k/
 │   │   ├── host-classes/ [12 archivos; 0.0 MB; agrupado]
 │   │   ├── host-classes-0.5/ [9 archivos; 0.0 MB; agrupado]
 │   │   ├── host-classes-0.6/ [9 archivos; 0.0 MB; agrupado]
+│   │   ├── host-classes-0.7/ [9 archivos; 0.0 MB; agrupado]
 │   │   ├── inspeccionar-recovery-externo.py
 │   │   ├── LEEME-0.1.1.txt
+│   │   ├── LEEME-ENTRADA-0.7.txt
 │   │   ├── LEEME-ENTRADA-AMLOGIC.txt
 │   │   ├── LEEME-EVIDENCIA-0.5.txt
 │   │   ├── LEEME-EVIDENCIA-0.6.txt
@@ -279,6 +310,7 @@ mxqpro4k/
 │   │   ├── preparar-recovery-externo.py
 │   │   ├── README.md
 │   │   ├── test_adb.py
+│   │   ├── test_entrada07.py
 │   │   ├── test_evidencia05.py
 │   │   ├── test_evidencia06.py
 │   │   ├── update-binary
@@ -349,7 +381,7 @@ mxqpro4k/
 │   │   └── vendor.raw.img
 │   ├── .gitignore
 │   ├── claves-desarrollo/ [protegido; no se enumera su contenido]
-│   ├── compilacion/ [139 archivos; 0.9 MB; agrupado]
+│   ├── compilacion/ [164 archivos; 1.1 MB; agrupado]
 │   ├── compilar-componentes.py
 │   ├── fuentes-webview/ [14 archivos; 0.4 MB; agrupado]
 │   ├── INSTALACION-USB.md
@@ -361,7 +393,7 @@ mxqpro4k/
 ├── tools/
 │   ├── compilar-android/ [4 archivos; 125.6 MB; agrupado]
 │   ├── ext4-cygwin/ [74 archivos; 38.8 MB; agrupado]
-│   ├── firmar-ota/ [3 archivos; 0.1 MB; agrupado]
+│   ├── firmar-ota/ [4 archivos; 0.1 MB; agrupado]
 │   ├── imager-1.8.5.exe
 │   ├── imager-2.0.11.1/ [1444 archivos; 89.3 MB; agrupado]
 │   ├── imager-portable/ [371 archivos; 85.7 MB; agrupado]

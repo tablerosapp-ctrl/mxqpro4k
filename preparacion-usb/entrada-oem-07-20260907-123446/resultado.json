@@ -1,0 +1,26 @@
+{
+  "estado": "verificado",
+  "fecha": "2026-09-07T12:34:55.5236812-03:00",
+  "informe": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\preparacion-usb\\entrada-oem-07-20260907-123446",
+  "tv_flasheado": false,
+  "reboot_requested": false,
+  "files": [
+    {
+      "archivo": "AccesoUSB-0.7.apk",
+      "bytes": 29075,
+      "sha256": "a81c1cc8d871ae883f3d79f6e030b588e753b5ee633496da3087aa1a021f90a5",
+      "lectura_verificada": true
+    },
+    {
+      "archivo": "LEEME-AHORA.txt",
+      "bytes": 1537,
+      "sha256": "ec8297fca66a5c9f9604ce46afc6048eff1187af49a3351b232c065c43aaadc5",
+      "lectura_verificada": true
+    }
+  ],
+  "usb_id": "USBSTOR\\DISK&VEN_KINGSTON&PROD_DATATRAVELER_3.0&REV_\\KINGSTON_SERIAL_LOCAL&0:PC_LOCAL",
+  "drive_letter": "D",
+  "pruebas_sha256": "1dc6475960af5abbf79b520919b0fcb82e1be6b932dab264d6faa45a8c7d556d",
+  "release_sha256": "a81c1cc8d871ae883f3d79f6e030b588e753b5ee633496da3087aa1a021f90a5",
+  "detalle": "Acceso USB0.7 copiado y leido. Verifica el ZIP y abre el menu OEM; no inicia Update ni reinicio propio. ROM/recovery y capturas conservados."
+}

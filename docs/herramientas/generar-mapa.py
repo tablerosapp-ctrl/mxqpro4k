@@ -10,7 +10,7 @@ DOC = ROOT / 'docs'
 data = json.loads((DOC / 'proyecto.json').read_text(encoding='utf8'))
 derived = {'docs/index.html', 'docs/MAPA-ARCHIVOS.md', 'docs/ARBOL-ARCHIVOS.txt', 'docs/inventario.json', 'docs/evidencia/documentacion-verificada.json'}
 private = 'rom-simplificada/claves-desarrollo'
-private_captures = ('diagnostico/primer-tv-reportes-', 'diagnostico/primer-tv-evidencia-')
+private_captures = ('diagnostico/primer-tv-reportes-', 'diagnostico/primer-tv-evidencia-', 'diagnostico/primer-tv-complemento-')
 rows = []
 for p in sorted(ROOT.rglob('*')):
     if not p.is_file() or p.is_symlink():
@@ -44,13 +44,13 @@ for p in (ROOT / 'preparacion-usb').iterdir():
     if p.is_dir():
         collapse.add(p.relative_to(ROOT).as_posix())
 for p in (ROOT / 'rom-simplificada/instalador').iterdir():
-    if p.is_dir() and (p.name.startswith('host-classes') or p.name.startswith('fixture-evidencia-')):
+    if p.is_dir() and (p.name.startswith('host-classes') or p.name.startswith(('fixture-evidencia-', 'fixture-entrada-'))):
         collapse.add(p.relative_to(ROOT).as_posix())
 tree = {}
 fold = defaultdict(lambda: [0, 0])
 for row in rows:
     rel = row['path']
-    if rel.startswith(private_captures) and not (rel.endswith('/HALLAZGOS.md') or rel.endswith('/resumen-saneado.json') or rel.endswith('/evidencia-saneada.json')):
+    if rel.startswith(private_captures) and not (rel.endswith('/HALLAZGOS.md') or rel.endswith('/resumen-saneado.json') or rel.endswith('/evidencia-saneada.json') or rel.endswith('/certificados-ota.json') or rel.endswith('/ANALISIS.md')):
         continue  # Los originales no se enumeran en el árbol público.
     prefix = next((c for c in sorted(collapse) if rel.startswith(c + '/')), None)
     shown = prefix or rel

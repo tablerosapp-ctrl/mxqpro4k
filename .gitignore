@@ -149,3 +149,8 @@ Desktop.ini
 # Fixtures y clases de las pruebas complementarias0.6.
 /rom-simplificada/instalador/fixture-evidencia-0.6*/
 /rom-simplificada/instalador/host-classes-0.6/
+
+# Salidas locales de la entrada OEM 0.7.
+/rom-simplificada/instalador/fixture-entrada-0.7*/
+/rom-simplificada/instalador/host-classes-0.7/
+/rom-simplificada/compilacion/acceso-usb-0.7/*.log

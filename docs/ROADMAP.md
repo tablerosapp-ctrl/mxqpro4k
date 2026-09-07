@@ -4,8 +4,8 @@ Orden por dependencias, sin fechas prometidas. Una etapa se cierra con evidencia
 
 | Etapa | Situación | Trabajo y salida verificable | Dependencia |
 | --- | --- | --- | --- |
-| M0 · Base y paquete | Preparación local completada | Candidato inspeccionado, ROM0.1.1 firmada, complemento de evidencia0.6 y recovery externo preparados; VAL-01 a 04 | Ninguna |
-| M1 · Entrada USB P291 | **Entrada fallida; pstore analizado, falta APK OTA** | Recovery visible, origen identificado y ZIP aceptado; VAL-05 | M0 |
+| M0 · Base y paquete | Preparación local completada | Candidato inspeccionado, ROM0.1.1 firmada, captura 0.6 completada, firma contra P291 verificada y recovery externo preparado; VAL-01 a 04 | Ninguna |
+| M1 · Entrada USB P291 | **APK/certificados analizados; entrada OEM con ROM real pendiente** | Recovery visible, origen identificado y ZIP aceptado; VAL-05 | M0 |
 | M2 · Instalación y arranque | Pendiente | Respaldo completo, cinco escrituras verificadas, arranque TVBASE desde eMMC sin USB; VAL-06 y 07 | M1 |
 | M3 · Hardware y multimedia | Pendiente | Perfil real y suite de APIs/web/video/controles; dos VP9 + alfa/canvas y un 1080p; VAL-08 | M2 |
 | M4 · Recuperación repetible | Pendiente | Ensayar acceso sin Android y restauración con originales; documentar qué fallos cubre; VAL-09 | M1, M2; antes de ampliar pruebas destructivas |
@@ -15,7 +15,7 @@ Orden por dependencias, sin fechas prometidas. Una etapa se cierra con evidencia
 
 ## Propuestas ordenadas
 
-**PROP-01 · Resolver la entrada con evidencia del P291.** Las capturas0.5 muestran actividad del mismo kernel durante517,24s después del aviso de reinicio: el atasco apunta al cierre del sistema antes de reset, sin función culpable identificada. OTAUpgrade existe y tiene permisos de recuperación, pero el límite de captura dejó su APK fuera. El complemento0.6 obtiene directamente ese APK, otacerts y configuración faltante con SHA corregido y prueba mksh. Analizar su preparación del ZIP y órdenes persistentes antes de otra solicitud de reinicio.
+**PROP-01 · Instalar mediante el actualizador real del P291.** La captura 0.6 completó los archivos faltantes y verificó sus hashes. La firma integral de ROM 0.1.1 coincide con los certificados OTA del P291. El APK OEM copia a /data/cache/update.zip y solicita preparar BCB antes del reinicio; el framework debe generar block.map. Acceso 0.7 solo comprueba el ZIP y abrirá ese menú, donde antes se había elegido un ZIP vacío. El primer intento con el paquete real sigue pendiente. No afirma corregir el cierre atascado ni verificar persistencia de BCB/mapa. Para la plataforma final, diseñar una preparación verificable separada del reinicio y ensayar la recuperación interna.
 
 **PROP-02 · Paquete de restauración desde originales reales.** Después del primer respaldo, construir un ZIP de restauración específico de esa unidad/perfil, verificar sus payloads y demostrar que se puede entrar al recovery usado. No producir un supuesto respaldo original desde la ROM candidata. No prometer rollback automático en este esquema no A/B.
 
@@ -34,4 +34,4 @@ Orden por dependencias, sin fechas prometidas. Una etapa se cierra con evidencia
 Relacionar el cambio con REQ → decisión → componente → prueba → etapa. Conservar mensajes de error, versiones, hashes y el contexto del equipo. Un fallo no cierra una etapa; sí puede cerrar una hipótesis. Actualizar primero [ESTADO](ESTADO.md) y el recibo/evidencia, después [proyecto.json](proyecto.json), este roadmap y el mapa generado.
 
 
-**Actualización7/9, captura0.5:** Git local iniciado para conservar el hilo. Dos capturas0.5 parciales analizadas; complemento0.6 copiado y verificado, captura física pendiente; no se ha demostrado acceso efectivo a recovery ni instalado Android. Ver [hallazgos](../diagnostico/primer-tv-reportes-20260906-233826/HALLAZGOS.md) y [flujo Git](GIT.md).
+**Actualización 7/9:** captura 0.6 completa, APK y certificados del P291 analizados. Entrada 0.7 copiada y verificada en Kingston; recovery e instalación pendientes. [Hallazgos](../diagnostico/primer-tv-complemento-20260907-003114/HALLAZGOS.md) · [Flujo Git](GIT.md).

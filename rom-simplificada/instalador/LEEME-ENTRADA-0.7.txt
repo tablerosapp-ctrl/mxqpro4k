@@ -1,0 +1,27 @@
+TV BASE - Acceso USB 0.7 / ROM 0.1.1
+
+La captura 0.6 termino correctamente y ya esta guardada en la PC.
+Se verifico la firma completa de la ROM con el certificado del primer P291.
+Todavia no se comprobo su aceptacion por el recovery interno ni se instalo.
+
+1. Con Android iniciado en el PRIMER TV P291, conectar este Kingston.
+2. Instalar AccesoUSB-0.7.apk, actualizando Acceso USB.
+3. Pulsar "Abrir actualizacion local" y esperar. Se lee el ZIP completo
+   para comprobarlo; esto puede tardar varios minutos y no instala nada.
+4. En el menu original: Select -> elegir exactamente
+   TVBASE-P291-A9-0.1.1-RECOVERY.zip -> Update -> confirmar Update.
+
+La APK 0.7 solo comprueba y abre ese menu. El actualizador original es
+quien prepara y solicita la instalacion al confirmar Update. No requiere
+WiFi, Internet ni Ethernet. No activar opciones de borrar datos si aparecen.
+El fabricante oculta algunas opciones: no se garantiza conservar sus datos.
+
+Mantener la alimentacion y el pendrive durante la instalacion y el respaldo.
+La primera copia interna puede tardar. Si vuelve a quedarse detenido o sin
+senal, conservar el mensaje/porcentaje y avisar antes de repetir o cortar
+la corriente: esa pantalla por si sola no indica que haya instalado.
+
+No usar versiones .no-usar, el ZIP vacio ni los antiguos botones de reinicio.
+Conservar todas las carpetas TVBASE-evidencia y cualquier TVBASE-respaldo.
+El recovery.img externo sigue guardado, pero esta via solicita el recovery
+interno; no esta demostrado que cargue ese archivo del pendrive.

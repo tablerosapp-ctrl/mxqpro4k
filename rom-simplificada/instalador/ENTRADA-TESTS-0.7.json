@@ -1,0 +1,331 @@
+{
+  "state": "passed",
+  "version": "0.7",
+  "apk_sha256": "a81c1cc8d871ae883f3d79f6e030b588e753b5ee633496da3087aa1a021f90a5",
+  "tested_source_sha256": {
+    "rom-simplificada/componentes/acceso-usb-0.7/Acceso.java": "acc72c687b7cf1a8f8075225a06a178a91e84ee3c136a465e38f75f8fd3752db",
+    "rom-simplificada/componentes/acceso-usb-0.7/AdbLocal.java": "d238ab293accd2dac3981b8c5b15df675a6b2fc71297c328b381bb41f1bbcc62",
+    "rom-simplificada/componentes/acceso-usb-0.7/Entrada.java": "95341567c17ad762a11aa8cf01a3086b8ffddee3c6dbf6bb05335c08a34610ae",
+    "rom-simplificada/componentes/acceso-usb-0.7/EntradaScripts.java": "bb12beb248a20f1b881878ae987e5aa50686fc44a1b163abcdf0ba64ca9d92a8"
+  },
+  "scope": "PC only; OEM opening is stubbed; no TV or USB operations",
+  "adb": [
+    {
+      "case": "shell",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 0
+    },
+    {
+      "case": "auth",
+      "passed": true,
+      "observed_services": [],
+      "exit": 1
+    },
+    {
+      "case": "bad_checksum",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 1
+    },
+    {
+      "case": "early_eof",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 1
+    },
+    {
+      "case": "refused",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 1
+    },
+    {
+      "case": "zero_close",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 0
+    },
+    {
+      "case": "unknown_channel",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 1
+    },
+    {
+      "case": "duplicate_ready",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 0
+    },
+    {
+      "case": "response_limit",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 1
+    },
+    {
+      "case": "flow",
+      "passed": true,
+      "observed_services": [
+        "profile",
+        "profile",
+        "profile",
+        "entry-stage-0",
+        "entry-stage-1"
+      ],
+      "exit": 0
+    },
+    {
+      "case": "final_failure",
+      "passed": true,
+      "observed_services": [
+        "profile",
+        "profile",
+        "profile",
+        "entry-stage-0",
+        "entry-stage-1"
+      ],
+      "exit": 1
+    },
+    {
+      "case": "deadline",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 1
+    }
+  ],
+  "guard_result": "GUARDS_OK: profile x4; failure stop/no retry x2; path rejection x5; token x3; exact two-stage opening; OPEN limits",
+  "external_host_rejected": true,
+  "shell_syntax": [
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.7/scripts/etapa-0.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.7/scripts/etapa-1.sh",
+      "passed": true
+    }
+  ],
+  "mksh_syntax": [
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.7/scripts/etapa-0.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.7/scripts/etapa-1.sh",
+      "passed": true
+    }
+  ],
+  "mksh_default_hash_alias": "hash='\\\\builtin alias -t'",
+  "shell_fixtures": [
+    {
+      "case": "preflight_then_single_menu_open",
+      "passed": true,
+      "exit": 0,
+      "stub_menu_opens": 1,
+      "stdout": "TVBASE_OPEN_OK:1234567890abcdef1234567890abcdef",
+      "physical_device": false
+    },
+    {
+      "case": "profile_wrong_uid",
+      "passed": true,
+      "exit": 9,
+      "stub_menu_opens": 0,
+      "stdout": "ERROR: UID distinto de shell",
+      "physical_device": false
+    },
+    {
+      "case": "profile_wrong_sdk",
+      "passed": true,
+      "exit": 9,
+      "stub_menu_opens": 0,
+      "stdout": "ERROR: Android distinto",
+      "physical_device": false
+    },
+    {
+      "case": "profile_wrong_dt",
+      "passed": true,
+      "exit": 9,
+      "stub_menu_opens": 0,
+      "stdout": "ERROR: placa distinta",
+      "physical_device": false
+    },
+    {
+      "case": "marker_wrong_before_hash",
+      "passed": true,
+      "exit": 9,
+      "stub_menu_opens": 0,
+      "stdout": "ERROR: marcador USB distinto",
+      "physical_device": false
+    },
+    {
+      "case": "raw_sha_empty_success",
+      "passed": true,
+      "exit": 9,
+      "stub_menu_opens": 0,
+      "stdout": "ERROR: autocontrol SHA fallo",
+      "physical_device": false
+    },
+    {
+      "case": "raw_sha_nonhex_success",
+      "passed": true,
+      "exit": 9,
+      "stub_menu_opens": 0,
+      "stdout": "ERROR: autocontrol SHA fallo",
+      "physical_device": false
+    },
+    {
+      "case": "helper_empty_external_guard",
+      "passed": true,
+      "exit": 9,
+      "stub_menu_opens": 0,
+      "stdout": "ERROR: autocontrol SHA vacio",
+      "physical_device": false
+    },
+    {
+      "case": "helper_nonhex_external_guard",
+      "passed": true,
+      "exit": 9,
+      "stub_menu_opens": 0,
+      "stdout": "ERROR: autocontrol SHA fallo",
+      "physical_device": false
+    },
+    {
+      "case": "selftest_mismatched",
+      "passed": true,
+      "exit": 9,
+      "stub_menu_opens": 0,
+      "stdout": "ERROR: autocontrol incorrecto",
+      "physical_device": false
+    },
+    {
+      "case": "rom_size_wrong",
+      "passed": true,
+      "exit": 9,
+      "stub_menu_opens": 0,
+      "stdout": "ERROR: tamano de archivo distinto",
+      "physical_device": false
+    },
+    {
+      "case": "rom_digest_wrong",
+      "passed": true,
+      "exit": 9,
+      "stub_menu_opens": 0,
+      "stdout": "ERROR: archivo SHA distinto",
+      "physical_device": false
+    },
+    {
+      "case": "ota_digest_wrong",
+      "passed": true,
+      "exit": 9,
+      "stub_menu_opens": 0,
+      "stdout": "ERROR: archivo SHA distinto",
+      "physical_device": false
+    },
+    {
+      "case": "pm_unexpected_path",
+      "passed": true,
+      "exit": 9,
+      "stub_menu_opens": 0,
+      "stdout": "ERROR: ruta del actualizador distinta",
+      "physical_device": false
+    },
+    {
+      "case": "pm_multiple_paths",
+      "passed": true,
+      "exit": 9,
+      "stub_menu_opens": 0,
+      "stdout": "ERROR: ruta del actualizador distinta",
+      "physical_device": false
+    },
+    {
+      "case": "pm_denied",
+      "passed": true,
+      "exit": 9,
+      "stub_menu_opens": 0,
+      "stdout": "ERROR: ruta del actualizador distinta",
+      "physical_device": false
+    },
+    {
+      "case": "rom_changed_during_hash",
+      "passed": true,
+      "exit": 9,
+      "stub_menu_opens": 0,
+      "stdout": "ERROR: archivo cambio durante lectura",
+      "physical_device": false
+    },
+    {
+      "case": "marker_changed_after_hash",
+      "passed": true,
+      "exit": 9,
+      "stub_menu_opens": 0,
+      "stdout": "ERROR: marcador USB distinto",
+      "physical_device": false
+    },
+    {
+      "case": "am_nonzero",
+      "passed": true,
+      "exit": 9,
+      "stub_menu_opens": 0,
+      "stdout": "rejected\nERROR: apertura rechazada",
+      "physical_device": false
+    },
+    {
+      "case": "am_zero_without_status",
+      "passed": true,
+      "exit": 9,
+      "stub_menu_opens": 0,
+      "stdout": "Error: Activity not started\nERROR: apertura sin confirmacion",
+      "physical_device": false
+    },
+    {
+      "case": "am_wrong_activity",
+      "passed": true,
+      "exit": 9,
+      "stub_menu_opens": 0,
+      "stdout": "Status: ok\nActivity: com.android.settings/.Settings\nERROR: actividad inesperada",
+      "physical_device": false
+    },
+    {
+      "case": "am_duplicate_status",
+      "passed": true,
+      "exit": 9,
+      "stub_menu_opens": 0,
+      "stdout": "Status: ok\nStatus: ok\nActivity: com.droidlogic.otaupgrade/.MainActivity\nERROR: apertura sin confirmacion",
+      "physical_device": false
+    },
+    {
+      "case": "am_full_component",
+      "passed": true,
+      "exit": 0,
+      "stub_menu_opens": 0,
+      "stdout": "TVBASE_OPEN_OK:1234567890abcdef1234567890abcdef",
+      "physical_device": false
+    }
+  ],
+  "fixture_adapters": "Real Cygwin mksh R56 and production tvbase_* guards; Android utility/path bindings to Python/local deterministic fixture files; ROM fixture size/digest substituted, production constants asserted; OEM am command recording stub only. No Android execution.",
+  "max_actual_open_bytes": 2736,
+  "total_response_limit_bytes": 65536,
+  "zip_preflight_deadline_seconds": 300,
+  "tv_shell_tested": false,
+  "tv_menu_tested": false
+}

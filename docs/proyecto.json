@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "title": "TV Base",
-  "snapshot": "2026-09-07T00:22:08.5323713-03:00",
-  "state": "Captura 0.5 analizada · complemento 0.6 listo en USB",
+  "snapshot": "2026-09-07T12:34:55.5236812-03:00",
+  "state": "Captura 0.6 completa · firma P291 verificada · acceso OEM 0.7 listo en USB",
   "installed": false,
   "original_tv_backup_confirmed": false,
   "source_of_truth": {
@@ -10,7 +10,7 @@
     "state": "docs/ESTADO.md",
     "decisions": "docs/DECISIONES.md",
     "roadmap": "docs/ROADMAP.md",
-    "delivery_receipt": "preparacion-usb/evidencia-06-estado.json"
+    "delivery_receipt": "preparacion-usb/entrada-oem-07-estado.json"
   },
   "components": [
     {
@@ -25,7 +25,9 @@
         "diagnostico/primer-tv-reportes-20260906-233826/HALLAZGOS.md",
         "diagnostico/primer-tv-reportes-20260906-233826/resumen-saneado.json",
         "diagnostico/primer-tv-evidencia-20260907-000948/HALLAZGOS.md",
-        "diagnostico/primer-tv-evidencia-20260907-000948/resumen-saneado.json"
+        "diagnostico/primer-tv-evidencia-20260907-000948/resumen-saneado.json",
+        "diagnostico/primer-tv-complemento-20260907-003114/HALLAZGOS.md",
+        "diagnostico/primer-tv-complemento-20260907-003114/resumen-saneado.json"
       ],
       "x": 0,
       "y": 0,
@@ -132,7 +134,7 @@
       "id": "C-ZIP",
       "label": "ZIP de instalación",
       "state": "verificado_local",
-      "description": "Cinco particiones, controles, respaldo completo previo y hashes de lectura. No A/B ni rollback automático.",
+      "description": "Cinco particiones, controles, respaldo completo previo y hashes de lectura. No A/B ni rollback automático. Firma integral válida contra otacerts capturado del P291; claves internas de recovery desconocidas.",
       "files": [
         "rom-simplificada/instalador/README.md",
         "rom-simplificada/instalador/main_linux.go",
@@ -157,7 +159,7 @@
       "id": "C-REC",
       "label": "Recovery externo",
       "state": "verificado_local",
-      "description": "Archivo para RAM preparado del candidato. Clave del ZIP agregada con verificación activa; bootloader real sin probar.",
+      "description": "Archivo para RAM preparado del candidato. Clave del ZIP agregada con verificación activa; bootloader real sin probar. La vía OEM pide recovery interno, no acredita carga de este archivo.",
       "files": [
         "rom-simplificada/instalador/preparar-recovery-externo.py",
         "rom-simplificada/instalador/inspeccionar-recovery-externo.py",
@@ -174,22 +176,22 @@
     },
     {
       "id": "C-ENTRY",
-      "label": "Complemento USB 0.6",
+      "label": "Acceso OEM USB 0.7",
       "state": "verificado_local",
-      "description": "Captura solo certificados OTA, APK OTAUpgrade P291 y configuración faltante. SHA estricto y autocontrol, mksh real. Sin reinicio ni GMS; prueba física pendiente.",
+      "description": "Comprueba P291, USB, ZIP completo y APK OEM capturado. Abre solo el menú original; no pulsa Update ni corrige reinicio. Pruebas/copia USB verificadas; uso físico pendiente.",
       "files": [
-        "rom-simplificada/componentes/acceso-usb-0.6/Acceso.java",
-        "rom-simplificada/componentes/acceso-usb-0.6/AdbLocal.java",
-        "rom-simplificada/componentes/acceso-usb-0.6/Evidencia.java",
-        "rom-simplificada/componentes/acceso-usb-0.6/EvidenciaScripts.java",
-        "rom-simplificada/componentes/acceso-usb-0.6/generar-scripts.py",
-        "rom-simplificada/componentes/acceso-usb-0.6/AndroidManifest.xml",
-        "rom-simplificada/compilacion/acceso-usb-0.6/acceso-usb.apk",
-        "rom-simplificada/compilacion/acceso-usb-0.6/componente.json",
-        "rom-simplificada/instalador/compilar-evidencia06.py",
-        "rom-simplificada/instalador/test_evidencia06.py",
-        "rom-simplificada/instalador/EvidenciaHarness06.java",
-        "rom-simplificada/instalador/EVIDENCIA-TESTS-0.6.json",
+        "rom-simplificada/componentes/acceso-usb-0.7/Acceso.java",
+        "rom-simplificada/componentes/acceso-usb-0.7/AdbLocal.java",
+        "rom-simplificada/componentes/acceso-usb-0.7/Entrada.java",
+        "rom-simplificada/componentes/acceso-usb-0.7/EntradaScripts.java",
+        "rom-simplificada/componentes/acceso-usb-0.7/generar-scripts.py",
+        "rom-simplificada/componentes/acceso-usb-0.7/AndroidManifest.xml",
+        "rom-simplificada/compilacion/acceso-usb-0.7/acceso-usb.apk",
+        "rom-simplificada/compilacion/acceso-usb-0.7/componente.json",
+        "rom-simplificada/instalador/compilar-entrada07.py",
+        "rom-simplificada/instalador/test_entrada07.py",
+        "rom-simplificada/instalador/EntradaHarness07.java",
+        "rom-simplificada/instalador/ENTRADA-TESTS-0.7.json",
         "rom-simplificada/instalador/MKSH-HALLAZGO-0.5.md"
       ],
       "x": 2,
@@ -202,11 +204,11 @@
       "id": "C-USB",
       "label": "Kingston preparado",
       "state": "verificado_local",
-      "description": "Copia por archivos con identidad estable. ROM/recovery y capturas0.5 preservados. APK0.6 complementa lo faltante sin reiniciar.",
+      "description": "Kingston: APK0.7 y guía copiadas/leídas, ROM/recovery e informes preservados; sin formato. Entrega acreditada por recibo específico.",
       "files": [
-        "preparacion-usb/preparar-evidencia-06.ps1",
-        "preparacion-usb/evidencia-06-estado.json",
-        "rom-simplificada/instalador/LEEME-EVIDENCIA-0.6.txt",
+        "preparacion-usb/preparar-entrada-oem-07.ps1",
+        "preparacion-usb/entrada-oem-07-estado.json",
+        "rom-simplificada/instalador/LEEME-ENTRADA-0.7.txt",
         "rom-simplificada/INSTALACION-USB.md"
       ],
       "x": 3,
@@ -217,13 +219,18 @@
     },
     {
       "id": "C-TV",
-      "label": "P291: cierre atascado",
+      "label": "P291: captura completa",
       "state": "observado_tv",
-      "description": "Dos capturas0.5 parciales analizadas: pstore conserva517s de actividad tras aviso de reinicio. Sugiere atasco antes de reset, función desconocida. OTAUpgrade identificado, binario pendiente.",
+      "description": "Captura0.6 completa y firma ROM válida contra otacerts P291. OEM prepara BCB/mapa mediante framework, ejecución pendiente. Pstore anterior apunta a cierre atascado; recovery aún no probado.",
       "files": [
         "docs/ESTADO.md",
         "diagnostico/primer-tv-evidencia-20260907-000948/HALLAZGOS.md",
-        "diagnostico/primer-tv-evidencia-20260907-000948/resumen-saneado.json"
+        "diagnostico/primer-tv-evidencia-20260907-000948/resumen-saneado.json",
+        "diagnostico/primer-tv-complemento-20260907-003114/HALLAZGOS.md",
+        "diagnostico/primer-tv-complemento-20260907-003114/resumen-saneado.json",
+        "diagnostico/primer-tv-complemento-20260907-003114/certificados-ota.json",
+        "diagnostico/primer-tv-complemento-20260907-003114/analisis-actualizador/ANALISIS.md",
+        "rom-simplificada/instalador/EVIDENCIA-TESTS-0.6.json"
       ],
       "x": 4,
       "y": 1,
@@ -462,7 +469,7 @@
         "C-REC",
         "C-TV"
       ],
-      "exit": "VAL-05 pendiente: reinicio atascado según pstore. Analizar APK OTAUpgrade y configuración real; demostrar entrada y aceptación del ZIP.",
+      "exit": "VAL-05 pendiente: APK y certificados reales analizados; firma integral coincide. Falta ejecución OEM con ZIP real, recovery identificado y aceptación física.",
       "x": 1,
       "y": 0
     },
@@ -783,10 +790,10 @@
       "sha256": "e7279a7901bc0b513ccc5d3a66a1b5bf483908a4cffd30f34f5d8d463fc95205"
     },
     {
-      "name": "AccesoUSB-0.6.apk",
-      "path": "rom-simplificada/compilacion/acceso-usb-0.6/acceso-usb.apk",
-      "bytes": 41363,
-      "sha256": "7664b019051ed4e042a64e4e987501bbf3823224a839793a5811545991c1acd6"
+      "name": "AccesoUSB-0.7.apk",
+      "path": "rom-simplificada/compilacion/acceso-usb-0.7/acceso-usb.apk",
+      "bytes": 29075,
+      "sha256": "a81c1cc8d871ae883f3d79f6e030b588e753b5ee633496da3087aa1a021f90a5"
     },
     {
       "name": "recovery.img",
@@ -796,9 +803,9 @@
     },
     {
       "name": "LEEME-AHORA.txt",
-      "path": "rom-simplificada/instalador/LEEME-EVIDENCIA-0.6.txt",
-      "bytes": 1216,
-      "sha256": "8939b00748b608a0ab2f822bc39fd6c348f1ae1eb1158e9be51715fd0fdfe897"
+      "path": "rom-simplificada/instalador/LEEME-ENTRADA-0.7.txt",
+      "bytes": 1537,
+      "sha256": "ec8297fca66a5c9f9604ce46afc6048eff1187af49a3351b232c065c43aaadc5"
     }
   ],
   "protected_paths": [
@@ -877,7 +884,7 @@
       ]
     }
   ],
-  "delivery_label": "ROM 0.1.1 · Complemento USB 0.6",
-  "date_label": "Entrega verificada el 7 de septiembre de 2026, 00:22 ART",
-  "next_step_label": "Instalar AccesoUSB-0.6.apk, guardar los archivos que faltan sin reiniciar y devolver el USB a la PC."
+  "delivery_label": "ROM 0.1.1 · Acceso USB 0.7",
+  "date_label": "Entrega verificada el 7 de septiembre de 2026, 12:34 ART",
+  "next_step_label": "Instalar AccesoUSB-0.7.apk; abrir actualización local; Select → TVBASE-P291-A9-0.1.1-RECOVERY.zip → Update y confirmar."
 }

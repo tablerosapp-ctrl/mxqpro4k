@@ -6,7 +6,7 @@
 | --- | --- |
 | Pedido, alcance y aceptación | `ESPECIFICACION.md`; fundamentos en `../ARQUITECTURA-ANDROID-TV.md` |
 | Resultado físico y próximo paso | `ESTADO.md` y evidencias fechadas de `../diagnostico/` |
-| Qué se copió al USB | Recibo de la versión en `../preparacion-usb/`; separar entregas0.4/0.5 del complemento0.6 ya copiado/verificado |
+| Qué se copió al USB | Recibo de la versión en `../preparacion-usb/`; separar cada entrega; 0.6 ya produjo captura completa y 0.7 abre el menú OEM |
 | Qué contiene cada ROM | Manifiesto/VERIFICACION de `../rom-simplificada/salida/` |
 | Conexiones entre requisitos, archivos y etapas | `proyecto.json`; mapa y HTML derivados |
 | Motivo de una elección | `DECISIONES.md` |
@@ -16,7 +16,7 @@ Los JSON de prueba y recibos se conservan como evidencia de una ejecución. Camb
 
 La prueba física de Acceso USB0.4 terminó sin señal y sin recovery visible. **La captura0.5 ya se realizó y analizó, pero quedó incompleta.** El pstore conserva un aviso de reinicio del kernel seguido de más de ocho minutos de actividad: favorece un atasco al cerrar el sistema, sin identificar su causa exacta. El recopilador agotó su cuota con la base omitida y tres APK divididos de Google Play Services antes de alcanzar OTAUpgrade; además, una colisión con el alias `hash` de mksh dejó vacíos los SHA de binarios. Los informes de texto y las copias adquiridas en PC tienen evidencia separada. [Hallazgos del P291](../diagnostico/primer-tv-evidencia-20260907-000948/HALLAZGOS.md) · [Causa reproducida de SHA](../rom-simplificada/instalador/MKSH-HALLAZGO-0.5.md).
 
-**Acceso USB0.6 es un complemento acotado sin reinicio:** obtiene primero certificados OTA, después el APK específico ya identificado en el P291 y finalmente la configuración pendiente. Sus fuentes y salida son independientes de0.5. La nueva copia al USB sigue en preparación; no se acredita entrega ni prueba física con la compilación o los tests de PC. La ROM0.1.1 permanece sin instalar.
+**La captura 0.6 ya está completa y analizada.** Sus 25 archivos y diez SHA se verificaron en PC. El APK original y su almacén OTA permiten confirmar la firma de la ROM y estudiar el flujo OEM. Acceso 0.7 agrega controles de perfil/USB/ZIP/APK y abre exclusivamente el menú original. Su construcción es independiente y no altera 0.6. [Evidencia nueva](../diagnostico/primer-tv-complemento-20260907-003114/HALLAZGOS.md).
 
 ## Cadena de construcción local
 
@@ -34,7 +34,9 @@ La cadena existe como scripts y herramientas locales, **no como una construcció
 | Ejecutable de recovery | Go ARM32 con ID de versión explícito → `instalador/main_linux.go`, `package.go` → `trabajo/revision-0.1.1/update-binary` |
 | ZIP0.1.1 | Revisión + cinco particiones + ejecutable → `instalador/empaquetar.py --revision-report rom-simplificada/trabajo/revision-0.1.1/revision.json` → ZIP firmado y manifiesto |
 | Recovery externo | Recovery original y clave pública del ZIP → `instalador/preparar-recovery-externo.py` → recovery.img y PREPARADO.json |
-| Entrega USB0.6 | En preparación; exige recibo propio de APK/guía y lectura en el Kingston antes de declararse entregada |
+| Entrega USB0.6, histórica | Recibo evidencia-06-estado.json, copia leída y captura física completa posterior |
+| Entrada OEM 0.7 | componentes/acceso-usb-0.7/generar-scripts.py → dos etapas y EntradaScripts.java; instalador/compilar-entrada07.py → compilacion/acceso-usb-0.7 y componente.json |
+| Prueba y entrega 0.7 | instalador/test_entrada07.py y EntradaHarness07.java → ENTRADA-TESTS-0.7.json; preparacion-usb/preparar-entrada-oem-07.ps1 → copia/lectura y entrada-oem-07-estado.json |
 | Entrega USB0.5, histórica | APK0.5 + prueba/firma + identidad estable → `preparacion-usb/preparar-evidencia-05.ps1` → `evidencia-05-estado.json`, copia y lectura verificadas; no acredita la completitud de sus capturas |
 | Entrega USB0.4, histórica | Artefactos + pruebas + identidad del Kingston → `preparacion-usb/preparar-entrada-amlogic.ps1` → copia/lectura y recibo; no repetir la entrada fallida |
 
@@ -108,4 +110,14 @@ El generador solo lee archivos del proyecto y escribe documentación local; no a
 
 Crear un comando integral reproducible con directorios de salida versionados, catálogo de herramientas y pruebas automatizadas de paquete/recuperación es una mejora propuesta. No está resuelto por este mapa. Ya se inició Git local en esta carpeta; [GIT](GIT.md) define exclusiones, autoría y publicación futura. Un clon no contiene herramientas, imágenes ni claves privadas. Los documentos históricos conservados son antecedentes, y los commits registrarán los cambios a partir de esta incorporación.
 
-Entrega complementaria0.6: [recibo USB](../preparacion-usb/evidencia-06-estado.json), 7/9/2026 a las00:22 ART, APK y guía copiadas/leídas con SHA coincidente. Primera ejecución0.6 en el P291 pendiente.
+Entrega complementaria0.6: [recibo USB](../preparacion-usb/evidencia-06-estado.json), 7/9/2026 a las00:22 ART, APK y guía copiadas/leídas con SHA coincidente. Captura física 0.6 completa y verificada; ya no pendiente.
+
+## Entrada OEM 0.7
+
+La lectura completa del ZIP puede tardar hasta cinco minutos. El script compara tamaño, digest y metadatos antes/después, exige la ruta y SHA del APK OEM capturado y revalida perfil/marcador antes de `am start -W -n com.droidlogic.otaupgrade/.MainActivity`. Solo acepta una respuesta de apertura con Status ok y Activity exacta. No envía extras, Update, teclas, reinicios ni comandos BCB. No corrige la función de apagado atascada.
+
+Los ensayos usan el protocolo ADB simulado y mksh real. Las utilidades Android y la apertura del menú se sustituyen por archivos/comandos locales; el fixture ROM usa tamaño/digest sintéticos y comprueba por separado las constantes de producción. No son una prueba física de Android. El corte anterior dejó la APK compilada sin recibo de tests. Al retomarla se corrigieron tres detalles del entorno de pruebas de Windows: salida Java UTF-8, marcador fixture con LF y corrupción de archivos usando Python porque el dd externo no había modificado el fixture. Se conservan esos fallos en logs locales; la APK compilada no cambió.
+
+Fuentes/prueba/artefacto deben coincidir por SHA antes de copiar. Los preparadores son específicos de cada versión; no ejecutar toda la cadena para una actualización documental. La aceptación física del menú 0.7 y la instalación siguen pendientes.
+
+Entrega 0.7 concluida con [recibo propio](../preparacion-usb/entrada-oem-07-estado.json), 7/9 a las 12:34 ART. APK y guía leídas tras copiar; 12 casos ADB y 23 escenarios mksh aprobados. No se recompiló ni se volvió a firmar la ROM.

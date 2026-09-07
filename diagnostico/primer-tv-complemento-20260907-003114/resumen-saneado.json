@@ -1,0 +1,154 @@
+{
+  "schema_version": 2,
+  "date_pc": "2026-09-07T00:31:15.086282-03:00",
+  "capture_version": "0.6",
+  "capture_complete": true,
+  "first_tv_profile": "gxlx2_p291_1g",
+  "android_api": 28,
+  "files_acquired": 25,
+  "hashes_verified": 10,
+  "stages_verified": 4,
+  "known_sha_selftest_passed": true,
+  "capture_folder": "TVBASE-evidencia-690a4d7ced1f49f9916ac18cfe6106a2",
+  "capture_flow_stages": 5,
+  "capture_markers_note": "Creación inicial, cuatro marcadores de etapas posteriores y cierre COMPLETO comprobados.",
+  "rom_installed": false,
+  "tv_original_backup_obtained": false,
+  "clock_tv_reliable": false,
+  "outputs": [
+    {
+      "file": "COMPLETO.txt",
+      "bytes": 391,
+      "sha256": "ac9ddbe86e1dd542e5dd6f8bb5b4c048230b99500c1d20341a07a8b5741e35d1"
+    },
+    {
+      "file": "identidad.txt",
+      "bytes": 557,
+      "sha256": "7b09d693c8d416e4386ccaac461a60e929bfd231e32656dd261d21a9c427f1ca"
+    },
+    {
+      "file": "init-y-fstab.txt",
+      "bytes": 10408,
+      "sha256": "2b596d66bbbaf530ea637f1b2d25a5b062acb4c06c3f2b72e9d074bff1ef03b4"
+    },
+    {
+      "file": "otacerts.zip",
+      "bytes": 1073,
+      "sha256": "7dd077650421772a3114c9132cd3da989b65f073459b7d8023e7138f2323a6c8"
+    },
+    {
+      "file": "OTAUpgrade.apk",
+      "bytes": 190988,
+      "sha256": "9ffb822fc76974ee9df8c5493f0929638b69140f71506946cb410bab489a1d9c"
+    }
+  ],
+  "original_reports_private": true,
+  "analysis_complete": {
+    "captured_updater_static_analysis": true,
+    "captured_ota_certificates": true,
+    "captured_identity_and_fstab": true,
+    "runtime_installation_flow": false
+  },
+  "ota_signature": {
+    "audit": "certificados-ota.json",
+    "rom_file": "TVBASE-P291-A9-0.1.1-RECOVERY.zip",
+    "rom_bytes": 573089164,
+    "rom_sha256": "e7279a7901bc0b513ccc5d3a66a1b5bf483908a4cffd30f34f5d8d463fc95205",
+    "whole_file_signature_valid_with_captured_p291_certificate": true,
+    "independent_crypto_implementations": ["Python", "OpenJDK PKCS7"],
+    "resigning_required_to_match_current_otacerts": false,
+    "aosp_android9_verify_package_acceptance": "Inferencia basada en código AOSP Android 9 y criptografía comprobada en PC; no ejecución del framework instalado.",
+    "internal_recovery_trusted_keys": "unknown",
+    "updater_apk_signer_same_as_ota_key": false,
+    "original_candidate_system_ota_key_same_as_current_p291": false
+  },
+  "updater_static_analysis": {
+    "package": "com.droidlogic.otaupgrade",
+    "version_code": 2,
+    "version_name": "2.0201411271418",
+    "menu_component": "com.droidlogic.otaupgrade/.MainActivity",
+    "apk_bytes": 190988,
+    "apk_sha256": "9ffb822fc76974ee9df8c5493f0929638b69140f71506946cb410bab489a1d9c",
+    "same_apk_bytes_as_previous_p271_capture": true,
+    "comparison_scope": "Solo identidad del código APK; no equipara firmware, hardware, particiones ni recovery.",
+    "explicit_menu_open_starts_update": false,
+    "public_prepare_only_entry_found": false,
+    "first_update_before_confirmation": "Intenta escribir /cache/recovery/command; cancelar solo cierra el diálogo y no elimina la orden.",
+    "api28_flow": [
+      "Intenta copiar el ZIP del USB a /data/cache/update.zip.",
+      "installPackage intenta primero updateWithBCB; si devuelve false, usa RecoverySystem.installPackage.",
+      "Escribe /cache/recovery/uncrypt_file y elimina el block.map anterior.",
+      "Solicita setupBcb por reflexión con --update_package=@/cache/recovery/block.map y locale.",
+      "Solicita PowerManager.reboot con motivo recovery-update."
+    ],
+    "new_block_map_producer": "Framework y servicios; la APK no llama processPackage ni ejecuta uncrypt.",
+    "package_signature_verified_by_apk": false,
+    "known_limitations": [
+      "La copia y sus callbacks no acreditan integridad del archivo interno.",
+      "Puede solicitar reinicio sin haber encontrado setupBcb.",
+      "No lee de vuelta la orden de cache ni acredita su sincronización.",
+      "Existen preferencias privadas de borrado cuyo valor actual es desconocido."
+    ]
+  },
+  "storage_observed": {
+    "fstab_source": "/vendor/etc/fstab.amlogic",
+    "misc": {
+      "path": "/dev/block/misc",
+      "fstab_type": "emmc",
+      "major_minor_from_previous_capture": "179:7",
+      "partition_bytes": 8388608,
+      "owner_group_mode": "root:root 0600"
+    },
+    "cache": {
+      "path": "/dev/block/cache",
+      "fstab_type": "ext4",
+      "major_minor_from_previous_capture": "179:3",
+      "partition_bytes": 1174405120,
+      "directory_owner_group_mode": "system:cache 0770",
+      "free_space_verified": false
+    },
+    "data": {"path": "/dev/block/data", "fstab_type": "ext4"},
+    "shell_uid": 2000,
+    "direct_shell_access_to_misc_and_recovery_cache": false
+  },
+  "boot_analysis": {
+    "reported_boot_reason": "reboot,update",
+    "init_copies_ro_boot_bootreason_to_sys_boot_reason": true,
+    "matching_boot_reason_properties_prove_recovery_execution": false,
+    "root_init_reads": "permission_denied",
+    "uncrypt_rc_empty_section": "El filtro omite uncrypt, setup-bcb y clear-bcb; no demuestra ausencia de servicios.",
+    "previous_pstore_inference": "Favorece atasco durante el cierre anterior al reinicio físico; no identifica la función bloqueada.",
+    "sdio_causality_proven": false,
+    "persistent_bcb_path": "Sustentada como posibilidad por código AOSP/Amlogic de referencia y flujo estático del APK; no comprobada en ejecución P291.",
+    "cold_boot_prerequisites": [
+      "ZIP interno íntegro y accesible.",
+      "Mapa de bloques correcto y persistente cuando se usa /data.",
+      "BCB correcto y persistente.",
+      "Cargador instalado que procese la orden y recovery que acepte el paquete."
+    ],
+    "runtime_bcb_write_verified": false,
+    "runtime_block_map_verified": false,
+    "cold_boot_update_verified": false,
+    "recovery_boot_verified": false,
+    "external_usb_recovery_loading_verified": false
+  },
+  "next_deliverable": {
+    "version": "0.7",
+    "status": "in_preparation",
+    "delivered_verified": false,
+    "tv_execution_verified": false,
+    "scope": "Verificar perfil P291, USB marcado, ZIP exacto y APK OEM; abrir solo el menú explícito del actualizador.",
+    "starts_update": false,
+    "requests_own_reboot": false,
+    "repeats_general_capture": false
+  },
+  "limits": [
+    "La captura completa y la firma válida no demuestran instalación ni arranque de recovery.",
+    "Las claves del recovery interno y el comportamiento del cargador P291 siguen desconocidos.",
+    "El análisis estático no acredita copia interna, BCB ni block.map en una ejecución real.",
+    "No trasladar índices de partición ni variables del cargador P271 al P291.",
+    "Root init rc permanecen con lectura denegada; la sección vacía de uncrypt.rc no demuestra ausencia de servicios.",
+    "No se realizó otra captura general ni otro intento de reinicio durante este análisis."
+  ],
+  "next": "Preparar Acceso USB 0.7 para verificar los archivos exactos y abrir el menú OEM; la ejecución de Update y sus resultados físicos siguen pendientes."
+}
