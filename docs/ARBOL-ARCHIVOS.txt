@@ -73,6 +73,8 @@ mxqpro4k/
 │   ├── RESULTADO.md
 │   └── verificar-integridad-interna.py
 ├── diagnostico/
+│   ├── fable-20260907/
+│   │   └── resumen-saneado.json
 │   ├── h1-cierre-android/
 │   │   ├── __pycache__/
 │   │   │   └── analizar-registro.cpython-312.pyc
@@ -124,7 +126,8 @@ mxqpro4k/
 │   ├── hipotesis/
 │   │   ├── H1-CIERRE-ANDROID.md
 │   │   ├── H1-RESULTADO-CODEX.md
-│   │   └── H2-PREPARACION-RECOVERY.md
+│   │   ├── H2-PREPARACION-RECOVERY.md
+│   │   └── REVISION-CONJUNTA-FABLE.md
 │   ├── historico/
 │   │   ├── AGENTS-hasta-20260906-2004.md
 │   │   ├── INSTALACION-USB-hasta-0.3.md
@@ -169,11 +172,13 @@ mxqpro4k/
 │   ├── instalador-android-20260906-191110/ [4 archivos; 3686.8 MB; agrupado]
 │   ├── instalador-android-estado.json
 │   ├── INVESTIGACION-USB.md
+│   ├── postintento-08-estado.json
 │   ├── preparar-entrada-amlogic.ps1
 │   ├── preparar-entrada-oem-07.ps1
 │   ├── preparar-evidencia-05.ps1
 │   ├── preparar-evidencia-06.ps1
 │   ├── preparar-instalador-android.ps1
+│   ├── preparar-postintento-08.ps1
 │   ├── probar-archivo-kingston.ps1
 │   ├── recuperacion-20260905-000135/ [6 archivos; 0.0 MB; agrupado]
 │   ├── recuperar-kingston-windows.ps1
@@ -226,6 +231,27 @@ mxqpro4k/
 │   │   │   ├── AndroidManifest.xml
 │   │   │   ├── Entrada.java
 │   │   │   ├── EntradaScripts.java
+│   │   │   └── generar-scripts.py
+│   │   ├── acceso-usb-0.8/
+│   │   │   ├── __pycache__/
+│   │   │   │   └── generar-scripts.cpython-312.pyc
+│   │   │   ├── scripts/
+│   │   │   │   ├── etapa-0.sh
+│   │   │   │   ├── etapa-1.sh
+│   │   │   │   ├── etapa-10.sh
+│   │   │   │   ├── etapa-2.sh
+│   │   │   │   ├── etapa-3.sh
+│   │   │   │   ├── etapa-4.sh
+│   │   │   │   ├── etapa-5.sh
+│   │   │   │   ├── etapa-6.sh
+│   │   │   │   ├── etapa-7.sh
+│   │   │   │   ├── etapa-8.sh
+│   │   │   │   └── etapa-9.sh
+│   │   │   ├── Acceso.java
+│   │   │   ├── AdbLocal.java
+│   │   │   ├── AndroidManifest.xml
+│   │   │   ├── Evidencia.java
+│   │   │   ├── EvidenciaScripts.java
 │   │   │   └── generar-scripts.py
 │   │   ├── inicio/
 │   │   │   ├── AndroidManifest.xml
@@ -284,6 +310,7 @@ mxqpro4k/
 │   │   ├── compilar-entrada07.py
 │   │   ├── compilar-evidencia05.py
 │   │   ├── compilar-evidencia06.py
+│   │   ├── compilar-evidencia08.py
 │   │   ├── corregir-recovery-0.1.1.py
 │   │   ├── empaquetar.py
 │   │   ├── ENTRADA-TESTS-0.4.txt
@@ -292,8 +319,10 @@ mxqpro4k/
 │   │   ├── EntradaHarness07.java
 │   │   ├── EVIDENCIA-TESTS-0.5.json
 │   │   ├── EVIDENCIA-TESTS-0.6.json
+│   │   ├── EVIDENCIA-TESTS-0.8.json
 │   │   ├── EvidenciaHarness.java
 │   │   ├── EvidenciaHarness06.java
+│   │   ├── EvidenciaHarness08.java
 │   │   ├── FIRMA-OPENJDK-OK.txt
 │   │   ├── fixture-entrada-0.7-1_s4zo4j/ [63 archivos; 2.4 MB; agrupado]
 │   │   ├── fixture-entrada-0.7-8b1lf2ee/ [6 archivos; 0.2 MB; agrupado]
@@ -306,18 +335,24 @@ mxqpro4k/
 │   │   ├── fixture-evidencia-0.6-4y4i8ybf/ [6 archivos; 0.0 MB; agrupado]
 │   │   ├── fixture-evidencia-0.6-8eliadc_/ [208 archivos; 1.0 MB; agrupado]
 │   │   ├── fixture-evidencia-0.6-r1hvrxw2/ [148 archivos; 0.9 MB; agrupado]
+│   │   ├── fixture-evidencia-0.8-aduy4qtp/ [69 archivos; 0.0 MB; agrupado]
+│   │   ├── fixture-evidencia-0.8-itx59cwi/ [270 archivos; 2.2 MB; agrupado]
+│   │   ├── fixture-evidencia-0.8-piwgad1b/ [116 archivos; 0.1 MB; agrupado]
+│   │   ├── fixture-evidencia-0.8-tx_n9dxg/ [206 archivos; 2.2 MB; agrupado]
 │   │   ├── go.mod
 │   │   ├── gxl_p271_v1-referencia.h
 │   │   ├── host-classes/ [12 archivos; 0.0 MB; agrupado]
 │   │   ├── host-classes-0.5/ [9 archivos; 0.0 MB; agrupado]
 │   │   ├── host-classes-0.6/ [9 archivos; 0.0 MB; agrupado]
 │   │   ├── host-classes-0.7/ [9 archivos; 0.0 MB; agrupado]
+│   │   ├── host-classes-0.8/ [9 archivos; 0.0 MB; agrupado]
 │   │   ├── inspeccionar-recovery-externo.py
 │   │   ├── LEEME-0.1.1.txt
 │   │   ├── LEEME-ENTRADA-0.7.txt
 │   │   ├── LEEME-ENTRADA-AMLOGIC.txt
 │   │   ├── LEEME-EVIDENCIA-0.5.txt
 │   │   ├── LEEME-EVIDENCIA-0.6.txt
+│   │   ├── LEEME-POSTINTENTO-0.8.txt
 │   │   ├── LEEME-USB.txt
 │   │   ├── main_linux.go
 │   │   ├── main_windows.go
@@ -333,6 +368,7 @@ mxqpro4k/
 │   │   ├── test_entrada07.py
 │   │   ├── test_evidencia05.py
 │   │   ├── test_evidencia06.py
+│   │   ├── test_evidencia08.py
 │   │   ├── update-binary
 │   │   └── VerifyWholeZip.java
 │   ├── salida/
@@ -401,7 +437,7 @@ mxqpro4k/
 │   │   └── vendor.raw.img
 │   ├── .gitignore
 │   ├── claves-desarrollo/ [protegido; no se enumera su contenido]
-│   ├── compilacion/ [164 archivos; 1.1 MB; agrupado]
+│   ├── compilacion/ [186 archivos; 1.3 MB; agrupado]
 │   ├── compilar-componentes.py
 │   ├── fuentes-webview/ [14 archivos; 0.4 MB; agrupado]
 │   ├── INSTALACION-USB.md
@@ -413,6 +449,7 @@ mxqpro4k/
 ├── tools/
 │   ├── compilar-android/ [4 archivos; 125.6 MB; agrupado]
 │   ├── ext4-cygwin/ [74 archivos; 38.8 MB; agrupado]
+│   ├── fable-referencias/ [7 archivos; 0.2 MB; agrupado]
 │   ├── firmar-ota/ [5 archivos; 0.1 MB; agrupado]
 │   ├── h1-referencias/ [11 archivos; 1.8 MB; agrupado]
 │   ├── imager-1.8.5.exe

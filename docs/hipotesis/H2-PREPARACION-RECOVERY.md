@@ -1,6 +1,6 @@
 # H2 · Preparación persistente y acceso a recovery
 
-Responsable previsto: Fable5.1 desde Claude Desktop. Estado: **hipótesis abierta; todavía sin revisión de Fable recibida**.
+Responsable previsto: Fable5.1 desde Claude Desktop. Estado: **hipótesis abierta; revisión de Fable recibida por USB y contrastada en [revisión conjunta](REVISION-CONJUNTA-FABLE.md). No se acreditó mapa/BCB ni una ruta de rescate**.
 
 ## Enunciado
 

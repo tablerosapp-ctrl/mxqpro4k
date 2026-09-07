@@ -1,0 +1,125 @@
+{
+  "estado": "verificado",
+  "fecha": "2026-09-07T15:54:45.4959815-03:00",
+  "archivo_local": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\privado\\usb-retirados-20260907-155417",
+  "tv_flasheado": false,
+  "reboot_requested": false,
+  "files": [
+    {
+      "archivo": "AccesoUSB-0.8.apk",
+      "bytes": 53651,
+      "sha256": "e103db68fb4deea3479db9a72844eea6e69c5d9beb66403b5673a9636377a148",
+      "lectura_verificada": true
+    },
+    {
+      "archivo": "LEEME-AHORA.txt",
+      "bytes": 1460,
+      "sha256": "7cc05f9b24e7c6df8b7b8a4de6e675c48df02cb80077a5a3958dd5c821ab4eb7",
+      "lectura_verificada": true
+    }
+  ],
+  "retirados": [
+    {
+      "archivo": "AccesoUSB-0.2.apk.no-usar",
+      "bytes": 24979,
+      "sha256": "328e0420124afcd6874d904956ae715467b1e95d0f99828ea1402992e8980fce",
+      "copia_pc_verificada": true,
+      "retirado": true
+    },
+    {
+      "archivo": "AccesoUSB-0.3.apk.no-usar",
+      "bytes": 24979,
+      "sha256": "6cba89eeae7cbd97a03360f1eba91ad689b513ab38981353839824cfa1f71877",
+      "copia_pc_verificada": true,
+      "retirado": true
+    },
+    {
+      "archivo": "AccesoUSB-0.4.apk.no-usar",
+      "bytes": 41363,
+      "sha256": "943ae71fc5161114f27592b3ca0cd3f40b4eacb9b2ad05572db7032c5092d7e2",
+      "copia_pc_verificada": true,
+      "retirado": true
+    },
+    {
+      "archivo": "AccesoUSB-0.5.apk.no-usar",
+      "bytes": 45459,
+      "sha256": "7e251f9d202c6ac9407734f2ca4c19077a8b02994f3a115205fdc10cf21b0874",
+      "copia_pc_verificada": true,
+      "retirado": true
+    },
+    {
+      "archivo": "AccesoUSB-0.6.apk.no-usar",
+      "bytes": 41363,
+      "sha256": "7664b019051ed4e042a64e4e987501bbf3823224a839793a5811545991c1acd6",
+      "copia_pc_verificada": true,
+      "retirado": true
+    },
+    {
+      "archivo": "AccesoUSB-0.7.apk",
+      "bytes": 29075,
+      "sha256": "a81c1cc8d871ae883f3d79f6e030b588e753b5ee633496da3087aa1a021f90a5",
+      "copia_pc_verificada": true,
+      "retirado": true
+    },
+    {
+      "archivo": "LEEME-0.1-retirado.txt",
+      "bytes": 1864,
+      "sha256": "d01dd61bb2aa1992145666fb5bda2203e76c4586e26809ca8abf4db0e27fad64",
+      "copia_pc_verificada": true,
+      "retirado": true
+    },
+    {
+      "archivo": "LEEME-0.4-retirado.txt",
+      "bytes": 1783,
+      "sha256": "e1036d8274b7b7fe8b48fe91d67816610b0441560eb98602cc821a71c4c65979",
+      "copia_pc_verificada": true,
+      "retirado": true
+    },
+    {
+      "archivo": "LEEME-0.5-retirado.txt",
+      "bytes": 1314,
+      "sha256": "b1058f4a28dd99dcec33bcfcf4ad37c3bab8f856baef8ded2a824b93e8e20370",
+      "copia_pc_verificada": true,
+      "retirado": true
+    },
+    {
+      "archivo": "LEEME-0.6-retirado.txt",
+      "bytes": 1216,
+      "sha256": "8939b00748b608a0ab2f822bc39fd6c348f1ae1eb1158e9be51715fd0fdfe897",
+      "copia_pc_verificada": true,
+      "retirado": true
+    },
+    {
+      "archivo": "LEEME-ENTRADA-ANTERIOR.txt",
+      "bytes": 1550,
+      "sha256": "47e9bca4669d827099374718f8fd1dc81fba3eb19a315beb2cf4bff40bebbc68",
+      "copia_pc_verificada": true,
+      "retirado": true
+    },
+    {
+      "archivo": "TVBASE-P291-A9-0.1-RECOVERY.zip.no-usar",
+      "bytes": 573091724,
+      "sha256": "f4faca862a920d306d760e0f0da29751d1f322fb1fc72dade7a0f63657f19b07",
+      "copia_pc_verificada": true,
+      "retirado": true
+    },
+    {
+      "archivo": "mxqpro4kpropuestasastra.zip",
+      "bytes": 19663,
+      "sha256": "49f9c62ebbc462fd6e52a799dac2d72aab1d1823704aef452ba34538b262b0e8",
+      "copia_pc_verificada": true,
+      "retirado": true
+    },
+    {
+      "archivo": "LEEME-AHORA.txt",
+      "bytes": 1537,
+      "sha256": "ec8297fca66a5c9f9604ce46afc6048eff1187af49a3351b232c065c43aaadc5",
+      "copia_pc_verificada": true,
+      "retirado": true
+    }
+  ],
+  "bytes_retirados": 573327869,
+  "codigo_nativo": 0,
+  "drive_letter": "D",
+  "detalle": "0.8 copiado/leido; versiones viejas archivadas en PC antes de retirarlas del USB. ROM0.1.1, recovery, marcador, informes y respaldos conservados. Sin formato/reinicio."
+}

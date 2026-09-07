@@ -51,3 +51,7 @@ La nueva evidencia0.5 y sus límites están en [hallazgos](../diagnostico/primer
 Evidencia de ADR-17: [captura completa P291](../diagnostico/primer-tv-complemento-20260907-003114/HALLAZGOS.md), [firma integral contra certificados reales](../diagnostico/primer-tv-complemento-20260907-003114/certificados-ota.json) y [análisis del actualizador](../diagnostico/primer-tv-complemento-20260907-003114/analisis-actualizador/ANALISIS.md). No confundir confianza del Android instalado con las claves de recovery ni inferir que un apagado prepara correctamente BCB/block.map.
 
 Evidencia ADR-18: [intento con ROM completa](../diagnostico/primer-tv-update-20260907-1326/HALLAZGOS.md). No atribuir al nuevo intento el pstore de otro reinicio ni dar por presentes reportes que0.7 no genera.
+
+## ADR-19 · Captura dirigida tras la revisión de Fable
+
+Adoptar PROP-09 y fase1 de PROP-13 con0.8, para aprovechar el intento ya ocurrido sin otro Update, reinicio o cambio de radios. Diferenciar espera Java y kernel, persistencia desconocida y errores de consulta. SHA estricto/carpeta nueva/estados con límite. [Revisión y contrato](hipotesis/REVISION-CONJUNTA-FABLE.md). Preparador vigente: `preparar-postintento-08.ps1`; los anteriores quedan históricos.

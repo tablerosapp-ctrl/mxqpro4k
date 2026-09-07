@@ -14,7 +14,7 @@ flowchart LR
     C_WEB["Proveedor WebView · construido"]
     C_ZIP["ZIP de instalación · verificado_local"]
     C_REC["Recovery externo · verificado_local"]
-    C_ENTRY["Acceso OEM USB 0.7 · observado_tv"]
+    C_ENTRY["Diagnóstico USB0.8 · verificado_local"]
     C_USB["Kingston preparado · verificado_local"]
     C_TV["P291: OEM detenido al 2 % · observado_tv"]
     C_APP["APK del producto · propuesto"]
@@ -141,40 +141,49 @@ Requisitos: REQ-11.
 - [rom-simplificada/instalador/recovery-externo/PREPARADO.json](../rom-simplificada/instalador/recovery-externo/PREPARADO.json)
 - [rom-simplificada/instalador/gxl_p271_v1-referencia.h](../rom-simplificada/instalador/gxl_p271_v1-referencia.h)
 
-### C-ENTRY · Acceso OEM USB 0.7
+### C-ENTRY · Diagnóstico USB0.8
 
-**observado_tv**. Menú OEM abierto según fotos; selección y confirmación del ZIP real. Preparación Android detenida al2% más de10min. No repetir Update ni otro botón de reinicio.
+**verificado_local**. Captura dirigida sin reinicio/Update/radios; once etapas con límites/SHA, prueba física pendiente.
 
 Requisitos: REQ-11.
 
-- [rom-simplificada/componentes/acceso-usb-0.7/Acceso.java](../rom-simplificada/componentes/acceso-usb-0.7/Acceso.java)
-- [rom-simplificada/componentes/acceso-usb-0.7/AdbLocal.java](../rom-simplificada/componentes/acceso-usb-0.7/AdbLocal.java)
-- [rom-simplificada/componentes/acceso-usb-0.7/Entrada.java](../rom-simplificada/componentes/acceso-usb-0.7/Entrada.java)
-- [rom-simplificada/componentes/acceso-usb-0.7/EntradaScripts.java](../rom-simplificada/componentes/acceso-usb-0.7/EntradaScripts.java)
-- [rom-simplificada/componentes/acceso-usb-0.7/generar-scripts.py](../rom-simplificada/componentes/acceso-usb-0.7/generar-scripts.py)
-- [rom-simplificada/componentes/acceso-usb-0.7/AndroidManifest.xml](../rom-simplificada/componentes/acceso-usb-0.7/AndroidManifest.xml)
-- [rom-simplificada/compilacion/acceso-usb-0.7/acceso-usb.apk](../rom-simplificada/compilacion/acceso-usb-0.7/acceso-usb.apk)
-- [rom-simplificada/compilacion/acceso-usb-0.7/componente.json](../rom-simplificada/compilacion/acceso-usb-0.7/componente.json)
-- [rom-simplificada/instalador/compilar-entrada07.py](../rom-simplificada/instalador/compilar-entrada07.py)
-- [rom-simplificada/instalador/test_entrada07.py](../rom-simplificada/instalador/test_entrada07.py)
-- [rom-simplificada/instalador/EntradaHarness07.java](../rom-simplificada/instalador/EntradaHarness07.java)
-- [rom-simplificada/instalador/ENTRADA-TESTS-0.7.json](../rom-simplificada/instalador/ENTRADA-TESTS-0.7.json)
-- [rom-simplificada/instalador/MKSH-HALLAZGO-0.5.md](../rom-simplificada/instalador/MKSH-HALLAZGO-0.5.md)
+- [rom-simplificada/componentes/acceso-usb-0.8/Acceso.java](../rom-simplificada/componentes/acceso-usb-0.8/Acceso.java)
+- [rom-simplificada/componentes/acceso-usb-0.8/AdbLocal.java](../rom-simplificada/componentes/acceso-usb-0.8/AdbLocal.java)
+- [rom-simplificada/componentes/acceso-usb-0.8/AndroidManifest.xml](../rom-simplificada/componentes/acceso-usb-0.8/AndroidManifest.xml)
+- [rom-simplificada/componentes/acceso-usb-0.8/Evidencia.java](../rom-simplificada/componentes/acceso-usb-0.8/Evidencia.java)
+- [rom-simplificada/componentes/acceso-usb-0.8/EvidenciaScripts.java](../rom-simplificada/componentes/acceso-usb-0.8/EvidenciaScripts.java)
+- [rom-simplificada/componentes/acceso-usb-0.8/generar-scripts.py](../rom-simplificada/componentes/acceso-usb-0.8/generar-scripts.py)
+- [rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-0.sh](../rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-0.sh)
+- [rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-1.sh](../rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-1.sh)
+- [rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-10.sh](../rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-10.sh)
+- [rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-2.sh](../rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-2.sh)
+- [rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-3.sh](../rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-3.sh)
+- [rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-4.sh](../rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-4.sh)
+- [rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-5.sh](../rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-5.sh)
+- [rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-6.sh](../rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-6.sh)
+- [rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-7.sh](../rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-7.sh)
+- [rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-8.sh](../rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-8.sh)
+- [rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-9.sh](../rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-9.sh)
+- [rom-simplificada/compilacion/acceso-usb-0.8/componente.json](../rom-simplificada/compilacion/acceso-usb-0.8/componente.json)
+- [rom-simplificada/instalador/compilar-evidencia08.py](../rom-simplificada/instalador/compilar-evidencia08.py)
+- [rom-simplificada/instalador/test_evidencia08.py](../rom-simplificada/instalador/test_evidencia08.py)
+- [rom-simplificada/instalador/EvidenciaHarness08.java](../rom-simplificada/instalador/EvidenciaHarness08.java)
+- [rom-simplificada/instalador/EVIDENCIA-TESTS-0.8.json](../rom-simplificada/instalador/EVIDENCIA-TESTS-0.8.json)
 
 ### C-USB · Kingston preparado
 
-**verificado_local**. Kingston: APK0.7 y guía copiadas/leídas, ROM/recovery e informes preservados; sin formato. Entrega acreditada por recibo específico.
+**verificado_local**. 0.8/guía copiadas y leídas;14archivos viejos archivados enPC y retirados, informes/ROM/recovery conservados.
 
 Requisitos: REQ-01.
 
-- [preparacion-usb/preparar-entrada-oem-07.ps1](../preparacion-usb/preparar-entrada-oem-07.ps1)
-- [preparacion-usb/entrada-oem-07-estado.json](../preparacion-usb/entrada-oem-07-estado.json)
-- [rom-simplificada/instalador/LEEME-ENTRADA-0.7.txt](../rom-simplificada/instalador/LEEME-ENTRADA-0.7.txt)
+- [preparacion-usb/preparar-postintento-08.ps1](../preparacion-usb/preparar-postintento-08.ps1)
+- [preparacion-usb/postintento-08-estado.json](../preparacion-usb/postintento-08-estado.json)
+- [rom-simplificada/instalador/LEEME-POSTINTENTO-0.8.txt](../rom-simplificada/instalador/LEEME-POSTINTENTO-0.8.txt)
 - [rom-simplificada/INSTALACION-USB.md](../rom-simplificada/INSTALACION-USB.md)
 
 ### C-TV · P291: OEM detenido al 2 %
 
-**observado_tv**. OEM con ZIP real detenido al2%; H1 separa cierre Java de cierre tardío del kernel previo. USB releído sin nuevos informes; conclusiones H2 pendientes.
+**observado_tv**. OEM2% sigue como último físico; Fable recibido/revisado. Captura dirigida0.8 pendiente; no instalación/respaldo confirmados.
 
 Requisitos: .
 
@@ -196,6 +205,8 @@ Requisitos: .
 - [diagnostico/h1-cierre-android/resumen-saneado.json](../diagnostico/h1-cierre-android/resumen-saneado.json)
 - [diagnostico/h1-cierre-android/analizar-registro.py](../diagnostico/h1-cierre-android/analizar-registro.py)
 - [diagnostico/h1-cierre-android/test_analizar_registro.py](../diagnostico/h1-cierre-android/test_analizar_registro.py)
+- [docs/hipotesis/REVISION-CONJUNTA-FABLE.md](../docs/hipotesis/REVISION-CONJUNTA-FABLE.md)
+- [diagnostico/fable-20260907/resumen-saneado.json](../diagnostico/fable-20260907/resumen-saneado.json)
 
 ### C-APP · APK del producto
 
@@ -211,7 +222,7 @@ Implementación pendiente; especificación en [ESPECIFICACION](ESPECIFICACION.md
 
 Requisitos: REQ-07, REQ-09.
 
-Implementación pendiente; especificación en [ESPECIFICACION](ESPECIFICACION.md) y propuestas en [ROADMAP](ROADMAP.md).
+- [docs/hipotesis/REVISION-CONJUNTA-FABLE.md](../docs/hipotesis/REVISION-CONJUNTA-FABLE.md)
 
 ## Directorios y cuidado
 
@@ -242,13 +253,13 @@ Implementación pendiente; especificación en [ESPECIFICACION](ESPECIFICACION.md
 | README.md | 1 | 0.000 |
 | actualizacion-chrome | 51 | 0.417 |
 | analisis-rom | 15 | 1.822 |
-| diagnostico | 155 | 0.018 |
-| docs | 30 | 0.000 |
+| diagnostico | 156 | 0.018 |
+| docs | 31 | 0.000 |
 | dossier-s905l2.html | 1 | 0.000 |
 | images | 1 | 1.352 |
 | platform-tools-latest-windows.zip | 1 | 0.008 |
-| preparacion-usb | 79 | 3.688 |
-| rom-simplificada | 1495 | 7.090 |
-| tools | 18071 | 1.141 |
+| preparacion-usb | 81 | 3.688 |
+| rom-simplificada | 2210 | 7.095 |
+| tools | 18078 | 1.141 |
 
 El inventario excluye derivados documentales y contenido de claves; los tamaños son de archivos, no bloques físicos ocupados. Los temporales retirados se detallan en [LIMPIEZA](LIMPIEZA.md).

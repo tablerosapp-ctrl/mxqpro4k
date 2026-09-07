@@ -1,0 +1,373 @@
+{
+  "state": "passed",
+  "version": "0.8",
+  "apk_sha256": "e103db68fb4deea3479db9a72844eea6e69c5d9beb66403b5673a9636377a148",
+  "tested_source_sha256": {
+    "rom-simplificada/componentes/acceso-usb-0.8/Acceso.java": "b4c146acf3a04e41dcbca0249cc6cba00811b5512281d95f0b4872f4ebb034f5",
+    "rom-simplificada/componentes/acceso-usb-0.8/AdbLocal.java": "06934eccd55f735db14af86761afb34a11fd4285217db7cebe7ba7287f415b1d",
+    "rom-simplificada/componentes/acceso-usb-0.8/AndroidManifest.xml": "0eb08998944ef9a9359d6b3e195780a6f86ea3574b17bd37fd27866e564f1241",
+    "rom-simplificada/componentes/acceso-usb-0.8/Evidencia.java": "3eca2a998d7aa9e310d0f037b6fb9e71ab644903330cd39bc7b901d0b8990593",
+    "rom-simplificada/componentes/acceso-usb-0.8/EvidenciaScripts.java": "fb42d1203fff59a7ea9ae0a86171993cc3918aab1158c02bb333da7861b99814",
+    "rom-simplificada/componentes/acceso-usb-0.8/generar-scripts.py": "9d7841fce200d626f5723a097d2a66cb2b83e300761138361fc18289d2aba42e",
+    "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-0.sh": "d5f96585197104b52c38b1a03f8be25d3076a57de06c27e0503c2a05d8939d24",
+    "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-1.sh": "a0444b429dc520a55fbe05ad85e6e62a72dbb92ce413f1c49d6e53e7ebb229a2",
+    "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-10.sh": "fbd670dff95bab960b5084fb579e9238c1adc7c099f70fd3e097aab3aff0ed65",
+    "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-2.sh": "52f8931b69fcbb9c95008f3c0192f5b5db0f8207387b571f2f93011fbbab1a66",
+    "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-3.sh": "ad3b184ff75eeb8a9e6fc05ba46f252519dac8247a99d2560dfc195d515e22c3",
+    "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-4.sh": "2295586983f2bd3585a0a67aa0f2b8dff60339c6108c04fae65903c6588ea0fd",
+    "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-5.sh": "02ec5ab8fc9e84a83f0280d1b680a57ab062ae482aa4e6ff02889a186348dc68",
+    "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-6.sh": "290d7951e97c9ac8198158319d78ec8d55b9c12b17135c29fa12d116e61b85c2",
+    "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-7.sh": "a0d1f42d794525b73253dfaa00f177e121bda060ebd5177a414ba8ce880071db",
+    "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-8.sh": "6273cde007f61619344d810c960b1086c67a6d87c48fcbd9cdc8132d65227aa4",
+    "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-9.sh": "5ff9b9cd7a6dc2b65b9be7a6b6a4a89baaa2eb67e0a668a558f580f863da5fed"
+  },
+  "scope": "PC only; no TV commands executed",
+  "adb": [
+    {
+      "case": "shell",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 0
+    },
+    {
+      "case": "auth",
+      "passed": true,
+      "observed_services": [],
+      "exit": 1
+    },
+    {
+      "case": "bad_checksum",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 1
+    },
+    {
+      "case": "early_eof",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 1
+    },
+    {
+      "case": "refused",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 1
+    },
+    {
+      "case": "zero_close",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 0
+    },
+    {
+      "case": "unknown_channel",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 1
+    },
+    {
+      "case": "duplicate_ready",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 0
+    },
+    {
+      "case": "response_limit",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 1
+    },
+    {
+      "case": "flow",
+      "passed": true,
+      "observed_services": [
+        "profile",
+        "profile",
+        "profile",
+        "evidence-stage-0",
+        "evidence-stage-1",
+        "evidence-stage-2",
+        "evidence-stage-3",
+        "evidence-stage-4",
+        "evidence-stage-5",
+        "evidence-stage-6",
+        "evidence-stage-7",
+        "evidence-stage-8",
+        "evidence-stage-9",
+        "evidence-stage-10"
+      ],
+      "exit": 0
+    },
+    {
+      "case": "final_failure",
+      "passed": true,
+      "observed_services": [
+        "profile",
+        "profile",
+        "profile",
+        "evidence-stage-0",
+        "evidence-stage-1",
+        "evidence-stage-2",
+        "evidence-stage-3",
+        "evidence-stage-4",
+        "evidence-stage-5",
+        "evidence-stage-6",
+        "evidence-stage-7",
+        "evidence-stage-8",
+        "evidence-stage-9",
+        "evidence-stage-10"
+      ],
+      "exit": 1
+    },
+    {
+      "case": "deadline",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 1
+    }
+  ],
+  "guard_result": "GUARDS_OK: profile x3; stages failure x4; wrong destination; final mandatory; no retry; path injection x3; packet sizes x5",
+  "external_host_rejected": true,
+  "shell_syntax": [
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-0.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-1.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-10.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-2.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-3.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-4.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-5.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-6.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-7.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-8.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-9.sh",
+      "passed": true
+    }
+  ],
+  "mksh_syntax": [
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-0.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-1.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-10.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-2.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-3.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-4.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-5.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-6.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-7.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-8.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-9.sh",
+      "passed": true
+    }
+  ],
+  "mksh_default_hash_alias": "hash='\\\\builtin alias -t'",
+  "shell_fixtures": [
+    {
+      "case": "create_profile_and_timeout_preflight",
+      "passed": true,
+      "exit": 0,
+      "seconds": 0.516
+    },
+    {
+      "case": "create_no_usb",
+      "passed": true,
+      "exit": 2,
+      "seconds": 0.375
+    },
+    {
+      "case": "create_timeout_missing",
+      "passed": true,
+      "exit": 3,
+      "seconds": 0.234
+    },
+    {
+      "case": "root_profile_rejected",
+      "passed": true,
+      "exit": 9,
+      "seconds": 0.156
+    },
+    {
+      "case": "wrong_dt_rejected",
+      "passed": true,
+      "exit": 9,
+      "seconds": 0.36
+    },
+    {
+      "case": "wrong_marker_rejected",
+      "passed": true,
+      "exit": 9,
+      "seconds": 0.328
+    },
+    {
+      "case": "selftest_with_mksh_hash_alias",
+      "passed": true,
+      "exit": 0,
+      "seconds": 3.031
+    },
+    {
+      "case": "empty_sha_rejected",
+      "passed": true,
+      "exit": 9,
+      "seconds": 0.453
+    },
+    {
+      "case": "malformed_sha_rejected",
+      "passed": true,
+      "exit": 9,
+      "seconds": 0.563
+    },
+    {
+      "case": "sidecar_empty_rejected",
+      "passed": true,
+      "exit": 9,
+      "seconds": 0.562
+    },
+    {
+      "case": "report_ok",
+      "passed": true,
+      "exit": 0,
+      "seconds": 2.172
+    },
+    {
+      "case": "denial_preserved",
+      "passed": true,
+      "exit": 0,
+      "seconds": 2.297
+    },
+    {
+      "case": "real_timeout_preserved",
+      "passed": true,
+      "exit": 0,
+      "seconds": 2.359
+    },
+    {
+      "case": "truncation_explicit",
+      "passed": true,
+      "exit": 0,
+      "seconds": 2.281
+    },
+    {
+      "case": "no_overwrite",
+      "passed": true,
+      "exit": 9,
+      "seconds": 0.781
+    },
+    {
+      "case": "pstore_origin_and_copy_sha",
+      "passed": true,
+      "exit": 0,
+      "seconds": 2.265
+    },
+    {
+      "case": "pstore_empty_helper_rejected",
+      "passed": true,
+      "exit": 9,
+      "seconds": 0.61
+    },
+    {
+      "case": "pstore_size_limit_recorded",
+      "passed": true,
+      "exit": 0,
+      "seconds": 1.313
+    },
+    {
+      "case": "final_missing_stage",
+      "passed": true,
+      "exit": 9,
+      "seconds": 0.437
+    },
+    {
+      "case": "full_capture_and_final_hashes",
+      "passed": true,
+      "exit": 0,
+      "seconds": 25.813
+    },
+    {
+      "case": "final_detects_changed_report",
+      "passed": true,
+      "exit": 9,
+      "seconds": 22.656
+    }
+  ],
+  "fixture_adapters": "Real Cygwin mksh with active hash alias; Android paths/profile/SHA/stat mapped to fixtures. Python adapter exercises direct child termination; Android toybox source inspected and device runtime preflight required. No TV or physical flush proof.",
+  "max_actual_open_bytes": 3320,
+  "tv_capture_tested": false
+}

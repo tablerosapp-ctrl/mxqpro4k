@@ -4,6 +4,8 @@ Android simplificado instalado en la memoria interna de TV boxes, con una APK co
 
 **Estado al 7/9/2026:** el usuario abrió el menú OEM, seleccionó la ROM completa 0.1.1 y confirmó Update. Tras Copying apareció la preparación Android al **2 %, inmóvil por más de diez minutos**. No repetir Update ni la entrada 0.7 como solución. La firma está comprobada contra el certificado OTA del P291, pero **recovery, instalación y respaldo original siguen sin confirmar**. [Nuevo resultado](diagnostico/primer-tv-update-20260907-1326/HALLAZGOS.md). Git local conserva el hilo; el [repositorio público](https://github.com/tablerosapp-ctrl/mxqpro4k) está publicado y su lectura anónima fue verificada.
 
+**Nuevo avance:** revisión de Fable incorporada y captura dirigida0.8 entregada. Se limpiaron14archivos del USB tras archivarlos en PC; informes y ROM vigente conservados. [Qué adoptamos y corregimos](docs/hipotesis/REVISION-CONJUNTA-FABLE.md) · [Usar0.8](rom-simplificada/INSTALACION-USB.md). Captura física pendiente.
+
 - [Empezar desde Claude Desktop / Fable 5.1](docs/ENTREGA-FABLE.md): contexto y revisión independiente H2.
 - [Colaboración y dos hipótesis](docs/COLABORACION.md): responsabilidades, evidencia y formato de retorno.
 - [Primera revisión H1 de Codex](docs/hipotesis/H1-RESULTADO-CODEX.md): distingue cierre Java y kernel; pendrive leído, sin evidencia nueva del último intento.

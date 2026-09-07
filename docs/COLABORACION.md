@@ -1,6 +1,6 @@
 # Colaboración: Codex y Fable 5.1
 
-El usuario pidió publicar primero documentación e historial y después contrastar dos hipótesis en paralelo. Confirmó que Fable 5.1 ya está trabajando desde Claude Desktop en otra PC y con otra cuenta GitHub. Esta sesión no puede invocarlo directamente ni atribuirle resultados antes de recibirlos. Codex completó su [primera revisión H1](hipotesis/H1-RESULTADO-CODEX.md); conclusiones de Fable pendientes.
+El usuario pidió publicar primero documentación e historial y después contrastar dos hipótesis en paralelo. Confirmó que Fable 5.1 ya está trabajando desde Claude Desktop en otra PC y con otra cuenta GitHub. Esta sesión no puede invocarlo directamente ni atribuirle resultados antes de recibirlos. Codex completó su [primera revisión H1](hipotesis/H1-RESULTADO-CODEX.md); el ZIP de Fable ya fue recibido y contrastado. [Revisión conjunta y decisiones](hipotesis/REVISION-CONJUNTA-FABLE.md): captura0.8 preparada con PROP-09/PROP-13 fase1; las hipótesis siguen abiertas.
 
 Repositorio público verificado: **[tablerosapp-ctrl/mxqpro4k](https://github.com/tablerosapp-ctrl/mxqpro4k)**. Permite lectura sin invitación. Para escribir desde otra cuenta se pueden usar issues o un fork con pull request; no se conceden permisos de administración por este pedido. [Recibo de publicación](evidencia/publicacion-github.json).
 

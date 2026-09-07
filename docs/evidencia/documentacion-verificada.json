@@ -1,8 +1,8 @@
 {
-  "date_utc": "2026-09-07T17:06:26.629088+00:00",
+  "date_utc": "2026-09-07T18:58:43.458931+00:00",
   "state": "passed",
-  "links_checked": 232,
-  "component_paths_checked": 84,
+  "links_checked": 259,
+  "component_paths_checked": 96,
   "graph_valid": true,
   "roadmap_acyclic": true,
   "html_embedded_data_matches": true,
@@ -13,8 +13,8 @@
       "matched": true
     },
     {
-      "name": "AccesoUSB-0.7.apk",
-      "sha256": "a81c1cc8d871ae883f3d79f6e030b588e753b5ee633496da3087aa1a021f90a5",
+      "name": "AccesoUSB-0.8.apk",
+      "sha256": "e103db68fb4deea3479db9a72844eea6e69c5d9beb66403b5673a9636377a148",
       "matched": true
     },
     {
@@ -24,7 +24,7 @@
     },
     {
       "name": "LEEME-AHORA.txt",
-      "sha256": "ec8297fca66a5c9f9604ce46afc6048eff1187af49a3351b232c065c43aaadc5",
+      "sha256": "7cc05f9b24e7c6df8b7b8a4de6e675c48df02cb80077a5a3958dd5c821ab4eb7",
       "matched": true
     }
   ],

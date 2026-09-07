@@ -157,3 +157,8 @@ Desktop.ini
 
 # Espejo de publicación saneado y configuración privada del operador.
 /.publicacion/
+
+# Captura post-intento0.8: fuentes sí, clases/fixtures y logs crudos no.
+/rom-simplificada/instalador/host-classes-0.8/
+/rom-simplificada/instalador/fixture-evidencia-0.8*/
+/rom-simplificada/compilacion/acceso-usb-0.8/*.log

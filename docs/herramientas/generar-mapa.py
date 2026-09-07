@@ -16,7 +16,7 @@ for p in sorted(ROOT.rglob('*')):
     if not p.is_file() or p.is_symlink():
         continue
     rel = p.relative_to(ROOT).as_posix()
-    if rel in derived or rel.startswith((private + '/', 'privado/', '.publicacion/')) or '/.git/' in '/' + rel:
+    if rel in derived or rel.startswith((private + '/', 'privado/', '.publicacion/')) or any(x in '/' + rel for x in ('/.git/', '/privado/', '/crudos/', '/originales/')):
         continue
     rows.append({'path': rel, 'bytes': p.stat().st_size})
 stats = defaultdict(lambda: {'files': 0, 'bytes': 0})

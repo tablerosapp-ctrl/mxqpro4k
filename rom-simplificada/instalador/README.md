@@ -63,3 +63,7 @@ Los tests de protocolo simulan respuestas; no ejecutan el shell del TV, su bootl
 Fuentes y decisiones: [ADR-05 a ADR-10](../../docs/DECISIONES.md), [formato no A/B](https://source.android.com/docs/core/ota/nonab/inside_packages), [ADB Android9](https://android.googlesource.com/platform/system/core/+/refs/tags/android-9.0.0_r1/adb/services.cpp), [Amlogic P271 de referencia](https://android.googlesource.com/platform/external/u-boot/+/refs/heads/android-tv-s-beta3/board/amlogic/configs/gxl_p271_v1.h).
 
 Entrega complementaria0.6: [recibo USB](../../preparacion-usb/evidencia-06-estado.json), 7/9/2026 a las00:22 ART, APK y guía copiadas/leídas con SHA coincidente. Primera ejecución0.6 en el P291 pendiente.
+
+## Diagnóstico0.8 vigente
+
+La entrada0.7 está retirada del USB tras atascarse el OEM al2%. [Uso vigente](../INSTALACION-USB.md):0.8 recoge evidencia dirigida, sin Update/reinicio/radios. Fuentes separadas en `../componentes/acceso-usb-0.8`, compilador `compilar-evidencia08.py`, pruebas `test_evidencia08.py` y `EVIDENCIA-TESTS-0.8.json`. [Contrato y límites](../../docs/hipotesis/REVISION-CONJUNTA-FABLE.md). No sobrescribir versiones verificadas ni confundir sus pruebas con una captura física.

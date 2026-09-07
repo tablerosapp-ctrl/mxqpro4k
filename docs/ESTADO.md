@@ -1,12 +1,30 @@
 # Estado operativo
 
-Actualización del **7/9/2026, tras el intento físico con ROM completa**. Cuatro fotos muestran menú OEM → ZIP0.1.1 seleccionado y confirmado → Copying → diálogo de preparación Android al 2 %. El usuario confirma **más de diez minutos sin avance**. [Evidencia y análisis](../diagnostico/primer-tv-update-20260907-1326/HALLAZGOS.md).
+## Vigente · 7/9/2026, entrega0.8 a las15:54 ART
+
+Ayuda de Fable recibida y revisada; Kingston limpiado y Acceso USB0.8 copiado/leído. [Revisión y decisiones](hipotesis/REVISION-CONJUNTA-FABLE.md) · [Recibo de entrega/limpieza](../preparacion-usb/postintento-08-estado.json).
+
+**No hay ROM instalada ni respaldo original del TV confirmados.** El último intento observado sigue detenido al2%; el resultado del ciclo manual no se comunicó. No se inventa una vuelta a Android.
+
+Si Android está disponible, instalar **AccesoUSB-0.8.apk** desde el Kingston y pulsar una vez **«Guardar diagnóstico del último intento»**. Al terminar o mostrar un error, devolver el pendrive. [Pasos vigentes](../rom-simplificada/INSTALACION-USB.md). No repetir Update ni botones de reinicio anteriores.
+
+0.8 busca log del arranque anterior, console/pmsg y registros actuales filtrados; consulta WiFi, Bluetooth, batería, espacio y WebView con límites de tiempo/tamaño. No cambia radios, no abre el actualizador ni escribe BCB/particiones. Usa ADB local existente, UID2000/P291/API28, carpeta nueva y hashes estrictos con autocontrol. Una consulta denegada o agotada se registra como tal. «Completa» no acredita respuesta de todos los servicios.
+
+Pruebas PC:12ADB,21fixtures con mksh real/alias activo y11etapas verificadas sintácticamente bajo POSIX y mksh. APK53651B, SHA `e103db68fb4deea3479db9a72844eea6e69c5d9beb66403b5673a9636377a148`; firma habitual y versión8/0.8 verificadas. [Pruebas](../rom-simplificada/instalador/EVIDENCIA-TESTS-0.8.json). Los adaptadores de PC no sustituyen Android/toybox; timeout se comprueba también en el TV al iniciar. **Captura física0.8 pendiente.**
+
+De Fable se adoptan PROP-09 y fase1 de PROP-13. BatteryStats tiene una espera sin límite en AOSP9; WiFi/BT piden estadísticas de forma asíncrona y la espera explícita de respuestas tiene timeout. Un dumpsys lento no demuestra que retenga el cierre. La barra2% tampoco confirma uncrypt_file, block.map o BCB. PROP-12 pasa al roadmap con correcciones; PROP-08 sigue sin una lectura/restauración Amlogic probada en este P291.
+
+Preparador vigente: [preparar-postintento-08.ps1](../preparacion-usb/preparar-postintento-08.ps1). D: al entregar; identidad estable y marcador de abajo revalidados. Se archivaron y retiraron14archivos,573.327.869B, verificando ambas copias antes de borrar. Quedan APK0.8/guía, ROM0.1.1, recovery, marcador e informes. No se formateó ni reparó el volumen; no se afirma haber corregido su indicador Warning/dirty. [Contenido vigente](../rom-simplificada/INSTALACION-USB.md).
+
+## Antecedentes conservados
+
+Antecedente del **7/9/2026, tras el intento físico con ROM completa**. Cuatro fotos muestran menú OEM → ZIP0.1.1 seleccionado y confirmado → Copying → diálogo de preparación Android al 2 %. El usuario confirma **más de diez minutos sin avance**. [Evidencia y análisis](../diagnostico/primer-tv-update-20260907-1326/HALLAZGOS.md).
 
 **No hay instalación ni respaldo original del TV confirmados. No repetir Update.** La captura0.6 y las verificaciones criptográficas siguen válidas; no acreditan que el sistema consiga cerrar ni que recovery se haya ejecutado.
 
 La referencia exacta Android9 sitúa 2 % después de la notificación de apagado y antes de regresar del cierre de ActivityManager; el procesamiento del paquete llega después. Esto favorece un atasco del cierre, aunque el framework del TV no se extrajo y la interfaz podría estar congelada. No atribuir una causa definitiva ni asegurar que no hubo escrituras de preparación.
 
-Próxima acción física: un único ciclo de alimentación de diez segundos para salir del bloqueo, conservando el USB. No se presupone BCB/mapa correcto ni se promete que el corte carezca de riesgo. Si aparece instalación real, dejarla continuar; si aparece recovery/error, conservar el texto sin elegir wipe; si vuelve Android, no repetir Update. **Resultado del ciclo pendiente.**
+Acción indicada entonces, cuyo resultado sigue pendiente: un único ciclo de alimentación de diez segundos para salir del bloqueo, conservando el USB. No se presupone BCB/mapa correcto ni se promete que el corte carezca de riesgo. Si aparece instalación real, dejarla continuar; si aparece recovery/error, conservar el texto sin elegir wipe; si vuelve Android, no repetir Update. **Resultado del ciclo pendiente.**
 
 ## Qué habilita la evidencia nueva
 
@@ -17,7 +35,7 @@ Próxima acción física: un único ciclo de alimentación de diez segundos para
 
 El menú Select/Update ya se abrió al principio, pero solo recibió el ZIP vacío de 22 bytes, que quedó al 2 %. El intento nuevo con la ROM completa llegó también al 2 % y quedó detenido. Acceso USB 0.7 verifica ese paquete y el APK original antes de abrir el mismo menú. **No corrige por sí mismo el atasco al reiniciar ni constituye otro método de flasheo.**
 
-## Último entregable probado: Acceso USB 0.7
+## Antecedente físico: Acceso USB 0.7
 
 La APK solo abre **«Abrir actualización local»** tras comprobar el perfil P291/API28, el USB marcado, la integridad del ZIP y la identidad del actualizador. La selección y confirmación de Update quedan en el menú original. No hace otra captura general ni solicita un reinicio propio.
 
@@ -66,7 +84,7 @@ Git local en `main`, con fuentes, documentación y evidencia revisada. Binarios,
 
 La APK0.7 no guarda un registro posterior a Update. No afirmar que habrá un nuevo reporte de este atasco en el pendrive sin leerlo. Las fotos actuales son la evidencia del intento; el pstore anterior corresponde a otra solicitud.
 
-El usuario confirmó que Fable5.1 está trabajando desde otra PC/cuenta y pidió que Codex continúe H1 con el pendrive conectado a esta PC. Sus conclusiones todavía no se recibieron. [Coordinación H1/H2](COLABORACION.md) · [Procedimiento público](PUBLICACION.md).
+El usuario confirmó que Fable5.1 está trabajando desde otra PC/cuenta y pidió que Codex continúe H1 con el pendrive conectado a esta PC. Sus conclusiones se recibieron luego en el ZIP de Fable; ver actualización0.8 arriba. [Coordinación H1/H2](COLABORACION.md) · [Procedimiento público](PUBLICACION.md).
 
 ## Revisión H1 y nueva lectura del pendrive · 7/9/2026
 
@@ -74,4 +92,4 @@ La [revisión de Codex](hipotesis/H1-RESULTADO-CODEX.md) separa H1a (posible ata
 
 Kingston D: revalidado y leído: 75 archivos de carpetas de evidencia más dos informes sueltos coinciden con los originales adquiridos; ROM/APK/recovery/guía coinciden con sus SHA. No hay una carpeta nueva de informe ni respaldo del TV. Windows marca el volumen sucio/Warning; CHKDSK sin reparación terminó el recorrido sin problemas, con una línea inicial de acceso denegado que se conserva como límite. No se formateó ni preparó otra entrega. [Recibo saneado](../diagnostico/h1-cierre-android/resumen-saneado.json).
 
-Se agregó un parser offline con diez regresiones aprobadas y un diseño acotado de observación. No se desplegó un recolector nuevo ni se pidió otro Update. Una captura posterior del pstore puede aprovechar el intento ocurrido, si Android volvió a arrancar; el resultado de ese arranque sigue pendiente de respuesta. Comparar H1 con H2 antes de instrumentar otra actualización.
+Se agregó un parser offline con diez regresiones aprobadas y un diseño acotado de observación. En esa revisión inicial todavía no se desplegó un recolector nuevo ni se pidió otro Update. Una captura posterior del pstore puede aprovechar el intento ocurrido, si Android volvió a arrancar; el resultado de ese arranque sigue pendiente de respuesta. Comparar H1 con H2 antes de instrumentar otra actualización.

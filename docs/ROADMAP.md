@@ -38,4 +38,17 @@ Relacionar el cambio con REQ → decisión → componente → prueba → etapa. 
 
 ## Revisión conjunta antes de otra prueba
 
-El usuario pidió dos hipótesis en paralelo, tras publicar el estado. La [revisión H1 de Codex](hipotesis/H1-RESULTADO-CODEX.md) está disponible: separa el cierre Java OEM del cierre tardío del kernel en el intento ADB anterior. Incluye comprobación del pendrive, parser offline probado y diseño de observación sin otro reinicio automático. [H2](hipotesis/H2-PREPARACION-RECOVERY.md) está en revisión externa según el usuario; aún no se recibieron conclusiones. Ambas hipótesis siguen abiertas. No se cierra M1 por este análisis. [Contrato de colaboración](COLABORACION.md).
+El usuario pidió dos hipótesis en paralelo, tras publicar el estado. La [revisión H1 de Codex](hipotesis/H1-RESULTADO-CODEX.md) está disponible: separa el cierre Java OEM del cierre tardío del kernel en el intento ADB anterior. Incluye comprobación del pendrive, parser offline probado y diseño de observación sin otro reinicio automático. [H2](hipotesis/H2-PREPARACION-RECOVERY.md) ya recibió los aportes de Fable; la [revisión conjunta](hipotesis/REVISION-CONJUNTA-FABLE.md) adopta la captura0.8, con prueba física pendiente. Ambas hipótesis siguen abiertas. No se cierra M1 por este análisis. [Contrato de colaboración](COLABORACION.md).
+
+## Aportes de Fable recibidos y revisados
+
+| ID | Decisión | Condición / relación |
+| --- | --- | --- |
+| PROP-08 | Investigar vías Amlogic fuera del cierre Android | P291/USB/lectura/restauración aún no probados; no entregar Burning como rescate garantizado. C-REC/M1/M4. |
+| PROP-09 | Implementada en0.8, física pendiente | Log anterior/pstore/espacio/WebView; aprovechar el intento ya ocurrido. C-ENTRY/M1. |
+| PROP-10 | Incorporada al objetivo de PROP-03 | Medición multimedia tras instalar; conservar referencia de dos VP9/alfa/canvas. M3. |
+| PROP-11 | No adoptada ahora | No repetir Update con otro ZIP sin evidencia/instrumentación nueva. M1. |
+| PROP-12 | Diseño adoptado con correcciones | Separar ROM/motor/APK/contenido; reconciliar persistencia y ensayar cada rollback. C-GESTION/M6. |
+| PROP-13 | Solo fase1 implementada en0.8 | Consultas con plazo; sin cambiar radios ni reiniciar. Las fases posteriores dependen de evidencia. C-ENTRY/M1. |
+
+La [revisión conjunta](hipotesis/REVISION-CONJUNTA-FABLE.md) explica discrepancias, fuentes y el resultado que permitiría elegir la siguiente intervención. Ninguno de estos aportes cierra VAL-05 a09.

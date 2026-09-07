@@ -8,7 +8,15 @@ Leer primero [README](README.md), [estado](docs/ESTADO.md), [especificación](do
 - El usuario autoriza preparar el Kingston y la instalación final interna en el PRIMER TV; la autorización persiste. Revalidar destino/contenido; no volver a pedirla por rutina. También autorizó ordenar, limpiar lo innecesario y documentar el proyecto.
 - El primer TV no se conectará a Ethernet/red como requisito. El ADB de Acceso USB usa exclusivamente 127.0.0.1:5555 ya disponible. No habilitar root ni alterar autenticación.
 
-## Estado que prevalece · 7/9/2026, intento físico OEM con ROM completa detenido al 2 %
+## Estado que prevalece · entrega0.8 del7/9/2026,15:54 ART
+
+- Fable recibido en ZIP USB19663B,SHA49f9c62ebbc462fd6e52a799dac2d72aab1d1823704aef452ba34538b262b0e8. Originales privados y resumen saneado en diagnostico/fable-20260907. Revisar docs/hipotesis/REVISION-CONJUNTA-FABLE.md: se adoptan PROP09+PROP13fase1, PROP12 como diseño corregido; Burning/respaldo no probado, no otro ZIP/reboot. BatteryStats Future sin límite es candidato, requests WiFi/BT oneway y espera de respuestas2s; dumpsys lento no prueba causalidad.
+- APK0.8 SOLO diagnóstico sin reinicio/Update/radios; fuentes componentes/acceso-usb-0.8. Once etapas con límites/códigos/estados/truncamiento, SHA64hex/abc, UID2000/API28/DT exacto. logcat-L y console/pmsg pueden ser denegados/ausentes; no llamar éxito de lectura a COMPLETO. Carpeta TVBASE-postintento-..., no repite captura0.6. Plazo90s cliente no garantiza matar espera de kernel. No root ni red externa.
+- Pruebas0.8:12ADB,21fixtures mksh alias activo,11sintaxisPOSIX+11mksh; simulaciones PC con adaptadores documentados, no captura física. APK53651B,SHAe103db68fb4deea3479db9a72844eea6e69c5d9beb66403b5673a9636377a148. EntregaUSB0.8 copiada/leída, código0, preparacion-usb/postintento-08-estado.json. Preparador vigente preparar-postintento-08.ps1. TV0.8 pendiente.
+- Usuario pidió limpiar USB:14archivos viejos/reemplazados,573327869B archivados y verificados en PC antes de retirar; privado/usb-retirados-20260907-155417. No formato/particiones. ROM0.1.1/recovery/marcador/informes y carpetas conservados. PC releases originales intactos. No ejecutar nuevamente por rutina.
+- Último físico sigue OEM2%>10min; resultado del último ciclo no comunicado. No inferir Android recuperado de que USB esté en PC. Ejecutar0.8 solo si Android disponible; no repetirUpdate. Ninguna ROM instalada ni respaldo delTV confirmado. Los apartados siguientes son historia.
+
+## Antecedentes · 7/9/2026, intento físico OEM con ROM completa detenido al 2 %
 
 - PRIMER TV: P291, DT gxlx2_p291_1g, Android9/API28, UID2000 shell confirmado por foto de APK0.3. LED roto. SEGUNDO TV leído por WiFi: P271 gxlx_p271_1g; NO destino de esta ROM. No extrapolar su firmware/certificados/particiones al P291.
 - Antecedente0.3: reboot:recovery de APK0.3 dejó Sin señal más de diez minutos; tras un ciclo de alimentación el usuario informó inicio con Android, aparentemente sin cambios. No se vio recovery ni se seleccionó el ZIP real. No hay instalación ni respaldo original del TV confirmados.
@@ -29,7 +37,7 @@ Leer primero [README](README.md), [estado](docs/ESTADO.md), [especificación](do
 
 - Git local en main. Fuentes, docs y resúmenes saneados se versionan; claves/binarios/herramientas/capturas crudas quedan locales. Autoría de automatización Codex (registro local), codex@local.invalid, solo configlocal. GitHub público publicado en https://github.com/tablerosapp-ctrl/mxqpro4k; lectura anónima y SHA remoto comprobados el 7/9/2026. Recibo: docs/evidencia/publicacion-github.json. Revisar docs/GIT.md y git status antes de continuar.
 
-## Resultado nuevo que prevalece
+## Resultado OEM anterior
 
 - Evidencia: diagnostico/primer-tv-update-20260907-1326/HALLAZGOS.md y resumen-saneado.json. Cuatro fotos conservadas localmente: menú, selección ROM0.1.1/confirmación, Copying, preparación Android2%. Tiempo mayor a10min confirmado. No hay un nuevo log del TV ni reporte USB:0.7 no captura después de Update.
 - AOSP9 exacto ShutdownThread SHA621940271d7af066dfb99bc4cc87db7747bc24f36af728aad99b6c74fe120a9b asigna2tras broadcast,4tras ActivityManager,20antes uncrypt. Inferencia de atasco del cierre; framework P291 no extraído, UI podría estar congelada. No declarar falla precisa ActivityManager ni BCB/mapa confirmado.
@@ -40,7 +48,7 @@ Leer primero [README](README.md), [estado](docs/ESTADO.md), [especificación](do
 ## Pendrive y operaciones
 
 - Identidad exacta: Kingston DataTraveler3.0, 30943995904 bytes, USB, no sistema/no boot de PC; UniqueId USBSTOR\DISK&VEN_KINGSTON&PROD_DATATRAVELER_3.0&REV_\KINGSTON_SERIAL_LOCAL&0:PC_LOCAL. D: era su letra al entregar, FAT32 TVBASE. Nunca elegir por letra/número solamente.
-- Herramienta vigente de COPIA POR ARCHIVOS: preparacion-usb/preparar-entrada-oem-07.ps1, pruebas y recibo propios ya verificados. Preparadores anteriores están retirados. No formatear, repetir Imager ni restaurar Armbian por rutina. Herramientas en PC, no instaladas al pendrive.
+- Herramienta histórica de COPIA POR ARCHIVOS: preparacion-usb/preparar-entrada-oem-07.ps1, pruebas y recibo propios ya verificados. Preparadores anteriores están retirados. No formatear, repetir Imager ni restaurar Armbian por rutina. Herramientas en PC, no instaladas al pendrive.
 - Tres escrituras de Imager fallaron con disk153/redetección; la cuarta con Imager2.0.11.1 funcionó en conexión USB(16)/SS04. Cambiar letra no cambió puerto. El éxito apunta a diferencia de ruta, sin causa física exacta probada. No repetir una escritura fallida sin evidencia o cambio concreto; conservar error nativo/registro/lectura. ExitCode ausente no equivale a0.
 - Conservar siempre TVBASE-respaldo-*, fuentes originales, claves locales y recibos. usb-antes.img respalda el antiguo PENDRIVE, no el TV. No hay respaldo del TV aún.
 - No usar ZIP vacío ni repetir el intento congelado al2% como si contuviera ROM. ADR-17 habilita el primer intento OEM con la ROM completa, tras capturar APK/certificados y verificar firma e integridad. No repetir reboot:recovery sin nueva evidencia. No usar LED roto para diagnóstico.

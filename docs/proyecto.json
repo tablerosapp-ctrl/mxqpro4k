@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "title": "TV Base",
-  "snapshot": "2026-09-07T17:06:00.608690+00:00",
+  "snapshot": "2026-09-07T18:57:26.165307+00:00",
   "state": "ROM completa por OEM: preparación detenida al 2 % más de 10 minutos",
   "installed": false,
   "original_tv_backup_confirmed": false,
@@ -10,10 +10,11 @@
     "state": "docs/ESTADO.md",
     "decisions": "docs/DECISIONES.md",
     "roadmap": "docs/ROADMAP.md",
-    "delivery_receipt": "preparacion-usb/entrada-oem-07-estado.json",
+    "delivery_receipt": "preparacion-usb/postintento-08-estado.json",
     "collaboration": "docs/COLABORACION.md",
     "publication": "docs/PUBLICACION.md",
-    "h1_review": "docs/hipotesis/H1-RESULTADO-CODEX.md"
+    "h1_review": "docs/hipotesis/H1-RESULTADO-CODEX.md",
+    "fable_review": "docs/hipotesis/REVISION-CONJUNTA-FABLE.md"
   },
   "components": [
     {
@@ -179,23 +180,32 @@
     },
     {
       "id": "C-ENTRY",
-      "label": "Acceso OEM USB 0.7",
-      "state": "observado_tv",
-      "description": "Menú OEM abierto según fotos; selección y confirmación del ZIP real. Preparación Android detenida al2% más de10min. No repetir Update ni otro botón de reinicio.",
+      "label": "Diagnóstico USB0.8",
+      "state": "verificado_local",
+      "description": "Captura dirigida sin reinicio/Update/radios; once etapas con límites/SHA, prueba física pendiente.",
       "files": [
-        "rom-simplificada/componentes/acceso-usb-0.7/Acceso.java",
-        "rom-simplificada/componentes/acceso-usb-0.7/AdbLocal.java",
-        "rom-simplificada/componentes/acceso-usb-0.7/Entrada.java",
-        "rom-simplificada/componentes/acceso-usb-0.7/EntradaScripts.java",
-        "rom-simplificada/componentes/acceso-usb-0.7/generar-scripts.py",
-        "rom-simplificada/componentes/acceso-usb-0.7/AndroidManifest.xml",
-        "rom-simplificada/compilacion/acceso-usb-0.7/acceso-usb.apk",
-        "rom-simplificada/compilacion/acceso-usb-0.7/componente.json",
-        "rom-simplificada/instalador/compilar-entrada07.py",
-        "rom-simplificada/instalador/test_entrada07.py",
-        "rom-simplificada/instalador/EntradaHarness07.java",
-        "rom-simplificada/instalador/ENTRADA-TESTS-0.7.json",
-        "rom-simplificada/instalador/MKSH-HALLAZGO-0.5.md"
+        "rom-simplificada/componentes/acceso-usb-0.8/Acceso.java",
+        "rom-simplificada/componentes/acceso-usb-0.8/AdbLocal.java",
+        "rom-simplificada/componentes/acceso-usb-0.8/AndroidManifest.xml",
+        "rom-simplificada/componentes/acceso-usb-0.8/Evidencia.java",
+        "rom-simplificada/componentes/acceso-usb-0.8/EvidenciaScripts.java",
+        "rom-simplificada/componentes/acceso-usb-0.8/generar-scripts.py",
+        "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-0.sh",
+        "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-1.sh",
+        "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-10.sh",
+        "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-2.sh",
+        "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-3.sh",
+        "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-4.sh",
+        "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-5.sh",
+        "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-6.sh",
+        "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-7.sh",
+        "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-8.sh",
+        "rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-9.sh",
+        "rom-simplificada/compilacion/acceso-usb-0.8/componente.json",
+        "rom-simplificada/instalador/compilar-evidencia08.py",
+        "rom-simplificada/instalador/test_evidencia08.py",
+        "rom-simplificada/instalador/EvidenciaHarness08.java",
+        "rom-simplificada/instalador/EVIDENCIA-TESTS-0.8.json"
       ],
       "x": 2,
       "y": 2,
@@ -207,11 +217,11 @@
       "id": "C-USB",
       "label": "Kingston preparado",
       "state": "verificado_local",
-      "description": "Kingston: APK0.7 y guía copiadas/leídas, ROM/recovery e informes preservados; sin formato. Entrega acreditada por recibo específico.",
+      "description": "0.8/guía copiadas y leídas;14archivos viejos archivados enPC y retirados, informes/ROM/recovery conservados.",
       "files": [
-        "preparacion-usb/preparar-entrada-oem-07.ps1",
-        "preparacion-usb/entrada-oem-07-estado.json",
-        "rom-simplificada/instalador/LEEME-ENTRADA-0.7.txt",
+        "preparacion-usb/preparar-postintento-08.ps1",
+        "preparacion-usb/postintento-08-estado.json",
+        "rom-simplificada/instalador/LEEME-POSTINTENTO-0.8.txt",
         "rom-simplificada/INSTALACION-USB.md"
       ],
       "x": 3,
@@ -224,7 +234,7 @@
       "id": "C-TV",
       "label": "P291: OEM detenido al 2 %",
       "state": "observado_tv",
-      "description": "OEM con ZIP real detenido al2%; H1 separa cierre Java de cierre tardío del kernel previo. USB releído sin nuevos informes; conclusiones H2 pendientes.",
+      "description": "OEM2% sigue como último físico; Fable recibido/revisado. Captura dirigida0.8 pendiente; no instalación/respaldo confirmados.",
       "files": [
         "docs/ESTADO.md",
         "diagnostico/primer-tv-evidencia-20260907-000948/HALLAZGOS.md",
@@ -243,7 +253,9 @@
         "docs/hipotesis/H1-RESULTADO-CODEX.md",
         "diagnostico/h1-cierre-android/resumen-saneado.json",
         "diagnostico/h1-cierre-android/analizar-registro.py",
-        "diagnostico/h1-cierre-android/test_analizar_registro.py"
+        "diagnostico/h1-cierre-android/test_analizar_registro.py",
+        "docs/hipotesis/REVISION-CONJUNTA-FABLE.md",
+        "diagnostico/fable-20260907/resumen-saneado.json"
       ],
       "x": 4,
       "y": 1,
@@ -268,7 +280,9 @@
       "label": "Administración propia",
       "state": "propuesto",
       "description": "Actualizaciones independientes, catálogo, limpieza selectiva y despliegues por grupos. Aún sin implementación.",
-      "files": [],
+      "files": [
+        "docs/hipotesis/REVISION-CONJUNTA-FABLE.md"
+      ],
       "x": 4,
       "y": 3,
       "requirements": [
@@ -704,6 +718,30 @@
         "C-ENTRY",
         "C-TV"
       ]
+    },
+    {
+      "id": "ADR-17",
+      "file": "docs/DECISIONES.md",
+      "components": [
+        "C-ENTRY",
+        "C-TV"
+      ]
+    },
+    {
+      "id": "ADR-18",
+      "file": "docs/DECISIONES.md",
+      "components": [
+        "C-ENTRY",
+        "C-TV"
+      ]
+    },
+    {
+      "id": "ADR-19",
+      "file": "docs/DECISIONES.md",
+      "components": [
+        "C-ENTRY",
+        "C-TV"
+      ]
     }
   ],
   "validations": [
@@ -803,10 +841,10 @@
       "sha256": "e7279a7901bc0b513ccc5d3a66a1b5bf483908a4cffd30f34f5d8d463fc95205"
     },
     {
-      "name": "AccesoUSB-0.7.apk",
-      "path": "rom-simplificada/compilacion/acceso-usb-0.7/acceso-usb.apk",
-      "bytes": 29075,
-      "sha256": "a81c1cc8d871ae883f3d79f6e030b588e753b5ee633496da3087aa1a021f90a5"
+      "name": "AccesoUSB-0.8.apk",
+      "path": "rom-simplificada/compilacion/acceso-usb-0.8/acceso-usb.apk",
+      "bytes": 53651,
+      "sha256": "e103db68fb4deea3479db9a72844eea6e69c5d9beb66403b5673a9636377a148"
     },
     {
       "name": "recovery.img",
@@ -816,9 +854,9 @@
     },
     {
       "name": "LEEME-AHORA.txt",
-      "path": "rom-simplificada/instalador/LEEME-ENTRADA-0.7.txt",
-      "bytes": 1537,
-      "sha256": "ec8297fca66a5c9f9604ce46afc6048eff1187af49a3351b232c065c43aaadc5"
+      "path": "rom-simplificada/instalador/LEEME-POSTINTENTO-0.8.txt",
+      "bytes": 1460,
+      "sha256": "7cc05f9b24e7c6df8b7b8a4de6e675c48df02cb80077a5a3958dd5c821ab4eb7"
     }
   ],
   "protected_paths": [
@@ -895,11 +933,66 @@
       "components": [
         "C-APP"
       ]
+    },
+    {
+      "id": "PROP-08",
+      "label": "Investigar acceso Amlogic",
+      "state": "propuesto",
+      "file": "docs/hipotesis/REVISION-CONJUNTA-FABLE.md",
+      "components": [
+        "C-REC"
+      ]
+    },
+    {
+      "id": "PROP-09",
+      "label": "Captura de registros anteriores0.8",
+      "state": "verificado_local",
+      "file": "docs/hipotesis/REVISION-CONJUNTA-FABLE.md",
+      "components": [
+        "C-ENTRY"
+      ]
+    },
+    {
+      "id": "PROP-10",
+      "label": "Medir plataforma multimedia",
+      "state": "propuesto",
+      "file": "docs/hipotesis/REVISION-CONJUNTA-FABLE.md",
+      "components": [
+        "C-WEB",
+        "C-PERFIL"
+      ]
+    },
+    {
+      "id": "PROP-11",
+      "label": "ZIP de prueba: no adoptado ahora",
+      "state": "propuesto",
+      "file": "docs/hipotesis/REVISION-CONJUNTA-FABLE.md",
+      "components": [
+        "C-ENTRY"
+      ]
+    },
+    {
+      "id": "PROP-12",
+      "label": "Actualizador propio: diseño corregido",
+      "state": "propuesto",
+      "file": "docs/hipotesis/REVISION-CONJUNTA-FABLE.md",
+      "components": [
+        "C-GESTION"
+      ]
+    },
+    {
+      "id": "PROP-13",
+      "label": "Consultas acotadas de servicios0.8",
+      "state": "verificado_local",
+      "file": "docs/hipotesis/REVISION-CONJUNTA-FABLE.md",
+      "components": [
+        "C-ENTRY"
+      ]
     }
   ],
-  "delivery_label": "Acceso 0.7 probado · Update detenido al 2 %",
-  "date_label": "Resultado físico comunicado el 7 de septiembre de 2026",
-  "next_step_label": "Revisión H1 de Codex disponible; contrastar con H2 de Fable. USB sin informes nuevos; resultado del último arranque pendiente.",
+  "delivery_label": "Acceso0.8 entregado · diagnóstico dirigido",
+  "date_label": "7 de septiembre de2026 · entrega15:54 ART",
+  "next_step_label": "Con Android disponible: capturar0.8 una vez y devolverUSB. No repetirUpdate; Fable revisado, captura física pendiente.",
   "public_repository": {
     "url": "https://github.com/tablerosapp-ctrl/mxqpro4k",
     "visibility_requested": "public",

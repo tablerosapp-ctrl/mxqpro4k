@@ -21,3 +21,7 @@ Los scripts de copia/formato viejos permanecen en sus rutas como antecedentes; l
 La limpieza se hizo solo dentro de la ruta absoluta comprobada del proyecto, rechazando enlaces y cambios de contenido posteriores al inventario. Dos precontroles detectaron una normalización incorrecta de rutas/tipo del ancestro y abortaron antes de borrar; se corrigió el control. La ejecución final terminó correctamente. No se modificó el pendrive durante esta limpieza.
 
 Los scripts `planificar-limpieza.py` y `aplicar-limpieza.ps1` conservan la operación concreta para auditoría; no son una recomendación de ejecutarlos otra vez. El aplicador rechaza una segunda ejecución cuando ya existe recibo.
+
+## Limpieza del Kingston solicitada el7/9/2026
+
+Se archivaron en PC y retiraron14archivos del USB,573.327.869bytes, con comparación SHA antes de borrar cada archivo. Incluye versiones APK0.2–0.7, guías antiguas, ROM0.1 retirada y ZIP de Fable. El archivo local se registra en el [recibo](../preparacion-usb/postintento-08-estado.json). ROM0.1.1/recovery/marcador/reportes y carpetas se conservaron; no hubo formato ni reparación. Esta operación es independiente de la limpieza anterior de temporales de la PC; no reemplaza su recibo.

@@ -1,0 +1,82 @@
+{
+  "date": "2026-09-07",
+  "origin": "ZIP aportado por usuario en Kingston",
+  "zip": {
+    "name": "mxqpro4kpropuestasastra.zip",
+    "bytes": 19663,
+    "sha256": "49f9c62ebbc462fd6e52a799dac2d72aab1d1823704aef452ba34538b262b0e8"
+  },
+  "usb_to_pc_verified": true,
+  "zip_crc_verified": true,
+  "received_documents": [
+    {
+      "name": "ENTREGA-GPT-ASTRA.md",
+      "bytes": 18761,
+      "sha256": "72f2d76a3876c72192e94c267b886d2b15e962d6d69c2282a2944402c198702d"
+    },
+    {
+      "name": "PROP-08-VIA-AMLOGIC-BURNING.md",
+      "bytes": 12334,
+      "sha256": "204f786ad93531d02d894cd141d150c54527de6bf9d24769c54310149f00d9ba"
+    },
+    {
+      "name": "PROP-12-ACTUALIZADOR-PROPIO.md",
+      "bytes": 13317,
+      "sha256": "0618944de74b037632bf339c8e767a9d915bbfffadf16c3ab322febc479dfe7e"
+    }
+  ],
+  "review": "docs/hipotesis/REVISION-CONJUNTA-FABLE.md",
+  "references": [
+    {
+      "name": "BatteryStatsService.java",
+      "bytes": 59467,
+      "sha256": "60329a2073481f83770e0e088591e7faf67e78f1608889717d5dc8173a81938e",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-9.0.0_r1/services/core/java/com/android/server/am/BatteryStatsService.java"
+    },
+    {
+      "name": "BatteryExternalStatsWorker.java",
+      "bytes": 23808,
+      "sha256": "36f077ec1c31b09e7059457c9f3485047800cb8b4c9c092f324515bc6eace0d0",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-9.0.0_r1/services/core/java/com/android/server/am/BatteryExternalStatsWorker.java"
+    },
+    {
+      "name": "IWifiManager.aidl",
+      "bytes": 5418,
+      "sha256": "0ced0a050a2133807aea72fcfded87dc5f0f0736392815f1b1b6fb021b80e932",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/android-9.0.0_r1/wifi/java/android/net/wifi/IWifiManager.aidl"
+    },
+    {
+      "name": "IBluetooth.aidl",
+      "bytes": 4896,
+      "sha256": "5e286ee1871ec5f77cbb08440bc33876a49d9f365875d7f3f61b212962f3b727",
+      "url": "https://android.googlesource.com/platform/system/bt/+/android-9.0.0_r1/binder/android/bluetooth/IBluetooth.aidl"
+    },
+    {
+      "name": "logcat.cpp",
+      "bytes": 69653,
+      "sha256": "dade436335368887d30a6b29d7d4a88df6895285135a70d8e37549152ba0dfb1",
+      "url": "https://android.googlesource.com/platform/system/core/+/android-9.0.0_r1/logcat/logcat.cpp"
+    },
+    {
+      "name": "timeout.c",
+      "bytes": 1799,
+      "sha256": "9aa96e21b1be5f0636561a732142963208c27106f1e5d2e275af01c7f619aa14",
+      "url": "https://android.googlesource.com/platform/external/toybox/+/android-9.0.0_r1/toys/other/timeout.c"
+    },
+    {
+      "name": "install.cpp",
+      "bytes": 26463,
+      "sha256": "868b1f23e6df3b74583d786c3b040e803719d24ed34ac3c3734f694b64a6ed8f",
+      "url": "https://android.googlesource.com/platform/bootable/recovery/+/android-9.0.0_r1/install.cpp"
+    }
+  ],
+  "accepted_now": [
+    "PROP-09",
+    "PROP-13 fase1"
+  ],
+  "design_only": [
+    "PROP-12 con correcciones"
+  ],
+  "physical_capture_08": false,
+  "new_update_or_reboot_requested": false
+}

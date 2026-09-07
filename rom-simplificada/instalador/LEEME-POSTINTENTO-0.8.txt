@@ -1,0 +1,27 @@
+TV BASE - DIAGNOSTICO DEL ULTIMO INTENTO - 0.8
+
+El ZIP de Fable fue revisado. Ahora se busca evidencia del bloqueo al 2 %.
+Esta APK guarda un informe: no instala la ROM ni vuelve a pulsar Update.
+
+1. Si el primer TV ya muestra Android normalmente, conecta este pendrive.
+2. Instala AccesoUSB-0.8.apk y abre la aplicacion.
+3. Pulsa UNA VEZ "Guardar diagnostico del ultimo intento".
+   Espera a que termine. Puede tardar unos minutos.
+4. Al terminar, o si muestra un error, devuelve el pendrive a la PC.
+   No hace falta repetirlo. Conserva el mensaje si hubo un error.
+
+No selecciones la ROM en Update ni los botones de reinicio anteriores.
+Si Android sigue detenido en la actualizacion, esta captura aun no puede
+ejecutarse: informa el estado actual; no presupongas una instalacion terminada.
+
+Se buscan registros del arranque anterior y se consulta el estado de WiFi,
+Bluetooth, bateria, espacio y WebView. No se cambian las radios. No requiere
+internet ni Ethernet; la conexion de la APK es interna al propio TV.
+
+El resultado queda en una carpeta nueva TVBASE-postintento-... . Una captura
+completa puede incluir consultas denegadas o agotadas por tiempo: esos datos
+tambien sirven, pero no demuestran por si solos la causa del bloqueo.
+
+ROM0.1.1 y recovery.img se conservan. No se ha confirmado instalacion,
+respaldo del TV ni una via de recuperacion funcional. Los archivos retirados
+del pendrive se conservaron en la PC con lectura y hashes comprobados.
