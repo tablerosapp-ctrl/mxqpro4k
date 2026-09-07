@@ -15,6 +15,7 @@ Root permite leer el estado original y preparar una ruta que evite el cierre Jav
 | **1. Preparación manual y recovery original** | Preparar mapa/orden sin depender de BatteryStats y usar el instalador interno. | Recovery original compatible, mapa persistido y entrada efectiva a recovery. | Preparación parcial o reinicio bloqueado; instalación sin retorno automático probado. |
 | **2. Reset de emergencia después de preparar** | Intentar evitar las esperas del cierre normal para que el cargador vuelva a arrancar. | Interfaz SysRq presente; reset físico, preparación completa y respeto de la orden todavía por probar. | Pérdida de escrituras/corrupción; puede volver a Android o seguir sin imagen. |
 | **3. Grabación Amlogic por USB desde PC** | Trabajar antes de Android mediante BootROM/cargador compatible. | Cable/puerto de datos, enumeración USB, perfil exacto de placa y contenedor de imagen. | Cargadores DDR o distribución de memoria incompatibles pueden impedir el arranque. |
+| **4. Programador externo de memoria** | Leer/grabar la memoria mediante acceso físico a la placa, si el chip y el circuito permiten ese acceso. | Chip exacto, puntos de conexión, aislamiento eléctrico y equipo compatible; nada de esto se ha probado en P291. | Daño eléctrico o de soldadura, pérdida de áreas de arranque y reparación especializada. |
 
 ## Primero: conservar y comprobar el estado original
 
@@ -56,6 +57,14 @@ El ZIP recovery 0.1.2 **no es una imagen Burning**. El candidato original contie
 El wrapper Khadas `flash-tool --parts=none` **no es un sondeo de solo lectura**: puede emitir `erase_bootloader`/`reset` y cargar código en RAM. Su comentario sobre el efecto de `erase_bootloader` no acredita lo que hará el cargador del P291. No se usará para una detección inocua. [Código del wrapper](https://github.com/khadas/utils/blob/master/aml-flash-tool/flash-tool).
 
 Se puede preparar offline el inventario de cargas, la comparación con los originales y un sondeo limitado a identificación. La grabación requiere primero demostrar el enlace/modo y resolver el perfil DDR/cargador, preservando los originales y las particiones ajenas a la receta. [Límites ya acordados de recuperación](../../docs/hipotesis/H2-PREPARACION-RECOVERY.md).
+
+## 4. Programador externo y acceso físico a la memoria
+
+Existen programadores para eMMC con acceso en circuito (ISP); es una vía de laboratorio que merece considerar si no funciona ninguna entrada de software. [Documentación del fabricante SEGGER](https://www.segger.com/products/production/flasher/technology/flasher-emmc-and-sd-card-programming/), [definición de programación en circuito](https://kb.segger.com/In-system_programming). Estas fuentes acreditan la técnica general, no la compatibilidad de ese producto ni un procedimiento de conexión para nuestro P291. No se recomienda comprar equipo todavía.
+
+Para evaluar esta placa habría que identificar el chip físico y su documentación, conexiones accesibles, tensiones, alimentación y cómo evitar que el SoC y el programador controlen simultáneamente el bus. Si no se puede acceder en circuito, un laboratorio podría evaluar retirar el chip y utilizar un adaptador compatible. No hay pinout confirmado, puntos de soldadura elegidos ni prueba de lectura por esta vía.
+
+Los riesgos incluyen cortocircuitos, alimentación incorrecta, pistas o pads arrancados y daño térmico si se interviene con soldadura; además de escribir contenido o áreas de arranque equivocados. Una imagen de partición no representa automáticamente todas las áreas/configuraciones de la eMMC. Los doce respaldos actuales no garantizan una reconstrucción completa por programador. Esta es una opción pendiente de evaluación física, no un paso ejecutable con el pendrive conectado.
 
 ## Lo que no constituye una opción lista
 
