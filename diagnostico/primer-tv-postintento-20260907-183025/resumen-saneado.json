@@ -1,0 +1,557 @@
+{
+  "scope": "Offline; no autentica causa del bloqueo ni ejecución de recovery",
+  "capture_state": "partial",
+  "files_acquired": 63,
+  "required_payload_seals": {
+    "autocontrol.bin": true,
+    "identidad.txt": true,
+    "pstore.txt": true,
+    "log-anterior.txt": true,
+    "log-anterior.rc": true,
+    "log-anterior.estado": true,
+    "log-actual.txt": true,
+    "log-actual.rc": true,
+    "log-actual.estado": true,
+    "wifi.txt": true,
+    "wifi.rc": true,
+    "wifi.estado": true,
+    "bluetooth.txt": true,
+    "bluetooth.rc": true,
+    "bluetooth.estado": true,
+    "bateria.txt": true,
+    "bateria.rc": true,
+    "bateria.estado": true,
+    "espacio.txt": true,
+    "espacio.rc": true,
+    "espacio.estado": true,
+    "webview.txt": true,
+    "webview.rc": true,
+    "webview.estado": true,
+    "console-ramoops-0.bin": true
+  },
+  "valid_payload_seals": 25,
+  "initial_valid": true,
+  "stages": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true,
+    "6": true,
+    "7": true,
+    "8": true,
+    "9": true,
+    "10": false
+  },
+  "closure_valid": false,
+  "zero_byte_files": [
+    "COMPLETO.txt",
+    "COMPLETO.txt.sha256",
+    "etapa-10.ok"
+  ],
+  "queries": {
+    "log-anterior": {
+      "state": "command_failed",
+      "exit": 1,
+      "bytes": 20,
+      "contains_nul": false,
+      "seconds": 0.3,
+      "truncated": false
+    },
+    "log-actual": {
+      "state": "output_received",
+      "exit": 0,
+      "bytes": 41497,
+      "contains_nul": false,
+      "seconds": 0.69,
+      "truncated": false
+    },
+    "wifi": {
+      "state": "service_timeout",
+      "exit": 0,
+      "bytes": 2138,
+      "contains_nul": true,
+      "seconds": 5.31,
+      "truncated": false
+    },
+    "bluetooth": {
+      "state": "output_received",
+      "exit": 0,
+      "bytes": 1374,
+      "contains_nul": false,
+      "seconds": 0.36,
+      "truncated": false
+    },
+    "bateria": {
+      "state": "service_timeout",
+      "exit": 0,
+      "bytes": 128,
+      "contains_nul": true,
+      "seconds": 5.3,
+      "truncated": false
+    },
+    "espacio": {
+      "state": "output_received",
+      "exit": 0,
+      "bytes": 174,
+      "contains_nul": false,
+      "seconds": 0.74,
+      "truncated": false
+    },
+    "webview": {
+      "state": "output_received",
+      "exit": 0,
+      "bytes": 805,
+      "contains_nul": false,
+      "seconds": 0.37,
+      "truncated": false
+    }
+  },
+  "bluetooth_anr_count": 6,
+  "bluetooth_anr_uptime_seconds": [
+    17614.045,
+    17641.941,
+    17669.842,
+    17697.285,
+    17725.286,
+    17754.522
+  ],
+  "bluetooth_anr_span_seconds": 140.477,
+  "physical_cause_confirmed": false,
+  "acquired_utc": "2026-09-07T21:30:26.392372+00:00",
+  "acquisition_all_63_files_readback_verified": true,
+  "source_folder": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd",
+  "files": [
+    {
+      "name": "autocontrol.bin",
+      "bytes": 3,
+      "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "autocontrol.bin.sha256",
+      "bytes": 65,
+      "sha256": "620a3df236da0af638c2a61c86951463731998f91dbb3ed629f47b9fe00ad118",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "bateria.estado",
+      "bytes": 90,
+      "sha256": "24b593614d91c38f191a915749ce8bfb650118d2c8d86e21992004327a1500ba",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "bateria.estado.sha256",
+      "bytes": 65,
+      "sha256": "5e5824b204c7d95b143d58850c1c9fb9810152117a135c6417406c63280cccb6",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "bateria.rc",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "bateria.rc.sha256",
+      "bytes": 65,
+      "sha256": "142463dbd4788849038b7baa0e07f73ed758a04a65254524998faae9db372c5d",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "bateria.txt",
+      "bytes": 128,
+      "sha256": "ec27db155320a866d17b1a30931385f4b6fd38ab40de66f361f5ecff61d486c3",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "bateria.txt.sha256",
+      "bytes": 65,
+      "sha256": "1b75193b42a922b9aca42c597ad6d715b8eefe565a7ebcbe1c4a993eecc47f60",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "bluetooth.estado",
+      "bytes": 91,
+      "sha256": "bee5c31ae156d18b5f63e359e17247f95783071d071285bc28a620125af32fdb",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "bluetooth.estado.sha256",
+      "bytes": 65,
+      "sha256": "47c5936258c6e0140fc4e8f80c3fe47c66d8fc8f77cf33a1df4841dcb12ef920",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "bluetooth.rc",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "bluetooth.rc.sha256",
+      "bytes": 65,
+      "sha256": "142463dbd4788849038b7baa0e07f73ed758a04a65254524998faae9db372c5d",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "bluetooth.txt",
+      "bytes": 1374,
+      "sha256": "56acf2177823c071aabb71b018df99b0453d17262a58e28c1acdcac4bc446b11",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "bluetooth.txt.sha256",
+      "bytes": 65,
+      "sha256": "1578d441bb73c9e738d310872814d4e864ba9dbafe42b946470d418937051622",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "COMPLETO.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "COMPLETO.txt.sha256",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "console-ramoops-0.bin",
+      "bytes": 32756,
+      "sha256": "498a57cc784ce32b2cd47951fc090779e4ef5af9da6bf5af6d0ff896ec3765fa",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "console-ramoops-0.bin.sha256",
+      "bytes": 65,
+      "sha256": "8b55955b65300e4359c2e8b483c9c94fdc6a1376cb6610a9db118202db2d3fce",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "espacio.estado",
+      "bytes": 90,
+      "sha256": "365c36db07f253172038a611c01aed3f9be18ff73d594f6ce273cbccc211c430",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "espacio.estado.sha256",
+      "bytes": 65,
+      "sha256": "cbdcbe2b0ba5b5a67d6e0a2063b22a8074850ee84a3d0f8bbaae5e545dc6c1c9",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "espacio.rc",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "espacio.rc.sha256",
+      "bytes": 65,
+      "sha256": "142463dbd4788849038b7baa0e07f73ed758a04a65254524998faae9db372c5d",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "espacio.txt",
+      "bytes": 174,
+      "sha256": "e1ffb096a6a61d8deb058b44a1bad36d9db88a2779d332421c6b40cf9ad557e6",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "espacio.txt.sha256",
+      "bytes": 65,
+      "sha256": "bc009729672d286663612baeb888786f6c758b83ee9656420b1bb6760dc59861",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "etapa-1.ok",
+      "bytes": 33,
+      "sha256": "ab52e80021cb0a49a1c0baea4bae79af3e174f86778c2ff2e0e87fd80ff1fab0",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "etapa-10.ok",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "etapa-2.ok",
+      "bytes": 33,
+      "sha256": "ab52e80021cb0a49a1c0baea4bae79af3e174f86778c2ff2e0e87fd80ff1fab0",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "etapa-3.ok",
+      "bytes": 33,
+      "sha256": "ab52e80021cb0a49a1c0baea4bae79af3e174f86778c2ff2e0e87fd80ff1fab0",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "etapa-4.ok",
+      "bytes": 33,
+      "sha256": "ab52e80021cb0a49a1c0baea4bae79af3e174f86778c2ff2e0e87fd80ff1fab0",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "etapa-5.ok",
+      "bytes": 33,
+      "sha256": "ab52e80021cb0a49a1c0baea4bae79af3e174f86778c2ff2e0e87fd80ff1fab0",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "etapa-6.ok",
+      "bytes": 33,
+      "sha256": "ab52e80021cb0a49a1c0baea4bae79af3e174f86778c2ff2e0e87fd80ff1fab0",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "etapa-7.ok",
+      "bytes": 33,
+      "sha256": "ab52e80021cb0a49a1c0baea4bae79af3e174f86778c2ff2e0e87fd80ff1fab0",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "etapa-8.ok",
+      "bytes": 33,
+      "sha256": "ab52e80021cb0a49a1c0baea4bae79af3e174f86778c2ff2e0e87fd80ff1fab0",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "etapa-9.ok",
+      "bytes": 33,
+      "sha256": "ab52e80021cb0a49a1c0baea4bae79af3e174f86778c2ff2e0e87fd80ff1fab0",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "identidad.txt",
+      "bytes": 620,
+      "sha256": "68d95546d538b76ed92f42e8fef36f44f797994d34e0a1459651518c52fde2e7",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "identidad.txt.sha256",
+      "bytes": 65,
+      "sha256": "f5f763502d1cfe545749c110e173af3ac8f4225ea5d7e2f9a35e2f20a11e18e5",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "INICIO.txt",
+      "bytes": 33,
+      "sha256": "ab52e80021cb0a49a1c0baea4bae79af3e174f86778c2ff2e0e87fd80ff1fab0",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "log-actual.estado",
+      "bytes": 92,
+      "sha256": "d7d4bc61b4277dd00605b95ae259ff6758169b4b6eb821ab70093958e4df3254",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "log-actual.estado.sha256",
+      "bytes": 65,
+      "sha256": "4894c9220a79c06de0c0cda5be580e8f146c87731a74505500dddd9265cf907a",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "log-actual.rc",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "log-actual.rc.sha256",
+      "bytes": 65,
+      "sha256": "142463dbd4788849038b7baa0e07f73ed758a04a65254524998faae9db372c5d",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "log-actual.txt",
+      "bytes": 41497,
+      "sha256": "9a603932796509836232a85342d8fabbc54b95fa9a6e18b04b0e89ac97ba3a8e",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "log-actual.txt.sha256",
+      "bytes": 65,
+      "sha256": "1c0fade4d631dc5edb8e6882110b38ccb66bd49c54ed6540b20808767e9161d1",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "log-anterior.estado",
+      "bytes": 89,
+      "sha256": "9391d79c66b7cc25adf01594905cf5aa229d8bd4cd6a78290f8940d712afa4fd",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "log-anterior.estado.sha256",
+      "bytes": 65,
+      "sha256": "28cbcacb0975194d10db9e2d1995607c2bc1a9e6afd633e7327dcc37570c7072",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "log-anterior.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "log-anterior.rc.sha256",
+      "bytes": 65,
+      "sha256": "693d23225ebe839ae6d47e54de0b0d46d08d3fe0cefeb4ace48bacca9933e814",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "log-anterior.txt",
+      "bytes": 20,
+      "sha256": "d37758be21f762dbec36f44f1d4b5cbc0cd3457fe6513fb390dfa566e2d6e777",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "log-anterior.txt.sha256",
+      "bytes": 65,
+      "sha256": "855e89be2585f49bf12ae21589ce9e1ddc24f0b32165a3c55b3628ed8d907aa2",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "pstore.txt",
+      "bytes": 241,
+      "sha256": "de445608dc3a8d53d7e90cb0307bf974f8041493f907585e7a2ced8590d0f348",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "pstore.txt.sha256",
+      "bytes": 65,
+      "sha256": "a682f6f62ab7a6a61773aefa6c23b2fa3a8f5c1990e091e8df7a309e92d6d39f",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "webview.estado",
+      "bytes": 90,
+      "sha256": "46c75f210bb250f3501e9d7f1466f7cb1e878462e847fb70b9870b25cecfb876",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "webview.estado.sha256",
+      "bytes": 65,
+      "sha256": "ae23babf471f4124fd232cfecae1268c83cff7944ec071c3517d061bdcfab548",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "webview.rc",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "webview.rc.sha256",
+      "bytes": 65,
+      "sha256": "142463dbd4788849038b7baa0e07f73ed758a04a65254524998faae9db372c5d",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "webview.txt",
+      "bytes": 805,
+      "sha256": "52afcda10b9a255f7ce3f324c84a72f15bac8c98e548bf6c0907313ba792b3dd",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "webview.txt.sha256",
+      "bytes": 65,
+      "sha256": "3d218d9bfb3055774e367d36d04e72c57429a1c726c873b4bc813e7c46858b02",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "wifi.estado",
+      "bytes": 91,
+      "sha256": "0efd124a96f5d075d8173e115d566256d0acd3bd7f6fd7d53dea3fc2c57dda38",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "wifi.estado.sha256",
+      "bytes": 65,
+      "sha256": "fd0ae1f2ad7776e7fc11cdf48184f55fe92f9b47bd9a635ed0863ceb521dfaf5",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "wifi.rc",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "wifi.rc.sha256",
+      "bytes": 65,
+      "sha256": "142463dbd4788849038b7baa0e07f73ed758a04a65254524998faae9db372c5d",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "wifi.txt",
+      "bytes": 2138,
+      "sha256": "f2df3be04519db0c9bb7659dfec3a3508e86f7401f69082c8b6ceb0d43d22237",
+      "usb_pc_readback": true
+    },
+    {
+      "name": "wifi.txt.sha256",
+      "bytes": 65,
+      "sha256": "ebbb2bd9017f2c4e13312e5eda3d13a53823327144d5130b0eba276c62479c92",
+      "usb_pc_readback": true
+    }
+  ],
+  "user_reported_success_message": true,
+  "android_active_observed": true,
+  "rom_installation_confirmed": false,
+  "original_tv_backup_confirmed": false,
+  "pstore": {
+    "sha256": "498a57cc784ce32b2cd47951fc090779e4ef5af9da6bf5af6d0ff896ec3765fa",
+    "bytes": 32756,
+    "differs_from_05": true,
+    "first_complete_timestamp": 12064.380099,
+    "last_timestamp": 12592.770914,
+    "first_line_truncated": true,
+    "sdio_cmd53_lines": 129,
+    "reboot_notifier_present": false,
+    "driver_observed": "Mediatek Bluetooth SDIO v0.0.1.13_2020092401",
+    "attempt_attribution": "not confirmed"
+  },
+  "observations": {
+    "wifi_enabling": true,
+    "wifi_interface_name": null,
+    "wifi_iface_up": false,
+    "bluetooth_state": "OFF",
+    "bluetooth_service_connected": false,
+    "bluetooth_restart_entries": 21,
+    "webview_provider": "com.android.chrome",
+    "webview_version": "70.0.3538.80",
+    "data_available_kib": 1294228,
+    "cache_available_kib": 1066800,
+    "previous_log_state": "logcat read failure",
+    "current_build": "ampere-userdebug 9 PPR1.180610.011 20250226 test-keys"
+  },
+  "references": [
+    {
+      "name": "dumpsys-a9.cpp",
+      "url": "https://android.googlesource.com/platform/frameworks/native/+/android-9.0.0_r1/cmds/dumpsys/dumpsys.cpp?format=TEXT",
+      "bytes": 16087,
+      "sha256": "234299baccbebf19372a46176b2094d28ec29c7bee6760bf31dd5e5a7c2aa7aa"
+    },
+    {
+      "name": "fsync-a9.c",
+      "url": "https://android.googlesource.com/platform/external/toybox/+/android-9.0.0_r1/toys/other/fsync.c?format=TEXT",
+      "bytes": 683,
+      "sha256": "cc337d59c44e2d19e1af7008a7f93bd96c1fd185cdf30fae87b0c0cfc01dfc3e"
+    }
+  ],
+  "analysis_tests": {
+    "cases": 8,
+    "state": "passed",
+    "scope": "Offline classifier fixtures; no TV mutation",
+    "sources": {
+      "diagnostico/revision-postintento/analizar-captura08.py": "4947c2c24e301b7ce9f6bb2ba9893af266454065d4ce41ce225c1be65fb98365",
+      "diagnostico/revision-postintento/test_captura08.py": "d1d66e81dfb4e1110999a9e7ff29a7b188e01ea5c5903e66dd499f91fc6d1621"
+    }
+  }
+}

@@ -1,5 +1,9 @@
 # Pendrive · diagnóstico del último intento con Acceso USB0.8
 
+**Actualización:0.8 ya fue ejecutada y revisada. No repetirla.** Los informes útiles llegaron verificados; el cierre quedó vacío pese al aviso de finalización. [Resultado](../diagnostico/primer-tv-postintento-20260907-183025/HALLAZGOS.md). Los pasos de abajo conservan lo que se probó. La corrección de persistencia aún no está desplegada; esta revisión no preparó otra APK ni cambió el pendrive.
+
+Próxima conexión ofrecida por el usuario: primerP291 por LAN al router y PC por WiFi. No hace falta mover el USB para cada consulta si su ADB existente resulta accesible. Mantener alimentación y HDMI del TV; esperar identidad comprobada antes de cualquier intervención.
+
 **Entrega vigente:0.8, copiada y leída el7/9/2026 a las15:54 ART.** [Recibo](../preparacion-usb/postintento-08-estado.json). La ROM completa quedó detenida al2% con el actualizador OEM; todavía no hay instalación ni respaldo del TV confirmados. Esta captura aplica las partes de la [revisión de Fable](../docs/hipotesis/REVISION-CONJUNTA-FABLE.md) que permiten observar el fallo sin otro reinicio.
 
 1. Cuando el **primer TV P291** muestre Android normalmente, conectar el Kingston.

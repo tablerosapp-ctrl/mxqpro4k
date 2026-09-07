@@ -52,3 +52,7 @@ El usuario pidió dos hipótesis en paralelo, tras publicar el estado. La [revis
 | PROP-13 | Solo fase1 implementada en0.8 | Consultas con plazo; sin cambiar radios ni reiniciar. Las fases posteriores dependen de evidencia. C-ENTRY/M1. |
 
 La [revisión conjunta](hipotesis/REVISION-CONJUNTA-FABLE.md) explica discrepancias, fuentes y el resultado que permitiría elegir la siguiente intervención. Ninguno de estos aportes cierra VAL-05 a09.
+
+## Resultado posterior0.8 y trabajo acotado
+
+[Captura revisada](../diagnostico/primer-tv-postintento-20260907-183025/HALLAZGOS.md): PROP-09 obtuvo pstore nuevo pero no el tramo de cierre; PROP-13fase1 obtuvo timeouts de WiFi/BatteryStats y ANR repetidos deBluetooth. La captura global es parcial por cierre vacío; datos útiles con25SHA válidos. No se cierraM1. El usuario ofreció LAN: observar en vivo el primerP291 y validar acceso existente, antes de decidir una desactivación reversible de radios separada del reinicio. El siguiente recopilador debe corregir persistencia; no hay APK nueva entregada ni otra instalación ejecutada.

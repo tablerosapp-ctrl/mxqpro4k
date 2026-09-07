@@ -14,9 +14,9 @@ flowchart LR
     C_WEB["Proveedor WebView · construido"]
     C_ZIP["ZIP de instalación · verificado_local"]
     C_REC["Recovery externo · verificado_local"]
-    C_ENTRY["Diagnóstico USB0.8 · verificado_local"]
+    C_ENTRY["Diagnóstico USB0.8 · observado_tv"]
     C_USB["Kingston preparado · verificado_local"]
-    C_TV["P291: OEM detenido al 2 % · observado_tv"]
+    C_TV["P291: radios fallan, Android activo · observado_tv"]
     C_APP["APK del producto · propuesto"]
     C_GESTION["Administración propia · propuesto"]
     C_PERFIL -->|"selecciona"| C_BASE
@@ -143,7 +143,7 @@ Requisitos: REQ-11.
 
 ### C-ENTRY · Diagnóstico USB0.8
 
-**verificado_local**. Captura dirigida sin reinicio/Update/radios; once etapas con límites/SHA, prueba física pendiente.
+**observado_tv**. 0.8 ejecutada:25sellos de datos válidos; cierre vacío pese al aviso de fin. Corrección de persistencia pendiente, no repetir captura.
 
 Requisitos: REQ-11.
 
@@ -172,7 +172,7 @@ Requisitos: REQ-11.
 
 ### C-USB · Kingston preparado
 
-**verificado_local**. 0.8/guía copiadas y leídas;14archivos viejos archivados enPC y retirados, informes/ROM/recovery conservados.
+**verificado_local**. Entrega0.8 PC verificada; captura recibida63archivos,3finales vacíos. USB preservado durante adquisición.
 
 Requisitos: REQ-01.
 
@@ -181,9 +181,9 @@ Requisitos: REQ-01.
 - [rom-simplificada/instalador/LEEME-POSTINTENTO-0.8.txt](../rom-simplificada/instalador/LEEME-POSTINTENTO-0.8.txt)
 - [rom-simplificada/INSTALACION-USB.md](../rom-simplificada/INSTALACION-USB.md)
 
-### C-TV · P291: OEM detenido al 2 %
+### C-TV · P291: radios fallan, Android activo
 
-**observado_tv**. OEM2% sigue como último físico; Fable recibido/revisado. Captura dirigida0.8 pendiente; no instalación/respaldo confirmados.
+**observado_tv**. 6ANRBT, WiFi/BatteryStats timeout5s; sigue build original/Chrome70. Causa2% no confirmada; LAN ofrecida, IPpendiente.
 
 Requisitos: .
 
@@ -207,6 +207,10 @@ Requisitos: .
 - [diagnostico/h1-cierre-android/test_analizar_registro.py](../diagnostico/h1-cierre-android/test_analizar_registro.py)
 - [docs/hipotesis/REVISION-CONJUNTA-FABLE.md](../docs/hipotesis/REVISION-CONJUNTA-FABLE.md)
 - [diagnostico/fable-20260907/resumen-saneado.json](../diagnostico/fable-20260907/resumen-saneado.json)
+- [diagnostico/primer-tv-postintento-20260907-183025/HALLAZGOS.md](../diagnostico/primer-tv-postintento-20260907-183025/HALLAZGOS.md)
+- [diagnostico/primer-tv-postintento-20260907-183025/resumen-saneado.json](../diagnostico/primer-tv-postintento-20260907-183025/resumen-saneado.json)
+- [diagnostico/revision-postintento/analizar-captura08.py](../diagnostico/revision-postintento/analizar-captura08.py)
+- [diagnostico/revision-postintento/test_captura08.py](../diagnostico/revision-postintento/test_captura08.py)
 
 ### C-APP · APK del producto
 
@@ -253,13 +257,13 @@ Requisitos: REQ-07, REQ-09.
 | README.md | 1 | 0.000 |
 | actualizacion-chrome | 51 | 0.417 |
 | analisis-rom | 15 | 1.822 |
-| diagnostico | 156 | 0.018 |
+| diagnostico | 161 | 0.018 |
 | docs | 31 | 0.000 |
 | dossier-s905l2.html | 1 | 0.000 |
 | images | 1 | 1.352 |
 | platform-tools-latest-windows.zip | 1 | 0.008 |
 | preparacion-usb | 81 | 3.688 |
 | rom-simplificada | 2210 | 7.095 |
-| tools | 18078 | 1.141 |
+| tools | 18081 | 1.141 |
 
 El inventario excluye derivados documentales y contenido de claves; los tamaños son de archivos, no bloques físicos ocupados. Los temporales retirados se detallan en [LIMPIEZA](LIMPIEZA.md).

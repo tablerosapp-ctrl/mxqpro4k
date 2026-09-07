@@ -1,5 +1,7 @@
 # Revisión de los aportes de Fable · 7/9/2026
 
+**Actualización posterior:** [captura física0.8](../../diagnostico/primer-tv-postintento-20260907-183025/HALLAZGOS.md). Se observaron los problemas de servicios que se buscaban;25archivos de datos sellados son válidos, pero el cierre llegó vacío. Android original activo. No se demuestra todavía qué bloqueó Update; LAN del primerP291 ofrecida para observación en vivo. Las decisiones de abajo documentan la revisión previa a esa captura.
+
 Se recibieron tres documentos en `mxqpro4kpropuestasastra.zip` del Kingston: entrega a Astra, PROP-08 y PROP-12. El ZIP tiene 19.663 bytes, SHA256 `49f9c62ebbc462fd6e52a799dac2d72aab1d1823704aef452ba34538b262b0e8`; CRC y copia USB→PC comprobados. Los originales quedan privados, íntegros. [Adquisición y fuentes](../../diagnostico/fable-20260907/resumen-saneado.json).
 
 **Conclusión de Codex:** el aporte más útil es observar el intento ya ocurrido y acotar los servicios implicados. La espera de BatteryStats es un candidato concreto, no una causa identificada. No hay una vía nueva de flasheo probada. La coincidencia entre nuestras hipótesis no reemplaza una captura del mismo intento.

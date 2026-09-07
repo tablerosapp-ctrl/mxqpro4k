@@ -1,6 +1,18 @@
 # Estado operativo
 
-## Vigente · 7/9/2026, entrega0.8 a las15:54 ART
+## Vigente · captura física0.8 revisada el7/9/2026
+
+El Kingston trajo63archivos:25sellos de datos válidos, etapas1–9 válidas, pero COMPLETO/su SHA/etapa10 vacíos. El usuario vio aviso de éxito: **cierre no persistido, captura parcial con informes útiles verificados**. No repetir0.8. Su código no exigía sincronización antes de avisar; corrección pendiente de implementar/desplegar. [Hallazgos y próximo paso](../diagnostico/primer-tv-postintento-20260907-183025/HALLAZGOS.md) · [Resumen verificable](../diagnostico/primer-tv-postintento-20260907-183025/resumen-saneado.json).
+
+Se observaron6ANR de Bluetooth en140,477s antes/durante la instalación de la captura, WiFi en activando sin interfaz y timeout de5s en WiFi y BatteryStats. Ambos dumps devolvieron0 con texto de timeout: no son respuestas completas. Pstore nuevo con driver Mediatek Bluetooth SDIO y129CMD53; no contiene el intervalo de cierre. Esto apoya investigar radios/BatteryStats, **sin demostrar la causa del2%** ni resolver mapa/BCB/recovery.
+
+Android está activo con build original y WebViewChrome70. La captura acredita ese estado; el ciclo exacto de vuelta a Android sigue sin identificar. No hay instalación de nuestra ROM ni respaldo del TV confirmados.
+
+El usuario ofreció LAN para lectura en vivo. Próximo paso: primerP291 por cable al router; PC por WiFi sirve. Esperar su IP, comprobar identidad/acceso existente, observar los fallos y preparar una intervención reversible separada de Update. El segundoP271 no sustituye al primero. No elevar privilegios ni repetir dumps bloqueados en bucle. No se cambiaron radios ni escribió/reinició el TV durante esta revisión.
+
+## Antecedente de la entrega local
+
+## Entrega0.8 del7/9/2026,15:54 ART (histórica)
 
 Ayuda de Fable recibida y revisada; Kingston limpiado y Acceso USB0.8 copiado/leído. [Revisión y decisiones](hipotesis/REVISION-CONJUNTA-FABLE.md) · [Recibo de entrega/limpieza](../preparacion-usb/postintento-08-estado.json).
 

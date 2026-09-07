@@ -1,5 +1,7 @@
 # Colaboración: Codex y Fable 5.1
 
+**Retorno físico0.8 disponible para Fable:** [hallazgos](../diagnostico/primer-tv-postintento-20260907-183025/HALLAZGOS.md). WiFi/BatteryStats timeout5s,6ANR Bluetooth/140,477s, Pstore cambiado sin tramo de cierre.63archivos adquiridos;25sellos de datos válidos y cierre vacío pese al aviso de éxito. Hipótesis fortalecida, causalidad no demostrada. No pedir otra actualización; se prepara observación en vivo del primerP291 mediante LAN ofrecida por el usuario.
+
 El usuario pidió publicar primero documentación e historial y después contrastar dos hipótesis en paralelo. Confirmó que Fable 5.1 ya está trabajando desde Claude Desktop en otra PC y con otra cuenta GitHub. Esta sesión no puede invocarlo directamente ni atribuirle resultados antes de recibirlos. Codex completó su [primera revisión H1](hipotesis/H1-RESULTADO-CODEX.md); el ZIP de Fable ya fue recibido y contrastado. [Revisión conjunta y decisiones](hipotesis/REVISION-CONJUNTA-FABLE.md): captura0.8 preparada con PROP-09/PROP-13 fase1; las hipótesis siguen abiertas.
 
 Repositorio público verificado: **[tablerosapp-ctrl/mxqpro4k](https://github.com/tablerosapp-ctrl/mxqpro4k)**. Permite lectura sin invitación. Para escribir desde otra cuenta se pueden usar issues o un fork con pull request; no se conceden permisos de administración por este pedido. [Recibo de publicación](evidencia/publicacion-github.json).

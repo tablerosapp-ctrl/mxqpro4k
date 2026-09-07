@@ -1,5 +1,13 @@
 # Continuidad de TV Base
 
+## Estado que prevalece · revisión física0.8 del7/9/2026
+
+- Leer diagnostico/primer-tv-postintento-20260907-183025/HALLAZGOS.md y diagnostico/primer-tv-postintento-20260907-183025/resumen-saneado.json.63archivos USB→PC verificados;25sellos de datos correctos y etapas1–9, pero COMPLETO/SHA/etapa10 de0bytes. Usuario confirma aviso de fin. CapturaPARCIAL por persistencia, no repetir0.8. No rellenar originales.0.8 carece de flush exigido; siguiente versión debe sincronizar archivos/directorio y fallar ante error/timeout. Corrección NO desplegada; recibo de entrega0.8 es histórico y válido solo para copiaPC.
+- WiFi enabling/interfaznull/ifaceDown, dumpsWiFi yBatteryStats timeout5000ms aunqueexit0.6ANRdeBluetooth en140,477s, anteriores a apertura0.8;BluetoothOFF con servicio desconectado y21RESTARTED. No inferir radios inactivas deOFF ni causa exacta del2%. Pstore32756B SHA498a57cc784ce32b2cd47951fc090779e4ef5af9da6bf5af6d0ff896ec3765fa distinto al0.5: driverMediatekBTSDIOv0.0.1.13_2020092401 y129CMD53, sinrebootnotifier/intervalocierre, primeralíneatruncada; no atribuir aOEM con certeza.
+- Androidactivo acreditado por captura; build original yWebViewChrome70. No ROMTVBASE nirespaldo confirmados. Se conoce estadoactivo, noel ciclo exacto de recuperación. Parseroffline diagnostico/revision-postintento,8regresionespasadas; separarcódigo0deDUMPTIMEOUT. No repetir dumpsBatteryStats: cliente muerto no cancela necesariamente trabajo servidor.
+- Usuario ofreció LAN, luego consultó usarsegundoTVporWiFi. Se indicó primerP291 porLANalmismorouter yPCpuedeseguirWiFi; segundoP271nosustituye. IPdelprimerTVpendiente. Autorizado explorar acceso normal de red ofrecido, sin requerirlo para diseño finalUSB, sinroot/authchanges. Primeroid/DT/API; ningúnUpdate/reinicio ni cambio de radios durante la revisión. herramientasADB en tools/platform-tools/adb.exe.
+
+
 Leer primero [README](README.md), [estado](docs/ESTADO.md), [especificación](docs/ESPECIFICACION.md), [mapa](docs/MAPA-ARCHIVOS.md) y [roadmap](docs/ROADMAP.md). La crónica completa anterior está conservada en [histórico](docs/historico/AGENTS-hasta-20260906-2004.md); sus referencias eran relativas a la raíz y sus “estados vigentes” son históricos.
 
 ## Objetivo y autorización
@@ -8,7 +16,7 @@ Leer primero [README](README.md), [estado](docs/ESTADO.md), [especificación](do
 - El usuario autoriza preparar el Kingston y la instalación final interna en el PRIMER TV; la autorización persiste. Revalidar destino/contenido; no volver a pedirla por rutina. También autorizó ordenar, limpiar lo innecesario y documentar el proyecto.
 - El primer TV no se conectará a Ethernet/red como requisito. El ADB de Acceso USB usa exclusivamente 127.0.0.1:5555 ya disponible. No habilitar root ni alterar autenticación.
 
-## Estado que prevalece · entrega0.8 del7/9/2026,15:54 ART
+## Antecedente · entrega0.8 del7/9/2026,15:54 ART
 
 - Fable recibido en ZIP USB19663B,SHA49f9c62ebbc462fd6e52a799dac2d72aab1d1823704aef452ba34538b262b0e8. Originales privados y resumen saneado en diagnostico/fable-20260907. Revisar docs/hipotesis/REVISION-CONJUNTA-FABLE.md: se adoptan PROP09+PROP13fase1, PROP12 como diseño corregido; Burning/respaldo no probado, no otro ZIP/reboot. BatteryStats Future sin límite es candidato, requests WiFi/BT oneway y espera de respuestas2s; dumpsys lento no prueba causalidad.
 - APK0.8 SOLO diagnóstico sin reinicio/Update/radios; fuentes componentes/acceso-usb-0.8. Once etapas con límites/códigos/estados/truncamiento, SHA64hex/abc, UID2000/API28/DT exacto. logcat-L y console/pmsg pueden ser denegados/ausentes; no llamar éxito de lectura a COMPLETO. Carpeta TVBASE-postintento-..., no repite captura0.6. Plazo90s cliente no garantiza matar espera de kernel. No root ni red externa.

@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "title": "TV Base",
-  "snapshot": "2026-09-07T18:57:26.165307+00:00",
-  "state": "ROM completa por OEM: preparación detenida al 2 % más de 10 minutos",
+  "snapshot": "2026-09-07T21:38:21.363517+00:00",
+  "state": "Android original activo; WiFi/BT/BatteryStats fallan; captura0.8 parcial por cierre vacío",
   "installed": false,
   "original_tv_backup_confirmed": false,
   "source_of_truth": {
@@ -14,7 +14,8 @@
     "collaboration": "docs/COLABORACION.md",
     "publication": "docs/PUBLICACION.md",
     "h1_review": "docs/hipotesis/H1-RESULTADO-CODEX.md",
-    "fable_review": "docs/hipotesis/REVISION-CONJUNTA-FABLE.md"
+    "fable_review": "docs/hipotesis/REVISION-CONJUNTA-FABLE.md",
+    "latest_capture": "diagnostico/primer-tv-postintento-20260907-183025/resumen-saneado.json"
   },
   "components": [
     {
@@ -181,8 +182,8 @@
     {
       "id": "C-ENTRY",
       "label": "Diagnóstico USB0.8",
-      "state": "verificado_local",
-      "description": "Captura dirigida sin reinicio/Update/radios; once etapas con límites/SHA, prueba física pendiente.",
+      "state": "observado_tv",
+      "description": "0.8 ejecutada:25sellos de datos válidos; cierre vacío pese al aviso de fin. Corrección de persistencia pendiente, no repetir captura.",
       "files": [
         "rom-simplificada/componentes/acceso-usb-0.8/Acceso.java",
         "rom-simplificada/componentes/acceso-usb-0.8/AdbLocal.java",
@@ -217,7 +218,7 @@
       "id": "C-USB",
       "label": "Kingston preparado",
       "state": "verificado_local",
-      "description": "0.8/guía copiadas y leídas;14archivos viejos archivados enPC y retirados, informes/ROM/recovery conservados.",
+      "description": "Entrega0.8 PC verificada; captura recibida63archivos,3finales vacíos. USB preservado durante adquisición.",
       "files": [
         "preparacion-usb/preparar-postintento-08.ps1",
         "preparacion-usb/postintento-08-estado.json",
@@ -232,9 +233,9 @@
     },
     {
       "id": "C-TV",
-      "label": "P291: OEM detenido al 2 %",
+      "label": "P291: radios fallan, Android activo",
       "state": "observado_tv",
-      "description": "OEM2% sigue como último físico; Fable recibido/revisado. Captura dirigida0.8 pendiente; no instalación/respaldo confirmados.",
+      "description": "6ANRBT, WiFi/BatteryStats timeout5s; sigue build original/Chrome70. Causa2% no confirmada; LAN ofrecida, IPpendiente.",
       "files": [
         "docs/ESTADO.md",
         "diagnostico/primer-tv-evidencia-20260907-000948/HALLAZGOS.md",
@@ -255,7 +256,11 @@
         "diagnostico/h1-cierre-android/analizar-registro.py",
         "diagnostico/h1-cierre-android/test_analizar_registro.py",
         "docs/hipotesis/REVISION-CONJUNTA-FABLE.md",
-        "diagnostico/fable-20260907/resumen-saneado.json"
+        "diagnostico/fable-20260907/resumen-saneado.json",
+        "diagnostico/primer-tv-postintento-20260907-183025/HALLAZGOS.md",
+        "diagnostico/primer-tv-postintento-20260907-183025/resumen-saneado.json",
+        "diagnostico/revision-postintento/analizar-captura08.py",
+        "diagnostico/revision-postintento/test_captura08.py"
       ],
       "x": 4,
       "y": 1,
@@ -742,6 +747,15 @@
         "C-ENTRY",
         "C-TV"
       ]
+    },
+    {
+      "id": "ADR-20",
+      "file": "docs/DECISIONES.md",
+      "components": [
+        "C-ENTRY",
+        "C-USB",
+        "C-TV"
+      ]
     }
   ],
   "validations": [
@@ -990,9 +1004,9 @@
       ]
     }
   ],
-  "delivery_label": "Acceso0.8 entregado · diagnóstico dirigido",
-  "date_label": "7 de septiembre de2026 · entrega15:54 ART",
-  "next_step_label": "Con Android disponible: capturar0.8 una vez y devolverUSB. No repetirUpdate; Fable revisado, captura física pendiente.",
+  "delivery_label": "0.8 revisada · datos verificados y cierre vacío",
+  "date_label": "Captura revisada el7 de septiembre de2026",
+  "next_step_label": "No repetir0.8/Update. PrimerP291 porLAN alrouter, PCporWiFi; esperarIP y comprobaracceso para observación en vivo.",
   "public_repository": {
     "url": "https://github.com/tablerosapp-ctrl/mxqpro4k",
     "visibility_requested": "public",

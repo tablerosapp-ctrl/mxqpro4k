@@ -55,3 +55,7 @@ Evidencia ADR-18: [intento con ROM completa](../diagnostico/primer-tv-update-202
 ## ADR-19 · Captura dirigida tras la revisión de Fable
 
 Adoptar PROP-09 y fase1 de PROP-13 con0.8, para aprovechar el intento ya ocurrido sin otro Update, reinicio o cambio de radios. Diferenciar espera Java y kernel, persistencia desconocida y errores de consulta. SHA estricto/carpeta nueva/estados con límite. [Revisión y contrato](hipotesis/REVISION-CONJUNTA-FABLE.md). Preparador vigente: `preparar-postintento-08.ps1`; los anteriores quedan históricos.
+
+## ADR-20 · Separar captura, persistencia y respuesta del servicio
+
+Tras [0.8](../diagnostico/primer-tv-postintento-20260907-183025/HALLAZGOS.md), un mensaje de éxito y una lectura desde caché no acreditan que el cierre llegue al mover el USB. No reconstruir el cierre vacío ni repetir los datos ya íntegros. Exigir sincronización dirigida y errores explícitos antes de otra entrega. `dumpsys` puede retornar0 al agotar un servicio; interpretar también el texto. No repetir consultas de BatteryStats en bucle: pueden dejar trabajo pendiente en el servicio. La LAN ofrecida requiere el primerP291; no extrapolar delP271 ni elevar permisos.
