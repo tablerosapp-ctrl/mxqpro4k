@@ -121,6 +121,7 @@ Desktop.ini
 !/diagnostico/**/EVIDENCIA-SANEADA.json
 !/diagnostico/**/resumen-saneado.json
 !/diagnostico/**/evidencia-saneada.json
+!/diagnostico/primer-tv-lan-20260907-184926/RESPALDO-resumen-saneado.json
 /diagnostico/**/originales/
 /diagnostico/**/crudos/
 /diagnostico/**/privado/

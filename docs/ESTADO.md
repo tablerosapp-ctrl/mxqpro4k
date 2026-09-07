@@ -1,16 +1,24 @@
 # Estado operativo
 
-## Vigente · 7/9/2026, entrega0.1.2 y diagnósticoLAN
+## Vigente · 7/9/2026, root y espera del servicio WiFi
 
-La [ROM0.1.2 sin Bluetooth](../rom-simplificada/SIN-BLUETOOTH-0.1.2.md) está construida y entregada enKingston: [copia y lectura verificada](../preparacion-usb/rom-012-estado.json),19:12:34ART,código0. Se archivaron y verificaron enPC tres archivos viejos antes de retirarlos; informes, recovery y respaldos permanecen. No volver a preparar ni formatear elUSB.
+[Root ya confirmado](../diagnostico/primer-tv-lan-20260907-184926/ROOT-RESULTADO.md), solicitado ahora por el usuario: el su incorporado devuelve UID 0. No se instaló root ni cambió la autenticación. La traza Java identifica ShutdownThread → Future de BatteryStats → consulta WiFi → IWifi.start esperando respuesta. [Detalle verificable](../diagnostico/primer-tv-lan-20260907-184926/ANALISIS-UPDATE-012.md). Root lee el ZIP interno íntegro y demuestra que block.map falta. Las denegaciones descritas abajo corresponden al acceso shell anterior.
 
-El usuario autorizó excluirBluetooth del primerP291 y conservarWiFi como objetivo. La [observaciónLAN](../diagnostico/primer-tv-lan-20260907-184926/HALLAZGOS.md) revela un panic en la coordinaciónBT→WiFi. La API normal guardóBluetoothOFF; quedó actividad residual y se inhabilitó solamente com.android.bluetooth parausuario0. Tras el apagado físico indicado, volvióAndroid con otro bootID: el ajuste0 y el paquete inhabilitado persisten, sin procesoAPKBluetooth. Sin embargo, el firmware sigue cargando el móduloBluetooth y el deWiFi queda enLoading con hilosD. **No está demostrado que el cierre se haya reparado.**
+El respaldo de doce particiones seleccionadas está verificado en PC: ocho críticas, 102 MiB, y cuatro de sistema, 2436 MiB; ambas etapas terminaron con código 0. Total: 2538 MiB, aproximadamente 2,66 GB. No incluye datos/cache ni toda la eMMC y no hay restauración probada. No se ha ejecutado escritura de particiones ni otro reinicio. El usuario pidió las opciones forzadas y sus riesgos antes de decidir; no pasar directamente a flashear o a un reinicio de emergencia.
 
-La ROM nueva elimina pila/HAL/móduloBluetooth operativo y conserva170archivosWiFi, además de boot/product/odm de0.1.1. Los drivers son distintos de los delTVactual, sin prueba física de corrección. No se instalóTVBASE. Recovery, respaldo delTV, primer arranque y WebView/video siguen pendientes.
+La copia del ZIP 0.1.2 se preservó con otro nombre en `/data/cache/TVBASE-0.1.2-preservada-no-instalar.zip`; SHA comprobado y ruta activa ausente. No se flasheó ninguna partición. Esto impide consumir ese archivo por la ruta antigua, pero **no limpia BCB ni cancela el hilo Java**. No inferir que un corte vuelva a Android.
 
-El usuario probó el switch interno de la placa tanto con Android como al conectar alimentación, sin efecto visible. No repetir esa vía ni dar por confirmado que seaRESET. Pasó el pendrive alTV; se prepara un flujo pasivo de registro del cierre para un intentoOEM con Bluetooth inhabilitado desde el arranque. No se ha confirmado un nuevoUpdate en este estado documental. Una caída deADB no probará instalación.
+La revisión del recovery y boot originales detecta una firma SHA256 no acreditada por la clave v1 de recovery y cambios reales en DTB: vendor 900 → 320 MiB, IRQ WiFi 89 → 100, SDIO y reservas de video. [Detalle](../diagnostico/primer-tv-lan-20260907-184926/RECOVERY-ORIGINAL.md). No forzar 0.1.2 ni corregir solo la firma. PROP-15 propone una nueva ROM desde los originales, conservando perfil/video, sin asegurar la reparación de WiFi.
 
-La revisión automática rechazó una reconsultaBatteryStats por riesgo de dejar trabajo atascado: no se ejecutó. Se usaron registros y procesos como alternativa. No repetirla por otro conector.
+La [ROM 0.1.2 sin Bluetooth](../rom-simplificada/SIN-BLUETOOTH-0.1.2.md) está construida y entregada en Kingston: [copia y lectura verificada](../preparacion-usb/rom-012-estado.json), 19:12:34 ART, código 0. Se archivaron y verificaron en PC tres archivos viejos antes de retirarlos; informes, recovery y respaldos permanecen. No volver a preparar ni formatear el USB.
+
+El usuario autorizó excluir Bluetooth del primer P291 y conservar WiFi como objetivo. La [observación LAN](../diagnostico/primer-tv-lan-20260907-184926/HALLAZGOS.md) revela un panic en la coordinación BT → WiFi. La API normal guardó Bluetooth OFF; quedó actividad residual y se inhabilitó solamente com.android.bluetooth para usuario 0. Tras el apagado físico indicado, volvió Android con otro bootID: el ajuste 0 y el paquete inhabilitado persisten, sin proceso de la APK Bluetooth. Sin embargo, el firmware sigue cargando el módulo Bluetooth y el de WiFi queda en Loading con hilos D. **No está demostrado que el cierre se haya reparado.**
+
+La ROM nueva elimina la pila/HAL/módulo Bluetooth operativo y conserva 170 archivos WiFi, además de boot/product/odm de 0.1.1. Los drivers son distintos de los del TV actual, sin prueba física de corrección. No se instaló TVBASE. El arranque de recovery, la restauración del respaldo, el primer arranque de TVBASE y WebView/video siguen pendientes.
+
+El usuario probó el switch interno de la placa tanto con Android como al conectar alimentación, sin efecto visible. No repetir esa vía ni dar por confirmado que sea RESET. Pasó el pendrive al TV y ejecutó un nuevo Update con ROM 0.1.2; confirmó el 2%. El registro de 19:25:38–40 ART muestra setupBCB reconocido, cierre de ActivityManager y entrada en BatteryStats.shutdown. Después continúa Android sin marcas de avance a PackageManager ni preparación del paquete. La lectura inicial de la pila como shell fue denegada; la posterior traza obtenida con root localizó la cadena de espera descrita arriba. No repetir Update ni inferir instalación de una caída de ADB.
+
+La revisión automática rechazó una reconsulta BatteryStats por riesgo de dejar trabajo atascado: no se ejecutó. Se usaron registros y procesos como alternativa. No repetirla por otro conector.
 
 ## Antecedente · captura física0.8 revisada el7/9/2026
 

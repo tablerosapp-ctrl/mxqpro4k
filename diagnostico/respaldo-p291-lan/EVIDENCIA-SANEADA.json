@@ -1,0 +1,116 @@
+{
+  "schema": 1,
+  "state": "passed",
+  "recorded_at": "2026-09-07T19:49:26-03:00",
+  "source": "diagnostico/respaldar-p291-lan.py",
+  "source_sha256": "ee443d4e4ff3de4008bab0a7d7741b5941cb21aa331f1575303af39dedd1c962",
+  "source_unchanged_after_tests": true,
+  "tests_source": "diagnostico/test_respaldo_p291_lan.py",
+  "tests_source_sha256": "808190fd4a4b1656566162c949f387892e2a291a899fcbc5e29e590811728152",
+  "tests_run": 16,
+  "seconds": 0.5,
+  "results": [
+    {
+      "test": "__main__.BinaryProtocolTests.test_binary_four_extra_bytes_are_rejected",
+      "passed": true,
+      "seconds": 0.063
+    },
+    {
+      "test": "__main__.BinaryProtocolTests.test_binary_one_byte_short_payload_is_rejected",
+      "passed": true,
+      "seconds": 0.078
+    },
+    {
+      "test": "__main__.BinaryProtocolTests.test_binary_preserves_cr_lf_nul_and_removes_only_verified_footer",
+      "passed": true,
+      "seconds": 0.094
+    },
+    {
+      "test": "__main__.BinaryProtocolTests.test_binary_remote_exit_7_keeps_partial",
+      "passed": true,
+      "seconds": 0.094
+    },
+    {
+      "test": "__main__.BinaryProtocolTests.test_binary_remote_sha_mismatch_keeps_partial",
+      "passed": true,
+      "seconds": 0.093
+    },
+    {
+      "test": "__main__.BinaryProtocolTests.test_binary_wrong_nonce_is_rejected",
+      "passed": true,
+      "seconds": 0.078
+    },
+    {
+      "test": "__main__.GuardTests.test_closed_partition_stages",
+      "passed": true,
+      "seconds": 0.0
+    },
+    {
+      "test": "__main__.GuardTests.test_negative_hostname",
+      "passed": true,
+      "seconds": 0.0
+    },
+    {
+      "test": "__main__.GuardTests.test_negative_public_endpoint",
+      "passed": true,
+      "seconds": 0.0
+    },
+    {
+      "test": "__main__.GuardTests.test_negative_read_write_mount",
+      "passed": true,
+      "seconds": 0.0
+    },
+    {
+      "test": "__main__.GuardTests.test_negative_symlink_alias",
+      "passed": true,
+      "seconds": 0.0
+    },
+    {
+      "test": "__main__.GuardTests.test_negative_wrong_mountpoint",
+      "passed": true,
+      "seconds": 0.0
+    },
+    {
+      "test": "__main__.GuardTests.test_negative_wrong_port",
+      "passed": true,
+      "seconds": 0.0
+    },
+    {
+      "test": "__main__.GuardTests.test_positive_block_alias",
+      "passed": true,
+      "seconds": 0.0
+    },
+    {
+      "test": "__main__.GuardTests.test_positive_private_endpoint",
+      "passed": true,
+      "seconds": 0.0
+    },
+    {
+      "test": "__main__.GuardTests.test_positive_read_only_mount",
+      "passed": true,
+      "seconds": 0.0
+    }
+  ],
+  "binary_fixture_bytes": 65536,
+  "binary_fixture_sha256": "7daca2095d0438260fa849183dfc67faa459fdf4936e1bc91eec6b281b27e4c2",
+  "guard_positive_cases": 3,
+  "guard_negative_cases": 6,
+  "closed_stage_selection_cases": 1,
+  "binary_protocol_cases": 6,
+  "adb_launched": false,
+  "tv_contacted": false,
+  "usb_accessed": false,
+  "real_backup_modified": false,
+  "physically_validated_by_this_suite": false,
+  "scope": [
+    "Imports existing source; does not instantiate Backup normally or read TV session.",
+    "Metadata and remote SHA are mocks; local Python replaces the ADB binary stream.",
+    "Exercises real image writing, fsync, local reread, footer validation and rename.",
+    "Temporary fixtures are created and removed only under private workspace storage.",
+    "Does not establish device compatibility, network behavior or restoration."
+  ],
+  "public_fixture_addresses": {
+    "10.23.45.67": "Fictional RFC1918 endpoint for positive/private-port checks; never contacted.",
+    "203.0.113.99": "TEST-NET-3 address for public endpoint rejection; never contacted."
+  }
+}

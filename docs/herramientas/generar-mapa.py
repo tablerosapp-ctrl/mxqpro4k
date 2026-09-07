@@ -105,7 +105,7 @@ md += ['## Directorios y cuidado', '', '| Ruta | Función | Regla |', '| --- | -
        '| `rom-simplificada/componentes/` | Fuente de APK propias | Versionar cambios y conservar firma |',
        '| `rom-simplificada/trabajo/` | RAW activos y recetas aplicadas | No son respaldo original del TV |',
        '| `rom-simplificada/instalador/` | ZIP, recovery externo y pruebas | Revisar versión antes de reconstruir |',
-       '| `rom-simplificada/salida/` | Releases y evidencias | 0.1 retirada; 0.1.1 vigente |',
+       '| `rom-simplificada/salida/` | Releases y evidencias | 0.1.2 en revisión; conservar releases verificadas |',
        '| `preparacion-usb/` | Preparadores y recibos de operaciones | Usar identidad estable; no repetir por rutina |',
        '| `diagnostico/` | Evidencia de ambos equipos | No mezclar perfiles P291 y P271 |',
        '| `actualizacion-chrome/` | Chrome fuente y firmas | Conservar APK integrado y evidencia |',

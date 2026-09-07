@@ -1,5 +1,7 @@
 # Primer P291: observación por LAN
 
+**Actualización final de esta revisión:** root incorporado confirmado y12particiones originales verificadas. Elbloqueo actual tiene trazaJava, elZIP se preservó fuera de su rutaactiva y0.1.2 queda enrevisión por diferencias dearranque/firma. [Resultado de root](ROOT-RESULTADO.md) · [Respaldo](RESPALDO-resumen-saneado.json) · [Recoveryoriginal](RECOVERY-ORIGINAL.md). Los apartados siguientes conservan la secuencia de descubrimiento.
+
 7/9/2026. La conexión ofrecida por el usuario permitió leer el **primer P291**, con DT `gxlx2_p291_1g`, API28 y UID2000. Android conserva la build original de febrero2025. La interfaz de esta conexión es `eth0`. La IP, identificadores y registros completos permanecen en `privado/`, fuera del repositorio público.
 
 No hay instalación de TVBASE ni respaldo original confirmado. La instalación final continúa prevista desde pendrive; esta conexión sirve para diagnosticar el bloqueo.
@@ -46,6 +48,8 @@ Auxiliar instalado: [ControlBluetooth0.1](../../rom-simplificada/componentes/con
 
 El cambio de alcance queda en REQ-13/PROP-14/ADR-21: varianteROM nueva sin pila/HAL/móduloBluetooth operativo, manteniendoWiFi y sin modificar0.1.1. Esto no implica retirar todos los auxiliaresBluetooth compilados dentro del kernel ni alterar pines compartidos delDT.
 
+La [comparación de radios del TV y las ROM](COMPARACION-RADIOS.md) reúne hashes, compilaciones de kernel y versiones de firmware. Los cuatro binarios leídos del TV difieren del candidato; 0.1.2 retira el módulo Bluetooth y conserva WiFi y boot del candidato. Estas diferencias no demuestran una reparación ni compatibilidad física.
+
 ## Límites y siguiente decisión
 
 El panic acota una avería real al controlador combinado de radios; **no demuestra todavía que sea la causa del2% OEM**. Tampoco prueba BCB, block.map, ejecución de recovery, integridad de la copia interna delZIP o compatibilidad física del candidato. Una ROM con menos aplicaciones no acredita reparar ese controlador.
@@ -62,8 +66,42 @@ Una reconsultaBatteryStats fue rechazada por la revisión automática porque pod
 
 ## ROM sin Bluetooth y ruta de entrada
 
-La [ROM0.1.2](../../rom-simplificada/SIN-BLUETOOTH-0.1.2.md) ya está construida, firmada y [copiada/leída enKingston](../../preparacion-usb/rom-012-estado.json). El usuario pasó el pendrive alTV. No equivale a una instalación; todavía no se confirmó otroUpdate.
+La [ROM0.1.2](../../rom-simplificada/SIN-BLUETOOTH-0.1.2.md) ya está construida, firmada y [copiada/leída enKingston](../../preparacion-usb/rom-012-estado.json). El usuario pasó el pendrive alTV. No equivale a una instalación; el intento posterior y su resultado se registran abajo.
 
 El usuario informa un switch interno que conserva su posición y probó ambas posiciones tanto al conectar alimentación como con Android funcionando, sin efecto visible. No se dará por confirmado que sea un botónrecovery ni se repetirá ese procedimiento. La documentación de [CoreELEC sobre entradas Amlogic](https://wiki.coreelec.org/coreelec:ceboot) describe botones y otros métodos dependientes del equipo; no identifica este switch ni prueba que el P291 implemente esa vía.
 
-Se prepara una captura pasiva con [capturar-log.py](../observacion-lan/capturar-log.py): un solo flujo de mensajes, máximo600s/8MiB, sin ordenarUpdate, reinicio o consultaBatteryStats. El siguiente intento OEM, si se realiza, tendrá Bluetooth inhabilitado desde el arranque y esta observación en vivo. Es una condición nueva que permite contrastar la hipótesis, no una garantía de superar2%. Una desconexiónADB no se clasificará como instalación ni entrada a recovery.
+Se preparó una captura pasiva con [capturar-log.py](../observacion-lan/capturar-log.py): un solo flujo de mensajes, máximo600s/8MiB, sin ordenarUpdate, reinicio o consultaBatteryStats. El intento OEM posterior tuvo Bluetooth inhabilitado desde el arranque y observación por LAN. Es una condición nueva que permite contrastar la hipótesis, no una garantía de superar2%. Una desconexiónADB no se clasificará como instalación ni entrada a recovery.
+
+## Intento OEM0.1.2 observado por LAN
+
+El usuario confirmó que ve2% tras seleccionar la ROM0.1.2. El registro completo recuperado del búfer a19:27:12ART contiene la transición real, aunque ocurrió entre el fin de la primera captura en vivo y el inicio de la segunda. Esa discontinuidad se conserva: la evidencia de la transición procede de la lectura del búfer, no de un flujo continuo.
+
+| Hora ART, 7/9 | Observado en el registro del P291 |
+| --- | --- |
+| 19:25:38.857 | uncrypt recibe `--update_package=@/cache/recovery/block.map` y locale. |
+| 19:25:38.968 | RecoverySystemService informa éxito de setupBCB. |
+| 19:25:39.281 | ShutdownThread envía el broadcast de cierre. |
+| 19:25:40.310 | El hilo de cierre entra a ActivityManager. |
+| 19:25:40.359 | Ese mismo hilo registra el cierre de AppOps. |
+| 19:25:40.510 | Ese mismo hilo registra «Writing battery stats before shutdown...». |
+
+Luego siguen mensajes de Android hasta19:27:12.374,91,864s después, sin marcas de cierre de PackageManager ni del procesamiento del paquete. El usuario ve2%; no se ha instalado la ROM. La preferencia y la aplicaciónBluetooth estaban inhabilitadas desde el apagado físico anterior, pero el módulo del kernel seguía cargándose. **Este cambio en Androidoriginal no evitó el2%; la varianteROM sin móduloBluetooth todavía no se ejecutó.**
+
+Una instantánea posterior encuentra el hilo de cierre en estadoS y el mismo bootID. Su stack está denegado; WCHAN0 no identifica dónde espera. Los metadatos del ZIP interno, block.map y cache/recovery también están denegados. El transporte ADB devuelve0 aun con esos textos: se registran como denegaciones, no lecturas válidas. No se consultó BatteryStats otra vez ni se alteraron permisos.
+
+El acuse de setupBCB **no verifica la copia interna del ZIP, el mapa de bloques, su persistencia ni la aceptación del cargador**. Ese uncrypt corresponde a prepararBCB; no debe confundirse con el procesamiento del paquete que genera el mapa. No saltar directamente a reinicio suponiendo que esa preparación terminó.
+
+Se obtuvo únicamente el VDEX de servicios instalado,9680428B,SHA `b051439a45d8e7d12839df445a43b0b97c4a9db267a2158a5fd8a5e2aa741649`, con hashes antes/PC/después iguales. Permite contrastar el framework real; no es un respaldo delTV. Su formatoVDEX019 contiene CompactDex001, por lo que no basta tratarlo como unDEX ordinario. Los binarios y recibos originales permanecen privados.
+
+La herramienta de captura incorpora ahora una fecha inicial opcional para recuperar mensajes del búfer al renovar una ventana y añade los tags BatteryStats/AppOps. El cambio solo afecta capturas futuras; no rellena retrospectivamente los flujos originales.
+
+
+## Actualización con root autorizado
+
+Elusuario pidió explorarroot y el su existente devolvióUID0. Las nuevaslecturas pruebanZIPinterno correcto ymapa ausente. La trazaJavaactual localiza lacadena de espera hastaIWifi.start. [Resultado de root y respaldo](ROOT-RESULTADO.md) · [Análisis detallado](ANALISIS-UPDATE-012.md). Esto reemplaza laslimitaciones deacceso y lacausalidad pendiente de losapartadosprevios; no equivale ainstalación nirespaldo finalizado.
+
+## Copia interna retirada del intento pendiente
+
+Después de detectar las diferencias dearranque/firma y del pedido delusuario de decidirantesdeforzar, se preservó elZIP como `/data/cache/TVBASE-0.1.2-preservada-no-instalar.zip`. Se comprobó antes que noexistíanblock.map ni un proceso uncrypt activo y que eltamaño/hash eran loscorrectos. Elrenombrado terminó con código0; la rutaactiva `/data/cache/update.zip` quedó ausente y elarchivo conservado volvió a verificarse por SHA. No se borró elZIP, no seescribieronboot/system/vendor ni sepidióreinicio.
+
+Esto retira elarchivo que consumiría elintento OEM si laespera se liberara. **No cancela elhiloJava ni limpiaBCB**: laordende boot-recovery y uncrypt_file siguenreferenciando lapreparación anterior. ElTVpuede seguirmostrando2%; no presentarlo como cancelacióncompletadelarranque ni indicaruncorte asumiendoBCBlimpio. Elpendrive yla releaseenPC permanecenintactos.

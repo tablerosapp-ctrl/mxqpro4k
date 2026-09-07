@@ -90,6 +90,19 @@ def prepare(config):
     return state
 
 
+def classify_private_ipv4(name, body, match):
+    """Classify public network constants and explicit offline test fixtures only."""
+    if name == 'diagnostico/respaldar-p291-lan.py' and re.match(
+            rb'(?:10\.0\.0\.0/8|172\.16\.0\.0/12|192\.168\.0\.0/16)[\'\"]',
+            body[match.start():]):
+        return 'rfc1918_network_constant'
+    if name in ('diagnostico/test_respaldo_p291_lan.py',
+                'diagnostico/respaldo-p291-lan/EVIDENCIA-SANEADA.json') and re.fullmatch(
+                rb'10\.23\.45\.67', match.group()):
+        return 'declared_offline_test_fixture'
+    return None
+
+
 def audit(config):
     rows = git('rev-list', '--objects', 'main', cwd=MIRROR).decode().splitlines()
     names = {x.partition(' ')[0]: x.partition(' ')[2] for x in rows}
@@ -98,6 +111,7 @@ def audit(config):
     blobs = 0
     email_classes = {'automation_identity': 0, 'public_aosp_certificate': 0,
                      'android_library_filename': 0}
+    ipv4_classes = {'rfc1918_network_constant': 0, 'declared_offline_test_fixture': 0}
     for row in rows:
         oid, _, name = row.partition(' ')
         header = packed.readline().decode().strip().split()
@@ -112,7 +126,10 @@ def audit(config):
         assert not name.startswith(('privado/', '.publicacion/')) and 'claves-desarrollo/' not in name
         assert b'\0' not in body and not SECRET.search(body), 'Contenido no publicable: ' + name
         assert all(x.encode() not in body for x in config['redactions']), 'Identificador pendiente: ' + name
-        assert not re.search(rb'(?<![0-9])(?:192\.168\.\d{1,3}\.\d{1,3}|10\.\d{1,3}\.\d{1,3}\.\d{1,3}|172\.(?:1[6-9]|2[0-9]|3[01])\.\d{1,3}\.\d{1,3})(?![0-9])', body), 'IP privada en ' + name
+        for match in re.finditer(rb'(?<![0-9])(?:192\.168\.\d{1,3}\.\d{1,3}|10\.\d{1,3}\.\d{1,3}\.\d{1,3}|172\.(?:1[6-9]|2[0-9]|3[01])\.\d{1,3}\.\d{1,3})(?![0-9])', body):
+            classification = classify_private_ipv4(name, body, match)
+            assert classification is not None, 'IP privada sin clasificar en ' + name
+            ipv4_classes[classification] += 1
         assert not re.search(rb'(?<![A-Za-z0-9])(?:[0-9a-fA-F]{2}:){5}[0-9a-fA-F]{2}(?![A-Za-z0-9])', body), 'MAC en ' + name
         for value in re.findall(rb'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}', body):
             if value == b'codex@local.invalid':
@@ -131,9 +148,10 @@ def audit(config):
     report = {'checked_at': datetime.now(timezone.utc).isoformat(), 'history_blobs_checked': blobs,
               'scope': 'Todos los blobs alcanzables desde main en el espejo público',
               'private_keys_tokens': 0, 'unclassified_emails': 0, 'private_ipv4': 0,
+              'ipv4_matches_classified': ipv4_classes,
               'mac_addresses': 0, 'known_original_device_identifiers': 0,
               'forbidden_binary_or_private_paths': 0, 'email_like_matches_classified': email_classes,
-              'notes': 'Las coincidencias permitidas son identidad sintética de automatización, correo público del certificado AOSP y nombres de bibliotecas Android. Loopback se conserva por el contrato ADB local.'}
+              'notes': 'Se clasifican identidad sintética, certificado AOSP, nombres Android, rangos RFC1918 exactos del validador y endpoint ficticio declarado de pruebas offline. No se permiten otras IP privadas. Loopback se conserva por el contrato ADB local.'}
     (WORK / 'auditoria-publica.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf8')
 
 

@@ -11,6 +11,7 @@ import ipaddress
 import json
 import os
 from pathlib import Path
+import re
 import subprocess
 import time
 
@@ -21,7 +22,15 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--session', type=Path, required=True)
     parser.add_argument('--seconds', type=int, default=600)
+    parser.add_argument('--since', help='TV log timestamp MM-DD HH:MM:SS.mmm; includes buffered messages from that point')
     args = parser.parse_args()
+    if args.since is not None:
+        if not re.fullmatch(r'\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d{3}', args.since):
+            parser.error('--since requires MM-DD HH:MM:SS.mmm in the TV clock')
+        try:
+            datetime.datetime.strptime('2000-' + args.since, '%Y-%m-%d %H:%M:%S.%f')
+        except ValueError:
+            parser.error('--since is not a valid calendar time')
     source = args.session.resolve()
     assert source.is_relative_to(ROOT / 'diagnostico') and source.parent.name == 'privado'
     assert 10 <= args.seconds <= 600
@@ -36,12 +45,14 @@ def main():
     receipt = output.with_suffix('.json')
     command = (
         '/system/bin/toybox timeout -s KILL ' + str(args.seconds) +
-        ' /system/bin/logcat -b main -b system -b crash -v threadtime -T 1'
+        ' /system/bin/logcat -b main -b system -b crash -v threadtime -T ' +
+        ('"' + args.since + '"' if args.since else '1') +
         ' ShutdownThread:V RecoverySystem:V RecoverySystemService:V uncrypt:V'
-        ' ActivityManager:I BluetoothManagerService:I WifiNative:E init:I "*:S"'
+        ' ActivityManager:I BatteryStats:W AppOps:W BluetoothManagerService:I WifiNative:E init:I "*:S"'
     )
     record = {'started_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(),
               'target': target, 'command': command, 'limit_seconds': args.seconds,
+              'buffer_since_tv_clock': args.since,
               'max_bytes': 8 * 1024 * 1024, 'update_requested': False,
               'reboot_requested': False, 'state': 'running'}
     start = time.monotonic()

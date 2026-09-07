@@ -63,3 +63,14 @@ Tras [0.8](../diagnostico/primer-tv-postintento-20260907-183025/HALLAZGOS.md), u
 ## ADR-21 · Excluir Bluetooth del primer perfil
 
 El usuario autoriza prescindir deBluetooth para instalar; WiFi sigue siendo objetivo. La [lecturaLAN](../diagnostico/primer-tv-lan-20260907-184926/HALLAZGOS.md) documenta un panic en la coordinación BT→WiFi y esperas de inicialización/limpiezaBluetooth. Separar el ajuste reversible en Androidactual de la nueva recetaROM. No cambiar autenticación ni permisosdel shell para apagar una radio: usar los controles/API normales de Android. El candidato tiene binarios distintos, pero eso no prueba una corrección. La variante siguiente conserva0.1.1 y sus recibos; debe suprimir las rutas de inicio/cargaBluetooth y conservar las deWiFi, verificándolas antes de entregar. REQ-13/PROP-14.
+
+
+## ADR-22 · Usar el root incorporado tras el pedido explícito
+
+El usuario pidió concentrarse en root después del nuevo2% y conocer las opciones de instalación forzada antes de elegir. Esa autorización actual reemplaza la restricción previa para esta exploración. El su ya existente confirmóUID0; no se instalóroot ni se cambió autenticación/SELinux. La trazaJava única localizó la espera deWiFi y la lectura conroot acreditóZIPinterno íntegro/mapaausente. [Resultado](../diagnostico/primer-tv-lan-20260907-184926/ROOT-RESULTADO.md). No repetir BatteryStatsdump; diferenciar lectura, capturaART, preparaciónpersistente ygrabación.
+
+## ADR-23 · Contrastar la ROM contra los originales antes de forzar
+
+El respaldo permitió leer elrecoveryoriginal y elDTB real. La clave de recovery es formatoAOSPv1/SHA1 y elZIP0.1.2 usaSHA256: la política de referencia rechaza la combinación, aunque no se ejecutó elverificadorOEM. Además cambian geometríavendor, IRQWiFi y parámetros devideo/SDIO en elboot candidato. [Comparación](../diagnostico/primer-tv-lan-20260907-184926/RECOVERY-ORIGINAL.md). La coincidencia deDT-id y elhecho de que unaimagenquepa no acreditan elmapa delpróximoarranque.
+
+No promover0.1.2 mediante una firma distinta como única corrección. Completar originales verificables y preferir una nuevaROM simplificada desdeellos, conservando kernel/DTB/geometría/video. ExcluirBluetooth y softwareprescindible e integrarChrome/WebView/iniciopropio mantiene elobjetivo de reemplazo enmemoriainterna porUSB. RecuperarWiFi sigue pendiente devalidación. Presentarpreparación y método dereset/instalación conriesgosalusuario antesde forzarlos. REQ-02/09/11/13, PROP-15, C-ORIG/C-ROM/C-TV.

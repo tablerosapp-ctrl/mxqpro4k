@@ -1,10 +1,10 @@
-# Pendrive · diagnóstico del último intento con Acceso USB0.8
+# Pendrive · estado de la instalación
 
-## Vigente: ROM0.1.2 preparada, entrada aún pendiente
+## Vigente: no repetir Update con0.1.2
 
-El pendrive contieneTVBASE-P291-A9-0.1.2-RECOVERY.zip, ControlBluetooth0.1 y guía nueva; [recibo](../preparacion-usb/rom-012-estado.json). Se retiraron únicamente la ROM0.1.1, APK0.8 y guía anteriores después de archivarlas/verificarlas enPC. Informes/recovery/respaldos permanecen.
+Elpendrive conserva ROM0.1.2 ysu [recibo de entrega](../preparacion-usb/rom-012-estado.json). Elintento posterior quedó al2%; ahora hayroot confirmado yuna traza que identifica laesperaWiFi. ElZIPinterno sepreservóíntegro conotronombre y se retiróde larutaactiva; faltaba elmapa requerido porrecovery. BCB yelhiloJava no quedaroncancelados.
 
-El primerP291 está porLAN, con ajusteBluetooth0 y paqueteBluetooth inhabilitado en Androidoriginal; aún hay esperas delkernel. La nuevaROM elimina pila/HAL/móduloBT y conservaWiFi, sin prueba física. El siguienteUpdate requiere indicación específica tras comprobar el ZIP enTV e iniciar el registro en vivo. No repetir los pasos históricos de esta guía ni pulsarRestaurarBluetooth. [Detalle0.1.2](SIN-BLUETOOTH-0.1.2.md).
+La [comparación contra losoriginales](../diagnostico/primer-tv-lan-20260907-184926/RECOVERY-ORIGINAL.md) detectó diferencias dearranque ycompatibilidad defirma sinacreditar. Se conservan losarchivos entregados y susrecibos; no seha preparado otroZIPni seha escrito unaROM. No usar laguía antiguadelpendrive como indicación deotroUpdate. La propuesta siguiente deriva de losoriginales delprimerP291. [Opciones para decidir](../diagnostico/primer-tv-lan-20260907-184926/OPCIONES-INSTALACION-ROOT.md).
 
 ## Instrucciones históricas conservadas
 

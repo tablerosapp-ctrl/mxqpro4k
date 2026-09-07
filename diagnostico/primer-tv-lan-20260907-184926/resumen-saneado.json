@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "observed_utc": "2026-09-07T22:13:54.965272+00:00",
+  "observed_utc": "2026-09-07T22:58:32.527658+00:00",
   "profile": {
     "dt": "gxlx2_p291_1g",
     "android_api": 28,
@@ -9,7 +9,7 @@
     "original_android": true
   },
   "rom_installed": false,
-  "original_backup_confirmed": false,
+  "original_backup_confirmed": true,
   "kernel_panic": {
     "observed": true,
     "function": "glResetTrigger.part.1",
@@ -659,6 +659,81 @@
       "file": "wifi-pref-antes.txt",
       "bytes": 2,
       "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "file": "update012-log-20260907-222712.txt",
+      "bytes": 34349,
+      "sha256": "7b01ed835e85a730df67b2dd04540797ff41b688e9abf2f71a57bc5428d99a3f"
+    },
+    {
+      "file": "hilos-update012.txt",
+      "bytes": 68165,
+      "sha256": "21c3d374c1e9c65163f6d756f84bb9c2383f45a7e1a52a4b88668df5b3a77309"
+    },
+    {
+      "file": "cierre-proc-update012.txt",
+      "bytes": 1162,
+      "sha256": "c33d7a697891b0a4a24412661186529d64d8ff8775dc5bb5396c192468a662ef"
+    },
+    {
+      "file": "preparacion-visible-update012.txt",
+      "bytes": 186,
+      "sha256": "df7b08026032c8edf76fbb75a30a9b7dffd87dd3b41acd28a7836787f21822d0"
+    },
+    {
+      "file": "lecturas-update012-recibo.json",
+      "bytes": 1251,
+      "sha256": "fe5ab6d6d95cada586ad810ca002697a997147827a41a77fb7d998837eb8bbe4"
+    },
+    {
+      "file": "services-p291-adquisicion.json",
+      "bytes": 550,
+      "sha256": "5f28fe95fac1a16f46967b7445fcd31da27c2c342d6b0d364b1f9fe537cf491d"
+    },
+    {
+      "file": "framework-inventario-update012.txt",
+      "bytes": 404,
+      "sha256": "3cec196987d779b5de974410f3891473c90df57eaa9598c11ac6266b56bbfd85"
+    },
+    {
+      "file": "root-su-identidad.json",
+      "bytes": 363,
+      "sha256": "874ba403792e7e6015f1b9b52d0801480104abf0e908b33c96849dc165a5ee21"
+    },
+    {
+      "file": "root-preparacion.txt",
+      "bytes": 300,
+      "sha256": "4efe5e25330e7839f4fb7916ac8572d210fa9c845e0552f6a03efad8784fb12f"
+    },
+    {
+      "file": "root-zip-interno-sha.txt",
+      "bytes": 89,
+      "sha256": "91e8ca145d99841f14d340ddf65f4afceb2366f1cf1b927e7746bd478c7ddab3"
+    },
+    {
+      "file": "root-cache-contenido.txt",
+      "bytes": 150,
+      "sha256": "9f2800cd01a9cd2cf5b7d3a4435c889b5423258b6a32fc4a290ca85a202e02e5"
+    },
+    {
+      "file": "root-system-server-trace-20260907-193623-raw.txt",
+      "bytes": 107301,
+      "sha256": "af90d91809cf26af69b54dde9e91f455e999f9e00cb461ad2d8bb71ed7f9f94c"
+    },
+    {
+      "file": "root-sigquit-recibo.json",
+      "bytes": 356,
+      "sha256": "7f364dc8dc6a41550bd3da2d9404ffd1b3d3e0c95798563e519d81be71278dd3"
+    },
+    {
+      "file": "lecturas-root-iniciales.json",
+      "bytes": 2023,
+      "sha256": "c4e49db324c1d5515d9433ce0cac4ef17164ca96ee405a95e84eae42f0d4d5c6"
+    },
+    {
+      "file": "retirar-update-pendiente.json",
+      "bytes": 1995,
+      "sha256": "d00db6b8d0d1594fcf2cedaa070ccee11e4d68e6e9796225e13cad9d614c9ad4"
     }
   ],
   "privacy": "Raw network identifiers, hardware identities and traces remain in ignored privado/; hashes refer to original files.",
@@ -693,5 +768,67 @@
     "user_tried_on_power_connection": true,
     "user_reported_effect": false,
     "recovery_function_confirmed": false
-  }
+  },
+  "update012": {
+    "user_confirmed_progress_percent": 2,
+    "shutdown_started_tv_time": "2026-09-07 19:25:39.281 ART",
+    "setup_bcb_reported_success": true,
+    "bcb_readback_verified": false,
+    "bcb_references_block_map": true,
+    "last_shutdown_marker": "BatteryStats Writing battery stats before shutdown",
+    "last_shutdown_marker_tv_time": "2026-09-07 19:25:40.510 ART",
+    "same_shutdown_thread": true,
+    "later_android_log_seconds": 91.864,
+    "payload_uncrypt_observed": false,
+    "block_map_verified": false,
+    "internal_zip_verified": true,
+    "shutdown_thread_state": "S",
+    "thread_stack": "permission_denied",
+    "same_boot_id_in_followup": true,
+    "new_rom_executed": false,
+    "kernel_bt_module_still_loaded_before_update": true,
+    "transition_source": "one-time buffered log read; gap between two live capture windows",
+    "next_action": "analyze installed framework and logs; no repeated Update/reboot",
+    "block_map_observed_absent_as_root": true,
+    "java_stack_obtained": true,
+    "wait_chain": [
+      "ShutdownThread",
+      "BatteryStatsService.awaitUninterruptibly/Future.get",
+      "BatteryExternalStatsWorker",
+      "WifiAsyncChannel synchronous request",
+      "WifiStateMachine",
+      "IWifi.start/HIDL waiting for reply"
+    ],
+    "remote_hal_stack_obtained": false,
+    "active_internal_path_removed": true,
+    "preserved_internal_zip": "/data/cache/TVBASE-0.1.2-preservada-no-instalar.zip",
+    "preserved_zip_hash_verified": true,
+    "bcb_cleared": false,
+    "shutdown_thread_cancelled": false,
+    "reset_or_flash_executed_after_root": false
+  },
+  "framework_acquisition": {
+    "file": "services-p291.vdex",
+    "bytes": 9680428,
+    "sha256": "b051439a45d8e7d12839df445a43b0b97c4a9db267a2158a5fd8a5e2aa741649",
+    "before_pc_after_matched": true,
+    "vdex_version": "019",
+    "dex_kind": "CompactDex001",
+    "analysis_pending": false
+  },
+  "root": {
+    "user_requested": true,
+    "confirmed_utc": "2026-09-07T22:33:21.940516+00:00",
+    "uid": 0,
+    "method": "existing /system/xbin/su 0",
+    "selinux_context": "u:r:su:s0",
+    "selinux_mode_observed": "Permissive",
+    "root_package_installed": false,
+    "adb_auth_changed": false,
+    "selinux_changed": false
+  },
+  "backup_scope": "12 selected original partitions; userdata/cache and other eMMC areas excluded",
+  "complete_restore_backup": false,
+  "restore_tested": false,
+  "backup_summary": "RESPALDO-resumen-saneado.json"
 }

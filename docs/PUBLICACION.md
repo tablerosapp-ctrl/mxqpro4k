@@ -35,3 +35,6 @@ La comprobación local de documentación incluye binarios y herramientas present
 ## Auditoría ampliada antes de publicar
 
 La primera solicitud de publicación fue rechazada automáticamente porque la auditoría inicial agrupaba coincidencias de correo e identificadores sin explicar cada clase. Ese intento no creó ni subió el repositorio. Se amplió la comprobación de todos los blobs del espejo: rechaza claves/tokens, correos sin clasificar, IPv4 privadas, MAC, identificadores originales conocidos y rutas de archivos privados/binarios. Las coincidencias permitidas de correo son únicamente la identidad sintética de automatización, el correo público del certificado AOSP y nombres de interfaces/bibliotecas Android con @versión en sus dos inventarios. La revisión ampliada pasó y el reintento publicó correctamente. El último reporte completo queda en .publicacion/auditoria-publica.json; el recibo público conserva la auditoría de la primera publicación.
+
+
+La auditoría de septiembre también clasifica los tres rangosRFC1918 escritos como límites exactos delscript de respaldo y el endpoint ficticio declarado por sus pruebas offline. La excepción se limita a esos archivos y valores; otrasIPv4privadas siguen rechazándose. Las pruebas no contactan elTV ni leen su sesión.

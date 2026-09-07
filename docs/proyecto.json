@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "title": "TV Base",
-  "snapshot": "2026-09-07T22:18:06.580247+00:00",
-  "state": "ROM0.1.2 sin Bluetooth entregada; Android original sigue activo, cierre pendiente",
+  "snapshot": "2026-09-07T22:58:32.535352+00:00",
+  "state": "Root confirmado y12 particiones originales verificadas; nueva base P291 propuesta",
   "installed": false,
-  "original_tv_backup_confirmed": false,
+  "original_tv_backup_confirmed": true,
   "source_of_truth": {
     "requirements": "docs/ESPECIFICACION.md",
     "state": "docs/ESTADO.md",
@@ -53,7 +53,8 @@
         "analisis-rom/inspeccionar-rom.py",
         "analisis-rom/verificar-integridad-interna.py",
         "analisis-rom/integridad-interna.json",
-        "rom-simplificada/inspeccion/inventariar-ext4.py"
+        "rom-simplificada/inspeccion/inventariar-ext4.py",
+        "diagnostico/primer-tv-lan-20260907-184926/COMPARACION-RADIOS.md"
       ],
       "x": 0,
       "y": 1,
@@ -98,7 +99,7 @@
       "id": "C-ROM",
       "label": "ROM0.1.2 sin Bluetooth",
       "state": "verificado_local",
-      "description": "P291 sin pila/HAL/módulo Bluetooth; WiFi conservado y no probado físicamente. 0.1.1 permanece archivada.",
+      "description": "0.1.2 construida y conservada. Revisiónoriginal detecta diferencias dearranque/firma; nueva derivación desdeoriginales propuesta, aún no implementada.",
       "files": [
         "rom-simplificada/LEEME.md",
         "rom-simplificada/preparar-copias.py",
@@ -243,9 +244,9 @@
     },
     {
       "id": "C-TV",
-      "label": "P291: BT inhabilitado, kernel aún espera",
+      "label": "P291: root y bloqueo WiFi confirmados",
       "state": "observado_tv",
-      "description": "LAN confirma panic BT/WiFi; ajuste y paquete inhabilitados persisten tras apagado, pero módulo Bluetooth y espera WiFi continúan. ROM no instalada.",
+      "description": "P291: root incorporado confirmado. Cierre espera estadísticasWiFi cuyo hilo espera arranqueHAL; ZIPinterno íntegro yblock.map ausente.",
       "files": [
         "docs/ESTADO.md",
         "diagnostico/primer-tv-evidencia-20260907-000948/HALLAZGOS.md",
@@ -273,7 +274,13 @@
         "diagnostico/revision-postintento/test_captura08.py",
         "diagnostico/primer-tv-lan-20260907-184926/HALLAZGOS.md",
         "diagnostico/primer-tv-lan-20260907-184926/resumen-saneado.json",
-        "diagnostico/observacion-lan/capturar-log.py"
+        "diagnostico/primer-tv-lan-20260907-184926/COMPARACION-RADIOS.md",
+        "diagnostico/observacion-lan/capturar-log.py",
+        "diagnostico/primer-tv-lan-20260907-184926/ROOT-RESULTADO.md",
+        "diagnostico/primer-tv-lan-20260907-184926/ANALISIS-UPDATE-012.md",
+        "diagnostico/respaldar-p291-lan.py",
+        "diagnostico/primer-tv-lan-20260907-184926/RESPALDO-resumen-saneado.json",
+        "diagnostico/primer-tv-lan-20260907-184926/OPCIONES-INSTALACION-ROOT.md"
       ],
       "x": 4,
       "y": 1,
@@ -327,6 +334,26 @@
       ],
       "x": 3,
       "y": 2
+    },
+    {
+      "id": "C-ORIG",
+      "label": "Originales del P291",
+      "state": "observado_tv",
+      "description": "12 particiones originales verificadas (2538MiB). Excluyeuserdata/cache yotrasáreas; restauración pendiente. Recovery/DTB originales fundamentan nueva base.",
+      "files": [
+        "diagnostico/primer-tv-lan-20260907-184926/RESPALDO-resumen-saneado.json",
+        "diagnostico/primer-tv-lan-20260907-184926/RECOVERY-ORIGINAL.md",
+        "diagnostico/respaldar-p291-lan.py",
+        "diagnostico/test_respaldo_p291_lan.py",
+        "diagnostico/respaldo-p291-lan/EVIDENCIA-SANEADA.json"
+      ],
+      "x": 4,
+      "y": 2,
+      "requirements": [
+        "REQ-02",
+        "REQ-09",
+        "REQ-11"
+      ]
     }
   ],
   "edges": [
@@ -399,6 +426,16 @@
       "source": "C-BTCTRL",
       "target": "C-TV",
       "relation": "inhabilita Bluetooth actual"
+    },
+    {
+      "source": "C-TV",
+      "target": "C-ORIG",
+      "relation": "respaldo por root"
+    },
+    {
+      "source": "C-ORIG",
+      "target": "C-ROM",
+      "relation": "nueva base propuesta"
     }
   ],
   "requirements": [
@@ -813,6 +850,23 @@
         "C-TV",
         "C-BTCTRL"
       ]
+    },
+    {
+      "id": "ADR-22",
+      "file": "docs/DECISIONES.md",
+      "components": [
+        "C-TV",
+        "C-ORIG"
+      ]
+    },
+    {
+      "id": "ADR-23",
+      "file": "docs/DECISIONES.md",
+      "components": [
+        "C-ORIG",
+        "C-ROM",
+        "C-TV"
+      ]
     }
   ],
   "validations": [
@@ -1071,15 +1125,28 @@
         "C-TV",
         "C-BTCTRL"
       ]
+    },
+    {
+      "id": "PROP-15",
+      "label": "ROM desde originales P291",
+      "state": "propuesto",
+      "file": "diagnostico/primer-tv-lan-20260907-184926/RECOVERY-ORIGINAL.md",
+      "components": [
+        "C-ORIG",
+        "C-ROM",
+        "C-TV"
+      ]
     }
   ],
-  "delivery_label": "ROM0.1.2 sin Bluetooth: USB verificado",
+  "delivery_label": "ROM0.1.2 conservada · siguiente base en revisión",
   "date_label": "7/9/2026",
-  "next_step_label": "Captura LAN y entrada OEM con Bluetooth inhabilitado; no asumir cierre reparado",
+  "next_step_label": "Preparar ROM desde originales; resolver firma y arranque antes de forzar",
   "public_repository": {
     "url": "https://github.com/tablerosapp-ctrl/mxqpro4k",
     "visibility_requested": "public",
     "status": "published",
     "verification": "docs/evidencia/publicacion-github.json"
-  }
+  },
+  "original_backup_scope": "12 selected partitions,2538MiB; excludes userdata/cache and other eMMC regions; restore not tested",
+  "restoration_tested": false
 }

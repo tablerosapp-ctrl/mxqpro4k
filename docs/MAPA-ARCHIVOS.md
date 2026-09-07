@@ -16,10 +16,11 @@ flowchart LR
     C_REC["Recovery externo · verificado_local"]
     C_ENTRY["Diagnóstico USB0.8 · observado_tv"]
     C_USB["Kingston preparado · verificado_local"]
-    C_TV["P291: BT inhabilitado, kernel aún espera · observado_tv"]
+    C_TV["P291: root y bloqueo WiFi confirmados · observado_tv"]
     C_APP["APK del producto · propuesto"]
     C_GESTION["Administración propia · propuesto"]
     C_BTCTRL["Control Bluetooth normal · observado_tv"]
+    C_ORIG["Originales del P291 · observado_tv"]
     C_PERFIL -->|"selecciona"| C_BASE
     C_BASE -->|"aporta hardware"| C_ROM
     C_CHROME -->|"motor admitido"| C_WEB
@@ -34,6 +35,8 @@ flowchart LR
     C_TV -->|"habilita validación"| C_APP
     C_APP -->|"contrato propuesto"| C_GESTION
     C_BTCTRL -->|"inhabilita Bluetooth actual"| C_TV
+    C_TV -->|"respaldo por root"| C_ORIG
+    C_ORIG -->|"nueva base propuesta"| C_ROM
 ```
 
 ## Archivos por componente
@@ -67,6 +70,7 @@ Requisitos: REQ-02, REQ-05.
 - [analisis-rom/verificar-integridad-interna.py](../analisis-rom/verificar-integridad-interna.py)
 - [analisis-rom/integridad-interna.json](../analisis-rom/integridad-interna.json)
 - [rom-simplificada/inspeccion/inventariar-ext4.py](../rom-simplificada/inspeccion/inventariar-ext4.py)
+- [diagnostico/primer-tv-lan-20260907-184926/COMPARACION-RADIOS.md](../diagnostico/primer-tv-lan-20260907-184926/COMPARACION-RADIOS.md)
 
 ### C-CHROME · Chrome 138
 
@@ -89,7 +93,7 @@ Requisitos: REQ-03, REQ-10.
 
 ### C-ROM · ROM0.1.2 sin Bluetooth
 
-**verificado_local**. P291 sin pila/HAL/módulo Bluetooth; WiFi conservado y no probado físicamente. 0.1.1 permanece archivada.
+**verificado_local**. 0.1.2 construida y conservada. Revisiónoriginal detecta diferencias dearranque/firma; nueva derivación desdeoriginales propuesta, aún no implementada.
 
 Requisitos: REQ-01, REQ-03, REQ-13.
 
@@ -192,9 +196,9 @@ Requisitos: REQ-01.
 - [preparacion-usb/rom-012-estado.json](../preparacion-usb/rom-012-estado.json)
 - [rom-simplificada/instalador/LEEME-ROM-0.1.2.txt](../rom-simplificada/instalador/LEEME-ROM-0.1.2.txt)
 
-### C-TV · P291: BT inhabilitado, kernel aún espera
+### C-TV · P291: root y bloqueo WiFi confirmados
 
-**observado_tv**. LAN confirma panic BT/WiFi; ajuste y paquete inhabilitados persisten tras apagado, pero módulo Bluetooth y espera WiFi continúan. ROM no instalada.
+**observado_tv**. P291: root incorporado confirmado. Cierre espera estadísticasWiFi cuyo hilo espera arranqueHAL; ZIPinterno íntegro yblock.map ausente.
 
 Requisitos: REQ-13.
 
@@ -224,7 +228,13 @@ Requisitos: REQ-13.
 - [diagnostico/revision-postintento/test_captura08.py](../diagnostico/revision-postintento/test_captura08.py)
 - [diagnostico/primer-tv-lan-20260907-184926/HALLAZGOS.md](../diagnostico/primer-tv-lan-20260907-184926/HALLAZGOS.md)
 - [diagnostico/primer-tv-lan-20260907-184926/resumen-saneado.json](../diagnostico/primer-tv-lan-20260907-184926/resumen-saneado.json)
+- [diagnostico/primer-tv-lan-20260907-184926/COMPARACION-RADIOS.md](../diagnostico/primer-tv-lan-20260907-184926/COMPARACION-RADIOS.md)
 - [diagnostico/observacion-lan/capturar-log.py](../diagnostico/observacion-lan/capturar-log.py)
+- [diagnostico/primer-tv-lan-20260907-184926/ROOT-RESULTADO.md](../diagnostico/primer-tv-lan-20260907-184926/ROOT-RESULTADO.md)
+- [diagnostico/primer-tv-lan-20260907-184926/ANALISIS-UPDATE-012.md](../diagnostico/primer-tv-lan-20260907-184926/ANALISIS-UPDATE-012.md)
+- [diagnostico/respaldar-p291-lan.py](../diagnostico/respaldar-p291-lan.py)
+- [diagnostico/primer-tv-lan-20260907-184926/RESPALDO-resumen-saneado.json](../diagnostico/primer-tv-lan-20260907-184926/RESPALDO-resumen-saneado.json)
+- [diagnostico/primer-tv-lan-20260907-184926/OPCIONES-INSTALACION-ROOT.md](../diagnostico/primer-tv-lan-20260907-184926/OPCIONES-INSTALACION-ROOT.md)
 
 ### C-APP · APK del producto
 
@@ -254,6 +264,18 @@ Requisitos: REQ-13.
 - [rom-simplificada/instalador/compilar-control-bluetooth.py](../rom-simplificada/instalador/compilar-control-bluetooth.py)
 - [rom-simplificada/compilacion/control-bluetooth-0.1/componente.json](../rom-simplificada/compilacion/control-bluetooth-0.1/componente.json)
 
+### C-ORIG · Originales del P291
+
+**observado_tv**. 12 particiones originales verificadas (2538MiB). Excluyeuserdata/cache yotrasáreas; restauración pendiente. Recovery/DTB originales fundamentan nueva base.
+
+Requisitos: REQ-02, REQ-09, REQ-11.
+
+- [diagnostico/primer-tv-lan-20260907-184926/RESPALDO-resumen-saneado.json](../diagnostico/primer-tv-lan-20260907-184926/RESPALDO-resumen-saneado.json)
+- [diagnostico/primer-tv-lan-20260907-184926/RECOVERY-ORIGINAL.md](../diagnostico/primer-tv-lan-20260907-184926/RECOVERY-ORIGINAL.md)
+- [diagnostico/respaldar-p291-lan.py](../diagnostico/respaldar-p291-lan.py)
+- [diagnostico/test_respaldo_p291_lan.py](../diagnostico/test_respaldo_p291_lan.py)
+- [diagnostico/respaldo-p291-lan/EVIDENCIA-SANEADA.json](../diagnostico/respaldo-p291-lan/EVIDENCIA-SANEADA.json)
+
 ## Directorios y cuidado
 
 | Ruta | Función | Regla |
@@ -262,7 +284,7 @@ Requisitos: REQ-13.
 | `rom-simplificada/componentes/` | Fuente de APK propias | Versionar cambios y conservar firma |
 | `rom-simplificada/trabajo/` | RAW activos y recetas aplicadas | No son respaldo original del TV |
 | `rom-simplificada/instalador/` | ZIP, recovery externo y pruebas | Revisar versión antes de reconstruir |
-| `rom-simplificada/salida/` | Releases y evidencias | 0.1 retirada; 0.1.1 vigente |
+| `rom-simplificada/salida/` | Releases y evidencias | 0.1.2 en revisión; conservar releases verificadas |
 | `preparacion-usb/` | Preparadores y recibos de operaciones | Usar identidad estable; no repetir por rutina |
 | `diagnostico/` | Evidencia de ambos equipos | No mezclar perfiles P291 y P271 |
 | `actualizacion-chrome/` | Chrome fuente y firmas | Conservar APK integrado y evidencia |
@@ -283,7 +305,7 @@ Requisitos: REQ-13.
 | README.md | 1 | 0.000 |
 | actualizacion-chrome | 51 | 0.417 |
 | analisis-rom | 15 | 1.822 |
-| diagnostico | 164 | 0.018 |
+| diagnostico | 173 | 0.018 |
 | docs | 31 | 0.000 |
 | dossier-s905l2.html | 1 | 0.000 |
 | images | 1 | 1.352 |

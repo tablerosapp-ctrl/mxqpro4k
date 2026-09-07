@@ -100,8 +100,14 @@ mxqpro4k/
 │   │   ├── HALLAZGOS.md
 │   │   └── resumen-saneado.json
 │   ├── primer-tv-lan-20260907-184926/
+│   │   ├── ANALISIS-UPDATE-012.md
+│   │   ├── COMPARACION-RADIOS.md
 │   │   ├── HALLAZGOS.md
-│   │   └── resumen-saneado.json
+│   │   ├── OPCIONES-INSTALACION-ROOT.md
+│   │   ├── RECOVERY-ORIGINAL.md
+│   │   ├── RESPALDO-resumen-saneado.json
+│   │   ├── resumen-saneado.json
+│   │   └── ROOT-RESULTADO.md
 │   ├── primer-tv-postintento-20260907-183025/
 │   │   ├── HALLAZGOS.md
 │   │   └── resumen-saneado.json
@@ -111,6 +117,8 @@ mxqpro4k/
 │   ├── primer-tv-update-20260907-1326/
 │   │   ├── HALLAZGOS.md
 │   │   └── resumen-saneado.json
+│   ├── respaldo-p291-lan/
+│   │   └── EVIDENCIA-SANEADA.json
 │   ├── revision-postintento/
 │   │   ├── __pycache__/
 │   │   │   └── analizar-captura08.cpython-312.pyc
@@ -119,7 +127,9 @@ mxqpro4k/
 │   ├── android-20260905-142854-a8286d9a/ [32 archivos; 3.3 MB; agrupado]
 │   ├── LEEME.md
 │   ├── recoger-android-adb.ps1
-│   └── recoger-hardware-linux.sh
+│   ├── recoger-hardware-linux.sh
+│   ├── respaldar-p291-lan.py
+│   └── test_respaldo_p291_lan.py
 ├── docs/
 │   ├── evidencia/
 │   │   ├── git-inicial.json

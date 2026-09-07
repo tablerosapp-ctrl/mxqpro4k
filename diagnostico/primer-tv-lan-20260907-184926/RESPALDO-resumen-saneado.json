@@ -1,0 +1,157 @@
+{
+  "state": "12_selected_original_partitions_verified",
+  "profile": "P291/gxlx2_p291_1g/API28",
+  "critical": {
+    "completed": "2026-09-07T19:41:54-03:00",
+    "bytes": 106954752,
+    "manifest_sha256": "f6dfa30b2f06af499e978f4a4cf7b4317eb32743897f7120d325382d79052522",
+    "partitions": [
+      {
+        "name": "bootloader",
+        "bytes": 4194304,
+        "sha256": "40c18a0ccfbed22917a4e4d61cbb164f2fd75b8d99136dd8f819390889c4fe7b",
+        "read_exit": 0,
+        "remote_hash_matched": true,
+        "mounts": []
+      },
+      {
+        "name": "recovery",
+        "bytes": 25165824,
+        "sha256": "4d7fda26b485657e48bcbb5b253ac81ea21c3a34f21d01e52cbe1dc18295c6af",
+        "read_exit": 0,
+        "remote_hash_matched": true,
+        "mounts": []
+      },
+      {
+        "name": "boot",
+        "bytes": 16777216,
+        "sha256": "13e027a3aae1af232d1d700421486f32b7958a9fa0a157d8cbd3c47243ab697d",
+        "read_exit": 0,
+        "remote_hash_matched": true,
+        "mounts": []
+      },
+      {
+        "name": "misc",
+        "bytes": 8388608,
+        "sha256": "c8b5991390836e2f03693d8a4f6f2f4ea2b223c20951a119155fba19cf542549",
+        "read_exit": 0,
+        "remote_hash_matched": true,
+        "mounts": []
+      },
+      {
+        "name": "env",
+        "bytes": 8388608,
+        "sha256": "49e48fddb963d1a4ebaf5889916bba8b59141bcc1eeef71ac1dad5c6425af775",
+        "read_exit": 0,
+        "remote_hash_matched": true,
+        "mounts": []
+      },
+      {
+        "name": "dtbo",
+        "bytes": 8388608,
+        "sha256": "7af6b84add6c287ae86e371a58a91c72a7f77f1fe6690e25f472dd59e19679df",
+        "read_exit": 0,
+        "remote_hash_matched": true,
+        "mounts": []
+      },
+      {
+        "name": "vbmeta",
+        "bytes": 2097152,
+        "sha256": "5647f05ec18958947d32874eeb788fa396a05d0bab7c1b71f112ceb7e9b31eee",
+        "read_exit": 0,
+        "remote_hash_matched": true,
+        "mounts": []
+      },
+      {
+        "name": "tee",
+        "bytes": 33554432,
+        "sha256": "1b0c1d03bf6078c3d2778df840b1a2d6d9c22c6a9cee90b4da21b3df201ef544",
+        "read_exit": 0,
+        "remote_hash_matched": true,
+        "mounts": [
+          {
+            "mountpoint": "/mnt/vendor/tee",
+            "filesystem": "ext4",
+            "options": "rw,seclabel,nosuid,nodev,noatime,nodelalloc,errors=panic,data=ordered"
+          }
+        ]
+      }
+    ]
+  },
+  "system_stage": "verified",
+  "complete_restore_backup": false,
+  "restore_tested": false,
+  "tv_partition_writes": false,
+  "limitations": [
+    "Selected partitions only; userdata, cache and other unlisted partitions are excluded.",
+    "No restore path or restored boot has been tested.",
+    "Live device: matching hashes do not make a filesystem snapshot atomic.",
+    "tee may be mounted read-write; this script does not freeze or remount it.",
+    "A process in uninterruptible kernel sleep may outlive its requested timeout."
+  ],
+  "system": {
+    "completed": "2026-09-07T19:57:48-03:00",
+    "bytes": 2554331136,
+    "manifest_sha256": "9943d0634aad628159869cace6c47034668e2cbb56632fdd2c5337e5fd2ffe2e",
+    "partitions": [
+      {
+        "name": "system",
+        "bytes": 1342177280,
+        "sha256": "249611912b7b1fa277d169f8612f9a719df3abf99dc98ed8e817657e2c9beb2c",
+        "read_exit": 0,
+        "remote_hash_matched": true,
+        "mounts": [
+          {
+            "mountpoint": "/system",
+            "filesystem": "ext4",
+            "options": "ro,seclabel,relatime,block_validity,delalloc,barrier,user_xattr,acl,inode_readahead_blks=8"
+          }
+        ]
+      },
+      {
+        "name": "vendor",
+        "bytes": 943718400,
+        "sha256": "d542fc091469a7c1223c1d5091f8ec6b3456f38dd1218b779d18d1942190d2a7",
+        "read_exit": 0,
+        "remote_hash_matched": true,
+        "mounts": [
+          {
+            "mountpoint": "/vendor",
+            "filesystem": "ext4",
+            "options": "ro,seclabel,relatime,block_validity,delalloc,barrier,user_xattr,acl,inode_readahead_blks=8"
+          }
+        ]
+      },
+      {
+        "name": "product",
+        "bytes": 134217728,
+        "sha256": "ef2c71f6208e25fa1cc9d5c12cb04972ac20d772e2c11a76972859403b530075",
+        "read_exit": 0,
+        "remote_hash_matched": true,
+        "mounts": [
+          {
+            "mountpoint": "/product",
+            "filesystem": "ext4",
+            "options": "ro,seclabel,relatime,block_validity,delalloc,barrier,user_xattr,acl,inode_readahead_blks=8"
+          }
+        ]
+      },
+      {
+        "name": "odm",
+        "bytes": 134217728,
+        "sha256": "97836d5a1b016b64d3875c82cb5f3b4daee0f56d8eea3675b4231086429cbe67",
+        "read_exit": 0,
+        "remote_hash_matched": true,
+        "mounts": [
+          {
+            "mountpoint": "/odm",
+            "filesystem": "ext4",
+            "options": "ro,seclabel,relatime,block_validity,delalloc,barrier,user_xattr,acl,inode_readahead_blks=8"
+          }
+        ]
+      }
+    ]
+  },
+  "total_bytes": 2661285888,
+  "partitions_count": 12
+}

@@ -5,7 +5,7 @@ Orden por dependencias, sin fechas prometidas. Una etapa se cierra con evidencia
 | Etapa | Situación | Trabajo y salida verificable | Dependencia |
 | --- | --- | --- | --- |
 | M0 · Base y paquete | Preparación local completada | Candidato inspeccionado, ROM0.1.1 firmada, captura 0.6 completada, firma contra P291 verificada y recovery externo preparado; VAL-01 a 04 | Ninguna |
-| M1 · Entrada USB P291 | **ROM real llegó al 2 %; reinicio/entrada pendientes** | Recovery visible, origen identificado y ZIP aceptado; VAL-05 | M0 |
+| M1 · Entrada USB P291 | **0.1.2 volvió al2%; registro llega a BatteryStats.shutdown** | Recovery visible, origen identificado y ZIP aceptado; VAL-05 | M0 |
 | M2 · Instalación y arranque | Pendiente | Respaldo completo, cinco escrituras verificadas, arranque TVBASE desde eMMC sin USB; VAL-06 y 07 | M1 |
 | M3 · Hardware y multimedia | Pendiente | Perfil real y suite de APIs/web/video/controles; dos VP9 + alfa/canvas y un 1080p; VAL-08 | M2 |
 | M4 · Recuperación repetible | Pendiente | Ensayar acceso sin Android y restauración con originales; documentar qué fallos cubre; VAL-09 | M1, M2; antes de ampliar pruebas destructivas |
@@ -59,4 +59,13 @@ La [revisión conjunta](hipotesis/REVISION-CONJUNTA-FABLE.md) explica discrepanc
 
 [Captura revisada](../diagnostico/primer-tv-postintento-20260907-183025/HALLAZGOS.md): PROP-09 obtuvo pstore nuevo pero no el tramo de cierre; PROP-13fase1 obtuvo timeouts de WiFi/BatteryStats y ANR repetidos deBluetooth. La captura global es parcial por cierre vacío; datos útiles con25SHA válidos. No se cierraM1. El usuario ofreció LAN: observar en vivo el primerP291 y validar acceso existente, antes de decidir una desactivación reversible de radios separada del reinicio. El siguiente recopilador debe corregir persistencia; no hay APK nueva entregada ni otra instalación ejecutada.
 
-Resultado PROP-14: ROM0.1.2 construida y entregada; VAL-02 local y copiaUSB comprobadas. En Androidactual, ajusteOFF y paqueteBluetooth inhabilitado persisten tras apagado; módulos/kernel todavía esperan. No cierraM1 ni demuestraWiFi recuperado. Switchinterno probado porusuario sinresultado; siguiente contraste OEM requiere registro en vivo.
+Resultado PROP-14: ROM0.1.2 construida y entregada; VAL-02 local y copiaUSB comprobadas. En Androidactual, ajusteOFF y paqueteBluetooth inhabilitado persisten tras apagado; módulos/kernel todavía esperan. No cierraM1 ni demuestraWiFi recuperado. Switchinterno probado porusuario sinresultado. El contraste OEM0.1.2 con registro vuelve al2%: setupBCB reconocido, entrada a BatteryStats.shutdown y ningún avance posterior observado. Resolver el cierre y verificar la preparación persistente antes de otro intento.
+
+
+Actualización root: acceso incorporado confirmado por pedido delusuario. La pilaJava prueba espera delcierre porWiFi/HAL; elZIPinterno verifica ymapafalta. Ocho particionescríticas respaldadas (102MiB); etapa sistema en curso, restauración no probada. [Opciones y riesgos para decidir](../diagnostico/primer-tv-lan-20260907-184926/OPCIONES-INSTALACION-ROOT.md). La preparación manual y elreset de emergencia todavía no se ejecutaron.
+
+
+**PROP-15 · Derivar la ROM de los originales del primerP291.** Root permite respaldar lasimágenes que síarrancan enestaunidad y conservar sukernel, DTB ygeometría. Preparar unarevisiónnueva consimplificación, WebView e inicio propios yBluetooth excluido. ElWiFioriginal fallaba: conservar elperfil no acredita repararlo. Resolver firmacompatible, preparación delpaquete yrestauración antes deampliarpruebas. [Evidencia y alternativas](../diagnostico/primer-tv-lan-20260907-184926/RECOVERY-ORIGINAL.md). Propuesta no implementada;0.1.2 queda conservadapara análisis, no es elpróximo intento autorizadoautomáticamente.
+
+
+Respaldo final de esta revisión:12particiones seleccionadas y2538MiB verificados, incluidas las cinco que escribiría laROM. VAL-06 no se marca concluida: la instalación/restauración física siguen sinensayo yno hay snapshotcompleto deuserdata/cache. Elrecibo está en [RESPALDO](../diagnostico/primer-tv-lan-20260907-184926/RESPALDO-resumen-saneado.json).
