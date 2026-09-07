@@ -1,0 +1,29 @@
+{
+  "url": "https://github.com/tablerosapp-ctrl/mxqpro4k",
+  "owner": "tablerosapp-ctrl",
+  "repo": "mxqpro4k",
+  "created_repository_id": 1360460109,
+  "verified_at": "2026-09-07T16:46:41.767000+00:00",
+  "remote_head": "ceaf4918eb1abe1ac6f10db76e510c00b333c1a7",
+  "anonymous_public_verified": true,
+  "visibility": "public",
+  "branch": "main",
+  "scope": "Primera publicación verificada. Este recibo se incorpora en un commit posterior; no representa el HEAD de todas las actualizaciones futuras.",
+  "audit": {
+    "checked_at": "2026-09-07T16:46:31.890181+00:00",
+    "history_blobs_checked": 316,
+    "scope": "Todos los blobs alcanzables desde main en el espejo público",
+    "private_keys_tokens": 0,
+    "unclassified_emails": 0,
+    "private_ipv4": 0,
+    "mac_addresses": 0,
+    "known_original_device_identifiers": 0,
+    "forbidden_binary_or_private_paths": 0,
+    "email_like_matches_classified": {
+      "automation_identity": 11,
+      "public_aosp_certificate": 4,
+      "android_library_filename": 262
+    },
+    "notes": "Las coincidencias permitidas son identidad sintética de automatización, correo público del certificado AOSP y nombres de bibliotecas Android. Loopback se conserva por el contrato ADB local."
+  }
+}

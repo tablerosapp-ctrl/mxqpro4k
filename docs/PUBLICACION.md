@@ -1,6 +1,6 @@
 # Publicación pública y continuidad local
 
-El usuario autorizó publicar en **tablerosapp-ctrl/mxqpro4k**, con visibilidad pública. Claude Desktop se usará desde otra PC y otra cuenta; no se comparten credenciales.
+El [repositorio tablerosapp-ctrl/mxqpro4k](https://github.com/tablerosapp-ctrl/mxqpro4k) fue creado y publicado con visibilidad pública el 7/9/2026. Se verificaron la lectura anónima y el SHA remoto. [Recibo de la primera publicación](evidencia/publicacion-github.json). Claude Desktop se usará desde otra PC y otra cuenta; no se comparten credenciales.
 
 ## Qué se publica
 
@@ -34,4 +34,4 @@ La comprobación local de documentación incluye binarios y herramientas present
 
 ## Auditoría ampliada antes de publicar
 
-La primera solicitud de publicación fue rechazada automáticamente porque la auditoría inicial agrupaba coincidencias de correo e identificadores sin explicar cada clase. No llegó a crear ni subir el repositorio. Se amplió la comprobación de todos los blobs del espejo: rechaza claves/tokens, correos sin clasificar, IPv4 privadas, MAC, identificadores originales conocidos y rutas de archivos privados/binarios. Las coincidencias permitidas de correo son únicamente la identidad sintética de automatización, el correo público del certificado AOSP y nombres de interfaces/bibliotecas Android con @versión en sus dos inventarios. El reporte completo de la revisión queda en .publicacion/auditoria-publica.json.
+La primera solicitud de publicación fue rechazada automáticamente porque la auditoría inicial agrupaba coincidencias de correo e identificadores sin explicar cada clase. Ese intento no creó ni subió el repositorio. Se amplió la comprobación de todos los blobs del espejo: rechaza claves/tokens, correos sin clasificar, IPv4 privadas, MAC, identificadores originales conocidos y rutas de archivos privados/binarios. Las coincidencias permitidas de correo son únicamente la identidad sintética de automatización, el correo público del certificado AOSP y nombres de interfaces/bibliotecas Android con @versión en sus dos inventarios. La revisión ampliada pasó y el reintento publicó correctamente. El último reporte completo queda en .publicacion/auditoria-publica.json; el recibo público conserva la auditoría de la primera publicación.

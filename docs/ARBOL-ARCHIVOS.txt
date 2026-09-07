@@ -104,7 +104,8 @@ mxqpro4k/
 │   │   ├── git-inicial.json
 │   │   ├── limpieza-plan.json
 │   │   ├── limpieza-resultado.json
-│   │   └── mapa-ui.json
+│   │   ├── mapa-ui.json
+│   │   └── publicacion-github.json
 │   ├── herramientas/
 │   │   ├── __pycache__/
 │   │   │   └── publicar-github.cpython-312.pyc

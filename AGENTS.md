@@ -27,7 +27,7 @@ Leer primero [README](README.md), [estado](docs/ESTADO.md), [especificación](do
 - La ruta OEM solicita recovery INTERNO; no afirmar que carga recovery.img USB. Cortar/restaurar corriente solo podría continuar si ZIP/mapa/BCB/cargador/recovery estuvieran listos, condiciones no acreditadas. No ordenar ciclos de alimentación suponiendo éxito. Capturas/firmas no sustituyen respaldo previo del instalador.
 - Las fuentes, APK y pruebas 0.5/0.6 se conservan por versión. No repetir captura 0.5 ni captura general 0.6: ya se obtuvo lo necesario. Recibo 0.6 preparacion-usb/evidencia-06-estado.json permanece histórico.
 
-- Git local iniciado en main. Fuentes, docs y resúmenes saneados se versionan; claves/binarios/herramientas/capturas crudas quedan locales. Autoría de automatización Codex (registro local), codex@local.invalid, solo configlocal. GitHub no creado ni publicado. Revisar docs/GIT.md y git status antes de continuar.
+- Git local en main. Fuentes, docs y resúmenes saneados se versionan; claves/binarios/herramientas/capturas crudas quedan locales. Autoría de automatización Codex (registro local), codex@local.invalid, solo configlocal. GitHub público publicado en https://github.com/tablerosapp-ctrl/mxqpro4k; lectura anónima y SHA remoto comprobados el 7/9/2026. Recibo: docs/evidencia/publicacion-github.json. Revisar docs/GIT.md y git status antes de continuar.
 
 ## Resultado nuevo que prevalece
 

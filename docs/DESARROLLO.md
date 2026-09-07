@@ -118,6 +118,6 @@ La lectura completa del ZIP puede tardar hasta cinco minutos. El script compara 
 
 Los ensayos usan el protocolo ADB simulado y mksh real. Las utilidades Android y la apertura del menú se sustituyen por archivos/comandos locales; el fixture ROM usa tamaño/digest sintéticos y comprueba por separado las constantes de producción. No son una prueba física de Android. El corte anterior dejó la APK compilada sin recibo de tests. Al retomarla se corrigieron tres detalles del entorno de pruebas de Windows: salida Java UTF-8, marcador fixture con LF y corrupción de archivos usando Python porque el dd externo no había modificado el fixture. Se conservan esos fallos en logs locales; la APK compilada no cambió.
 
-Fuentes/prueba/artefacto deben coincidir por SHA antes de copiar. Los preparadores son específicos de cada versión; no ejecutar toda la cadena para una actualización documental. La aceptación física del menú 0.7 y la instalación siguen pendientes.
+Fuentes/prueba/artefacto deben coincidir por SHA antes de copiar. Los preparadores son específicos de cada versión; no ejecutar toda la cadena para una actualización documental. El menú 0.7 ya fue observado; Update con el ZIP real quedó al 2 %. Recovery e instalación siguen pendientes.
 
 Entrega 0.7 concluida con [recibo propio](../preparacion-usb/entrada-oem-07-estado.json), 7/9 a las 12:34 ART. APK y guía leídas tras copiar; 12 casos ADB y 23 escenarios mksh aprobados. No se recompiló ni se volvió a firmar la ROM.

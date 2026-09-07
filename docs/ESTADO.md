@@ -62,7 +62,7 @@ Chrome138 es el techo oficial de esta base Android9. El proveedor WebView efecti
 
 ## Historial
 
-Git local en `main`, con fuentes, documentación y evidencia revisada. Binarios, claves e informes crudos permanecen locales. GitHub no está configurado ni publicado. [Flujo Git](GIT.md).
+Git local en `main`, con fuentes, documentación y evidencia revisada. Binarios, claves e informes crudos permanecen locales. El [repositorio público](https://github.com/tablerosapp-ctrl/mxqpro4k) ya está publicado con historia saneada, SHA remoto y lectura anónima verificados. [Recibo de publicación](evidencia/publicacion-github.json) · [Flujo Git](GIT.md).
 
 La APK0.7 no guarda un registro posterior a Update. No afirmar que habrá un nuevo reporte de este atasco en el pendrive sin leerlo. Las fotos actuales son la evidencia del intento; el pstore anterior corresponde a otra solicitud.
 

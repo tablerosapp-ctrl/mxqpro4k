@@ -2,7 +2,7 @@
 
 El usuario pidió publicar primero documentación e historial y después contrastar dos hipótesis en paralelo. Fable 5.1 se usará desde Claude Desktop en otra PC y con otra cuenta GitHub. Esta sesión no puede invocarlo directamente ni atribuirle resultados antes de recibirlos.
 
-Repositorio público previsto: **https://github.com/tablerosapp-ctrl/mxqpro4k**. El repositorio público permite lectura sin invitación. Para escribir desde otra cuenta se pueden usar issues o un fork con pull request; no se conceden permisos de administración por este pedido.
+Repositorio público verificado: **[tablerosapp-ctrl/mxqpro4k](https://github.com/tablerosapp-ctrl/mxqpro4k)**. Permite lectura sin invitación. Para escribir desde otra cuenta se pueden usar issues o un fork con pull request; no se conceden permisos de administración por este pedido. [Recibo de publicación](evidencia/publicacion-github.json).
 
 ## Punto de partida compartido
 

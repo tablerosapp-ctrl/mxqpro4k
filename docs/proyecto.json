@@ -898,6 +898,7 @@
   "public_repository": {
     "url": "https://github.com/tablerosapp-ctrl/mxqpro4k",
     "visibility_requested": "public",
-    "status": "preparing"
+    "status": "published",
+    "verification": "docs/evidencia/publicacion-github.json"
   }
 }

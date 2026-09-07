@@ -50,7 +50,7 @@ Estos comandos no publican nada. No usar `git add -f` para suplir un archivo exc
 
 ## Paso posterior a GitHub
 
-El usuario definió repositorio público tablerosapp-ctrl/mxqpro4k. La publicación se prepara con un espejo saneado; [PUBLICACION](PUBLICACION.md) reemplaza el procedimiento antiguo de push directo desde el Git operativo. Preparar Git local no crea un repositorio en GitHub ni publica sus archivos. Cuando se elija el destino, revisar el índice y la historia, comprobar que no hay datos privados ni binarios excluidos, agregar el remoto correcto y publicar la rama elegida. Autenticarse mediante el mecanismo de Git/GitHub disponible en la PC, sin guardar tokens en el proyecto ni en la URL del remoto.
+El [repositorio público tablerosapp-ctrl/mxqpro4k](https://github.com/tablerosapp-ctrl/mxqpro4k) está publicado. Se utiliza un espejo saneado; [PUBLICACION](PUBLICACION.md) reemplaza el procedimiento antiguo de push directo desde el Git operativo. Para nuevas versiones, revisar índice e historia, crear el commit local y preparar/publicar el espejo con el script documentado. El remoto pertenece únicamente al espejo. La autenticación usa el gestor de credenciales de la PC, sin guardar tokens en el proyecto ni en la URL.
 
 La política de distribución de imágenes, APK de terceros y ROM debe decidirse antes de publicar binarios como releases. Git conserva sus manifiestos; no se ha configurado Git LFS, CI, publicación de releases ni actualización automática por el mero hecho de preparar este repositorio.
 
@@ -70,8 +70,12 @@ Se conserva0.5 íntegra y se agrega0.6 en un directorio propio. El cambio docume
 
 ## Captura completa y entrada OEM 0.7
 
-Se incorporan la captura 0.6 saneada, la auditoría de firma contra el certificado real P291, el análisis del APK OEM y la entrada 0.7. Sus fuentes, pruebas y recibo de lectura USB identifican el entregable. El menú OEM no es un método nuevo: antes se había usado con un ZIP vacío; ahora se prepara su primer intento con la ROM completa. El historial sigue distinguiendo firma válida, apertura de menú e instalación física pendiente. GitHub permanece sin configurar.
+En ese hito se incorporaron la captura 0.6 saneada, la auditoría de firma contra el certificado real P291, el análisis del APK OEM y la entrada 0.7. Sus fuentes, pruebas y recibo de lectura USB identifican el entregable. Después, el intento con la ROM completa quedó detenido al 2 %. El historial distingue firma válida, apertura de menú e instalación física pendiente. GitHub todavía no estaba configurado en ese hito.
 
 ## Preparación pública del 7/9/2026
 
 Se revisaron todos los blobs de la historia local. No se encontraron claves privadas ni tokens de alta confianza; sí identificadores de la unidad USB, de la PC y el serial del dossier. Se conserva la historia original y se exporta una secuencia equivalente anonimizando esos datos en todas sus versiones. El proceso, sus límites y la integración con otra cuenta se documentan en [PUBLICACION](PUBLICACION.md); las dos revisiones en [COLABORACION](COLABORACION.md). No se publican binarios ni fotos crudas.
+
+## Publicación completada el 7/9/2026
+
+Se creó el repositorio público en la cuenta autorizada, se publicó main sin forzar el historial y se verificó su acceso anónimo. El [recibo](evidencia/publicacion-github.json) identifica el primer commit remoto comprobado y su auditoría. Los commits posteriores de documentación quedan visibles en la historia; el recibo no pretende contener el SHA del mismo commit que lo incorpora. La guía para Claude y ambas hipótesis están incluidas; la revisión externa sigue pendiente.
