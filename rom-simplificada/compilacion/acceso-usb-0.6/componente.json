@@ -1,0 +1,10 @@
+{
+  "component": "acceso-usb",
+  "version": "0.6",
+  "path": "rom-simplificada/compilacion/acceso-usb-0.6/acceso-usb.apk",
+  "bytes": 41363,
+  "sha256": "7664b019051ed4e042a64e4e987501bbf3823224a839793a5811545991c1acd6",
+  "signer_sha256": "d2136c0e519d477d2be34b55590d9e548137682f9c2573f330a0a6e91833b613",
+  "purpose": "diagnostico_sin_reinicio",
+  "tv_tested": false
+}

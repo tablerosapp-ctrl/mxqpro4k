@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "fecha_analisis": "2026-09-07",
+  "id_evidencia": "primer-tv-evidencia-20260907-000948",
+  "alcance": "Resumen publicable de evidencia parcial real de Acceso USB 0.5 en el primer P291",
+  "privacidad": {
+    "incluye_reportes_crudos": false,
+    "incluye_ip_mac_email_serial_o_boot_id_crudo": false,
+    "originales_y_recibos": "Conservados localmente como evidencia privada"
+  },
+  "capturas": [
+    {
+      "carpeta": "TVBASE-evidencia-d5cec3a75764497890668bd1e2f085dd",
+      "completa": false,
+      "uptime_segundos": 1367.49,
+      "informes_texto_hash_coincidente": 6
+    },
+    {
+      "carpeta": "TVBASE-evidencia-e315690ee54f4639abe422fbd9cc46b4",
+      "completa": false,
+      "uptime_segundos": 1481.36,
+      "informes_texto_hash_coincidente": 6
+    }
+  ],
+  "mismo_arranque_entre_capturas": true,
+  "diferencia_uptime_segundos": 113.87,
+  "reloj_tv_confiable": false,
+  "perfil_observado": {
+    "destino": "PRIMER TV",
+    "dt": "gxlx2_p291_1g",
+    "android_api": 28,
+    "kernel": "4.9.113",
+    "android_original_conservado": true,
+    "sys_boot_completed": "1",
+    "motivo_04": "recovery",
+    "motivo_05": "reboot,update",
+    "propiedades_motivo_coincidentes": [
+      "ro.boot.bootreason",
+      "sys.boot.reason",
+      "persist.sys.boot.reason"
+    ],
+    "filas_emmc_comparadas": 24,
+    "diferencias_filas_emmc_frente_04": 0,
+    "recovery_bytes": 25165824,
+    "contenido_recovery_obtenido": false,
+    "comando_recovery_legible": false
+  },
+  "integridad": {
+    "hashes_adquisicion_pc_registrados": true,
+    "referencia_local_privada": "verificacion-local-privada.json",
+    "textos_con_hash_coincidente_en_cada_captura": [
+      "arranque.txt",
+      "pstore.txt",
+      "resolucion.txt",
+      "paquetes.txt",
+      "actualizador.txt",
+      "pm-path.txt"
+    ],
+    "verificacion_binarios_en_tv_acreditada": false,
+    "defecto_observado": "Campos SHA del origen y la copia vacios; comprobantes binarios invalidos",
+    "binarios_afectados_por_captura": [
+      "pstore-1.bin",
+      "actualizador-2.apk",
+      "actualizador-3.apk",
+      "actualizador-4.apk"
+    ],
+    "causa_defecto_sha": {
+      "estado": "confirmada_en_reproduccion_con_mksh_R56_real_en_PC",
+      "documento_auditoria": "rom-simplificada/instalador/MKSH-HALLAZGO-0.5.md",
+      "casos_reales_regresion": 6,
+      "alias_android9": "hash='\\builtin alias -t'",
+      "colision": "El alias toma precedencia sobre la funcion del recopilador llamada hash",
+      "resultado": "La funcion de calculo y validacion no se ejecuta; la llamada devuelve salida vacia y codigo 0",
+      "falso_positivo": "Tres cadenas SHA vacias comparan iguales",
+      "tests_bash_previos_reproducian_causa": false,
+      "implica_dano_del_usb": false
+    },
+    "hash_pc_no_sustituye_verificacion_origen_tv": true
+  },
+  "pstore": {
+    "origen": "/sys/fs/pstore/console-ramoops-0",
+    "archivo": "pstore-1.bin",
+    "bytes": 32756,
+    "sha256_pc": "708cae6320f0de63ab764269003d3bfb1a52a45815cc2d6da85849210f4331b8",
+    "identico_entre_capturas": true,
+    "bytes_nulos": 0,
+    "bytes_no_ascii": 0,
+    "registro_distinto_del_fragmento_corrupto_04": true,
+    "tiempo_kernel_primero_segundos": 13397.710243,
+    "tiempo_kernel_ultimo_segundos": 13922.076499,
+    "marca_watchdog": {
+      "tiempo_segundos": 13404.839586,
+      "mensaje": "reboot_notify: disable watchdog (event = 1)",
+      "evento_en_fuente_referencia": "SYS_RESTART / SYS_DOWN"
+    },
+    "actividad_kernel_posterior_a_marca_segundos": 517.236913,
+    "observaciones": [
+      "Cierre de procesos y recursos de video",
+      "Un proceso UID0 y otro UID1010 no terminan en el intento registrado de cierre",
+      "HDMI avmute antes del aviso de reinicio",
+      "Timeouts SDIO CMD53 continuan despues del aviso",
+      "Una desconexion USB no identifica por si sola su dispositivo ni su causa"
+    ],
+    "no_observado_en_contenido_conservado": [
+      "Restarting system",
+      "Nuevo inicio de kernel",
+      "Ejecucion de recovery",
+      "Kernel panic o traza de bloqueo"
+    ],
+    "otros_registros_ramoops": "ftrace y dmesg ausentes o no accesibles"
+  },
+  "interpretacion": {
+    "clasificacion": "inferencia_apoyada_por_evidencia_y_codigo_de_referencia",
+    "hipotesis_favorecida": "Atasco durante la preparacion o cierre del sistema antes del reinicio fisico",
+    "funcion_bloqueada_identificada": false,
+    "lectura_usb_por_bootloader_acreditada": false,
+    "sdio_causa_demostrada": false,
+    "sdio_y_bluetooth_con_errores_en_android_actual_funcionando": true,
+    "codigo_referencia_no_es_extraccion_del_kernel_instalado": true
+  },
+  "actualizador_p291": {
+    "paquete": "com.droidlogic.otaupgrade",
+    "ruta": "/product/app/OTAUpgrade/OTAUpgrade.apk",
+    "version_code": 2,
+    "version_name": "2.0201411271418",
+    "uid": 1000,
+    "componente_sistema": true,
+    "permisos_concedidos": [
+      "android.permission.REBOOT",
+      "android.permission.RECOVERY"
+    ],
+    "binario_util_copiado": false,
+    "certificados_ota_obtenidos": false,
+    "configuracion_posterior_obtenida": false,
+    "mecanismo_instalacion_analizado_en_binario_de_esta_unidad": false
+  },
+  "fallo_recoleccion_05": {
+    "estado": "observado_y_explicado_por_el_limite_de_la_secuencia",
+    "etapa": "Copia de APK y certificados",
+    "actividad_generica_resuelta_a": "com.google.android.gms",
+    "limite_entradas_apk": 4,
+    "limite_bytes_por_apk": 33554432,
+    "orden": [
+      {
+        "posicion": 1,
+        "tipo": "Base de Google Play Services",
+        "bytes": 73834539,
+        "copiado": false,
+        "motivo": "Excede limite individual, pero consume una posicion"
+      },
+      {
+        "posiciones": [2, 3, 4],
+        "tipo": "Tres APK divididos de Google Play Services",
+        "copiados": true,
+        "son_el_actualizador_local_buscado": false
+      },
+      {
+        "posicion": 5,
+        "tipo": "OTAUpgrade del P291",
+        "copiado": false,
+        "motivo": "La secuencia aborta al exceder cuatro entradas antes de copiarlo"
+      }
+    ],
+    "efectos": [
+      "No se copia OTAUpgrade.apk",
+      "No se alcanza otacerts.zip",
+      "No se alcanza recopilacion de configuracion posterior",
+      "No se completa la captura"
+    ],
+    "no_es_denegacion_del_tv_contra_otaupgrade": true
+  },
+  "siguiente_avance_al_redactar": {
+    "version": "0.6",
+    "estado": "complemento_en_construccion",
+    "entregado": false,
+    "probado_en_tv": false,
+    "objetivo": "Obtener APK especifico del actualizador P291, certificados y configuracion faltantes; corregir verificacion de binarios",
+    "solucion_reinicio_acreditada": false
+  },
+  "instalacion_rom_confirmada": false,
+  "respaldo_original_tv_confirmado": false,
+  "fuentes_primarias": [
+    "https://source.android.com/docs/core/architecture/bootloader/boot-reason",
+    "https://github.com/khadas/linux/blob/khadas-vims-4.9.y/drivers/amlogic/watchdog/meson_wdt.c",
+    "https://github.com/khadas/linux/blob/khadas-vims-4.9.y/include/linux/reboot.h",
+    "https://github.com/khadas/linux/blob/khadas-vims-4.9.y/kernel/reboot.c",
+    "https://github.com/aosp-mirror/platform_frameworks_base/blob/android-9.0.0_r1/core/java/android/os/RecoverySystem.java"
+  ]
+}

@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "title": "TV Base",
-  "snapshot": "2026-09-07T00:00:24.4399091-03:00",
-  "state": "Entrada 0.4 sin señal · evidencia 0.5 lista en USB",
+  "snapshot": "2026-09-07T00:22:08.5323713-03:00",
+  "state": "Captura 0.5 analizada · complemento 0.6 listo en USB",
   "installed": false,
   "original_tv_backup_confirmed": false,
   "source_of_truth": {
@@ -10,7 +10,7 @@
     "state": "docs/ESTADO.md",
     "decisions": "docs/DECISIONES.md",
     "roadmap": "docs/ROADMAP.md",
-    "delivery_receipt": "preparacion-usb/evidencia-05-estado.json"
+    "delivery_receipt": "preparacion-usb/evidencia-06-estado.json"
   },
   "components": [
     {
@@ -23,7 +23,9 @@
         "diagnostico/primer-tv-20260906-actualizacion-local/HALLAZGOS.md",
         "diagnostico/android-20260905-142854-a8286d9a/PERFIL-SEGUNDO-TV.md",
         "diagnostico/primer-tv-reportes-20260906-233826/HALLAZGOS.md",
-        "diagnostico/primer-tv-reportes-20260906-233826/resumen-saneado.json"
+        "diagnostico/primer-tv-reportes-20260906-233826/resumen-saneado.json",
+        "diagnostico/primer-tv-evidencia-20260907-000948/HALLAZGOS.md",
+        "diagnostico/primer-tv-evidencia-20260907-000948/resumen-saneado.json"
       ],
       "x": 0,
       "y": 0,
@@ -172,22 +174,23 @@
     },
     {
       "id": "C-ENTRY",
-      "label": "Evidencia USB 0.5",
+      "label": "Complemento USB 0.6",
       "state": "verificado_local",
-      "description": "Recoge datos del arranque, pstore completo, actualizador P291 y certificados públicos. Sin reinicio. Pruebas locales; captura física pendiente.",
+      "description": "Captura solo certificados OTA, APK OTAUpgrade P291 y configuración faltante. SHA estricto y autocontrol, mksh real. Sin reinicio ni GMS; prueba física pendiente.",
       "files": [
-        "rom-simplificada/componentes/acceso-usb/Acceso.java",
-        "rom-simplificada/componentes/acceso-usb/AdbLocal.java",
-        "rom-simplificada/componentes/acceso-usb/Evidencia.java",
-        "rom-simplificada/componentes/acceso-usb/EvidenciaScripts.java",
-        "rom-simplificada/componentes/acceso-usb/generar-scripts.py",
-        "rom-simplificada/componentes/acceso-usb/AndroidManifest.xml",
-        "rom-simplificada/compilacion/acceso-usb-0.5/acceso-usb.apk",
-        "rom-simplificada/compilacion/acceso-usb-0.5/componente.json",
-        "rom-simplificada/instalador/compilar-evidencia05.py",
-        "rom-simplificada/instalador/test_evidencia05.py",
-        "rom-simplificada/instalador/EvidenciaHarness.java",
-        "rom-simplificada/instalador/EVIDENCIA-TESTS-0.5.json"
+        "rom-simplificada/componentes/acceso-usb-0.6/Acceso.java",
+        "rom-simplificada/componentes/acceso-usb-0.6/AdbLocal.java",
+        "rom-simplificada/componentes/acceso-usb-0.6/Evidencia.java",
+        "rom-simplificada/componentes/acceso-usb-0.6/EvidenciaScripts.java",
+        "rom-simplificada/componentes/acceso-usb-0.6/generar-scripts.py",
+        "rom-simplificada/componentes/acceso-usb-0.6/AndroidManifest.xml",
+        "rom-simplificada/compilacion/acceso-usb-0.6/acceso-usb.apk",
+        "rom-simplificada/compilacion/acceso-usb-0.6/componente.json",
+        "rom-simplificada/instalador/compilar-evidencia06.py",
+        "rom-simplificada/instalador/test_evidencia06.py",
+        "rom-simplificada/instalador/EvidenciaHarness06.java",
+        "rom-simplificada/instalador/EVIDENCIA-TESTS-0.6.json",
+        "rom-simplificada/instalador/MKSH-HALLAZGO-0.5.md"
       ],
       "x": 2,
       "y": 2,
@@ -199,11 +202,11 @@
       "id": "C-USB",
       "label": "Kingston preparado",
       "state": "verificado_local",
-      "description": "Copia por archivos con identidad estable. ROM y recovery conservados, APK0.5 sin reinicio. Recibo distingue copia PC y captura física.",
+      "description": "Copia por archivos con identidad estable. ROM/recovery y capturas0.5 preservados. APK0.6 complementa lo faltante sin reiniciar.",
       "files": [
-        "preparacion-usb/preparar-evidencia-05.ps1",
-        "preparacion-usb/evidencia-05-estado.json",
-        "rom-simplificada/instalador/LEEME-EVIDENCIA-0.5.txt",
+        "preparacion-usb/preparar-evidencia-06.ps1",
+        "preparacion-usb/evidencia-06-estado.json",
+        "rom-simplificada/instalador/LEEME-EVIDENCIA-0.6.txt",
         "rom-simplificada/INSTALACION-USB.md"
       ],
       "x": 3,
@@ -214,13 +217,13 @@
     },
     {
       "id": "C-TV",
-      "label": "P291: entrada sin señal",
+      "label": "P291: cierre atascado",
       "state": "observado_tv",
-      "description": "0.3 y 0.4 no mostraron recovery. Dos informes anteriores al reinicio confirman partición recovery24MiB; contenido no legible como shell. Falta evidencia del último intento.",
+      "description": "Dos capturas0.5 parciales analizadas: pstore conserva517s de actividad tras aviso de reinicio. Sugiere atasco antes de reset, función desconocida. OTAUpgrade identificado, binario pendiente.",
       "files": [
         "docs/ESTADO.md",
-        "diagnostico/primer-tv-reportes-20260906-233826/HALLAZGOS.md",
-        "diagnostico/primer-tv-reportes-20260906-233826/resumen-saneado.json"
+        "diagnostico/primer-tv-evidencia-20260907-000948/HALLAZGOS.md",
+        "diagnostico/primer-tv-evidencia-20260907-000948/resumen-saneado.json"
       ],
       "x": 4,
       "y": 1,
@@ -308,7 +311,7 @@
     {
       "source": "C-USB",
       "target": "C-TV",
-      "relation": "recopilar evidencia"
+      "relation": "completar evidencia"
     },
     {
       "source": "C-TV",
@@ -459,7 +462,7 @@
         "C-REC",
         "C-TV"
       ],
-      "exit": "VAL-05 pendiente: 0.4 quedó sin señal. Analizar evidencia posterior y actualizador P291; demostrar recovery visible y aceptación del ZIP.",
+      "exit": "VAL-05 pendiente: reinicio atascado según pstore. Analizar APK OTAUpgrade y configuración real; demostrar entrada y aceptación del ZIP.",
       "x": 1,
       "y": 0
     },
@@ -665,6 +668,22 @@
         "C-PERFIL",
         "C-TV"
       ]
+    },
+    {
+      "id": "ADR-15",
+      "file": "docs/DECISIONES.md",
+      "components": [
+        "C-ENTRY",
+        "C-TV"
+      ]
+    },
+    {
+      "id": "ADR-16",
+      "file": "docs/DECISIONES.md",
+      "components": [
+        "C-ENTRY",
+        "C-TV"
+      ]
     }
   ],
   "validations": [
@@ -764,10 +783,10 @@
       "sha256": "e7279a7901bc0b513ccc5d3a66a1b5bf483908a4cffd30f34f5d8d463fc95205"
     },
     {
-      "name": "AccesoUSB-0.5.apk",
-      "path": "rom-simplificada/compilacion/acceso-usb-0.5/acceso-usb.apk",
-      "bytes": 45459,
-      "sha256": "7e251f9d202c6ac9407734f2ca4c19077a8b02994f3a115205fdc10cf21b0874"
+      "name": "AccesoUSB-0.6.apk",
+      "path": "rom-simplificada/compilacion/acceso-usb-0.6/acceso-usb.apk",
+      "bytes": 41363,
+      "sha256": "7664b019051ed4e042a64e4e987501bbf3823224a839793a5811545991c1acd6"
     },
     {
       "name": "recovery.img",
@@ -777,9 +796,9 @@
     },
     {
       "name": "LEEME-AHORA.txt",
-      "path": "rom-simplificada/instalador/LEEME-EVIDENCIA-0.5.txt",
-      "bytes": 1314,
-      "sha256": "b1058f4a28dd99dcec33bcfcf4ad37c3bab8f856baef8ded2a824b93e8e20370"
+      "path": "rom-simplificada/instalador/LEEME-EVIDENCIA-0.6.txt",
+      "bytes": 1216,
+      "sha256": "8939b00748b608a0ab2f822bc39fd6c348f1ae1eb1158e9be51715fd0fdfe897"
     }
   ],
   "protected_paths": [
@@ -858,7 +877,7 @@
       ]
     }
   ],
-  "delivery_label": "ROM 0.1.1 · Evidencia USB 0.5",
-  "date_label": "Entrega verificada el 7 de septiembre de 2026, 00:00 ART",
-  "next_step_label": "Instalar AccesoUSB-0.5.apk, guardar evidencia sin reiniciar y devolver el USB a la PC."
+  "delivery_label": "ROM 0.1.1 · Complemento USB 0.6",
+  "date_label": "Entrega verificada el 7 de septiembre de 2026, 00:22 ART",
+  "next_step_label": "Instalar AccesoUSB-0.6.apk, guardar los archivos que faltan sin reiniciar y devolver el USB a la PC."
 }

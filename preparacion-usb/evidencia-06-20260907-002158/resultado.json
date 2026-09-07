@@ -1,0 +1,26 @@
+{
+  "estado": "verificado",
+  "fecha": "2026-09-07T00:22:08.5323713-03:00",
+  "informe": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\preparacion-usb\\evidencia-06-20260907-002158",
+  "tv_flasheado": false,
+  "reboot_requested": false,
+  "files": [
+    {
+      "archivo": "AccesoUSB-0.6.apk",
+      "bytes": 41363,
+      "sha256": "7664b019051ed4e042a64e4e987501bbf3823224a839793a5811545991c1acd6",
+      "lectura_verificada": true
+    },
+    {
+      "archivo": "LEEME-AHORA.txt",
+      "bytes": 1216,
+      "sha256": "8939b00748b608a0ab2f822bc39fd6c348f1ae1eb1158e9be51715fd0fdfe897",
+      "lectura_verificada": true
+    }
+  ],
+  "usb_id": "USBSTOR\\DISK&VEN_KINGSTON&PROD_DATATRAVELER_3.0&REV_\\KINGSTON_SERIAL_LOCAL&0:PC_LOCAL",
+  "drive_letter": "D",
+  "pruebas_sha256": "bb03c2407b47aa269c2330cec54423a4914f2625b695960b09ead5b6aefe74cd",
+  "release_sha256": "7664b019051ed4e042a64e4e987501bbf3823224a839793a5811545991c1acd6",
+  "detalle": "Acceso USB0.6 de recopilacion sin reinicio copiado y leido. ROM/recovery conservados; informes originales intactos."
+}

@@ -1,0 +1,276 @@
+{
+  "state": "passed",
+  "version": "0.6",
+  "apk_sha256": "7664b019051ed4e042a64e4e987501bbf3823224a839793a5811545991c1acd6",
+  "tested_source_sha256": {
+    "rom-simplificada/componentes/acceso-usb-0.6/Acceso.java": "825f015352b868b9a9276240617bd127d932e653ae6b6c3ba1794f026ebd65bd",
+    "rom-simplificada/componentes/acceso-usb-0.6/AdbLocal.java": "d9635611fd4d0e32e9f77a0201e99f2e2d8950b899a0e77d600ff71142d552f7",
+    "rom-simplificada/componentes/acceso-usb-0.6/Evidencia.java": "bb7b8ef23677e764ef291a2e0e17b99ff94eac00b0bff87ecf0079178d1f8443",
+    "rom-simplificada/componentes/acceso-usb-0.6/EvidenciaScripts.java": "d570bf9bd0bbc650176c030687b298551e2e73d6bf01ad14dab36eab8089fbdc"
+  },
+  "scope": "PC only; no TV commands executed",
+  "adb": [
+    {
+      "case": "shell",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 0
+    },
+    {
+      "case": "auth",
+      "passed": true,
+      "observed_services": [],
+      "exit": 1
+    },
+    {
+      "case": "bad_checksum",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 1
+    },
+    {
+      "case": "early_eof",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 1
+    },
+    {
+      "case": "refused",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 1
+    },
+    {
+      "case": "zero_close",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 0
+    },
+    {
+      "case": "unknown_channel",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 1
+    },
+    {
+      "case": "duplicate_ready",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 0
+    },
+    {
+      "case": "response_limit",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 1
+    },
+    {
+      "case": "flow",
+      "passed": true,
+      "observed_services": [
+        "profile",
+        "profile",
+        "profile",
+        "evidence-stage-0",
+        "evidence-stage-1",
+        "evidence-stage-2",
+        "evidence-stage-3",
+        "evidence-stage-4"
+      ],
+      "exit": 0
+    },
+    {
+      "case": "final_failure",
+      "passed": true,
+      "observed_services": [
+        "profile",
+        "profile",
+        "profile",
+        "evidence-stage-0",
+        "evidence-stage-1",
+        "evidence-stage-2",
+        "evidence-stage-3",
+        "evidence-stage-4"
+      ],
+      "exit": 1
+    },
+    {
+      "case": "deadline",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 1
+    }
+  ],
+  "guard_result": "GUARDS_OK: profile x3; stages failure x4; wrong destination; final mandatory; no retry; path injection x3; packet sizes x5",
+  "external_host_rejected": true,
+  "shell_syntax": [
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.6/scripts/etapa-0.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.6/scripts/etapa-1.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.6/scripts/etapa-2.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.6/scripts/etapa-3.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.6/scripts/etapa-4.sh",
+      "passed": true
+    }
+  ],
+  "mksh_syntax": [
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.6/scripts/etapa-0.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.6/scripts/etapa-1.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.6/scripts/etapa-2.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.6/scripts/etapa-3.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb-0.6/scripts/etapa-4.sh",
+      "passed": true
+    }
+  ],
+  "mksh_default_hash_alias": "hash='\\\\builtin alias -t'",
+  "shell_fixtures": [
+    {
+      "case": "real_mksh_binary_with_hash_alias",
+      "passed": true,
+      "exit": 0
+    },
+    {
+      "case": "required_size_limit",
+      "passed": true,
+      "exit": 9
+    },
+    {
+      "case": "no_overwrite",
+      "passed": true,
+      "exit": 9
+    },
+    {
+      "case": "sync_failure",
+      "passed": true,
+      "exit": 9
+    },
+    {
+      "case": "raw_sha_empty_success",
+      "passed": true,
+      "exit": 9
+    },
+    {
+      "case": "helper_empty_success_external_guard",
+      "passed": true,
+      "exit": 9
+    },
+    {
+      "case": "raw_sha_malformed_success",
+      "passed": true,
+      "exit": 9
+    },
+    {
+      "case": "helper_malformed_external_guard",
+      "passed": true,
+      "exit": 9
+    },
+    {
+      "case": "blank_sidecar_rejected",
+      "passed": true,
+      "exit": 9
+    },
+    {
+      "case": "incomplete_report",
+      "passed": true,
+      "exit": 9
+    },
+    {
+      "case": "selftest_wrong_sha_before_certificate",
+      "passed": true,
+      "exit": 9
+    },
+    {
+      "case": "selftest_empty_sha_before_certificate",
+      "passed": true,
+      "exit": 9
+    },
+    {
+      "case": "certificates_then_ota_no_candidate_limit",
+      "passed": true,
+      "exit": 0
+    },
+    {
+      "case": "gms_path_rejected_without_splits",
+      "passed": true,
+      "exit": 9
+    },
+    {
+      "case": "unexpected_ota_path_rejected",
+      "passed": true,
+      "exit": 9
+    },
+    {
+      "case": "mandatory_certificate_missing",
+      "passed": true,
+      "exit": 9
+    },
+    {
+      "case": "missing_required_report",
+      "passed": true,
+      "exit": 9
+    },
+    {
+      "case": "valid_sha_but_wrong_copy",
+      "passed": true,
+      "exit": 9
+    },
+    {
+      "case": "final_mandatory_ota_absent",
+      "passed": true,
+      "exit": 9
+    },
+    {
+      "case": "final_all_required_valid",
+      "passed": true,
+      "exit": 0
+    }
+  ],
+  "fixture_adapters": "Real Cygwin mksh R56 and actual tvbase_* function bodies; Android toybox SHA path bound to Python SHA utility, stat to Python, sync success/failure stub. No Android execution or physical USB flush claim.",
+  "max_actual_open_bytes": 4002,
+  "total_response_limit_bytes": 65536,
+  "tv_shell_tested": false,
+  "tv_capture_tested": false
+}

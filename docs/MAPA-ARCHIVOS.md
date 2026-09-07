@@ -14,9 +14,9 @@ flowchart LR
     C_WEB["Proveedor WebView · construido"]
     C_ZIP["ZIP de instalación · verificado_local"]
     C_REC["Recovery externo · verificado_local"]
-    C_ENTRY["Evidencia USB 0.5 · verificado_local"]
+    C_ENTRY["Complemento USB 0.6 · verificado_local"]
     C_USB["Kingston preparado · verificado_local"]
-    C_TV["P291: entrada sin señal · observado_tv"]
+    C_TV["P291: cierre atascado · observado_tv"]
     C_APP["APK del producto · propuesto"]
     C_GESTION["Administración propia · propuesto"]
     C_PERFIL -->|"selecciona"| C_BASE
@@ -29,7 +29,7 @@ flowchart LR
     C_ZIP -->|"se copia"| C_USB
     C_REC -->|"se copia"| C_USB
     C_ENTRY -->|"se copia"| C_USB
-    C_USB -->|"recopilar evidencia"| C_TV
+    C_USB -->|"completar evidencia"| C_TV
     C_TV -->|"habilita validación"| C_APP
     C_APP -->|"contrato propuesto"| C_GESTION
 ```
@@ -47,6 +47,8 @@ Requisitos: REQ-02, REQ-10.
 - [diagnostico/android-20260905-142854-a8286d9a/PERFIL-SEGUNDO-TV.md](../diagnostico/android-20260905-142854-a8286d9a/PERFIL-SEGUNDO-TV.md)
 - [diagnostico/primer-tv-reportes-20260906-233826/HALLAZGOS.md](../diagnostico/primer-tv-reportes-20260906-233826/HALLAZGOS.md)
 - [diagnostico/primer-tv-reportes-20260906-233826/resumen-saneado.json](../diagnostico/primer-tv-reportes-20260906-233826/resumen-saneado.json)
+- [diagnostico/primer-tv-evidencia-20260907-000948/HALLAZGOS.md](../diagnostico/primer-tv-evidencia-20260907-000948/HALLAZGOS.md)
+- [diagnostico/primer-tv-evidencia-20260907-000948/resumen-saneado.json](../diagnostico/primer-tv-evidencia-20260907-000948/resumen-saneado.json)
 
 ### C-BASE · Android candidato
 
@@ -137,45 +139,46 @@ Requisitos: REQ-11.
 - [rom-simplificada/instalador/recovery-externo/PREPARADO.json](../rom-simplificada/instalador/recovery-externo/PREPARADO.json)
 - [rom-simplificada/instalador/gxl_p271_v1-referencia.h](../rom-simplificada/instalador/gxl_p271_v1-referencia.h)
 
-### C-ENTRY · Evidencia USB 0.5
+### C-ENTRY · Complemento USB 0.6
 
-**verificado_local**. Recoge datos del arranque, pstore completo, actualizador P291 y certificados públicos. Sin reinicio. Pruebas locales; captura física pendiente.
+**verificado_local**. Captura solo certificados OTA, APK OTAUpgrade P291 y configuración faltante. SHA estricto y autocontrol, mksh real. Sin reinicio ni GMS; prueba física pendiente.
 
 Requisitos: REQ-11.
 
-- [rom-simplificada/componentes/acceso-usb/Acceso.java](../rom-simplificada/componentes/acceso-usb/Acceso.java)
-- [rom-simplificada/componentes/acceso-usb/AdbLocal.java](../rom-simplificada/componentes/acceso-usb/AdbLocal.java)
-- [rom-simplificada/componentes/acceso-usb/Evidencia.java](../rom-simplificada/componentes/acceso-usb/Evidencia.java)
-- [rom-simplificada/componentes/acceso-usb/EvidenciaScripts.java](../rom-simplificada/componentes/acceso-usb/EvidenciaScripts.java)
-- [rom-simplificada/componentes/acceso-usb/generar-scripts.py](../rom-simplificada/componentes/acceso-usb/generar-scripts.py)
-- [rom-simplificada/componentes/acceso-usb/AndroidManifest.xml](../rom-simplificada/componentes/acceso-usb/AndroidManifest.xml)
-- [rom-simplificada/compilacion/acceso-usb-0.5/acceso-usb.apk](../rom-simplificada/compilacion/acceso-usb-0.5/acceso-usb.apk)
-- [rom-simplificada/compilacion/acceso-usb-0.5/componente.json](../rom-simplificada/compilacion/acceso-usb-0.5/componente.json)
-- [rom-simplificada/instalador/compilar-evidencia05.py](../rom-simplificada/instalador/compilar-evidencia05.py)
-- [rom-simplificada/instalador/test_evidencia05.py](../rom-simplificada/instalador/test_evidencia05.py)
-- [rom-simplificada/instalador/EvidenciaHarness.java](../rom-simplificada/instalador/EvidenciaHarness.java)
-- [rom-simplificada/instalador/EVIDENCIA-TESTS-0.5.json](../rom-simplificada/instalador/EVIDENCIA-TESTS-0.5.json)
+- [rom-simplificada/componentes/acceso-usb-0.6/Acceso.java](../rom-simplificada/componentes/acceso-usb-0.6/Acceso.java)
+- [rom-simplificada/componentes/acceso-usb-0.6/AdbLocal.java](../rom-simplificada/componentes/acceso-usb-0.6/AdbLocal.java)
+- [rom-simplificada/componentes/acceso-usb-0.6/Evidencia.java](../rom-simplificada/componentes/acceso-usb-0.6/Evidencia.java)
+- [rom-simplificada/componentes/acceso-usb-0.6/EvidenciaScripts.java](../rom-simplificada/componentes/acceso-usb-0.6/EvidenciaScripts.java)
+- [rom-simplificada/componentes/acceso-usb-0.6/generar-scripts.py](../rom-simplificada/componentes/acceso-usb-0.6/generar-scripts.py)
+- [rom-simplificada/componentes/acceso-usb-0.6/AndroidManifest.xml](../rom-simplificada/componentes/acceso-usb-0.6/AndroidManifest.xml)
+- [rom-simplificada/compilacion/acceso-usb-0.6/acceso-usb.apk](../rom-simplificada/compilacion/acceso-usb-0.6/acceso-usb.apk)
+- [rom-simplificada/compilacion/acceso-usb-0.6/componente.json](../rom-simplificada/compilacion/acceso-usb-0.6/componente.json)
+- [rom-simplificada/instalador/compilar-evidencia06.py](../rom-simplificada/instalador/compilar-evidencia06.py)
+- [rom-simplificada/instalador/test_evidencia06.py](../rom-simplificada/instalador/test_evidencia06.py)
+- [rom-simplificada/instalador/EvidenciaHarness06.java](../rom-simplificada/instalador/EvidenciaHarness06.java)
+- [rom-simplificada/instalador/EVIDENCIA-TESTS-0.6.json](../rom-simplificada/instalador/EVIDENCIA-TESTS-0.6.json)
+- [rom-simplificada/instalador/MKSH-HALLAZGO-0.5.md](../rom-simplificada/instalador/MKSH-HALLAZGO-0.5.md)
 
 ### C-USB · Kingston preparado
 
-**verificado_local**. Copia por archivos con identidad estable. ROM y recovery conservados, APK0.5 sin reinicio. Recibo distingue copia PC y captura física.
+**verificado_local**. Copia por archivos con identidad estable. ROM/recovery y capturas0.5 preservados. APK0.6 complementa lo faltante sin reiniciar.
 
 Requisitos: REQ-01.
 
-- [preparacion-usb/preparar-evidencia-05.ps1](../preparacion-usb/preparar-evidencia-05.ps1)
-- [preparacion-usb/evidencia-05-estado.json](../preparacion-usb/evidencia-05-estado.json)
-- [rom-simplificada/instalador/LEEME-EVIDENCIA-0.5.txt](../rom-simplificada/instalador/LEEME-EVIDENCIA-0.5.txt)
+- [preparacion-usb/preparar-evidencia-06.ps1](../preparacion-usb/preparar-evidencia-06.ps1)
+- [preparacion-usb/evidencia-06-estado.json](../preparacion-usb/evidencia-06-estado.json)
+- [rom-simplificada/instalador/LEEME-EVIDENCIA-0.6.txt](../rom-simplificada/instalador/LEEME-EVIDENCIA-0.6.txt)
 - [rom-simplificada/INSTALACION-USB.md](../rom-simplificada/INSTALACION-USB.md)
 
-### C-TV · P291: entrada sin señal
+### C-TV · P291: cierre atascado
 
-**observado_tv**. 0.3 y 0.4 no mostraron recovery. Dos informes anteriores al reinicio confirman partición recovery24MiB; contenido no legible como shell. Falta evidencia del último intento.
+**observado_tv**. Dos capturas0.5 parciales analizadas: pstore conserva517s de actividad tras aviso de reinicio. Sugiere atasco antes de reset, función desconocida. OTAUpgrade identificado, binario pendiente.
 
 Requisitos: .
 
 - [docs/ESTADO.md](../docs/ESTADO.md)
-- [diagnostico/primer-tv-reportes-20260906-233826/HALLAZGOS.md](../diagnostico/primer-tv-reportes-20260906-233826/HALLAZGOS.md)
-- [diagnostico/primer-tv-reportes-20260906-233826/resumen-saneado.json](../diagnostico/primer-tv-reportes-20260906-233826/resumen-saneado.json)
+- [diagnostico/primer-tv-evidencia-20260907-000948/HALLAZGOS.md](../diagnostico/primer-tv-evidencia-20260907-000948/HALLAZGOS.md)
+- [diagnostico/primer-tv-evidencia-20260907-000948/resumen-saneado.json](../diagnostico/primer-tv-evidencia-20260907-000948/resumen-saneado.json)
 
 ### C-APP · APK del producto
 
@@ -222,13 +225,13 @@ Implementación pendiente; especificación en [ESPECIFICACION](ESPECIFICACION.md
 | README.md | 1 | 0.000 |
 | actualizacion-chrome | 51 | 0.417 |
 | analisis-rom | 15 | 1.822 |
-| diagnostico | 48 | 0.005 |
+| diagnostico | 102 | 0.012 |
 | docs | 21 | 0.000 |
 | dossier-s905l2.html | 1 | 0.000 |
 | images | 1 | 1.352 |
 | platform-tools-latest-windows.zip | 1 | 0.008 |
-| preparacion-usb | 69 | 3.688 |
-| rom-simplificada | 828 | 7.080 |
-| tools | 18042 | 1.135 |
+| preparacion-usb | 74 | 3.688 |
+| rom-simplificada | 1260 | 7.083 |
+| tools | 18058 | 1.139 |
 
 El inventario excluye derivados documentales y contenido de claves; los tamaños son de archivos, no bloques físicos ocupados. Los temporales retirados se detallan en [LIMPIEZA](LIMPIEZA.md).

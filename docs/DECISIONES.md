@@ -18,6 +18,8 @@ Cada decisión identifica su alcance. Las referencias de AOSP/Amlogic explican e
 | ADR-12 | Documentación por estado, contratos, grafo y evidencia; limpieza auditada | Conservar historia sin dejar pasos retirados como instrucciones activas. No mover fuentes si los scripts dependen de sus rutas. |
 | ADR-13 | Tras fallar update0.4, recopilar sin reiniciar el actualizador real y pstore completo del P291 | Los informes previos no registran el fallo; la partición recovery existe pero no pudo leerse. No repetir otra entrada sin nueva evidencia. |
 | ADR-14 | Git local con fuente/documentación/evidencia revisada y artefactos grandes fuera | Excluir claves e informes crudos. Autoría temporal explícita del agente; GitHub aún sin destino ni publicación. |
+| ADR-15 | Recopilar directamente OTAUpgrade acreditado en este P291 y dar prioridad a sus certificados | SYSTEM_UPDATE_SETTINGS resolvió GMS y el límite4 dejó afuera OTAUpgrade. El complemento0.6 excluye esos splits y no repite datos de arranque ya adquiridos. |
+| ADR-16 | Nombres de funciones propios, SHA estricto y pruebas con mksh real | El alias hash de Android produjo valores vacíos en0.5; Bash no detectó la colisión. Validar64hex en cada resultado y un contenido conocido antes de copiar. Mantener un límite nunca justifica declarar éxito de una captura incompleta. |
 
 ## Incidentes que no deben repetirse
 
@@ -39,3 +41,5 @@ El [verificador de recovery AOSP](https://android.googlesource.com/platform/boot
 
 
 Evidencia de ADR-13: [análisis de informes0.4](../diagnostico/primer-tv-reportes-20260906-233826/HALLAZGOS.md). Implementación/criterios de ADR-14: [historial local y GitHub](GIT.md).
+
+La nueva evidencia0.5 y sus límites están en [hallazgos](../diagnostico/primer-tv-evidencia-20260907-000948/HALLAZGOS.md). La reproducción del defecto SHA se documenta en [MKSH-HALLAZGO-0.5](../rom-simplificada/instalador/MKSH-HALLAZGO-0.5.md).

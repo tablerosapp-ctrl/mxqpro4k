@@ -63,3 +63,7 @@ La rama local es `main`. Se incorporan el estado de la plataforma, el resultado 
 La [auditoría del índice](evidencia/git-inicial.json) no encontró binarios ni patrones de secretos de alta confianza entre los archivos revisados. `git diff --cached --check` señaló espacios de salidas históricas y líneas finales vacías de dos fuentes; se conservaron para no alterar registros ni las fuentes vinculadas por hash a la release. No se declaró esa comprobación de formato como aprobada. Las pruebas funcionales y la lectura del USB tienen sus recibos separados.
 
 `.gitattributes` normaliza terminaciones de línea en el índice. Los hashes de fuentes/recibos describen los bytes locales usados en la comprobación; no deben confundirse con el hash de una versión del texto normalizada por Git. Para artefactos distribuidos se utiliza siempre su SHA-256 del manifiesto y la lectura del USB.
+
+## Corrección del recopilador0.6
+
+Se conserva0.5 íntegra y se agrega0.6 en un directorio propio. El cambio documenta dos fallos reales: selección de GMS que agotó la cuota antes de OTAUpgrade, y alias `hash` de mksh que produjo digests vacíos. Los informes crudos siguen fuera de Git; sus hallazgos saneados, la reproducción, las pruebas finales y el recibo USB quedan versionados. El registro del reinicio previo acota el atasco al cierre del sistema sin identificar aún su causa. No se registra una instalación de ROM como conseguida.

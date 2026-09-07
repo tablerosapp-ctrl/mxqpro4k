@@ -1,20 +1,22 @@
 # Estado operativo
 
-Estado actualizado: **7/9/2026, 00:00 ART**. Informes adquiridos el6/9 a las23:38. El usuario confirma que Acceso USB0.4 también deja «Sin señal», sin recovery visible. Se leyeron dos informes del Kingston y se comprobó que los tres artefactos entregados siguen intactos. **No repetir el botón0.4.** [Hallazgos nuevos](../diagnostico/primer-tv-reportes-20260906-233826/HALLAZGOS.md).
+Actualización del **7/9/2026 a las00:22 ART**, tras adquirir dos capturas de Acceso USB0.5. Ambas fallaron en etapa5 porque cuatro archivos de GMS consumieron el límite antes de OTAUpgrade. Además, un alias de Android anuló el cálculo SHA de binarios: los valores vacíos no acreditan su verificación en el TV. Los seis informes de texto por captura sí tienen SHA coincidente, y todas las copias USB→PC fueron verificadas. [Hallazgos](../diagnostico/primer-tv-evidencia-20260907-000948/HALLAZGOS.md).
 
-La partición recovery existe (24MiB), pero su cabecera y órdenes fueron denegadas a UID2000. Los dos informes son anteriores a pedir el reinicio y solo difieren en la hora; el fragmento pstore no registra el fallo0.4. Acceso USB0.5 recoge evidencia sin reiniciar para leer el actualizador real de este P291 y el registro persistente completo. La APK0.5 ya está copiada y leída/verificada en el Kingston; su primera captura física está pendiente. Aún no hay ROM instalada ni respaldo original del TV confirmado.
+El pstore completo muestra que, tras cortar HDMI y entrar en la preparación del reinicio, el mismo kernel siguió activo517,24segundos. Favorece un atasco al cerrar el sistema antes del reinicio físico. La partición recovery existe, pero no se leyó su contenido ni se demostró su ejecución. **No hay ROM instalada ni respaldo original del TV confirmado.**
 
-## Entregable vigente: evidencia 0.5 sin reinicio
+## Entregable vigente: complemento0.6 sin reinicio
 
-| Archivo | Función | Validación |
+| Archivo | Función | Estado |
 | --- | --- | --- |
-| `AccesoUSB-0.5.apk` | Recoge registros del arranque y archivos del actualizador original; no solicita reinicio | Compilación/firma, protocolo ADB, guardas y archivos sintéticos en PC; ejecución Android pendiente |
-| `recovery.img` | Recovery externo preparado del candidato | Estructura y hashes comprobados; arranque en P291 no demostrado |
-| `TVBASE-P291-A9-0.1.1-RECOVERY.zip` | ROM experimental con cinco particiones y respaldo previo obligatorio | Contenido, ext4, firmas y hashes comprobados; instalación física pendiente |
-| `TVBASE-MEDIA.txt` | Identifica nuestro medio | Marcador exacto requerido |
-| `LEEME-AHORA.txt` | Pasos de recopilación 0.5 | Debe coincidir con la revisión entregada |
+| `AccesoUSB-0.6.apk` | Autocontrol SHA → certificados → OTAUpgrade → configuración → cierre | Pruebas locales y copia/lectura USB verificadas; primera ejecución0.6 enTV pendiente |
+| `recovery.img` | Recovery externo del candidato | Preparado/verificado localmente; arranque no demostrado |
+| `TVBASE-P291-A9-0.1.1-RECOVERY.zip` | ROM experimental con respaldo previo y cinco particiones | Preparado/verificado localmente; no instalado |
+| `TVBASE-MEDIA.txt` | Identifica el medio autorizado | Marcador exacto requerido |
+| `LEEME-AHORA.txt` | Pasos del complemento vigente | Copiado y leído junto a la APK0.6 |
 
-[Copia0.5 verificada](../preparacion-usb/evidencia-05-estado.json), proceso con código nativo0: APK45.459bytes y LEEME1.314bytes; lectura SHA coincidente. [Pruebas0.5](../rom-simplificada/instalador/EVIDENCIA-TESTS-0.5.json): 12 escenarios ADB, siete sintaxis y15 casos con archivos sintéticos, más guardas. No acreditan ejecución Android. La APK0.4 se retiró como `.no-usar` y la guía anterior quedó archivada en el USB. La entrega anterior 0.4 queda en el [recibo histórico](../preparacion-usb/entrada-amlogic-estado.json). La ROM y el recovery se conservan; los dos informes anteriores se mantienen íntegros. No elegir versiones `.no-usar`.
+[Entrega0.6 verificada](../preparacion-usb/evidencia-06-estado.json): APK41.363B y guía1.216B, código nativo0, lectura SHA coincidente. Pruebas12ADB,5sintaxis POSIX+5mksh y20fixtures de funciones con mksh real. ROM/recovery y ambos informes se conservaron; APK0.5 quedó `.no-usar`.
+
+Las entregas [0.5](../preparacion-usb/evidencia-05-estado.json) y [0.4](../preparacion-usb/entrada-amlogic-estado.json) conservan sus recibos. Su copia correcta en PC no demuestra una captura o un reinicio correcto en Android. No volver a ejecutar esas versiones.
 
 Última identificación: Kingston DataTraveler 3.0, USB, 30.943.995.904 bytes, no sistema/no arranque de PC. D: era su letra, FAT32 `TVBASE`, volumen 30.925.651.968 bytes. **La letra no es identidad.** UniqueId:
 
@@ -33,19 +35,20 @@ Marcador: `TVBASE-P291-20260906-4dc82786`. No volver a formatear ni reconstruir 
 5. Acceso USB 0.3 sí leyó en el primer TV `gxlx2_p291_1g`, API28, UID2000 shell y particiones. Eso confirma consultas ADB locales, no root.
 6. Su solicitud `reboot:recovery` dejó «Sin señal» más de diez minutos. Tras un ciclo de alimentación el usuario informó inicio con «Android», aparentemente sin cambios. Nunca se vio recovery ni se eligió el ZIP real. El LED de este equipo no funciona.
 7. Se preparó la entrada diferente 0.4: informe previo → hashes → `reboot:update` → posible recovery externo. La recopilación sí funcionó en el TV; el usuario informa de nuevo Sin señal al solicitar update. No hay recovery visible. Los informes no contienen la fase posterior al botón.
-8. El7/9 a las00:00 se entregó0.5 sin reinicio. Recoge pstore console/ftrace/dmesg, identifica la Activity de actualización y copia APK candidatos/certificados públicos cuando son legibles. Fija una sola carpeta USB, verifica ocho informes obligatorios y los binarios, y conserva errores. Se comprobaron APK/firma/pruebas/copia; falta ejecutar la captura en el TV.
+8. El7/9 a las00:00 se entregó0.5 sin reinicio. Recoge pstore console/ftrace/dmesg, identifica la Activity de actualización y copia APK candidatos/certificados públicos cuando son legibles. Fija una sola carpeta USB, verifica ocho informes obligatorios y los binarios, y conserva errores. Se comprobaron APK/firma/pruebas/copia enPC. La ejecución física llegó a etapa5 y falló; sus controles SHA binarios tenían un defecto no cubierto por aquellas pruebas.
+9. Se recuperaron dos capturas0.5 y se reprodujo la colisión del nombre hash con un alias incorporado de mksh. El complemento0.6 usa nombres propios, SHA estricto y autocontrol, y selecciona directamente los archivos faltantes.
 
 Evidencias: [hallazgos del primer TV](../diagnostico/primer-tv-20260906-actualizacion-local/HALLAZGOS.md), [historia anterior](historico/AGENTS-hasta-20260906-2004.md), [preparación del recovery](../rom-simplificada/instalador/recovery-externo/PREPARADO.json).
 
-## Siguiente paso: obtener evidencia del intento anterior
+## Siguiente paso: estudiar los archivos que faltan
 
-Con Android iniciado, instalar AccesoUSB-0.5.apk y pulsar **«Guardar evidencia del último intento (no reinicia)»**. Esperar la confirmación de guardado y devolver el Kingston a la PC. [Instrucciones completas](../rom-simplificada/INSTALACION-USB.md).
+Con0.6 ya entregada, instalarla con Android iniciado y pulsar **«Guardar archivos que faltan (no reinicia)»**. Esperar la confirmación y devolver el USB a la PC. [Pasos vigentes](../rom-simplificada/INSTALACION-USB.md).
 
-La siguiente sesión debe conservar primero los originales de la nueva carpeta `TVBASE-evidencia-…`, verificar sus hashes y leer `COMPLETO.txt`. La ausencia del marcador o un error en pantalla significan captura parcial: revisar lo guardado antes de pedir otra ejecución. Los reportes pueden contener datos privados; solo versionar el resumen revisado y sus hashes.
+La siguiente sesión debe conservar los originales de la nueva carpeta, verificar los SHA y comprobar `COMPLETO.txt`. En0.6 son obligatorios OTAUpgrade y otacerts; un error o carpeta parcial exige revisar lo existente antes de solicitar otra captura. Los informes crudos permanecen privados; versionar conclusiones revisadas y hashes.
 
-Analizar el pstore completo junto al arranque actual, y el actualizador que resuelva este P291. Decidir con esa implementación si puede recibir el ZIP real y cómo prepara la entrada. `otacerts.zip` permite examinar la validación del paquete en Android; no demuestra por sí solo las claves del recovery instalado. Una lectura denegada queda registrada y no justifica cambiar permisos.
+Analizar la implementación real de `com.droidlogic.otaupgrade`, que en este P291 está en `/product/app/OTAUpgrade/OTAUpgrade.apk`, usa UID1000 y tiene permisos REBOOT/RECOVERY. Determinar cómo valida el ZIP y prepara las órdenes persistentes de recuperación. Sus permisos no demuestran por sí solos que consiga reiniciar ni que recovery acepte nuestra firma. No repetir `reboot:update`, el ZIP vacío ni cambiar permisos para evitar esta investigación.
 
-Si en una futura instalación aparece recovery, identificar su origen y registrar aceptación del ZIP antes de afirmar que el acceso funciona. Un error durante escritura no prueba ausencia de cambios. Conservar siempre los respaldos reales si llegan a generarse.
+Si una futura instalación llega a escribir particiones, un error no equivale a ausencia de cambios. Conservar siempre los respaldos reales antes de ampliar pruebas.
 
 ## Límites vigentes
 

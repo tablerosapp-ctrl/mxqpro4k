@@ -1,0 +1,22 @@
+TV BASE P291 - ARCHIVOS QUE FALTAN - ACCESO USB 0.6
+
+La captura 0.5 se detuvo antes del actualizador del fabricante.
+Sus dos carpetas ya estan guardadas en la PC. Conservarlas tambien en el USB.
+
+1. Con Android iniciado, conectar el pendrive al PRIMER TV P291.
+2. Instalar AccesoUSB-0.6.apk, actualizando la aplicacion anterior.
+3. Abrir Acceso USB y pulsar "Guardar archivos que faltan (no reinicia)".
+4. Esperar la confirmacion de guardado. Android permanece encendido.
+5. Volver a conectar el pendrive a la PC para analizar la carpeta nueva.
+
+Esta version recoge los certificados publicos OTA, la APK OTAUpgrade
+identificada en este TV y la configuracion de arranque accesible.
+No copia Servicios de Google ni repite la captura del registro de arranque.
+Comprueba primero que el calculo SHA funciona y verifica los archivos copiados.
+
+Si aparece un error, conservar el mensaje y la carpeta parcial. No repetir
+la misma captura: ya permite analizar por que se detuvo.
+
+No pulsa Update, no reinicia ni instala la ROM. La instalacion Android sigue
+pendiente. ROM y recovery se conservan preparados en el pendrive.
+Conservar siempre TVBASE-evidencia-*, TVBASE-diagnostico-* y TVBASE-respaldo-*.

@@ -1,8 +1,8 @@
 # Estado actual y construcción de la base
 
-**Tras la prueba física0.4:** el TV quedó sin señal y nunca mostró recovery. La ROM0.1.1 sigue preparada, sin instalar y sin respaldo original del TV confirmado. Los informes guardados fueron anteriores al reinicio y no capturaron su fallo; recovery existe como partición de24MiB, con lectura de contenido denegada. [Evidencia del P291](../diagnostico/primer-tv-reportes-20260906-233826/HALLAZGOS.md).
+**Tras analizar la captura física0.5:** la ROM0.1.1 sigue preparada, sin instalar y sin respaldo original del TV confirmado. El registro posterior al intento0.4 muestra un aviso de reinicio del kernel y más de ocho minutos de actividad posterior: favorece un atasco al cerrar el sistema, sin identificar la función causante. Recovery existe como partición de24MiB, con lectura de contenido denegada; no se demostró ejecución del recovery USB. [Evidencia del P291](../diagnostico/primer-tv-evidencia-20260907-000948/HALLAZGOS.md).
 
-La herramienta nueva es **Acceso USB0.5**, que solo recopila evidencia del último intento sin reiniciar ni abrir el actualizador. Compilación y pruebas locales están documentadas. La [copia USB0.5 está verificada](../preparacion-usb/evidencia-05-estado.json); su primera captura física sigue pendiente. La ROM0.1.1 y el recovery externo permanecen intactos. Seguir [Instalación USB](INSTALACION-USB.md) y [Estado](../docs/ESTADO.md) para la entrega y el paso vigente.
+La herramienta nueva es **Acceso USB0.6**, un complemento sin reinicio para obtener primero `otacerts.zip`, después el APK de OTAUpgrade ya identificado en este P291 y finalmente la configuración pendiente. La captura0.5 quedó incompleta por una cuota de APK consumida antes de alcanzar OTAUpgrade; además, una colisión con el alias `hash` de mksh hizo aceptar digests binarios vacíos. Se conserva aquella versión y su evidencia, y se construye0.6 en fuentes/salida independientes. La nueva copia USB0.6 ya está verificada; su ejecución física enTV sigue pendiente. La ROM0.1.1 y el recovery externo permanecen intactos. Seguir [Instalación USB](INSTALACION-USB.md) y [Estado](../docs/ESTADO.md) para el recibo y el paso vigente.
 
 El resto de este documento describe la construcción de la primera imagen Amlogic 0.1 y su revisión. El contenedor .img no es el entregable de instalación actual. La copia defectuosa de debugfs fue eliminada conservando sus registros.
 
@@ -53,11 +53,13 @@ Evidencia: `salida/VERIFICACION.json`, `salida/*-fsck.txt` y `trabajo/cambios.js
 4. Sustituir los componentes restantes que no hagan falta y desarrollar el gestor propio de actualizaciones, autenticación y recuperación. **Ese gestor todavía no está implementado.**
 5. Para recibir Chrome oficial posterior a 138, preparar una base Android más reciente: Google finalizó el soporte de Android 8/9 en la rama 138. Esto no se resuelve cambiando el número de versión declarado por Android. [Anuncio oficial](https://support.google.com/chrome/thread/352616098/sunsetting-chrome-support-for-android-8-0-oreo-and-android-9-0-pie?hl=en-GB).
 
-## Herramienta vigente de evidencia del primer TV
+## Complemento0.6 de evidencia del primer TV
 
-`compilacion/acceso-usb-0.5/acceso-usb.apk` contiene **Acceso USB0.5**. Su botón «Guardar evidencia del último intento (no reinicia)» copia al pendrive datos de arranque, registros pstore en bytes, APK/permisos del actualizador original de este P291 y certificados OTA públicos cuando son legibles. Registra las denegaciones y verifica tamaños/hashes. Usa exclusivamente ADB local en127.0.0.1:5555; el permiso INTERNET permite ese socket, sin requerir WiFi ni red externa. No solicita root, no abre el actualizador, no reinicia y no instala la ROM.
+La salida `compilacion/acceso-usb-0.6/acceso-usb.apk` corresponde a **Acceso USB0.6**, con fuentes en `componentes/acceso-usb-0.6/`. El botón «Guardar archivos que faltan (no reinicia)» ejecuta cinco etapas: carpeta nueva, autocontrol SHA/certificados públicos, APK de OTAUpgrade, configuración/identidad y cierre verificado. La ruta `/product/app/OTAUpgrade/OTAUpgrade.apk` se exige porque fue acreditada en el P291; no se vuelve a recopilar Google Play Services. Certificados y APK son obligatorios: si no se pueden obtener, conserva el parcial e informa fallo.
 
-Los originales se guardan en una carpeta nueva `TVBASE-evidencia-*`. Tras la lectura en PC, las conclusiones pueden orientar una entrada distinta. La captura no garantiza que todos los archivos estén accesibles ni que pstore conserve el fallo del intento anterior. No repetir0.4 para producir un reinicio adicional. Los fuentes/artefactos0.4 se conservan archivados en `compilacion/acceso-usb-0.4-archivado/`.
+El cálculo usa funciones `tvbase_*`, toybox explícito, validación de64 caracteres hexadecimales en cada consumidor y un autocontrol inicial con el SHA conocido de `abc`. La [auditoría mksh](instalador/MKSH-HALLAZGO-0.5.md) explica por qué las pruebas Bash de0.5 no detectaron la colisión de nombres. Los datos0.5 ya obtenidos sirven para el análisis, pero sus campos SHA binarios vacíos no se corrigen retroactivamente. Los tests y resultados0.6 se registran aparte.
+
+Los archivos se guardan en una carpeta nueva `TVBASE-evidencia-*`. Usa exclusivamente ADB local en127.0.0.1:5555; INTERNET permite ese socket, sin requerir WiFi ni red externa. No solicita root, no abre el actualizador, no reinicia y no instala la ROM. La configuración inaccesible queda documentada; no se promete haberla leído. Fuentes/artefactos0.4 archivados y fuentes0.5 en `componentes/acceso-usb/` se conservan como históricos. No repetir0.4 para producir un reinicio adicional.
 
 El Kingston dejó atrás la preparación Armbian: el ZIP vacío no es un instalador y no debe reutilizarse. Cada entrega posterior tiene un recibo propio de copia/lectura. La existencia de ROM/recovery en el medio no demuestra ejecución ni instalación en el TV.
 
@@ -66,7 +68,7 @@ El Kingston dejó atrás la preparación Armbian: el ZIP vacío no es un instala
 Todos los scripts actúan sobre archivos regulares dentro del proyecto, sin acceso a discos físicos ni ADB:
 
 1. `preparar-copias.py`: extrae y expande las particiones desde la fuente cuyo hash se exige.
-2. `compilar-componentes.py`: compila Inicio TV y el overlay. Para el recopilador0.5 se usa `instalador/compilar-evidencia05.py`, con salida/versionado independientes y clave local existente; no sobrescribir un APK entregado.
+2. `compilar-componentes.py`: compila Inicio TV y el overlay. Para el complemento0.6 se usa `instalador/compilar-evidencia06.py`, con fuentes y salida versionadas independientes y clave local existente. `compilar-evidencia05.py` conserva la construcción histórica; no sobrescribir un APK entregado.
 3. `simplificar.py`: aplica la receta explícita y valida las modificaciones.
 4. `verificar-y-empaquetar.py`: limpia bloques libres, compara archivos, comprueba ext4, genera sparse y recompone el contenedor Amlogic.
 
@@ -74,4 +76,6 @@ Las comprobaciones evitan sobrescribir implícitamente un trabajo anterior. Para
 
 Las herramientas de compilación y ext4 se guardan en la PC, en `tools/compilar-android`, `tools/verificacion-apk` y `tools/ext4-cygwin`. Los catálogos y hashes de sus descargas se conservan allí. La herramienta temporal Acceso USB se ejecuta en Android, no en Windows.
 
-Las pruebas actuales de la herramienta están en `instalador/test_evidencia05.py` y `EVIDENCIA-TESTS-0.5.json`; cubren ADB simulado, controles y copias sintéticas con adaptadores, sin ejecutar el TV. El detalle de construcción, fuentes generadas e históricos está en [DESARROLLO](../docs/DESARROLLO.md). Git local conserva fuentes y evidencia seleccionada; imágenes, claves y capturas crudas permanecen fuera según [GIT](../docs/GIT.md).
+Las pruebas del complemento están en `instalador/test_evidencia06.py`, con `EvidenciaHarness06.java` y recibo `EVIDENCIA-TESTS-0.6.json`; consultar ese recibo para casos y resultados efectivamente ejecutados, incluida la regresión pertinente bajo mksh real. No equivalen a ejecutar el TV ni a entregar su APK en el USB. Las pruebas0.5 se conservan: Bash y adaptadores no reprodujeron su fallo real de SHA. El detalle de construcción, fuentes generadas e históricos está en [DESARROLLO](../docs/DESARROLLO.md). Git local conserva fuentes y evidencia seleccionada; imágenes, claves y capturas crudas permanecen fuera según [GIT](../docs/GIT.md).
+
+Entrega complementaria0.6: [recibo USB](../preparacion-usb/evidencia-06-estado.json), 7/9/2026 a las00:22 ART, APK y guía copiadas/leídas con SHA coincidente. Primera ejecución0.6 en el P291 pendiente.
