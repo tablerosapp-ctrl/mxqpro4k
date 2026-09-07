@@ -1,0 +1,803 @@
+{
+  "reviewed_at": "2026-09-07T17:04:10.329547+00:00",
+  "public_commit_reviewed": "1530b6184a79a5582230c83d208bd0ab2ef9b291",
+  "scope": "Analisis en PC de evidencia previa; sin nueva ejecucion en TV",
+  "usb": {
+    "checked_at": "2026-09-07T16:59:45.513717+00:00",
+    "report_files_in_directories_checked": 75,
+    "all_match_prior_pc_captures": true,
+    "loose_reports": [
+      {
+        "bytes": 14891,
+        "sha256": "77172874572e7c9968ebaa92f07d6db9af5ef50d59d68dba42383bf3f8f47dc2",
+        "matches_prior": true
+      },
+      {
+        "bytes": 14891,
+        "sha256": "8788ec8b06ce663d4b63c2ccd384e8f4c1f24ac593cc8eb15dc32075a22bdb0e",
+        "matches_prior": true
+      }
+    ],
+    "additional_report_directories": [],
+    "artifacts": [
+      {
+        "path": "TVBASE-P291-A9-0.1.1-RECOVERY.zip",
+        "bytes": 573089164,
+        "sha256": "e7279a7901bc0b513ccc5d3a66a1b5bf483908a4cffd30f34f5d8d463fc95205"
+      },
+      {
+        "path": "AccesoUSB-0.7.apk",
+        "bytes": 29075,
+        "sha256": "a81c1cc8d871ae883f3d79f6e030b588e753b5ee633496da3087aa1a021f90a5"
+      },
+      {
+        "path": "recovery.img",
+        "bytes": 25165824,
+        "sha256": "e59ef077378f8b1ba644bcfbef2a0f55e9914258696f203e813392e0a9fed01b"
+      },
+      {
+        "path": "LEEME-AHORA.txt",
+        "bytes": 1537,
+        "sha256": "ec8297fca66a5c9f9604ce46afc6048eff1187af49a3351b232c065c43aaadc5"
+      }
+    ],
+    "windows_health": "Warning",
+    "dirty_flag_query_reported_dirty": true,
+    "chkdsk_read_only": {
+      "exit_code": 0,
+      "completed_file_and_directory_scan": true,
+      "reported_filesystem_problems": false,
+      "initial_access_denied_line": true,
+      "limits": "Sin /F, /R ni /X. Hubo una linea inicial Acceso denegado; el recorrido posterior termino sin problemas. No equivale a prueba de superficie ni de toda la ruta USB."
+    },
+    "writes_or_repairs_requested": false
+  },
+  "previous_pstore": {
+    "schema_version": 1,
+    "sha256": "708cae6320f0de63ab764269003d3bfb1a52a45815cc2d6da85849210f4331b8",
+    "bytes": 32756,
+    "origin_declared": "pstore",
+    "attempt_declared": "previo-04",
+    "attempt_verified_by_parser": false,
+    "events": [
+      {
+        "marker": "watchdog_started",
+        "line": 47,
+        "kernel_seconds": 13400.164808
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 55,
+        "kernel_seconds": 13400.311723
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 70,
+        "kernel_seconds": 13404.419551
+      },
+      {
+        "marker": "kernel_reboot_notifier",
+        "line": 72,
+        "kernel_seconds": 13404.839586
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 75,
+        "kernel_seconds": 13408.527861
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 78,
+        "kernel_seconds": 13412.636489
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 81,
+        "kernel_seconds": 13416.744934
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 84,
+        "kernel_seconds": 13420.853939
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 87,
+        "kernel_seconds": 13424.961487
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 91,
+        "kernel_seconds": 13429.070492
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 94,
+        "kernel_seconds": 13433.178624
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 97,
+        "kernel_seconds": 13437.286887
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 100,
+        "kernel_seconds": 13441.395489
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 103,
+        "kernel_seconds": 13445.503925
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 106,
+        "kernel_seconds": 13449.612531
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 109,
+        "kernel_seconds": 13453.720622
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 112,
+        "kernel_seconds": 13457.828873
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 115,
+        "kernel_seconds": 13461.937524
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 118,
+        "kernel_seconds": 13466.0459
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 121,
+        "kernel_seconds": 13470.154489
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 124,
+        "kernel_seconds": 13474.262487
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 127,
+        "kernel_seconds": 13478.370914
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 130,
+        "kernel_seconds": 13482.478533
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 133,
+        "kernel_seconds": 13486.586878
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 136,
+        "kernel_seconds": 13490.695877
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 139,
+        "kernel_seconds": 13494.803501
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 142,
+        "kernel_seconds": 13498.911879
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 145,
+        "kernel_seconds": 13503.020501
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 148,
+        "kernel_seconds": 13507.12853
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 151,
+        "kernel_seconds": 13511.236871
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 154,
+        "kernel_seconds": 13515.346034
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 157,
+        "kernel_seconds": 13519.454495
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 160,
+        "kernel_seconds": 13523.562836
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 163,
+        "kernel_seconds": 13527.670491
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 166,
+        "kernel_seconds": 13531.778898
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 169,
+        "kernel_seconds": 13535.887486
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 172,
+        "kernel_seconds": 13539.995861
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 175,
+        "kernel_seconds": 13544.104485
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 178,
+        "kernel_seconds": 13548.212487
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 181,
+        "kernel_seconds": 13552.320855
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 184,
+        "kernel_seconds": 13556.429493
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 187,
+        "kernel_seconds": 13560.537912
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 190,
+        "kernel_seconds": 13564.646637
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 193,
+        "kernel_seconds": 13568.754496
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 196,
+        "kernel_seconds": 13572.862494
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 199,
+        "kernel_seconds": 13576.970491
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 202,
+        "kernel_seconds": 13581.07886
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 205,
+        "kernel_seconds": 13585.187498
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 208,
+        "kernel_seconds": 13589.29592
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 211,
+        "kernel_seconds": 13593.404616
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 214,
+        "kernel_seconds": 13597.512487
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 217,
+        "kernel_seconds": 13601.620846
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 220,
+        "kernel_seconds": 13605.729491
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 223,
+        "kernel_seconds": 13609.837629
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 226,
+        "kernel_seconds": 13613.945486
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 229,
+        "kernel_seconds": 13618.053909
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 232,
+        "kernel_seconds": 13622.162599
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 235,
+        "kernel_seconds": 13626.270841
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 238,
+        "kernel_seconds": 13630.379885
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 241,
+        "kernel_seconds": 13634.488489
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 244,
+        "kernel_seconds": 13638.596861
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 247,
+        "kernel_seconds": 13642.705878
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 250,
+        "kernel_seconds": 13646.814488
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 253,
+        "kernel_seconds": 13650.922642
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 256,
+        "kernel_seconds": 13655.030491
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 259,
+        "kernel_seconds": 13659.138486
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 262,
+        "kernel_seconds": 13663.24649
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 265,
+        "kernel_seconds": 13667.354487
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 268,
+        "kernel_seconds": 13671.462926
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 271,
+        "kernel_seconds": 13675.571487
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 274,
+        "kernel_seconds": 13679.679623
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 277,
+        "kernel_seconds": 13683.788854
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 280,
+        "kernel_seconds": 13687.897485
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 283,
+        "kernel_seconds": 13692.005858
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 286,
+        "kernel_seconds": 13696.114893
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 289,
+        "kernel_seconds": 13700.223496
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 292,
+        "kernel_seconds": 13704.331899
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 295,
+        "kernel_seconds": 13708.44091
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 298,
+        "kernel_seconds": 13712.549491
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 301,
+        "kernel_seconds": 13716.658249
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 304,
+        "kernel_seconds": 13720.76693
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 307,
+        "kernel_seconds": 13724.875499
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 310,
+        "kernel_seconds": 13728.98389
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 313,
+        "kernel_seconds": 13733.092687
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 316,
+        "kernel_seconds": 13737.200487
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 319,
+        "kernel_seconds": 13741.308487
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 322,
+        "kernel_seconds": 13745.416558
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 325,
+        "kernel_seconds": 13749.5245
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 328,
+        "kernel_seconds": 13753.632885
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 331,
+        "kernel_seconds": 13757.741487
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 334,
+        "kernel_seconds": 13761.849499
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 337,
+        "kernel_seconds": 13765.957896
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 340,
+        "kernel_seconds": 13770.066494
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 343,
+        "kernel_seconds": 13774.174495
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 346,
+        "kernel_seconds": 13778.282894
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 349,
+        "kernel_seconds": 13782.391486
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 352,
+        "kernel_seconds": 13786.499491
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 355,
+        "kernel_seconds": 13790.607887
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 358,
+        "kernel_seconds": 13794.716494
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 361,
+        "kernel_seconds": 13798.824919
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 364,
+        "kernel_seconds": 13802.933542
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 367,
+        "kernel_seconds": 13807.041632
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 370,
+        "kernel_seconds": 13811.149899
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 373,
+        "kernel_seconds": 13815.258497
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 376,
+        "kernel_seconds": 13819.366619
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 379,
+        "kernel_seconds": 13823.474532
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 382,
+        "kernel_seconds": 13827.582495
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 385,
+        "kernel_seconds": 13831.690665
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 388,
+        "kernel_seconds": 13835.798488
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 391,
+        "kernel_seconds": 13839.906899
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 394,
+        "kernel_seconds": 13844.015645
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 397,
+        "kernel_seconds": 13848.123498
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 400,
+        "kernel_seconds": 13852.231889
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 403,
+        "kernel_seconds": 13856.340791
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 406,
+        "kernel_seconds": 13860.448485
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 409,
+        "kernel_seconds": 13864.556896
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 412,
+        "kernel_seconds": 13868.665492
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 415,
+        "kernel_seconds": 13872.773935
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 418,
+        "kernel_seconds": 13876.88291
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 421,
+        "kernel_seconds": 13880.991498
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 424,
+        "kernel_seconds": 13885.099858
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 427,
+        "kernel_seconds": 13889.208926
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 430,
+        "kernel_seconds": 13893.317625
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 433,
+        "kernel_seconds": 13897.425916
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 436,
+        "kernel_seconds": 13901.534645
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 439,
+        "kernel_seconds": 13905.642494
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 442,
+        "kernel_seconds": 13909.750761
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 445,
+        "kernel_seconds": 13913.858891
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 448,
+        "kernel_seconds": 13917.967896
+      },
+      {
+        "marker": "sdio_cmd53",
+        "line": 451,
+        "kernel_seconds": 13922.076499
+      }
+    ],
+    "marker_counts": {
+      "watchdog_started": 1,
+      "sdio_cmd53": 128,
+      "kernel_reboot_notifier": 1
+    },
+    "kernel_time_regressions_at_lines": [],
+    "seconds_logged_after_single_notifier": 517.236913,
+    "warnings": [
+      "Pstore puede conservar un arranque anterior; no usar su fecha como atribución."
+    ],
+    "limits": [
+      "El parser reconoce texto; no autentica el origen ni identifica la función bloqueada.",
+      "Ausencia de marca no demuestra ausencia de ejecución.",
+      "Restarting system precede machine_restart; no acredita reset físico.",
+      "No se declara recovery, instalación, copia íntegra ni BCB/mapa correcto."
+    ]
+  },
+  "references": [
+    {
+      "file": "ShutdownThread.java",
+      "url": "https://raw.githubusercontent.com/aosp-mirror/platform_frameworks_base/android-9.0.0_r1/services/core/java/com/android/server/power/ShutdownThread.java",
+      "bytes": 31601,
+      "sha256": "621940271d7af066dfb99bc4cc87db7747bc24f36af728aad99b6c74fe120a9b"
+    },
+    {
+      "file": "ActivityManagerService.java",
+      "url": "https://raw.githubusercontent.com/aosp-mirror/platform_frameworks_base/android-9.0.0_r1/services/core/java/com/android/server/am/ActivityManagerService.java",
+      "bytes": 1206762,
+      "sha256": "929d2cfdba9edcd3af8d03dcfdc7c57ebd53dd013c2625be7635ee1a261663bd"
+    },
+    {
+      "file": "ActivityStackSupervisor.java",
+      "url": "https://raw.githubusercontent.com/aosp-mirror/platform_frameworks_base/android-9.0.0_r1/services/core/java/com/android/server/am/ActivityStackSupervisor.java",
+      "bytes": 224219,
+      "sha256": "f18bff80aaa6dae89dffc896d15ec71fa0934fbe0bbf07043807798975e280d7"
+    },
+    {
+      "file": "PowerManagerService.java",
+      "url": "https://raw.githubusercontent.com/aosp-mirror/platform_frameworks_base/android-9.0.0_r1/services/core/java/com/android/server/power/PowerManagerService.java",
+      "bytes": 202285,
+      "sha256": "8276e62dfaafa5691d9bea8a9afe5774341a72f386667c9767eb75b6cec06f3f"
+    },
+    {
+      "file": "adb-services.cpp",
+      "url": "https://raw.githubusercontent.com/aosp-mirror/platform_system_core/android-9.0.0_r1/adb/services.cpp",
+      "bytes": 17199,
+      "sha256": "5efa2053399889da467f06545b4798d836b1bf9a526c98df33bcc2342a456737"
+    },
+    {
+      "file": "init-reboot.cpp",
+      "url": "https://raw.githubusercontent.com/aosp-mirror/platform_system_core/android-9.0.0_r1/init/reboot.cpp",
+      "bytes": 20382,
+      "sha256": "6ba88f7491867dbc98f9fd6cae3da4ec8a3d56c9c70e02fda39c2c5c0a90f98c"
+    },
+    {
+      "file": "init.rc",
+      "url": "https://raw.githubusercontent.com/aosp-mirror/platform_system_core/android-9.0.0_r1/rootdir/init.rc",
+      "bytes": 29580,
+      "sha256": "ea0fc7b934b1e0ef0fd22582f3fa322adef4c7164fa384a4bb280683f1b33fd2"
+    },
+    {
+      "file": "kernel-reboot.c",
+      "url": "https://raw.githubusercontent.com/khadas/linux/bd9460728746cc080acbaa084e53460437f43211/kernel/reboot.c",
+      "bytes": 13595,
+      "sha256": "6d5a32f9a962893bde25946abadb75e98e85dd304022c23e3713e48f5c6d3cbb",
+      "git_commit": "bd9460728746cc080acbaa084e53460437f43211"
+    },
+    {
+      "file": "meson_wdt.c",
+      "url": "https://raw.githubusercontent.com/khadas/linux/bd9460728746cc080acbaa084e53460437f43211/drivers/amlogic/watchdog/meson_wdt.c",
+      "bytes": 11210,
+      "sha256": "7713f8a4924674cd7409d864ea96bebec76ea68746ff278d0dc7499bbc178d16",
+      "git_commit": "bd9460728746cc080acbaa084e53460437f43211"
+    },
+    {
+      "file": "kernel-reboot.h",
+      "url": "https://raw.githubusercontent.com/khadas/linux/bd9460728746cc080acbaa084e53460437f43211/include/linux/reboot.h",
+      "git_commit": "bd9460728746cc080acbaa084e53460437f43211",
+      "bytes": 1958,
+      "sha256": "746fd7afcb994c9044e1f3f180fd1e6d404d1dd6444c72f1cc9bb64a6d292a94"
+    }
+  ],
+  "tests": {
+    "cases": 10,
+    "result": "passed",
+    "scope": "Parser offline; no prueba de Android ni supervivencia de recolector",
+    "analyzer_sha256": "9c4d468624d120576495a8d3f6c0176cf3f92a865066c3c18ea6a1fd84b3e785",
+    "tests_sha256": "4bb007d2b02595ad279adcd29887c59b76bbf663abb46d1567d3bf8740f153d4"
+  }
+}

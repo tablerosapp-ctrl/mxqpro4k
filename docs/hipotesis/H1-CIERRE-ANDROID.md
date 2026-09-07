@@ -1,10 +1,10 @@
 # H1 · Bloqueo del cierre de Android
 
-Responsable previsto: Codex. Estado: **hipótesis abierta; revisión conjunta aún no iniciada**.
+Responsable: Codex. Estado: **revisión inicial completada; H1a/H1b abiertas y separadas; contraste con Fable pendiente**. [Resultado y diseño de observación](H1-RESULTADO-CODEX.md).
 
 ## Enunciado
 
-El Android actualmente instalado se atasca al cerrar servicios, antes de completar el procesamiento del paquete y el reinicio físico. Cambiar el ZIP o pedir otro modo de reboot no evita ese bloqueo.
+H1a: el intento OEM puede atascarse en el cierre Java antes del procesamiento/reinicio. H1b: el intento ADB anterior alcanzó la cadena de reinicio del kernel y pudo atascarse después. Las rutas difieren: no se presume una causa única ni se toma el pstore anterior como prueba de un bloqueo de ActivityManager en el intento OEM. Cambiar el ZIP o pedir otro modo de reboot no es una solución demostrada.
 
 ## Evidencia disponible
 

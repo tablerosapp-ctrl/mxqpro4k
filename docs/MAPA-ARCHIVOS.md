@@ -174,7 +174,7 @@ Requisitos: REQ-01.
 
 ### C-TV · P291: OEM detenido al 2 %
 
-**observado_tv**. Cuatro fotos del primer intento con ZIP completo: Copying y preparación Android2%, más de10min. Atasco del cierre compatible con AOSP9; causa/persistencia/instalación desconocidas.
+**observado_tv**. OEM con ZIP real detenido al2%; H1 separa cierre Java de cierre tardío del kernel previo. USB releído sin nuevos informes; conclusiones H2 pendientes.
 
 Requisitos: .
 
@@ -192,6 +192,10 @@ Requisitos: .
 - [docs/ENTREGA-FABLE.md](../docs/ENTREGA-FABLE.md)
 - [docs/hipotesis/H1-CIERRE-ANDROID.md](../docs/hipotesis/H1-CIERRE-ANDROID.md)
 - [docs/hipotesis/H2-PREPARACION-RECOVERY.md](../docs/hipotesis/H2-PREPARACION-RECOVERY.md)
+- [docs/hipotesis/H1-RESULTADO-CODEX.md](../docs/hipotesis/H1-RESULTADO-CODEX.md)
+- [diagnostico/h1-cierre-android/resumen-saneado.json](../diagnostico/h1-cierre-android/resumen-saneado.json)
+- [diagnostico/h1-cierre-android/analizar-registro.py](../diagnostico/h1-cierre-android/analizar-registro.py)
+- [diagnostico/h1-cierre-android/test_analizar_registro.py](../diagnostico/h1-cierre-android/test_analizar_registro.py)
 
 ### C-APP · APK del producto
 
@@ -238,13 +242,13 @@ Implementación pendiente; especificación en [ESPECIFICACION](ESPECIFICACION.md
 | README.md | 1 | 0.000 |
 | actualizacion-chrome | 51 | 0.417 |
 | analisis-rom | 15 | 1.822 |
-| diagnostico | 151 | 0.018 |
-| docs | 29 | 0.000 |
+| diagnostico | 155 | 0.018 |
+| docs | 30 | 0.000 |
 | dossier-s905l2.html | 1 | 0.000 |
 | images | 1 | 1.352 |
 | platform-tools-latest-windows.zip | 1 | 0.008 |
 | preparacion-usb | 79 | 3.688 |
 | rom-simplificada | 1495 | 7.090 |
-| tools | 18060 | 1.139 |
+| tools | 18071 | 1.141 |
 
 El inventario excluye derivados documentales y contenido de claves; los tamaños son de archivos, no bloques físicos ocupados. Los temporales retirados se detallan en [LIMPIEZA](LIMPIEZA.md).

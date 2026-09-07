@@ -6,6 +6,7 @@ Android simplificado instalado en la memoria interna de TV boxes, con una APK co
 
 - [Empezar desde Claude Desktop / Fable 5.1](docs/ENTREGA-FABLE.md): contexto y revisión independiente H2.
 - [Colaboración y dos hipótesis](docs/COLABORACION.md): responsabilidades, evidencia y formato de retorno.
+- [Primera revisión H1 de Codex](docs/hipotesis/H1-RESULTADO-CODEX.md): distingue cierre Java y kernel; pendrive leído, sin evidencia nueva del último intento.
 - [Publicación y uso del clon](docs/PUBLICACION.md): historial saneado y dependencias que permanecen locales.
 
 - [Mapa visual del proyecto](docs/index.html): grafo navegable de componentes, archivos y roadmap; funciona sin internet.

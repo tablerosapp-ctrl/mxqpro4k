@@ -66,4 +66,12 @@ Git local en `main`, con fuentes, documentación y evidencia revisada. Binarios,
 
 La APK0.7 no guarda un registro posterior a Update. No afirmar que habrá un nuevo reporte de este atasco en el pendrive sin leerlo. Las fotos actuales son la evidencia del intento; el pstore anterior corresponde a otra solicitud.
 
-El usuario solicitó publicar primero documentación e historia para colaborar con Fable5.1 desde otraPC/cuenta. No hay una nueva prueba física ni respuesta al último ciclo. [Coordinación H1/H2](COLABORACION.md) · [Procedimiento público](PUBLICACION.md).
+El usuario confirmó que Fable5.1 está trabajando desde otra PC/cuenta y pidió que Codex continúe H1 con el pendrive conectado a esta PC. Sus conclusiones todavía no se recibieron. [Coordinación H1/H2](COLABORACION.md) · [Procedimiento público](PUBLICACION.md).
+
+## Revisión H1 y nueva lectura del pendrive · 7/9/2026
+
+La [revisión de Codex](hipotesis/H1-RESULTADO-CODEX.md) separa H1a (posible atasco Java en el OEM) y H1b (cierre tardío del kernel en el intento anterior). ADB solicita la propiedad de reinicio sin recorrer ShutdownThread Java en AOSP9. El pstore previo, con 517,236913s tras el notificador, no demuestra bloqueo de ActivityManager. La barra se actualiza de forma asíncrona y el plazo de10s no limita toda la llamada de cierre de AMS. No hay causa única demostrada.
+
+Kingston D: revalidado y leído: 75 archivos de carpetas de evidencia más dos informes sueltos coinciden con los originales adquiridos; ROM/APK/recovery/guía coinciden con sus SHA. No hay una carpeta nueva de informe ni respaldo del TV. Windows marca el volumen sucio/Warning; CHKDSK sin reparación terminó el recorrido sin problemas, con una línea inicial de acceso denegado que se conserva como límite. No se formateó ni preparó otra entrega. [Recibo saneado](../diagnostico/h1-cierre-android/resumen-saneado.json).
+
+Se agregó un parser offline con diez regresiones aprobadas y un diseño acotado de observación. No se desplegó un recolector nuevo ni se pidió otro Update. Una captura posterior del pstore puede aprovechar el intento ocurrido, si Android volvió a arrancar; el resultado de ese arranque sigue pendiente de respuesta. Comparar H1 con H2 antes de instrumentar otra actualización.

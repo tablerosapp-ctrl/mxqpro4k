@@ -1,8 +1,8 @@
 {
-  "date_utc": "2026-09-07T16:48:13.485986+00:00",
+  "date_utc": "2026-09-07T17:06:26.629088+00:00",
   "state": "passed",
-  "links_checked": 224,
-  "component_paths_checked": 80,
+  "links_checked": 232,
+  "component_paths_checked": 84,
   "graph_valid": true,
   "roadmap_acyclic": true,
   "html_embedded_data_matches": true,

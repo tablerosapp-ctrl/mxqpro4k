@@ -73,6 +73,12 @@ mxqpro4k/
 │   ├── RESULTADO.md
 │   └── verificar-integridad-interna.py
 ├── diagnostico/
+│   ├── h1-cierre-android/
+│   │   ├── __pycache__/
+│   │   │   └── analizar-registro.cpython-312.pyc
+│   │   ├── analizar-registro.py
+│   │   ├── resumen-saneado.json
+│   │   └── test_analizar_registro.py
 │   ├── primer-tv-20260906-actualizacion-local/
 │   │   ├── acceso-02-identificador-adb.png
 │   │   ├── acceso-03-estado-correcto.png
@@ -117,6 +123,7 @@ mxqpro4k/
 │   │   └── verificar-documentacion.py
 │   ├── hipotesis/
 │   │   ├── H1-CIERRE-ANDROID.md
+│   │   ├── H1-RESULTADO-CODEX.md
 │   │   └── H2-PREPARACION-RECOVERY.md
 │   ├── historico/
 │   │   ├── AGENTS-hasta-20260906-2004.md
@@ -407,6 +414,7 @@ mxqpro4k/
 │   ├── compilar-android/ [4 archivos; 125.6 MB; agrupado]
 │   ├── ext4-cygwin/ [74 archivos; 38.8 MB; agrupado]
 │   ├── firmar-ota/ [5 archivos; 0.1 MB; agrupado]
+│   ├── h1-referencias/ [11 archivos; 1.8 MB; agrupado]
 │   ├── imager-1.8.5.exe
 │   ├── imager-2.0.11.1/ [1444 archivos; 89.3 MB; agrupado]
 │   ├── imager-portable/ [371 archivos; 85.7 MB; agrupado]

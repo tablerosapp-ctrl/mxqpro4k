@@ -1,6 +1,6 @@
 # Colaboración: Codex y Fable 5.1
 
-El usuario pidió publicar primero documentación e historial y después contrastar dos hipótesis en paralelo. Fable 5.1 se usará desde Claude Desktop en otra PC y con otra cuenta GitHub. Esta sesión no puede invocarlo directamente ni atribuirle resultados antes de recibirlos.
+El usuario pidió publicar primero documentación e historial y después contrastar dos hipótesis en paralelo. Confirmó que Fable 5.1 ya está trabajando desde Claude Desktop en otra PC y con otra cuenta GitHub. Esta sesión no puede invocarlo directamente ni atribuirle resultados antes de recibirlos. Codex completó su [primera revisión H1](hipotesis/H1-RESULTADO-CODEX.md); conclusiones de Fable pendientes.
 
 Repositorio público verificado: **[tablerosapp-ctrl/mxqpro4k](https://github.com/tablerosapp-ctrl/mxqpro4k)**. Permite lectura sin invitación. Para escribir desde otra cuenta se pueden usar issues o un fork con pull request; no se conceden permisos de administración por este pedido. [Recibo de publicación](evidencia/publicacion-github.json).
 
@@ -19,7 +19,7 @@ Leer, en este orden: [README](../README.md), [ESTADO](ESTADO.md), [ESPECIFICACIO
 
 | Línea | Responsable previsto | Pregunta central | Documento |
 | --- | --- | --- | --- |
-| H1 | Codex | ¿Android se bloquea al cerrar sus servicios antes de generar el mapa y reiniciar? | [H1: cierre de Android](hipotesis/H1-CIERRE-ANDROID.md) |
+| H1 | Codex; revisión inicial disponible | Distinguir H1a, cierre Java OEM, de H1b, cierre tardío del kernel en el intento ADB anterior | [H1: resultado de Codex](hipotesis/H1-RESULTADO-CODEX.md) |
 | H2 | Fable 5.1, desde Claude Desktop | ¿La cadena paquete interno → mapa → BCB → bootloader → recovery queda inválida o incompleta, aunque se resuelva el cierre? | [H2: preparación y recovery](hipotesis/H2-PREPARACION-RECOVERY.md) |
 
 Pueden coexistir. Ninguna está demostrada por una barra al2%, una firma válida en PC o una coincidencia del DT. Trabajar en documentos separados y compartir primero hallazgos reproducibles. [Mensaje completo para Fable](ENTREGA-FABLE.md).

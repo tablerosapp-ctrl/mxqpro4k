@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "title": "TV Base",
-  "snapshot": "2026-09-07T16:30:01.351820+00:00",
+  "snapshot": "2026-09-07T17:06:00.608690+00:00",
   "state": "ROM completa por OEM: preparación detenida al 2 % más de 10 minutos",
   "installed": false,
   "original_tv_backup_confirmed": false,
@@ -12,7 +12,8 @@
     "roadmap": "docs/ROADMAP.md",
     "delivery_receipt": "preparacion-usb/entrada-oem-07-estado.json",
     "collaboration": "docs/COLABORACION.md",
-    "publication": "docs/PUBLICACION.md"
+    "publication": "docs/PUBLICACION.md",
+    "h1_review": "docs/hipotesis/H1-RESULTADO-CODEX.md"
   },
   "components": [
     {
@@ -223,7 +224,7 @@
       "id": "C-TV",
       "label": "P291: OEM detenido al 2 %",
       "state": "observado_tv",
-      "description": "Cuatro fotos del primer intento con ZIP completo: Copying y preparación Android2%, más de10min. Atasco del cierre compatible con AOSP9; causa/persistencia/instalación desconocidas.",
+      "description": "OEM con ZIP real detenido al2%; H1 separa cierre Java de cierre tardío del kernel previo. USB releído sin nuevos informes; conclusiones H2 pendientes.",
       "files": [
         "docs/ESTADO.md",
         "diagnostico/primer-tv-evidencia-20260907-000948/HALLAZGOS.md",
@@ -238,7 +239,11 @@
         "docs/COLABORACION.md",
         "docs/ENTREGA-FABLE.md",
         "docs/hipotesis/H1-CIERRE-ANDROID.md",
-        "docs/hipotesis/H2-PREPARACION-RECOVERY.md"
+        "docs/hipotesis/H2-PREPARACION-RECOVERY.md",
+        "docs/hipotesis/H1-RESULTADO-CODEX.md",
+        "diagnostico/h1-cierre-android/resumen-saneado.json",
+        "diagnostico/h1-cierre-android/analizar-registro.py",
+        "diagnostico/h1-cierre-android/test_analizar_registro.py"
       ],
       "x": 4,
       "y": 1,
@@ -894,7 +899,7 @@
   ],
   "delivery_label": "Acceso 0.7 probado · Update detenido al 2 %",
   "date_label": "Resultado físico comunicado el 7 de septiembre de 2026",
-  "next_step_label": "Compartir repositorio y entrega con Claude Desktop; contrastar H1 cierre Android y H2 preparación/recovery antes de otra prueba.",
+  "next_step_label": "Revisión H1 de Codex disponible; contrastar con H2 de Fable. USB sin informes nuevos; resultado del último arranque pendiente.",
   "public_repository": {
     "url": "https://github.com/tablerosapp-ctrl/mxqpro4k",
     "visibility_requested": "public",
