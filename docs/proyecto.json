@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "title": "TV Base",
-  "snapshot": "2026-09-07T12:34:55.5236812-03:00",
-  "state": "Captura 0.6 completa · firma P291 verificada · acceso OEM 0.7 listo en USB",
+  "snapshot": "2026-09-07T16:30:01.351820+00:00",
+  "state": "ROM completa por OEM: preparación detenida al 2 % más de 10 minutos",
   "installed": false,
   "original_tv_backup_confirmed": false,
   "source_of_truth": {
@@ -177,8 +177,8 @@
     {
       "id": "C-ENTRY",
       "label": "Acceso OEM USB 0.7",
-      "state": "verificado_local",
-      "description": "Comprueba P291, USB, ZIP completo y APK OEM capturado. Abre solo el menú original; no pulsa Update ni corrige reinicio. Pruebas/copia USB verificadas; uso físico pendiente.",
+      "state": "observado_tv",
+      "description": "Menú OEM abierto según fotos; selección y confirmación del ZIP real. Preparación Android detenida al2% más de10min. No repetir Update ni otro botón de reinicio.",
       "files": [
         "rom-simplificada/componentes/acceso-usb-0.7/Acceso.java",
         "rom-simplificada/componentes/acceso-usb-0.7/AdbLocal.java",
@@ -219,9 +219,9 @@
     },
     {
       "id": "C-TV",
-      "label": "P291: captura completa",
+      "label": "P291: OEM detenido al 2 %",
       "state": "observado_tv",
-      "description": "Captura0.6 completa y firma ROM válida contra otacerts P291. OEM prepara BCB/mapa mediante framework, ejecución pendiente. Pstore anterior apunta a cierre atascado; recovery aún no probado.",
+      "description": "Cuatro fotos del primer intento con ZIP completo: Copying y preparación Android2%, más de10min. Atasco del cierre compatible con AOSP9; causa/persistencia/instalación desconocidas.",
       "files": [
         "docs/ESTADO.md",
         "diagnostico/primer-tv-evidencia-20260907-000948/HALLAZGOS.md",
@@ -230,7 +230,9 @@
         "diagnostico/primer-tv-complemento-20260907-003114/resumen-saneado.json",
         "diagnostico/primer-tv-complemento-20260907-003114/certificados-ota.json",
         "diagnostico/primer-tv-complemento-20260907-003114/analisis-actualizador/ANALISIS.md",
-        "rom-simplificada/instalador/EVIDENCIA-TESTS-0.6.json"
+        "rom-simplificada/instalador/EVIDENCIA-TESTS-0.6.json",
+        "diagnostico/primer-tv-update-20260907-1326/HALLAZGOS.md",
+        "diagnostico/primer-tv-update-20260907-1326/resumen-saneado.json"
       ],
       "x": 4,
       "y": 1,
@@ -469,7 +471,7 @@
         "C-REC",
         "C-TV"
       ],
-      "exit": "VAL-05 pendiente: APK y certificados reales analizados; firma integral coincide. Falta ejecución OEM con ZIP real, recovery identificado y aceptación física.",
+      "exit": "VAL-05 sin superar: ZIP real probado mediante OEM, detenido al2% más de10min. Falta recuperación/entrada efectiva y aceptación del paquete.",
       "x": 1,
       "y": 0
     },
@@ -884,7 +886,7 @@
       ]
     }
   ],
-  "delivery_label": "ROM 0.1.1 · Acceso USB 0.7",
-  "date_label": "Entrega verificada el 7 de septiembre de 2026, 12:34 ART",
-  "next_step_label": "Instalar AccesoUSB-0.7.apk; abrir actualización local; Select → TVBASE-P291-A9-0.1.1-RECOVERY.zip → Update y confirmar."
+  "delivery_label": "Acceso 0.7 probado · Update detenido al 2 %",
+  "date_label": "Resultado físico comunicado el 7 de septiembre de 2026",
+  "next_step_label": "No repetir Update. Un ciclo manual de alimentación para salir del bloqueo; conservar USB y comunicar si aparece Android, recovery o instalación."
 }

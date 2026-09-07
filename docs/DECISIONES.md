@@ -23,6 +23,8 @@ Cada decisión identifica su alcance. Las referencias de AOSP/Amlogic explican e
 
 | ADR-17 | Captura P291 completa, firma integral verificada con su otacerts y entrada explícita al menú OEM con el ZIP real | La misma vía antes solo recibió un ZIP vacío. 0.7 comprueba perfil/USB/ROM/APK y abre MainActivity; no inicia Update ni corrige el reinicio. La OEM prepara BCB/mapa mediante framework y solicita recovery interno; éxito real y claves internas pendientes. |
 
+| ADR-18 | No repetir Update tras el intento OEM con ROM completa detenido al 2 % más de diez minutos | La firma válida y el ZIP completo no resolvieron el cierre. Separar observación visual de copia/BCB/mapa; recuperar control mediante un único ciclo manual, resultado pendiente, y orientar la investigación al intervalo posterior o a entrada física confirmada. |
+
 ## Incidentes que no deben repetirse
 
 - **USB y formato:** tres grabaciones fallaron con errores nativos y redetección. Cambiar letra no cambió la conexión. La cuarta funcionó tras cambiar físicamente de ruta. «No aparece en Explorador» no equivalía a «no existe el disco». El volumen pudo recuperarse. No atribuir causa precisa sin evidencia.
@@ -47,3 +49,5 @@ Evidencia de ADR-13: [análisis de informes0.4](../diagnostico/primer-tv-reporte
 La nueva evidencia0.5 y sus límites están en [hallazgos](../diagnostico/primer-tv-evidencia-20260907-000948/HALLAZGOS.md). La reproducción del defecto SHA se documenta en [MKSH-HALLAZGO-0.5](../rom-simplificada/instalador/MKSH-HALLAZGO-0.5.md).
 
 Evidencia de ADR-17: [captura completa P291](../diagnostico/primer-tv-complemento-20260907-003114/HALLAZGOS.md), [firma integral contra certificados reales](../diagnostico/primer-tv-complemento-20260907-003114/certificados-ota.json) y [análisis del actualizador](../diagnostico/primer-tv-complemento-20260907-003114/analisis-actualizador/ANALISIS.md). No confundir confianza del Android instalado con las claves de recovery ni inferir que un apagado prepara correctamente BCB/block.map.
+
+Evidencia ADR-18: [intento con ROM completa](../diagnostico/primer-tv-update-20260907-1326/HALLAZGOS.md). No atribuir al nuevo intento el pstore de otro reinicio ni dar por presentes reportes que0.7 no genera.

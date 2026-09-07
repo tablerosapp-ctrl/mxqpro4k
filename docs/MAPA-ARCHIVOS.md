@@ -14,9 +14,9 @@ flowchart LR
     C_WEB["Proveedor WebView · construido"]
     C_ZIP["ZIP de instalación · verificado_local"]
     C_REC["Recovery externo · verificado_local"]
-    C_ENTRY["Acceso OEM USB 0.7 · verificado_local"]
+    C_ENTRY["Acceso OEM USB 0.7 · observado_tv"]
     C_USB["Kingston preparado · verificado_local"]
-    C_TV["P291: captura completa · observado_tv"]
+    C_TV["P291: OEM detenido al 2 % · observado_tv"]
     C_APP["APK del producto · propuesto"]
     C_GESTION["Administración propia · propuesto"]
     C_PERFIL -->|"selecciona"| C_BASE
@@ -143,7 +143,7 @@ Requisitos: REQ-11.
 
 ### C-ENTRY · Acceso OEM USB 0.7
 
-**verificado_local**. Comprueba P291, USB, ZIP completo y APK OEM capturado. Abre solo el menú original; no pulsa Update ni corrige reinicio. Pruebas/copia USB verificadas; uso físico pendiente.
+**observado_tv**. Menú OEM abierto según fotos; selección y confirmación del ZIP real. Preparación Android detenida al2% más de10min. No repetir Update ni otro botón de reinicio.
 
 Requisitos: REQ-11.
 
@@ -172,9 +172,9 @@ Requisitos: REQ-01.
 - [rom-simplificada/instalador/LEEME-ENTRADA-0.7.txt](../rom-simplificada/instalador/LEEME-ENTRADA-0.7.txt)
 - [rom-simplificada/INSTALACION-USB.md](../rom-simplificada/INSTALACION-USB.md)
 
-### C-TV · P291: captura completa
+### C-TV · P291: OEM detenido al 2 %
 
-**observado_tv**. Captura0.6 completa y firma ROM válida contra otacerts P291. OEM prepara BCB/mapa mediante framework, ejecución pendiente. Pstore anterior apunta a cierre atascado; recovery aún no probado.
+**observado_tv**. Cuatro fotos del primer intento con ZIP completo: Copying y preparación Android2%, más de10min. Atasco del cierre compatible con AOSP9; causa/persistencia/instalación desconocidas.
 
 Requisitos: .
 
@@ -186,6 +186,8 @@ Requisitos: .
 - [diagnostico/primer-tv-complemento-20260907-003114/certificados-ota.json](../diagnostico/primer-tv-complemento-20260907-003114/certificados-ota.json)
 - [diagnostico/primer-tv-complemento-20260907-003114/analisis-actualizador/ANALISIS.md](../diagnostico/primer-tv-complemento-20260907-003114/analisis-actualizador/ANALISIS.md)
 - [rom-simplificada/instalador/EVIDENCIA-TESTS-0.6.json](../rom-simplificada/instalador/EVIDENCIA-TESTS-0.6.json)
+- [diagnostico/primer-tv-update-20260907-1326/HALLAZGOS.md](../diagnostico/primer-tv-update-20260907-1326/HALLAZGOS.md)
+- [diagnostico/primer-tv-update-20260907-1326/resumen-saneado.json](../diagnostico/primer-tv-update-20260907-1326/resumen-saneado.json)
 
 ### C-APP · APK del producto
 
@@ -232,13 +234,13 @@ Implementación pendiente; especificación en [ESPECIFICACION](ESPECIFICACION.md
 | README.md | 1 | 0.000 |
 | actualizacion-chrome | 51 | 0.417 |
 | analisis-rom | 15 | 1.822 |
-| diagnostico | 145 | 0.016 |
+| diagnostico | 151 | 0.018 |
 | docs | 21 | 0.000 |
 | dossier-s905l2.html | 1 | 0.000 |
 | images | 1 | 1.352 |
 | platform-tools-latest-windows.zip | 1 | 0.008 |
 | preparacion-usb | 79 | 3.688 |
 | rom-simplificada | 1495 | 7.090 |
-| tools | 18059 | 1.139 |
+| tools | 18060 | 1.139 |
 
 El inventario excluye derivados documentales y contenido de claves; los tamaños son de archivos, no bloques físicos ocupados. Los temporales retirados se detallan en [LIMPIEZA](LIMPIEZA.md).

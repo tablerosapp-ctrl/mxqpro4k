@@ -1,10 +1,12 @@
-# Pendrive · instrucciones vigentes
+# Pendrive · intento detenido, no repetir Update
+
+**Resultado vigente:** el intento con la ROM completa quedó al 2 % más de diez minutos después de Copying. Los pasos de instalación de abajo son el registro de lo ya probado, **no una indicación de repetirlos**. [Estado y acción actual](../docs/ESTADO.md) · [Fotos y análisis](../diagnostico/primer-tv-update-20260907-1326/HALLAZGOS.md).
 
 La captura 0.6 terminó correctamente y ya se analizó. Se verificó la firma completa de la ROM con el certificado OTA del primer P291. **La ROM aún no está instalada; su aceptación por el recovery interno no está demostrada.**
 
-Acceso USB 0.7 quedó copiado y leído en el Kingston el 7/9/2026 a las 12:34 ART, con código 0 y SHA coincidente. [Recibo de entrega](../preparacion-usb/entrada-oem-07-estado.json). Solo comprueba el pendrive y abre el menú de actualización original. El primer ensayo de ese menú usó un ZIP vacío; el siguiente usará la ROM completa, con comprobaciones previas. No hay otro recopilador general ni una solución demostrada al atasco del reinicio.
+Acceso USB 0.7 quedó copiado y leído en el Kingston el 7/9/2026 a las 12:34 ART, con código 0 y SHA coincidente. [Recibo de entrega](../preparacion-usb/entrada-oem-07-estado.json). Solo comprueba el pendrive y abre el menú de actualización original. El primer ensayo usó un ZIP vacío y el siguiente usó la ROM completa; ambos quedaron en la preparación al 2 %. No hay otro recopilador general ni una solución demostrada al atasco del reinicio.
 
-## Pasos con Acceso USB 0.7
+## Pasos ya ejecutados con Acceso USB 0.7
 
 1. Con Android iniciado en el **primer TV P291**, conectar el Kingston.
 2. Instalar **AccesoUSB-0.7.apk**, actualizando Acceso USB.

@@ -1,8 +1,12 @@
 # Estado operativo
 
-Actualización del **7/9/2026**, después de leer el Kingston devuelto. **La captura 0.6 terminó correctamente:** 25 archivos adquiridos, diez comprobaciones SHA coincidentes, autocontrol conocido y cierre completo. El error de cuota de APK y el defecto SHA de 0.5 quedaron resueltos en esta ejecución real. [Hallazgos y límites](../diagnostico/primer-tv-complemento-20260907-003114/HALLAZGOS.md).
+Actualización del **7/9/2026, tras el intento físico con ROM completa**. Cuatro fotos muestran menú OEM → ZIP0.1.1 seleccionado y confirmado → Copying → diálogo de preparación Android al 2 %. El usuario confirma **más de diez minutos sin avance**. [Evidencia y análisis](../diagnostico/primer-tv-update-20260907-1326/HALLAZGOS.md).
 
-**La ROM sigue sin instalar y no hay respaldo original del TV confirmado.**
+**No hay instalación ni respaldo original del TV confirmados. No repetir Update.** La captura0.6 y las verificaciones criptográficas siguen válidas; no acreditan que el sistema consiga cerrar ni que recovery se haya ejecutado.
+
+La referencia exacta Android9 sitúa 2 % después de la notificación de apagado y antes de regresar del cierre de ActivityManager; el procesamiento del paquete llega después. Esto favorece un atasco del cierre, aunque el framework del TV no se extrajo y la interfaz podría estar congelada. No atribuir una causa definitiva ni asegurar que no hubo escrituras de preparación.
+
+Próxima acción física: un único ciclo de alimentación de diez segundos para salir del bloqueo, conservando el USB. No se presupone BCB/mapa correcto ni se promete que el corte carezca de riesgo. Si aparece instalación real, dejarla continuar; si aparece recovery/error, conservar el texto sin elegir wipe; si vuelve Android, no repetir Update. **Resultado del ciclo pendiente.**
 
 ## Qué habilita la evidencia nueva
 
@@ -11,9 +15,9 @@ Actualización del **7/9/2026**, después de leer el Kingston devuelto. **La cap
 - En API28, el actualizador original copia el paquete USB a `/data/cache/update.zip`, prepara `uncrypt_file`, solicita BCB y luego `recovery-update`. El mapa de bloques depende del framework. El código no confirma la integridad de la copia interna ni la persistencia de BCB/mapa. [Análisis del APK](../diagnostico/primer-tv-complemento-20260907-003114/analisis-actualizador/ANALISIS.md).
 - La referencia Amlogic consulta BCB para arrancar recovery **interno**. Esto no demuestra el comportamiento del cargador instalado ni que vaya a cargar `recovery.img` del pendrive.
 
-El menú Select/Update ya se abrió al principio, pero solo recibió el ZIP vacío de 22 bytes, que quedó al 2 %. No hay constancia de que el actualizador OEM haya intentado antes la ROM completa. Acceso USB 0.7 verifica ese paquete y el APK original antes de abrir el mismo menú. **No corrige por sí mismo el atasco al reiniciar ni constituye otro método de flasheo.**
+El menú Select/Update ya se abrió al principio, pero solo recibió el ZIP vacío de 22 bytes, que quedó al 2 %. El intento nuevo con la ROM completa llegó también al 2 % y quedó detenido. Acceso USB 0.7 verifica ese paquete y el APK original antes de abrir el mismo menú. **No corrige por sí mismo el atasco al reiniciar ni constituye otro método de flasheo.**
 
-## Entregable listo: Acceso USB 0.7
+## Último entregable probado: Acceso USB 0.7
 
 La APK solo abre **«Abrir actualización local»** tras comprobar el perfil P291/API28, el USB marcado, la integridad del ZIP y la identidad del actualizador. La selección y confirmación de Update quedan en el menú original. No hace otra captura general ni solicita un reinicio propio.
 
@@ -21,7 +25,7 @@ La APK solo abre **«Abrir actualización local»** tras comprobar el perfil P29
 
 | Archivo | Función | Límite |
 | --- | --- | --- |
-| `AccesoUSB-0.7.apk` | Comprobar y abrir explícitamente el menú OEM | Primera ejecución física pendiente |
+| `AccesoUSB-0.7.apk` | Comprobar y abrir explícitamente el menú OEM | Menú OEM observado; Update con ROM real detenido al 2 % |
 | `TVBASE-P291-A9-0.1.1-RECOVERY.zip` | ROM experimental con respaldo previo y cinco particiones | Sin instalación física; recovery interno aún no validado |
 | `recovery.img` | Recovery externo preparado del candidato | Conservado; esta vía OEM solicita recovery interno |
 | `TVBASE-MEDIA.txt` | Identifica el medio autorizado | Marcador exacto requerido |
@@ -59,3 +63,5 @@ Chrome138 es el techo oficial de esta base Android9. El proveedor WebView efecti
 ## Historial
 
 Git local en `main`, con fuentes, documentación y evidencia revisada. Binarios, claves e informes crudos permanecen locales. GitHub no está configurado ni publicado. [Flujo Git](GIT.md).
+
+La APK0.7 no guarda un registro posterior a Update. No afirmar que habrá un nuevo reporte de este atasco en el pendrive sin leerlo. Las fotos actuales son la evidencia del intento; el pstore anterior corresponde a otra solicitud.

@@ -10,7 +10,7 @@ DOC = ROOT / 'docs'
 data = json.loads((DOC / 'proyecto.json').read_text(encoding='utf8'))
 derived = {'docs/index.html', 'docs/MAPA-ARCHIVOS.md', 'docs/ARBOL-ARCHIVOS.txt', 'docs/inventario.json', 'docs/evidencia/documentacion-verificada.json'}
 private = 'rom-simplificada/claves-desarrollo'
-private_captures = ('diagnostico/primer-tv-reportes-', 'diagnostico/primer-tv-evidencia-', 'diagnostico/primer-tv-complemento-')
+private_captures = ('diagnostico/primer-tv-reportes-', 'diagnostico/primer-tv-evidencia-', 'diagnostico/primer-tv-complemento-', 'diagnostico/primer-tv-update-')
 rows = []
 for p in sorted(ROOT.rglob('*')):
     if not p.is_file() or p.is_symlink():

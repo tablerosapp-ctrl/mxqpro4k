@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "date_pc": "2026-09-07T16:28:59.080684+00:00",
+  "device": "primer TV P291 segun continuidad de la prueba",
+  "entry_version_expected": "0.7",
+  "rom_selected": "TVBASE-P291-A9-0.1.1-RECOVERY.zip",
+  "evidence": "cuatro fotos aportadas por el usuario y tiempo confirmado por el usuario",
+  "sequence": [
+    "menu OEM Update/Select",
+    "nombre ROM0.1.1 seleccionado y confirmacion Update",
+    "dialogo OEM Preparing/Copying",
+    "dialogo de sistema Android Preparando para actualizar, 2 por ciento"
+  ],
+  "stalled_minutes_lower_bound_exclusive": 10,
+  "oem_menu_visible": true,
+  "copy_integrity_confirmed": false,
+  "bcb_persistence_confirmed": false,
+  "block_map_confirmed": false,
+  "recovery_visible": false,
+  "rom_installation_confirmed": false,
+  "original_tv_backup_confirmed": false,
+  "new_usb_report_obtained": false,
+  "photos": [
+    {
+      "file": "foto-1.png",
+      "bytes": 168482,
+      "sha256": "8244c430f02a10cb7b6d1c34adbec27c55619f6b1f429409d2d93c22bfb9a5b6"
+    },
+    {
+      "file": "foto-2.png",
+      "bytes": 276289,
+      "sha256": "c46e6fc83aea3e4972ffd92dd937faf4bd8590c8ffcb4ef0d0810184c704d3d2"
+    },
+    {
+      "file": "foto-3.png",
+      "bytes": 423136,
+      "sha256": "3ab672f75cbf07eb09962954c199bea1e891a29e387eb505bcb5953b4aed7d7a"
+    },
+    {
+      "file": "foto-4.png",
+      "bytes": 245657,
+      "sha256": "f5df334a5d98818d61b435e65f70e3b3fbba0a363e63de7f0781f9b0010b9d86"
+    }
+  ],
+  "reference_source": {
+    "url": "https://github.com/aosp-mirror/platform_frameworks_base/blob/android-9.0.0_r1/services/core/java/com/android/server/power/ShutdownThread.java",
+    "local_path": "tools/firmar-ota/ShutdownThread-aosp9.java",
+    "sha256": "621940271d7af066dfb99bc4cc87db7747bc24f36af728aad99b6c74fe120a9b",
+    "device_framework_extracted": false
+  },
+  "interpretation": "Compatible con atasco al cerrar Android antes de reiniciar. AOSP9 fija2 tras broadcast,4 tras ActivityManager y20 antes de uncrypt. Posible bloqueo ActivityManager o UI estancada; causa exacta no demostrada.",
+  "next": "No repetir Update ni reinicios desde APK. Un solo ciclo manual para salir del bloqueo con USB presente; observar resultado. No se presupone BCB/mapa preparado ni recuperacion funcional.",
+  "power_cycle_result": "pendiente"
+}

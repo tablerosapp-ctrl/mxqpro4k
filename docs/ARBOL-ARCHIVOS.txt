@@ -92,6 +92,9 @@ mxqpro4k/
 │   ├── primer-tv-reportes-20260906-233826/
 │   │   ├── HALLAZGOS.md
 │   │   └── resumen-saneado.json
+│   ├── primer-tv-update-20260907-1326/
+│   │   ├── HALLAZGOS.md
+│   │   └── resumen-saneado.json
 │   ├── android-20260905-142854-a8286d9a/ [32 archivos; 3.3 MB; agrupado]
 │   ├── LEEME.md
 │   ├── recoger-android-adb.ps1
@@ -393,7 +396,7 @@ mxqpro4k/
 ├── tools/
 │   ├── compilar-android/ [4 archivos; 125.6 MB; agrupado]
 │   ├── ext4-cygwin/ [74 archivos; 38.8 MB; agrupado]
-│   ├── firmar-ota/ [4 archivos; 0.1 MB; agrupado]
+│   ├── firmar-ota/ [5 archivos; 0.1 MB; agrupado]
 │   ├── imager-1.8.5.exe
 │   ├── imager-2.0.11.1/ [1444 archivos; 89.3 MB; agrupado]
 │   ├── imager-portable/ [371 archivos; 85.7 MB; agrupado]

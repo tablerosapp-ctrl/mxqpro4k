@@ -1,6 +1,6 @@
 # Especificación del producto y aceptación
 
-Versión documental3, 7/9/2026, tras analizar la captura física incompleta0.5 y preparar el complemento0.6. Recoge el pedido vigente del usuario. La evolución de su APK no bloquea preparar y probar la plataforma. El alcance no incluye investigar la actualización automática que afectó al WiFi del primer equipo.
+Versión documental4, 7/9/2026, tras completar la captura0.6 y probar el ZIP real por el menú OEM, detenido al2%. Recoge el pedido vigente del usuario. La evolución de su APK no bloquea preparar y probar la plataforma. El alcance no incluye investigar la actualización automática que afectó al WiFi del primer equipo.
 
 ## Objetivo y alcance
 
@@ -45,9 +45,9 @@ No se deducen FPS, bitrate, perfil VP9 ni resolución completa de la descripció
 | --- | --- | --- |
 | VAL-01 | Integridad del candidato y sus particiones | Local registrada en `analisis-rom/integridad-interna.json` |
 | VAL-02 | ext4, contenido/metadatos, firma completa y hashes de payload 0.1.1 | Local registrada en `rom-simplificada/salida/RECOVERY-VERIFICACION-0.1.1.json` y `RECOVERY-COMPROBACION-0.1.1.json` |
-| VAL-03 | Protocolo y contrato de Acceso USB por versión | 0.4: entrada física fallida. 0.5: pruebas locales conservadas, captura real parcial y falso positivo SHA identificado. 0.6: casos y resultados en `EVIDENCIA-TESTS-0.6.json`, incluida regresión pertinente con mksh real; captura física completa comprobada. 0.7: controles en ENTRADA-TESTS-0.7.json, menú físico pendiente |
+| VAL-03 | Protocolo y contrato de Acceso USB por versión | 0.4: entrada física fallida. 0.5: pruebas locales conservadas, captura real parcial y falso positivo SHA identificado. 0.6: casos y resultados en `EVIDENCIA-TESTS-0.6.json`, incluida regresión pertinente con mksh real; captura física completa comprobada. 0.7: controles en ENTRADA-TESTS-0.7.json, menú físico observado; preparación de actualización detenida al 2 % |
 | VAL-04 | Copia leída del USB, con recibo de cada versión | Copia0.6 verificada el7/9,00:22: `preparacion-usb/evidencia-06-estado.json`, código0 y SHA coincidente. `preparacion-usb/evidencia-05-estado.json` y recibo0.4 son históricos y no acreditan entrega0.6 |
-| VAL-05 | Recovery visible/identificado y aceptación del ZIP en P291 | No superada:0.3 y0.4 dejaron sin señal, sin recovery visible |
+| VAL-05 | Recovery visible/identificado y aceptación del ZIP en P291 | No superada:0.3/0.4 sin señal; OEM0.7 con ZIP real detenido al2% más de10min, sin recovery visible |
 | VAL-06 | Respaldo completo y escritura verificada de cinco particiones | Pendiente; exigir `respaldo.json` e `instalacion.log` reales |
 | VAL-07 | Primer arranque sin USB, identificación, hardware y proveedor WebView efectivo | Pendiente |
 | VAL-08 | Suite APK/web/video/local/controles comparada con referencia | Pendiente |
@@ -61,4 +61,4 @@ El complemento0.6 se acepta únicamente cuando se reciben en PC su cierre y sus 
 
 Entrega complementaria0.6: [recibo USB](../preparacion-usb/evidencia-06-estado.json), 7/9/2026 a las00:22 ART, APK y guía copiadas/leídas con SHA coincidente. Captura 0.6 completada: 25 archivos adquiridos y diez SHA verificados. Ver [hallazgos](../diagnostico/primer-tv-complemento-20260907-003114/HALLAZGOS.md).
 
-La firma integral de la ROM se verificó contra el certificado OTA realmente capturado del P291 mediante Python y OpenJDK. [Recibo](../diagnostico/primer-tv-complemento-20260907-003114/certificados-ota.json). No cierra VAL-05: aún falta aceptación por recovery interno y ejecución física del ZIP. Acceso 0.7 solo abre el menú tras sus controles; VAL-04 de esa versión cuenta con [recibo propio de copia/lectura](../preparacion-usb/entrada-oem-07-estado.json), del 7/9 a las 12:34 ART. La apertura física 0.7 sigue pendiente.
+La firma integral de la ROM se verificó contra el certificado OTA realmente capturado del P291 mediante Python y OpenJDK. [Recibo](../diagnostico/primer-tv-complemento-20260907-003114/certificados-ota.json). No cierra VAL-05: aún falta aceptación por recovery interno y ejecución física del ZIP. Acceso 0.7 solo abre el menú tras sus controles; VAL-04 de esa versión cuenta con [recibo propio de copia/lectura](../preparacion-usb/entrada-oem-07-estado.json), del 7/9 a las 12:34 ART. El menú OEM ya se observó; Update con ZIP real quedó al 2 % por más de diez minutos.
