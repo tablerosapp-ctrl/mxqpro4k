@@ -13,6 +13,14 @@ trabajo/revision-0.1.1/*
 !trabajo/revision-0.1.1/debugfs.txt
 !trabajo/revision-0.1.1/debugfs.log
 !trabajo/revision-0.1.1/rechazo-paquete-anterior.txt
+!trabajo/revision-0.1.2/
+trabajo/revision-0.1.2/*
+!trabajo/revision-0.1.2/revision.json
+!trabajo/revision-0.1.2/system-fsck.txt
+!trabajo/revision-0.1.2/vendor-fsck.txt
+!trabajo/revision-0.1.2/instalador/
+trabajo/revision-0.1.2/instalador/*
+!trabajo/revision-0.1.2/instalador/compilacion.json
 !trabajo/fallo-debugfs-ruta-absoluta/
 trabajo/fallo-debugfs-ruta-absoluta/*
 !trabajo/fallo-debugfs-ruta-absoluta/CAUSA.txt

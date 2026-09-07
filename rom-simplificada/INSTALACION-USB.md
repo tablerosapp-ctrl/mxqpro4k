@@ -1,5 +1,14 @@
 # Pendrive · diagnóstico del último intento con Acceso USB0.8
 
+## Vigente: ROM0.1.2 preparada, entrada aún pendiente
+
+El pendrive contieneTVBASE-P291-A9-0.1.2-RECOVERY.zip, ControlBluetooth0.1 y guía nueva; [recibo](../preparacion-usb/rom-012-estado.json). Se retiraron únicamente la ROM0.1.1, APK0.8 y guía anteriores después de archivarlas/verificarlas enPC. Informes/recovery/respaldos permanecen.
+
+El primerP291 está porLAN, con ajusteBluetooth0 y paqueteBluetooth inhabilitado en Androidoriginal; aún hay esperas delkernel. La nuevaROM elimina pila/HAL/móduloBT y conservaWiFi, sin prueba física. El siguienteUpdate requiere indicación específica tras comprobar el ZIP enTV e iniciar el registro en vivo. No repetir los pasos históricos de esta guía ni pulsarRestaurarBluetooth. [Detalle0.1.2](SIN-BLUETOOTH-0.1.2.md).
+
+## Instrucciones históricas conservadas
+
+
 **Actualización:0.8 ya fue ejecutada y revisada. No repetirla.** Los informes útiles llegaron verificados; el cierre quedó vacío pese al aviso de finalización. [Resultado](../diagnostico/primer-tv-postintento-20260907-183025/HALLAZGOS.md). Los pasos de abajo conservan lo que se probó. La corrección de persistencia aún no está desplegada; esta revisión no preparó otra APK ni cambió el pendrive.
 
 Próxima conexión ofrecida por el usuario: primerP291 por LAN al router y PC por WiFi. No hace falta mover el USB para cada consulta si su ADB existente resulta accesible. Mantener alimentación y HDMI del TV; esperar identidad comprobada antes de cualquier intervención.

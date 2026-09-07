@@ -4,6 +4,8 @@ Versión documental5, 7/9/2026, tras completar la captura0.6 y probar el ZIP rea
 
 ## Objetivo y alcance
 
+Actualización7/9, sesiónLAN: el usuario pide **instalar sin Bluetooth en el primerP291**. Bluetooth deja de ser una función exigida para este perfil. WiFi y Ethernet se conservan como objetivos; eliminar Bluetooth no acredita por sí mismo reparar WiFi. La siguiente variante debe impedir tanto el inicio del servicio como la carga automática del móduloBluetooth, sin retirar el controladorWiFi ni presentar funcionesBluetooth que no ofrece.
+
 Sustituir el Android del integrador por una base propia interna, con servicios necesarios de Android, drivers compatibles y un entorno web actualizable. Distribuir una misma APK Flutter/web para nuestra ROM y Android TV comercial. Quitar cuentas, tienda y servicios ajenos prescindibles; conservar APIs, medios, almacenamiento, red e inputs. No se busca una ROM universal por nombre comercial «MXQ».
 
 **Estados:** `construido` acredita artefacto; `verificado_local` acredita comprobaciones en PC; `observado_tv` exige evidencia del aparato; `propuesto` no está implementado. Un requisito se acepta solamente con su prueba de salida, no por tener un archivo o marcar una tarea terminada.
@@ -12,6 +14,7 @@ Sustituir el Android del integrador por una base propia interna, con servicios n
 
 | ID | Requisito | Criterio de aceptación | Estado actual / componentes |
 | --- | --- | --- | --- |
+| REQ-13 | P291 sin Bluetooth, con red conservada | Tras arrancar la nueva ROM no se carga btmtksdio ni se inicia el HAL/servicioBluetooth; WiFi/Ethernet y controles disponibles se prueban por separado. Una preferenciaOFF aislada no basta. | Autorizado; variante en preparación, prueba física pendiente. C-ROM/C-TV |
 | REQ-01 | Android interno mediante pendrive | Instalar en P291, retirar USB y completar arranques normales con identificación TVBASE | ZIP construido/verificado; físico pendiente · C-ROM, C-ZIP, C-USB |
 | REQ-02 | Compatibilidad de hardware por placa | Registrar video/decodificadores, audio, red, almacenamiento, entradas y encendido con su perfil real | Candidato analizado; físico pendiente · C-BASE, C-PERFIL |
 | REQ-03 | Android simplificado con APIs estándar | Inicio propio y ajustes funcionales; APK instala/actualiza; servicios retirados ausentes sin romper framework o drivers | 16 APK retiradas y cambios verificados localmente · C-ROM, C-INICIO |
@@ -67,3 +70,5 @@ La firma integral de la ROM se verificó contra el certificado OTA realmente cap
 Actualización VAL-03/04 para0.8: [12casos ADB,21fixtures mksh y11etapas de sintaxis](../rom-simplificada/instalador/EVIDENCIA-TESTS-0.8.json), fuente/APK vinculados por hashes; [copia y lectura del USB](../preparacion-usb/postintento-08-estado.json), código0. Para aceptar captura física, adquirir la carpeta nueva, validar todos los sellos y el cierre e interpretar los estados por consulta. Un parcial se conserva y no se declara completo. VAL-05 a09 siguen pendientes. Los recibos anteriores no acreditan0.8.
 
 Resultado físico0.8: [evidencia](../diagnostico/primer-tv-postintento-20260907-183025/HALLAZGOS.md). VAL-03 física parcial:25sellos de datos válidos; cierre/etapa10 de0bytes pese al aviso de fin. VAL-04 de entrega enPC sigue válido y no prueba persistencia de futuras capturas enTV. Para el siguiente recopilador, exigir sincronización dirigida y resultado comprobado antes del aviso, conservando error/timeout sin declarar éxito. La lectura USB→PC y la clasificación semántica se verifican por separado. VAL-05 a09 siguen pendientes. No volver a obtener datos0.8 ya íntegros.
+
+REQ-13: [ROM0.1.2 construida](../rom-simplificada/SIN-BLUETOOTH-0.1.2.md), ext4 y firma/payload verificados, [entregaUSB propia](../preparacion-usb/rom-012-estado.json). La exclusión física deBluetooth y la red siguen pendientes deVAL-07/08. La desactivación en el Androidoriginal es una intervención de diagnóstico distinta.

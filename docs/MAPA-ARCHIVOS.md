@@ -10,15 +10,16 @@ flowchart LR
     C_BASE["Android candidato · verificado_local"]
     C_CHROME["Chrome 138 · verificado_local"]
     C_INICIO["Inicio TV · construido"]
-    C_ROM["ROM simplificada · verificado_local"]
+    C_ROM["ROM0.1.2 sin Bluetooth · verificado_local"]
     C_WEB["Proveedor WebView · construido"]
     C_ZIP["ZIP de instalación · verificado_local"]
     C_REC["Recovery externo · verificado_local"]
     C_ENTRY["Diagnóstico USB0.8 · observado_tv"]
     C_USB["Kingston preparado · verificado_local"]
-    C_TV["P291: radios fallan, Android activo · observado_tv"]
+    C_TV["P291: BT inhabilitado, kernel aún espera · observado_tv"]
     C_APP["APK del producto · propuesto"]
     C_GESTION["Administración propia · propuesto"]
+    C_BTCTRL["Control Bluetooth normal · observado_tv"]
     C_PERFIL -->|"selecciona"| C_BASE
     C_BASE -->|"aporta hardware"| C_ROM
     C_CHROME -->|"motor admitido"| C_WEB
@@ -32,6 +33,7 @@ flowchart LR
     C_USB -->|"completar evidencia"| C_TV
     C_TV -->|"habilita validación"| C_APP
     C_APP -->|"contrato propuesto"| C_GESTION
+    C_BTCTRL -->|"inhabilita Bluetooth actual"| C_TV
 ```
 
 ## Archivos por componente
@@ -85,11 +87,11 @@ Requisitos: REQ-03, REQ-10.
 - [rom-simplificada/componentes/inicio/AndroidManifest.xml](../rom-simplificada/componentes/inicio/AndroidManifest.xml)
 - [rom-simplificada/compilar-componentes.py](../rom-simplificada/compilar-componentes.py)
 
-### C-ROM · ROM simplificada
+### C-ROM · ROM0.1.2 sin Bluetooth
 
-**verificado_local**. Limpieza del integrador y revisión0.1.1 que neutraliza reemplazo heredado de recovery. Conserva APIs y hardware del candidato.
+**verificado_local**. P291 sin pila/HAL/módulo Bluetooth; WiFi conservado y no probado físicamente. 0.1.1 permanece archivada.
 
-Requisitos: REQ-01, REQ-03.
+Requisitos: REQ-01, REQ-03, REQ-13.
 
 - [rom-simplificada/LEEME.md](../rom-simplificada/LEEME.md)
 - [rom-simplificada/preparar-copias.py](../rom-simplificada/preparar-copias.py)
@@ -99,6 +101,9 @@ Requisitos: REQ-01, REQ-03.
 - [rom-simplificada/instalador/corregir-recovery-0.1.1.py](../rom-simplificada/instalador/corregir-recovery-0.1.1.py)
 - [rom-simplificada/trabajo/revision-0.1.1/revision.json](../rom-simplificada/trabajo/revision-0.1.1/revision.json)
 - [rom-simplificada/trabajo/revision-0.1.1/system.raw.img](../rom-simplificada/trabajo/revision-0.1.1/system.raw.img)
+- [rom-simplificada/SIN-BLUETOOTH-0.1.2.md](../rom-simplificada/SIN-BLUETOOTH-0.1.2.md)
+- [rom-simplificada/instalador/preparar-sin-bluetooth-0.1.2.py](../rom-simplificada/instalador/preparar-sin-bluetooth-0.1.2.py)
+- [rom-simplificada/trabajo/revision-0.1.2/revision.json](../rom-simplificada/trabajo/revision-0.1.2/revision.json)
 
 ### C-WEB · Proveedor WebView
 
@@ -127,6 +132,9 @@ Requisitos: REQ-01, REQ-09, REQ-11.
 - [rom-simplificada/salida/TVBASE-P291-A9-0.1.1-RECOVERY.zip](../rom-simplificada/salida/TVBASE-P291-A9-0.1.1-RECOVERY.zip)
 - [rom-simplificada/salida/RECOVERY-VERIFICACION-0.1.1.json](../rom-simplificada/salida/RECOVERY-VERIFICACION-0.1.1.json)
 - [rom-simplificada/salida/RECOVERY-COMPROBACION-0.1.1.json](../rom-simplificada/salida/RECOVERY-COMPROBACION-0.1.1.json)
+- [rom-simplificada/instalador/empaquetar-sin-bluetooth.py](../rom-simplificada/instalador/empaquetar-sin-bluetooth.py)
+- [rom-simplificada/instalador/manifest-0.1.2.json](../rom-simplificada/instalador/manifest-0.1.2.json)
+- [rom-simplificada/salida/RECOVERY-VERIFICACION-0.1.2.json](../rom-simplificada/salida/RECOVERY-VERIFICACION-0.1.2.json)
 
 ### C-REC · Recovery externo
 
@@ -172,7 +180,7 @@ Requisitos: REQ-11.
 
 ### C-USB · Kingston preparado
 
-**verificado_local**. Entrega0.8 PC verificada; captura recibida63archivos,3finales vacíos. USB preservado durante adquisición.
+**verificado_local**. ROM0.1.2, auxiliar y guía copiados/leídos; tres archivos anteriores archivados/verificados antes de retirar. Informes y respaldos conservados.
 
 Requisitos: REQ-01.
 
@@ -180,12 +188,15 @@ Requisitos: REQ-01.
 - [preparacion-usb/postintento-08-estado.json](../preparacion-usb/postintento-08-estado.json)
 - [rom-simplificada/instalador/LEEME-POSTINTENTO-0.8.txt](../rom-simplificada/instalador/LEEME-POSTINTENTO-0.8.txt)
 - [rom-simplificada/INSTALACION-USB.md](../rom-simplificada/INSTALACION-USB.md)
+- [preparacion-usb/preparar-rom-012.ps1](../preparacion-usb/preparar-rom-012.ps1)
+- [preparacion-usb/rom-012-estado.json](../preparacion-usb/rom-012-estado.json)
+- [rom-simplificada/instalador/LEEME-ROM-0.1.2.txt](../rom-simplificada/instalador/LEEME-ROM-0.1.2.txt)
 
-### C-TV · P291: radios fallan, Android activo
+### C-TV · P291: BT inhabilitado, kernel aún espera
 
-**observado_tv**. 6ANRBT, WiFi/BatteryStats timeout5s; sigue build original/Chrome70. Causa2% no confirmada; LAN ofrecida, IPpendiente.
+**observado_tv**. LAN confirma panic BT/WiFi; ajuste y paquete inhabilitados persisten tras apagado, pero módulo Bluetooth y espera WiFi continúan. ROM no instalada.
 
-Requisitos: .
+Requisitos: REQ-13.
 
 - [docs/ESTADO.md](../docs/ESTADO.md)
 - [diagnostico/primer-tv-evidencia-20260907-000948/HALLAZGOS.md](../diagnostico/primer-tv-evidencia-20260907-000948/HALLAZGOS.md)
@@ -211,6 +222,9 @@ Requisitos: .
 - [diagnostico/primer-tv-postintento-20260907-183025/resumen-saneado.json](../diagnostico/primer-tv-postintento-20260907-183025/resumen-saneado.json)
 - [diagnostico/revision-postintento/analizar-captura08.py](../diagnostico/revision-postintento/analizar-captura08.py)
 - [diagnostico/revision-postintento/test_captura08.py](../diagnostico/revision-postintento/test_captura08.py)
+- [diagnostico/primer-tv-lan-20260907-184926/HALLAZGOS.md](../diagnostico/primer-tv-lan-20260907-184926/HALLAZGOS.md)
+- [diagnostico/primer-tv-lan-20260907-184926/resumen-saneado.json](../diagnostico/primer-tv-lan-20260907-184926/resumen-saneado.json)
+- [diagnostico/observacion-lan/capturar-log.py](../diagnostico/observacion-lan/capturar-log.py)
 
 ### C-APP · APK del producto
 
@@ -227,6 +241,18 @@ Implementación pendiente; especificación en [ESPECIFICACION](ESPECIFICACION.md
 Requisitos: REQ-07, REQ-09.
 
 - [docs/hipotesis/REVISION-CONJUNTA-FABLE.md](../docs/hipotesis/REVISION-CONJUNTA-FABLE.md)
+
+### C-BTCTRL · Control Bluetooth normal
+
+**observado_tv**. API normal guardaOFF; paquete de fábrica inhabilitado por operador y ajuste persistente tras apagado. No es instaladorROM.
+
+Requisitos: REQ-13.
+
+- [rom-simplificada/componentes/control-bluetooth-0.1/README.md](../rom-simplificada/componentes/control-bluetooth-0.1/README.md)
+- [rom-simplificada/componentes/control-bluetooth-0.1/AndroidManifest.xml](../rom-simplificada/componentes/control-bluetooth-0.1/AndroidManifest.xml)
+- [rom-simplificada/componentes/control-bluetooth-0.1/ControlActivity.java](../rom-simplificada/componentes/control-bluetooth-0.1/ControlActivity.java)
+- [rom-simplificada/instalador/compilar-control-bluetooth.py](../rom-simplificada/instalador/compilar-control-bluetooth.py)
+- [rom-simplificada/compilacion/control-bluetooth-0.1/componente.json](../rom-simplificada/compilacion/control-bluetooth-0.1/componente.json)
 
 ## Directorios y cuidado
 
@@ -257,13 +283,13 @@ Requisitos: REQ-07, REQ-09.
 | README.md | 1 | 0.000 |
 | actualizacion-chrome | 51 | 0.417 |
 | analisis-rom | 15 | 1.822 |
-| diagnostico | 161 | 0.018 |
+| diagnostico | 164 | 0.018 |
 | docs | 31 | 0.000 |
 | dossier-s905l2.html | 1 | 0.000 |
 | images | 1 | 1.352 |
 | platform-tools-latest-windows.zip | 1 | 0.008 |
-| preparacion-usb | 81 | 3.688 |
-| rom-simplificada | 2210 | 7.095 |
+| preparacion-usb | 83 | 3.688 |
+| rom-simplificada | 4409 | 10.080 |
 | tools | 18081 | 1.141 |
 
 El inventario excluye derivados documentales y contenido de claves; los tamaños son de archivos, no bloques físicos ocupados. Los temporales retirados se detallan en [LIMPIEZA](LIMPIEZA.md).

@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "title": "TV Base",
-  "snapshot": "2026-09-07T21:38:21.363517+00:00",
-  "state": "Android original activo; WiFi/BT/BatteryStats fallan; captura0.8 parcial por cierre vacío",
+  "snapshot": "2026-09-07T22:18:06.580247+00:00",
+  "state": "ROM0.1.2 sin Bluetooth entregada; Android original sigue activo, cierre pendiente",
   "installed": false,
   "original_tv_backup_confirmed": false,
   "source_of_truth": {
@@ -10,12 +10,12 @@
     "state": "docs/ESTADO.md",
     "decisions": "docs/DECISIONES.md",
     "roadmap": "docs/ROADMAP.md",
-    "delivery_receipt": "preparacion-usb/postintento-08-estado.json",
+    "delivery_receipt": "preparacion-usb/rom-012-estado.json",
     "collaboration": "docs/COLABORACION.md",
     "publication": "docs/PUBLICACION.md",
     "h1_review": "docs/hipotesis/H1-RESULTADO-CODEX.md",
     "fable_review": "docs/hipotesis/REVISION-CONJUNTA-FABLE.md",
-    "latest_capture": "diagnostico/primer-tv-postintento-20260907-183025/resumen-saneado.json"
+    "latest_capture": "diagnostico/primer-tv-lan-20260907-184926/resumen-saneado.json"
   },
   "components": [
     {
@@ -96,9 +96,9 @@
     },
     {
       "id": "C-ROM",
-      "label": "ROM simplificada",
+      "label": "ROM0.1.2 sin Bluetooth",
       "state": "verificado_local",
-      "description": "Limpieza del integrador y revisión0.1.1 que neutraliza reemplazo heredado de recovery. Conserva APIs y hardware del candidato.",
+      "description": "P291 sin pila/HAL/módulo Bluetooth; WiFi conservado y no probado físicamente. 0.1.1 permanece archivada.",
       "files": [
         "rom-simplificada/LEEME.md",
         "rom-simplificada/preparar-copias.py",
@@ -107,13 +107,17 @@
         "rom-simplificada/trabajo/cambios.json",
         "rom-simplificada/instalador/corregir-recovery-0.1.1.py",
         "rom-simplificada/trabajo/revision-0.1.1/revision.json",
-        "rom-simplificada/trabajo/revision-0.1.1/system.raw.img"
+        "rom-simplificada/trabajo/revision-0.1.1/system.raw.img",
+        "rom-simplificada/SIN-BLUETOOTH-0.1.2.md",
+        "rom-simplificada/instalador/preparar-sin-bluetooth-0.1.2.py",
+        "rom-simplificada/trabajo/revision-0.1.2/revision.json"
       ],
       "x": 1,
       "y": 1,
       "requirements": [
         "REQ-01",
-        "REQ-03"
+        "REQ-03",
+        "REQ-13"
       ]
     },
     {
@@ -150,7 +154,10 @@
         "rom-simplificada/instalador/manifest-0.1.1.json",
         "rom-simplificada/salida/TVBASE-P291-A9-0.1.1-RECOVERY.zip",
         "rom-simplificada/salida/RECOVERY-VERIFICACION-0.1.1.json",
-        "rom-simplificada/salida/RECOVERY-COMPROBACION-0.1.1.json"
+        "rom-simplificada/salida/RECOVERY-COMPROBACION-0.1.1.json",
+        "rom-simplificada/instalador/empaquetar-sin-bluetooth.py",
+        "rom-simplificada/instalador/manifest-0.1.2.json",
+        "rom-simplificada/salida/RECOVERY-VERIFICACION-0.1.2.json"
       ],
       "x": 2,
       "y": 0,
@@ -218,12 +225,15 @@
       "id": "C-USB",
       "label": "Kingston preparado",
       "state": "verificado_local",
-      "description": "Entrega0.8 PC verificada; captura recibida63archivos,3finales vacíos. USB preservado durante adquisición.",
+      "description": "ROM0.1.2, auxiliar y guía copiados/leídos; tres archivos anteriores archivados/verificados antes de retirar. Informes y respaldos conservados.",
       "files": [
         "preparacion-usb/preparar-postintento-08.ps1",
         "preparacion-usb/postintento-08-estado.json",
         "rom-simplificada/instalador/LEEME-POSTINTENTO-0.8.txt",
-        "rom-simplificada/INSTALACION-USB.md"
+        "rom-simplificada/INSTALACION-USB.md",
+        "preparacion-usb/preparar-rom-012.ps1",
+        "preparacion-usb/rom-012-estado.json",
+        "rom-simplificada/instalador/LEEME-ROM-0.1.2.txt"
       ],
       "x": 3,
       "y": 1,
@@ -233,9 +243,9 @@
     },
     {
       "id": "C-TV",
-      "label": "P291: radios fallan, Android activo",
+      "label": "P291: BT inhabilitado, kernel aún espera",
       "state": "observado_tv",
-      "description": "6ANRBT, WiFi/BatteryStats timeout5s; sigue build original/Chrome70. Causa2% no confirmada; LAN ofrecida, IPpendiente.",
+      "description": "LAN confirma panic BT/WiFi; ajuste y paquete inhabilitados persisten tras apagado, pero módulo Bluetooth y espera WiFi continúan. ROM no instalada.",
       "files": [
         "docs/ESTADO.md",
         "diagnostico/primer-tv-evidencia-20260907-000948/HALLAZGOS.md",
@@ -260,11 +270,16 @@
         "diagnostico/primer-tv-postintento-20260907-183025/HALLAZGOS.md",
         "diagnostico/primer-tv-postintento-20260907-183025/resumen-saneado.json",
         "diagnostico/revision-postintento/analizar-captura08.py",
-        "diagnostico/revision-postintento/test_captura08.py"
+        "diagnostico/revision-postintento/test_captura08.py",
+        "diagnostico/primer-tv-lan-20260907-184926/HALLAZGOS.md",
+        "diagnostico/primer-tv-lan-20260907-184926/resumen-saneado.json",
+        "diagnostico/observacion-lan/capturar-log.py"
       ],
       "x": 4,
       "y": 1,
-      "requirements": []
+      "requirements": [
+        "REQ-13"
+      ]
     },
     {
       "id": "C-APP",
@@ -294,6 +309,24 @@
         "REQ-07",
         "REQ-09"
       ]
+    },
+    {
+      "id": "C-BTCTRL",
+      "label": "Control Bluetooth normal",
+      "state": "observado_tv",
+      "description": "API normal guardaOFF; paquete de fábrica inhabilitado por operador y ajuste persistente tras apagado. No es instaladorROM.",
+      "files": [
+        "rom-simplificada/componentes/control-bluetooth-0.1/README.md",
+        "rom-simplificada/componentes/control-bluetooth-0.1/AndroidManifest.xml",
+        "rom-simplificada/componentes/control-bluetooth-0.1/ControlActivity.java",
+        "rom-simplificada/instalador/compilar-control-bluetooth.py",
+        "rom-simplificada/compilacion/control-bluetooth-0.1/componente.json"
+      ],
+      "requirements": [
+        "REQ-13"
+      ],
+      "x": 3,
+      "y": 2
     }
   ],
   "edges": [
@@ -361,6 +394,11 @@
       "source": "C-APP",
       "target": "C-GESTION",
       "relation": "contrato propuesto"
+    },
+    {
+      "source": "C-BTCTRL",
+      "target": "C-TV",
+      "relation": "inhabilita Bluetooth actual"
     }
   ],
   "requirements": [
@@ -468,6 +506,16 @@
       "label": "Segundo WebView opcional",
       "components": [
         "C-APP"
+      ],
+      "spec": "docs/ESPECIFICACION.md"
+    },
+    {
+      "id": "REQ-13",
+      "label": "P291 sin Bluetooth, red conservada",
+      "components": [
+        "C-ROM",
+        "C-TV",
+        "C-BTCTRL"
       ],
       "spec": "docs/ESPECIFICACION.md"
     }
@@ -756,6 +804,15 @@
         "C-USB",
         "C-TV"
       ]
+    },
+    {
+      "id": "ADR-21",
+      "file": "docs/DECISIONES.md",
+      "components": [
+        "C-ROM",
+        "C-TV",
+        "C-BTCTRL"
+      ]
     }
   ],
   "validations": [
@@ -834,7 +891,8 @@
         "REQ-07",
         "REQ-08",
         "REQ-10",
-        "REQ-12"
+        "REQ-12",
+        "REQ-13"
       ]
     },
     {
@@ -849,16 +907,16 @@
   ],
   "artifacts": [
     {
-      "name": "TVBASE-P291-A9-0.1.1-RECOVERY.zip",
-      "path": "rom-simplificada/salida/TVBASE-P291-A9-0.1.1-RECOVERY.zip",
-      "bytes": 573089164,
-      "sha256": "e7279a7901bc0b513ccc5d3a66a1b5bf483908a4cffd30f34f5d8d463fc95205"
+      "name": "TVBASE-P291-A9-0.1.2-RECOVERY.zip",
+      "path": "rom-simplificada/salida/TVBASE-P291-A9-0.1.2-RECOVERY.zip",
+      "bytes": 573082917,
+      "sha256": "6c0c4307208c8d0e1a958a3fc6c790fa94021a850599985b0a41b340b821bb99"
     },
     {
-      "name": "AccesoUSB-0.8.apk",
-      "path": "rom-simplificada/compilacion/acceso-usb-0.8/acceso-usb.apk",
-      "bytes": 53651,
-      "sha256": "e103db68fb4deea3479db9a72844eea6e69c5d9beb66403b5673a9636377a148"
+      "name": "ControlBluetooth-0.1.apk",
+      "path": "rom-simplificada/compilacion/control-bluetooth-0.1/ControlBluetooth-0.1.apk",
+      "bytes": 24979,
+      "sha256": "6d7c866478c859ac3948a1132aa75ceebc13d059c32098aaecc0cbb82dbf031f"
     },
     {
       "name": "recovery.img",
@@ -868,9 +926,9 @@
     },
     {
       "name": "LEEME-AHORA.txt",
-      "path": "rom-simplificada/instalador/LEEME-POSTINTENTO-0.8.txt",
-      "bytes": 1460,
-      "sha256": "7cc05f9b24e7c6df8b7b8a4de6e675c48df02cb80077a5a3958dd5c821ab4eb7"
+      "path": "rom-simplificada/instalador/LEEME-ROM-0.1.2.txt",
+      "bytes": 1752,
+      "sha256": "3f26f214f96f126e89cdba0fb68e445b780ed590f762efe03b45b05399643273"
     }
   ],
   "protected_paths": [
@@ -1002,11 +1060,22 @@
       "components": [
         "C-ENTRY"
       ]
+    },
+    {
+      "id": "PROP-14",
+      "label": "P291 sin Bluetooth",
+      "state": "verificado_local",
+      "file": "rom-simplificada/SIN-BLUETOOTH-0.1.2.md",
+      "components": [
+        "C-ROM",
+        "C-TV",
+        "C-BTCTRL"
+      ]
     }
   ],
-  "delivery_label": "0.8 revisada · datos verificados y cierre vacío",
-  "date_label": "Captura revisada el7 de septiembre de2026",
-  "next_step_label": "No repetir0.8/Update. PrimerP291 porLAN alrouter, PCporWiFi; esperarIP y comprobaracceso para observación en vivo.",
+  "delivery_label": "ROM0.1.2 sin Bluetooth: USB verificado",
+  "date_label": "7/9/2026",
+  "next_step_label": "Captura LAN y entrada OEM con Bluetooth inhabilitado; no asumir cierre reparado",
   "public_repository": {
     "url": "https://github.com/tablerosapp-ctrl/mxqpro4k",
     "visibility_requested": "public",

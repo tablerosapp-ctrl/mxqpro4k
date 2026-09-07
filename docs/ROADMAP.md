@@ -15,6 +15,8 @@ Orden por dependencias, sin fechas prometidas. Una etapa se cierra con evidencia
 
 ## Propuestas ordenadas
 
+**PROP-14 · Variante P291 sin Bluetooth, autorizada por el usuario.** EvidenciaLAN: panic en la ruta BT→WiFi y ANR durante inicialización/limpiezaBluetooth. Primero comprobar la desactivación normal en Androidactual; después preparar una revisión separada de0.1.1 que inhiba servicio, HAL y móduloBluetooth conservandoWiFi. Comparar todos los archivos ajenos al cambio y probar la red físicamente. No atribuir al cambio una reparaciónWiFi ni repetir Update sin resolver el cierre. REQ-13, C-ROM/C-TV, M1/M3. [EvidenciaLAN](../diagnostico/primer-tv-lan-20260907-184926/HALLAZGOS.md).
+
 **PROP-01 · Instalar mediante el actualizador real del P291.** La captura 0.6 completó los archivos faltantes y verificó sus hashes. La firma integral de ROM 0.1.1 coincide con los certificados OTA del P291. El APK OEM copia a /data/cache/update.zip y solicita preparar BCB antes del reinicio; el framework debe generar block.map. Acceso 0.7 solo comprueba el ZIP y abrirá ese menú, donde antes se había elegido un ZIP vacío. El primer intento con el paquete real también quedó al 2 % más de diez minutos. No repetir la ruta hasta disponer de evidencia del intervalo posterior o una entrada física distinta confirmada. No afirma corregir el cierre atascado ni verificar persistencia de BCB/mapa. Para la plataforma final, diseñar una preparación verificable separada del reinicio y ensayar la recuperación interna.
 
 **PROP-02 · Paquete de restauración desde originales reales.** Después del primer respaldo, construir un ZIP de restauración específico de esa unidad/perfil, verificar sus payloads y demostrar que se puede entrar al recovery usado. No producir un supuesto respaldo original desde la ROM candidata. No prometer rollback automático en este esquema no A/B.
@@ -56,3 +58,5 @@ La [revisión conjunta](hipotesis/REVISION-CONJUNTA-FABLE.md) explica discrepanc
 ## Resultado posterior0.8 y trabajo acotado
 
 [Captura revisada](../diagnostico/primer-tv-postintento-20260907-183025/HALLAZGOS.md): PROP-09 obtuvo pstore nuevo pero no el tramo de cierre; PROP-13fase1 obtuvo timeouts de WiFi/BatteryStats y ANR repetidos deBluetooth. La captura global es parcial por cierre vacío; datos útiles con25SHA válidos. No se cierraM1. El usuario ofreció LAN: observar en vivo el primerP291 y validar acceso existente, antes de decidir una desactivación reversible de radios separada del reinicio. El siguiente recopilador debe corregir persistencia; no hay APK nueva entregada ni otra instalación ejecutada.
+
+Resultado PROP-14: ROM0.1.2 construida y entregada; VAL-02 local y copiaUSB comprobadas. En Androidactual, ajusteOFF y paqueteBluetooth inhabilitado persisten tras apagado; módulos/kernel todavía esperan. No cierraM1 ni demuestraWiFi recuperado. Switchinterno probado porusuario sinresultado; siguiente contraste OEM requiere registro en vivo.

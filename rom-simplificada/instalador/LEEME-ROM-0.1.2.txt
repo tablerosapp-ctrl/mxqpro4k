@@ -1,0 +1,37 @@
+TV BASE P291 · ROM 0.1.2 sin Bluetooth
+
+Este pendrive contiene una nueva variante preparada para el PRIMER TV:
+P291 / gxlx2_p291_1g, Android 9. No usar en el segundo equipo P271.
+
+ARCHIVO DE ROM
+TVBASE-P291-A9-0.1.2-RECOVERY.zip
+
+La variante desactiva Bluetooth en el sistema y conserva los componentes
+de WiFi. Recuperar WiFi todavía requiere una prueba física; no se da por
+reparado por quitar Bluetooth. Conserva Chrome 138 y la plataforma de TV Base.
+
+QUÉ HACER AHORA
+Esperar la indicación específica del operador antes de pulsar Update o
+reiniciar. Se está revisando por LAN el bloqueo de cierre de Android.
+El ZIP nuevo no acredita que ese bloqueo esté resuelto. No repetir los
+botones de reinicio de Acceso USB ni el intento detenido al 2 %.
+
+Cuando se indique el siguiente intento, el paquete que corresponde elegir
+en el actualizador es TVBASE-P291-A9-0.1.2-RECOVERY.zip. El procedimiento
+y el momento de confirmar Update se comunicarán tras esa revisión.
+
+CONTROL BLUETOOTH
+ControlBluetooth-0.1.apk es el auxiliar para controlar Bluetooth mediante
+la API normal de Android. Ya se está utilizando durante la revisión por LAN.
+No es la ROM ni un instalador de sistema. No pulsar «Restaurar Bluetooth»
+ni repetir una acción que esté esperando respuesta.
+
+CONTENIDO CONSERVADO
+recovery.img, TVBASE-MEDIA.txt, informes y carpetas de respaldo permanecen
+en el pendrive. La ROM 0.1.1, Acceso USB 0.8 y su guía anterior se archivan
+con verificación en la PC antes de retirarlos de este medio.
+
+Preparar y verificar este pendrive no demuestra que la ROM se haya instalado
+en el TV. El respaldo original del equipo y el arranque de TV Base siguen
+pendientes de confirmación. No borrar los informes ni las carpetas
+TVBASE-respaldo-*.

@@ -120,7 +120,10 @@ def audit(config):
             elif value == b'android@android.com':
                 email_classes['public_aosp_certificate'] += 1
             elif name in ('rom-simplificada/inspeccion/system-inventario.json',
-                          'rom-simplificada/inspeccion/vendor-inventario.json') and re.fullmatch(
+                          'rom-simplificada/inspeccion/vendor-inventario.json',
+                          'rom-simplificada/instalador/preparar-sin-bluetooth-0.1.2.py',
+                          'rom-simplificada/trabajo/revision-0.1.2/revision.json',
+                          'rom-simplificada/salida/RECOVERY-VERIFICACION-0.1.2.json') and re.fullmatch(
                           rb'(?:(?:android|vendor|camera)\.[A-Za-z0-9_.-]+|libaudiohal|libamgralloc_ext)@\d+(?:\.\d+)*[A-Za-z0-9_.-]*', value):
                 email_classes['android_library_filename'] += 1
             else:

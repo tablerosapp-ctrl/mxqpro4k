@@ -41,3 +41,7 @@ Formato de retorno: estado de la hipótesis; evidencia a favor/en contra; causa 
 Contiene fuentes propias, recetas, contratos, historial saneado, manifiestos y conclusiones. Imágenes de firmware, APK, SDK, claves, fotos originales y registros crudos quedan en la PC operadora. Algunos enlaces a artefactos locales estarán ausentes al clonar; los hashes y hallazgos públicos permiten reconocerlos. No solicitar esos binarios antes de comprobar si son necesarios para la pregunta concreta.
 
 El historial publicado anonimiza identificadores locales, manteniendo intactos el Git operativo y los artefactos firmados. Los SHA de artefactos describen los binarios originales; los SHA de fuentes de pruebas describen los bytes locales previos a normalización/anonimización. **Un clon es material de revisión, no un instalador listo para cualquier USB.** [Proceso de publicación](PUBLICACION.md).
+
+## Actualización LAN y variante sinBluetooth
+
+[Lectura del primerP291](../diagnostico/primer-tv-lan-20260907-184926/HALLAZGOS.md): panic en glResetTrigger del móduloWiFi desde coordinaciónBluetooth; ANR con esperas de limpieza/inicialización. API BluetoothOFF e inhabilitación del paquete persisten tras apagado, pero el kernel aún cargaBT y WiFi quedaLoading. Usuario pide prescindir deBluetooth; [ROM0.1.2](../rom-simplificada/SIN-BLUETOOTH-0.1.2.md) preparada y entregada. Fable puede revisar si la exclusión cubre la carga sin dañarWiFi; no afirmar corrección física ni cierre del2%. Switch interno probado sin efecto.

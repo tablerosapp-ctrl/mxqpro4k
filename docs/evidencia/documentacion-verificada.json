@@ -1,20 +1,20 @@
 {
-  "date_utc": "2026-09-07T21:38:24.434757+00:00",
+  "date_utc": "2026-09-07T22:19:50.819316+00:00",
   "state": "passed",
-  "links_checked": 271,
-  "component_paths_checked": 100,
+  "links_checked": 303,
+  "component_paths_checked": 117,
   "graph_valid": true,
   "roadmap_acyclic": true,
   "html_embedded_data_matches": true,
   "artifacts": [
     {
-      "name": "TVBASE-P291-A9-0.1.1-RECOVERY.zip",
-      "sha256": "e7279a7901bc0b513ccc5d3a66a1b5bf483908a4cffd30f34f5d8d463fc95205",
+      "name": "TVBASE-P291-A9-0.1.2-RECOVERY.zip",
+      "sha256": "6c0c4307208c8d0e1a958a3fc6c790fa94021a850599985b0a41b340b821bb99",
       "matched": true
     },
     {
-      "name": "AccesoUSB-0.8.apk",
-      "sha256": "e103db68fb4deea3479db9a72844eea6e69c5d9beb66403b5673a9636377a148",
+      "name": "ControlBluetooth-0.1.apk",
+      "sha256": "6d7c866478c859ac3948a1132aa75ceebc13d059c32098aaecc0cbb82dbf031f",
       "matched": true
     },
     {
@@ -24,7 +24,7 @@
     },
     {
       "name": "LEEME-AHORA.txt",
-      "sha256": "7cc05f9b24e7c6df8b7b8a4de6e675c48df02cb80077a5a3958dd5c821ab4eb7",
+      "sha256": "3f26f214f96f126e89cdba0fb68e445b780ed590f762efe03b45b05399643273",
       "matched": true
     }
   ],

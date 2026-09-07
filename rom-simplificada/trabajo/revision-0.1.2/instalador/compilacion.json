@@ -1,0 +1,35 @@
+{
+  "version": "0.1.2",
+  "package_id": "TVBASE-P291-A9-0.1.2",
+  "ldflags": "-s -w -X main.allowedPackageID=TVBASE-P291-A9-0.1.2",
+  "go_version": "go1.27.1",
+  "linux_arch": "arm",
+  "goarm": "7",
+  "cgo_enabled": false,
+  "installer_binary": "rom-simplificada/trabajo/revision-0.1.2/instalador/update-binary",
+  "installer_sha256": "c475b37146e0d2507049456ff7cf1be1c32d700063508fef07588ec6c8b64450",
+  "validator": "rom-simplificada/trabajo/revision-0.1.2/instalador/verify-package.exe",
+  "validator_sha256": "723080ff9e6e85fd08f18ea0e80c7f08f95ebbba77f3b4ccf24d00d5319ed09d",
+  "go_tests_passed": [
+    "TestPackageChecks/wrong_board",
+    "TestPackageChecks/bootloader_write",
+    "TestPackageChecks/missing_partition",
+    "TestPackageChecks/wrong_size",
+    "TestPackageChecks/wrong_media",
+    "TestPackageChecks",
+    "TestExactCopy"
+  ],
+  "previous_package_rejected": true,
+  "previous_package_sha256": "e7279a7901bc0b513ccc5d3a66a1b5bf483908a4cffd30f34f5d8d463fc95205",
+  "previous_package_rejection_exit": 2,
+  "go_sources": {
+    "go.mod": "9040cf49e752ca5fdacbb1c4df6b469265ba5adbe20208f84b143e297f136b4e",
+    "package.go": "ccf180c5e3f38797d722e67012e6c74c59ad1b8a18bee8a5477c48f4d9d1a31b",
+    "package_test.go": "84be1309932df0ff50b144a452d987048a4c9098d19f071d057a15ec9ea42331",
+    "main_linux.go": "09c9336fb9fbec6f728ffcf56ad04f127009c0d58c13079aef43348356fc7373",
+    "main_windows.go": "cc378b3829229d69bbbb3083a9bf743f0f2b8b33c7c3ceddb8216b7a47b45cf0"
+  },
+  "openjdk_verifier_source_sha256": "d3cdcd6f23b6679c829ddc42f786a620f0c94ea94eb813fc8a4f4696af1c7db2",
+  "openjdk_verifier_class_sha256": "98db1e5e6ce7fdaa9e20bd5b2a9e88ab518b6667b762b0ef83d628e874b2c7ca",
+  "physically_tested": false
+}

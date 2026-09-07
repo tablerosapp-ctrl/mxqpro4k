@@ -1,6 +1,10 @@
 # Instalador experimental P291
 
-**Vigente:** ROM0.1.1 preparada pero sin instalar. Acceso USB0.4 dejó sin señal; la evidencia física0.5 ya analizada favorece un atasco al cerrar el sistema antes del reinicio físico. La captura0.5 quedó incompleta por su cuota de APK y aceptó SHA binarios vacíos por una colisión de nombre en mksh. **Acceso USB0.6 completa los archivos faltantes sin reiniciar ni abrir el actualizador**; se construye en fuentes/salida separadas. Su nueva copia al USB está verificada y no hay prueba física0.6 acreditada. [Hallazgos del P291](../../diagnostico/primer-tv-evidencia-20260907-000948/HALLAZGOS.md) · [Pasos para el usuario](../INSTALACION-USB.md) · [Estado](../../docs/ESTADO.md) · [Mapa](../../docs/MAPA-ARCHIVOS.md).
+**Vigente:** ROM0.1.2 sin Bluetooth construida y entregada, sin instalación física confirmada. [Receta y verificaciones](../SIN-BLUETOOTH-0.1.2.md) · [Estado actual](../../docs/ESTADO.md) · [Guía USB](../INSTALACION-USB.md). La observación LAN confirmó un panic BT/WiFi y persistencia de la inhabilitación Bluetooth tras apagar; la entrada a recovery sigue pendiente.
+
+## Antecedente de recopiladores anteriores
+
+**Histórico:** ROM0.1.1 preparada pero sin instalar. Acceso USB0.4 dejó sin señal; la evidencia física0.5 ya analizada favorece un atasco al cerrar el sistema antes del reinicio físico. La captura0.5 quedó incompleta por su cuota de APK y aceptó SHA binarios vacíos por una colisión de nombre en mksh. **Acceso USB0.6 completa los archivos faltantes sin reiniciar ni abrir el actualizador**; se construye en fuentes/salida separadas. Su nueva copia al USB está verificada y no hay prueba física0.6 acreditada. [Hallazgos del P291](../../diagnostico/primer-tv-evidencia-20260907-000948/HALLAZGOS.md) · [Pasos para el usuario](../INSTALACION-USB.md) · [Estado](../../docs/ESTADO.md) · [Mapa](../../docs/MAPA-ARCHIVOS.md).
 
 ## Cadena de ejecución
 

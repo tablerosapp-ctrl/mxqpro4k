@@ -1,0 +1,38 @@
+{
+  "format": 1,
+  "id": "TVBASE-P291-A9-0.1.2",
+  "dt_id": "gxlx2_p291_1g",
+  "media_id": "TVBASE-P291-20260906-4dc82786",
+  "images": [
+    {
+      "name": "system",
+      "entry": "tvbase/system.img",
+      "size": 1342177280,
+      "sha256": "22bd6b617752415f13131a64f64330aa39e5a3713c05e6534322a3f72b01f45b"
+    },
+    {
+      "name": "vendor",
+      "entry": "tvbase/vendor.img",
+      "size": 335544320,
+      "sha256": "0882962989f38c81a99a9e623b7f1e339e45162b3f60d8e05eefd1215db20896"
+    },
+    {
+      "name": "product",
+      "entry": "tvbase/product.img",
+      "size": 134217728,
+      "sha256": "3fb07da94443eb7152eb64bb94f23c6ce23da515fe36b3ab03410eb24df8ef40"
+    },
+    {
+      "name": "odm",
+      "entry": "tvbase/odm.img",
+      "size": 134217728,
+      "sha256": "f18f01176433f943cf5cb6c6b2f9ea782b39157a8d68dcab4ee88b010806085f"
+    },
+    {
+      "name": "boot",
+      "entry": "tvbase/boot.img",
+      "size": 12726656,
+      "sha256": "d7cfafa9b4978e72e63851a8f8f3b9eaf346bc4fb24b8bdb50ed02fcedf100ba"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "estado": "verificado",
+  "version": "0.1.2",
+  "fecha": "2026-09-07T19:12:34.4613252-03:00",
+  "archivo_local": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\privado\\usb-retirados-rom012-20260907-191131-4352621e",
+  "tv_flasheado": false,
+  "reboot_requested": false,
+  "update_requested": false,
+  "files": [
+    {
+      "archivo": "TVBASE-P291-A9-0.1.2-RECOVERY.zip",
+      "bytes": 573082917,
+      "sha256": "6c0c4307208c8d0e1a958a3fc6c790fa94021a850599985b0a41b340b821bb99",
+      "lectura_verificada": true
+    },
+    {
+      "archivo": "ControlBluetooth-0.1.apk",
+      "bytes": 24979,
+      "sha256": "6d7c866478c859ac3948a1132aa75ceebc13d059c32098aaecc0cbb82dbf031f",
+      "lectura_verificada": true
+    },
+    {
+      "archivo": "LEEME-AHORA.txt",
+      "bytes": 1752,
+      "sha256": "3f26f214f96f126e89cdba0fb68e445b780ed590f762efe03b45b05399643273",
+      "lectura_verificada": true
+    }
+  ],
+  "retirados": [
+    {
+      "archivo": "TVBASE-P291-A9-0.1.1-RECOVERY.zip",
+      "bytes": 573089164,
+      "sha256": "e7279a7901bc0b513ccc5d3a66a1b5bf483908a4cffd30f34f5d8d463fc95205",
+      "copia_pc_verificada": true,
+      "retirado": true
+    },
+    {
+      "archivo": "AccesoUSB-0.8.apk",
+      "bytes": 53651,
+      "sha256": "e103db68fb4deea3479db9a72844eea6e69c5d9beb66403b5673a9636377a148",
+      "copia_pc_verificada": true,
+      "retirado": true
+    },
+    {
+      "archivo": "LEEME-AHORA.txt",
+      "bytes": 1460,
+      "sha256": "7cc05f9b24e7c6df8b7b8a4de6e675c48df02cb80077a5a3958dd5c821ab4eb7",
+      "copia_pc_verificada": true,
+      "retirado": true
+    }
+  ],
+  "bytes_retirados": 573144275,
+  "codigo_nativo": 0,
+  "rom_proof_sha256": "abd6a2331da511f1f66c7cd8690d0f6e597df6e74f51d4ec3e3a1b7f52f685e8",
+  "revision_report_sha256": "e444886e19fe1a81e22b81605ecacc75d74fbb4e79091f17b3f7fa0872834a81",
+  "drive_letter": "D",
+  "detalle": "ROM0.1.2 sin Bluetooth, auxiliar y guia copiados/leidos. Solo tres nombres viejos admisibles archivados/verificados antes de retirarlos. Recovery, marcador, informes y respaldos conservados. Sin formato, Update ni reinicio. Instalacion fisica pendiente."
+}

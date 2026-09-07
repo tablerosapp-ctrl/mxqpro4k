@@ -81,6 +81,8 @@ mxqpro4k/
 │   │   ├── analizar-registro.py
 │   │   ├── resumen-saneado.json
 │   │   └── test_analizar_registro.py
+│   ├── observacion-lan/
+│   │   └── capturar-log.py
 │   ├── primer-tv-20260906-actualizacion-local/
 │   │   ├── acceso-02-identificador-adb.png
 │   │   ├── acceso-03-estado-correcto.png
@@ -95,6 +97,9 @@ mxqpro4k/
 │   │   ├── HALLAZGOS.md
 │   │   └── resumen-saneado.json
 │   ├── primer-tv-evidencia-20260907-000948/
+│   │   ├── HALLAZGOS.md
+│   │   └── resumen-saneado.json
+│   ├── primer-tv-lan-20260907-184926/
 │   │   ├── HALLAZGOS.md
 │   │   └── resumen-saneado.json
 │   ├── primer-tv-postintento-20260907-183025/
@@ -187,11 +192,13 @@ mxqpro4k/
 │   ├── preparar-evidencia-06.ps1
 │   ├── preparar-instalador-android.ps1
 │   ├── preparar-postintento-08.ps1
+│   ├── preparar-rom-012.ps1
 │   ├── probar-archivo-kingston.ps1
 │   ├── recuperacion-20260905-000135/ [6 archivos; 0.0 MB; agrupado]
 │   ├── recuperar-kingston-windows.ps1
 │   ├── revision-011-20260906-192456/ [2 archivos; 0.0 MB; agrupado]
 │   ├── revision-011-estado.json
+│   ├── rom-012-estado.json
 │   ├── update.zip
 │   └── variantes/ [4 archivos; 0.0 MB; agrupado]
 ├── rom-simplificada/
@@ -261,6 +268,10 @@ mxqpro4k/
 │   │   │   ├── Evidencia.java
 │   │   │   ├── EvidenciaScripts.java
 │   │   │   └── generar-scripts.py
+│   │   ├── control-bluetooth-0.1/
+│   │   │   ├── AndroidManifest.xml
+│   │   │   ├── ControlActivity.java
+│   │   │   └── README.md
 │   │   ├── inicio/
 │   │   │   ├── AndroidManifest.xml
 │   │   │   └── Inicio.java
@@ -315,11 +326,13 @@ mxqpro4k/
 │   │   ├── ADB-TESTS.json
 │   │   ├── AdbHarness.java
 │   │   ├── candidato-bootloader-modos.json
+│   │   ├── compilar-control-bluetooth.py
 │   │   ├── compilar-entrada07.py
 │   │   ├── compilar-evidencia05.py
 │   │   ├── compilar-evidencia06.py
 │   │   ├── compilar-evidencia08.py
 │   │   ├── corregir-recovery-0.1.1.py
+│   │   ├── empaquetar-sin-bluetooth.py
 │   │   ├── empaquetar.py
 │   │   ├── ENTRADA-TESTS-0.4.txt
 │   │   ├── ENTRADA-TESTS-0.7.json
@@ -361,16 +374,19 @@ mxqpro4k/
 │   │   ├── LEEME-EVIDENCIA-0.5.txt
 │   │   ├── LEEME-EVIDENCIA-0.6.txt
 │   │   ├── LEEME-POSTINTENTO-0.8.txt
+│   │   ├── LEEME-ROM-0.1.2.txt
 │   │   ├── LEEME-USB.txt
 │   │   ├── main_linux.go
 │   │   ├── main_windows.go
 │   │   ├── manifest-0.1.1.json
+│   │   ├── manifest-0.1.2.json
 │   │   ├── manifest.json
 │   │   ├── MKSH-HALLAZGO-0.5.md
 │   │   ├── package.go
 │   │   ├── package_test.go
 │   │   ├── PAQUETE-GO-OK.txt
 │   │   ├── preparar-recovery-externo.py
+│   │   ├── preparar-sin-bluetooth-0.1.2.py
 │   │   ├── README.md
 │   │   ├── test_adb.py
 │   │   ├── test_entrada07.py
@@ -382,12 +398,14 @@ mxqpro4k/
 │   ├── salida/
 │   │   ├── RECOVERY-COMPROBACION-0.1.1.json
 │   │   ├── RECOVERY-VERIFICACION-0.1.1.json
+│   │   ├── RECOVERY-VERIFICACION-0.1.2.json
 │   │   ├── RECOVERY-VERIFICACION.json
 │   │   ├── system-fsck.txt
 │   │   ├── system.sparse.img
 │   │   ├── TVBASE-P291-A9-0.1-EXPERIMENTAL.img
 │   │   ├── TVBASE-P291-A9-0.1-RECOVERY.zip
 │   │   ├── TVBASE-P291-A9-0.1.1-RECOVERY.zip
+│   │   ├── TVBASE-P291-A9-0.1.2-RECOVERY.zip
 │   │   ├── vendor-fsck.txt
 │   │   ├── vendor.sparse.img
 │   │   └── VERIFICACION.json
@@ -432,6 +450,55 @@ mxqpro4k/
 │   │   │   ├── system.raw.img
 │   │   │   ├── update-binary
 │   │   │   └── verify-package.exe
+│   │   ├── revision-0.1.2/
+│   │   │   ├── instalador/
+│   │   │   │   ├── compilacion.json
+│   │   │   │   ├── go-arm.log
+│   │   │   │   ├── go-cache/ [2124 archivos; 154.8 MB; agrupado]
+│   │   │   │   ├── go-tests.jsonl
+│   │   │   │   ├── go-windows.log
+│   │   │   │   ├── new-package-accepted.log
+│   │   │   │   ├── old-package-rejected.log
+│   │   │   │   ├── openjdk/ [1 archivos; 0.0 MB; agrupado]
+│   │   │   │   ├── openjdk-compile.log
+│   │   │   │   ├── openjdk-signature-verified.log
+│   │   │   │   ├── update-binary
+│   │   │   │   └── verify-package.exe
+│   │   │   ├── paquete/
+│   │   │   │   └── unsigned-0.1.2.zip
+│   │   │   ├── context-after-system-0.txt
+│   │   │   ├── context-after-system-1.txt
+│   │   │   ├── context-after-system-2.txt
+│   │   │   ├── context-after-vendor-0.txt
+│   │   │   ├── context-after-vendor-1.txt
+│   │   │   ├── context-after-vendor-2.txt
+│   │   │   ├── context-before-system-0.txt
+│   │   │   ├── context-before-system-1.txt
+│   │   │   ├── context-before-system-2.txt
+│   │   │   ├── context-before-vendor-0.txt
+│   │   │   ├── context-before-vendor-1.txt
+│   │   │   ├── context-before-vendor-2.txt
+│   │   │   ├── context-system-0
+│   │   │   ├── context-system-1
+│   │   │   ├── context-system-2
+│   │   │   ├── context-vendor-0
+│   │   │   ├── context-vendor-1
+│   │   │   ├── context-vendor-2
+│   │   │   ├── file-system-0
+│   │   │   ├── file-system-1
+│   │   │   ├── file-system-2
+│   │   │   ├── file-vendor-0
+│   │   │   ├── file-vendor-1
+│   │   │   ├── file-vendor-2
+│   │   │   ├── revision.json
+│   │   │   ├── system-debugfs.log
+│   │   │   ├── system-debugfs.txt
+│   │   │   ├── system-fsck.txt
+│   │   │   ├── system.raw.img
+│   │   │   ├── vendor-debugfs.log
+│   │   │   ├── vendor-debugfs.txt
+│   │   │   ├── vendor-fsck.txt
+│   │   │   └── vendor.raw.img
 │   │   ├── cambios.json
 │   │   ├── copias-originales.json
 │   │   ├── product.raw.img
@@ -445,7 +512,7 @@ mxqpro4k/
 │   │   └── vendor.raw.img
 │   ├── .gitignore
 │   ├── claves-desarrollo/ [protegido; no se enumera su contenido]
-│   ├── compilacion/ [186 archivos; 1.3 MB; agrupado]
+│   ├── compilacion/ [205 archivos; 1.4 MB; agrupado]
 │   ├── compilar-componentes.py
 │   ├── fuentes-webview/ [14 archivos; 0.4 MB; agrupado]
 │   ├── INSTALACION-USB.md
@@ -453,6 +520,7 @@ mxqpro4k/
 │   ├── LEEME.md
 │   ├── preparar-copias.py
 │   ├── simplificar.py
+│   ├── SIN-BLUETOOTH-0.1.2.md
 │   └── verificar-y-empaquetar.py
 ├── tools/
 │   ├── compilar-android/ [4 archivos; 125.6 MB; agrupado]

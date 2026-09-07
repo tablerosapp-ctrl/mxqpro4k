@@ -59,3 +59,7 @@ Adoptar PROP-09 y fase1 de PROP-13 con0.8, para aprovechar el intento ya ocurrid
 ## ADR-20 · Separar captura, persistencia y respuesta del servicio
 
 Tras [0.8](../diagnostico/primer-tv-postintento-20260907-183025/HALLAZGOS.md), un mensaje de éxito y una lectura desde caché no acreditan que el cierre llegue al mover el USB. No reconstruir el cierre vacío ni repetir los datos ya íntegros. Exigir sincronización dirigida y errores explícitos antes de otra entrega. `dumpsys` puede retornar0 al agotar un servicio; interpretar también el texto. No repetir consultas de BatteryStats en bucle: pueden dejar trabajo pendiente en el servicio. La LAN ofrecida requiere el primerP291; no extrapolar delP271 ni elevar permisos.
+
+## ADR-21 · Excluir Bluetooth del primer perfil
+
+El usuario autoriza prescindir deBluetooth para instalar; WiFi sigue siendo objetivo. La [lecturaLAN](../diagnostico/primer-tv-lan-20260907-184926/HALLAZGOS.md) documenta un panic en la coordinación BT→WiFi y esperas de inicialización/limpiezaBluetooth. Separar el ajuste reversible en Androidactual de la nueva recetaROM. No cambiar autenticación ni permisosdel shell para apagar una radio: usar los controles/API normales de Android. El candidato tiene binarios distintos, pero eso no prueba una corrección. La variante siguiente conserva0.1.1 y sus recibos; debe suprimir las rutas de inicio/cargaBluetooth y conservar las deWiFi, verificándolas antes de entregar. REQ-13/PROP-14.

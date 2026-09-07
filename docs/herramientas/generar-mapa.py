@@ -46,6 +46,9 @@ for p in (ROOT / 'preparacion-usb').iterdir():
 for p in (ROOT / 'rom-simplificada/instalador').iterdir():
     if p.is_dir() and (p.name.startswith('host-classes') or p.name.startswith(('fixture-evidencia-', 'fixture-entrada-'))):
         collapse.add(p.relative_to(ROOT).as_posix())
+for p in (ROOT / 'rom-simplificada/trabajo').rglob('*'):
+    if p.is_dir() and p.name in ('go-cache', 'go-mod-cache', 'openjdk'):
+        collapse.add(p.relative_to(ROOT).as_posix())
 tree = {}
 fold = defaultdict(lambda: [0, 0])
 for row in rows:

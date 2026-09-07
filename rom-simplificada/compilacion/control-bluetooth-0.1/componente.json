@@ -1,0 +1,44 @@
+{
+  "component": "control-bluetooth",
+  "version": "0.1",
+  "package": "com.tvbase.bluetoothcontrol",
+  "version_code": 1,
+  "path": "rom-simplificada/compilacion/control-bluetooth-0.1/ControlBluetooth-0.1.apk",
+  "bytes": 24979,
+  "sha256": "6d7c866478c859ac3948a1132aa75ceebc13d059c32098aaecc0cbb82dbf031f",
+  "signer_sha256": "d2136c0e519d477d2be34b55590d9e548137682f9c2573f330a0a6e91833b613",
+  "permissions": [
+    "android.permission.BLUETOOTH",
+    "android.permission.BLUETOOTH_ADMIN"
+  ],
+  "min_sdk": 28,
+  "target_sdk": 28,
+  "purpose": "explicit_normal_bluetooth_api_control",
+  "tv_tested": false,
+  "validation": {
+    "compiled_api28": true,
+    "signed_verified_api28": true,
+    "permissions_exact": true,
+    "zipalign": true,
+    "zip_crc": true,
+    "bounded_static_dex_scan": true
+  },
+  "limits": [
+    "No physical validation",
+    "8s is a visual deadline, not server cancellation",
+    "API acceptance and observed OFF do not prove driver quiescence",
+    "One in-flight call per process; persisted unfinished request blocks replay after process loss"
+  ],
+  "sources": {
+    "rom-simplificada/componentes/control-bluetooth-0.1/AndroidManifest.xml": "5d00280577d85b098e76a05ca308aa1f8ee0c20df06da1b0074ecf44b15219b2",
+    "rom-simplificada/componentes/control-bluetooth-0.1/ControlActivity.java": "5750f26bca1f55385100f564db2098562d894f6cd8ebd1f761cdbc64f549cb1c",
+    "rom-simplificada/componentes/control-bluetooth-0.1/README.md": "d4234775a6536f8172b0674f5302e8eb9af35800cef4ab543f2424352313f90b"
+  },
+  "builder_sha256": "c6bbc2fdefbf6589dc8470e4a6da58d158785c2bf61937ab355c526bcdcc99e0",
+  "verification_recovery": {
+    "reason": "aapt2 uses minSdkVersion label; verification assertion corrected",
+    "apk_rebuilt": false,
+    "java_or_manifest_changed_after_build": false,
+    "verification_only_rerun": true
+  }
+}

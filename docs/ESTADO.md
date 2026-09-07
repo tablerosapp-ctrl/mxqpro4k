@@ -1,6 +1,18 @@
 # Estado operativo
 
-## Vigente · captura física0.8 revisada el7/9/2026
+## Vigente · 7/9/2026, entrega0.1.2 y diagnósticoLAN
+
+La [ROM0.1.2 sin Bluetooth](../rom-simplificada/SIN-BLUETOOTH-0.1.2.md) está construida y entregada enKingston: [copia y lectura verificada](../preparacion-usb/rom-012-estado.json),19:12:34ART,código0. Se archivaron y verificaron enPC tres archivos viejos antes de retirarlos; informes, recovery y respaldos permanecen. No volver a preparar ni formatear elUSB.
+
+El usuario autorizó excluirBluetooth del primerP291 y conservarWiFi como objetivo. La [observaciónLAN](../diagnostico/primer-tv-lan-20260907-184926/HALLAZGOS.md) revela un panic en la coordinaciónBT→WiFi. La API normal guardóBluetoothOFF; quedó actividad residual y se inhabilitó solamente com.android.bluetooth parausuario0. Tras el apagado físico indicado, volvióAndroid con otro bootID: el ajuste0 y el paquete inhabilitado persisten, sin procesoAPKBluetooth. Sin embargo, el firmware sigue cargando el móduloBluetooth y el deWiFi queda enLoading con hilosD. **No está demostrado que el cierre se haya reparado.**
+
+La ROM nueva elimina pila/HAL/móduloBluetooth operativo y conserva170archivosWiFi, además de boot/product/odm de0.1.1. Los drivers son distintos de los delTVactual, sin prueba física de corrección. No se instalóTVBASE. Recovery, respaldo delTV, primer arranque y WebView/video siguen pendientes.
+
+El usuario probó el switch interno de la placa tanto con Android como al conectar alimentación, sin efecto visible. No repetir esa vía ni dar por confirmado que seaRESET. Pasó el pendrive alTV; se prepara un flujo pasivo de registro del cierre para un intentoOEM con Bluetooth inhabilitado desde el arranque. No se ha confirmado un nuevoUpdate en este estado documental. Una caída deADB no probará instalación.
+
+La revisión automática rechazó una reconsultaBatteryStats por riesgo de dejar trabajo atascado: no se ejecutó. Se usaron registros y procesos como alternativa. No repetirla por otro conector.
+
+## Antecedente · captura física0.8 revisada el7/9/2026
 
 El Kingston trajo63archivos:25sellos de datos válidos, etapas1–9 válidas, pero COMPLETO/su SHA/etapa10 vacíos. El usuario vio aviso de éxito: **cierre no persistido, captura parcial con informes útiles verificados**. No repetir0.8. Su código no exigía sincronización antes de avisar; corrección pendiente de implementar/desplegar. [Hallazgos y próximo paso](../diagnostico/primer-tv-postintento-20260907-183025/HALLAZGOS.md) · [Resumen verificable](../diagnostico/primer-tv-postintento-20260907-183025/resumen-saneado.json).
 

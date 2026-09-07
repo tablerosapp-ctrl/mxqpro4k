@@ -1,0 +1,697 @@
+{
+  "schema_version": 1,
+  "observed_utc": "2026-09-07T22:13:54.965272+00:00",
+  "profile": {
+    "dt": "gxlx2_p291_1g",
+    "android_api": 28,
+    "uid": 2000,
+    "network_interface": "eth0",
+    "original_android": true
+  },
+  "rom_installed": false,
+  "original_backup_confirmed": false,
+  "kernel_panic": {
+    "observed": true,
+    "function": "glResetTrigger.part.1",
+    "module": "wlan_mt7663_sdio",
+    "kernel_thread": "btmtk_main_serv",
+    "uptime_seconds": 18560.408728,
+    "reboot_delay_seconds": 5,
+    "exact_relation_to_user_report": "compatible_not_proven"
+  },
+  "anr": {
+    "process": "com.android.bluetooth",
+    "existing_dropbox_entry": "2026-09-07 18:49:00 system_app_anr",
+    "main_wait": "cleanupNative/clean_up_stack/semaphore_wait",
+    "stack_manager_wait": "event_start_up_stack/future_await",
+    "hci_wait": "BpHwBluetoothHci.initialize/waitForResponse",
+    "system_server_trace_obtained": false
+  },
+  "bluetooth_intervention": {
+    "utc": "2026-09-07T22:01:29Z",
+    "command": "explicit normal API through ControlBluetooth0.1",
+    "calls": 1,
+    "api_accepted": true,
+    "setting_before": 1,
+    "setting_after": 0,
+    "observed_state_before": "OFF",
+    "observed_state_after": "OFF",
+    "same_boot_before_after": true,
+    "pending": "Cold boot confirmed; kernel Bluetooth and WiFi waits still present",
+    "wifi_changed": false,
+    "normal_disable_did_not_stop_all_activity": true,
+    "residual_anr_after_disable_seconds": 163.98,
+    "package_disabled_user0": true,
+    "package_disable_utc": "2026-09-07T22:06:50Z"
+  },
+  "files": [
+    {
+      "file": "anr-directorio.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "anr-directorio.txt",
+      "bytes": 61,
+      "sha256": "cfde88ed1af318a94faa18a9666090297b47dfc3d05ddf665ab8610e99fa1fba"
+    },
+    {
+      "file": "anr-listado.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "anr-listado.txt",
+      "bytes": 790,
+      "sha256": "13de05a71d4a0b5ab23b2e08c6645d4e3b5e90d49f970a04aacabeec40bef365"
+    },
+    {
+      "file": "anr-recibo.json",
+      "bytes": 320,
+      "sha256": "b491952f0eb8b8de4910be5d6c70a48109a970b7894c7b6e2e6a436cc94b98b8"
+    },
+    {
+      "file": "api.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "api.txt",
+      "bytes": 4,
+      "sha256": "aa043caaed4834c480a3cc4731b00af0f600e5548e7117b9f0b6fa5ac19939b3"
+    },
+    {
+      "file": "bluetooth-anr-184900.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "bluetooth-anr-184900.txt",
+      "bytes": 73173,
+      "sha256": "18ce5aafb44877aaa7468479ac8a0e44b298d8266a0b18e6cf02623aabfadefa"
+    },
+    {
+      "file": "bluetooth-antes.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "bluetooth-antes.txt",
+      "bytes": 881,
+      "sha256": "b3bbe2576533acd16d715597a3ed493b3c78a837bddbcc5fea7bd50666cd7387"
+    },
+    {
+      "file": "bluetooth-despues-1.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "bluetooth-despues-1.txt",
+      "bytes": 1151,
+      "sha256": "a5db4839d00e42fe2c56b7869af69c700c52aae64b5a5fc48e5a4ee058fd7eee"
+    },
+    {
+      "file": "bluetooth-despues-2.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "bluetooth-despues-2.txt",
+      "bytes": 1151,
+      "sha256": "a5db4839d00e42fe2c56b7869af69c700c52aae64b5a5fc48e5a4ee058fd7eee"
+    },
+    {
+      "file": "bluetooth-pref-antes.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "bluetooth-pref-antes.txt",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "file": "bluetooth-pref-despues-1.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "bluetooth-pref-despues-1.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "file": "bluetooth-pref-inhabilitado.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "bluetooth-pref-inhabilitado.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "file": "bluetooth-pref-tras-apagado.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "bluetooth-pref-tras-apagado.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "file": "boot-id-antes-control.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "boot-id-antes-control.txt",
+      "bytes": 37,
+      "sha256": "fd2ae346a1ef579d26a36e6b7d4b8d0778c0a396f1bd90adb01751bf6f7de9cb"
+    },
+    {
+      "file": "boot-id-despues-1.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "boot-id-despues-1.txt",
+      "bytes": 37,
+      "sha256": "fd2ae346a1ef579d26a36e6b7d4b8d0778c0a396f1bd90adb01751bf6f7de9cb"
+    },
+    {
+      "file": "boot-id-despues-2.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "boot-id-despues-2.txt",
+      "bytes": 37,
+      "sha256": "fd2ae346a1ef579d26a36e6b7d4b8d0778c0a396f1bd90adb01751bf6f7de9cb"
+    },
+    {
+      "file": "boot-id-inhabilitado.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "boot-id-inhabilitado.txt",
+      "bytes": 37,
+      "sha256": "fd2ae346a1ef579d26a36e6b7d4b8d0778c0a396f1bd90adb01751bf6f7de9cb"
+    },
+    {
+      "file": "boot-id-tras-apagado.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "boot-id-tras-apagado.txt",
+      "bytes": 37,
+      "sha256": "81ca50ef179b43088dc3c32faa6e24c29167d9f66f038c1ee8f84f78e4f52a6f"
+    },
+    {
+      "file": "boot-id.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "boot-id.txt",
+      "bytes": 38,
+      "sha256": "8602ac361b9e6c05541e8daddd7b013bf30a9e4a09d31a06cee8e487ddc9d29c"
+    },
+    {
+      "file": "boot-reason.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "boot-reason.txt",
+      "bytes": 14,
+      "sha256": "173136505051d1a29a872a8b6d97a60f1b9206846f61b634b8870e437a403792"
+    },
+    {
+      "file": "build.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "build.txt",
+      "bytes": 55,
+      "sha256": "4c2e31db142e7a64a40a94362e0ab768eb6eaeaebd579c45e51247b6c60af56e"
+    },
+    {
+      "file": "comprobacion-bt-inhabilitado.json",
+      "bytes": 1235,
+      "sha256": "372f27b07bab11861011cbb39140db8242164ed01536ae82c0fde359c3e401d0"
+    },
+    {
+      "file": "control-bt-log-1.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "control-bt-log-1.txt",
+      "bytes": 31769,
+      "sha256": "a4e29ce490cacfadfc6e0cd83398cf5f2bac9d549a8857e995ad1ca73149e4c8"
+    },
+    {
+      "file": "control-bt-log-2.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "control-bt-log-2.txt",
+      "bytes": 59675,
+      "sha256": "dc4122451d293bb388ff29fd5e6d5e12c73f9c03caf2bb5f5817abaad23ca980"
+    },
+    {
+      "file": "dropbox-indice.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "dropbox-indice.txt",
+      "bytes": 1239,
+      "sha256": "9c1a069092295ca17bc7716906e3fa86fe071143f0daeedb90350e3724d33888"
+    },
+    {
+      "file": "dt-tras-apagado.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "dt-tras-apagado.txt",
+      "bytes": 14,
+      "sha256": "a4fc747bbe42857d7fc95a7d7184446ef00dcf4a3964c0744c26c37e0920f015"
+    },
+    {
+      "file": "dt.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "dt.txt",
+      "bytes": 14,
+      "sha256": "a4fc747bbe42857d7fc95a7d7184446ef00dcf4a3964c0744c26c37e0920f015"
+    },
+    {
+      "file": "firmware-radio-actual.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "firmware-radio-actual.txt",
+      "bytes": 215,
+      "sha256": "2c05bc71ccbf4cbb1a53e64b5d6fa3d7d4ec9d89c0aac7e524e77894d9f3bb9e"
+    },
+    {
+      "file": "hilos.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "hilos.txt",
+      "bytes": 96756,
+      "sha256": "16aef6bb59419de9d1ea0f4c29e5a13cb6940943e14a9ee247109d617c81165e"
+    },
+    {
+      "file": "inhabilitar-paquete-bt-recibo.json",
+      "bytes": 650,
+      "sha256": "ffd170a5730a38d1533566dd7597919b3503d605cfbb8c921438b35277a56e41"
+    },
+    {
+      "file": "inhabilitar-paquete-bt.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "inhabilitar-paquete-bt.txt",
+      "bytes": 55,
+      "sha256": "f7ed54858a5f93b37877e08ded75efb30a7b20bc9c11a055b5f40a74b8f2030f"
+    },
+    {
+      "file": "input-dispositivos.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "input-dispositivos.txt",
+      "bytes": 1034,
+      "sha256": "cf3b1ca54f40ec246b39d04b8f67891c0ae71cc9322525507a1bf0fe107eb21d"
+    },
+    {
+      "file": "instalacion-control-bt.json",
+      "bytes": 1129,
+      "sha256": "9c9fb738735f6ab34c4c12814566a25321eb5749dc9800cfc01a05aed345a2ab"
+    },
+    {
+      "file": "instalar-control-bt.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "instalar-control-bt.txt",
+      "bytes": 38,
+      "sha256": "c4aa470acafcf8576c15b0f0b5ae7e852d1ec5413372d0e6a9272e788e1306d3"
+    },
+    {
+      "file": "kernel-actual.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "kernel-actual.txt",
+      "bytes": 76,
+      "sha256": "a1d5225a8a7a75d5b0894b0abcc475a21939fc14c2c24b2e90a52c8de2accb18"
+    },
+    {
+      "file": "lecturas-iniciales.json",
+      "bytes": 3358,
+      "sha256": "9c9d74e245476f614f6923740a00444aa0d2986400b0f59705b416edcd26e501"
+    },
+    {
+      "file": "lecturas-previas-intervencion.json",
+      "bytes": 1739,
+      "sha256": "ef9cf7a7db06881ec9ea4f1f293c1dfb936ed0d7639d1bbca9d5eda6ca18610e"
+    },
+    {
+      "file": "log-inicial.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "log-inicial.txt",
+      "bytes": 26872,
+      "sha256": "863d6e81417f85e5a68be20343848eae1905826e3b736205c9fc5fbc5222db34"
+    },
+    {
+      "file": "log-tras-apagado.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "log-tras-apagado.txt",
+      "bytes": 25785,
+      "sha256": "93bec28f3914cbea400b84b8cf39c70b3781bead2cfdb8afe93a409819609e9e"
+    },
+    {
+      "file": "modulos-radio-actuales.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "modulos-radio-actuales.txt",
+      "bytes": 205,
+      "sha256": "6a0286cbffd09b5c90be1f7e2605691bffe9c3022c2d4faa7451378380a5d698"
+    },
+    {
+      "file": "modulos-radio-recibo.json",
+      "bytes": 1021,
+      "sha256": "4f52d0e9fbaa8516d7272c6cc234593b11e16000c06f70bb9a210dfdfff6791d"
+    },
+    {
+      "file": "modulos-tras-apagado.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "modulos-tras-apagado.txt",
+      "bytes": 2004,
+      "sha256": "6f23516e49e0d895007ef830ce83df466006cf75f9b259a0027ac0730306f949"
+    },
+    {
+      "file": "observacion-bt-1.json",
+      "bytes": 1615,
+      "sha256": "bc5059236472a15af86abaf6fca18a25aaff5ffc513f61aa723f943b2205eaa9"
+    },
+    {
+      "file": "observacion-bt-2.json",
+      "bytes": 1595,
+      "sha256": "6fac1ad0df039113aa4370cff959a4f1faef73b9e9dd7afd42aa7e93600863fd"
+    },
+    {
+      "file": "observacion-tras-apagado.json",
+      "bytes": 2550,
+      "sha256": "be6b2164d4d34bcf4f583ea7fd9c7187e8f643ea27bf01bfad767adccd21a39e"
+    },
+    {
+      "file": "paquete-bt-antes-inhabilitar.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "paquete-bt-antes-inhabilitar.txt",
+      "bytes": 60979,
+      "sha256": "f405cd1d14a1e212ee9e30859dc3f41b4d1c76191e37e1e4abe55470d66c0cfc"
+    },
+    {
+      "file": "paquete-bt-inhabilitado.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "paquete-bt-inhabilitado.txt",
+      "bytes": 30,
+      "sha256": "7effbe090937e98de5d7baf334e97a373ce218d660e6f6ff530529036129e243"
+    },
+    {
+      "file": "paquete-bt-tras-apagado.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "paquete-bt-tras-apagado.txt",
+      "bytes": 30,
+      "sha256": "7effbe090937e98de5d7baf334e97a373ce218d660e6f6ff530529036129e243"
+    },
+    {
+      "file": "perfil-antes-control.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "perfil-antes-control.txt",
+      "bytes": 14,
+      "sha256": "a4fc747bbe42857d7fc95a7d7184446ef00dcf4a3964c0744c26c37e0920f015"
+    },
+    {
+      "file": "permisos-shell-recibo.json",
+      "bytes": 296,
+      "sha256": "f6f3e98aeed775ab016de461f505ecf8e6c1a99cb03100e49b0415a339ea0428"
+    },
+    {
+      "file": "permisos-shell.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "permisos-shell.txt",
+      "bytes": 22637,
+      "sha256": "99dd3777d7b86881f920a17300baea06ff4b5372524a0ff5f4335e505d817d18"
+    },
+    {
+      "file": "procesos-bt-inhabilitado.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "procesos-bt-inhabilitado.txt",
+      "bytes": 19453,
+      "sha256": "711374edc7d80d68b13f56092ad16b5ba28bf7886a779c21ae385d0dbd0b746e"
+    },
+    {
+      "file": "procesos-despues-2.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "procesos-despues-2.txt",
+      "bytes": 19774,
+      "sha256": "c8136a494d3b91d41fc7824cfc61a3a980bedd703a01cd4dc62c63c352ff646c"
+    },
+    {
+      "file": "procesos-tras-apagado.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "procesos-tras-apagado.txt",
+      "bytes": 18648,
+      "sha256": "8fd21bd0ce9b8540260f7710427547efecf4de976c583502cf4df71ad1dddfe5"
+    },
+    {
+      "file": "procesos.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "procesos.txt",
+      "bytes": 19524,
+      "sha256": "969cb39732583e0473c9bfd23e7350f18fa44f68c01bf311148d90d7a1ccb41d"
+    },
+    {
+      "file": "pstore-lan.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "pstore-lan.txt",
+      "bytes": 32756,
+      "sha256": "ba9d21a64e7e1c6e088745365ac6c14fd71f9acb62c386d6c311c73e077d2e13"
+    },
+    {
+      "file": "rutas.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "rutas.txt",
+      "bytes": 67,
+      "sha256": "02e7ec933a7d4a1fbd68a39038b8434695f14b78718ee82566216052793fd5f4"
+    },
+    {
+      "file": "session.json",
+      "bytes": 1912,
+      "sha256": "92d143e65630f261eee0a4b75394ef233ddc4ed5dab92dc99997e94edecb1d00"
+    },
+    {
+      "file": "solicitud-desactivar-recibo.json",
+      "bytes": 334,
+      "sha256": "c9853729d3db81b542c08580938a529aa1387a8055dfe82ec7cdee9958e53105"
+    },
+    {
+      "file": "solicitud-desactivar.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "solicitud-desactivar.txt",
+      "bytes": 83,
+      "sha256": "e74f6028cce00982af14ae537f8905cc0f6a02c793be3b46523436e03b4d54dd"
+    },
+    {
+      "file": "svc-ayuda.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "svc-ayuda.txt",
+      "bytes": 329,
+      "sha256": "b141735aec6de1daa386d0a3750dbba6ea1231616c51b47cb5bbc43085b6a531"
+    },
+    {
+      "file": "traces-dir.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "traces-dir.txt",
+      "bytes": 10,
+      "sha256": "dce6dbcae762fe46bc903b0dd357211c1ea33d5eda20c73e084ba0f1b71187b6"
+    },
+    {
+      "file": "traces-file.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "traces-file.txt",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "file": "uid.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "uid.txt",
+      "bytes": 224,
+      "sha256": "66698d79e6dfbd3dc67f6e00cb60e67937f470d4b4a70fab1605229a12f53111"
+    },
+    {
+      "file": "uptime-despues-1.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "uptime-despues-1.txt",
+      "bytes": 16,
+      "sha256": "a72626623cc302ac1ca7e2bd9623012c6891d9384cf15bf6539f53679e96a775"
+    },
+    {
+      "file": "uptime-despues-2.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "uptime-despues-2.txt",
+      "bytes": 16,
+      "sha256": "4339fbee339231d79d9304cf03d827dbf8a714897017c9190eabf0603f19cb13"
+    },
+    {
+      "file": "uptime-tras-apagado.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "uptime-tras-apagado.txt",
+      "bytes": 13,
+      "sha256": "101f9cc4019981b94fa3ea5644773a065f198acfa487838f69f2b0a1d3c3cb65"
+    },
+    {
+      "file": "uptime.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "uptime.txt",
+      "bytes": 16,
+      "sha256": "981ca56c58a59e6c0f1d15097cf06fc576b636c410e09556ba540d04a2c1ac4b"
+    },
+    {
+      "file": "wifi-pref-antes.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "wifi-pref-antes.txt",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    }
+  ],
+  "privacy": "Raw network identifiers, hardware identities and traces remain in ignored privado/; hashes refer to original files.",
+  "cold_boot": {
+    "user_confirmed_android_menu": true,
+    "boot_id_changed": true,
+    "uptime_seconds": 63.6,
+    "bluetooth_on": 0,
+    "bluetooth_package_disabled": true,
+    "bluetooth_app_process_present": false,
+    "btmtksdio_module_present": true,
+    "wlan_module_state": "Loading",
+    "bt_kernel_thread_state": "D",
+    "wifi_hal_state": "D",
+    "no_new_rom_installed": true
+  },
+  "approval_review": {
+    "blocked_action": "repeat dumpsys batterystats after Bluetooth change",
+    "executed": false,
+    "reason": "May leave work pending or block Android service; prior instruction prohibits repetition",
+    "alternative": "existing logs, process list, preferences and controlled cold boot"
+  },
+  "usb_rom012_verified_in_tv": {
+    "bytes": 573082917,
+    "sha256": "6c0c4307208c8d0e1a958a3fc6c790fa94021a850599985b0a41b340b821bb99",
+    "read_seconds": 22.766,
+    "exit_code": 0,
+    "utc": "2026-09-07T22:16:54Z"
+  },
+  "physical_switch": {
+    "user_tried_during_android": true,
+    "user_tried_on_power_connection": true,
+    "user_reported_effect": false,
+    "recovery_function_confirmed": false
+  }
+}
