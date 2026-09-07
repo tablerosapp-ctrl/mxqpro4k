@@ -1,0 +1,16 @@
+﻿{
+    "estado":  "recuperado",
+    "inicio":  "2026-09-05T00:01:35.4226664-03:00",
+    "destino_id":  "USBSTOR\\DISK\u0026VEN_KINGSTON\u0026PROD_DATATRAVELER_3.0\u0026REV_\\KINGSTON_SERIAL_LOCAL\u00260:PC_LOCAL",
+    "informe":  "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\preparacion-usb\\recuperacion-20260905-000135",
+    "proceso":  21428,
+    "detalle":  "Kingston disponible en E:\\ con exFAT; verificacion basica de 1 MiB correcta. No acredita toda la capacidad ni una grabacion de imagen.",
+    "fecha":  "2026-09-05T00:01:40.2478537-03:00",
+    "disco":  1,
+    "proceso_diskpart":  12456,
+    "codigo_salida":  0,
+    "letra":  "E:\\",
+    "capacidad":  30937186304,
+    "formato":  "exFAT",
+    "verificacion_bytes":  1048576
+}

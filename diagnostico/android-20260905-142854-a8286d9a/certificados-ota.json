@@ -1,0 +1,8 @@
+{
+  "archivo": "testkey.x509.pem",
+  "subject": "E=android@android.com, CN=Android, OU=Android, O=Android, L=Mountain View, S=California, C=US",
+  "issuer": "E=android@android.com, CN=Android, OU=Android, O=Android, L=Mountain View, S=California, C=US",
+  "sha256": "a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc",
+  "notBefore": "2008-02-28T23:33:46.0000000-02:00",
+  "notAfter": "2035-07-16T22:33:46.0000000-03:00"
+}

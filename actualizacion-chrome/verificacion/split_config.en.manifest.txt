@@ -1,0 +1,12 @@
+N: android=http://schemas.android.com/apk/res/android
+  E: manifest (line=0)
+    A: android:versionCode(0x0101021b)=(type 0x10)0x2af0b4e4
+    A: android:splitTypes(0x0101064f)="" (Raw: "")
+    A: package="com.android.chrome" (Raw: "com.android.chrome")
+    A: split="config.en" (Raw: "config.en")
+    E: application (line=0)
+      A: android:hasCode(0x0101000c)=(type 0x12)0x0
+      A: android:extractNativeLibs(0x010104ea)=(type 0x12)0x0
+      E: meta-data (line=0)
+        A: android:name(0x01010003)="com.android.vending.derived.apk.id" (Raw: "com.android.vending.derived.apk.id")
+        A: android:value(0x01010024)=(type 0x10)0x3

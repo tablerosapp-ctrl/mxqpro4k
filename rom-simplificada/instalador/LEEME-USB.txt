@@ -1,0 +1,31 @@
+ANDROID TV BASE - INSTALACION EXPERIMENTAL P291
+
+Este pendrive contiene una ROM Android completa en ZIP para recovery.
+Destino: primer TV, gxlx2_p291_1g, Android 9. No usar en el segundo TV P271.
+
+1. En Android, instalar AccesoUSB.apk. Es la version 0.2 y reemplaza la 0.1.
+2. Abrir Acceso USB y elegir "Entrar al instalador de la ROM (reinicia)".
+   Usa la conexion interna del propio TV. No requiere WiFi ni Internet.
+3. En recovery, si ofrece "Apply update from EXT" o "Apply update from USB",
+   elegir udisk/USB y TVBASE-P291-A9-0.1-RECOVERY.zip.
+4. El instalador comprobara placa, particiones e integridad. Antes de escribir
+   guardara y verificara un respaldo de las particiones en este pendrive.
+5. Mantener alimentacion y USB conectados durante respaldo e instalacion.
+   Solo al terminar sin errores, elegir "Reboot system now".
+
+Se reemplazan system, vendor, product, odm y boot (kernel).
+Se conservan bootloader, recovery, DTB, dtbo, vbmeta, datos y claves.
+La version nueva contiene Chrome/WebView 138 e Inicio TV.
+No usar el actualizador de Android que se quedo al 2 % ni un ZIP vacio.
+
+LIMITES REALES:
+- La entrada directa depende de que ADB local ya este disponible. Si no lo
+  esta, la APK muestra el error y no cambia la seguridad del sistema.
+- El paquete esta firmado con la clave PUBLICA DE PRUEBA de AOSP. Falta
+  confirmar que este recovery la acepte. Si rechaza la firma, no forzarla.
+- Coincidir con P291 no certifica todos los componentes fisicos ni el arranque.
+  Esta es la primera instalacion experimental, no una ROM validada en el TV.
+- El instalador no borra datos de usuario. Una incompatibilidad del sistema
+  anterior puede requerir despues un restablecimiento desde recovery.
+- Si falla tras comenzar la escritura, conservar el respaldo y permanecer en
+  recovery para recuperarlo. No repetir ni borrar particiones por rutina.

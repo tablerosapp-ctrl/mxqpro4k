@@ -1,0 +1,1 @@
+7 guarded-entry cases passed: mismatched board/API/uid, missing report, wrong USB, reboot error without retry, and successful order.

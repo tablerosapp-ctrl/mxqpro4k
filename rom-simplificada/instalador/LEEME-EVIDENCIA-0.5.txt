@@ -1,0 +1,23 @@
+TV BASE P291 - EVIDENCIA DEL ULTIMO INTENTO - ACCESO USB 0.5
+
+El intento 0.4 dejo el TV sin senal. No repetir sus botones de reinicio.
+La ROM todavia no esta instalada ni existe un respaldo original confirmado.
+
+1. Con Android iniciado, conectar el pendrive TVBASE al PRIMER TV P291.
+2. Instalar AccesoUSB-0.5.apk, actualizando la aplicacion anterior.
+3. Abrir Acceso USB y pulsar "Guardar evidencia del ultimo intento (no reinicia)".
+4. Esperar el resultado. La aplicacion guarda una carpeta TVBASE-evidencia-*.
+5. Cuando indique que termino, devolver el pendrive a la PC para leer esa carpeta.
+
+Esta version recopila el registro completo que quedo del intento anterior,
+datos de arranque y una copia del actualizador original de este TV con sus
+certificados publicos. Copia archivos al USB; no instala ROM, no reinicia,
+no cambia permisos ni habilita root o una conexion de red.
+
+Si una lectura esta denegada, queda registrada. Si falla el USB o no termina
+de verificar lo copiado, conservar el mensaje; no repetir a ciegas.
+
+Conservar todas las carpetas TVBASE-evidencia-*, TVBASE-diagnostico-* y
+TVBASE-respaldo-*. No abrir el actualizador de fabrica ni seleccionar la ROM
+durante esta recopilacion. Los archivos de ROM/recovery se conservan como
+material preparado; su presencia no demuestra una instalacion.

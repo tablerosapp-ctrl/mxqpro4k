@@ -1,0 +1,2 @@
+OpenJDK PKCS7: whole-file SHA256/RSA signature verified
+Firma alterada rechazada por verificador independiente

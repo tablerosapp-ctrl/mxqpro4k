@@ -1,0 +1,27 @@
+{
+  "file": "rom-simplificada\\instalador\\recovery-externo\\recovery.img",
+  "bytes": 25165824,
+  "sha256": "e59ef077378f8b1ba644bcfbef2a0f55e9914258696f203e813392e0a9fed01b",
+  "source_sha256": "736c6fa50d1957b6f0c1b5b986b19e1216659cc51210719e9ed269173a95adc0",
+  "kernel_sha256": "51de4ded699adabff796fe9e363390c822f97ae8e792b6dff2c76bc64202054a",
+  "secondary_sha256": "6343eeaf8dcc780f6855ae2d8a28ef8aebb1569e3e532e624e8d77720d966fe2",
+  "dtbo_sha256": "1a36ae9c58f758f7c0008c9f5e3954c9a3bb7d5748c3760258bf16b4fe161f44",
+  "unchanged_cpio_entries": 102,
+  "changed_cpio_entries": [
+    "res/keys",
+    "prop.default"
+  ],
+  "original_key_retained": true,
+  "added_key_version": 3,
+  "added_key_certificate_sha256": "a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc",
+  "signature_verification_disabled": false,
+  "rom_zip_signature_verified_with_added_key": true,
+  "android_v1_id_verified": true,
+  "external_boot_hardware_confirmed": false,
+  "intended_use": "load recovery.img from USB into RAM through Amlogic update; not flash the recovery partition",
+  "limitations": [
+    "Installed P291 bootloader USB boot behavior is unverified.",
+    "Amlogic reference may clear instaboot header; recovery may process existing commands/logs.",
+    "Bootloader authentication of this modified RAM disk is unverified."
+  ]
+}

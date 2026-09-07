@@ -1,0 +1,8 @@
+{
+  "sha256": "e7279a7901bc0b513ccc5d3a66a1b5bf483908a4cffd30f34f5d8d463fc95205",
+  "openjdk_signature_verified": true,
+  "go_payload_verified": true,
+  "old_version_rejected": true,
+  "old_version_exit": 2,
+  "verified_at": "2026-09-06T19:24:31.7477932-03:00"
+}

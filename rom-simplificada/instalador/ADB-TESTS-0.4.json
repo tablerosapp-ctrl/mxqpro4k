@@ -1,0 +1,104 @@
+[
+  {
+    "case": "shell",
+    "passed": true,
+    "observed_service": [
+      "shell:id\u0000"
+    ],
+    "exit": 0
+  },
+  {
+    "case": "auth",
+    "passed": true,
+    "observed_service": [],
+    "exit": 1
+  },
+  {
+    "case": "bad_checksum",
+    "passed": true,
+    "observed_service": [
+      "shell:id\u0000"
+    ],
+    "exit": 1
+  },
+  {
+    "case": "reboot_closed",
+    "passed": true,
+    "observed_service": [
+      "reboot:recovery\u0000"
+    ],
+    "exit": 0
+  },
+  {
+    "case": "reboot_error",
+    "passed": true,
+    "observed_service": [
+      "reboot:recovery\u0000"
+    ],
+    "exit": 1
+  },
+  {
+    "case": "flow",
+    "passed": true,
+    "observed_service": [
+      "shell:id\u0000",
+      "shell:cat /proc/device-tree/amlogic-dt-id\u0000",
+      "shell:getprop ro.build.version.sdk\u0000",
+      "reboot:recovery\u0000"
+    ],
+    "exit": 0
+  },
+  {
+    "case": "zero_close",
+    "passed": true,
+    "observed_service": [
+      "shell:id\u0000"
+    ],
+    "exit": 0
+  },
+  {
+    "case": "unknown_channel",
+    "passed": true,
+    "observed_service": [
+      "shell:id\u0000"
+    ],
+    "exit": 1
+  },
+  {
+    "case": "duplicate_ready",
+    "passed": true,
+    "observed_service": [
+      "shell:id\u0000"
+    ],
+    "exit": 0
+  },
+  {
+    "case": "update_closed",
+    "passed": true,
+    "observed_service": [
+      "reboot:update\u0000"
+    ],
+    "exit": 0
+  },
+  {
+    "case": "update_error",
+    "passed": true,
+    "observed_service": [
+      "reboot:update\u0000"
+    ],
+    "exit": 1
+  },
+  {
+    "case": "update_flow",
+    "passed": true,
+    "observed_service": [
+      "shell:id\u0000",
+      "shell:cat /proc/device-tree/amlogic-dt-id\u0000",
+      "shell:getprop ro.build.version.sdk\u0000",
+      "shell:tvbase_out=",
+      "shell:tvbase_found=",
+      "reboot:update\u0000"
+    ],
+    "exit": 0
+  }
+]

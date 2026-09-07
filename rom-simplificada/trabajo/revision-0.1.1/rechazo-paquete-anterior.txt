@@ -1,0 +1,5 @@
+panic: perfil de paquete no permitido
+
+goroutine 1 [running]:
+main.main()
+	local.tvbase/installer/main_windows.go:8 +0xf1

@@ -1,0 +1,3407 @@
+{
+  "equipo": "Segundo TV box, conectado solo para diagnostico; no confundir con el original P291",
+  "origen_tar": "devicetree-del-segundo-tv.tar",
+  "sha256_tar": "55eb57870c9aeeee74c78bcc228528b20c7f4bda99c51e9d940c5639a66c5567",
+  "entradas_tar": 2544,
+  "nodos_con_propiedades": 380,
+  "dt_id": "gxlx_p271_1g",
+  "propiedades_android": {
+    "ro.product.model": "TVBOX",
+    "ro.product.manufacturer": "Droidlogic",
+    "ro.product.brand": "Droidlogic",
+    "ro.product.board": "ampere",
+    "ro.product.device": "ampere",
+    "ro.board.platform": "ampere",
+    "ro.hardware": "amlogic",
+    "ro.boot.hardware": "amlogic",
+    "ro.bootloader": "unknown",
+    "ro.build.fingerprint": "Droidlogic/ampere/ampere:9/PPR1.180610.011/20260124:userdebug/test-keys",
+    "ro.build.description": "ampere-userdebug 9 PPR1.180610.011 20260124 test-keys",
+    "ro.build.version.release": "9",
+    "ro.build.version.sdk": "28",
+    "ro.build.version.security_patch": "2018-08-05",
+    "ro.product.cpu.abilist": "armeabi-v7a,armeabi",
+    "ro.product.cpu.abilist32": "armeabi-v7a,armeabi",
+    "ro.product.cpu.abilist64": "",
+    "ro.treble.enabled": "true",
+    "ro.vndk.version": "28",
+    "ro.build.ab_update": "",
+    "ro.boot.slot_suffix": "",
+    "ro.boot.verifiedbootstate": "",
+    "ro.boot.flash.locked": "",
+    "ro.boot.vbmeta.device_state": ""
+  },
+  "memoria_observada": {
+    "MemTotal": {
+      "kB": 1007024,
+      "MiB": 983.421875
+    },
+    "MemFree": {
+      "kB": 216688,
+      "MiB": 211.609375
+    },
+    "MemAvailable": {
+      "kB": 292872,
+      "MiB": 286.0078125
+    },
+    "Buffers": {
+      "kB": 792,
+      "MiB": 0.7734375
+    },
+    "Cached": {
+      "kB": 138268,
+      "MiB": 135.02734375
+    },
+    "SwapCached": {
+      "kB": 3488,
+      "MiB": 3.40625
+    },
+    "Active": {
+      "kB": 271008,
+      "MiB": 264.65625
+    },
+    "Inactive": {
+      "kB": 169564,
+      "MiB": 165.58984375
+    },
+    "Active(anon)": {
+      "kB": 204256,
+      "MiB": 199.46875
+    },
+    "Inactive(anon)": {
+      "kB": 102748,
+      "MiB": 100.33984375
+    },
+    "Active(file)": {
+      "kB": 66752,
+      "MiB": 65.1875
+    },
+    "Inactive(file)": {
+      "kB": 66816,
+      "MiB": 65.25
+    },
+    "Unevictable": {
+      "kB": 5148,
+      "MiB": 5.02734375
+    },
+    "Mlocked": {
+      "kB": 2524,
+      "MiB": 2.46484375
+    },
+    "HighTotal": {
+      "kB": 256000,
+      "MiB": 250.0
+    },
+    "HighFree": {
+      "kB": 3936,
+      "MiB": 3.84375
+    },
+    "LowTotal": {
+      "kB": 751024,
+      "MiB": 733.421875
+    },
+    "LowFree": {
+      "kB": 212752,
+      "MiB": 207.765625
+    },
+    "SwapTotal": {
+      "kB": 262140,
+      "MiB": 255.99609375
+    },
+    "SwapFree": {
+      "kB": 61692,
+      "MiB": 60.24609375
+    },
+    "Dirty": {
+      "kB": 4,
+      "MiB": 0.00390625
+    },
+    "Writeback": {
+      "kB": 0,
+      "MiB": 0.0
+    },
+    "AnonPages": {
+      "kB": 303952,
+      "MiB": 296.828125
+    },
+    "Mapped": {
+      "kB": 114408,
+      "MiB": 111.7265625
+    },
+    "Shmem": {
+      "kB": 572,
+      "MiB": 0.55859375
+    },
+    "Slab": {
+      "kB": 49100,
+      "MiB": 47.94921875
+    },
+    "SReclaimable": {
+      "kB": 18088,
+      "MiB": 17.6640625
+    },
+    "SUnreclaim": {
+      "kB": 31012,
+      "MiB": 30.28515625
+    },
+    "KernelStack": {
+      "kB": 8272,
+      "MiB": 8.078125
+    },
+    "PageTables": {
+      "kB": 19124,
+      "MiB": 18.67578125
+    },
+    "NFS_Unstable": {
+      "kB": 0,
+      "MiB": 0.0
+    },
+    "Bounce": {
+      "kB": 0,
+      "MiB": 0.0
+    },
+    "WritebackTmp": {
+      "kB": 0,
+      "MiB": 0.0
+    },
+    "CommitLimit": {
+      "kB": 765652,
+      "MiB": 747.70703125
+    },
+    "Committed_AS": {
+      "kB": 25166588,
+      "MiB": 24576.74609375
+    },
+    "VmallocTotal": {
+      "kB": 245760,
+      "MiB": 240.0
+    },
+    "VmallocUsed": {
+      "kB": 0,
+      "MiB": 0.0
+    },
+    "VmallocChunk": {
+      "kB": 0,
+      "MiB": 0.0
+    },
+    "CmaTotal": {
+      "kB": 421888,
+      "MiB": 412.0
+    },
+    "CmaFree": {
+      "kB": 178628,
+      "MiB": 174.44140625
+    },
+    "VmapStack": {
+      "kB": 4140,
+      "MiB": 4.04296875
+    },
+    "VmapFault": {
+      "kB": 4,
+      "MiB": 0.00390625
+    },
+    "VmapPfault": {
+      "kB": 0,
+      "MiB": 0.0
+    }
+  },
+  "memoria_dt": [
+    {
+      "ruta": "/reserved-memory/linux,vdin1_cma",
+      "regiones": [],
+      "propiedades": {
+        "reusable": {
+          "bytes": 0,
+          "hex": "",
+          "celdas_u32_be": []
+        },
+        "compatible": {
+          "bytes": 16,
+          "hex": "7368617265642d646d612d706f6f6c00",
+          "texto": "shared-dma-pool",
+          "celdas_u32_be": [
+            1936220530,
+            1701064036,
+            1835085168,
+            1869573120
+          ]
+        },
+        "alignment": {
+          "bytes": 4,
+          "hex": "00400000",
+          "texto": "\u0000@",
+          "celdas_u32_be": [
+            4194304
+          ]
+        },
+        "alloc-ranges": {
+          "bytes": 8,
+          "hex": "0000000030000000",
+          "texto": "\u0000\u0000\u0000\u00000",
+          "celdas_u32_be": [
+            0,
+            805306368
+          ]
+        },
+        "size": {
+          "bytes": 4,
+          "hex": "01000000",
+          "celdas_u32_be": [
+            16777216
+          ]
+        }
+      },
+      "size_bytes": 16777216,
+      "size_MiB": 16.0,
+      "alignment_bytes": 4194304,
+      "alignment_MiB": 4.0
+    },
+    {
+      "ruta": "/reserved-memory/linux,ion-dev",
+      "regiones": [],
+      "propiedades": {
+        "reusable": {
+          "bytes": 0,
+          "hex": "",
+          "celdas_u32_be": []
+        },
+        "compatible": {
+          "bytes": 16,
+          "hex": "7368617265642d646d612d706f6f6c00",
+          "texto": "shared-dma-pool",
+          "celdas_u32_be": [
+            1936220530,
+            1701064036,
+            1835085168,
+            1869573120
+          ]
+        },
+        "alignment": {
+          "bytes": 4,
+          "hex": "00400000",
+          "texto": "\u0000@",
+          "celdas_u32_be": [
+            4194304
+          ]
+        },
+        "alloc-ranges": {
+          "bytes": 8,
+          "hex": "0000000030000000",
+          "texto": "\u0000\u0000\u0000\u00000",
+          "celdas_u32_be": [
+            0,
+            805306368
+          ]
+        },
+        "size": {
+          "bytes": 4,
+          "hex": "04c00000",
+          "celdas_u32_be": [
+            79691776
+          ]
+        }
+      },
+      "size_bytes": 79691776,
+      "size_MiB": 76.0,
+      "alignment_bytes": 4194304,
+      "alignment_MiB": 4.0
+    },
+    {
+      "ruta": "/reserved-memory/linux,picdec",
+      "regiones": [],
+      "propiedades": {
+        "reusable": {
+          "bytes": 0,
+          "hex": "",
+          "celdas_u32_be": []
+        },
+        "compatible": {
+          "bytes": 16,
+          "hex": "7368617265642d646d612d706f6f6c00",
+          "texto": "shared-dma-pool",
+          "celdas_u32_be": [
+            1936220530,
+            1701064036,
+            1835085168,
+            1869573120
+          ]
+        },
+        "alignment": {
+          "bytes": 4,
+          "hex": "00000000",
+          "texto": "",
+          "celdas_u32_be": [
+            0
+          ]
+        },
+        "size": {
+          "bytes": 4,
+          "hex": "00000000",
+          "texto": "",
+          "celdas_u32_be": [
+            0
+          ]
+        }
+      },
+      "size_bytes": 0,
+      "size_MiB": 0.0,
+      "alignment_bytes": 0,
+      "alignment_MiB": 0.0
+    },
+    {
+      "ruta": "/reserved-memory/ramoops@0x07400000",
+      "regiones": [
+        {
+          "direccion": "0x7400000",
+          "bytes": 1048576,
+          "MiB": 1.0
+        }
+      ],
+      "propiedades": {
+        "compatible": {
+          "bytes": 8,
+          "hex": "72616d6f6f707300",
+          "texto": "ramoops",
+          "celdas_u32_be": [
+            1918987631,
+            1869640448
+          ]
+        },
+        "reg": {
+          "bytes": 8,
+          "hex": "0740000000100000",
+          "celdas_u32_be": [
+            121634816,
+            1048576
+          ]
+        }
+      }
+    },
+    {
+      "ruta": "/reserved-memory/linux,meson-fb",
+      "regiones": [],
+      "propiedades": {
+        "reusable": {
+          "bytes": 0,
+          "hex": "",
+          "celdas_u32_be": []
+        },
+        "compatible": {
+          "bytes": 16,
+          "hex": "7368617265642d646d612d706f6f6c00",
+          "texto": "shared-dma-pool",
+          "celdas_u32_be": [
+            1936220530,
+            1701064036,
+            1835085168,
+            1869573120
+          ]
+        },
+        "alignment": {
+          "bytes": 4,
+          "hex": "00400000",
+          "texto": "\u0000@",
+          "celdas_u32_be": [
+            4194304
+          ]
+        },
+        "alloc-ranges": {
+          "bytes": 8,
+          "hex": "3f80000000800000",
+          "celdas_u32_be": [
+            1065353216,
+            8388608
+          ]
+        },
+        "size": {
+          "bytes": 4,
+          "hex": "00800000",
+          "celdas_u32_be": [
+            8388608
+          ]
+        }
+      },
+      "size_bytes": 8388608,
+      "size_MiB": 8.0,
+      "alignment_bytes": 4194304,
+      "alignment_MiB": 4.0
+    },
+    {
+      "ruta": "/reserved-memory/linux,demod",
+      "regiones": [],
+      "propiedades": {
+        "compatible": {
+          "bytes": 19,
+          "hex": "616d6c6f6769632c2064656d6f642d6d656d00",
+          "texto": "amlogic, demod-mem"
+        },
+        "size": {
+          "bytes": 4,
+          "hex": "00600000",
+          "texto": "\u0000`",
+          "celdas_u32_be": [
+            6291456
+          ]
+        }
+      },
+      "size_bytes": 6291456,
+      "size_MiB": 6.0
+    },
+    {
+      "ruta": "/reserved-memory/linux,ppmgr",
+      "regiones": [],
+      "propiedades": {
+        "reusable": {
+          "bytes": 0,
+          "hex": "",
+          "celdas_u32_be": []
+        },
+        "compatible": {
+          "bytes": 16,
+          "hex": "7368617265642d646d612d706f6f6c00",
+          "texto": "shared-dma-pool",
+          "celdas_u32_be": [
+            1936220530,
+            1701064036,
+            1835085168,
+            1869573120
+          ]
+        },
+        "alignment": {
+          "bytes": 4,
+          "hex": "00000000",
+          "texto": "",
+          "celdas_u32_be": [
+            0
+          ]
+        },
+        "size": {
+          "bytes": 4,
+          "hex": "00000000",
+          "texto": "",
+          "celdas_u32_be": [
+            0
+          ]
+        }
+      },
+      "size_bytes": 0,
+      "size_MiB": 0.0,
+      "alignment_bytes": 0,
+      "alignment_MiB": 0.0
+    },
+    {
+      "ruta": "/reserved-memory/linux,secos",
+      "regiones": [
+        {
+          "direccion": "0x5300000",
+          "bytes": 33554432,
+          "MiB": 32.0
+        }
+      ],
+      "propiedades": {
+        "compatible": {
+          "bytes": 26,
+          "hex": "616d6c6f6769632c20616d6c5f7365636f735f6d656d6f727900",
+          "texto": "amlogic, aml_secos_memory"
+        },
+        "status": {
+          "bytes": 8,
+          "hex": "64697361626c6500",
+          "texto": "disable",
+          "celdas_u32_be": [
+            1684632417,
+            1651270912
+          ]
+        },
+        "no-map": {
+          "bytes": 0,
+          "hex": "",
+          "celdas_u32_be": []
+        },
+        "reg": {
+          "bytes": 8,
+          "hex": "0530000002000000",
+          "celdas_u32_be": [
+            87031808,
+            33554432
+          ]
+        }
+      }
+    },
+    {
+      "ruta": "/reserved-memory/linux,di_cma",
+      "regiones": [],
+      "propiedades": {
+        "reusable": {
+          "bytes": 0,
+          "hex": "",
+          "celdas_u32_be": []
+        },
+        "compatible": {
+          "bytes": 16,
+          "hex": "7368617265642d646d612d706f6f6c00",
+          "texto": "shared-dma-pool",
+          "celdas_u32_be": [
+            1936220530,
+            1701064036,
+            1835085168,
+            1869573120
+          ]
+        },
+        "alignment": {
+          "bytes": 4,
+          "hex": "00400000",
+          "texto": "\u0000@",
+          "celdas_u32_be": [
+            4194304
+          ]
+        },
+        "alloc-ranges": {
+          "bytes": 8,
+          "hex": "3000000010000000",
+          "celdas_u32_be": [
+            805306368,
+            268435456
+          ]
+        },
+        "size": {
+          "bytes": 4,
+          "hex": "02800000",
+          "celdas_u32_be": [
+            41943040
+          ]
+        }
+      },
+      "size_bytes": 41943040,
+      "size_MiB": 40.0,
+      "alignment_bytes": 4194304,
+      "alignment_MiB": 4.0
+    },
+    {
+      "ruta": "/reserved-memory/linux,codec_mm_cma",
+      "regiones": [],
+      "propiedades": {
+        "reusable": {
+          "bytes": 0,
+          "hex": "",
+          "celdas_u32_be": []
+        },
+        "compatible": {
+          "bytes": 16,
+          "hex": "7368617265642d646d612d706f6f6c00",
+          "texto": "shared-dma-pool",
+          "celdas_u32_be": [
+            1936220530,
+            1701064036,
+            1835085168,
+            1869573120
+          ]
+        },
+        "alignment": {
+          "bytes": 4,
+          "hex": "00400000",
+          "texto": "\u0000@",
+          "celdas_u32_be": [
+            4194304
+          ]
+        },
+        "size": {
+          "bytes": 4,
+          "hex": "10400000",
+          "celdas_u32_be": [
+            272629760
+          ]
+        }
+      },
+      "size_bytes": 272629760,
+      "size_MiB": 260.0,
+      "alignment_bytes": 4194304,
+      "alignment_MiB": 4.0
+    },
+    {
+      "ruta": "/reserved-memory/linux,secmon",
+      "regiones": [],
+      "propiedades": {
+        "reusable": {
+          "bytes": 0,
+          "hex": "",
+          "celdas_u32_be": []
+        },
+        "compatible": {
+          "bytes": 16,
+          "hex": "7368617265642d646d612d706f6f6c00",
+          "texto": "shared-dma-pool",
+          "celdas_u32_be": [
+            1936220530,
+            1701064036,
+            1835085168,
+            1869573120
+          ]
+        },
+        "alignment": {
+          "bytes": 4,
+          "hex": "00400000",
+          "texto": "\u0000@",
+          "celdas_u32_be": [
+            4194304
+          ]
+        },
+        "alloc-ranges": {
+          "bytes": 8,
+          "hex": "1000000000400000",
+          "celdas_u32_be": [
+            268435456,
+            4194304
+          ]
+        },
+        "size": {
+          "bytes": 4,
+          "hex": "00400000",
+          "texto": "\u0000@",
+          "celdas_u32_be": [
+            4194304
+          ]
+        }
+      },
+      "size_bytes": 4194304,
+      "size_MiB": 4.0,
+      "alignment_bytes": 4194304,
+      "alignment_MiB": 4.0
+    },
+    {
+      "ruta": "/reserved-memory/linux,codec_mm_reserved",
+      "regiones": [],
+      "propiedades": {
+        "compatible": {
+          "bytes": 27,
+          "hex": "616d6c6f6769632c20636f6465632d6d6d2d726573657276656400",
+          "texto": "amlogic, codec-mm-reserved"
+        },
+        "alignment": {
+          "bytes": 4,
+          "hex": "00100000",
+          "celdas_u32_be": [
+            1048576
+          ]
+        },
+        "size": {
+          "bytes": 4,
+          "hex": "00000000",
+          "texto": "",
+          "celdas_u32_be": [
+            0
+          ]
+        }
+      },
+      "size_bytes": 0,
+      "size_MiB": 0.0,
+      "alignment_bytes": 1048576,
+      "alignment_MiB": 1.0
+    },
+    {
+      "ruta": "/memory@00000000",
+      "regiones": [
+        {
+          "direccion": "0x0",
+          "bytes": 939524096,
+          "MiB": 896.0
+        }
+      ],
+      "propiedades": {
+        "device_type": {
+          "bytes": 7,
+          "hex": "6d656d6f727900",
+          "texto": "memory"
+        },
+        "reg": {
+          "bytes": 8,
+          "hex": "0000000038000000",
+          "texto": "\u0000\u0000\u0000\u00008",
+          "celdas_u32_be": [
+            0,
+            939524096
+          ]
+        }
+      }
+    }
+  ],
+  "nodos_relevantes": {
+    "/codec_mm": {
+      "compatible": {
+        "bytes": 19,
+        "hex": "616d6c6f6769632c20636f6465632c206d6d00",
+        "texto": "amlogic, codec, mm"
+      },
+      "dev_name": {
+        "bytes": 9,
+        "hex": "636f6465635f6d6d00",
+        "texto": "codec_mm"
+      },
+      "status": {
+        "bytes": 5,
+        "hex": "6f6b617900",
+        "texto": "okay"
+      },
+      "memory-region": {
+        "bytes": 8,
+        "hex": "0000003b0000003c",
+        "texto": "\u0000\u0000\u0000;\u0000\u0000\u0000<",
+        "celdas_u32_be": [
+          59,
+          60
+        ]
+      },
+      "name": {
+        "bytes": 9,
+        "hex": "636f6465635f6d6d00",
+        "texto": "codec_mm"
+      }
+    },
+    "/": {
+      "compatible": {
+        "bytes": 13,
+        "hex": "616d6c6f6769632c2047786c00",
+        "texto": "amlogic, Gxl"
+      },
+      "model": {
+        "bytes": 8,
+        "hex": "416d6c6f67696300",
+        "texto": "Amlogic",
+        "celdas_u32_be": [
+          1097690223,
+          1734959872
+        ]
+      },
+      "interrupt-parent": {
+        "bytes": 4,
+        "hex": "00000001",
+        "celdas_u32_be": [
+          1
+        ]
+      },
+      "#address-cells": {
+        "bytes": 4,
+        "hex": "00000001",
+        "celdas_u32_be": [
+          1
+        ]
+      },
+      "#size-cells": {
+        "bytes": 4,
+        "hex": "00000001",
+        "celdas_u32_be": [
+          1
+        ]
+      },
+      "amlogic-dt-id": {
+        "bytes": 13,
+        "hex": "67786c785f703237315f316700",
+        "texto": "gxlx_p271_1g"
+      },
+      "name": {
+        "bytes": 1,
+        "hex": "00",
+        "texto": ""
+      }
+    },
+    "/bt-dev": {
+      "compatible": {
+        "bytes": 16,
+        "hex": "616d6c6f6769632c2062742d64657600",
+        "texto": "amlogic, bt-dev",
+        "celdas_u32_be": [
+          1634561135,
+          1734959916,
+          543323181,
+          1684370944
+        ]
+      },
+      "dev_name": {
+        "bytes": 7,
+        "hex": "62742d64657600",
+        "texto": "bt-dev"
+      },
+      "status": {
+        "bytes": 5,
+        "hex": "6f6b617900",
+        "texto": "okay"
+      },
+      "name": {
+        "bytes": 7,
+        "hex": "62742d64657600",
+        "texto": "bt-dev"
+      },
+      "gpio_reset": {
+        "bytes": 12,
+        "hex": "000000140000006300000000",
+        "celdas_u32_be": [
+          20,
+          99,
+          0
+        ]
+      }
+    },
+    "/reserved-memory/linux,vdin1_cma": {
+      "reusable": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "compatible": {
+        "bytes": 16,
+        "hex": "7368617265642d646d612d706f6f6c00",
+        "texto": "shared-dma-pool",
+        "celdas_u32_be": [
+          1936220530,
+          1701064036,
+          1835085168,
+          1869573120
+        ]
+      },
+      "alignment": {
+        "bytes": 4,
+        "hex": "00400000",
+        "texto": "\u0000@",
+        "celdas_u32_be": [
+          4194304
+        ]
+      },
+      "alloc-ranges": {
+        "bytes": 8,
+        "hex": "0000000030000000",
+        "texto": "\u0000\u0000\u0000\u00000",
+        "celdas_u32_be": [
+          0,
+          805306368
+        ]
+      },
+      "size": {
+        "bytes": 4,
+        "hex": "01000000",
+        "celdas_u32_be": [
+          16777216
+        ]
+      },
+      "phandle": {
+        "bytes": 4,
+        "hex": "00000040",
+        "texto": "\u0000\u0000\u0000@",
+        "celdas_u32_be": [
+          64
+        ]
+      },
+      "name": {
+        "bytes": 16,
+        "hex": "6c696e75782c7664696e315f636d6100",
+        "texto": "linux,vdin1_cma",
+        "celdas_u32_be": [
+          1818848885,
+          2016179812,
+          1768829279,
+          1668112640
+        ]
+      }
+    },
+    "/reserved-memory/linux,ion-dev": {
+      "reusable": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "compatible": {
+        "bytes": 16,
+        "hex": "7368617265642d646d612d706f6f6c00",
+        "texto": "shared-dma-pool",
+        "celdas_u32_be": [
+          1936220530,
+          1701064036,
+          1835085168,
+          1869573120
+        ]
+      },
+      "alignment": {
+        "bytes": 4,
+        "hex": "00400000",
+        "texto": "\u0000@",
+        "celdas_u32_be": [
+          4194304
+        ]
+      },
+      "alloc-ranges": {
+        "bytes": 8,
+        "hex": "0000000030000000",
+        "texto": "\u0000\u0000\u0000\u00000",
+        "celdas_u32_be": [
+          0,
+          805306368
+        ]
+      },
+      "size": {
+        "bytes": 4,
+        "hex": "04c00000",
+        "celdas_u32_be": [
+          79691776
+        ]
+      },
+      "phandle": {
+        "bytes": 4,
+        "hex": "00000039",
+        "texto": "\u0000\u0000\u00009",
+        "celdas_u32_be": [
+          57
+        ]
+      },
+      "name": {
+        "bytes": 14,
+        "hex": "6c696e75782c696f6e2d64657600",
+        "texto": "linux,ion-dev"
+      }
+    },
+    "/reserved-memory/linux,picdec": {
+      "reusable": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "compatible": {
+        "bytes": 16,
+        "hex": "7368617265642d646d612d706f6f6c00",
+        "texto": "shared-dma-pool",
+        "celdas_u32_be": [
+          1936220530,
+          1701064036,
+          1835085168,
+          1869573120
+        ]
+      },
+      "alignment": {
+        "bytes": 4,
+        "hex": "00000000",
+        "texto": "",
+        "celdas_u32_be": [
+          0
+        ]
+      },
+      "size": {
+        "bytes": 4,
+        "hex": "00000000",
+        "texto": "",
+        "celdas_u32_be": [
+          0
+        ]
+      },
+      "phandle": {
+        "bytes": 4,
+        "hex": "0000003d",
+        "texto": "\u0000\u0000\u0000=",
+        "celdas_u32_be": [
+          61
+        ]
+      },
+      "linux,contiguous-region": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "name": {
+        "bytes": 13,
+        "hex": "6c696e75782c70696364656300",
+        "texto": "linux,picdec"
+      }
+    },
+    "/reserved-memory/ramoops@0x07400000": {
+      "compatible": {
+        "bytes": 8,
+        "hex": "72616d6f6f707300",
+        "texto": "ramoops",
+        "celdas_u32_be": [
+          1918987631,
+          1869640448
+        ]
+      },
+      "record-size": {
+        "bytes": 4,
+        "hex": "00008000",
+        "celdas_u32_be": [
+          32768
+        ]
+      },
+      "console-size": {
+        "bytes": 4,
+        "hex": "00008000",
+        "celdas_u32_be": [
+          32768
+        ]
+      },
+      "ftrace-size": {
+        "bytes": 4,
+        "hex": "00040000",
+        "celdas_u32_be": [
+          262144
+        ]
+      },
+      "reg": {
+        "bytes": 8,
+        "hex": "0740000000100000",
+        "celdas_u32_be": [
+          121634816,
+          1048576
+        ]
+      },
+      "name": {
+        "bytes": 8,
+        "hex": "72616d6f6f707300",
+        "texto": "ramoops",
+        "celdas_u32_be": [
+          1918987631,
+          1869640448
+        ]
+      }
+    },
+    "/reserved-memory": {
+      "ranges": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "#address-cells": {
+        "bytes": 4,
+        "hex": "00000001",
+        "celdas_u32_be": [
+          1
+        ]
+      },
+      "#size-cells": {
+        "bytes": 4,
+        "hex": "00000001",
+        "celdas_u32_be": [
+          1
+        ]
+      },
+      "name": {
+        "bytes": 16,
+        "hex": "72657365727665642d6d656d6f727900",
+        "texto": "reserved-memory",
+        "celdas_u32_be": [
+          1919251301,
+          1920361828,
+          762144109,
+          1869773056
+        ]
+      }
+    },
+    "/reserved-memory/linux,meson-fb": {
+      "reusable": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "compatible": {
+        "bytes": 16,
+        "hex": "7368617265642d646d612d706f6f6c00",
+        "texto": "shared-dma-pool",
+        "celdas_u32_be": [
+          1936220530,
+          1701064036,
+          1835085168,
+          1869573120
+        ]
+      },
+      "alignment": {
+        "bytes": 4,
+        "hex": "00400000",
+        "texto": "\u0000@",
+        "celdas_u32_be": [
+          4194304
+        ]
+      },
+      "alloc-ranges": {
+        "bytes": 8,
+        "hex": "3f80000000800000",
+        "celdas_u32_be": [
+          1065353216,
+          8388608
+        ]
+      },
+      "size": {
+        "bytes": 4,
+        "hex": "00800000",
+        "celdas_u32_be": [
+          8388608
+        ]
+      },
+      "phandle": {
+        "bytes": 4,
+        "hex": "0000003a",
+        "texto": "\u0000\u0000\u0000:",
+        "celdas_u32_be": [
+          58
+        ]
+      },
+      "name": {
+        "bytes": 15,
+        "hex": "6c696e75782c6d65736f6e2d666200",
+        "texto": "linux,meson-fb"
+      }
+    },
+    "/reserved-memory/linux,demod": {
+      "compatible": {
+        "bytes": 19,
+        "hex": "616d6c6f6769632c2064656d6f642d6d656d00",
+        "texto": "amlogic, demod-mem"
+      },
+      "size": {
+        "bytes": 4,
+        "hex": "00600000",
+        "texto": "\u0000`",
+        "celdas_u32_be": [
+          6291456
+        ]
+      },
+      "phandle": {
+        "bytes": 4,
+        "hex": "000000c0",
+        "celdas_u32_be": [
+          192
+        ]
+      },
+      "multi-use": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "name": {
+        "bytes": 12,
+        "hex": "6c696e75782c64656d6f6400",
+        "texto": "linux,demod",
+        "celdas_u32_be": [
+          1818848885,
+          2016175205,
+          1836016640
+        ]
+      }
+    },
+    "/reserved-memory/linux,ppmgr": {
+      "reusable": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "compatible": {
+        "bytes": 16,
+        "hex": "7368617265642d646d612d706f6f6c00",
+        "texto": "shared-dma-pool",
+        "celdas_u32_be": [
+          1936220530,
+          1701064036,
+          1835085168,
+          1869573120
+        ]
+      },
+      "alignment": {
+        "bytes": 4,
+        "hex": "00000000",
+        "texto": "",
+        "celdas_u32_be": [
+          0
+        ]
+      },
+      "size": {
+        "bytes": 4,
+        "hex": "00000000",
+        "texto": "",
+        "celdas_u32_be": [
+          0
+        ]
+      },
+      "phandle": {
+        "bytes": 4,
+        "hex": "0000003e",
+        "texto": "\u0000\u0000\u0000>",
+        "celdas_u32_be": [
+          62
+        ]
+      },
+      "linux,contiguous-region": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "name": {
+        "bytes": 12,
+        "hex": "6c696e75782c70706d677200",
+        "texto": "linux,ppmgr",
+        "celdas_u32_be": [
+          1818848885,
+          2016178288,
+          1835495936
+        ]
+      }
+    },
+    "/reserved-memory/linux,secos": {
+      "compatible": {
+        "bytes": 26,
+        "hex": "616d6c6f6769632c20616d6c5f7365636f735f6d656d6f727900",
+        "texto": "amlogic, aml_secos_memory"
+      },
+      "status": {
+        "bytes": 8,
+        "hex": "64697361626c6500",
+        "texto": "disable",
+        "celdas_u32_be": [
+          1684632417,
+          1651270912
+        ]
+      },
+      "no-map": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "phandle": {
+        "bytes": 4,
+        "hex": "000000bf",
+        "celdas_u32_be": [
+          191
+        ]
+      },
+      "reg": {
+        "bytes": 8,
+        "hex": "0530000002000000",
+        "celdas_u32_be": [
+          87031808,
+          33554432
+        ]
+      },
+      "name": {
+        "bytes": 12,
+        "hex": "6c696e75782c7365636f7300",
+        "texto": "linux,secos",
+        "celdas_u32_be": [
+          1818848885,
+          2016179045,
+          1668248320
+        ]
+      }
+    },
+    "/reserved-memory/linux,di_cma": {
+      "reusable": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "compatible": {
+        "bytes": 16,
+        "hex": "7368617265642d646d612d706f6f6c00",
+        "texto": "shared-dma-pool",
+        "celdas_u32_be": [
+          1936220530,
+          1701064036,
+          1835085168,
+          1869573120
+        ]
+      },
+      "alignment": {
+        "bytes": 4,
+        "hex": "00400000",
+        "texto": "\u0000@",
+        "celdas_u32_be": [
+          4194304
+        ]
+      },
+      "alloc-ranges": {
+        "bytes": 8,
+        "hex": "3000000010000000",
+        "celdas_u32_be": [
+          805306368,
+          268435456
+        ]
+      },
+      "size": {
+        "bytes": 4,
+        "hex": "02800000",
+        "celdas_u32_be": [
+          41943040
+        ]
+      },
+      "phandle": {
+        "bytes": 4,
+        "hex": "0000003f",
+        "texto": "\u0000\u0000\u0000?",
+        "celdas_u32_be": [
+          63
+        ]
+      },
+      "name": {
+        "bytes": 13,
+        "hex": "6c696e75782c64695f636d6100",
+        "texto": "linux,di_cma"
+      }
+    },
+    "/reserved-memory/linux,codec_mm_cma": {
+      "reusable": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "compatible": {
+        "bytes": 16,
+        "hex": "7368617265642d646d612d706f6f6c00",
+        "texto": "shared-dma-pool",
+        "celdas_u32_be": [
+          1936220530,
+          1701064036,
+          1835085168,
+          1869573120
+        ]
+      },
+      "alignment": {
+        "bytes": 4,
+        "hex": "00400000",
+        "texto": "\u0000@",
+        "celdas_u32_be": [
+          4194304
+        ]
+      },
+      "size": {
+        "bytes": 4,
+        "hex": "10400000",
+        "celdas_u32_be": [
+          272629760
+        ]
+      },
+      "phandle": {
+        "bytes": 4,
+        "hex": "0000003b",
+        "texto": "\u0000\u0000\u0000;",
+        "celdas_u32_be": [
+          59
+        ]
+      },
+      "linux,contiguous-region": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "name": {
+        "bytes": 19,
+        "hex": "6c696e75782c636f6465635f6d6d5f636d6100",
+        "texto": "linux,codec_mm_cma"
+      }
+    },
+    "/reserved-memory/linux,secmon": {
+      "reusable": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "compatible": {
+        "bytes": 16,
+        "hex": "7368617265642d646d612d706f6f6c00",
+        "texto": "shared-dma-pool",
+        "celdas_u32_be": [
+          1936220530,
+          1701064036,
+          1835085168,
+          1869573120
+        ]
+      },
+      "alignment": {
+        "bytes": 4,
+        "hex": "00400000",
+        "texto": "\u0000@",
+        "celdas_u32_be": [
+          4194304
+        ]
+      },
+      "alloc-ranges": {
+        "bytes": 8,
+        "hex": "1000000000400000",
+        "celdas_u32_be": [
+          268435456,
+          4194304
+        ]
+      },
+      "size": {
+        "bytes": 4,
+        "hex": "00400000",
+        "texto": "\u0000@",
+        "celdas_u32_be": [
+          4194304
+        ]
+      },
+      "phandle": {
+        "bytes": 4,
+        "hex": "0000000e",
+        "celdas_u32_be": [
+          14
+        ]
+      },
+      "name": {
+        "bytes": 13,
+        "hex": "6c696e75782c7365636d6f6e00",
+        "texto": "linux,secmon"
+      }
+    },
+    "/reserved-memory/linux,codec_mm_reserved": {
+      "compatible": {
+        "bytes": 27,
+        "hex": "616d6c6f6769632c20636f6465632d6d6d2d726573657276656400",
+        "texto": "amlogic, codec-mm-reserved"
+      },
+      "alignment": {
+        "bytes": 4,
+        "hex": "00100000",
+        "celdas_u32_be": [
+          1048576
+        ]
+      },
+      "size": {
+        "bytes": 4,
+        "hex": "00000000",
+        "texto": "",
+        "celdas_u32_be": [
+          0
+        ]
+      },
+      "phandle": {
+        "bytes": 4,
+        "hex": "0000003c",
+        "texto": "\u0000\u0000\u0000<",
+        "celdas_u32_be": [
+          60
+        ]
+      },
+      "name": {
+        "bytes": 24,
+        "hex": "6c696e75782c636f6465635f6d6d5f726573657276656400",
+        "texto": "linux,codec_mm_reserved",
+        "celdas_u32_be": [
+          1818848885,
+          2016174959,
+          1684366175,
+          1835884402,
+          1702061426,
+          1986356224
+        ]
+      }
+    },
+    "/wifi": {
+      "compatible": {
+        "bytes": 18,
+        "hex": "616d6c6f6769632c20616d6c5f7769666900",
+        "texto": "amlogic, aml_wifi"
+      },
+      "interrupt_pin": {
+        "bytes": 12,
+        "hex": "000000140000005900000000",
+        "celdas_u32_be": [
+          20,
+          89,
+          0
+        ]
+      },
+      "dev_name": {
+        "bytes": 9,
+        "hex": "616d6c5f7769666900",
+        "texto": "aml_wifi"
+      },
+      "status": {
+        "bytes": 5,
+        "hex": "6f6b617900",
+        "texto": "okay"
+      },
+      "interrupts": {
+        "bytes": 12,
+        "hex": "000000000000004400000004",
+        "celdas_u32_be": [
+          0,
+          68,
+          4
+        ]
+      },
+      "dhd_static_buf": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "pinctrl-0": {
+        "bytes": 4,
+        "hex": "00000041",
+        "texto": "\u0000\u0000\u0000A",
+        "celdas_u32_be": [
+          65
+        ]
+      },
+      "power_on_pin": {
+        "bytes": 12,
+        "hex": "000000140000005800000000",
+        "celdas_u32_be": [
+          20,
+          88,
+          0
+        ]
+      },
+      "name": {
+        "bytes": 5,
+        "hex": "7769666900",
+        "texto": "wifi"
+      },
+      "pinctrl-names": {
+        "bytes": 14,
+        "hex": "776966695f33326b5f70696e7300",
+        "texto": "wifi_32k_pins"
+      },
+      "irq_trigger_type": {
+        "bytes": 13,
+        "hex": "4750494f5f4952515f4c4f5700",
+        "texto": "GPIO_IRQ_LOW"
+      }
+    },
+    "/mali@d00c0000": {
+      "pmu_domain_config": {
+        "bytes": 48,
+        "hex": "000000010000000200000004000000000000000000000000000000000000000000000000000000010000000200000000",
+        "celdas_u32_be": [
+          1,
+          2,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          2,
+          0
+        ]
+      },
+      "compatible": {
+        "bytes": 13,
+        "hex": "61726d2c6d616c692d34353000",
+        "texto": "arm,mali-450"
+      },
+      "clocks": {
+        "bytes": 16,
+        "hex": "00000008000000970000000800000009",
+        "celdas_u32_be": [
+          8,
+          151,
+          8,
+          9
+        ]
+      },
+      "control_interval": {
+        "bytes": 4,
+        "hex": "000000c8",
+        "celdas_u32_be": [
+          200
+        ]
+      },
+      "sc_mpp": {
+        "bytes": 4,
+        "hex": "00000002",
+        "celdas_u32_be": [
+          2
+        ]
+      },
+      "clock-names": {
+        "bytes": 16,
+        "hex": "6770755f6d7578006770305f706c6c00",
+        "texto": "gpu_mux\u0000gp0_pll",
+        "celdas_u32_be": [
+          1735423327,
+          1836414976,
+          1735405663,
+          1886153728
+        ]
+      },
+      "def_clock": {
+        "bytes": 4,
+        "hex": "00000003",
+        "celdas_u32_be": [
+          3
+        ]
+      },
+      "tbl": {
+        "bytes": 24,
+        "hex": "000000020000000300000004000000050000000600000007",
+        "celdas_u32_be": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "interrupt-parent": {
+        "bytes": 4,
+        "hex": "00000001",
+        "celdas_u32_be": [
+          1
+        ]
+      },
+      "interrupts": {
+        "bytes": 96,
+        "hex": "00000000000000a00000000400000000000000a10000000400000000000000a20000000400000000000000a30000000400000000000000a40000000400000000000000a50000000400000000000000a60000000400000000000000a700000004",
+        "celdas_u32_be": [
+          0,
+          160,
+          4,
+          0,
+          161,
+          4,
+          0,
+          162,
+          4,
+          0,
+          163,
+          4,
+          0,
+          164,
+          4,
+          0,
+          165,
+          4,
+          0,
+          166,
+          4,
+          0,
+          167,
+          4
+        ]
+      },
+      "phandle": {
+        "bytes": 4,
+        "hex": "00000081",
+        "celdas_u32_be": [
+          129
+        ]
+      },
+      "reg": {
+        "bytes": 40,
+        "hex": "d00c000000040000c110444000001000c810000000001000c883c00000001000c110444000001000",
+        "celdas_u32_be": [
+          3490447360,
+          262144,
+          3239068736,
+          4096,
+          3356491776,
+          4096,
+          3364077568,
+          4096,
+          3239068736,
+          4096
+        ]
+      },
+      "#cooling-cells": {
+        "bytes": 4,
+        "hex": "00000002",
+        "celdas_u32_be": [
+          2
+        ]
+      },
+      "interrupt-names": {
+        "bytes": 62,
+        "hex": "49525147500049525147504d4d5500495251505000495251504d55004952515050300049525150504d4d5530004952515050310049525150504d4d553100",
+        "texto": "IRQGP\u0000IRQGPMMU\u0000IRQPP\u0000IRQPMU\u0000IRQPP0\u0000IRQPPMMU0\u0000IRQPP1\u0000IRQPPMMU1"
+      },
+      "num_of_pp": {
+        "bytes": 4,
+        "hex": "00000002",
+        "celdas_u32_be": [
+          2
+        ]
+      },
+      "name": {
+        "bytes": 5,
+        "hex": "6d616c6900",
+        "texto": "mali"
+      },
+      "pmu_switch_delay": {
+        "bytes": 4,
+        "hex": "0000ffff",
+        "celdas_u32_be": [
+          65535
+        ]
+      }
+    },
+    "/mali@d00c0000/clk125_cfg": {
+      "voltage": {
+        "bytes": 4,
+        "hex": "0000047e",
+        "celdas_u32_be": [
+          1150
+        ]
+      },
+      "threshold": {
+        "bytes": 8,
+        "hex": "0000001e00000078",
+        "celdas_u32_be": [
+          30,
+          120
+        ]
+      },
+      "clk_parent": {
+        "bytes": 10,
+        "hex": "66636c6b5f6469763400",
+        "texto": "fclk_div4"
+      },
+      "clkp_freq": {
+        "bytes": 4,
+        "hex": "1dcd6500",
+        "celdas_u32_be": [
+          500000000
+        ]
+      },
+      "keep_count": {
+        "bytes": 4,
+        "hex": "00000005",
+        "celdas_u32_be": [
+          5
+        ]
+      },
+      "clk_freq": {
+        "bytes": 4,
+        "hex": "07735940",
+        "celdas_u32_be": [
+          125000000
+        ]
+      },
+      "phandle": {
+        "bytes": 4,
+        "hex": "00000002",
+        "celdas_u32_be": [
+          2
+        ]
+      },
+      "name": {
+        "bytes": 11,
+        "hex": "636c6b3132355f63666700",
+        "texto": "clk125_cfg"
+      }
+    },
+    "/mali@d00c0000/clk400_cfg": {
+      "voltage": {
+        "bytes": 4,
+        "hex": "0000047e",
+        "celdas_u32_be": [
+          1150
+        ]
+      },
+      "threshold": {
+        "bytes": 8,
+        "hex": "00000098000000cf",
+        "celdas_u32_be": [
+          152,
+          207
+        ]
+      },
+      "clk_parent": {
+        "bytes": 10,
+        "hex": "66636c6b5f6469763500",
+        "texto": "fclk_div5"
+      },
+      "clkp_freq": {
+        "bytes": 4,
+        "hex": "17d78400",
+        "celdas_u32_be": [
+          400000000
+        ]
+      },
+      "keep_count": {
+        "bytes": 4,
+        "hex": "00000005",
+        "celdas_u32_be": [
+          5
+        ]
+      },
+      "clk_freq": {
+        "bytes": 4,
+        "hex": "17d78400",
+        "celdas_u32_be": [
+          400000000
+        ]
+      },
+      "phandle": {
+        "bytes": 4,
+        "hex": "00000004",
+        "celdas_u32_be": [
+          4
+        ]
+      },
+      "name": {
+        "bytes": 11,
+        "hex": "636c6b3430305f63666700",
+        "texto": "clk400_cfg"
+      }
+    },
+    "/mali@d00c0000/clk750_cfg": {
+      "voltage": {
+        "bytes": 4,
+        "hex": "0000047e",
+        "celdas_u32_be": [
+          1150
+        ]
+      },
+      "threshold": {
+        "bytes": 8,
+        "hex": "000000e6000000ff",
+        "celdas_u32_be": [
+          230,
+          255
+        ]
+      },
+      "clk_parent": {
+        "bytes": 8,
+        "hex": "6770305f706c6c00",
+        "texto": "gp0_pll",
+        "celdas_u32_be": [
+          1735405663,
+          1886153728
+        ]
+      },
+      "clkp_freq": {
+        "bytes": 4,
+        "hex": "2c588a00",
+        "celdas_u32_be": [
+          744000000
+        ]
+      },
+      "keep_count": {
+        "bytes": 4,
+        "hex": "00000005",
+        "celdas_u32_be": [
+          5
+        ]
+      },
+      "clk_freq": {
+        "bytes": 4,
+        "hex": "2c588a00",
+        "celdas_u32_be": [
+          744000000
+        ]
+      },
+      "phandle": {
+        "bytes": 4,
+        "hex": "00000007",
+        "celdas_u32_be": [
+          7
+        ]
+      },
+      "name": {
+        "bytes": 11,
+        "hex": "636c6b3735305f63666700",
+        "texto": "clk750_cfg"
+      }
+    },
+    "/mali@d00c0000/clk500_cfg": {
+      "voltage": {
+        "bytes": 4,
+        "hex": "0000047e",
+        "celdas_u32_be": [
+          1150
+        ]
+      },
+      "threshold": {
+        "bytes": 8,
+        "hex": "000000b4000000dc",
+        "celdas_u32_be": [
+          180,
+          220
+        ]
+      },
+      "clk_parent": {
+        "bytes": 10,
+        "hex": "66636c6b5f6469763400",
+        "texto": "fclk_div4"
+      },
+      "clkp_freq": {
+        "bytes": 4,
+        "hex": "1dcd6500",
+        "celdas_u32_be": [
+          500000000
+        ]
+      },
+      "keep_count": {
+        "bytes": 4,
+        "hex": "00000005",
+        "celdas_u32_be": [
+          5
+        ]
+      },
+      "clk_freq": {
+        "bytes": 4,
+        "hex": "1dcd6500",
+        "celdas_u32_be": [
+          500000000
+        ]
+      },
+      "phandle": {
+        "bytes": 4,
+        "hex": "00000005",
+        "celdas_u32_be": [
+          5
+        ]
+      },
+      "name": {
+        "bytes": 11,
+        "hex": "636c6b3530305f63666700",
+        "texto": "clk500_cfg"
+      }
+    },
+    "/mali@d00c0000/clk666_cfg": {
+      "voltage": {
+        "bytes": 4,
+        "hex": "0000047e",
+        "celdas_u32_be": [
+          1150
+        ]
+      },
+      "threshold": {
+        "bytes": 8,
+        "hex": "000000d2000000ec",
+        "celdas_u32_be": [
+          210,
+          236
+        ]
+      },
+      "clk_parent": {
+        "bytes": 10,
+        "hex": "66636c6b5f6469763300",
+        "texto": "fclk_div3"
+      },
+      "clkp_freq": {
+        "bytes": 4,
+        "hex": "27b25a80",
+        "celdas_u32_be": [
+          666000000
+        ]
+      },
+      "keep_count": {
+        "bytes": 4,
+        "hex": "00000005",
+        "celdas_u32_be": [
+          5
+        ]
+      },
+      "clk_freq": {
+        "bytes": 4,
+        "hex": "27b25a80",
+        "celdas_u32_be": [
+          666000000
+        ]
+      },
+      "phandle": {
+        "bytes": 4,
+        "hex": "00000006",
+        "celdas_u32_be": [
+          6
+        ]
+      },
+      "name": {
+        "bytes": 11,
+        "hex": "636c6b3636365f63666700",
+        "texto": "clk666_cfg"
+      }
+    },
+    "/mali@d00c0000/clk285_cfg": {
+      "voltage": {
+        "bytes": 4,
+        "hex": "0000047e",
+        "celdas_u32_be": [
+          1150
+        ]
+      },
+      "threshold": {
+        "bytes": 8,
+        "hex": "00000064000000be",
+        "celdas_u32_be": [
+          100,
+          190
+        ]
+      },
+      "clk_parent": {
+        "bytes": 10,
+        "hex": "66636c6b5f6469763700",
+        "texto": "fclk_div7"
+      },
+      "clkp_freq": {
+        "bytes": 4,
+        "hex": "10fcc140",
+        "celdas_u32_be": [
+          285000000
+        ]
+      },
+      "keep_count": {
+        "bytes": 4,
+        "hex": "00000005",
+        "celdas_u32_be": [
+          5
+        ]
+      },
+      "clk_freq": {
+        "bytes": 4,
+        "hex": "10fcc140",
+        "celdas_u32_be": [
+          285000000
+        ]
+      },
+      "phandle": {
+        "bytes": 4,
+        "hex": "00000003",
+        "celdas_u32_be": [
+          3
+        ]
+      },
+      "name": {
+        "bytes": 11,
+        "hex": "636c6b3238355f63666700",
+        "texto": "clk285_cfg"
+      }
+    },
+    "/mali@d00c0000/clk800_cfg": {
+      "voltage": {
+        "bytes": 4,
+        "hex": "0000047e",
+        "celdas_u32_be": [
+          1150
+        ]
+      },
+      "threshold": {
+        "bytes": 8,
+        "hex": "000000e6000000ff",
+        "celdas_u32_be": [
+          230,
+          255
+        ]
+      },
+      "clk_parent": {
+        "bytes": 8,
+        "hex": "6770305f706c6c00",
+        "texto": "gp0_pll",
+        "celdas_u32_be": [
+          1735405663,
+          1886153728
+        ]
+      },
+      "clkp_freq": {
+        "bytes": 4,
+        "hex": "2f34f600",
+        "celdas_u32_be": [
+          792000000
+        ]
+      },
+      "keep_count": {
+        "bytes": 4,
+        "hex": "00000005",
+        "celdas_u32_be": [
+          5
+        ]
+      },
+      "clk_freq": {
+        "bytes": 4,
+        "hex": "2f34f600",
+        "celdas_u32_be": [
+          792000000
+        ]
+      },
+      "phandle": {
+        "bytes": 4,
+        "hex": "00000084",
+        "celdas_u32_be": [
+          132
+        ]
+      },
+      "name": {
+        "bytes": 11,
+        "hex": "636c6b3830305f63666700",
+        "texto": "clk800_cfg"
+      }
+    },
+    "/mali@d00c0000/clk250_cfg": {
+      "voltage": {
+        "bytes": 4,
+        "hex": "0000047e",
+        "celdas_u32_be": [
+          1150
+        ]
+      },
+      "threshold": {
+        "bytes": 8,
+        "hex": "00000050000000aa",
+        "celdas_u32_be": [
+          80,
+          170
+        ]
+      },
+      "clk_parent": {
+        "bytes": 10,
+        "hex": "66636c6b5f6469763400",
+        "texto": "fclk_div4"
+      },
+      "clkp_freq": {
+        "bytes": 4,
+        "hex": "1dcd6500",
+        "celdas_u32_be": [
+          500000000
+        ]
+      },
+      "keep_count": {
+        "bytes": 4,
+        "hex": "00000005",
+        "celdas_u32_be": [
+          5
+        ]
+      },
+      "clk_freq": {
+        "bytes": 4,
+        "hex": "0ee6b280",
+        "celdas_u32_be": [
+          250000000
+        ]
+      },
+      "phandle": {
+        "bytes": 4,
+        "hex": "00000083",
+        "celdas_u32_be": [
+          131
+        ]
+      },
+      "name": {
+        "bytes": 11,
+        "hex": "636c6b3235305f63666700",
+        "texto": "clk250_cfg"
+      }
+    },
+    "/ddr_bandwidth": {
+      "compatible": {
+        "bytes": 23,
+        "hex": "616d6c6f6769632c206464722d62616e64776964746800",
+        "texto": "amlogic, ddr-bandwidth"
+      },
+      "sec_base": {
+        "bytes": 4,
+        "hex": "da838400",
+        "celdas_u32_be": [
+          3666052096
+        ]
+      },
+      "status": {
+        "bytes": 5,
+        "hex": "6f6b617900",
+        "texto": "okay"
+      },
+      "interrupts": {
+        "bytes": 12,
+        "hex": "000000000000003400000001",
+        "celdas_u32_be": [
+          0,
+          52,
+          1
+        ]
+      },
+      "reg": {
+        "bytes": 16,
+        "hex": "c883800000000100c883700000000100",
+        "celdas_u32_be": [
+          3364061184,
+          256,
+          3364057088,
+          256
+        ]
+      },
+      "interrupt-names": {
+        "bytes": 14,
+        "hex": "6464725f62616e64776964746800",
+        "texto": "ddr_bandwidth"
+      },
+      "name": {
+        "bytes": 14,
+        "hex": "6464725f62616e64776964746800",
+        "texto": "ddr_bandwidth"
+      }
+    },
+    "/vdec": {
+      "compatible": {
+        "bytes": 14,
+        "hex": "616d6c6f6769632c207664656300",
+        "texto": "amlogic, vdec"
+      },
+      "dev_name": {
+        "bytes": 7,
+        "hex": "766465632e3000",
+        "texto": "vdec.0"
+      },
+      "status": {
+        "bytes": 5,
+        "hex": "6f6b617900",
+        "texto": "okay"
+      },
+      "interrupts": {
+        "bytes": 72,
+        "hex": "000000000000000300000001000000000000001700000001000000000000002000000001000000000000002b00000001000000000000002c00000001000000000000002d00000001",
+        "celdas_u32_be": [
+          0,
+          3,
+          1,
+          0,
+          23,
+          1,
+          0,
+          32,
+          1,
+          0,
+          43,
+          1,
+          0,
+          44,
+          1,
+          0,
+          45,
+          1
+        ]
+      },
+      "interrupt-names": {
+        "bytes": 49,
+        "hex": "7673796e630064656d757800706172736572006d61696c626f785f30006d61696c626f785f31006d61696c626f785f3200",
+        "texto": "vsync\u0000demux\u0000parser\u0000mailbox_0\u0000mailbox_1\u0000mailbox_2"
+      },
+      "name": {
+        "bytes": 5,
+        "hex": "7664656300",
+        "texto": "vdec"
+      }
+    },
+    "/vpu": {
+      "compatible": {
+        "bytes": 17,
+        "hex": "616d6c6f6769632c207670752d67786c00",
+        "texto": "amlogic, vpu-gxl"
+      },
+      "clocks": {
+        "bytes": 48,
+        "hex": "00000008000000c40000000800000059000000080000000900000008000000b600000008000000ba00000008000000bb",
+        "celdas_u32_be": [
+          8,
+          196,
+          8,
+          89,
+          8,
+          9,
+          8,
+          182,
+          8,
+          186,
+          8,
+          187
+        ]
+      },
+      "dev_name": {
+        "bytes": 4,
+        "hex": "76707500",
+        "texto": "vpu",
+        "celdas_u32_be": [
+          1987081472
+        ]
+      },
+      "clock-names": {
+        "bytes": 56,
+        "hex": "766170625f636c6b007670755f696e74725f676174650067705f706c6c007670755f636c6b30007670755f636c6b31007670755f636c6b00",
+        "texto": "vapb_clk\u0000vpu_intr_gate\u0000gp_pll\u0000vpu_clk0\u0000vpu_clk1\u0000vpu_clk",
+        "celdas_u32_be": [
+          1986097250,
+          1600351339,
+          7762037,
+          1600745076,
+          1918855009,
+          1952776295,
+          1885302892,
+          1811969648,
+          1969185644,
+          1798307958,
+          1886740323,
+          1818964224,
+          1987081567,
+          1668049664
+        ]
+      },
+      "status": {
+        "bytes": 5,
+        "hex": "6f6b617900",
+        "texto": "okay"
+      },
+      "clk_level": {
+        "bytes": 4,
+        "hex": "00000007",
+        "celdas_u32_be": [
+          7
+        ]
+      },
+      "name": {
+        "bytes": 4,
+        "hex": "76707500",
+        "texto": "vpu",
+        "celdas_u32_be": [
+          1987081472
+        ]
+      }
+    },
+    "/sdio@d0070000": {
+      "cap-mmc-highspeed": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "compatible": {
+        "bytes": 24,
+        "hex": "616d6c6f6769632c206d65736f6e2d6d6d632d67786c7800",
+        "texto": "amlogic, meson-mmc-gxlx",
+        "celdas_u32_be": [
+          1634561135,
+          1734959916,
+          544040307,
+          1869491565,
+          1835216231,
+          2020374528
+        ]
+      },
+      "clocks": {
+        "bytes": 24,
+        "hex": "000000080000002c000000080000007a0000000800000004",
+        "celdas_u32_be": [
+          8,
+          44,
+          8,
+          122,
+          8,
+          4
+        ]
+      },
+      "cap-sd-highspeed": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "pinctrl-1": {
+        "bytes": 4,
+        "hex": "0000004c",
+        "texto": "\u0000\u0000\u0000L",
+        "celdas_u32_be": [
+          76
+        ]
+      },
+      "clock-names": {
+        "bytes": 19,
+        "hex": "636f726500636c6b696e3000636c6b696e3100",
+        "texto": "core\u0000clkin0\u0000clkin1"
+      },
+      "status": {
+        "bytes": 5,
+        "hex": "6f6b617900",
+        "texto": "okay"
+      },
+      "interrupts": {
+        "bytes": 12,
+        "hex": "00000000000000d800000004",
+        "celdas_u32_be": [
+          0,
+          216,
+          4
+        ]
+      },
+      "disable-wp": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "bus-width": {
+        "bytes": 4,
+        "hex": "00000004",
+        "celdas_u32_be": [
+          4
+        ]
+      },
+      "phandle": {
+        "bytes": 4,
+        "hex": "000000c3",
+        "celdas_u32_be": [
+          195
+        ]
+      },
+      "reg": {
+        "bytes": 8,
+        "hex": "d007000000002000",
+        "celdas_u32_be": [
+          3490119680,
+          8192
+        ]
+      },
+      "pinctrl-0": {
+        "bytes": 4,
+        "hex": "0000004b",
+        "texto": "\u0000\u0000\u0000K",
+        "celdas_u32_be": [
+          75
+        ]
+      },
+      "non-removable": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "max-frequency": {
+        "bytes": 4,
+        "hex": "05f5e100",
+        "celdas_u32_be": [
+          100000000
+        ]
+      },
+      "name": {
+        "bytes": 5,
+        "hex": "7364696f00",
+        "texto": "sdio"
+      },
+      "pinctrl-names": {
+        "bytes": 32,
+        "hex": "7364696f5f636c6b5f636d645f70696e73007364696f5f616c6c5f70696e7300",
+        "texto": "sdio_clk_cmd_pins\u0000sdio_all_pins",
+        "celdas_u32_be": [
+          1935960431,
+          1600351339,
+          1600351588,
+          1601202542,
+          1929409380,
+          1768906593,
+          1819041648,
+          1768846080
+        ]
+      }
+    },
+    "/sdio@d0070000/sdio": {
+      "max_req_size": {
+        "bytes": 4,
+        "hex": "00020000",
+        "celdas_u32_be": [
+          131072
+        ]
+      },
+      "f_min": {
+        "bytes": 4,
+        "hex": "00061a80",
+        "celdas_u32_be": [
+          400000
+        ]
+      },
+      "card_type": {
+        "bytes": 4,
+        "hex": "00000003",
+        "celdas_u32_be": [
+          3
+        ]
+      },
+      "f_max": {
+        "bytes": 4,
+        "hex": "05f5e100",
+        "celdas_u32_be": [
+          100000000
+        ]
+      },
+      "auto_clk_close": {
+        "bytes": 4,
+        "hex": "00000001",
+        "celdas_u32_be": [
+          1
+        ]
+      },
+      "ocr_avail": {
+        "bytes": 4,
+        "hex": "00200080",
+        "celdas_u32_be": [
+          2097280
+        ]
+      },
+      "pinname": {
+        "bytes": 5,
+        "hex": "7364696f00",
+        "texto": "sdio"
+      },
+      "caps": {
+        "bytes": 191,
+        "hex": "4d4d435f4341505f345f4249545f44415441004d4d435f4341505f4d4d435f484947485350454544004d4d435f4341505f53445f484947485350454544004d4d435f4341505f4e4f4e52454d4f5641424c45004d4d435f4341505f5548535f5344523132004d4d435f4341505f5548535f5344523235004d4d435f4341505f5548535f5344523530004d4d435f4341505f5548535f534452313034004d4d435f504d5f4b4545505f504f574552004d4d435f4341505f5344494f5f49525100",
+        "texto": "MMC_CAP_4_BIT_DATA\u0000MMC_CAP_MMC_HIGHSPEED\u0000MMC_CAP_SD_HIGHSPEED\u0000MMC_CAP_NONREMOVABLE\u0000MMC_CAP_UHS_SDR12\u0000MMC_CAP_UHS_SDR25\u0000MMC_CAP_UHS_SDR50\u0000MMC_CAP_UHS_SDR104\u0000MMC_PM_KEEP_POWER\u0000MMC_CAP_SDIO_IRQ"
+      },
+      "name": {
+        "bytes": 5,
+        "hex": "7364696f00",
+        "texto": "sdio"
+      }
+    },
+    "/amhdmitx": {
+      "compatible": {
+        "bytes": 18,
+        "hex": "616d6c6f6769632c20616d68646d69747800",
+        "texto": "amlogic, amhdmitx"
+      },
+      "dev_name": {
+        "bytes": 9,
+        "hex": "616d68646d69747800",
+        "texto": "amhdmitx"
+      },
+      "pinctrl-1": {
+        "bytes": 4,
+        "hex": "0000006a",
+        "texto": "\u0000\u0000\u0000j",
+        "celdas_u32_be": [
+          106
+        ]
+      },
+      "status": {
+        "bytes": 5,
+        "hex": "6f6b617900",
+        "texto": "okay"
+      },
+      "vend-data": {
+        "bytes": 4,
+        "hex": "00000068",
+        "texto": "\u0000\u0000\u0000h",
+        "celdas_u32_be": [
+          104
+        ]
+      },
+      "interrupts": {
+        "bytes": 12,
+        "hex": "000000000000003900000001",
+        "celdas_u32_be": [
+          0,
+          57,
+          1
+        ]
+      },
+      "phandle": {
+        "bytes": 4,
+        "hex": "000000c6",
+        "celdas_u32_be": [
+          198
+        ]
+      },
+      "pinctrl-0": {
+        "bytes": 4,
+        "hex": "00000069",
+        "texto": "\u0000\u0000\u0000i",
+        "celdas_u32_be": [
+          105
+        ]
+      },
+      "ic_type": {
+        "bytes": 4,
+        "hex": "00000010",
+        "celdas_u32_be": [
+          16
+        ]
+      },
+      "interrupt-names": {
+        "bytes": 11,
+        "hex": "68646d6974785f68706400",
+        "texto": "hdmitx_hpd"
+      },
+      "name": {
+        "bytes": 9,
+        "hex": "616d68646d69747800",
+        "texto": "amhdmitx"
+      },
+      "pinctrl-names": {
+        "bytes": 22,
+        "hex": "68646d6974785f6870640068646d6974785f64646300",
+        "texto": "hdmitx_hpd\u0000hdmitx_ddc"
+      }
+    },
+    "/amhdmitx/vend_data": {
+      "vendor_name": {
+        "bytes": 8,
+        "hex": "416d6c6f67696300",
+        "texto": "Amlogic",
+        "celdas_u32_be": [
+          1097690223,
+          1734959872
+        ]
+      },
+      "product_desc": {
+        "bytes": 15,
+        "hex": "4d426f78204d65736f6e2052656600",
+        "texto": "MBox Meson Ref"
+      },
+      "phandle": {
+        "bytes": 4,
+        "hex": "00000068",
+        "texto": "\u0000\u0000\u0000h",
+        "celdas_u32_be": [
+          104
+        ]
+      },
+      "vendor_id": {
+        "bytes": 4,
+        "hex": "00000000",
+        "texto": "",
+        "celdas_u32_be": [
+          0
+        ]
+      },
+      "name": {
+        "bytes": 10,
+        "hex": "76656e645f6461746100",
+        "texto": "vend_data"
+      }
+    },
+    "/emmc@d0074000": {
+      "cap-mmc-highspeed": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "compatible": {
+        "bytes": 24,
+        "hex": "616d6c6f6769632c206d65736f6e2d6d6d632d67786c7800",
+        "texto": "amlogic, meson-mmc-gxlx",
+        "celdas_u32_be": [
+          1634561135,
+          1734959916,
+          544040307,
+          1869491565,
+          1835216231,
+          2020374528
+        ]
+      },
+      "clocks": {
+        "bytes": 24,
+        "hex": "000000080000002e00000008000000820000000800000004",
+        "celdas_u32_be": [
+          8,
+          46,
+          8,
+          130,
+          8,
+          4
+        ]
+      },
+      "cap-sd-highspeed": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "pinctrl-1": {
+        "bytes": 8,
+        "hex": "0000004300000044",
+        "texto": "\u0000\u0000\u0000C\u0000\u0000\u0000D",
+        "celdas_u32_be": [
+          67,
+          68
+        ]
+      },
+      "clock-names": {
+        "bytes": 19,
+        "hex": "636f726500636c6b696e3000636c6b696e3100",
+        "texto": "core\u0000clkin0\u0000clkin1"
+      },
+      "status": {
+        "bytes": 5,
+        "hex": "6f6b617900",
+        "texto": "okay"
+      },
+      "interrupts": {
+        "bytes": 12,
+        "hex": "00000000000000da00000001",
+        "celdas_u32_be": [
+          0,
+          218,
+          1
+        ]
+      },
+      "disable-wp": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "bus-width": {
+        "bytes": 4,
+        "hex": "00000008",
+        "celdas_u32_be": [
+          8
+        ]
+      },
+      "phandle": {
+        "bytes": 4,
+        "hex": "000000c1",
+        "celdas_u32_be": [
+          193
+        ]
+      },
+      "reg": {
+        "bytes": 8,
+        "hex": "d007400000002000",
+        "celdas_u32_be": [
+          3490136064,
+          8192
+        ]
+      },
+      "pinctrl-0": {
+        "bytes": 4,
+        "hex": "00000042",
+        "texto": "\u0000\u0000\u0000B",
+        "celdas_u32_be": [
+          66
+        ]
+      },
+      "non-removable": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "max-frequency": {
+        "bytes": 4,
+        "hex": "0bebc200",
+        "celdas_u32_be": [
+          200000000
+        ]
+      },
+      "name": {
+        "bytes": 5,
+        "hex": "656d6d6300",
+        "texto": "emmc"
+      },
+      "pinctrl-names": {
+        "bytes": 32,
+        "hex": "656d6d635f636c6b5f636d645f70696e7300656d6d635f616c6c5f70696e7300",
+        "texto": "emmc_clk_cmd_pins\u0000emmc_all_pins",
+        "celdas_u32_be": [
+          1701670243,
+          1600351339,
+          1600351588,
+          1601202542,
+          1929405805,
+          1835229025,
+          1819041648,
+          1768846080
+        ]
+      }
+    },
+    "/emmc@d0074000/emmc": {
+      "max_req_size": {
+        "bytes": 4,
+        "hex": "00020000",
+        "celdas_u32_be": [
+          131072
+        ]
+      },
+      "gpio_dat3": {
+        "bytes": 12,
+        "hex": "000000140000002000000000",
+        "celdas_u32_be": [
+          20,
+          32,
+          0
+        ]
+      },
+      "f_min": {
+        "bytes": 4,
+        "hex": "00061a80",
+        "celdas_u32_be": [
+          400000
+        ]
+      },
+      "card_type": {
+        "bytes": 4,
+        "hex": "00000001",
+        "celdas_u32_be": [
+          1
+        ]
+      },
+      "f_max": {
+        "bytes": 4,
+        "hex": "05f5e100",
+        "celdas_u32_be": [
+          100000000
+        ]
+      },
+      "ocr_avail": {
+        "bytes": 4,
+        "hex": "00200080",
+        "celdas_u32_be": [
+          2097280
+        ]
+      },
+      "hw_reset": {
+        "bytes": 12,
+        "hex": "000000140000002600000000",
+        "celdas_u32_be": [
+          20,
+          38,
+          0
+        ]
+      },
+      "pinname": {
+        "bytes": 5,
+        "hex": "656d6d6300",
+        "texto": "emmc"
+      },
+      "caps": {
+        "bytes": 128,
+        "hex": "4d4d435f4341505f385f4249545f44415441004d4d435f4341505f4d4d435f484947485350454544004d4d435f4341505f53445f484947485350454544004d4d435f4341505f4e4f4e52454d4f5641424c45004d4d435f4341505f48575f5245534554004d4d435f4341505f4552415345004d4d435f4341505f434d44323300",
+        "texto": "MMC_CAP_8_BIT_DATA\u0000MMC_CAP_MMC_HIGHSPEED\u0000MMC_CAP_SD_HIGHSPEED\u0000MMC_CAP_NONREMOVABLE\u0000MMC_CAP_HW_RESET\u0000MMC_CAP_ERASE\u0000MMC_CAP_CMD23",
+        "celdas_u32_be": [
+          1296909151,
+          1128353887,
+          945766985,
+          1415529537,
+          1413546061,
+          1296260931,
+          1095786317,
+          1296260936,
+          1229408339,
+          1346716996,
+          5066051,
+          1598243152,
+          1599292511,
+          1212761928,
+          1397769541,
+          1140870477,
+          1130316609,
+          1348423247,
+          1314014541,
+          1331052866,
+          1279590477,
+          1296260931,
+          1095786312,
+          1465864773,
+          1397052416,
+          1296909151,
+          1128353887,
+          1163018579,
+          1157647693,
+          1130316609,
+          1348420429,
+          1144140544
+        ]
+      },
+      "name": {
+        "bytes": 5,
+        "hex": "656d6d6300",
+        "texto": "emmc"
+      }
+    },
+    "/ethernet@0xc9410000": {
+      "compatible": {
+        "bytes": 24,
+        "hex": "616d6c6f6769632c20677862622d6574682d64776d616300",
+        "texto": "amlogic, gxbb-eth-dwmac",
+        "celdas_u32_be": [
+          1634561135,
+          1734959916,
+          543651938,
+          1647142260,
+          1747805303,
+          1835098880
+        ]
+      },
+      "clocks": {
+        "bytes": 8,
+        "hex": "0000000800000034",
+        "celdas_u32_be": [
+          8,
+          52
+        ]
+      },
+      "cali_val": {
+        "bytes": 4,
+        "hex": "00020000",
+        "celdas_u32_be": [
+          131072
+        ]
+      },
+      "internal_phy": {
+        "bytes": 4,
+        "hex": "00000001",
+        "celdas_u32_be": [
+          1
+        ]
+      },
+      "clock-names": {
+        "bytes": 9,
+        "hex": "657468636c6b383100",
+        "texto": "ethclk81"
+      },
+      "mc_val_external_phy": {
+        "bytes": 4,
+        "hex": "00001621",
+        "celdas_u32_be": [
+          5665
+        ]
+      },
+      "interrupts": {
+        "bytes": 12,
+        "hex": "000000000000000800000001",
+        "celdas_u32_be": [
+          0,
+          8,
+          1
+        ]
+      },
+      "GPIOZ4_pin-gpios": {
+        "bytes": 12,
+        "hex": "000000140000000400000000",
+        "celdas_u32_be": [
+          20,
+          4,
+          0
+        ]
+      },
+      "phandle": {
+        "bytes": 4,
+        "hex": "000000c4",
+        "celdas_u32_be": [
+          196
+        ]
+      },
+      "mc_val_internal_phy": {
+        "bytes": 4,
+        "hex": "00001800",
+        "celdas_u32_be": [
+          6144
+        ]
+      },
+      "rst_pin-gpios": {
+        "bytes": 12,
+        "hex": "000000140000000e00000000",
+        "celdas_u32_be": [
+          20,
+          14,
+          0
+        ]
+      },
+      "reg": {
+        "bytes": 32,
+        "hex": "c941000000010000c883454000000008c88345580000000cc110440800000004",
+        "celdas_u32_be": [
+          3376480256,
+          65536,
+          3364046144,
+          8,
+          3364046168,
+          12,
+          3239068680,
+          4
+        ]
+      },
+      "pinctrl-0": {
+        "bytes": 4,
+        "hex": "00000052",
+        "texto": "\u0000\u0000\u0000R",
+        "celdas_u32_be": [
+          82
+        ]
+      },
+      "interrupt-names": {
+        "bytes": 7,
+        "hex": "6d616369727100",
+        "texto": "macirq"
+      },
+      "GPIOZ5_pin-gpios": {
+        "bytes": 12,
+        "hex": "000000140000000500000000",
+        "celdas_u32_be": [
+          20,
+          5,
+          0
+        ]
+      },
+      "name": {
+        "bytes": 9,
+        "hex": "65746865726e657400",
+        "texto": "ethernet"
+      },
+      "pinctrl-names": {
+        "bytes": 18,
+        "hex": "65787465726e616c5f6574685f70696e7300",
+        "texto": "external_eth_pins"
+      }
+    },
+    "/pinctrl@4b0/emmc_conf_pull_up/mux": {
+      "groups": {
+        "bytes": 32,
+        "hex": "656d6d635f6e616e645f64303700656d6d635f636c6b00656d6d635f636d6400",
+        "texto": "emmc_nand_d07\u0000emmc_clk\u0000emmc_cmd",
+        "celdas_u32_be": [
+          1701670243,
+          1601069422,
+          1683973168,
+          922772845,
+          1835229027,
+          1818951781,
+          1835885407,
+          1668113408
+        ]
+      },
+      "function": {
+        "bytes": 5,
+        "hex": "656d6d6300",
+        "texto": "emmc"
+      },
+      "input-enable": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "bias-pull-up": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "name": {
+        "bytes": 4,
+        "hex": "6d757800",
+        "texto": "mux",
+        "celdas_u32_be": [
+          1836414976
+        ]
+      }
+    },
+    "/pinctrl@4b0/emmc_conf_pull_up": {
+      "phandle": {
+        "bytes": 4,
+        "hex": "00000043",
+        "texto": "\u0000\u0000\u0000C",
+        "celdas_u32_be": [
+          67
+        ]
+      },
+      "name": {
+        "bytes": 18,
+        "hex": "656d6d635f636f6e665f70756c6c5f757000",
+        "texto": "emmc_conf_pull_up"
+      }
+    },
+    "/pinctrl@4b0/sdio_clk_cmd_pins/mux": {
+      "groups": {
+        "bytes": 18,
+        "hex": "7364696f5f636c6b007364696f5f636d6400",
+        "texto": "sdio_clk\u0000sdio_cmd"
+      },
+      "function": {
+        "bytes": 5,
+        "hex": "7364696f00",
+        "texto": "sdio"
+      },
+      "input-enable": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "bias-pull-up": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "name": {
+        "bytes": 4,
+        "hex": "6d757800",
+        "texto": "mux",
+        "celdas_u32_be": [
+          1836414976
+        ]
+      }
+    },
+    "/pinctrl@4b0/sdio_clk_cmd_pins": {
+      "phandle": {
+        "bytes": 4,
+        "hex": "0000004b",
+        "texto": "\u0000\u0000\u0000K",
+        "celdas_u32_be": [
+          75
+        ]
+      },
+      "name": {
+        "bytes": 18,
+        "hex": "7364696f5f636c6b5f636d645f70696e7300",
+        "texto": "sdio_clk_cmd_pins"
+      }
+    },
+    "/pinctrl@4b0/wifi_32k_pins/mux": {
+      "groups": {
+        "bytes": 6,
+        "hex": "70776d5f6500",
+        "texto": "pwm_e"
+      },
+      "function": {
+        "bytes": 6,
+        "hex": "70776d5f6500",
+        "texto": "pwm_e"
+      },
+      "name": {
+        "bytes": 4,
+        "hex": "6d757800",
+        "texto": "mux",
+        "celdas_u32_be": [
+          1836414976
+        ]
+      }
+    },
+    "/pinctrl@4b0/wifi_32k_pins": {
+      "phandle": {
+        "bytes": 4,
+        "hex": "00000041",
+        "texto": "\u0000\u0000\u0000A",
+        "celdas_u32_be": [
+          65
+        ]
+      },
+      "name": {
+        "bytes": 14,
+        "hex": "776966695f33326b5f70696e7300",
+        "texto": "wifi_32k_pins"
+      }
+    },
+    "/pinctrl@4b0/emmc_conf_pull_done/mux": {
+      "groups": {
+        "bytes": 8,
+        "hex": "656d6d635f647300",
+        "texto": "emmc_ds",
+        "celdas_u32_be": [
+          1701670243,
+          1600418560
+        ]
+      },
+      "function": {
+        "bytes": 5,
+        "hex": "656d6d6300",
+        "texto": "emmc"
+      },
+      "bias-pull-down": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "input-enable": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "name": {
+        "bytes": 4,
+        "hex": "6d757800",
+        "texto": "mux",
+        "celdas_u32_be": [
+          1836414976
+        ]
+      }
+    },
+    "/pinctrl@4b0/emmc_conf_pull_done": {
+      "phandle": {
+        "bytes": 4,
+        "hex": "00000044",
+        "texto": "\u0000\u0000\u0000D",
+        "celdas_u32_be": [
+          68
+        ]
+      },
+      "name": {
+        "bytes": 20,
+        "hex": "656d6d635f636f6e665f70756c6c5f646f6e6500",
+        "texto": "emmc_conf_pull_done",
+        "celdas_u32_be": [
+          1701670243,
+          1600352110,
+          1717530741,
+          1819041636,
+          1869505792
+        ]
+      }
+    },
+    "/pinctrl@4b0/sdio_all_pins/mux": {
+      "groups": {
+        "bytes": 50,
+        "hex": "7364696f5f6430007364696f5f6431007364696f5f6432007364696f5f6433007364696f5f636c6b007364696f5f636d6400",
+        "texto": "sdio_d0\u0000sdio_d1\u0000sdio_d2\u0000sdio_d3\u0000sdio_clk\u0000sdio_cmd"
+      },
+      "function": {
+        "bytes": 5,
+        "hex": "7364696f00",
+        "texto": "sdio"
+      },
+      "input-enable": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "bias-pull-up": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "name": {
+        "bytes": 4,
+        "hex": "6d757800",
+        "texto": "mux",
+        "celdas_u32_be": [
+          1836414976
+        ]
+      }
+    },
+    "/pinctrl@4b0/sdio_all_pins": {
+      "phandle": {
+        "bytes": 4,
+        "hex": "0000004c",
+        "texto": "\u0000\u0000\u0000L",
+        "celdas_u32_be": [
+          76
+        ]
+      },
+      "name": {
+        "bytes": 14,
+        "hex": "7364696f5f616c6c5f70696e7300",
+        "texto": "sdio_all_pins"
+      }
+    },
+    "/pinctrl@4b0/emmc_clk_cmd_pins/mux": {
+      "groups": {
+        "bytes": 18,
+        "hex": "656d6d635f636d6400656d6d635f636c6b00",
+        "texto": "emmc_cmd\u0000emmc_clk"
+      },
+      "function": {
+        "bytes": 5,
+        "hex": "656d6d6300",
+        "texto": "emmc"
+      },
+      "input-enable": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "bias-pull-up": {
+        "bytes": 0,
+        "hex": "",
+        "celdas_u32_be": []
+      },
+      "name": {
+        "bytes": 4,
+        "hex": "6d757800",
+        "texto": "mux",
+        "celdas_u32_be": [
+          1836414976
+        ]
+      }
+    },
+    "/pinctrl@4b0/emmc_clk_cmd_pins": {
+      "phandle": {
+        "bytes": 4,
+        "hex": "00000042",
+        "texto": "\u0000\u0000\u0000B",
+        "celdas_u32_be": [
+          66
+        ]
+      },
+      "name": {
+        "bytes": 18,
+        "hex": "656d6d635f636c6b5f636d645f70696e7300",
+        "texto": "emmc_clk_cmd_pins"
+      }
+    },
+    "/memory@00000000": {
+      "device_type": {
+        "bytes": 7,
+        "hex": "6d656d6f727900",
+        "texto": "memory"
+      },
+      "linux,usable-memory": {
+        "bytes": 8,
+        "hex": "001000003ff00000",
+        "celdas_u32_be": [
+          1048576,
+          1072693248
+        ]
+      },
+      "reg": {
+        "bytes": 8,
+        "hex": "0000000038000000",
+        "texto": "\u0000\u0000\u0000\u00008",
+        "celdas_u32_be": [
+          0,
+          939524096
+        ]
+      },
+      "name": {
+        "bytes": 7,
+        "hex": "6d656d6f727900",
+        "texto": "memory"
+      }
+    }
+  },
+  "kernel": "Orden: uname -a; cat /proc/cmdline\n\nLinux localhost 4.9.113 #55 SMP PREEMPT Sat Jan 24 16:31:28 CST 2026 armv7l\n\nSTDERR:\ncat: /proc/cmdline: Permission denied\n",
+  "gpu": "Orden: dumpsys SurfaceFlinger | grep -E 'GLES:|EGL_VERSION|GL_RENDERER|GL_VERSION'\n\nGLES: ARM, Mali-450 MP, OpenGL ES 2.0 1645048\n\nSTDERR:\n",
+  "limites": [
+    "Device tree es configuracion declarada del kernel; compatible WiFi no identifica por si solo el chip fisico.",
+    "CMA es memoria administrada por Linux; no restar CmaTotal entero de MemTotal como perdida adicional.",
+    "Un catalogo XML de codecs no prueba que VP9 este activo ni acelerado en una reproduccion real."
+  ],
+  "controladores_activos": {
+    "fuente": "controladores-activos.txt",
+    "modulos_cargados": [
+      "8822bs",
+      "aml_hardware_dmx",
+      "hdr10_tmo_alg",
+      "amvdec_mavs",
+      "vpu",
+      "encoder",
+      "amvdec_avs2",
+      "amvdec_vp9",
+      "amvdec_vc1",
+      "amvdec_real",
+      "amvdec_mmpeg4",
+      "amvdec_mpeg4",
+      "amvdec_mmpeg12",
+      "amvdec_mpeg12",
+      "amvdec_mmjpeg",
+      "amvdec_mjpeg",
+      "amvdec_h265",
+      "amvdec_h264mvc",
+      "amvdec_mh264",
+      "amvdec_h264",
+      "amvdec_avs",
+      "stream_input",
+      "decoder_common",
+      "firmware",
+      "media_clock",
+      "tb_detect",
+      "mali"
+    ],
+    "wifi": {
+      "driver": "rtl88x2bs",
+      "modulo": "8822bs",
+      "vendor_sdio": "0x024c",
+      "device_sdio": "0xb822",
+      "modalias": "sdio:c07v024CdB822",
+      "evidencia_enlace_driver": "bus/sdio/drivers/rtl88x2bs"
+    },
+    "bibliotecas_vendor_relevantes": [
+      "libGLES_mali.so",
+      "gralloc.amlogic.so",
+      "hwcomposer.amlogic.so"
+    ],
+    "limite": "Modulo cargado e identificador SDIO acreditan software enlazado; VP9/alpha efectivo en WebView exige una reproduccion instrumentada."
+  },
+  "diferencias_candidato_p291": {
+    "dt_id_segundo_tv": "gxlx_p271_1g",
+    "dt_id_candidato": "gxlx2_p291_1g",
+    "producto_segundo_tv": "Droidlogic/ampere",
+    "producto_candidato": "Fiberhome/p291_iptv",
+    "comun": [
+      "Android9/SDK28",
+      "armeabi-v7a",
+      "arm,mali-450"
+    ],
+    "conclusion": "La coincidencia de Android y GPU no acredita que bootloader, DDR, DTB, WiFi ni HAL sean intercambiables."
+  },
+  "memoria_observacion": "El nodo DT memory@00000000 declara 896 MiB, pero MemTotal observado de 983.42 MiB es mayor. La captura no basta para explicar esa diferencia; no inferir capacidad fisica ni sumar reservas sobre MemTotal."
+}

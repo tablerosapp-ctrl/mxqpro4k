@@ -1,0 +1,169 @@
+{
+  "fecha": "2026-09-05T14:40:05.8533846-03:00",
+  "java": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\tools\\verificacion-apk\\java21\\jdk-21.0.12.1+1-jre\\bin\\java.exe",
+  "apksigner": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\tools\\verificacion-apk\\build-tools-37\\android-37.0\\lib\\apksigner.jar",
+  "apksigner_sha256": "2defad215d7ff52968a409cde528cdaef7918b115e276b8e3378ca7a178e4180",
+  "resultados": [
+    {
+      "archivo": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\actualizacion-chrome\\chrome-138-splits\\base.apk",
+      "bytes": 110660872,
+      "sha256": "ffc638f63578fbcd842f09be00b2b02fd89ee4c0b4ca4e8c2ff7f8856da17579",
+      "archivo_sin_cambios": true,
+      "certificado_esperado_sha256": "f0fd6c5b410f25cb25c3b53346c8972fae30f8ee7411df910480ad6b2d60db83",
+      "comprobaciones": [
+        {
+          "modo": "general",
+          "codigo_salida": 0,
+          "firma_verificada": true,
+          "certificados_sha256": [
+            "f0fd6c5b410f25cb25c3b53346c8972fae30f8ee7411df910480ad6b2d60db83"
+          ],
+          "cantidad_firmantes_apk": 1,
+          "sellos_distribucion_sha256": [
+            "3257d599a49d2c961a471ca9843f59d341a405884583fc087df4237b733bbd6d"
+          ],
+          "certificado_coincide": true,
+          "registro": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\actualizacion-chrome\\verificacion\\ejecucion-20260905-144000-7ed96a54\\01-base.general.txt",
+          "argumentos": "-jar \"C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\tools\\verificacion-apk\\build-tools-37\\android-37.0\\lib\\apksigner.jar\" verify --verbose --print-certs \"C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\actualizacion-chrome\\chrome-138-splits\\base.apk\""
+        },
+        {
+          "modo": "android-9-api28",
+          "codigo_salida": 0,
+          "firma_verificada": true,
+          "certificados_sha256": [
+            "f0fd6c5b410f25cb25c3b53346c8972fae30f8ee7411df910480ad6b2d60db83"
+          ],
+          "cantidad_firmantes_apk": 1,
+          "sellos_distribucion_sha256": [
+            "3257d599a49d2c961a471ca9843f59d341a405884583fc087df4237b733bbd6d"
+          ],
+          "certificado_coincide": true,
+          "registro": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\actualizacion-chrome\\verificacion\\ejecucion-20260905-144000-7ed96a54\\01-base.android-9-api28.txt",
+          "argumentos": "-jar \"C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\tools\\verificacion-apk\\build-tools-37\\android-37.0\\lib\\apksigner.jar\" verify --verbose --print-certs --min-sdk-version 28 --max-sdk-version 28 \"C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\actualizacion-chrome\\chrome-138-splits\\base.apk\""
+        }
+      ],
+      "aprobado": true
+    },
+    {
+      "archivo": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\actualizacion-chrome\\chrome-138-splits\\split_chrome.apk",
+      "bytes": 3231951,
+      "sha256": "b126bc9e7d504ef82ff55d3756ef4b9d3d9fb921e76f769a9e3a73259fd93c85",
+      "archivo_sin_cambios": true,
+      "certificado_esperado_sha256": "f0fd6c5b410f25cb25c3b53346c8972fae30f8ee7411df910480ad6b2d60db83",
+      "comprobaciones": [
+        {
+          "modo": "general",
+          "codigo_salida": 0,
+          "firma_verificada": true,
+          "certificados_sha256": [
+            "f0fd6c5b410f25cb25c3b53346c8972fae30f8ee7411df910480ad6b2d60db83"
+          ],
+          "cantidad_firmantes_apk": 1,
+          "sellos_distribucion_sha256": [
+            "3257d599a49d2c961a471ca9843f59d341a405884583fc087df4237b733bbd6d"
+          ],
+          "certificado_coincide": true,
+          "registro": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\actualizacion-chrome\\verificacion\\ejecucion-20260905-144000-7ed96a54\\02-split_chrome.general.txt",
+          "argumentos": "-jar \"C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\tools\\verificacion-apk\\build-tools-37\\android-37.0\\lib\\apksigner.jar\" verify --verbose --print-certs \"C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\actualizacion-chrome\\chrome-138-splits\\split_chrome.apk\""
+        },
+        {
+          "modo": "android-9-api28",
+          "codigo_salida": 0,
+          "firma_verificada": true,
+          "certificados_sha256": [
+            "f0fd6c5b410f25cb25c3b53346c8972fae30f8ee7411df910480ad6b2d60db83"
+          ],
+          "cantidad_firmantes_apk": 1,
+          "sellos_distribucion_sha256": [
+            "3257d599a49d2c961a471ca9843f59d341a405884583fc087df4237b733bbd6d"
+          ],
+          "certificado_coincide": true,
+          "registro": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\actualizacion-chrome\\verificacion\\ejecucion-20260905-144000-7ed96a54\\02-split_chrome.android-9-api28.txt",
+          "argumentos": "-jar \"C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\tools\\verificacion-apk\\build-tools-37\\android-37.0\\lib\\apksigner.jar\" verify --verbose --print-certs --min-sdk-version 28 --max-sdk-version 28 \"C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\actualizacion-chrome\\chrome-138-splits\\split_chrome.apk\""
+        }
+      ],
+      "aprobado": true
+    },
+    {
+      "archivo": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\actualizacion-chrome\\chrome-138-splits\\split_config.en.apk",
+      "bytes": 266727,
+      "sha256": "e90ac7d991cfc4c12f8a8b957ed4baf111e5028aef3a61cf72bafa9ef9f89d8f",
+      "archivo_sin_cambios": true,
+      "certificado_esperado_sha256": "f0fd6c5b410f25cb25c3b53346c8972fae30f8ee7411df910480ad6b2d60db83",
+      "comprobaciones": [
+        {
+          "modo": "general",
+          "codigo_salida": 0,
+          "firma_verificada": true,
+          "certificados_sha256": [
+            "f0fd6c5b410f25cb25c3b53346c8972fae30f8ee7411df910480ad6b2d60db83"
+          ],
+          "cantidad_firmantes_apk": 1,
+          "sellos_distribucion_sha256": [
+            "3257d599a49d2c961a471ca9843f59d341a405884583fc087df4237b733bbd6d"
+          ],
+          "certificado_coincide": true,
+          "registro": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\actualizacion-chrome\\verificacion\\ejecucion-20260905-144000-7ed96a54\\03-split_config.en.general.txt",
+          "argumentos": "-jar \"C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\tools\\verificacion-apk\\build-tools-37\\android-37.0\\lib\\apksigner.jar\" verify --verbose --print-certs \"C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\actualizacion-chrome\\chrome-138-splits\\split_config.en.apk\""
+        },
+        {
+          "modo": "android-9-api28",
+          "codigo_salida": 0,
+          "firma_verificada": true,
+          "certificados_sha256": [
+            "f0fd6c5b410f25cb25c3b53346c8972fae30f8ee7411df910480ad6b2d60db83"
+          ],
+          "cantidad_firmantes_apk": 1,
+          "sellos_distribucion_sha256": [
+            "3257d599a49d2c961a471ca9843f59d341a405884583fc087df4237b733bbd6d"
+          ],
+          "certificado_coincide": true,
+          "registro": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\actualizacion-chrome\\verificacion\\ejecucion-20260905-144000-7ed96a54\\03-split_config.en.android-9-api28.txt",
+          "argumentos": "-jar \"C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\tools\\verificacion-apk\\build-tools-37\\android-37.0\\lib\\apksigner.jar\" verify --verbose --print-certs --min-sdk-version 28 --max-sdk-version 28 \"C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\actualizacion-chrome\\chrome-138-splits\\split_config.en.apk\""
+        }
+      ],
+      "aprobado": true
+    },
+    {
+      "archivo": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\actualizacion-chrome\\chrome-138-splits\\split_google3.apk",
+      "bytes": 3166695,
+      "sha256": "4db7850247834be23ea79c5413628babf811a6ec6dbfc968562f232ef7e91008",
+      "archivo_sin_cambios": true,
+      "certificado_esperado_sha256": "f0fd6c5b410f25cb25c3b53346c8972fae30f8ee7411df910480ad6b2d60db83",
+      "comprobaciones": [
+        {
+          "modo": "general",
+          "codigo_salida": 0,
+          "firma_verificada": true,
+          "certificados_sha256": [
+            "f0fd6c5b410f25cb25c3b53346c8972fae30f8ee7411df910480ad6b2d60db83"
+          ],
+          "cantidad_firmantes_apk": 1,
+          "sellos_distribucion_sha256": [
+            "3257d599a49d2c961a471ca9843f59d341a405884583fc087df4237b733bbd6d"
+          ],
+          "certificado_coincide": true,
+          "registro": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\actualizacion-chrome\\verificacion\\ejecucion-20260905-144000-7ed96a54\\04-split_google3.general.txt",
+          "argumentos": "-jar \"C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\tools\\verificacion-apk\\build-tools-37\\android-37.0\\lib\\apksigner.jar\" verify --verbose --print-certs \"C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\actualizacion-chrome\\chrome-138-splits\\split_google3.apk\""
+        },
+        {
+          "modo": "android-9-api28",
+          "codigo_salida": 0,
+          "firma_verificada": true,
+          "certificados_sha256": [
+            "f0fd6c5b410f25cb25c3b53346c8972fae30f8ee7411df910480ad6b2d60db83"
+          ],
+          "cantidad_firmantes_apk": 1,
+          "sellos_distribucion_sha256": [
+            "3257d599a49d2c961a471ca9843f59d341a405884583fc087df4237b733bbd6d"
+          ],
+          "certificado_coincide": true,
+          "registro": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\actualizacion-chrome\\verificacion\\ejecucion-20260905-144000-7ed96a54\\04-split_google3.android-9-api28.txt",
+          "argumentos": "-jar \"C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\tools\\verificacion-apk\\build-tools-37\\android-37.0\\lib\\apksigner.jar\" verify --verbose --print-certs --min-sdk-version 28 --max-sdk-version 28 \"C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\actualizacion-chrome\\chrome-138-splits\\split_google3.apk\""
+        }
+      ],
+      "aprobado": true
+    }
+  ],
+  "todos_aprobados": true
+}

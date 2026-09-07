@@ -1,0 +1,4 @@
+<webviewproviders>
+  <webviewprovider packageName="com.android.chrome" description="Chrome WebView" availableByDefault="true"/>
+  <webviewprovider packageName="com.android.webview" description="WebView de recuperacion" availableByDefault="true" isFallback="true"/>
+</webviewproviders>

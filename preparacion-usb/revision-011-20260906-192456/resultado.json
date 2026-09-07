@@ -1,0 +1,32 @@
+{
+  "estado": "verificado",
+  "inicio": "2026-09-06T19:24:56.5199675-03:00",
+  "usb_id": "USBSTOR\\DISK&VEN_KINGSTON&PROD_DATATRAVELER_3.0&REV_\\KINGSTON_SERIAL_LOCAL&0:PC_LOCAL",
+  "informe": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\preparacion-usb\\revision-011-20260906-192456",
+  "tv_flasheado": false,
+  "detalle": "Revision 0.1.1 copiada y leida correctamente; falta aplicarla en el TV.",
+  "fecha": "2026-09-06T19:25:54.6323230-03:00",
+  "respaldos_tv_conservados": [],
+  "files": [
+    {
+      "bytes": 573089164,
+      "sha256": "e7279a7901bc0b513ccc5d3a66a1b5bf483908a4cffd30f34f5d8d463fc95205",
+      "archivo": "TVBASE-P291-A9-0.1.1-RECOVERY.zip",
+      "lectura_verificada": true
+    },
+    {
+      "bytes": 24979,
+      "sha256": "6cba89eeae7cbd97a03360f1eba91ad689b513ab38981353839824cfa1f71877",
+      "archivo": "AccesoUSB-0.3.apk",
+      "lectura_verificada": true
+    },
+    {
+      "bytes": 1550,
+      "sha256": "47e9bca4669d827099374718f8fd1dc81fba3eb19a315beb2cf4bff40bebbc68",
+      "archivo": "LEEME-0.1.1.txt",
+      "lectura_verificada": true
+    }
+  ],
+  "drive_letter": "D",
+  "volume": "\\\\?\\Volume{eae718b0-a9a9-11f1-a1ea-afa059bf80e3}\\"
+}

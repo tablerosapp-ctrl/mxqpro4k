@@ -1,0 +1,348 @@
+TV Base · árbol del proyecto después de la limpieza
+Rutas relativas a la raíz. Dependencias/extracciones agrupadas; detalle en docs/inventario.json.
+Los documentos derivados index.html/MAPA/ARBOL/inventario y recibo de validación se omiten del inventario.
+
+mxqpro4k/
+├── actualizacion-chrome/
+│   ├── verificacion/
+│   │   ├── ejecucion-20260905-143836-63fb17bf/
+│   │   │   ├── 01-chrome-70-original.android-9-api28.txt
+│   │   │   ├── 01-chrome-70-original.general.txt
+│   │   │   └── resultado.json
+│   │   ├── ejecucion-20260905-143919-c0bbe8c8/
+│   │   │   ├── 01-base.android-9-api28.txt
+│   │   │   ├── 01-base.general.txt
+│   │   │   ├── 02-split_chrome.android-9-api28.txt
+│   │   │   ├── 02-split_chrome.general.txt
+│   │   │   ├── 03-split_config.en.android-9-api28.txt
+│   │   │   ├── 03-split_config.en.general.txt
+│   │   │   ├── 04-split_google3.android-9-api28.txt
+│   │   │   ├── 04-split_google3.general.txt
+│   │   │   └── resultado.json
+│   │   ├── ejecucion-20260905-144000-7ed96a54/
+│   │   │   ├── 01-base.android-9-api28.txt
+│   │   │   ├── 01-base.general.txt
+│   │   │   ├── 02-split_chrome.android-9-api28.txt
+│   │   │   ├── 02-split_chrome.general.txt
+│   │   │   ├── 03-split_config.en.android-9-api28.txt
+│   │   │   ├── 03-split_config.en.general.txt
+│   │   │   ├── 04-split_google3.android-9-api28.txt
+│   │   │   ├── 04-split_google3.general.txt
+│   │   │   └── resultado.json
+│   │   ├── ejecucion-20260905-144336-4f3410eb/
+│   │   │   ├── 01-chrome-138.0.7204.179-arm32.android-9-api28.txt
+│   │   │   ├── 01-chrome-138.0.7204.179-arm32.general.txt
+│   │   │   └── resultado.json
+│   │   ├── base.badging.txt
+│   │   ├── base.manifest.txt
+│   │   ├── base.splits0.txt
+│   │   ├── chrome-138.179.badging.txt
+│   │   ├── chrome-138.179.manifest.txt
+│   │   ├── chrome-70-original.apksigner.txt
+│   │   ├── herramientas.json
+│   │   ├── LEEME.md
+│   │   ├── split_chrome.badging.txt
+│   │   ├── split_chrome.manifest.txt
+│   │   ├── split_config.en.badging.txt
+│   │   ├── split_config.en.manifest.txt
+│   │   ├── split_google3.badging.txt
+│   │   ├── split_google3.manifest.txt
+│   │   └── verificar-apks.ps1
+│   ├── actividad-antes.txt
+│   ├── app-antes.txt
+│   ├── chrome-138-splits/ [5 archivos; 117.3 MB; agrupado]
+│   ├── chrome-138.0.7204.179-arm32.apk
+│   ├── chrome-138.0.7204.180-arm32.apkm
+│   ├── chrome-70-original.apk
+│   ├── paquete-antes.txt
+│   └── webview-log-antes.txt
+├── analisis-rom/
+│   ├── android_tv_mgv2000-s905l3b_and_hg680-lc-s905l3_v9.tar.xz
+│   ├── candidato-android9.img
+│   ├── datos-dtb-10.bin
+│   ├── datos-dtb-2.bin
+│   ├── dtb-comprimido-original.gz
+│   ├── formato-ampack-crc32.rs
+│   ├── formato-ampack-image.rs
+│   ├── formato-ampack-sha1sum.rs
+│   ├── informe-inspeccion.json
+│   ├── inspeccionar-rom.py
+│   ├── integridad-interna.json
+│   ├── manifiesto.json
+│   ├── origen-github.json
+│   ├── RESULTADO.md
+│   └── verificar-integridad-interna.py
+├── diagnostico/
+│   ├── primer-tv-20260906-actualizacion-local/
+│   │   ├── acceso-02-identificador-adb.png
+│   │   ├── acceso-03-estado-correcto.png
+│   │   ├── acceso-usb.png
+│   │   ├── actualizador-local.png
+│   │   ├── HALLAZGOS.md
+│   │   └── preparando-2-por-ciento.png
+│   ├── primer-tv-reportes-20260906-233826/
+│   │   ├── HALLAZGOS.md
+│   │   └── resumen-saneado.json
+│   ├── android-20260905-142854-a8286d9a/ [32 archivos; 3.3 MB; agrupado]
+│   ├── LEEME.md
+│   ├── recoger-android-adb.ps1
+│   └── recoger-hardware-linux.sh
+├── docs/
+│   ├── evidencia/
+│   │   ├── git-inicial.json
+│   │   ├── limpieza-plan.json
+│   │   ├── limpieza-resultado.json
+│   │   └── mapa-ui.json
+│   ├── herramientas/
+│   │   ├── aplicar-limpieza.ps1
+│   │   ├── generar-mapa.py
+│   │   ├── mapa-template.html
+│   │   ├── planificar-limpieza.py
+│   │   └── verificar-documentacion.py
+│   ├── historico/
+│   │   ├── AGENTS-hasta-20260906-2004.md
+│   │   ├── INSTALACION-USB-hasta-0.3.md
+│   │   ├── INSTALADOR-hasta-0.3.md
+│   │   └── README.md
+│   ├── DECISIONES.md
+│   ├── DESARROLLO.md
+│   ├── ESPECIFICACION.md
+│   ├── ESTADO.md
+│   ├── GIT.md
+│   ├── LIMPIEZA.md
+│   ├── proyecto.json
+│   └── ROADMAP.md
+├── images/
+│   └── Armbian_26.05.0_amlogic_s905l2_noble_6.12.91_server_2026.06.01.img.gz
+├── preparacion-usb/
+│   ├── acceso-instalador.json
+│   ├── activacion-local.json
+│   ├── actualizar-instalador-kingston.ps1
+│   ├── boot-original/ [11 archivos; 0.2 MB; agrupado]
+│   ├── entrada-amlogic-20260906-200427/ [2 archivos; 0.0 MB; agrupado]
+│   ├── entrada-amlogic-estado.json
+│   ├── estado-grabacion-anterior-20260904-225502.json
+│   ├── estado-grabacion.json
+│   ├── estado-recuperacion.json
+│   ├── evidencia-05-20260907-000014/ [3 archivos; 0.0 MB; agrupado]
+│   ├── evidencia-05-estado.json
+│   ├── fuentes-imager-2.0.11.1/ [5 archivos; 0.3 MB; agrupado]
+│   ├── grabacion-20260904-234011-a03e047f/ [5 archivos; 0.0 MB; agrupado]
+│   ├── grabacion-20260905-000644-562f503b/ [6 archivos; 0.0 MB; agrupado]
+│   ├── grabar-kingston-actual.ps1
+│   ├── grabar-kingston.ps1
+│   ├── imagen.json
+│   ├── instalacion-imager-2.0.11.1.log
+│   ├── instalador-android-20260906-191110/ [4 archivos; 3686.8 MB; agrupado]
+│   ├── instalador-android-estado.json
+│   ├── INVESTIGACION-USB.md
+│   ├── preparar-entrada-amlogic.ps1
+│   ├── preparar-evidencia-05.ps1
+│   ├── preparar-instalador-android.ps1
+│   ├── probar-archivo-kingston.ps1
+│   ├── recuperacion-20260905-000135/ [6 archivos; 0.0 MB; agrupado]
+│   ├── recuperar-kingston-windows.ps1
+│   ├── revision-011-20260906-192456/ [2 archivos; 0.0 MB; agrupado]
+│   ├── revision-011-estado.json
+│   ├── update.zip
+│   └── variantes/ [4 archivos; 0.0 MB; agrupado]
+├── rom-simplificada/
+│   ├── componentes/
+│   │   ├── acceso-usb/
+│   │   │   ├── __pycache__/
+│   │   │   │   └── generar-scripts.cpython-312.pyc
+│   │   │   ├── scripts/
+│   │   │   │   ├── etapa-0.sh
+│   │   │   │   ├── etapa-1.sh
+│   │   │   │   ├── etapa-2.sh
+│   │   │   │   ├── etapa-3.sh
+│   │   │   │   ├── etapa-4.sh
+│   │   │   │   ├── etapa-5.sh
+│   │   │   │   └── etapa-6.sh
+│   │   │   ├── Acceso.java
+│   │   │   ├── AdbLocal.java
+│   │   │   ├── AndroidManifest.xml
+│   │   │   ├── Evidencia.java
+│   │   │   ├── EvidenciaScripts.java
+│   │   │   └── generar-scripts.py
+│   │   ├── inicio/
+│   │   │   ├── AndroidManifest.xml
+│   │   │   └── Inicio.java
+│   │   └── webview-overlay/
+│   │       ├── res/
+│   │       │   └── xml/
+│   │       │       └── config_webview_packages.xml
+│   │       └── AndroidManifest.xml
+│   ├── inspeccion/
+│   │   ├── boot-ramdisk/
+│   │   │   ├── default.prop
+│   │   │   ├── init.environ.rc
+│   │   │   ├── init.fhservice.rc
+│   │   │   ├── init.rc
+│   │   │   ├── init.recovery.amlogic.rc
+│   │   │   ├── init.usb.configfs.rc
+│   │   │   ├── init.usb.rc
+│   │   │   ├── init.zygote32.rc
+│   │   │   └── ueventd.rc
+│   │   ├── apks/ [140 archivos; 277.1 MB; agrupado]
+│   │   ├── boot-original.img
+│   │   ├── inventariar-ext4.py
+│   │   ├── inventario-rom.json
+│   │   ├── metadatos/ [234 archivos; 4.0 MB; agrupado]
+│   │   ├── odm-inventario.json
+│   │   ├── product-inventario.json
+│   │   ├── recovery-original.img
+│   │   ├── settings-manifest.txt
+│   │   ├── system-inventario.json
+│   │   ├── vbmeta-original.img
+│   │   └── vendor-inventario.json
+│   ├── instalador/
+│   │   ├── recovery-externo/
+│   │   │   ├── etc/
+│   │   │   │   └── recovery.fstab
+│   │   │   ├── res/
+│   │   │   │   └── keys
+│   │   │   ├── informe.json
+│   │   │   ├── init.rc
+│   │   │   ├── init.recovery.amlogic.rc
+│   │   │   ├── keys-prepared.txt
+│   │   │   ├── PREPARADO.json
+│   │   │   ├── recovery-strings.json
+│   │   │   ├── recovery.img
+│   │   │   └── ueventd.rc
+│   │   ├── adb-aosp9.cpp
+│   │   ├── adb-protocol-aosp9.txt
+│   │   ├── ADB-TESTS-0.3.json
+│   │   ├── ADB-TESTS-0.4.json
+│   │   ├── ADB-TESTS.json
+│   │   ├── AdbHarness.java
+│   │   ├── candidato-bootloader-modos.json
+│   │   ├── compilar-evidencia05.py
+│   │   ├── corregir-recovery-0.1.1.py
+│   │   ├── empaquetar.py
+│   │   ├── ENTRADA-TESTS-0.4.txt
+│   │   ├── EntradaHarness.java
+│   │   ├── EVIDENCIA-TESTS-0.5.json
+│   │   ├── EvidenciaHarness.java
+│   │   ├── FIRMA-OPENJDK-OK.txt
+│   │   ├── fixture-evidencia-0.5/ [4 archivos; 0.0 MB; agrupado]
+│   │   ├── fixture-evidencia-0.5-9od8zo7l/ [5 archivos; 0.0 MB; agrupado]
+│   │   ├── fixture-evidencia-0.5-gnoxosbc/ [124 archivos; 0.6 MB; agrupado]
+│   │   ├── fixture-evidencia-0.5-hsl73261/ [36 archivos; 0.3 MB; agrupado]
+│   │   ├── go.mod
+│   │   ├── gxl_p271_v1-referencia.h
+│   │   ├── host-classes/ [12 archivos; 0.0 MB; agrupado]
+│   │   ├── host-classes-0.5/ [9 archivos; 0.0 MB; agrupado]
+│   │   ├── inspeccionar-recovery-externo.py
+│   │   ├── LEEME-0.1.1.txt
+│   │   ├── LEEME-ENTRADA-AMLOGIC.txt
+│   │   ├── LEEME-EVIDENCIA-0.5.txt
+│   │   ├── LEEME-USB.txt
+│   │   ├── main_linux.go
+│   │   ├── main_windows.go
+│   │   ├── manifest-0.1.1.json
+│   │   ├── manifest.json
+│   │   ├── package.go
+│   │   ├── package_test.go
+│   │   ├── PAQUETE-GO-OK.txt
+│   │   ├── preparar-recovery-externo.py
+│   │   ├── README.md
+│   │   ├── test_adb.py
+│   │   ├── test_evidencia05.py
+│   │   ├── update-binary
+│   │   └── VerifyWholeZip.java
+│   ├── salida/
+│   │   ├── RECOVERY-COMPROBACION-0.1.1.json
+│   │   ├── RECOVERY-VERIFICACION-0.1.1.json
+│   │   ├── RECOVERY-VERIFICACION.json
+│   │   ├── system-fsck.txt
+│   │   ├── system.sparse.img
+│   │   ├── TVBASE-P291-A9-0.1-EXPERIMENTAL.img
+│   │   ├── TVBASE-P291-A9-0.1-RECOVERY.zip
+│   │   ├── TVBASE-P291-A9-0.1.1-RECOVERY.zip
+│   │   ├── vendor-fsck.txt
+│   │   ├── vendor.sparse.img
+│   │   └── VERIFICACION.json
+│   ├── trabajo/
+│   │   ├── fallo-debugfs-ruta-absoluta/
+│   │   │   ├── CAUSA.txt
+│   │   │   ├── system-debugfs.txt
+│   │   │   ├── system-edicion.log
+│   │   │   └── system-fsck.log
+│   │   ├── payload/
+│   │   │   ├── build.prop
+│   │   │   ├── init.amlogic.rc
+│   │   │   ├── init.common.sh
+│   │   │   ├── init.fhservice.sh
+│   │   │   ├── overlay.context
+│   │   │   ├── preinstall.sh
+│   │   │   ├── system.context
+│   │   │   ├── tvbase.json
+│   │   │   ├── tvbase.rc
+│   │   │   └── vendor.context
+│   │   ├── revision-0.1.1/
+│   │   │   ├── context-0
+│   │   │   ├── context-1
+│   │   │   ├── context-2
+│   │   │   ├── context-3
+│   │   │   ├── context-4
+│   │   │   ├── context-before-0.txt
+│   │   │   ├── context-before-1.txt
+│   │   │   ├── context-before-2.txt
+│   │   │   ├── context-before-3.txt
+│   │   │   ├── context-before-4.txt
+│   │   │   ├── debugfs.log
+│   │   │   ├── debugfs.txt
+│   │   │   ├── file-0
+│   │   │   ├── file-1
+│   │   │   ├── file-2
+│   │   │   ├── file-3
+│   │   │   ├── file-4
+│   │   │   ├── fsck.txt
+│   │   │   ├── rechazo-paquete-anterior.txt
+│   │   │   ├── revision.json
+│   │   │   ├── system.raw.img
+│   │   │   ├── update-binary
+│   │   │   └── verify-package.exe
+│   │   ├── cambios.json
+│   │   ├── copias-originales.json
+│   │   ├── product.raw.img
+│   │   ├── system-debugfs.txt
+│   │   ├── system-edicion.log
+│   │   ├── system-fsck.log
+│   │   ├── system.raw.img
+│   │   ├── vendor-debugfs.txt
+│   │   ├── vendor-edicion.log
+│   │   ├── vendor-fsck.log
+│   │   └── vendor.raw.img
+│   ├── .gitignore
+│   ├── claves-desarrollo/ [protegido; no se enumera su contenido]
+│   ├── compilacion/ [101 archivos; 0.7 MB; agrupado]
+│   ├── compilar-componentes.py
+│   ├── fuentes-webview/ [14 archivos; 0.4 MB; agrupado]
+│   ├── INSTALACION-USB.md
+│   ├── INTEGRACION-WEBVIEW.md
+│   ├── LEEME.md
+│   ├── preparar-copias.py
+│   ├── simplificar.py
+│   └── verificar-y-empaquetar.py
+├── tools/
+│   ├── compilar-android/ [4 archivos; 125.6 MB; agrupado]
+│   ├── ext4-cygwin/ [74 archivos; 38.8 MB; agrupado]
+│   ├── firmar-ota/ [3 archivos; 0.1 MB; agrupado]
+│   ├── imager-1.8.5.exe
+│   ├── imager-2.0.11.1/ [1444 archivos; 89.3 MB; agrupado]
+│   ├── imager-portable/ [371 archivos; 85.7 MB; agrupado]
+│   ├── imager-v2.0.11.1.exe
+│   ├── instalador-go/ [15641 archivos; 325.9 MB; agrupado]
+│   ├── platform-tools/ [14 archivos; 17.5 MB; agrupado]
+│   ├── rufus-4.15p.exe
+│   └── verificacion-apk/ [488 archivos; 407.7 MB; agrupado]
+├── .gitattributes
+├── .gitignore
+├── AGENTS.md
+├── ARQUITECTURA-ANDROID-TV.md
+├── dossier-s905l2.html
+├── platform-tools-latest-windows.zip
+├── PRUEBA-USB.md
+└── README.md

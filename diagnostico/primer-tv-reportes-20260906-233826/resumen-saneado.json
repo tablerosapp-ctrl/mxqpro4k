@@ -1,0 +1,158 @@
+{
+  "schema": 1,
+  "analysis_date": "2026-09-06",
+  "target": "primer TV P291",
+  "source_reports": [
+    {
+      "file": "TVBASE-diagnostico-20200101-004250-25473.txt",
+      "bytes": 14891,
+      "sha256": "77172874572e7c9968ebaa92f07d6db9af5ef50d59d68dba42383bf3f8f47dc2"
+    },
+    {
+      "file": "TVBASE-diagnostico-20200101-004256-25565.txt",
+      "bytes": 14891,
+      "sha256": "8788ec8b06ce663d4b63c2ccd384e8f4c1f24ac593cc8eb15dc32075a22bdb0e"
+    }
+  ],
+  "source_clock_invalid_for_chronology": true,
+  "complete_reports": true,
+  "identical_except_clock_line": true,
+  "capture_phase": "antes de solicitar reboot:update; no registro del resultado posterior",
+  "properties": {
+    "ro.build.display.id": "ampere-userdebug 9 PPR1.180610.011 20250226 test-keys",
+    "ro.build.version.sdk": "28",
+    "ro.product.device": "ampere",
+    "ro.product.board": "ampere",
+    "ro.bootloader": "unknown",
+    "ro.hardware": "amlogic",
+    "ro.debuggable": "1",
+    "ro.secure": "1",
+    "ro.adb.secure": "0",
+    "service.adb.tcp.port": "5555",
+    "persist.adb.tcp.port": "",
+    "ro.bootmode": "unknown",
+    "ro.boot.bootreason": "recovery",
+    "sys.boot.reason": "recovery",
+    "ro.boot.reboot_mode": "",
+    "ro.boot.verifiedbootstate": "",
+    "init.svc.adbd": "running"
+  },
+  "dt_id": "gxlx2_p291_1g",
+  "uid": 2000,
+  "partitions": {
+    "mmcblk0": {
+      "major_minor": "179:0",
+      "bytes": 7650410496
+    },
+    "mmcblk0p1": {
+      "major_minor": "179:1",
+      "bytes": 4194304
+    },
+    "mmcblk0p2": {
+      "major_minor": "179:2",
+      "bytes": 67108864
+    },
+    "mmcblk0p3": {
+      "major_minor": "179:3",
+      "bytes": 1174405120
+    },
+    "mmcblk0p4": {
+      "major_minor": "179:4",
+      "bytes": 8388608
+    },
+    "mmcblk0p5": {
+      "major_minor": "179:5",
+      "bytes": 8388608
+    },
+    "mmcblk0p6": {
+      "major_minor": "179:6",
+      "bytes": 25165824
+    },
+    "mmcblk0p7": {
+      "major_minor": "179:7",
+      "bytes": 8388608
+    },
+    "mmcblk0p8": {
+      "major_minor": "179:8",
+      "bytes": 8388608
+    },
+    "mmcblk0p9": {
+      "major_minor": "179:9",
+      "bytes": 8388608
+    },
+    "mmcblk0p10": {
+      "major_minor": "179:10",
+      "bytes": 16777216
+    },
+    "mmcblk0p11": {
+      "major_minor": "179:11",
+      "bytes": 16777216
+    },
+    "mmcblk0p12": {
+      "major_minor": "179:12",
+      "bytes": 16777216
+    },
+    "mmcblk0p13": {
+      "major_minor": "179:13",
+      "bytes": 16777216
+    },
+    "mmcblk0p14": {
+      "major_minor": "179:14",
+      "bytes": 2097152
+    },
+    "mmcblk0p15": {
+      "major_minor": "179:15",
+      "bytes": 33554432
+    },
+    "mmcblk0p16": {
+      "major_minor": "179:16",
+      "bytes": 943718400
+    },
+    "mmcblk0p17": {
+      "major_minor": "179:17",
+      "bytes": 134217728
+    },
+    "mmcblk0p18": {
+      "major_minor": "179:18",
+      "bytes": 1342177280
+    },
+    "mmcblk0p19": {
+      "major_minor": "179:19",
+      "bytes": 134217728
+    },
+    "mmcblk0p20": {
+      "major_minor": "179:20",
+      "bytes": 3495952384
+    }
+  },
+  "direct_aliases_observed": {
+    "recovery": "179:6",
+    "boot": "179:11",
+    "misc": "179:7",
+    "vbmeta": "179:14",
+    "system": "179:18",
+    "vendor": "179:16"
+  },
+  "pstore_captured_tail_bytes": 6000,
+  "pstore_tail_sha256": "2e4f06e175145eacb4244f3bb99e86c3e6dce362fffd919840459c84bfc07cf6",
+  "pstore_tail_identical_in_both_reports": true,
+  "pstore_contains_invalid_utf8": true,
+  "pstore_observation": "mensajes repetidos SDIO CMD53/desc_timeout; bytes corruptos; no evidencia suficiente del fallo de reinicio0.4",
+  "denied_reads": [
+    "/proc/cmdline",
+    "/dev/block/recovery",
+    "/cache/recovery/command",
+    "/cache/recovery/last_log",
+    "/cache/recovery/last_log.1"
+  ],
+  "result_reported_by_user": "reboot:update deja Sin señal; no llega a recovery visible",
+  "rom_installed_confirmed": false,
+  "original_tv_backup_confirmed": false,
+  "next_evidence": [
+    "pstore completo después del último intento",
+    "propiedades boot actuales/anteriores y uptime",
+    "APK y permisos del actualizador de ESTE P291",
+    "configuración legible de arranque"
+  ],
+  "privacy": "sin seriales de dispositivos, MAC/IP, credenciales, texto crudo de logs ni identificador del volumen"
+}

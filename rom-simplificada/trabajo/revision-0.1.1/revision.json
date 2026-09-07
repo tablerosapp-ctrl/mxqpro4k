@@ -1,0 +1,19 @@
+{
+  "version": "0.1.1",
+  "package_id": "TVBASE-P291-A9-0.1.1",
+  "system_image": "rom-simplificada\\trabajo\\revision-0.1.1\\system.raw.img",
+  "source_system_sha256": "1b388c1366a4a77e0c7e24ee935be187d25a051ab90ea6cbb518e0e486b7c2fb",
+  "system_sha256": "bc2179940754382e5461aa0d65049559b52c1837421c59e651804504010e95d5",
+  "fsck_exit": 0,
+  "unchanged_files_verified": 2426,
+  "changed_files": {
+    "/bin/install-recovery.sh": "ec6691c4fe8a991090eb8feeec79715322dd74b3976d7dfbe882902d397e14b8",
+    "/etc/install-recovery.sh": "ec6691c4fe8a991090eb8feeec79715322dd74b3976d7dfbe882902d397e14b8",
+    "/etc/init/tvbase.rc": "4f879736cfcca108e4cf94b5bfbc81e00ea720cd492f045d442ba5b15c325385",
+    "/build.prop": "b613494cb3b92c9c8a01804de839704b09cab000163b5511b1db0d6b6ca77c84",
+    "/etc/tvbase.json": "b64287fbb277e20a579b09c4cbce75e47b9f2b2af4d1642e160c18bae35df28d"
+  },
+  "inherited_recovery_replacement_disabled": true,
+  "hardware_tested": false,
+  "installer_binary": "rom-simplificada\\trabajo\\revision-0.1.1\\update-binary"
+}

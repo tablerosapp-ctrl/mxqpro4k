@@ -1,0 +1,212 @@
+[
+  {
+    "inode": 29,
+    "modo": "0o40755",
+    "uid": 0,
+    "gid": 0,
+    "bytes": 4096,
+    "flags": 524416,
+    "acl_block": 0,
+    "ruta": "/priv-app"
+  },
+  {
+    "inode": 30,
+    "modo": "0o40755",
+    "uid": 0,
+    "gid": 0,
+    "bytes": 4096,
+    "flags": 524416,
+    "acl_block": 0,
+    "ruta": "/priv-app/droidlogic-res"
+  },
+  {
+    "inode": 31,
+    "modo": "0o100644",
+    "uid": 0,
+    "gid": 0,
+    "bytes": 388999,
+    "flags": 524416,
+    "acl_block": 0,
+    "ruta": "/priv-app/droidlogic-res/droidlogic-res.apk"
+  },
+  {
+    "inode": 25,
+    "modo": "0o40755",
+    "uid": 0,
+    "gid": 0,
+    "bytes": 4096,
+    "flags": 524416,
+    "acl_block": 0,
+    "ruta": "/media"
+  },
+  {
+    "inode": 26,
+    "modo": "0o40755",
+    "uid": 0,
+    "gid": 0,
+    "bytes": 4096,
+    "flags": 524416,
+    "acl_block": 0,
+    "ruta": "/media/audio"
+  },
+  {
+    "inode": 27,
+    "modo": "0o40755",
+    "uid": 0,
+    "gid": 0,
+    "bytes": 4096,
+    "flags": 524416,
+    "acl_block": 0,
+    "ruta": "/media/audio/alarms"
+  },
+  {
+    "inode": 28,
+    "modo": "0o100644",
+    "uid": 0,
+    "gid": 0,
+    "bytes": 16130,
+    "flags": 524416,
+    "acl_block": 0,
+    "ruta": "/media/audio/alarms/Alarm_Beep_01.ogg"
+  },
+  {
+    "inode": 18,
+    "modo": "0o40755",
+    "uid": 0,
+    "gid": 0,
+    "bytes": 4096,
+    "flags": 524416,
+    "acl_block": 0,
+    "ruta": "/lib"
+  },
+  {
+    "inode": 24,
+    "modo": "0o100644",
+    "uid": 0,
+    "gid": 0,
+    "bytes": 401816,
+    "flags": 524416,
+    "acl_block": 0,
+    "ruta": "/lib/libvendorfont.so"
+  },
+  {
+    "inode": 23,
+    "modo": "0o100644",
+    "uid": 0,
+    "gid": 0,
+    "bytes": 76500,
+    "flags": 524416,
+    "acl_block": 0,
+    "ruta": "/lib/libsystemcontrolclient.so"
+  },
+  {
+    "inode": 22,
+    "modo": "0o100644",
+    "uid": 0,
+    "gid": 0,
+    "bytes": 24228,
+    "flags": 524416,
+    "acl_block": 0,
+    "ruta": "/lib/libsurfaceoverlay_jni.so"
+  },
+  {
+    "inode": 21,
+    "modo": "0o100644",
+    "uid": 0,
+    "gid": 0,
+    "bytes": 59672,
+    "flags": 524416,
+    "acl_block": 0,
+    "ruta": "/lib/libsubtitlemanager_jni.so"
+  },
+  {
+    "inode": 20,
+    "modo": "0o100644",
+    "uid": 0,
+    "gid": 0,
+    "bytes": 87328,
+    "flags": 524416,
+    "acl_block": 0,
+    "ruta": "/lib/libamavutils.so"
+  },
+  {
+    "inode": 19,
+    "modo": "0o100644",
+    "uid": 0,
+    "gid": 0,
+    "bytes": 132340,
+    "flags": 524416,
+    "acl_block": 0,
+    "ruta": "/lib/libamadec_ctc.so"
+  },
+  {
+    "inode": 17,
+    "modo": "0o100600",
+    "uid": 0,
+    "gid": 0,
+    "bytes": 233,
+    "flags": 524416,
+    "acl_block": 0,
+    "ruta": "/build.prop"
+  },
+  {
+    "inode": 12,
+    "modo": "0o40755",
+    "uid": 0,
+    "gid": 0,
+    "bytes": 4096,
+    "flags": 524416,
+    "acl_block": 0,
+    "ruta": "/app"
+  },
+  {
+    "inode": 15,
+    "modo": "0o40755",
+    "uid": 0,
+    "gid": 0,
+    "bytes": 4096,
+    "flags": 524416,
+    "acl_block": 0,
+    "ruta": "/app/webview"
+  },
+  {
+    "inode": 16,
+    "modo": "0o100644",
+    "uid": 0,
+    "gid": 0,
+    "bytes": 52467051,
+    "flags": 524416,
+    "acl_block": 0,
+    "ruta": "/app/webview/webview.apk"
+  },
+  {
+    "inode": 13,
+    "modo": "0o40755",
+    "uid": 0,
+    "gid": 0,
+    "bytes": 4096,
+    "flags": 524416,
+    "acl_block": 0,
+    "ruta": "/app/NativeImagePlayer"
+  },
+  {
+    "inode": 14,
+    "modo": "0o100644",
+    "uid": 0,
+    "gid": 0,
+    "bytes": 1609672,
+    "flags": 524416,
+    "acl_block": 0,
+    "ruta": "/app/NativeImagePlayer/NativeImagePlayer.apk"
+  },
+  {
+    "inode": 11,
+    "modo": "0o40700",
+    "uid": 0,
+    "gid": 0,
+    "bytes": 4096,
+    "flags": 524416,
+    "acl_block": 0,
+    "ruta": "/lost+found"
+  }
+]

@@ -1,0 +1,13 @@
+﻿[
+    {
+        "KeyName":  "DEVPKEY_Device_LocationPaths",
+        "Data":  [
+                     "PCIROOT(0)#PCI(1400)#USBROOT(0)#USB(16)",
+                     "ACPI(_SB_)#ACPI(PC00)#ACPI(XHCI)#ACPI(RHUB)#ACPI(SS04)"
+                 ]
+    },
+    {
+        "KeyName":  "DEVPKEY_Device_LastArrivalDate",
+        "Data":  "\/Date(1788577485908)\/"
+    }
+]

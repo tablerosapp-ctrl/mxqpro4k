@@ -1,0 +1,51 @@
+debugfs: rm "/bin/install-recovery.sh"
+
+debugfs: cd "/bin"
+debugfs: write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/revision-0.1.1/file-0" "install-recovery.sh"
+Allocated inode: 100
+debugfs: cd /
+debugfs: set_inode_field "/bin/install-recovery.sh" mode 0100750
+debugfs: set_inode_field "/bin/install-recovery.sh" uid 0
+debugfs: set_inode_field "/bin/install-recovery.sh" gid 0
+debugfs: ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/revision-0.1.1/context-0" "/bin/install-recovery.sh" security.selinux
+debugfs: rm "/etc/install-recovery.sh"
+
+debugfs: cd "/etc"
+debugfs: write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/revision-0.1.1/file-1" "install-recovery.sh"
+Allocated inode: 166
+debugfs: cd /
+debugfs: set_inode_field "/etc/install-recovery.sh" mode 0100644
+debugfs: set_inode_field "/etc/install-recovery.sh" uid 0
+debugfs: set_inode_field "/etc/install-recovery.sh" gid 0
+debugfs: ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/revision-0.1.1/context-1" "/etc/install-recovery.sh" security.selinux
+debugfs: rm "/etc/init/tvbase.rc"
+
+debugfs: cd "/etc/init"
+debugfs: write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/revision-0.1.1/file-2" "tvbase.rc"
+Allocated inode: 89
+debugfs: cd /
+debugfs: set_inode_field "/etc/init/tvbase.rc" mode 0100644
+debugfs: set_inode_field "/etc/init/tvbase.rc" uid 0
+debugfs: set_inode_field "/etc/init/tvbase.rc" gid 0
+debugfs: ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/revision-0.1.1/context-2" "/etc/init/tvbase.rc" security.selinux
+debugfs: rm "/build.prop"
+
+debugfs: cd "/"
+debugfs: write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/revision-0.1.1/file-3" "build.prop"
+Allocated inode: 98
+debugfs: cd /
+debugfs: set_inode_field "/build.prop" mode 0100644
+debugfs: set_inode_field "/build.prop" uid 0
+debugfs: set_inode_field "/build.prop" gid 0
+debugfs: ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/revision-0.1.1/context-3" "/build.prop" security.selinux
+debugfs: rm "/etc/tvbase.json"
+
+debugfs: cd "/etc"
+debugfs: write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/revision-0.1.1/file-4" "tvbase.json"
+Allocated inode: 99
+debugfs: cd /
+debugfs: set_inode_field "/etc/tvbase.json" mode 0100644
+debugfs: set_inode_field "/etc/tvbase.json" uid 0
+debugfs: set_inode_field "/etc/tvbase.json" gid 0
+debugfs: ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/revision-0.1.1/context-4" "/etc/tvbase.json" security.selinux
+debugfs 1.44.5 (15-Dec-2018)

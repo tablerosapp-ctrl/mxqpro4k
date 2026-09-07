@@ -1,0 +1,14 @@
+{
+  "fecha": "2026-09-05T15:45:46.6353108-03:00",
+  "usb_id": "USBSTOR\\DISK&VEN_KINGSTON&PROD_DATATRAVELER_3.0&REV_\\KINGSTON_SERIAL_LOCAL&0:PC_LOCAL",
+  "modelo": "Kingston DataTraveler 3.0",
+  "capacidad": 30943995904,
+  "letra": null,
+  "archivo": "AccesoUSB.apk",
+  "bytes": 16787,
+  "sha256": "7ab7946dc15aef23af8a49ff5239e99716d0f679de6148ed9d24dc23c6614b8e",
+  "lectura_coincidente": true,
+  "rom_completa_copiada_al_usb": false,
+  "particiones_modificadas": false,
+  "tv_modificado": false
+}

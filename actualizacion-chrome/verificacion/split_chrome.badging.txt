@@ -1,0 +1,8 @@
+09-05 14:39:19.724  1912 11712 W ResourceType: No known package when getting value for resource number 0x7f14073b
+package: name='com.android.chrome' versionCode='720418020' versionName='138.0.7204.180' split='chrome' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'
+sdkVersion:'26'
+targetSdkVersion:'35'
+uses-permission: name='android.permission.USE_BIOMETRIC'
+uses-permission: name='android.permission.USE_FINGERPRINT'
+application: label='' icon=''
+AndroidManifest.xml:359: error: ERROR getting 'android:label' attribute: attribute value reference does not exist

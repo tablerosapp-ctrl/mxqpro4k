@@ -1,0 +1,41 @@
+{
+  "fecha": "2026-09-05T14:38:37.5817493-03:00",
+  "java": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\tools\\verificacion-apk\\java21\\jdk-21.0.12.1+1-jre\\bin\\java.exe",
+  "apksigner": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\tools\\verificacion-apk\\build-tools-37\\android-37.0\\lib\\apksigner.jar",
+  "apksigner_sha256": "2defad215d7ff52968a409cde528cdaef7918b115e276b8e3378ca7a178e4180",
+  "resultados": [
+    {
+      "archivo": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\actualizacion-chrome\\chrome-70-original.apk",
+      "bytes": 67265948,
+      "sha256": "352c61df2f1eb5082bb2acba1a3e5fa04a5c0200680dcafab431135f287f1bf0",
+      "archivo_sin_cambios": true,
+      "certificado_esperado_sha256": "f0fd6c5b410f25cb25c3b53346c8972fae30f8ee7411df910480ad6b2d60db83",
+      "comprobaciones": [
+        {
+          "modo": "general",
+          "codigo_salida": 0,
+          "firma_verificada": true,
+          "certificados_sha256": [
+            "f0fd6c5b410f25cb25c3b53346c8972fae30f8ee7411df910480ad6b2d60db83"
+          ],
+          "certificado_coincide": true,
+          "registro": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\actualizacion-chrome\\verificacion\\ejecucion-20260905-143836-63fb17bf\\01-chrome-70-original.general.txt",
+          "argumentos": "-jar \"C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\tools\\verificacion-apk\\build-tools-37\\android-37.0\\lib\\apksigner.jar\" verify --verbose --print-certs \"C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\actualizacion-chrome\\chrome-70-original.apk\""
+        },
+        {
+          "modo": "android-9-api28",
+          "codigo_salida": 0,
+          "firma_verificada": true,
+          "certificados_sha256": [
+            "f0fd6c5b410f25cb25c3b53346c8972fae30f8ee7411df910480ad6b2d60db83"
+          ],
+          "certificado_coincide": true,
+          "registro": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\actualizacion-chrome\\verificacion\\ejecucion-20260905-143836-63fb17bf\\01-chrome-70-original.android-9-api28.txt",
+          "argumentos": "-jar \"C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\tools\\verificacion-apk\\build-tools-37\\android-37.0\\lib\\apksigner.jar\" verify --verbose --print-certs --min-sdk-version 28 --max-sdk-version 28 \"C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\actualizacion-chrome\\chrome-70-original.apk\""
+        }
+      ],
+      "aprobado": true
+    }
+  ],
+  "todos_aprobados": true
+}

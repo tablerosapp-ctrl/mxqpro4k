@@ -1,0 +1,72 @@
+[
+  {
+    "inode": 12,
+    "modo": "0o40755",
+    "uid": 0,
+    "gid": 0,
+    "bytes": 4096,
+    "flags": 524288,
+    "acl_block": 1153,
+    "ruta": "/etc"
+  },
+  {
+    "inode": 17,
+    "modo": "0o100444",
+    "uid": 0,
+    "gid": 0,
+    "bytes": 80,
+    "flags": 524288,
+    "acl_block": 1158,
+    "ruta": "/etc/fs_config_files"
+  },
+  {
+    "inode": 14,
+    "modo": "0o40755",
+    "uid": 0,
+    "gid": 0,
+    "bytes": 4096,
+    "flags": 524288,
+    "acl_block": 1155,
+    "ruta": "/etc/selinux"
+  },
+  {
+    "inode": 16,
+    "modo": "0o100644",
+    "uid": 0,
+    "gid": 0,
+    "bytes": 432019,
+    "flags": 524288,
+    "acl_block": 1157,
+    "ruta": "/etc/selinux/precompiled_sepolicy"
+  },
+  {
+    "inode": 15,
+    "modo": "0o100644",
+    "uid": 0,
+    "gid": 0,
+    "bytes": 65,
+    "flags": 524288,
+    "acl_block": 1156,
+    "ruta": "/etc/selinux/precompiled_sepolicy.plat_and_mapping.sha256"
+  },
+  {
+    "inode": 13,
+    "modo": "0o100444",
+    "uid": 0,
+    "gid": 0,
+    "bytes": 0,
+    "flags": 524288,
+    "acl_block": 1154,
+    "ruta": "/etc/fs_config_dirs"
+  },
+  {
+    "inode": 11,
+    "modo": "0o40700",
+    "uid": 0,
+    "gid": 0,
+    "bytes": 16384,
+    "flags": 524288,
+    "acl_block": 1152,
+    "ruta": "/lost+found"
+  }
+]

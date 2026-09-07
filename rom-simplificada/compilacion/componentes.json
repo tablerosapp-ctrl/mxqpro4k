@@ -1,0 +1,14 @@
+[
+  {
+    "component": "inicio",
+    "path": "rom-simplificada\\compilacion\\inicio\\inicio.apk",
+    "bytes": 16787,
+    "sha256": "42919a85aee7ab447a6ea9ffbb3ec2f3b35b23283c8046ecab474f4378536cef"
+  },
+  {
+    "component": "webview-overlay",
+    "path": "rom-simplificada\\compilacion\\webview-overlay\\webview-overlay.apk",
+    "bytes": 8619,
+    "sha256": "5d389badf1d877034979129eb3fcd9d8f37bf8fd044bd6cfabda7767d2e80113"
+  }
+]

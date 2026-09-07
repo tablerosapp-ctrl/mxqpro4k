@@ -1,0 +1,6 @@
+select disk 1
+clean
+create partition primary
+format fs=exfat quick label=KINGSTON
+assign letter=E
+exit

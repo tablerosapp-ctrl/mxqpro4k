@@ -1,0 +1,24 @@
+{
+  "estado": "error",
+  "inicio": "2026-09-04T23:40:11.7034805-03:00",
+  "destino_id": "USBSTOR\\DISK&VEN_KINGSTON&PROD_DATATRAVELER_3.0&REV_\\KINGSTON_SERIAL_LOCAL&0:PC_LOCAL",
+  "imagen": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\images\\Armbian_26.05.0_amlogic_s905l2_noble_6.12.91_server_2026.06.01.img",
+  "herramienta": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\tools\\imager-2.0.11.1\\rpi-imager.exe",
+  "version_herramienta": "2.0.11.1",
+  "directorio_informe": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\preparacion-usb\\grabacion-20260904-234011-a03e047f",
+  "verificacion": true,
+  "detalle": "El registro del grabador acredita fallo de escritura, errores Windows 5, 433 y 55; verificacion no iniciada. El wrapper no capturo el codigo de salida numerico.",
+  "fecha": "2026-09-04T23:41:20.2104278-03:00",
+  "letra_antes_de_grabar": "E:\\",
+  "disco": 1,
+  "registro_detallado": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\preparacion-usb\\grabacion-20260904-234011-a03e047f\\imager.log",
+  "proceso_grabador": 19120,
+  "codigo_salida": null,
+  "error_tipo": "System.Management.Automation.RuntimeException",
+  "error_hresult": -2146233087,
+  "codigos_error_windows": [
+    5,
+    433,
+    55
+  ]
+}

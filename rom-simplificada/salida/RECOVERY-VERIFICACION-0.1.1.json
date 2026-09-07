@@ -1,0 +1,82 @@
+{
+  "file": "rom-simplificada\\salida\\TVBASE-P291-A9-0.1.1-RECOVERY.zip",
+  "bytes": 573089164,
+  "sha256": "e7279a7901bc0b513ccc5d3a66a1b5bf483908a4cffd30f34f5d8d463fc95205",
+  "manifest": {
+    "format": 1,
+    "id": "TVBASE-P291-A9-0.1.1",
+    "dt_id": "gxlx2_p291_1g",
+    "media_id": "TVBASE-P291-20260906-4dc82786",
+    "images": [
+      {
+        "name": "system",
+        "entry": "tvbase/system.img",
+        "size": 1342177280,
+        "sha256": "bc2179940754382e5461aa0d65049559b52c1837421c59e651804504010e95d5"
+      },
+      {
+        "name": "vendor",
+        "entry": "tvbase/vendor.img",
+        "size": 335544320,
+        "sha256": "02d4e8b4cfa01feabf7be61edc8ff7f48129cb3fa5ba1a51f15aba61c687b976"
+      },
+      {
+        "name": "product",
+        "entry": "tvbase/product.img",
+        "size": 134217728,
+        "sha256": "3fb07da94443eb7152eb64bb94f23c6ce23da515fe36b3ab03410eb24df8ef40"
+      },
+      {
+        "name": "odm",
+        "entry": "tvbase/odm.img",
+        "size": 134217728,
+        "sha256": "f18f01176433f943cf5cb6c6b2f9ea782b39157a8d68dcab4ee88b010806085f"
+      },
+      {
+        "name": "boot",
+        "entry": "tvbase/boot.img",
+        "size": 12726656,
+        "sha256": "d7cfafa9b4978e72e63851a8f8f3b9eaf346bc4fb24b8bdb50ed02fcedf100ba"
+      }
+    ]
+  },
+  "whole_file_signature_verified": true,
+  "certificate_sha256": "a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc",
+  "payload_sha256_verified": true,
+  "installer_elf": "ARM32 static, no PT_INTERP",
+  "installer_sha256": "f6ba97a70547519a99e611c87ebedd42d5b8cf050d560265aa83df461354ebec",
+  "preserved_partitions": [
+    "bootloader",
+    "recovery",
+    "dtb",
+    "dtbo",
+    "vbmeta",
+    "data",
+    "keys",
+    "env",
+    "misc"
+  ],
+  "original_partition_backup_required": true,
+  "hardware_compatibility_confirmed": false,
+  "first_tv_recovery_accepts_signature": false,
+  "physically_installed": false,
+  "recovery_preservation_revision": {
+    "version": "0.1.1",
+    "package_id": "TVBASE-P291-A9-0.1.1",
+    "system_image": "rom-simplificada\\trabajo\\revision-0.1.1\\system.raw.img",
+    "source_system_sha256": "1b388c1366a4a77e0c7e24ee935be187d25a051ab90ea6cbb518e0e486b7c2fb",
+    "system_sha256": "bc2179940754382e5461aa0d65049559b52c1837421c59e651804504010e95d5",
+    "fsck_exit": 0,
+    "unchanged_files_verified": 2426,
+    "changed_files": {
+      "/bin/install-recovery.sh": "ec6691c4fe8a991090eb8feeec79715322dd74b3976d7dfbe882902d397e14b8",
+      "/etc/install-recovery.sh": "ec6691c4fe8a991090eb8feeec79715322dd74b3976d7dfbe882902d397e14b8",
+      "/etc/init/tvbase.rc": "4f879736cfcca108e4cf94b5bfbc81e00ea720cd492f045d442ba5b15c325385",
+      "/build.prop": "b613494cb3b92c9c8a01804de839704b09cab000163b5511b1db0d6b6ca77c84",
+      "/etc/tvbase.json": "b64287fbb277e20a579b09c4cbce75e47b9f2b2af4d1642e160c18bae35df28d"
+    },
+    "inherited_recovery_replacement_disabled": true,
+    "hardware_tested": false,
+    "installer_binary": "rom-simplificada\\trabajo\\revision-0.1.1\\update-binary"
+  }
+}

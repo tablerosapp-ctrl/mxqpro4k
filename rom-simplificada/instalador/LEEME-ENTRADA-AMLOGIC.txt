@@ -1,0 +1,30 @@
+TVBASE P291 - ENTRADA AMLOGIC POR USB - ACCESO USB 0.4
+
+1. Instalar AccesoUSB-0.4.apk en el PRIMER TV P291, actualizando la aplicacion.
+2. Abrir Acceso USB y pulsar "Guardar informe y abrir instalador USB (reinicia)".
+   Guarda un informe y comprueba los archivos antes de pedir el modo update.
+   La comprobacion de la ROM puede tardar hasta tres minutos.
+3. Si aparece recovery, elegir Apply update from EXT, el USB/udisk y
+   TVBASE-P291-A9-0.1.1-RECOVERY.zip.
+4. Durante respaldo e instalacion mantener alimentacion y pendrive conectados.
+   Solo cuando termine sin errores, elegir Reboot system now.
+
+La ROM y la aplicacion se instalan en pasos distintos. Copiar archivos al USB
+no instala Android. No abrir el actualizador viejo que se quedaba al 2 %.
+
+Si informa un error antes de reiniciar, no repetir el boton: conservar el texto.
+Si vuelve a quedar sin senal, no encadenar reinicios ni dar por instalada la ROM;
+avisar que ocurrio. El informe TVBASE-diagnostico-*.txt quedara en el USB si la
+comprobacion previa pudo guardarlo. Tambien hay un boton para guardar solo el
+informe, sin reiniciar.
+
+recovery.img es un instalador temporal preparado a partir de la misma base P291.
+El modo update de los cargadores Amlogic de referencia puede cargarlo desde USB.
+No se graba la particion recovery con este archivo. Incluye la clave publica
+de prueba usada en nuestro ZIP y conserva la verificacion de firmas.
+El cargador de ESTE TV y su arranque externo todavia no estan comprobados.
+
+La ROM 0.1.1 mantiene kernel/controladores del candidato, Chrome 138 y el inicio
+propio; desactiva las rutinas heredadas que intentaban reemplazar recovery.
+El instalador exige un respaldo verificado de las particiones antes de escribir.
+Conservar siempre todas las carpetas TVBASE-respaldo-*.

@@ -1,0 +1,348 @@
+{
+  "status": "experimental_no_flasheada",
+  "source_sha256": "bd8a8d9c02f6aa1119e5ea7708f2b49a1e4c7fef6169d30bbd1604981eb042e5",
+  "static_verification": {
+    "system": {
+      "untouched_files_identical": 2422,
+      "changed_files_verified": 9,
+      "fsck_exit": 0,
+      "sha256": "1b388c1366a4a77e0c7e24ee935be187d25a051ab90ea6cbb518e0e486b7c2fb",
+      "free_bytes": 461352960,
+      "zeroed_free_blocks": 112635,
+      "skipped_uninitialized_groups": []
+    },
+    "vendor": {
+      "untouched_files_identical": 1071,
+      "changed_files_verified": 2,
+      "fsck_exit": 0,
+      "sha256": "02d4e8b4cfa01feabf7be61edc8ff7f48129cb3fa5ba1a51f15aba61c687b976",
+      "free_bytes": 105488384,
+      "zeroed_free_blocks": 25754,
+      "skipped_uninitialized_groups": []
+    }
+  },
+  "hardware_compatibility_confirmed": false,
+  "usb_install_entry_confirmed": false,
+  "runtime_webview_confirmed": false,
+  "file": "rom-simplificada\\salida\\TVBASE-P291-A9-0.1-EXPERIMENTAL.img",
+  "bytes": 1342736696,
+  "sha256": "73be8916f504e883dd536271a64694701f798e4e3408090eaa59cbce88db3798",
+  "container_crc32": "0xd99e2c6f",
+  "verified_partition_sha1": [
+    "_aml_dtb",
+    "boot",
+    "bootloader",
+    "dtbo",
+    "logo",
+    "metadata",
+    "odm",
+    "product",
+    "recovery",
+    "system",
+    "vbmeta",
+    "vendor"
+  ],
+  "unchanged_other_container_items": true,
+  "records": [
+    {
+      "id": 0,
+      "tipo": "USB",
+      "nombre": "DDR",
+      "offset": 17344,
+      "bytes": 49152,
+      "verify_flag": 0,
+      "backup": 0,
+      "backup_id": 0
+    },
+    {
+      "id": 1,
+      "tipo": "USB",
+      "nombre": "UBOOT",
+      "offset": 66496,
+      "bytes": 517616,
+      "verify_flag": 0,
+      "backup": 0,
+      "backup_id": 0
+    },
+    {
+      "id": 2,
+      "tipo": "PARTITION",
+      "nombre": "_aml_dtb",
+      "offset": 584112,
+      "bytes": 92736,
+      "verify_flag": 1,
+      "backup": 0,
+      "backup_id": 0
+    },
+    {
+      "id": 3,
+      "tipo": "VERIFY",
+      "nombre": "_aml_dtb",
+      "offset": 676848,
+      "bytes": 48,
+      "verify_flag": 0,
+      "backup": 0,
+      "backup_id": 0
+    },
+    {
+      "id": 4,
+      "tipo": "UBOOT",
+      "nombre": "aml_sdc_burn",
+      "offset": 676896,
+      "bytes": 566768,
+      "verify_flag": 0,
+      "backup": 0,
+      "backup_id": 0
+    },
+    {
+      "id": 5,
+      "tipo": "ini",
+      "nombre": "aml_sdc_burn",
+      "offset": 1243664,
+      "bytes": 394,
+      "verify_flag": 0,
+      "backup": 0,
+      "backup_id": 0
+    },
+    {
+      "id": 6,
+      "tipo": "PARTITION",
+      "nombre": "boot",
+      "offset": 1244060,
+      "bytes": 12726656,
+      "verify_flag": 1,
+      "backup": 0,
+      "backup_id": 0
+    },
+    {
+      "id": 7,
+      "tipo": "VERIFY",
+      "nombre": "boot",
+      "offset": 13970716,
+      "bytes": 48,
+      "verify_flag": 0,
+      "backup": 0,
+      "backup_id": 0
+    },
+    {
+      "id": 8,
+      "tipo": "PARTITION",
+      "nombre": "bootloader",
+      "offset": 676896,
+      "bytes": 566768,
+      "verify_flag": 1,
+      "backup": 1,
+      "backup_id": 4
+    },
+    {
+      "id": 9,
+      "tipo": "VERIFY",
+      "nombre": "bootloader",
+      "offset": 13970764,
+      "bytes": 48,
+      "verify_flag": 0,
+      "backup": 0,
+      "backup_id": 0
+    },
+    {
+      "id": 10,
+      "tipo": "PARTITION",
+      "nombre": "dtbo",
+      "offset": 13970812,
+      "bytes": 8388608,
+      "verify_flag": 1,
+      "backup": 0,
+      "backup_id": 0
+    },
+    {
+      "id": 11,
+      "tipo": "VERIFY",
+      "nombre": "dtbo",
+      "offset": 22359420,
+      "bytes": 48,
+      "verify_flag": 0,
+      "backup": 0,
+      "backup_id": 0
+    },
+    {
+      "id": 12,
+      "tipo": "PARTITION",
+      "nombre": "logo",
+      "offset": 22359468,
+      "bytes": 8388608,
+      "verify_flag": 1,
+      "backup": 0,
+      "backup_id": 0
+    },
+    {
+      "id": 13,
+      "tipo": "VERIFY",
+      "nombre": "logo",
+      "offset": 30748076,
+      "bytes": 48,
+      "verify_flag": 0,
+      "backup": 0,
+      "backup_id": 0
+    },
+    {
+      "id": 14,
+      "tipo": "dtb",
+      "nombre": "meson1",
+      "offset": 584112,
+      "bytes": 92736,
+      "verify_flag": 0,
+      "backup": 1,
+      "backup_id": 2
+    },
+    {
+      "id": 15,
+      "tipo": "PARTITION",
+      "nombre": "metadata",
+      "offset": 30748124,
+      "bytes": 16777216,
+      "verify_flag": 1,
+      "backup": 0,
+      "backup_id": 0
+    },
+    {
+      "id": 16,
+      "tipo": "VERIFY",
+      "nombre": "metadata",
+      "offset": 47525340,
+      "bytes": 48,
+      "verify_flag": 0,
+      "backup": 0,
+      "backup_id": 0
+    },
+    {
+      "id": 17,
+      "tipo": "PARTITION",
+      "nombre": "odm",
+      "offset": 47525388,
+      "bytes": 134217728,
+      "verify_flag": 1,
+      "backup": 0,
+      "backup_id": 0
+    },
+    {
+      "id": 18,
+      "tipo": "VERIFY",
+      "nombre": "odm",
+      "offset": 181743116,
+      "bytes": 48,
+      "verify_flag": 0,
+      "backup": 0,
+      "backup_id": 0
+    },
+    {
+      "id": 19,
+      "tipo": "conf",
+      "nombre": "platform",
+      "offset": 181743164,
+      "bytes": 202,
+      "verify_flag": 0,
+      "backup": 0,
+      "backup_id": 0
+    },
+    {
+      "id": 20,
+      "tipo": "PARTITION",
+      "nombre": "product",
+      "offset": 181743368,
+      "bytes": 57475448,
+      "verify_flag": 1,
+      "backup": 0,
+      "backup_id": 0
+    },
+    {
+      "id": 21,
+      "tipo": "VERIFY",
+      "nombre": "product",
+      "offset": 239218816,
+      "bytes": 48,
+      "verify_flag": 0,
+      "backup": 0,
+      "backup_id": 0
+    },
+    {
+      "id": 22,
+      "tipo": "PARTITION",
+      "nombre": "recovery",
+      "offset": 239218864,
+      "bytes": 25165824,
+      "verify_flag": 1,
+      "backup": 0,
+      "backup_id": 0
+    },
+    {
+      "id": 23,
+      "tipo": "VERIFY",
+      "nombre": "recovery",
+      "offset": 264384688,
+      "bytes": 48,
+      "verify_flag": 0,
+      "backup": 0,
+      "backup_id": 0
+    },
+    {
+      "id": 24,
+      "tipo": "PARTITION",
+      "nombre": "system",
+      "offset": 264384736,
+      "bytes": 857723316,
+      "verify_flag": 1,
+      "backup": 0,
+      "backup_id": 0
+    },
+    {
+      "id": 25,
+      "tipo": "VERIFY",
+      "nombre": "system",
+      "offset": 1122108052,
+      "bytes": 48,
+      "verify_flag": 0,
+      "backup": 0,
+      "backup_id": 0
+    },
+    {
+      "id": 26,
+      "tipo": "PARTITION",
+      "nombre": "vbmeta",
+      "offset": 1122108100,
+      "bytes": 2097152,
+      "verify_flag": 1,
+      "backup": 0,
+      "backup_id": 0
+    },
+    {
+      "id": 27,
+      "tipo": "VERIFY",
+      "nombre": "vbmeta",
+      "offset": 1124205252,
+      "bytes": 48,
+      "verify_flag": 0,
+      "backup": 0,
+      "backup_id": 0
+    },
+    {
+      "id": 28,
+      "tipo": "PARTITION",
+      "nombre": "vendor",
+      "offset": 1124205300,
+      "bytes": 218531348,
+      "verify_flag": 1,
+      "backup": 0,
+      "backup_id": 0
+    },
+    {
+      "id": 29,
+      "tipo": "VERIFY",
+      "nombre": "vendor",
+      "offset": 1342736648,
+      "bytes": 48,
+      "verify_flag": 0,
+      "backup": 0,
+      "backup_id": 0
+    }
+  ]
+}

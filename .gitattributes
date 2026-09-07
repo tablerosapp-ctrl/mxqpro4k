@@ -1,0 +1,34 @@
+# Los hashes de releases corresponden a sus bytes originales, fuera de Git.
+# LF para fuentes que se empaquetan o ejecutan en Android/Linux.
+* text=auto
+*.py text eol=lf
+*.go text eol=lf
+*.java text eol=lf
+*.sh text eol=lf
+*.rc text eol=lf
+*.xml text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.txt text eol=lf
+*.log text eol=lf
+*.ps1 text eol=crlf
+*.cmd text eol=crlf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+
+# No reinterpretar como texto artefactos incorporados de forma excepcional.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.pdf binary
+*.img binary
+*.apk binary
+*.zip binary
+*.gz binary
+*.xz binary
+*.jks binary
+*.pk8 binary

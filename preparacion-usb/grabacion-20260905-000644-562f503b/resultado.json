@@ -1,0 +1,22 @@
+﻿{
+    "estado":  "completado",
+    "inicio":  "2026-09-05T00:06:44.2047081-03:00",
+    "destino_id":  "USBSTOR\\DISK\u0026VEN_KINGSTON\u0026PROD_DATATRAVELER_3.0\u0026REV_\\KINGSTON_SERIAL_LOCAL\u00260:PC_LOCAL",
+    "imagen":  "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\images\\Armbian_26.05.0_amlogic_s905l2_noble_6.12.91_server_2026.06.01.img",
+    "herramienta":  "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\tools\\imager-2.0.11.1\\rpi-imager.exe",
+    "version_herramienta":  "2.0.11.1",
+    "directorio_informe":  "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\preparacion-usb\\grabacion-20260905-000644-562f503b",
+    "verificacion":  true,
+    "detalle":  "Imagen directa grabada y verificada por Raspberry Pi Imager 2.0.11.1. Sin personalizaciones ni herramientas adicionales en el pendrive.",
+    "fecha":  "2026-09-05T00:11:26.8991417-03:00",
+    "letra_antes_de_grabar":  "E:\\",
+    "disco":  1,
+    "conexion_usb":  [
+                         "PCIROOT(0)#PCI(1400)#USBROOT(0)#USB(16)",
+                         "ACPI(_SB_)#ACPI(PC00)#ACPI(XHCI)#ACPI(RHUB)#ACPI(SS04)"
+                     ],
+    "verificacion_completada":  true,
+    "registro_detallado":  "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\preparacion-usb\\grabacion-20260905-000644-562f503b\\imager.log",
+    "proceso_grabador":  3984,
+    "codigo_salida":  0
+}

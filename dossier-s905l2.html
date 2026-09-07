@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dossier S905L2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --paper:#F3F6F4; --surface:#FFFFFF; --surface2:#E9EEEB; --rule:#D2DAD5;
+  --ink:#141B17; --ink2:#4B5A52; --ink3:#77857C;
+  --accent:#14654E; --accent-bg:#DDEBE4; --accent-line:#9DC4B3;
+  --amber:#7E5200; --amber-bg:#F7E9CD; --amber-line:#D9B871;
+  --brick:#96301F; --brick-bg:#F7DDD8; --brick-line:#DFA79B;
+  --sans:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0D1411; --surface:#131B17; --surface2:#1A241F; --rule:#28352E;
+    --ink:#E3ECE6; --ink2:#A3B3A9; --ink3:#7C8D84;
+    --accent:#5FC2A0; --accent-bg:#132A22; --accent-line:#2C5A48;
+    --amber:#DDA94A; --amber-bg:#2B2312; --amber-line:#5C4A20;
+    --brick:#E47764; --brick-bg:#2C1815; --brick-line:#5E322A;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0D1411; --surface:#131B17; --surface2:#1A241F; --rule:#28352E;
+  --ink:#E3ECE6; --ink2:#A3B3A9; --ink3:#7C8D84;
+  --accent:#5FC2A0; --accent-bg:#132A22; --accent-line:#2C5A48;
+  --amber:#DDA94A; --amber-bg:#2B2312; --amber-line:#5C4A20;
+  --brick:#E47764; --brick-bg:#2C1815; --brick-line:#5E322A;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--sans);font-size:15.5px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+.shell{max-width:1180px;margin:0 auto;padding:40px 24px 96px;display:grid;grid-template-columns:212px minmax(0,1fr);gap:52px;align-items:start}
+@media(max-width:940px){.shell{grid-template-columns:1fr;gap:0;padding:28px 18px 72px}}
+
+/* ---- contents rail ---- */
+.rail{position:sticky;top:28px;display:flex;flex-direction:column;gap:2px}
+@media(max-width:940px){.rail{position:static;margin-bottom:34px;border-bottom:1px solid var(--rule);padding-bottom:20px}}
+.rail-t{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3);margin-bottom:10px}
+.rail a{
+  display:flex;gap:10px;text-decoration:none;color:var(--ink2);font-size:13.5px;
+  padding:5px 8px;border-radius:4px;border-left:2px solid transparent;line-height:1.35;
+}
+.rail a:hover{color:var(--accent);background:var(--surface2);border-left-color:var(--accent-line)}
+.rail a:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.rail a i{font-family:var(--mono);font-style:normal;color:var(--ink3);font-size:11.5px;min-width:15px;padding-top:1px}
+
+/* ---- masthead ---- */
+.mast{border-bottom:2px solid var(--ink);padding-bottom:22px;margin-bottom:8px}
+.eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin:0 0 12px;font-weight:600}
+h1{font-size:36px;line-height:1.08;letter-spacing:-.025em;margin:0 0 10px;font-weight:700;text-wrap:balance}
+.dek{margin:0;color:var(--ink2);font-size:15.5px;max-width:62ch}
+
+/* ---- identity strip ---- */
+.ident{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));
+  border:1px solid var(--rule);border-radius:3px;background:var(--surface);margin:26px 0 8px;overflow:hidden;
+}
+.ident div{padding:13px 15px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.ident div:last-child{border-right:0}
+.ident dt{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink3);margin:0 0 5px}
+.ident dd{margin:0;font-family:var(--mono);font-size:14.5px;font-weight:500;color:var(--ink);word-break:break-all}
+
+/* ---- sections ---- */
+section{padding-top:44px}
+h2{
+  font-size:22px;letter-spacing:-.015em;margin:0 0 4px;font-weight:600;text-wrap:balance;
+  display:flex;align-items:baseline;gap:12px;
+}
+h2 span{font-family:var(--mono);font-size:12px;color:var(--accent);font-weight:600;letter-spacing:.04em}
+.lede{color:var(--ink2);margin:0 0 20px;max-width:64ch}
+h3{font-size:15px;font-weight:600;margin:28px 0 9px;letter-spacing:-.005em}
+p{margin:0 0 13px;max-width:66ch}
+ul,ol{margin:0 0 14px;padding-left:20px;max-width:64ch}
+li{margin-bottom:7px}
+li::marker{color:var(--ink3)}
+strong{font-weight:600}
+a{color:var(--accent)}
+
+/* ---- spec tables ---- */
+.tblwrap{overflow-x:auto;margin:14px 0 20px;border:1px solid var(--rule);border-radius:3px;background:var(--surface)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+caption{
+  text-align:left;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink3);padding:11px 15px 0;
+}
+th{
+  text-align:left;font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink3);font-weight:500;padding:11px 15px;border-bottom:1px solid var(--rule);white-space:nowrap;
+}
+td{padding:9px 15px;border-bottom:1px solid var(--rule);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.k{font-family:var(--mono);font-size:12.5px;color:var(--ink2);white-space:nowrap}
+td.v{font-family:var(--mono);font-size:13px;font-weight:500;font-variant-numeric:tabular-nums}
+td.n{font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+
+/* ---- status chips ---- */
+.chip{
+  display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;
+  font-weight:600;padding:2.5px 7px;border-radius:2px;white-space:nowrap;border:1px solid;
+}
+.ok{color:var(--accent);background:var(--accent-bg);border-color:var(--accent-line)}
+.warn{color:var(--amber);background:var(--amber-bg);border-color:var(--amber-line)}
+.bad{color:var(--brick);background:var(--brick-bg);border-color:var(--brick-line)}
+
+/* ---- code ---- */
+code{font-family:var(--mono);font-size:.88em;background:var(--surface2);padding:1px 5px;border-radius:2px;color:var(--ink)}
+pre{
+  font-family:var(--mono);font-size:13px;line-height:1.65;background:var(--surface);color:var(--ink);
+  border:1px solid var(--rule);border-left:2px solid var(--accent-line);border-radius:3px;
+  padding:13px 16px;margin:12px 0 18px;overflow-x:auto;max-width:100%;
+}
+pre code{background:none;padding:0;font-size:inherit}
+.cmt{color:var(--ink3)}
+
+/* ---- notes ---- */
+.note{border-left:2px solid var(--accent-line);background:var(--accent-bg);padding:13px 17px;margin:18px 0;border-radius:0 3px 3px 0;font-size:14.5px}
+.note.stop{border-left-color:var(--brick-line);background:var(--brick-bg)}
+.note.hold{border-left-color:var(--amber-line);background:var(--amber-bg)}
+.note p{margin:0 0 9px;max-width:none}
+.note p:last-child{margin:0}
+.note b{font-weight:600}
+
+/* ---- phases ---- */
+.phase{border-top:1px solid var(--rule);padding:18px 0 4px;display:grid;grid-template-columns:44px 1fr;gap:18px}
+@media(max-width:640px){.phase{grid-template-columns:1fr;gap:6px}}
+.phase-n{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--accent);padding-top:3px;letter-spacing:.04em}
+.phase h3{margin-top:0}
+.phase p,.phase ul{max-width:62ch}
+
+footer{margin-top:66px;padding-top:20px;border-top:1px solid var(--rule);color:var(--ink3);font-size:12.5px;font-family:var(--mono)}
+footer a{color:var(--accent);text-decoration:none}
+footer a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="shell">
+
+<nav class="rail" aria-label="Contenido">
+  <p class="rail-t">Contenido</p>
+  <a href="#objetivo-vigente"><i>00</i>Objetivo vigente</a>
+  <a href="#s1"><i>01</i>Identidad</a>
+  <a href="#s2"><i>02</i>Hardware</a>
+  <a href="#s3"><i>03</i>Software de fábrica</a>
+  <a href="#s4"><i>04</i>Mapa de memoria</a>
+  <a href="#s5"><i>05</i>La falla</a>
+  <a href="#s6"><i>06</i>Muros de acceso</a>
+  <a href="#s7"><i>07</i>Vía de arranque</a>
+  <a href="#s8"><i>08</i>Hoja de ruta</a>
+  <a href="#s9"><i>09</i>Inventario de drivers</a>
+  <a href="#s10"><i>10</i>Protocolo reusable</a>
+  <a href="#s11"><i>11</i>Reglas duras</a>
+</nav>
+
+<main>
+
+<header class="mast">
+  <p class="eyebrow">Dossier de hardware · Unidad 01</p>
+  <h1>Amlogic S905L2 &mdash; caja de operador revendida como MXQ Pro</h1>
+  <p class="dek">Todo lo determinado sobre este equipo, con el origen de cada dato y qué queda sin verificar. Base de trabajo para adelgazar una imagen y construir sobre ella un Android mínimo con navegador y WebView.</p>
+</header>
+
+<section id="objetivo-vigente">
+<h2><span>§ 00</span> Objetivo vigente · 4 de septiembre de 2026</h2>
+<div class="note">
+  <p><b>Android mínimo instalado en la memoria interna.</b> Reemplazar el sistema original, conservar los recursos del TV box y ejecutar una APK común con Android TV. Mantener red, controles, almacenamiento local y video; disponer de actualizaciones propias para la aplicación, WebView y sistema. Google Play no es un requisito.</p>
+  <p><b>Compatibilidad para aplicaciones en evolución.</b> La base debe conservar APIs de Android y funciones web estándar, permitir actualizaciones y admitir las versiones futuras de la APK dentro de las capacidades del hardware. Se avanzará con pruebas generales sin esperar a que la aplicación esté terminada.</p>
+  <p><b>Referencia funcional confirmada por el usuario:</b> el WebView actual reproduce dos videos VP9 superpuestos, uno transparente, y un canvas con objetos. Esa composición se sumará a las pruebas cuando esté disponible; no limita los futuros contenidos ni funciones del producto. El segundo WebView para automatizaciones es secundario.</p>
+  <p>La propuesta y los criterios de prueba están en <a href="ARQUITECTURA-ANDROID-TV.md">ARQUITECTURA-ANDROID-TV.md</a>. Chrome como navegador y el proveedor WebView de las APK requieren tratamiento separado. Una imagen más reciente o con menos aplicaciones debe demostrar su mejora con los mismos videos.</p>
+</div>
+<div class="note hold">
+  <p><b>Estado y alcance del resto del dossier.</b> Las secciones siguientes conservan antecedentes e hipótesis históricas. La hoja de ruta y las reglas anteriores quedan sustituidas por el documento vigente cuando difieran: no se investigará la causa de la actualización que afectó al WiFi; la eMMC dañada no está demostrada; <code>userdebug</code> no acredita acceso root disponible; la identidad de placa y el arranque USB requieren comprobación. Armbian queda como herramienta opcional, no como sistema final. Tras tres escrituras fallidas y recuperar el volumen, el usuario cambió físicamente el puerto USB. La cuarta grabación terminó correctamente el 5/9/2026 a las 00:11:26, con verificación SHA-256 coincidente y expulsión del pendrive. La imagen temporal está lista para la primera prueba en el TV box; todavía no se comprobó el arranque ni se instaló una nueva ROM interna.</p>
+</div>
+</section>
+
+<dl class="ident">
+  <div><dt>dt-id</dt><dd>gxlx2_p291_1g</dd></div>
+  <div><dt>SoC</dt><dd>S905Lx · revisión pendiente</dd></div>
+  <div><dt>Familia</dt><dd>gxlx2</dd></div>
+  <div><dt>RAM</dt><dd>1 GB</dd></div>
+  <div><dt>Reservado a video</dt><dd>412 MB</dd></div>
+  <div><dt>Almacenamiento</dt><dd>eMMC · estado sin validar</dd></div>
+</dl>
+
+<section id="s1">
+<h2><span>§ 01</span> Identidad y cómo se determinó</h2>
+<p class="lede">Las propiedades de Android y el device tree son pistas de configuración; deben contrastarse para elegir una ROM.</p>
+
+<p>La caja se vende como &laquo;MXQ Pro&raquo;, un nombre compartido por equipos de distinto hardware. El siguiente archivo identifica el DTB utilizado por el kernel, no certifica por sí solo todos los componentes físicos:</p>
+
+<pre><code>cat /proc/device-tree/amlogic-dt-id
+<span class="cmt">→ gxlx2_p291_1g</span></code></pre>
+
+<p>La cadena apunta a la familia <code>gxlx2</code>, referencia <code>p291</code> y configuración <code>1g</code>. Es coherente con la RAM nominal del reporte, pero no acredita timings de DDR ni revisión de placa. <a href="https://github.com/libretro/Lakka-LibreELEC/issues/1966">Un reporte con registros de arranque</a> usa la misma cadena para un equipo identificado como S905L3: la inferencia inicial S905L2 no debe usarse como equivalencia definitiva.</p>
+
+<div class="tblwrap">
+<table>
+  <caption>Contraste entre lo que dice Android y lo que dice el kernel</caption>
+  <thead><tr><th>Fuente</th><th>Valor</th><th>Fiable</th></tr></thead>
+  <tbody>
+    <tr><td class="k">ro.board.platform</td><td class="v">ampere</td><td><span class="chip warn">No identifica la placa</span></td></tr>
+    <tr><td class="k">ro.product.device</td><td class="v">ampere</td><td><span class="chip warn">Nombre del build</span></td></tr>
+    <tr><td class="k">ro.product.model</td><td class="v">MBOX</td><td><span class="chip bad">Genérico</span></td></tr>
+    <tr><td class="k">ro.hardware</td><td class="v">amlogic</td><td><span class="chip ok">Real</span></td></tr>
+    <tr><td class="k">/proc/cpuinfo → Hardware</td><td class="v">Amlogic</td><td><span class="chip ok">Real</span></td></tr>
+    <tr><td class="k">amlogic-dt-id</td><td class="v">gxlx2_p291_1g</td><td><span class="chip ok">Identifica el DTB utilizado</span></td></tr>
+  </tbody>
+</table>
+</div>
+
+<p><code>ampere</code> no basta para elegir una imagen de placa. Conservarlo como dato del build junto con el DT, la RAM, la serigrafía y los controladores; el reporte no demuestra que esa propiedad haya sido falsificada.</p>
+
+<h3>Qué significa la línea GXLX</h3>
+<p>GXLX no es una generación distinta sino una <strong>rama abaratada del S905X destinada a cajas de operadores de IPTV</strong>, no a venta al público. Las bindings del kernel describen al S905L —el hermano anterior, placa p271— como &laquo;un diseño de bajo costo similar al P281 (S905W) y derivado igualmente del P212 (S905X)&raquo;, que <strong>omite el códec VP9</strong> y usa una Mali-450 con menos núcleos. El S905L2 es la revisión siguiente de esa misma rama.</p>
+
+<div class="note hold">
+  <p><b>Sin verificar.</b> La equivalencia <code>gxlx</code> = S905L está documentada en el árbol principal de Linux. <code>gxlx2</code> = S905L2 se deduce de la misma convención de nombres, pero <b>la placa p291 no aparece en las bindings del kernel</b> — es una referencia interna de Amlogic. La familia es segura; el número de placa vale como lo que reporta el propio DTB del equipo.</p>
+</div>
+</section>
+
+<section id="s2">
+<h2><span>§ 02</span> Hardware</h2>
+<p class="lede">Lo leído del sistema y lo observado directamente sobre la placa desnuda.</p>
+
+<div class="tblwrap">
+<table>
+  <caption>Cómputo</caption>
+  <tbody>
+    <tr><td class="k">CPU</td><td class="v">4 × Cortex-A53</td></tr>
+    <tr><td class="k">implementer / part</td><td class="v">0x41 (ARM) / 0xd03</td></tr>
+    <tr><td class="k">variant / revision</td><td class="v">0x0 / 4</td></tr>
+    <tr><td class="k">Arquitectura real</td><td class="v">ARMv8 64-bit</td></tr>
+    <tr><td class="k">Arquitectura reportada</td><td class="v">ARMv7 (v7l) — por ROM de 32 bits</td></tr>
+    <tr><td class="k">Frecuencia en reposo</td><td class="v">500 MHz</td></tr>
+    <tr><td class="k">BogoMIPS</td><td class="v">480.00</td></tr>
+    <tr><td class="k">Caché L1d / L1i</td><td class="v">4 × 16 KB / 4 × 16 KB</td></tr>
+    <tr><td class="k">Caché L2</td><td class="v">256 KB</td></tr>
+    <tr><td class="k">GPU</td><td class="v">Mali-450 MP · GLES 2.0</td></tr>
+    <tr><td class="k">Serial</td><td class="v">TV_SERIAL_LOCAL</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>El <code>CPU part 0xd03</code> con implementer <code>0x41</code> es la firma inequívoca del Cortex-A53 de ARM. Que <code>/proc/cpuinfo</code> diga ARMv7 no lo contradice: el A53 es de 64 bits, pero la ROM está compilada en 32 bits y el kernel lo reporta en ese modo. La Mali-450 descarta por sí sola al S912 (Mali-T820) y a toda la generación S905X2/X3 (Mali-G31).</p>
+
+<h3>Placa y conectividad</h3>
+<div class="tblwrap">
+<table>
+  <caption>Observado sobre la placa</caption>
+  <tbody>
+    <tr><td class="k">Serigrafía</td><td class="v">P05L_5V300A1-4-080819 · 1C11H16M.C3</td></tr>
+    <tr><td class="k">Certificación</td><td class="v">EP 13MVO 94V-0 · E157925 · 2023</td></tr>
+    <tr><td class="k">Memoria / eMMC</td><td class="v">Kingston DDR3 + Kingston eMMC</td></tr>
+    <tr><td class="k">WiFi</td><td class="v">módulo MediaTek</td></tr>
+    <tr><td class="k">Ethernet</td><td class="v">RJ45 <span class="chip ok">Funcional</span></td></tr>
+    <tr><td class="k">USB</td><td class="v">3 × USB-A <span class="chip ok">Funcional</span></td></tr>
+    <tr><td class="k">Lector SD</td><td class="v">no existe <span class="chip bad">Ausente</span></td></tr>
+    <tr><td class="k">Pads UART</td><td class="v">GND / RX / TX serigrafiados</td></tr>
+    <tr><td class="k">Pads JTAG</td><td class="v">TMS / TCK / TDO / TDI</td></tr>
+    <tr><td class="k">Switch en placa</td><td class="v">enclavamiento, sin efecto observable</td></tr>
+    <tr><td class="k">Salida activa</td><td class="v">1280 × 720 @ 60 Hz, mdpi, density 1.0</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="note">
+  <p><b>Los pads UART son el recurso que todavía no gastamos.</b> Con un adaptador USB-TTL de 3,3 V a 115200 8N1 se obtiene la consola de u-boot y el log de arranque completo, antes de que cargue Android. Es el único punto de observación que no depende de que el sistema operativo funcione, y va a ser indispensable si el arranque por USB falla en silencio.</p>
+</div>
+
+<p>El switch de la placa merece una nota: en los Amlogic ese contacto lo lee el bootloader <strong>solo en el instante del arranque</strong>. Que no haga nada con el equipo encendido es esperable. Que tampoco haga nada al arrancar sugiere que el footprint quedó sin conectar, cosa habitual cuando se reutiliza una placa genérica.</p>
+</section>
+
+<section id="s3">
+<h2><span>§ 03</span> Software de fábrica</h2>
+
+<div class="tblwrap">
+<table>
+  <tbody>
+    <tr><td class="k">Android</td><td class="v">9 (SDK 28) · REL</td></tr>
+    <tr><td class="k">Kernel</td><td class="v">4.9.113</td></tr>
+    <tr><td class="k">Build</td><td class="v">ampere-userdebug 9 PPR1.180610.011 20250226 test-keys</td></tr>
+    <tr><td class="k">Brand / Manufacturer</td><td class="v">Droidlogic</td></tr>
+    <tr><td class="k">ABI</td><td class="v">armeabi-v7a (userspace 32 bits)</td></tr>
+    <tr><td class="k">VM</td><td class="v">ART</td></tr>
+    <tr><td class="k">Cifrado de almacenamiento</td><td class="v">INACTIVE</td></tr>
+    <tr><td class="k">StrongBox</td><td class="v">No</td></tr>
+    <tr><td class="k">Root</td><td class="v">reportado &laquo;Yes&raquo; <span class="chip bad">Falso positivo</span></td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>Tres detalles del build tienen consecuencias prácticas y conviene tenerlos presentes:</p>
+
+<ul>
+  <li><strong><code>Droidlogic</code> como fabricante</strong> es la prueba temprana de que es Amlogic: Droidlogic es su subsidiaria de software y ninguna placa Rockchip o Allwinner reporta eso.</li>
+  <li><strong><code>userdebug</code></strong> es el tipo declarado del build. En esta ROM no acredita que <code>su</code> esté disponible para aplicaciones ni que ADB tenga root. Conectividad ADB, permisos shell y root son comprobaciones diferentes; <a href="https://android.googlesource.com/platform/system/core/+/refs/tags/android-9.0.0_r1/adb/services.cpp">AOSP Android 9</a> implementa reinicios de ADB sin exigir root para todos los destinos.</li>
+  <li><strong><code>test-keys</code></strong> es una pista sobre el build, no una comprobación de los certificados del recovery. <a href="https://source.android.com/docs/core/ota/sign_builds">Android comprueba las claves autorizadas</a> para aceptar actualizaciones. No se ha demostrado que este aparato acepte un ZIP firmado con las claves de prueba de AOSP.</li>
+</ul>
+
+<p>La ROM está recortada: varios <em>intents</em> estándar de Settings no existen. <code>android.settings.BACKUP_AND_RESET_SETTINGS</code> no resuelve; <code>WIFI_SETTINGS</code> sí. Al trabajar sobre esta base hay que verificar la existencia de cada actividad en vez de asumir el catálogo de AOSP.</p>
+
+<p>Ausencia relevante para el objetivo final: <strong>el S905L2 no tiene VP9 por hardware</strong>. El video en VP9 —buena parte de YouTube— se decodifica por software, en CPU, sin tocar el pool reservado. Cualquier plan que involucre reproducción web tiene que contar con eso.</p>
+</section>
+
+<section id="s4">
+<h2><span>§ 04</span> Mapa de memoria</h2>
+<p class="lede">El recurso más escaso del equipo, y el primero que vamos a recuperar.</p>
+
+<div class="tblwrap">
+<table>
+  <caption>/proc/meminfo — capturado en reposo, sin reproducir nada</caption>
+  <thead><tr><th>Campo</th><th>kB</th><th>Aprox.</th><th>Lectura</th></tr></thead>
+  <tbody>
+    <tr><td class="k">MemTotal</td><td class="n">1 013 164</td><td class="n">990 MB</td><td>RAM visible al kernel</td></tr>
+    <tr><td class="k">MemAvailable</td><td class="n">490 744</td><td class="n">479 MB</td><td>lo que Android tenía de verdad</td></tr>
+    <tr><td class="k">CmaTotal</td><td class="n">421 888</td><td class="n">412 MB</td><td>reserva contigua para video</td></tr>
+    <tr><td class="k">CmaFree</td><td class="n">201 488</td><td class="n">197 MB</td><td>libre → <strong>215 MB en uso en reposo</strong></td></tr>
+    <tr><td class="k">SwapTotal</td><td class="n">262 140</td><td class="n">256 MB</td><td>zram comprimido</td></tr>
+    <tr><td class="k">LowTotal</td><td class="n">751 020</td><td class="n">733 MB</td><td>split de kernel 32 bits</td></tr>
+    <tr><td class="k">HighTotal</td><td class="n">262 144</td><td class="n">256 MB</td><td>highmem</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Qué es el CMA y por qué es tan grande</h3>
+<p>El <em>Contiguous Memory Allocator</em> es un mecanismo del kernel. El decodificador de video, la GPU y el controlador de display no tienen unidad de traducción de direcciones propia y necesitan bloques <strong>físicamente contiguos</strong>, imposibles de conseguir en un sistema fragmentado. El kernel los reserva al arrancar, antes de que nada fragmente la memoria.</p>
+
+<p>El pool es genérico: no sabe de códecs. En Amlogic lo administra <code>codec_mm</code>, que lo reparte a demanda entre decodificador, GPU, display y OSD. Lo que está dimensionado por video es el <em>tamaño</em>: un cuadro 4K en NV12 ocupa unos 12 MB, y el decodificador necesita un pool de 8 a 16 cuadros de referencia más los buffers de pantalla. De ahí salen los 412 MB.</p>
+
+<p>La consecuencia es absurda y es exactamente nuestro punto de partida: <strong>más del 40% de la RAM comprometida con una capacidad 4K que este equipo, saliendo a 720p, nunca usó.</strong></p>
+
+<div class="note">
+  <p><b>Primera ganancia concreta.</b> El tamaño del CMA se fija por línea de comandos del kernel. En Armbian se ajusta en el <code>APPEND</code> de <code>uEnv.txt</code>:</p>
+  <p><code>cma=128M</code> &mdash; para uso headless o servidor, libera cerca de 280 MB.<br>
+  <code>cma=256M</code> &mdash; piso si se quiere 1080p con aceleración por hardware.</p>
+  <p>Recortarlo de más no da error claro: el decodificador no consigue los bloques y cae a software, con video entrecortado. Es un parámetro para medir, no para adivinar.</p>
+</div>
+
+<p>Precisión para no exagerar el beneficio: el CMA no está cien por ciento perdido. El kernel puede prestar esas páginas a usos movibles y recuperarlas migrándolas. En la práctica, sobre drivers propietarios que fijan páginas, buena parte de la reserva sí es real — pero la ganancia esperable está más cerca de los 200 MB que de los 280.</p>
+</section>
+
+<section id="s5">
+<h2><span>§ 05</span> La falla &mdash; hipótesis vigente</h2>
+
+<div class="tblwrap">
+<table>
+  <caption>Síntomas observados, en orden de aparición</caption>
+  <tbody>
+    <tr><td>Congelamiento inicial que motivó el desarme</td><td class="v" style="text-align:right"><span class="chip bad">Cuelgue</span></td></tr>
+    <tr><td>Activar WiFi desde Ajustes</td><td class="v" style="text-align:right"><span class="chip bad">Cuelgue</span></td></tr>
+    <tr><td>Ejecutar &laquo;Borrar todos los datos&raquo;</td><td class="v" style="text-align:right"><span class="chip bad">Cuelgue</span></td></tr>
+    <tr><td>Borrar datos de la app Ajustes</td><td class="v" style="text-align:right"><span class="chip warn">Sin efecto</span></td></tr>
+    <tr><td>Navegar menús, <code>getprop</code>, <code>cat</code>, listados</td><td class="v" style="text-align:right"><span class="chip ok">Normal</span></td></tr>
+  </tbody>
+</table>
+</div>
+
+<p><strong>El patrón es la evidencia.</strong> Todo lo que falla es una escritura, y no falla con error sino que se cuelga indefinidamente. Todo lo que es lectura funciona sin problema. Activar WiFi tiene que guardar la configuración de red; el borrado de datos tiene que escribir la orden en <code>/cache/recovery/command</code> antes de reiniciar. Los dos se bloquean esperando una confirmación del almacenamiento que no llega.</p>
+
+<p>Eso no es un driver de WiFi. Apunta a <strong>eMMC degradada, o sistema de archivos remontado en solo lectura</strong> tras errores de entrada/salida — el mecanismo de protección estándar de Linux cuando el almacenamiento empieza a fallar.</p>
+
+<p>Dato que refuerza la hipótesis: <strong>el WiFi funcionaba antes</strong>. Un chip que anduvo y dejó de andar, en un equipo donde además fallan otras escrituras, es más consistente con almacenamiento degradado que con hardware de radio muerto.</p>
+
+<div class="note hold">
+  <p><b>Verificación pendiente, prioridad alta.</b> Buscar las líneas de <code>/data</code> y <code>/cache</code> en <code>/proc/mounts</code>: si dicen <code>ro</code> en lugar de <code>rw</code>, la hipótesis queda confirmada. Complemento desde Armbian, donde habrá root real: registro de errores <code>mmc</code> en <code>dmesg</code>, y lectura del <em>extended CSD</em> con <code>mmc extcsd read</code> para los contadores de desgaste del fabricante.</p>
+</div>
+
+<p><strong>Consecuencia operativa:</strong> si se confirma, la eMMC no es un destino de escritura confiable. Eso descarta flashear, descarta <code>armbian-install</code>, y convierte al arranque externo en la única arquitectura viable — no como plan B sino como diseño.</p>
+</section>
+
+<section id="s6">
+<h2><span>§ 06</span> Muros de acceso &mdash; qué no funciona y por qué</h2>
+<p class="lede">Documentado para no volver a gastar horas acá.</p>
+
+<h3>Root desde una terminal en el equipo: imposible</h3>
+<pre><code>su -c "reboot recovery"
+<span class="cmt">→ /system/bin/sh: su: can't execute: Permission denied</span></code></pre>
+<p>El <code>su</code> de las compilaciones userdebug de AOSP acepta ser invocado <strong>solo por UID 0 y UID 2000 (shell)</strong>, y SELinux bloquea además su ejecución desde el dominio de una app. Cualquier emulador de terminal —ConnectBot, Termux, el que sea— corre bajo el UID de su propia app y es rechazado. <strong>No hay app que resuelva esto.</strong> El usuario <code>shell</code> existe únicamente del otro lado de ADB.</p>
+
+<h3>Ejecutar un script desde almacenamiento externo: imposible</h3>
+<p>ConnectBot declara <code>WRITE_EXTERNAL_STORAGE</code> pero <strong>no</strong> <code>READ_EXTERNAL_STORAGE</code>. Desde el pendrive da <code>Permission denied</code>; desde la memoria interna la carpeta le aparece vacía, y el error parece &laquo;no existe el archivo&raquo; cuando es de permisos. No hay ruta ni comodín que lo esquive.</p>
+
+<h3>Lanzar actividades: funciona, con una condición</h3>
+<pre><code><span class="cmt"># falla: am usa user -2 (USER_CURRENT) por defecto</span>
+am start -a android.settings.WIFI_SETTINGS
+<span class="cmt">→ SecurityException: requires INTERACT_ACROSS_USERS_FULL</span>
+
+<span class="cmt"># funciona</span>
+am start --user 0 -a android.settings.WIFI_SETTINGS</code></pre>
+<p>Con <code>--user 0</code> explícito desaparece el cruce de usuarios y la actividad abre. Es la llave para navegar un sistema cuyo launcher está roto.</p>
+
+<h3>Resumen de accesos</h3>
+<div class="tblwrap">
+<table>
+  <tbody>
+    <tr><td>Shell local (ConnectBot, tipo <code>local</code>)</td><td style="text-align:right"><span class="chip ok">Disponible</span></td></tr>
+    <tr><td><code>getprop</code>, <code>/proc</code>, <code>/sys</code>, <code>ls</code></td><td style="text-align:right"><span class="chip ok">Disponible</span></td></tr>
+    <tr><td><code>am start --user 0</code></td><td style="text-align:right"><span class="chip ok">Disponible</span></td></tr>
+    <tr><td>Opciones de desarrollador</td><td style="text-align:right"><span class="chip ok">Accesible</span></td></tr>
+    <tr><td>Depuración USB</td><td style="text-align:right"><span class="chip ok">Activa</span></td></tr>
+    <tr><td>ADB por red (toggle)</td><td style="text-align:right"><span class="chip bad">No existe en la ROM</span></td></tr>
+    <tr><td><code>su</code> desde app</td><td style="text-align:right"><span class="chip bad">Bloqueado</span></td></tr>
+    <tr><td>Lectura de almacenamiento externo</td><td style="text-align:right"><span class="chip bad">Bloqueado</span></td></tr>
+    <tr><td>Reset de fábrica</td><td style="text-align:right"><span class="chip bad">Se cuelga</span></td></tr>
+    <tr><td>Consola serie por pads UART</td><td style="text-align:right"><span class="chip warn">Sin probar</span></td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>El usuario descarta conectar este TV box a la red para preparar el sistema. La vía actual es revisar la actualización local desde Android y las posibilidades del cargador. No atribuir un fallo de conexión ADB a falta de root: son condiciones distintas. El acceso por cable OTG tampoco está confirmado.</p>
+</section>
+
+<section id="s7">
+<h2><span>§ 07</span> Vía de arranque</h2>
+<p class="lede">Sin lector SD, el USB no es un plan alternativo: es la arquitectura.</p>
+
+<p><strong>Corrección del 5/9/2026:</strong> la prioridad automática del USB citada originalmente corresponde a la sección de reinstalación de ophub. <a href="https://github.com/ophub/amlogic-s9xxx-armbian/blob/main/documents/README.md#124-setting-the-box-to-boot-from-usbtfsd">La primera activación se describe por separado</a>. El usuario probó el pendrive verificado y el TV box inició Android habitual. Todavía no está resuelta la entrada al arranque externo; este resultado no basta para descartar el DTB o la imagen.</p>
+
+<p>Un arranque desde USB puede utilizar el cargador interno y modificar su entorno. El <code>aml_autoscript</code> incluido en esta imagen ejecuta <code>saveenv</code> para configurar el arranque externo. No instala Android ni ejecuta por sí solo una instalación Linux en eMMC; tampoco debe describirse como una prueba que nunca escribe estado interno.</p>
+
+<div class="tblwrap">
+<table>
+  <caption>Imágenes Armbian localizadas — disponibilidad no equivale a compatibilidad; no son ROM Android</caption>
+  <thead><tr><th>Kernel</th><th>Archivo</th><th>Uso</th></tr></thead>
+  <tbody>
+    <tr><td class="k">6.12.91 LTS</td><td class="v">Armbian_26.05.0_amlogic_s905l2_noble_6.12.91_server_2026.06.01.img.gz</td><td><span class="chip ok">Primera opción</span></td></tr>
+    <tr><td class="k">6.18.33</td><td class="v">Armbian_26.05.0_amlogic_s905l2_noble_6.18.33_server_2026.06.01.img.gz</td><td><span class="chip warn">Alternativa</span></td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>Ambas de la release <code>Armbian_noble_arm64_server_2026.06</code>. La 6.12 es rama de soporte extendido y con silicio GXL de 2016 suele portarse mejor que los kernels recientes. Credenciales de fábrica: <code>root</code> / <code>1234</code>.</p>
+
+<h3>Device trees a probar, en orden</h3>
+<p>La imagen <code>s905l2</code> trae uno preconfigurado, pero <strong>ninguna entrada de la base de ophub corresponde a p291</strong> — sus S905L2 son cajas chinas de 2 GB. Si no arranca, se cambia el <code>FDT</code> en <code>uEnv.txt</code> de la partición BOOT:</p>
+<pre><code>FDT=/dtb/amlogic/meson-gxl-s905l2-x7-5g.dtb      <span class="cmt"># preconfigurado</span>
+FDT=/dtb/amlogic/meson-gxl-s905l2-ipbs9505.dtb   <span class="cmt"># 2º</span>
+FDT=/dtb/amlogic/meson-gxl-s905l3b-m302a.dtb     <span class="cmt"># 3º</span>
+FDT=/dtb/amlogic/meson-gxl-s905w-p281.dtb        <span class="cmt"># comodín, gxl base</span></code></pre>
+
+<p>Probar también <strong>el otro puerto USB</strong>: en varios de estos equipos solo uno arranca. Y si falla en silencio, ahí es donde entran los pads UART de la sección 02 — sin consola serie, un fallo de arranque no deja rastro.</p>
+
+<div class="note stop">
+  <p><b>Alcance actualizado.</b> <code>armbian-install</code> instala Linux en la eMMC. El objetivo vigente es instalar Android internamente; esta imagen Armbian solo tiene un posible uso temporal de acceso o identificación.</p>
+</div>
+</section>
+
+<section id="s8">
+<h2><span>§ 08</span> Hoja de ruta anterior · referencia histórica</h2>
+<p class="lede">Objetivo declarado: un Android mínimo con navegador moderno y WebView con permisos de almacenamiento, conservando los menús estándar de red. Todo lo demás, fuera.</p>
+
+<div class="phase">
+  <div class="phase-n">F1</div>
+  <div>
+    <h3>Cabecera de puente</h3>
+    <p>Arrancar Armbian desde USB. No es el objetivo final: es el instrumento. Da root real, acceso sin restricciones a <code>/sys</code> y <code>/proc</code>, herramientas de Linux completas, y saca a la eMMC de la ecuación mientras se la estudia.</p>
+    <p><strong>Criterio de éxito:</strong> prompt de root y <code>ip a</code> mostrando la interfaz ethernet con dirección.</p>
+  </div>
+</div>
+
+<div class="phase">
+  <div class="phase-n">F2</div>
+  <div>
+    <h3>Inventario de hardware y drivers</h3>
+    <p>Con root real, levantar el censo completo del silicio: qué controladores existen, cuáles cargan, qué nodos exponen. La sección 09 tiene el juego de comandos. La salida de esta fase es el insumo del software de análisis que queremos escribir.</p>
+    <p><strong>Foco particular:</strong> el subsistema WiFi. Identificar el chip real por su ID en el bus y contrastarlo con los cuatro módulos <code>wlan_*</code> que traía la ROM de fábrica. Ahí se resuelve si el problema era de driver o de hardware.</p>
+  </div>
+</div>
+
+<div class="phase">
+  <div class="phase-n">F3</div>
+  <div>
+    <h3>Rescate de la eMMC</h3>
+    <p>Antes de tocarla, copiarla. Volcar las particiones a un disco externo con <code>dd</code>, empezando por el DTB, <code>boot</code>, <code>vendor</code> y <code>system</code>. De ahí salen dos cosas que hoy no tenemos y que valen oro: <strong>el device tree exacto de p291</strong> y <strong>los blobs propietarios de Amlogic</strong> para esta placa.</p>
+    <p>Si la eMMC está degradada, algunas lecturas van a fallar. Registrar cuáles: ese mapa de daño es a la vez el diagnóstico definitivo.</p>
+  </div>
+</div>
+
+<div class="phase">
+  <div class="phase-n">F4</div>
+  <div>
+    <h3>Veredicto sobre el almacenamiento</h3>
+    <p><code>mmc extcsd read</code> para los contadores de vida del fabricante, <code>badblocks</code> en modo solo lectura, y el registro de errores del controlador en <code>dmesg</code>. De acá sale la decisión de arquitectura: si la eMMC sirve como destino o si el sistema vive permanentemente en USB.</p>
+  </div>
+</div>
+
+<div class="phase">
+  <div class="phase-n">F5</div>
+  <div>
+    <h3>Elección de base Android</h3>
+    <p>Con el DTB propio en mano y los blobs extraídos, evaluar las opciones honestamente:</p>
+    <ul>
+      <li><strong>Imagen genérica de gxl + DTB propio.</strong> El camino más corto. Se apoya en que gxlx2 deriva de gxl y comparte la mayoría del soporte.</li>
+      <li><strong>AOSP con el BSP de Droidlogic.</strong> Control total, esfuerzo alto, y depende de conseguir el BSP para esta familia.</li>
+      <li><strong>LineageOS de 32 bits para GXL.</strong> Poco probable que exista algo listo para gxlx2; queda como fuente de parches, no como imagen.</li>
+    </ul>
+    <p><em>Nota de realismo:</em> compilar Android desde fuentes para un SoC de operador sin documentación pública es un proyecto de semanas, no de una tarde. El camino corto es adelgazar una imagen existente; el largo, construirla. Conviene decidirlo con la información de F2 y F3 sobre la mesa, no antes.</p>
+  </div>
+</div>
+
+<div class="phase">
+  <div class="phase-n">F6</div>
+  <div>
+    <h3>Adelgazamiento y perfil de recursos</h3>
+    <p>Acá se cobra el trabajo. Sobre la base elegida:</p>
+    <ul>
+      <li><strong>CMA a la baja</strong> según el uso real de video (sección 04). La ganancia más grande y la más barata.</li>
+      <li><strong>Apps de sistema fuera:</strong> launcher del fabricante, reproductores, tiendas, servicios de IPTV. Con root se desinstalan o se congelan.</li>
+      <li><strong>Servicios apagados:</strong> todo lo que no sea red, almacenamiento, display y entrada.</li>
+      <li><strong>zram</strong> reajustado al perfil de memoria resultante.</li>
+      <li><strong>WebView:</strong> el punto crítico del objetivo. El WebView del sistema en Android 9 está muy atrasado; hay que reemplazarlo por uno moderno y verificar que los permisos de almacenamiento se propaguen correctamente hacia el contenido web.</li>
+      <li><strong>Conservar</strong> los menús estándar de red — es requisito explícito, y en una ROM recortada hay que confirmar actividad por actividad que existan.</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<section id="s9">
+<h2><span>§ 09</span> Inventario de drivers &mdash; juego de comandos</h2>
+<p class="lede">Para ejecutar en la fase 2, ya con root real bajo Linux. Es también la especificación funcional del software de análisis que queremos escribir.</p>
+
+<h3>Identidad y árbol de dispositivos</h3>
+<pre><code>cat /proc/device-tree/amlogic-dt-id
+cat /proc/device-tree/model
+cat /proc/device-tree/compatible | tr '\0' '\n'
+find /proc/device-tree -maxdepth 2 -name compatible \
+  -exec sh -c 'echo "== $1"; tr "\0" "\n" &lt; "$1"' _ {} \;</code></pre>
+
+<h3>Módulos y controladores</h3>
+<pre><code>lsmod
+find /lib/modules/$(uname -r) -name '*.ko' | sort
+cat /proc/modules
+dmesg | grep -iE 'error|fail|timeout|warn'</code></pre>
+
+<h3>Censo de subsistemas</h3>
+<pre><code>ls /sys/class/                    <span class="cmt"># qué clases registró el kernel</span>
+ls /sys/class/net/                <span class="cmt"># interfaces de red</span>
+ls /sys/bus/*/devices/            <span class="cmt"># todo lo enumerado por bus</span>
+ls /dev/                          <span class="cmt"># nodos expuestos</span>
+udevadm info --export-db | head -200</code></pre>
+
+<h3>WiFi &mdash; la pregunta pendiente</h3>
+<pre><code>lsusb                             <span class="cmt"># si el módulo cuelga de USB</span>
+ls /sys/bus/sdio/devices/         <span class="cmt"># si cuelga de SDIO</span>
+cat /sys/bus/sdio/devices/*/{vendor,device} 2&gt;/dev/null
+dmesg | grep -iE 'wlan|wifi|sdio|mmc1'
+iw dev ; rfkill list</code></pre>
+
+<h3>Video, memoria y almacenamiento</h3>
+<pre><code>cat /proc/meminfo | grep -iE 'cma|memtotal|memavail|swap'
+cat /proc/cmdline                 <span class="cmt"># parámetros de arranque, incluido cma=</span>
+ls /dev/video* /dev/dri/ 2&gt;/dev/null
+lsblk -o NAME,SIZE,TYPE,MOUNTPOINT
+cat /proc/mounts | grep -E ' (ro|rw),'
+mmc extcsd read /dev/mmcblk0      <span class="cmt"># vida útil de la eMMC</span></code></pre>
+
+<div class="note">
+  <p><b>Sugerencia para el software de análisis.</b> Que la primera versión no interprete nada: que solo <b>recolecte y estructure</b>. Un script que ejecute este censo, lo vuelque a JSON con marca de tiempo e identificador de equipo, y lo guarde. Con dos o tres equipos censados aparecen solas las diferencias que importan, y recién ahí tiene sentido escribir la capa que interpreta.</p>
+</div>
+</section>
+
+<section id="s10">
+<h2><span>§ 10</span> Protocolo reusable para el próximo equipo</h2>
+<p class="lede">Destilado de lo que costó caro en esta unidad. Cada equipo nuevo abre su propio dossier siguiendo estos pasos.</p>
+
+<ol>
+  <li><strong>Identificar antes de tocar.</strong> Contrastar <code>amlogic-dt-id</code>, propiedades, serigrafía, memoria y componentes. Ninguna cadena aislada certifica compatibilidad de una ROM.</li>
+  <li><strong>Inventariar los puertos físicos antes de planificar.</strong> La ausencia del lector SD invalidó dos planes completos acá. Confirmar visualmente qué hay: SD, USB, ethernet, pads UART, pads JTAG.</li>
+  <li><strong>Elegir un acceso disponible.</strong> En este equipo el usuario pide trabajar sin red. La actualización local, recuperación y conexión de datos son vías diferentes; Ethernet por sí solo no habilita ADB.</li>
+  <li><strong>Leer el tipo de build y comprobar permisos.</strong> No inferir root ni aceptación de actualizaciones a partir de <code>userdebug</code> o <code>test-keys</code> solamente.</li>
+  <li><strong>Separar grabación del medio, entrada al arranque y compatibilidad.</strong> La imagen USB ya está verificada; ahora falta entrar al modo adecuado. Revisar qué cambia cada script de arranque antes de ejecutarlo.</li>
+  <li><strong>Conectar la consola serie ante cualquier fallo silencioso.</strong> Es el único punto de observación independiente del sistema operativo.</li>
+</ol>
+
+<h3>Herramienta por fabricante</h3>
+<div class="tblwrap">
+<table>
+  <thead><tr><th>Devuelve</th><th>Fabricante</th><th>Herramientas</th></tr></thead>
+  <tbody>
+    <tr><td class="k">gxbb · gxl · gxlx · gxm<br>g12a · g12b · sm1 · amlogic</td><td>Amlogic</td><td>USB Burning Tool · Burn Card Maker</td></tr>
+    <tr><td class="k">rk30board · rk322x<br>rk3288 · rk3328 · rk3399</td><td>Rockchip</td><td>RKDevTool · SD Firmware Tool</td></tr>
+    <tr><td class="k">exdroid · sun8iw… · sun50iw…</td><td>Allwinner</td><td>PhoenixSuit · PhoenixCard</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Placas de referencia Amlogic</h3>
+<div class="tblwrap">
+<table>
+  <thead><tr><th>Placa</th><th>SoC</th><th>Familia</th></tr></thead>
+  <tbody>
+    <tr><td class="k">p200 · p201</td><td>S905</td><td class="k">gxbb</td></tr>
+    <tr><td class="k">p212</td><td>S905X</td><td class="k">gxl</td></tr>
+    <tr><td class="k">p281</td><td>S905W</td><td class="k">gxl</td></tr>
+    <tr><td class="k">p230 · p231</td><td>S905D</td><td class="k">gxl</td></tr>
+    <tr><td class="k">p241</td><td>S805X</td><td class="k">gxl</td></tr>
+    <tr><td class="k">p271</td><td>S905L</td><td class="k">gxlx</td></tr>
+    <tr><td class="k">p291</td><td>Familia S905Lx <span class="chip warn">revisión sin confirmar</span></td><td class="k">gxlx2</td></tr>
+    <tr><td class="k">q200 · q201</td><td>S912</td><td class="k">gxm</td></tr>
+    <tr><td class="k">u200</td><td>S905X2</td><td class="k">g12a</td></tr>
+    <tr><td class="k">w400</td><td>S922X / A311D</td><td class="k">g12b</td></tr>
+    <tr><td class="k">ac200 · ac202</td><td>S905X3</td><td class="k">sm1</td></tr>
+  </tbody>
+</table>
+</div>
+</section>
+
+<section id="s11">
+<h2><span>§ 11</span> Precauciones del dossier anterior</h2>
+<p class="lede">Antecedentes sujetos al objetivo vigente de instalación interna. La compatibilidad y el método de recuperación deben comprobarse por placa.</p>
+
+<div class="note stop">
+  <p><b>No flashear la eMMC sin dt-id coincidente.</b> El bootloader y el DTB llevan grabados los timings de la DDR, el pinmux y la configuración del eMMC. Cambian entre chips de la misma familia que desde afuera parecen idénticos. Un firmware de placa vecina deja el equipo sin arrancar, y recuperarlo exige cable USB macho-macho y, en el peor caso, cortocircuitar patas del eMMC para forzar el modo maskrom.</p>
+</div>
+
+<div class="note stop">
+  <p><b>Destino definitivo: memoria interna.</b> La preferencia posterior del usuario reemplaza el diseño anterior de uso permanente del pendrive. <code>armbian-install</code> no instala Android y no corresponde al producto elegido.</p>
+</div>
+
+<div class="note hold">
+  <p><b>No recortar el CMA a ciegas.</b> Si el decodificador no consigue bloques contiguos no da un error claro: cae a software y el video se entrecorta. Medir antes de fijar el valor.</p>
+</div>
+
+<div class="note hold">
+  <p><b>No tratar la eMMC como sana hasta que F4 lo diga.</b> Toda decisión de arquitectura que asuma almacenamiento interno confiable queda condicionada a esa verificación.</p>
+</div>
+
+<div class="note">
+  <p><b>Volcar antes de modificar.</b> El DTB y los blobs de esta placa son irremplazables: no existen publicados en ningún lado. Copiarlos a un medio externo tiene prioridad sobre cualquier experimento.</p>
+</div>
+</section>
+
+<footer>
+  Dossier vivo · unidad 01 de una serie · última revisión con datos de campo del equipo<br>
+  Fuentes: <a href="https://www.kernel.org/doc/Documentation/devicetree/bindings/arm/amlogic.yaml">device tree bindings del kernel Linux</a> ·
+  <a href="https://lkml.iu.edu/hypermail/linux/kernel/2406.0/02575.html">parche GXLX/S905L/p271</a> ·
+  <a href="https://github.com/ophub/amlogic-s9xxx-armbian">ophub/amlogic-s9xxx-armbian</a>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

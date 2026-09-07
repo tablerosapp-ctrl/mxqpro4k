@@ -1,0 +1,17 @@
+[
+  {
+    "particion": "product",
+    "bytes": 134217728,
+    "sha256": "3fb07da94443eb7152eb64bb94f23c6ce23da515fe36b3ab03410eb24df8ef40"
+  },
+  {
+    "particion": "system",
+    "bytes": 1342177280,
+    "sha256": "b2161c217f67f7035badbb1e99b89d96f4cdcb78a97bc1311e8aaa41efd5e1e8"
+  },
+  {
+    "particion": "vendor",
+    "bytes": 335544320,
+    "sha256": "23a96df7ec25cf9149b94c14be1e8ce63449eb21a4c453e434157ed8f6894c82"
+  }
+]

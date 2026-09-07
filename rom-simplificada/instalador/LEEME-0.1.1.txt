@@ -1,0 +1,27 @@
+TVBASE P291 - REVISION 0.1.1 EXPERIMENTAL
+
+Usar TVBASE-P291-A9-0.1.1-RECOVERY.zip en el PRIMER TV P291.
+Esta revision desactiva las rutinas heredadas que intentan sustituir recovery
+al iniciar Android. No usar la version 0.1 para nuevas instalaciones.
+
+Si ya estas en recovery, elegir Apply update from EXT/USB y el ZIP 0.1.1.
+Si estas en Android, instalar AccesoUSB-0.3.apk, actualizando la version previa.
+Abrir Acceso USB y elegir Entrar al instalador de la ROM (reinicia).
+La version 0.3 corrige el manejo de cierres y respuestas tardias del protocolo ADB.
+Acceso USB puede solicitar entrada al recovery,
+siempre que ADB local siga disponible. No requiere Internet.
+
+Durante respaldo/instalacion no cortar corriente ni retirar el pendrive.
+El instalador verifica el respaldo antes de escribir las cinco particiones.
+Si termina sin errores, se puede elegir Reboot system now.
+Si falla despues de empezar a escribir, permanecer en recovery y conservar
+el mensaje de error y todas las carpetas TVBASE-respaldo-*.
+
+Una segunda instalacion crea otro respaldo. No borrar el primero: contiene
+las particiones anteriores a la primera instalacion y permite preparar una
+restauracion especifica. Todavia no hay restauracion automatica probada.
+
+Se conserva la particion recovery y el cargador de arranque; aun falta probar
+una entrada al recovery sin depender de Android cuando el sistema no inicia.
+La coincidencia de placa no garantiza todos los drivers ni el primer arranque.
+El sistema propio de actualizaciones remotas sigue pendiente de implementar.

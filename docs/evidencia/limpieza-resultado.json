@@ -1,0 +1,120 @@
+{
+  "state": "completed",
+  "date": "2026-09-06T20:09:38.9391610-03:00",
+  "root": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k",
+  "bytes_removed": 6615135611.0,
+  "removed": [
+    {
+      "path": "images/Armbian_26.05.0_amlogic_s905l2_noble_6.12.91_server_2026.06.01.img",
+      "bytes": 3686793216,
+      "files": 1,
+      "sha256": "4479b09374d92ffe4be625b5dded96c5d7d7a0e8c6bcb0a7d2894a839214a2f8",
+      "reason": "Imagen Armbian expandida regenerable; gzip descomprimido y hash comprobados.",
+      "retained": [
+        "images/Armbian_26.05.0_amlogic_s905l2_noble_6.12.91_server_2026.06.01.img.gz",
+        "preparacion-usb/imagen.json"
+      ]
+    },
+    {
+      "path": "rom-simplificada/instalador/unsigned.zip",
+      "bytes": 573089963,
+      "files": 1,
+      "sha256": "816d38a485ffa417d0226bcea243c2b7095968c9e2b6ff07b978b9fa9158c06a",
+      "reason": "Intermedio sin firma; contenido comparado byte a byte con el ZIP firmado conservado.",
+      "retained": [
+        "rom-simplificada/salida/TVBASE-P291-A9-0.1-RECOVERY.zip",
+        "rom-simplificada/instalador/empaquetar.py"
+      ]
+    },
+    {
+      "path": "rom-simplificada/instalador/unsigned-0.1.1.zip",
+      "bytes": 573087403,
+      "files": 1,
+      "sha256": "c91e2a1572b9bf1b70e22190e2b27a3ff478e267bfd9fa39ce895d19bd450157",
+      "reason": "Intermedio sin firma; contenido comparado byte a byte con el ZIP firmado conservado.",
+      "retained": [
+        "rom-simplificada/salida/TVBASE-P291-A9-0.1.1-RECOVERY.zip",
+        "rom-simplificada/instalador/empaquetar.py"
+      ]
+    },
+    {
+      "path": "rom-simplificada/instalador/payload/product.img",
+      "bytes": 134217728,
+      "files": 1,
+      "sha256": "3fb07da94443eb7152eb64bb94f23c6ce23da515fe36b3ab03410eb24df8ef40",
+      "reason": "Extraccion intermedia regenerada por empaquetar.py; coincide con manifiesto de ROM firmada.",
+      "retained": [
+        "analisis-rom/candidato-android9.img",
+        "rom-simplificada/salida/TVBASE-P291-A9-0.1.1-RECOVERY.zip"
+      ]
+    },
+    {
+      "path": "rom-simplificada/instalador/payload/odm.img",
+      "bytes": 134217728,
+      "files": 1,
+      "sha256": "f18f01176433f943cf5cb6c6b2f9ea782b39157a8d68dcab4ee88b010806085f",
+      "reason": "Extraccion intermedia regenerada por empaquetar.py; coincide con manifiesto de ROM firmada.",
+      "retained": [
+        "analisis-rom/candidato-android9.img",
+        "rom-simplificada/salida/TVBASE-P291-A9-0.1.1-RECOVERY.zip"
+      ]
+    },
+    {
+      "path": "rom-simplificada/instalador/payload/boot.img",
+      "bytes": 12726656,
+      "files": 1,
+      "sha256": "d7cfafa9b4978e72e63851a8f8f3b9eaf346bc4fb24b8bdb50ed02fcedf100ba",
+      "reason": "Extraccion intermedia regenerada por empaquetar.py; coincide con manifiesto de ROM firmada.",
+      "retained": [
+        "analisis-rom/candidato-android9.img",
+        "rom-simplificada/salida/TVBASE-P291-A9-0.1.1-RECOVERY.zip"
+      ]
+    },
+    {
+      "path": "rom-simplificada/trabajo/fallo-debugfs-ruta-absoluta/system.raw.img",
+      "bytes": 1342177280,
+      "files": 1,
+      "sha256": "f2fc58b5f5cb54ee3ec7f972eb9c1e0ec8cd898ab923777109276ce8582d13b3",
+      "reason": "Copia defectuosa de trabajo descartada antes de empaquetar; conservar causa, comandos y fsck.",
+      "retained": [
+        "rom-simplificada/trabajo/fallo-debugfs-ruta-absoluta/CAUSA.txt",
+        "rom-simplificada/trabajo/fallo-debugfs-ruta-absoluta/system-fsck.log",
+        "rom-simplificada/trabajo/system.raw.img"
+      ]
+    },
+    {
+      "path": "rom-simplificada/instalador/.cache",
+      "bytes": 158787558,
+      "files": 2162,
+      "sha256": null,
+      "reason": "Cache de compilacion/importacion regenerable; fuentes y binarios finales conservados.",
+      "retained": [
+        "rom-simplificada/instalador",
+        "rom-simplificada/inspeccion"
+      ]
+    },
+    {
+      "path": "rom-simplificada/instalador/__pycache__",
+      "bytes": 17474,
+      "files": 1,
+      "sha256": null,
+      "reason": "Cache de compilacion/importacion regenerable; fuentes y binarios finales conservados.",
+      "retained": [
+        "rom-simplificada/instalador",
+        "rom-simplificada/inspeccion"
+      ]
+    },
+    {
+      "path": "rom-simplificada/inspeccion/__pycache__",
+      "bytes": 20605,
+      "files": 1,
+      "sha256": null,
+      "reason": "Cache de compilacion/importacion regenerable; fuentes y binarios finales conservados.",
+      "retained": [
+        "rom-simplificada/instalador",
+        "rom-simplificada/inspeccion"
+      ]
+    }
+  ],
+  "error": null
+}

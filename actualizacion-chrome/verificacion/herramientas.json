@@ -1,0 +1,19 @@
+{
+  "fecha": "2026-09-05T14:38:37.6048512-03:00",
+  "android_build_tools": {
+    "version": "37.0.0",
+    "catalogo": "https://dl.google.com/android/repository/repository2-3.xml",
+    "descarga": "https://dl.google.com/android/repository/build-tools_r37_windows.zip",
+    "bytes": 61077164,
+    "sha1_publicado": "e9c97e26b5b5678002e9d3fed632c841ae62d99f",
+    "sha256_local": "68075aa319ed8a01cf1a565ed1e61a3c1a801dd49191c35851248dc293c33b1a",
+    "apksigner_sha256": "2defad215d7ff52968a409cde528cdaef7918b115e276b8e3378ca7a178e4180"
+  },
+  "java": {
+    "version": "Temurin 21.0.12.1+1 JRE Windows x64",
+    "metadatos": "https://api.adoptium.net/v3/assets/latest/21/hotspot?architecture=x64&image_type=jre&os=windows&vendor=eclipse",
+    "descarga": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.12.1%2B1/OpenJDK21U-jre_x64_windows_hotspot_21.0.12.1_1.zip",
+    "bytes": 48999141,
+    "sha256_publicado": "d35f31e712f0fcf6ac5a093edc90204fbff22f720ba3950bd09d331d5e621636"
+  }
+}

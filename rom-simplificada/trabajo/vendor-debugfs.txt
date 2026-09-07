@@ -1,0 +1,27 @@
+rm "/app/sfzm.hw.launcher2.5.4.apk"
+rm "/app/sfgj_4.9.0_hwwh.apk"
+mkdir "/overlay"
+set_inode_field "/overlay" mode 040755
+set_inode_field "/overlay" uid 0
+set_inode_field "/overlay" gid 0
+ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/overlay.context" "/overlay" security.selinux
+mkdir "/overlay/TVBaseWebView"
+set_inode_field "/overlay/TVBaseWebView" mode 040755
+set_inode_field "/overlay/TVBaseWebView" uid 0
+set_inode_field "/overlay/TVBaseWebView" gid 0
+ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/overlay.context" "/overlay/TVBaseWebView" security.selinux
+cd "/overlay/TVBaseWebView"
+write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/compilacion/webview-overlay/webview-overlay.apk" "TVBaseWebView.apk"
+cd /
+set_inode_field "/overlay/TVBaseWebView/TVBaseWebView.apk" mode 0100644
+set_inode_field "/overlay/TVBaseWebView/TVBaseWebView.apk" uid 0
+set_inode_field "/overlay/TVBaseWebView/TVBaseWebView.apk" gid 0
+ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/overlay.context" "/overlay/TVBaseWebView/TVBaseWebView.apk" security.selinux
+rm "/etc/init/hw/init.amlogic.rc"
+cd "/etc/init/hw"
+write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/init.amlogic.rc" "init.amlogic.rc"
+cd /
+set_inode_field "/etc/init/hw/init.amlogic.rc" mode 0100644
+set_inode_field "/etc/init/hw/init.amlogic.rc" uid 0
+set_inode_field "/etc/init/hw/init.amlogic.rc" gid 0
+ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/vendor.context" "/etc/init/hw/init.amlogic.rc" security.selinux

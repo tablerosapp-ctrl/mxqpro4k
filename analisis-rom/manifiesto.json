@@ -1,0 +1,15 @@
+{
+  "archivo": "candidato-android9.img",
+  "bytes": 1323007268,
+  "sha256": "bd8a8d9c02f6aa1119e5ea7708f2b49a1e4c7fef6169d30bbd1604981eb042e5",
+  "archivo_origen": "android_tv_mgv2000-s905l3b_and_hg680-lc-s905l3_v9.tar.xz",
+  "sha256_origen_verificado": "d5854687c8241e57769019497745b38019b7a6d3cab2be7cf06d918474cbda8e",
+  "coincidencia_dtb": "gxlx2_p291_1g",
+  "compatible_confirmado": false,
+  "flasheado": false,
+  "informe": "informe-inspeccion.json",
+  "resumen": "RESULTADO.md",
+  "integridad_interna": "integridad-interna.json",
+  "crc32_interno_verificado": "0xa8710cf7",
+  "sha1_particiones_coincidentes": 12
+}

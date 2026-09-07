@@ -1,0 +1,130 @@
+rm "/priv-app/FHStartHome/oat/arm/FHStartHome.vdex"
+rm "/priv-app/FHStartHome/oat/arm/FHStartHome.odex"
+rm "/app/xiri5.6.1.1146757/lib/arm/libxfar_xiri_d.so"
+rm "/app/xiri5.6.1.1146757/lib/arm/libxfar_parser.so"
+rm "/app/xiri5.6.1.1146757/lib/arm/libxfar_jni.so"
+rm "/app/xiri5.6.1.1146757/lib/arm/libxdriver_xiri_d.so"
+rm "/app/xiri5.6.1.1146757/lib/arm/libvitvvad.so"
+rm "/app/xiri5.6.1.1146757/lib/arm/libvitvsystemcommongrm.so"
+rm "/app/xiri5.6.1.1146757/lib/arm/libvitvpinyin.so"
+rm "/app/xiri5.6.1.1146757/lib/arm/libvitvphonecost.so"
+rm "/app/xiri5.6.1.1146757/lib/arm/libvitvmspkcfg.so"
+rm "/app/xiri5.6.1.1146757/lib/arm/libvitvmspk.so"
+rm "/app/xiri5.6.1.1146757/lib/arm/libvitvmsc.so"
+rm "/app/xiri5.6.1.1146757/lib/arm/libvitvmaindict.so"
+rm "/app/xiri5.6.1.1146757/lib/arm/libvitvlsopencfg.so"
+rm "/app/xiri5.6.1.1146757/lib/arm/libvitvlsopen.so"
+rm "/app/xiri5.6.1.1146757/lib/arm/libvitvbasicphrasegrm.so"
+rm "/app/xiri5.6.1.1146757/lib/arm/libsiren7codec.so"
+rm "/app/xiri5.6.1.1146757/lib/arm/librecorder.so"
+rm "/app/xiri5.6.1.1146757/lib/arm/libjiagu_x86.so"
+rm "/app/xiri5.6.1.1146757/lib/arm/libjiagu.so"
+rm "/app/xiri5.6.1.1146757/lib/arm/libjgdtc.so"
+rm "/app/xiri5.6.1.1146757/lib/arm/libiflyblesvc_xiri_d.so"
+rm "/app/xiri5.6.1.1146757/lib/arm/libicocodec.so"
+rm "/app/xiri5.6.1.1146757/lib/arm/libaiui.so"
+rm "/app/xiri5.6.1.1146757/lib/arm/libYoungCertify.so"
+rm "/app/xiri5.6.1.1146757/lib/arm/libUsbInterrupt.so"
+rm "/app/xiri5.6.1.1146757/lib/arm/libOpenVoiceWriter.so"
+rm "/app/xiri5.6.1.1146757/lib/arm/libCrc16.so"
+rm "/app/xiri5.6.1.1146757/lib/arm/libAudioHAL.so"
+rm "/app/xiri5.6.1.1146757/lib/arm/libAshmemWriter.so"
+rm "/app/tr069Service20210831103708/oat/arm/tr069Service20210831103708.vdex"
+rm "/app/tr069Service20210831103708/oat/arm/tr069Service20210831103708.odex"
+rm "/app/SystemXiri_release-2.0.4/oat/arm/SystemXiri_release-2.0.4.vdex"
+rm "/app/SystemXiri_release-2.0.4/oat/arm/SystemXiri_release-2.0.4.odex"
+rm "/app/FHTr069Agent/lib/arm/libagent.so"
+rm "/app/FHRemoteDebugServer/oat/arm/FHRemoteDebugServer.vdex"
+rm "/app/FHRemoteDebugServer/oat/arm/FHRemoteDebugServer.odex"
+rm "/usr/share/zoneinfo/txsp.apk"
+rm "/usr/share/zoneinfo/huya.apk"
+rm "/usr/share/zoneinfo/huoxing.apk"
+rm "/usr/share/zoneinfo/fantuan.apk"
+rmdir "/priv-app/FHStartHome/oat/arm"
+rmdir "/app/xiri5.6.1.1146757/lib/arm"
+rmdir "/app/tr069Service20210831103708/oat/arm"
+rmdir "/app/SystemXiri_release-2.0.4/oat/arm"
+rmdir "/app/FHTr069Agent/lib/arm"
+rmdir "/app/FHRemoteDebugServer/oat/arm"
+rmdir "/priv-app/FHStartHome/oat"
+rm "/priv-app/FHStartHome/FHStartHome.apk"
+rm "/app/xiri5.6.1.1146757/xiri5.6.1.1146757.apk"
+rmdir "/app/xiri5.6.1.1146757/lib"
+rm "/app/tr069Service20210831103708/tr069Service20210831103708.apk"
+rmdir "/app/tr069Service20210831103708/oat"
+rmdir "/app/SystemXiri_release-2.0.4/oat"
+rm "/app/SystemXiri_release-2.0.4/SystemXiri_release-2.0.4.apk"
+rmdir "/app/FHTr069Agent/lib"
+rm "/app/FHTr069Agent/FHTr069Agent.apk"
+rmdir "/app/FHRemoteDebugServer/oat"
+rm "/app/FHRemoteDebugServer/FHRemoteDebugServer.apk"
+rmdir "/priv-app/FHStartHome"
+rmdir "/app/xiri5.6.1.1146757"
+rmdir "/app/tr069Service20210831103708"
+rm "/app/sfzm.hw.launcher2.5.4.apk"
+rm "/app/Tr069_Service.apk"
+rmdir "/app/SystemXiri_release-2.0.4"
+rm "/app/SoftDetector_V5.1.0_20210806_35250_x020_encrypt.apk"
+rmdir "/app/FHTr069Agent"
+rmdir "/app/FHRemoteDebugServer"
+rm "/app/Andlink_V1.0.2_20210817_hy.apk"
+mkdir "/app/Chrome"
+set_inode_field "/app/Chrome" mode 040755
+set_inode_field "/app/Chrome" uid 0
+set_inode_field "/app/Chrome" gid 0
+ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/system.context" "/app/Chrome" security.selinux
+write "C:/Users/usuario-local/Desktop/mxqpro4k/actualizacion-chrome/chrome-138.0.7204.179-arm32.apk" "/app/Chrome/Chrome.apk"
+set_inode_field "/app/Chrome/Chrome.apk" mode 0100644
+set_inode_field "/app/Chrome/Chrome.apk" uid 0
+set_inode_field "/app/Chrome/Chrome.apk" gid 0
+ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/system.context" "/app/Chrome/Chrome.apk" security.selinux
+mkdir "/app/InicioTV"
+set_inode_field "/app/InicioTV" mode 040755
+set_inode_field "/app/InicioTV" uid 0
+set_inode_field "/app/InicioTV" gid 0
+ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/system.context" "/app/InicioTV" security.selinux
+write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/compilacion/inicio/inicio.apk" "/app/InicioTV/InicioTV.apk"
+set_inode_field "/app/InicioTV/InicioTV.apk" mode 0100644
+set_inode_field "/app/InicioTV/InicioTV.apk" uid 0
+set_inode_field "/app/InicioTV/InicioTV.apk" gid 0
+ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/system.context" "/app/InicioTV/InicioTV.apk" security.selinux
+rm "/bin/preinstall.sh"
+write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/preinstall.sh" "/bin/preinstall.sh"
+set_inode_field "/bin/preinstall.sh" mode 0100755
+set_inode_field "/bin/preinstall.sh" uid 0
+set_inode_field "/bin/preinstall.sh" gid 2000
+ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/system.context" "/bin/preinstall.sh" security.selinux
+rm "/bin/opt/etc/preinstall.sh"
+write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/preinstall.sh" "/bin/opt/etc/preinstall.sh"
+set_inode_field "/bin/opt/etc/preinstall.sh" mode 0100755
+set_inode_field "/bin/opt/etc/preinstall.sh" uid 0
+set_inode_field "/bin/opt/etc/preinstall.sh" gid 2000
+ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/system.context" "/bin/opt/etc/preinstall.sh" security.selinux
+write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/tvbase.rc" "/etc/init/tvbase.rc"
+set_inode_field "/etc/init/tvbase.rc" mode 0100644
+set_inode_field "/etc/init/tvbase.rc" uid 0
+set_inode_field "/etc/init/tvbase.rc" gid 0
+ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/system.context" "/etc/init/tvbase.rc" security.selinux
+rm "/bin/opt/etc/init.common.sh"
+write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/init.common.sh" "/bin/opt/etc/init.common.sh"
+set_inode_field "/bin/opt/etc/init.common.sh" mode 0100755
+set_inode_field "/bin/opt/etc/init.common.sh" uid 0
+set_inode_field "/bin/opt/etc/init.common.sh" gid 2000
+ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/system.context" "/bin/opt/etc/init.common.sh" security.selinux
+rm "/bin/opt/etc/init.fhservice.sh"
+write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/init.fhservice.sh" "/bin/opt/etc/init.fhservice.sh"
+set_inode_field "/bin/opt/etc/init.fhservice.sh" mode 0100755
+set_inode_field "/bin/opt/etc/init.fhservice.sh" uid 0
+set_inode_field "/bin/opt/etc/init.fhservice.sh" gid 2000
+ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/system.context" "/bin/opt/etc/init.fhservice.sh" security.selinux
+rm "/build.prop"
+write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/build.prop" "/build.prop"
+set_inode_field "/build.prop" mode 0100644
+set_inode_field "/build.prop" uid 0
+set_inode_field "/build.prop" gid 0
+ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/system.context" "/build.prop" security.selinux
+write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/tvbase.json" "/etc/tvbase.json"
+set_inode_field "/etc/tvbase.json" mode 0100644
+set_inode_field "/etc/tvbase.json" uid 0
+set_inode_field "/etc/tvbase.json" gid 0
+ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/system.context" "/etc/tvbase.json" security.selinux

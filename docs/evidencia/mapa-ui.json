@@ -1,0 +1,14 @@
+{
+  "state": "passed",
+  "surface": "Navegador local HTTP; no prueba del TV",
+  "checks": [
+    "Grafo de componentes visible y legible",
+    "Botón Roadmap cambia a ocho etapas",
+    "Botón de componente desde una etapa abre sus archivos y requisitos",
+    "Búsqueda Diagnostico.java localiza C-ENTRY"
+  ],
+  "limits": [
+    "Apertura directa file:// no ensayada: política del navegador de la herramienta bloquea ese esquema.",
+    "Enlaces relativos comprobados contra el sistema de archivos, no como descargas de todos los binarios."
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "estado": "verificado",
+  "inicio": "2026-09-06T20:04:28.0062719-03:00",
+  "informe": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\preparacion-usb\\entrada-amlogic-20260906-200427",
+  "usb_id": "USBSTOR\\DISK&VEN_KINGSTON&PROD_DATATRAVELER_3.0&REV_\\KINGSTON_SERIAL_LOCAL&0:PC_LOCAL",
+  "tv_flasheado": false,
+  "detalle": "APK 0.4 y recovery USB listos y leidos. ROM 0.1.1 conservada. Prueba fisica pendiente.",
+  "fecha": "2026-09-06T20:04:40.3284605-03:00",
+  "files": [
+    {
+      "ya_existente": true,
+      "archivo": "TVBASE-P291-A9-0.1.1-RECOVERY.zip",
+      "sha256": "e7279a7901bc0b513ccc5d3a66a1b5bf483908a4cffd30f34f5d8d463fc95205",
+      "lectura_verificada": true,
+      "bytes": 573089164
+    },
+    {
+      "archivo": "AccesoUSB-0.4.apk",
+      "sha256": "943ae71fc5161114f27592b3ca0cd3f40b4eacb9b2ad05572db7032c5092d7e2",
+      "lectura_verificada": true,
+      "bytes": 41363
+    },
+    {
+      "archivo": "recovery.img",
+      "sha256": "e59ef077378f8b1ba644bcfbef2a0f55e9914258696f203e813392e0a9fed01b",
+      "lectura_verificada": true,
+      "bytes": 25165824
+    },
+    {
+      "archivo": "LEEME-AHORA.txt",
+      "sha256": "e1036d8274b7b7fe8b48fe91d67816610b0441560eb98602cc821a71c4c65979",
+      "lectura_verificada": true,
+      "bytes": 1783
+    }
+  ],
+  "volume": "\\\\?\\Volume{eae718b0-a9a9-11f1-a1ea-afa059bf80e3}\\",
+  "drive_letter": "D"
+}

@@ -1,0 +1,69 @@
+{
+  "source": "community candidate, not installed recovery",
+  "boot": {
+    "file": "rom-simplificada\\inspeccion\\boot-original.img",
+    "bytes": 12726656,
+    "sha256": "d7cfafa9b4978e72e63851a8f8f3b9eaf346bc4fb24b8bdb50ed02fcedf100ba",
+    "kernel_size": 9995832,
+    "kernel_sha256": "51de4ded699adabff796fe9e363390c822f97ae8e792b6dff2c76bc64202054a",
+    "ramdisk_size": 1493834,
+    "second_size": 92737,
+    "second_sha256": "6343eeaf8dcc780f6855ae2d8a28ef8aebb1569e3e532e624e8d77720d966fe2",
+    "page": 2048,
+    "header_version": 1,
+    "name": "",
+    "cmdline": "androidboot.dtbo_idx=0 buildvariant=userdebug",
+    "v1_extension": "all zero; inherited nonstandard candidate boot header, not normalized"
+  },
+  "recovery": {
+    "file": "rom-simplificada\\inspeccion\\recovery-original.img",
+    "bytes": 25165824,
+    "sha256": "736c6fa50d1957b6f0c1b5b986b19e1216659cc51210719e9ed269173a95adc0",
+    "kernel_size": 9995832,
+    "kernel_sha256": "51de4ded699adabff796fe9e363390c822f97ae8e792b6dff2c76bc64202054a",
+    "ramdisk_size": 7367908,
+    "second_size": 92737,
+    "second_sha256": "6343eeaf8dcc780f6855ae2d8a28ef8aebb1569e3e532e624e8d77720d966fe2",
+    "page": 2048,
+    "header_version": 1,
+    "name": "",
+    "cmdline": "androidboot.dtbo_idx=0 buildvariant=userdebug",
+    "recovery_dtbo": {
+      "size": 438,
+      "offset": 17461248,
+      "sha256": "1a36ae9c58f758f7c0008c9f5e3954c9a3bb7d5748c3760258bf16b4fe161f44"
+    }
+  },
+  "same_kernel_as_candidate_boot": true,
+  "same_secondary_as_candidate_boot": true,
+  "ramdisk_files": 103,
+  "metadata": {
+    "etc/recovery.fstab": "adbf7454c9f4f452b014fd3394496f3f4e675cbe16366cac278077c56c40cfd4",
+    "init.rc": "8f0d46a85d1b627d890c5aec3d4b0dd7909efa3a31931cb70d96cd2f0952b70f",
+    "init.recovery.amlogic.rc": "9a72024c8ac29b2f494f89fa1ac61c087cd73a21fd1b5fc50aac9be7a3686934",
+    "res/keys": "cccf023235c97fb82878c23f6d7773243ed6c41d5c4093698cfa48ce3c4d369c",
+    "ueventd.rc": "93083e76877db3f4a9a29eedfc77cbd7cde68ae8f325c70cbb99540ab84c4389"
+  },
+  "selected_recovery_strings": [
+    "Apply update from EXT",
+    "update_package",
+    "/cache/recovery/last_log",
+    "/cache/recovery/last_install",
+    "/cache/recovery/log",
+    "/udisk/update.zip",
+    "/cache/recovery/zipinfo",
+    "/res/keys",
+    "system/core/adb/daemon/usb.cpp",
+    "/dev/usb-ffs/adb/ep0",
+    "/dev/usb-ffs/adb/ep1",
+    "/dev/usb-ffs/adb/ep2",
+    "/cache/recovery/command",
+    "/cache/recovery/last_locale",
+    "/cache/recovery",
+    "/cache/recovery/last_kmsg",
+    "/cache/recovery/uncrypt_status",
+    "--update_package=/data/update.zip",
+    "/udisk/factory_update_param.aml"
+  ],
+  "hardware_boot_confirmed": false
+}

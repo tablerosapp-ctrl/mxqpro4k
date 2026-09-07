@@ -1,0 +1,90 @@
+$ErrorActionPreference = 'Stop'
+$taskRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..')).TrimEnd('\','/')
+$taskUsbId = 'USBSTOR\DISK&VEN_KINGSTON&PROD_DATATRAVELER_3.0&REV_\KINGSTON_SERIAL_LOCAL&0:PC_LOCAL'
+$taskResult = Join-Path $PSScriptRoot 'evidencia-05-estado.json'
+$taskRun = Join-Path $PSScriptRoot ('evidencia-05-' + (Get-Date -Format 'yyyyMMdd-HHmmss'))
+New-Item -ItemType Directory -Path $taskRun | Out-Null
+$taskState = [ordered]@{estado='comprobando';fecha=(Get-Date).ToString('o');informe=$taskRun;tv_flasheado=$false;reboot_requested=$false;files=@()}
+function Save-State { $taskState | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath $taskResult -Encoding UTF8 }
+function Hash-File([string]$p) { (Get-FileHash -LiteralPath $p -Algorithm SHA256).Hash.ToLowerInvariant() }
+function Check-USB {
+    $disks = @(Get-Disk | Where-Object UniqueId -eq $taskUsbId)
+    if ($disks.Count -ne 1 -or $disks[0].FriendlyName -ne 'Kingston DataTraveler 3.0' -or $disks[0].Size -ne 30943995904 -or $disks[0].BusType -ne 'USB' -or $disks[0].IsBoot -or $disks[0].IsSystem) { throw 'No coincide el Kingston autorizado' }
+    $partitions = @(Get-Partition -DiskNumber $disks[0].Number | Where-Object DriveLetter)
+    if ($partitions.Count -ne 1) { throw 'Particion con letra ambigua' }
+    $volume = $partitions[0] | Get-Volume
+    if ($volume.FileSystem -ne 'FAT32' -or $volume.FileSystemLabel -ne 'TVBASE' -or $volume.Size -ne 30925651968) { throw 'Estructura USB distinta de la esperada' }
+    $mount = "$($partitions[0].DriveLetter):\"
+    if ((Get-Content -LiteralPath (Join-Path $mount 'TVBASE-MEDIA.txt') -Raw).Trim() -ne 'TVBASE-P291-20260906-4dc82786') { throw 'Marcador USB incorrecto' }
+    return $mount
+}
+function Copy-Checked([string]$source,[string]$target,[string]$expected) {
+    if ((Hash-File $source) -ne $expected) { throw 'La fuente cambio' }
+    if (Test-Path -LiteralPath $target) {
+        if ((Hash-File $target) -ne $expected) { throw "Ya existe otro archivo: $target" }
+    } else {
+        $inputFile = [IO.File]::OpenRead($source)
+        try {
+            $outputFile = [IO.File]::Open($target,[IO.FileMode]::CreateNew,[IO.FileAccess]::Write,[IO.FileShare]::None)
+            try { $inputFile.CopyTo($outputFile); $outputFile.Flush($true) } finally { $outputFile.Dispose() }
+        } finally { $inputFile.Dispose() }
+    }
+    if ((Hash-File $target) -ne $expected) { throw "Lectura diferente tras copiar: $target" }
+    $taskState.files += [ordered]@{archivo=[IO.Path]::GetFileName($target);bytes=(Get-Item -LiteralPath $target).Length;sha256=$expected;lectura_verificada=$true}
+    Save-State
+}
+try {
+    Save-State
+    $mount = Check-USB
+    $taskState.usb_id=$taskUsbId
+    $taskState.drive_letter=$mount.Substring(0,1)
+    Get-ChildItem -LiteralPath $mount -Force | Select-Object Name,Length,LastWriteTime | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $taskRun 'archivos-antes.json') -Encoding UTF8
+    $apk = Join-Path $taskRoot 'rom-simplificada/compilacion/acceso-usb-0.5/acceso-usb.apk'
+    $proof = Join-Path $taskRoot 'rom-simplificada/instalador/EVIDENCIA-TESTS-0.5.json'
+    if (-not (Test-Path -LiteralPath $proof)) { throw 'Falta evidencia de pruebas 0.5' }
+    $tests = Get-Content -LiteralPath $proof -Raw | ConvertFrom-Json
+    if ($tests.version -ne '0.5' -or $tests.state -ne 'passed' -or @($tests.adb).Count -lt 12 -or @($tests.shell_syntax).Count -ne 7 -or @($tests.shell_fixtures).Count -lt 15 -or @(@($tests.adb) + @($tests.shell_syntax) + @($tests.shell_fixtures) | Where-Object passed -ne $true).Count -ne 0 -or -not $tests.external_host_rejected -or $tests.guard_result -notmatch '^GUARDS_OK:' -or $tests.max_actual_open_bytes -gt 4096) { throw 'Pruebas 0.5 incompletas o fallidas' }
+    $release = Get-Content -LiteralPath (Join-Path $taskRoot 'rom-simplificada/compilacion/acceso-usb-0.5/componente.json') -Raw | ConvertFrom-Json
+    if ($release.version -ne '0.5' -or $release.purpose -ne 'diagnostico_sin_reinicio' -or (Hash-File $apk) -ne $release.sha256 -or $tests.apk_sha256 -ne $release.sha256 -or (Get-Item -LiteralPath $apk).Length -ne $release.bytes) { throw 'APK no coincide con release comprobada' }
+    $taskState.pruebas_sha256 = Hash-File $proof
+    $taskState.release_sha256 = $release.sha256
+    $java = Join-Path $taskRoot 'tools/verificacion-apk/java21/jdk-21.0.12.1+1-jre/bin/java.exe'
+    $buildTools = Join-Path $taskRoot 'tools/verificacion-apk/build-tools-37/android-37.0'
+    $signer = & $java -jar (Join-Path $buildTools 'lib/apksigner.jar') verify --verbose --print-certs --min-sdk-version 28 --max-sdk-version 28 $apk 2>&1
+    if ($LASTEXITCODE -ne 0 -or ($signer -join "`n") -notmatch 'd2136c0e519d477d2be34b55590d9e548137682f9c2573f330a0a6e91833b613') { throw 'Firma APK distinta o invalida' }
+    $signer | Set-Content -LiteralPath (Join-Path $taskRun 'firma-apk.txt') -Encoding UTF8
+    $badging = & (Join-Path $buildTools 'aapt2.exe') dump badging $apk 2>&1
+    if ($LASTEXITCODE -ne 0 -or ($badging -join "`n") -notmatch "versionCode='5' versionName='0.5'") { throw 'No es APK0.5' }
+    if ((Hash-File (Join-Path $mount 'TVBASE-P291-A9-0.1.1-RECOVERY.zip')) -ne 'e7279a7901bc0b513ccc5d3a66a1b5bf483908a4cffd30f34f5d8d463fc95205') { throw 'ROM distinta: detener preparacion' }
+    if ((Hash-File (Join-Path $mount 'recovery.img')) -ne 'e59ef077378f8b1ba644bcfbef2a0f55e9914258696f203e813392e0a9fed01b') { throw 'Recovery distinto: detener preparacion' }
+    if ((Check-USB) -ne $mount) { throw 'Cambio el montaje antes de copiar' }
+    Copy-Checked $apk (Join-Path $mount 'AccesoUSB-0.5.apk') (Hash-File $apk)
+    $readme = Join-Path $taskRoot 'rom-simplificada/instalador/LEEME-EVIDENCIA-0.5.txt'
+    $now = Join-Path $mount 'LEEME-AHORA.txt'
+    if ((Test-Path -LiteralPath $now) -and (Hash-File $now) -ne (Hash-File $readme)) {
+        if ((Hash-File $now) -ne 'e1036d8274b7b7fe8b48fe91d67816610b0441560eb98602cc821a71c4c65979') { throw 'LEEME actual desconocido' }
+        $old = Join-Path $mount 'LEEME-0.4-retirado.txt'
+        if (Test-Path -LiteralPath $old) { throw 'Destino historico LEEME ya existe' }
+        Move-Item -LiteralPath $now -Destination $old
+    }
+    Copy-Checked $readme $now (Hash-File $readme)
+    $oldApk = Join-Path $mount 'AccesoUSB-0.4.apk'
+    if (Test-Path -LiteralPath $oldApk) {
+        if ((Hash-File $oldApk) -ne '943ae71fc5161114f27592b3ca0cd3f40b4eacb9b2ad05572db7032c5092d7e2') { throw 'APK0.4 distinta' }
+        $retired = $oldApk + '.no-usar'
+        if (Test-Path -LiteralPath $retired) { throw 'Destino APK retirada ya existe' }
+        Move-Item -LiteralPath $oldApk -Destination $retired
+    }
+    $taskState.estado='verificado'
+    $taskState.fecha=(Get-Date).ToString('o')
+    $taskState.detalle='Acceso USB0.5 de recopilacion sin reinicio copiado y leido. ROM/recovery conservados; informes originales intactos.'
+    Save-State
+    Copy-Item -LiteralPath $taskResult -Destination (Join-Path $taskRun 'resultado.json')
+    Get-Content -LiteralPath $taskResult -Raw
+} catch {
+    $taskState.estado='fallo'
+    $taskState.error_nativo=$_.Exception.ToString()
+    Save-State
+    $_ | Out-String | Set-Content -LiteralPath (Join-Path $taskRun 'error.txt') -Encoding UTF8
+    throw
+}

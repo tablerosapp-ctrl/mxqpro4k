@@ -1,0 +1,37 @@
+# Roadmap y propuestas
+
+Orden por dependencias, sin fechas prometidas. Una etapa se cierra con evidencia y sus criterios de salida; la preparación local no sustituye el resultado físico.
+
+| Etapa | Situación | Trabajo y salida verificable | Dependencia |
+| --- | --- | --- | --- |
+| M0 · Base y paquete | Preparación local completada | Candidato inspeccionado, ROM0.1.1 firmada, herramienta de evidencia0.5 y recovery externo preparados; VAL-01 a 04 | Ninguna |
+| M1 · Entrada USB P291 | **Entrada0.4 falló; diagnóstico posterior pendiente** | Recovery visible, origen identificado y ZIP aceptado; VAL-05 | M0 |
+| M2 · Instalación y arranque | Pendiente | Respaldo completo, cinco escrituras verificadas, arranque TVBASE desde eMMC sin USB; VAL-06 y 07 | M1 |
+| M3 · Hardware y multimedia | Pendiente | Perfil real y suite de APIs/web/video/controles; dos VP9 + alfa/canvas y un 1080p; VAL-08 | M2 |
+| M4 · Recuperación repetible | Pendiente | Ensayar acceso sin Android y restauración con originales; documentar qué fallos cubre; VAL-09 | M1, M2; antes de ampliar pruebas destructivas |
+| M5 · Aplicación y contenido | Propuesto | APK común, catálogo local, descargas verificadas, borrado selectivo y ciclo offline | Especificación desde ahora; aceptación M3 |
+| M6 · Administración propia | Propuesto | Agente, distribución firmada por grupos, actualización independiente de APK/motor/sistema y continuidad de datos | M3, M4, M5 |
+| M7 · Android más nuevo y otras placas | Propuesto | Cada perfil supera entrada, recuperación y multimedia; base de Android que permita motor mantenido | Criterios M3/M4; investigación puede adelantarse |
+
+## Propuestas ordenadas
+
+**PROP-01 · Resolver la entrada con evidencia del intento0.4.** Ya se leyeron dos informes: son pre-reinicio, iguales salvo hora, y no capturan la pantalla sin señal. Recovery existe pero su contenido/órdenes no son legibles como shell. El siguiente paso es recopilar pstore completo y el actualizador real del P291 sin reiniciar. Analizar los registros y cómo el actualizador original prepara el paquete y la entrada; no volver a la misma prueba cambiando nombres de ROM. Prioridad inmediata; decisión pendiente del hardware.
+
+**PROP-02 · Paquete de restauración desde originales reales.** Después del primer respaldo, construir un ZIP de restauración específico de esa unidad/perfil, verificar sus payloads y demostrar que se puede entrar al recovery usado. No producir un supuesto respaldo original desde la ROM candidata. No prometer rollback automático en este esquema no A/B.
+
+**PROP-03 · Suite de plataforma independiente.** Preparar muestras pequeñas con hashes, parámetros de video y una APK de diagnóstico estándar. Registrar versión efectiva de WebView, codecs, memoria, tiempos, reproducción offline y control. Cuando llegue la app real, agregarla sin reemplazar la suite general. Se puede desarrollar antes de completar M2, pero sus resultados físicos dependen del arranque.
+
+**PROP-04 · Agente y catálogo separados del WebView.** Descargar a temporales, verificar antes de publicar, servir videos locales con búsqueda/lecturas parciales y mantener operaciones por identificador. Un proceso independiente coordina actualizaciones del motor y relanza la app. Definir un protocolo versionado; no acoplar el sistema a una página o versión concreta del negocio.
+
+**PROP-05 · Base más reciente con video demostrado.** Android9/Chrome138 es una primera base experimental, con techo conocido de navegador. Evaluar Android más nuevo conservando la cadena de video por placa. Solo promoverlo si arranca y pasa la composición real. Linux con Android en contenedor queda como alternativa si aparece una ventaja medible; hoy añade integración sin beneficio comprobado.
+
+**PROP-06 · Distribución para equipos reales.** Sustituir claves públicas de prueba por firma de producción bajo control del proyecto, evaluar condiciones de distribución de los componentes incluidos, documentar actualizaciones de seguridad y ensayar recuperación antes de desplegar una flota. Estas tareas no están hechas por generar el ZIP experimental.
+
+**PROP-07 · Segundo WebView bajo presupuesto.** Medir la carga extra y pausar/recrear la automatización cuando haga falta. Prioridad secundaria. Descargas y consultas simples van en el componente nativo; usar otra página solo para tareas que necesiten su ejecución.
+
+## Cómo incorporar un resultado
+
+Relacionar el cambio con REQ → decisión → componente → prueba → etapa. Conservar mensajes de error, versiones, hashes y el contexto del equipo. Un fallo no cierra una etapa; sí puede cerrar una hipótesis. Actualizar primero [ESTADO](ESTADO.md) y el recibo/evidencia, después [proyecto.json](proyecto.json), este roadmap y el mapa generado.
+
+
+**Actualización7/9, 00:00:** Git local iniciado para conservar el hilo. Acceso USB0.5 copiado y verificado en el Kingston, captura física pendiente; no se ha demostrado acceso efectivo a recovery ni instalado Android. Ver [hallazgos](../diagnostico/primer-tv-reportes-20260906-233826/HALLAZGOS.md) y [flujo Git](GIT.md).

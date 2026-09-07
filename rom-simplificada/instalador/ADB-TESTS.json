@@ -1,0 +1,40 @@
+[
+  {
+    "case": "shell",
+    "passed": true,
+    "observed_service": [
+      "shell:id\u0000"
+    ],
+    "exit": 0
+  },
+  {
+    "case": "auth",
+    "passed": true,
+    "observed_service": [],
+    "exit": 1
+  },
+  {
+    "case": "bad_checksum",
+    "passed": true,
+    "observed_service": [
+      "shell:id\u0000"
+    ],
+    "exit": 1
+  },
+  {
+    "case": "reboot_closed",
+    "passed": true,
+    "observed_service": [
+      "reboot:recovery\u0000"
+    ],
+    "exit": 0
+  },
+  {
+    "case": "reboot_error",
+    "passed": true,
+    "observed_service": [
+      "reboot:recovery\u0000"
+    ],
+    "exit": 1
+  }
+]

@@ -1,0 +1,36 @@
+﻿{
+    "estado":  "verificado",
+    "inicio":  "2026-09-06T19:11:10.4186594-03:00",
+    "usb_id":  "USBSTOR\\DISK\u0026VEN_KINGSTON\u0026PROD_DATATRAVELER_3.0\u0026REV_\\KINGSTON_SERIAL_LOCAL\u00260:PC_LOCAL",
+    "informe":  "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\preparacion-usb\\instalador-android-20260906-191110",
+    "tv_flasheado":  false,
+    "detalle":  "Instalador Android completo copiado y verificado. Aun no instalado en el TV.",
+    "fecha":  "2026-09-06T19:12:55.4168758-03:00",
+    "respaldo_usb":  "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\preparacion-usb\\instalador-android-20260906-191110\\usb-antes.img",
+    "respaldo_bytes":  3686793216,
+    "respaldo_sha256":  "fad1a643bd5552a9c393472079141f35aa5aa53a1b71e145d64f371a005ec724",
+    "files":  [
+                  {
+                      "sha256":  "f4faca862a920d306d760e0f0da29751d1f322fb1fc72dade7a0f63657f19b07",
+                      "archivo":  "TVBASE-P291-A9-0.1-RECOVERY.zip",
+                      "bytes":  573091724,
+                      "lectura_verificada":  true
+                  },
+                  {
+                      "sha256":  "328e0420124afcd6874d904956ae715467b1e95d0f99828ea1402992e8980fce",
+                      "archivo":  "AccesoUSB.apk",
+                      "bytes":  24979,
+                      "lectura_verificada":  true
+                  },
+                  {
+                      "sha256":  "d01dd61bb2aa1992145666fb5bda2203e76c4586e26809ca8abf4db0e27fad64",
+                      "archivo":  "LEEME.txt",
+                      "bytes":  1864,
+                      "lectura_verificada":  true
+                  }
+              ],
+    "volume":  "\\\\?\\Volume{eae718b0-a9a9-11f1-a1ea-afa059bf80e3}\\",
+    "drive_letter":  "D",
+    "label":  "TVBASE",
+    "capacity":  30943995904
+}

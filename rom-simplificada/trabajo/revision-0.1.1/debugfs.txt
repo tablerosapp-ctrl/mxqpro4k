@@ -1,0 +1,40 @@
+rm "/bin/install-recovery.sh"
+cd "/bin"
+write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/revision-0.1.1/file-0" "install-recovery.sh"
+cd /
+set_inode_field "/bin/install-recovery.sh" mode 0100750
+set_inode_field "/bin/install-recovery.sh" uid 0
+set_inode_field "/bin/install-recovery.sh" gid 0
+ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/revision-0.1.1/context-0" "/bin/install-recovery.sh" security.selinux
+rm "/etc/install-recovery.sh"
+cd "/etc"
+write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/revision-0.1.1/file-1" "install-recovery.sh"
+cd /
+set_inode_field "/etc/install-recovery.sh" mode 0100644
+set_inode_field "/etc/install-recovery.sh" uid 0
+set_inode_field "/etc/install-recovery.sh" gid 0
+ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/revision-0.1.1/context-1" "/etc/install-recovery.sh" security.selinux
+rm "/etc/init/tvbase.rc"
+cd "/etc/init"
+write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/revision-0.1.1/file-2" "tvbase.rc"
+cd /
+set_inode_field "/etc/init/tvbase.rc" mode 0100644
+set_inode_field "/etc/init/tvbase.rc" uid 0
+set_inode_field "/etc/init/tvbase.rc" gid 0
+ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/revision-0.1.1/context-2" "/etc/init/tvbase.rc" security.selinux
+rm "/build.prop"
+cd "/"
+write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/revision-0.1.1/file-3" "build.prop"
+cd /
+set_inode_field "/build.prop" mode 0100644
+set_inode_field "/build.prop" uid 0
+set_inode_field "/build.prop" gid 0
+ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/revision-0.1.1/context-3" "/build.prop" security.selinux
+rm "/etc/tvbase.json"
+cd "/etc"
+write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/revision-0.1.1/file-4" "tvbase.json"
+cd /
+set_inode_field "/etc/tvbase.json" mode 0100644
+set_inode_field "/etc/tvbase.json" uid 0
+set_inode_field "/etc/tvbase.json" gid 0
+ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/revision-0.1.1/context-4" "/etc/tvbase.json" security.selinux

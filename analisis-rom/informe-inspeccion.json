@@ -1,0 +1,7031 @@
+{
+  "origen": {
+    "name": "android_tv_mgv2000-s905l3b_and_hg680-lc-s905l3_v9.tar.xz",
+    "size": 489920948,
+    "digest": "sha256:d5854687c8241e57769019497745b38019b7a6d3cab2be7cf06d918474cbda8e",
+    "browser_download_url": "https://github.com/ophub/kernel/releases/download/tools/android_tv_mgv2000-s905l3b_and_hg680-lc-s905l3_v9.tar.xz",
+    "updated_at": "2026-05-16T06:05:46Z"
+  },
+  "sha256_verificado": "d5854687c8241e57769019497745b38019b7a6d3cab2be7cf06d918474cbda8e",
+  "compatibilidad": "NO CONFIRMADA",
+  "metodo": "Analisis estatico de bytes; no ejecuta componentes ni escribe dispositivos",
+  "contenido_tar": [
+    {
+      "nombre": "android_tv_mgv2000-s905l3b_and_hg680-lc-s905l3_v9",
+      "bytes": 0,
+      "archivo_regular": false
+    },
+    {
+      "nombre": "android_tv_mgv2000-s905l3b_and_hg680-lc-s905l3_v9/烽火HG680-LC 安卓9 S905L3 沙发语音线刷包-OK.img",
+      "bytes": 1323007268,
+      "archivo_regular": true
+    },
+    {
+      "nombre": "android_tv_mgv2000-s905l3b_and_hg680-lc-s905l3_v9/Amlogic USB Burning Tool_v2.1.6.8.exe",
+      "bytes": 8108386,
+      "archivo_regular": true
+    },
+    {
+      "nombre": "android_tv_mgv2000-s905l3b_and_hg680-lc-s905l3_v9/刷机图.jpg",
+      "bytes": 80953,
+      "archivo_regular": true
+    },
+    {
+      "nombre": "android_tv_mgv2000-s905l3b_and_hg680-lc-s905l3_v9/烽火HG680-LC 教程.pdf",
+      "bytes": 444664,
+      "archivo_regular": true
+    },
+    {
+      "nombre": "android_tv_mgv2000-s905l3b_and_hg680-lc-s905l3_v9/短接图.jpg",
+      "bytes": 139507,
+      "archivo_regular": true
+    }
+  ],
+  "img_nombre_original": "android_tv_mgv2000-s905l3b_and_hg680-lc-s905l3_v9/烽火HG680-LC 安卓9 S905L3 沙发语音线刷包-OK.img",
+  "contenedor": {
+    "version": 2,
+    "magic": "0x27b51956",
+    "bytes": 1323007268,
+    "items": 30,
+    "alineacion": 4,
+    "crc_declarado_no_verificado": "0xa8710cf7"
+  },
+  "partes": [
+    {
+      "id": 0,
+      "tipo": "USB",
+      "nombre": "DDR",
+      "offset": 17344,
+      "bytes": 49152,
+      "formato_archivo": 0
+    },
+    {
+      "id": 1,
+      "tipo": "USB",
+      "nombre": "UBOOT",
+      "offset": 66496,
+      "bytes": 517616,
+      "formato_archivo": 0
+    },
+    {
+      "id": 2,
+      "tipo": "PARTITION",
+      "nombre": "_aml_dtb",
+      "offset": 584112,
+      "bytes": 92736,
+      "formato_archivo": 0,
+      "gzip_fin_verificado": false,
+      "nota_gzip": "El elemento entrega datos descomprimidos pero no contiene un fin gzip completo; no se acredita integridad gzip interna."
+    },
+    {
+      "id": 3,
+      "tipo": "VERIFY",
+      "nombre": "_aml_dtb",
+      "offset": 676848,
+      "bytes": 48,
+      "formato_archivo": 0
+    },
+    {
+      "id": 4,
+      "tipo": "UBOOT",
+      "nombre": "aml_sdc_burn",
+      "offset": 676896,
+      "bytes": 566768,
+      "formato_archivo": 0
+    },
+    {
+      "id": 5,
+      "tipo": "ini",
+      "nombre": "aml_sdc_burn",
+      "offset": 1243664,
+      "bytes": 394,
+      "formato_archivo": 0
+    },
+    {
+      "id": 6,
+      "tipo": "PARTITION",
+      "nombre": "boot",
+      "offset": 1244060,
+      "bytes": 12726656,
+      "formato_archivo": 0
+    },
+    {
+      "id": 7,
+      "tipo": "VERIFY",
+      "nombre": "boot",
+      "offset": 13970716,
+      "bytes": 48,
+      "formato_archivo": 0
+    },
+    {
+      "id": 8,
+      "tipo": "PARTITION",
+      "nombre": "bootloader",
+      "offset": 676896,
+      "bytes": 566768,
+      "formato_archivo": 0
+    },
+    {
+      "id": 9,
+      "tipo": "VERIFY",
+      "nombre": "bootloader",
+      "offset": 13970764,
+      "bytes": 48,
+      "formato_archivo": 0
+    },
+    {
+      "id": 10,
+      "tipo": "PARTITION",
+      "nombre": "dtbo",
+      "offset": 13970812,
+      "bytes": 8388608,
+      "formato_archivo": 0
+    },
+    {
+      "id": 11,
+      "tipo": "VERIFY",
+      "nombre": "dtbo",
+      "offset": 22359420,
+      "bytes": 48,
+      "formato_archivo": 0
+    },
+    {
+      "id": 12,
+      "tipo": "PARTITION",
+      "nombre": "logo",
+      "offset": 22359468,
+      "bytes": 8388608,
+      "formato_archivo": 0
+    },
+    {
+      "id": 13,
+      "tipo": "VERIFY",
+      "nombre": "logo",
+      "offset": 30748076,
+      "bytes": 48,
+      "formato_archivo": 0
+    },
+    {
+      "id": 14,
+      "tipo": "dtb",
+      "nombre": "meson1",
+      "offset": 584112,
+      "bytes": 92736,
+      "formato_archivo": 0
+    },
+    {
+      "id": 15,
+      "tipo": "PARTITION",
+      "nombre": "metadata",
+      "offset": 30748124,
+      "bytes": 16777216,
+      "formato_archivo": 0
+    },
+    {
+      "id": 16,
+      "tipo": "VERIFY",
+      "nombre": "metadata",
+      "offset": 47525340,
+      "bytes": 48,
+      "formato_archivo": 0
+    },
+    {
+      "id": 17,
+      "tipo": "PARTITION",
+      "nombre": "odm",
+      "offset": 47525388,
+      "bytes": 134217728,
+      "formato_archivo": 0
+    },
+    {
+      "id": 18,
+      "tipo": "VERIFY",
+      "nombre": "odm",
+      "offset": 181743116,
+      "bytes": 48,
+      "formato_archivo": 0
+    },
+    {
+      "id": 19,
+      "tipo": "conf",
+      "nombre": "platform",
+      "offset": 181743164,
+      "bytes": 202,
+      "formato_archivo": 0
+    },
+    {
+      "id": 20,
+      "tipo": "PARTITION",
+      "nombre": "product",
+      "offset": 181743368,
+      "bytes": 57475448,
+      "formato_archivo": 254
+    },
+    {
+      "id": 21,
+      "tipo": "VERIFY",
+      "nombre": "product",
+      "offset": 239218816,
+      "bytes": 48,
+      "formato_archivo": 0
+    },
+    {
+      "id": 22,
+      "tipo": "PARTITION",
+      "nombre": "recovery",
+      "offset": 239218864,
+      "bytes": 25165824,
+      "formato_archivo": 0
+    },
+    {
+      "id": 23,
+      "tipo": "VERIFY",
+      "nombre": "recovery",
+      "offset": 264384688,
+      "bytes": 48,
+      "formato_archivo": 0
+    },
+    {
+      "id": 24,
+      "tipo": "PARTITION",
+      "nombre": "system",
+      "offset": 264384736,
+      "bytes": 815360016,
+      "formato_archivo": 254
+    },
+    {
+      "id": 25,
+      "tipo": "VERIFY",
+      "nombre": "system",
+      "offset": 1079744752,
+      "bytes": 48,
+      "formato_archivo": 0
+    },
+    {
+      "id": 26,
+      "tipo": "PARTITION",
+      "nombre": "vbmeta",
+      "offset": 1079744800,
+      "bytes": 2097152,
+      "formato_archivo": 0
+    },
+    {
+      "id": 27,
+      "tipo": "VERIFY",
+      "nombre": "vbmeta",
+      "offset": 1081841952,
+      "bytes": 48,
+      "formato_archivo": 0
+    },
+    {
+      "id": 28,
+      "tipo": "PARTITION",
+      "nombre": "vendor",
+      "offset": 1081842000,
+      "bytes": 241165220,
+      "formato_archivo": 254
+    },
+    {
+      "id": 29,
+      "tipo": "VERIFY",
+      "nombre": "vendor",
+      "offset": 1323007220,
+      "bytes": 48,
+      "formato_archivo": 0
+    }
+  ],
+  "propiedades_texto_en_img": [
+    {
+      "offset": 412657421,
+      "texto": "ro.build.version.sdk=28"
+    },
+    {
+      "offset": 412657541,
+      "texto": "ro.build.version.release=9"
+    },
+    {
+      "offset": 412657568,
+      "texto": "ro.build.version.security_patch=2018-08-05"
+    },
+    {
+      "offset": 412657924,
+      "texto": "ro.product.model=HG680-LY"
+    },
+    {
+      "offset": 412657977,
+      "texto": "ro.product.name=p291_iptv"
+    },
+    {
+      "offset": 412658003,
+      "texto": "ro.product.device=p291_iptv"
+    },
+    {
+      "offset": 412658128,
+      "texto": "ro.product.cpu.abi=armeabi-v7a"
+    },
+    {
+      "offset": 412658187,
+      "texto": "ro.product.cpu.abilist=armeabi-v7a,armeabi"
+    },
+    {
+      "offset": 412666377,
+      "texto": "ro.product.name=MiniRed"
+    },
+    {
+      "offset": 1282928253,
+      "texto": "ro.product.board=S905L3"
+    },
+    {
+      "offset": 1282929877,
+      "texto": "ro.product.name=MiniRed"
+    },
+    {
+      "offset": 1282944336,
+      "texto": "ro.product.model=HG680-LC"
+    },
+    {
+      "offset": 412668911,
+      "texto": "ro.treble.enabled=true"
+    },
+    {
+      "offset": 412658698,
+      "texto": "ro.build.fingerprint=Fiberhome/p291_iptv/p291_iptv:9/PPR1.180610.011/4.350135.00.21v1:userdebug/test-keys"
+    }
+  ],
+  "identificadores_en_img": {
+    "gxlx2_p291_1g": [],
+    "P05L": [],
+    "5V300A1": [],
+    "1C11H16M": [],
+    "MT7668": [
+      412459896,
+      412459980,
+      412481532,
+      412481584,
+      412481648,
+      412588854,
+      412588938,
+      412604220,
+      412604393,
+      412604472,
+      1170134643,
+      1170134711,
+      1170134778,
+      1170136687,
+      1170139984,
+      1317797075,
+      1317797284,
+      1317797323,
+      1317797390
+    ],
+    "MT7661": []
+  },
+  "dtb_propiedades": [
+    {
+      "item": "_aml_dtb",
+      "offset": 2048,
+      "bytes": 58929,
+      "version": 17,
+      "propiedades": [
+        {
+          "ruta": "/",
+          "propiedad": "model",
+          "valor": "Amlogic"
+        },
+        {
+          "ruta": "/",
+          "propiedad": "amlogic-dt-id",
+          "valor": "gxlx2_p291_1g"
+        },
+        {
+          "ruta": "/",
+          "propiedad": "compatible",
+          "valor": "amlogic, Gxl"
+        },
+        {
+          "ruta": "/",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/mali@d00c0000",
+          "propiedad": "compatible",
+          "valor": "arm,mali-450"
+        },
+        {
+          "ruta": "/mali@d00c0000",
+          "propiedad": "reg",
+          "valor": "hex:d00c000000040000c110444000001000c810000000001000c883c00000001000c110444000001000"
+        },
+        {
+          "ruta": "/cpus",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/timer",
+          "propiedad": "compatible",
+          "valor": "arm,armv7-timer"
+        },
+        {
+          "ruta": "/timer_bc",
+          "propiedad": "compatible",
+          "valor": "arm, meson-bc-timer"
+        },
+        {
+          "ruta": "/timer_bc",
+          "propiedad": "reg",
+          "valor": "hex:c110999000000004c110999400000004"
+        },
+        {
+          "ruta": "/xtal-clk",
+          "propiedad": "compatible",
+          "valor": "fixed-clock"
+        },
+        {
+          "ruta": "/arm_pmu",
+          "propiedad": "compatible",
+          "valor": "arm,cortex-a15-pmu"
+        },
+        {
+          "ruta": "/pm",
+          "propiedad": "compatible",
+          "valor": "amlogic, pm"
+        },
+        {
+          "ruta": "/pm",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/pm",
+          "propiedad": "debug_reg",
+          "valor": "hex:c81000a8"
+        },
+        {
+          "ruta": "/pm",
+          "propiedad": "exit_reg",
+          "valor": "hex:c810023c"
+        },
+        {
+          "ruta": "/interrupt-controller@2c001000",
+          "propiedad": "compatible",
+          "valor": "arm,cortex-a15-gic\u0000arm,cortex-a9-gic"
+        },
+        {
+          "ruta": "/interrupt-controller@2c001000",
+          "propiedad": "#address-cells",
+          "valor": ""
+        },
+        {
+          "ruta": "/interrupt-controller@2c001000",
+          "propiedad": "reg",
+          "valor": "hex:c430100000001000c430200000000100"
+        },
+        {
+          "ruta": "/psci",
+          "propiedad": "compatible",
+          "valor": "arm,psci-0.2"
+        },
+        {
+          "ruta": "/secmon",
+          "propiedad": "compatible",
+          "valor": "amlogic, secmon"
+        },
+        {
+          "ruta": "/secmon",
+          "propiedad": "memory-region",
+          "valor": "hex:0000000f"
+        },
+        {
+          "ruta": "/securitykey",
+          "propiedad": "compatible",
+          "valor": "aml, securitykey"
+        },
+        {
+          "ruta": "/securitykey",
+          "propiedad": "storage_status",
+          "valor": "hex:82000065"
+        },
+        {
+          "ruta": "/cpu_iomap",
+          "propiedad": "compatible",
+          "valor": "amlogic, iomap"
+        },
+        {
+          "ruta": "/cpu_iomap",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/mhu@c883c400",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson_mhu"
+        },
+        {
+          "ruta": "/mhu@c883c400",
+          "propiedad": "reg",
+          "valor": "hex:c883c4000000004cc801300000000800"
+        },
+        {
+          "ruta": "/scpi_clocks",
+          "propiedad": "compatible",
+          "valor": "arm, scpi-clks"
+        },
+        {
+          "ruta": "/watchdog@0xffd0f0d0",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-wdt"
+        },
+        {
+          "ruta": "/watchdog@0xffd0f0d0",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/watchdog@0xffd0f0d0",
+          "propiedad": "reg",
+          "valor": "hex:c11098d000000010"
+        },
+        {
+          "ruta": "/jtag",
+          "propiedad": "compatible",
+          "valor": "amlogic, jtag"
+        },
+        {
+          "ruta": "/jtag",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/spicc",
+          "propiedad": "compatible",
+          "valor": "amlogic, spicc"
+        },
+        {
+          "ruta": "/spicc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/spicc",
+          "propiedad": "reg",
+          "valor": "hex:c1108d800000003c"
+        },
+        {
+          "ruta": "/spifc@c1108c80",
+          "propiedad": "compatible",
+          "valor": "amlogic,aml-spi-nor"
+        },
+        {
+          "ruta": "/spifc@c1108c80",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/spifc@c1108c80",
+          "propiedad": "reg",
+          "valor": "hex:c1108c8000000080"
+        },
+        {
+          "ruta": "/cpu_info",
+          "propiedad": "compatible",
+          "valor": "amlogic, cpuinfo"
+        },
+        {
+          "ruta": "/cpu_info",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/pinctrl@14",
+          "propiedad": "compatible",
+          "valor": "amlogic,meson-gxlx-aobus-pinctrl"
+        },
+        {
+          "ruta": "/pinctrl@14",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/pinctrl@4b0",
+          "propiedad": "compatible",
+          "valor": "amlogic,meson-gxlx-periphs-pinctrl"
+        },
+        {
+          "ruta": "/pinctrl@4b0",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/soc",
+          "propiedad": "compatible",
+          "valor": "simple-bus"
+        },
+        {
+          "ruta": "/soc",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/vdac",
+          "propiedad": "compatible",
+          "valor": "amlogic, vdac-gxlx"
+        },
+        {
+          "ruta": "/vdac",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/defendkey",
+          "propiedad": "compatible",
+          "valor": "amlogic, defendkey"
+        },
+        {
+          "ruta": "/defendkey",
+          "propiedad": "reg",
+          "valor": "hex:c883450000000004"
+        },
+        {
+          "ruta": "/defendkey",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/audio_data",
+          "propiedad": "compatible",
+          "valor": "amlogic, audio_data"
+        },
+        {
+          "ruta": "/audio_data",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/saradc",
+          "propiedad": "compatible",
+          "valor": "amlogic,meson-gxl-saradc"
+        },
+        {
+          "ruta": "/saradc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/saradc",
+          "propiedad": "reg",
+          "valor": "hex:00000000c11086800000000000000038"
+        },
+        {
+          "ruta": "/efuse",
+          "propiedad": "compatible",
+          "valor": "amlogic, efuse"
+        },
+        {
+          "ruta": "/efuse",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/rc@c8100580",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_remote"
+        },
+        {
+          "ruta": "/rc@c8100580",
+          "propiedad": "reg",
+          "valor": "hex:c810058000000044c810048000000020"
+        },
+        {
+          "ruta": "/rc@c8100580",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson-amvideom",
+          "propiedad": "compatible",
+          "valor": "amlogic, amvideom"
+        },
+        {
+          "ruta": "/meson-amvideom",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aml_reboot",
+          "propiedad": "compatible",
+          "valor": "aml, reboot"
+        },
+        {
+          "ruta": "/ddr_bandwidth",
+          "propiedad": "compatible",
+          "valor": "amlogic, ddr-bandwidth"
+        },
+        {
+          "ruta": "/ddr_bandwidth",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/ddr_bandwidth",
+          "propiedad": "reg",
+          "valor": "hex:c883800000000100c883700000000100"
+        },
+        {
+          "ruta": "/dmc_monitor",
+          "propiedad": "compatible",
+          "valor": "amlogic, dmc_monitor"
+        },
+        {
+          "ruta": "/dmc_monitor",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/dmc_monitor",
+          "propiedad": "reg_base",
+          "valor": "hex:da838400"
+        },
+        {
+          "ruta": "/ion_dev",
+          "propiedad": "compatible",
+          "valor": "amlogic, ion_dev"
+        },
+        {
+          "ruta": "/ion_dev",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000:"
+        },
+        {
+          "ruta": "/memory@00000000",
+          "propiedad": "linux,usable-memory",
+          "valor": "hex:001000003ff00000"
+        },
+        {
+          "ruta": "/reserved-memory",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/reserved-memory/ramoops@0x07400000",
+          "propiedad": "compatible",
+          "valor": "ramoops"
+        },
+        {
+          "ruta": "/reserved-memory/ramoops@0x07400000",
+          "propiedad": "reg",
+          "valor": "hex:0740000000100000"
+        },
+        {
+          "ruta": "/reserved-memory/linux,secmon",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,secos",
+          "propiedad": "status",
+          "valor": "disable"
+        },
+        {
+          "ruta": "/reserved-memory/linux,secos",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_secos_memory"
+        },
+        {
+          "ruta": "/reserved-memory/linux,secos",
+          "propiedad": "reg",
+          "valor": "hex:0530000002000000"
+        },
+        {
+          "ruta": "/reserved-memory/linux,meson-fb",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,di_cma",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,ion-dev",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,ppmgr",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,ppmgr",
+          "propiedad": "linux,contiguous-region",
+          "valor": ""
+        },
+        {
+          "ruta": "/reserved-memory/linux,codec_mm_cma",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,codec_mm_cma",
+          "propiedad": "linux,contiguous-region",
+          "valor": ""
+        },
+        {
+          "ruta": "/reserved-memory/linux,picdec",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,picdec",
+          "propiedad": "linux,contiguous-region",
+          "valor": ""
+        },
+        {
+          "ruta": "/reserved-memory/linux,codec_mm_reserved",
+          "propiedad": "compatible",
+          "valor": "amlogic, codec-mm-reserved"
+        },
+        {
+          "ruta": "/reserved-memory/linux,vdin1_cma",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/gpioleds",
+          "propiedad": "compatible",
+          "valor": "gpio-leds"
+        },
+        {
+          "ruta": "/gpioleds",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/vout",
+          "propiedad": "compatible",
+          "valor": "amlogic, vout"
+        },
+        {
+          "ruta": "/vout",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/cvbsout",
+          "propiedad": "compatible",
+          "valor": "amlogic, cvbsout-gxlx"
+        },
+        {
+          "ruta": "/cvbsout",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson-fb",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-gxl"
+        },
+        {
+          "ruta": "/meson-fb",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000<"
+        },
+        {
+          "ruta": "/meson-fb",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson-fb",
+          "propiedad": "logo_addr",
+          "valor": "0x3f800000"
+        },
+        {
+          "ruta": "/ge2d",
+          "propiedad": "compatible",
+          "valor": "amlogic, ge2d-gxl"
+        },
+        {
+          "ruta": "/ge2d",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/codec_io",
+          "propiedad": "compatible",
+          "valor": "amlogic, codec_io"
+        },
+        {
+          "ruta": "/codec_io",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/codec_mm",
+          "propiedad": "compatible",
+          "valor": "amlogic, codec, mm"
+        },
+        {
+          "ruta": "/codec_mm",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000=\u0000\u0000\u0000>"
+        },
+        {
+          "ruta": "/codec_mm",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/canvas",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson, canvas"
+        },
+        {
+          "ruta": "/canvas",
+          "propiedad": "status",
+          "valor": "ok"
+        },
+        {
+          "ruta": "/canvas",
+          "propiedad": "reg",
+          "valor": "hex:c883800000000400"
+        },
+        {
+          "ruta": "/mesonstream",
+          "propiedad": "compatible",
+          "valor": "amlogic, codec, streambuf"
+        },
+        {
+          "ruta": "/mesonstream",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/vdec",
+          "propiedad": "compatible",
+          "valor": "amlogic, vdec"
+        },
+        {
+          "ruta": "/vdec",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/picdec",
+          "propiedad": "compatible",
+          "valor": "amlogic, picdec"
+        },
+        {
+          "ruta": "/picdec",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000?"
+        },
+        {
+          "ruta": "/picdec",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/ppmgr",
+          "propiedad": "compatible",
+          "valor": "amlogic, ppmgr"
+        },
+        {
+          "ruta": "/ppmgr",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000@"
+        },
+        {
+          "ruta": "/ppmgr",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/deinterlace",
+          "propiedad": "compatible",
+          "valor": "amlogic, deinterlace"
+        },
+        {
+          "ruta": "/deinterlace",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/deinterlace",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000A"
+        },
+        {
+          "ruta": "/tunnel_sync",
+          "propiedad": "compatible",
+          "valor": "amlogic, tunnel_sync"
+        },
+        {
+          "ruta": "/tunnel_sync",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/ionvideo",
+          "propiedad": "compatible",
+          "valor": "amlogic, ionvideo"
+        },
+        {
+          "ruta": "/ionvideo",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/amlvideo2_0",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlvideo2"
+        },
+        {
+          "ruta": "/amlvideo2_0",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/amlvideo2_1",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlvideo2"
+        },
+        {
+          "ruta": "/amlvideo2_1",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/amlvideo",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlvideo"
+        },
+        {
+          "ruta": "/amlvideo",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson_uvm",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson_uvm"
+        },
+        {
+          "ruta": "/meson_uvm",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson_videotunnel",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson_videotunnel"
+        },
+        {
+          "ruta": "/meson_videotunnel",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/video_composer",
+          "propiedad": "compatible",
+          "valor": "amlogic, video_composer"
+        },
+        {
+          "ruta": "/video_composer",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/dvb",
+          "propiedad": "compatible",
+          "valor": "amlogic, dvb"
+        },
+        {
+          "ruta": "/dvb",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/vdin0",
+          "propiedad": "compatible",
+          "valor": "amlogic, vdin"
+        },
+        {
+          "ruta": "/vdin0",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/vdin1",
+          "propiedad": "compatible",
+          "valor": "amlogic, vdin"
+        },
+        {
+          "ruta": "/vdin1",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000B"
+        },
+        {
+          "ruta": "/vdin1",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/amlvecm",
+          "propiedad": "compatible",
+          "valor": "amlogic, vecm"
+        },
+        {
+          "ruta": "/amlvecm",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/amvenc_avc",
+          "propiedad": "compatible",
+          "valor": "amlogic, amvenc_avc"
+        },
+        {
+          "ruta": "/amvenc_avc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/hevc_enc",
+          "propiedad": "compatible",
+          "valor": "cnm, HevcEnc"
+        },
+        {
+          "ruta": "/hevc_enc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/hevc_enc",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/vpu",
+          "propiedad": "compatible",
+          "valor": "amlogic, vpu-gxl"
+        },
+        {
+          "ruta": "/vpu",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/rdma",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson, rdma"
+        },
+        {
+          "ruta": "/rdma",
+          "propiedad": "status",
+          "valor": "ok"
+        },
+        {
+          "ruta": "/rtc",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_vrtc"
+        },
+        {
+          "ruta": "/rtc",
+          "propiedad": "alarm_reg_addr",
+          "valor": "hex:c81000a8"
+        },
+        {
+          "ruta": "/rtc",
+          "propiedad": "timer_e_addr",
+          "valor": "hex:c1109988"
+        },
+        {
+          "ruta": "/rtc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/bt-dev",
+          "propiedad": "compatible",
+          "valor": "amlogic, bt-dev"
+        },
+        {
+          "ruta": "/bt-dev",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/wifi",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_wifi"
+        },
+        {
+          "ruta": "/wifi",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/emmc@d0074000",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/emmc@d0074000",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-mmc-gxlx"
+        },
+        {
+          "ruta": "/emmc@d0074000",
+          "propiedad": "reg",
+          "valor": "hex:d007400000002000"
+        },
+        {
+          "ruta": "/sd@d0072000",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/sd@d0072000",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-mmc-gxlx"
+        },
+        {
+          "ruta": "/sd@d0072000",
+          "propiedad": "reg",
+          "valor": "hex:d007200000002000"
+        },
+        {
+          "ruta": "/sdio@d0070000",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/sdio@d0070000",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-mmc-gxlx"
+        },
+        {
+          "ruta": "/sdio@d0070000",
+          "propiedad": "reg",
+          "valor": "hex:d007000000002000"
+        },
+        {
+          "ruta": "/mtd_nand",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_mtd_nand"
+        },
+        {
+          "ruta": "/mtd_nand",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/mtd_nand",
+          "propiedad": "reg",
+          "valor": "hex:d007480000000200"
+        },
+        {
+          "ruta": "/ethernet@0xc9410000",
+          "propiedad": "compatible",
+          "valor": "amlogic, gxbb-eth-dwmac"
+        },
+        {
+          "ruta": "/ethernet@0xc9410000",
+          "propiedad": "reg",
+          "valor": "hex:c941000000010000c883454000000008c88345580000000cc110440800000004"
+        },
+        {
+          "ruta": "/dwc3@c9000000",
+          "propiedad": "compatible",
+          "valor": "synopsys, dwc3"
+        },
+        {
+          "ruta": "/dwc3@c9000000",
+          "propiedad": "reg",
+          "valor": "hex:c900000000100000"
+        },
+        {
+          "ruta": "/usb2phy@d0078000",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlogic-new-usb2"
+        },
+        {
+          "ruta": "/usb2phy@d0078000",
+          "propiedad": "reg",
+          "valor": "hex:d007800000000080c110440800000004"
+        },
+        {
+          "ruta": "/usb3phy@d0078080",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlogic-new-usb3"
+        },
+        {
+          "ruta": "/usb3phy@d0078080",
+          "propiedad": "reg",
+          "valor": "hex:d007808000000020"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "compatible",
+          "valor": "amlogic, dwc2"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "reg",
+          "valor": "hex:c910000000040000"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "phy-reg",
+          "valor": "hex:d0078000"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "phy-reg-size",
+          "valor": "hex:000000a0"
+        },
+        {
+          "ruta": "/unifykey",
+          "propiedad": "compatible",
+          "valor": "amlogic, unifykey"
+        },
+        {
+          "ruta": "/unifykey",
+          "propiedad": "status",
+          "valor": "ok"
+        },
+        {
+          "ruta": "/amhdmitx",
+          "propiedad": "compatible",
+          "valor": "amlogic, amhdmitx"
+        },
+        {
+          "ruta": "/amhdmitx",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aocec",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlogic-aocec"
+        },
+        {
+          "ruta": "/aocec",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aocec",
+          "propiedad": "reg",
+          "valor": "hex:c810023c00000004c810000000000200"
+        },
+        {
+          "ruta": "/aocec",
+          "propiedad": "reg-names",
+          "valor": "ao_exit\u0000ao"
+        },
+        {
+          "ruta": "/I2S",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-i2s-dai"
+        },
+        {
+          "ruta": "/snd_dmic",
+          "propiedad": "compatible",
+          "valor": "aml, aml_snd_dmic"
+        },
+        {
+          "ruta": "/snd_dmic",
+          "propiedad": "reg",
+          "valor": "hex:d004200000002000"
+        },
+        {
+          "ruta": "/snd_dmic",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/SPDIF",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-spdif-dai"
+        },
+        {
+          "ruta": "/PCM",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-pcm-dai"
+        },
+        {
+          "ruta": "/i2s_platform",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-i2s"
+        },
+        {
+          "ruta": "/pcm_platform",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-pcm"
+        },
+        {
+          "ruta": "/spdif_codec",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-spdif-codec"
+        },
+        {
+          "ruta": "/pcm_codec",
+          "propiedad": "compatible",
+          "valor": "amlogic, pcm2BT-codec"
+        },
+        {
+          "ruta": "/dummy",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_dummy_codec"
+        },
+        {
+          "ruta": "/dummy",
+          "propiedad": "status",
+          "valor": "disable"
+        },
+        {
+          "ruta": "/t9015",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_codec_T9015"
+        },
+        {
+          "ruta": "/t9015",
+          "propiedad": "reg",
+          "valor": "hex:c883200000000014"
+        },
+        {
+          "ruta": "/t9015",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aml_sound_meson",
+          "propiedad": "compatible",
+          "valor": "aml, meson-snd-card"
+        },
+        {
+          "ruta": "/aml_sound_meson",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aml-sensor@0",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-thermal"
+        },
+        {
+          "ruta": "/aml-sensor@0",
+          "propiedad": "status",
+          "valor": "okay"
+        }
+      ]
+    },
+    {
+      "item": "_aml_dtb",
+      "offset": 61440,
+      "bytes": 58845,
+      "version": 17,
+      "propiedades": [
+        {
+          "ruta": "/",
+          "propiedad": "model",
+          "valor": "Amlogic"
+        },
+        {
+          "ruta": "/",
+          "propiedad": "amlogic-dt-id",
+          "valor": "gxlx2_p291_2g"
+        },
+        {
+          "ruta": "/",
+          "propiedad": "compatible",
+          "valor": "amlogic, Gxl"
+        },
+        {
+          "ruta": "/",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/mali@d00c0000",
+          "propiedad": "compatible",
+          "valor": "arm,mali-450"
+        },
+        {
+          "ruta": "/mali@d00c0000",
+          "propiedad": "reg",
+          "valor": "hex:d00c000000040000c110444000001000c810000000001000c883c00000001000c110444000001000"
+        },
+        {
+          "ruta": "/cpus",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/timer",
+          "propiedad": "compatible",
+          "valor": "arm,armv7-timer"
+        },
+        {
+          "ruta": "/timer_bc",
+          "propiedad": "compatible",
+          "valor": "arm, meson-bc-timer"
+        },
+        {
+          "ruta": "/timer_bc",
+          "propiedad": "reg",
+          "valor": "hex:c110999000000004c110999400000004"
+        },
+        {
+          "ruta": "/xtal-clk",
+          "propiedad": "compatible",
+          "valor": "fixed-clock"
+        },
+        {
+          "ruta": "/arm_pmu",
+          "propiedad": "compatible",
+          "valor": "arm,cortex-a15-pmu"
+        },
+        {
+          "ruta": "/pm",
+          "propiedad": "compatible",
+          "valor": "amlogic, pm"
+        },
+        {
+          "ruta": "/pm",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/pm",
+          "propiedad": "debug_reg",
+          "valor": "hex:c81000a8"
+        },
+        {
+          "ruta": "/pm",
+          "propiedad": "exit_reg",
+          "valor": "hex:c810023c"
+        },
+        {
+          "ruta": "/interrupt-controller@2c001000",
+          "propiedad": "compatible",
+          "valor": "arm,cortex-a15-gic\u0000arm,cortex-a9-gic"
+        },
+        {
+          "ruta": "/interrupt-controller@2c001000",
+          "propiedad": "#address-cells",
+          "valor": ""
+        },
+        {
+          "ruta": "/interrupt-controller@2c001000",
+          "propiedad": "reg",
+          "valor": "hex:c430100000001000c430200000000100"
+        },
+        {
+          "ruta": "/psci",
+          "propiedad": "compatible",
+          "valor": "arm,psci-0.2"
+        },
+        {
+          "ruta": "/secmon",
+          "propiedad": "compatible",
+          "valor": "amlogic, secmon"
+        },
+        {
+          "ruta": "/secmon",
+          "propiedad": "memory-region",
+          "valor": "hex:0000000f"
+        },
+        {
+          "ruta": "/securitykey",
+          "propiedad": "compatible",
+          "valor": "aml, securitykey"
+        },
+        {
+          "ruta": "/securitykey",
+          "propiedad": "storage_status",
+          "valor": "hex:82000065"
+        },
+        {
+          "ruta": "/cpu_iomap",
+          "propiedad": "compatible",
+          "valor": "amlogic, iomap"
+        },
+        {
+          "ruta": "/cpu_iomap",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/mhu@c883c400",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson_mhu"
+        },
+        {
+          "ruta": "/mhu@c883c400",
+          "propiedad": "reg",
+          "valor": "hex:c883c4000000004cc801300000000800"
+        },
+        {
+          "ruta": "/scpi_clocks",
+          "propiedad": "compatible",
+          "valor": "arm, scpi-clks"
+        },
+        {
+          "ruta": "/watchdog@0xffd0f0d0",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-wdt"
+        },
+        {
+          "ruta": "/watchdog@0xffd0f0d0",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/watchdog@0xffd0f0d0",
+          "propiedad": "reg",
+          "valor": "hex:c11098d000000010"
+        },
+        {
+          "ruta": "/jtag",
+          "propiedad": "compatible",
+          "valor": "amlogic, jtag"
+        },
+        {
+          "ruta": "/jtag",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/spicc",
+          "propiedad": "compatible",
+          "valor": "amlogic, spicc"
+        },
+        {
+          "ruta": "/spicc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/spicc",
+          "propiedad": "reg",
+          "valor": "hex:c1108d800000003c"
+        },
+        {
+          "ruta": "/spifc@c1108c80",
+          "propiedad": "compatible",
+          "valor": "amlogic,aml-spi-nor"
+        },
+        {
+          "ruta": "/spifc@c1108c80",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/spifc@c1108c80",
+          "propiedad": "reg",
+          "valor": "hex:c1108c8000000080"
+        },
+        {
+          "ruta": "/cpu_info",
+          "propiedad": "compatible",
+          "valor": "amlogic, cpuinfo"
+        },
+        {
+          "ruta": "/cpu_info",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/pinctrl@14",
+          "propiedad": "compatible",
+          "valor": "amlogic,meson-gxlx-aobus-pinctrl"
+        },
+        {
+          "ruta": "/pinctrl@14",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/pinctrl@4b0",
+          "propiedad": "compatible",
+          "valor": "amlogic,meson-gxlx-periphs-pinctrl"
+        },
+        {
+          "ruta": "/pinctrl@4b0",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/soc",
+          "propiedad": "compatible",
+          "valor": "simple-bus"
+        },
+        {
+          "ruta": "/soc",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/vdac",
+          "propiedad": "compatible",
+          "valor": "amlogic, vdac-gxlx"
+        },
+        {
+          "ruta": "/vdac",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/defendkey",
+          "propiedad": "compatible",
+          "valor": "amlogic, defendkey"
+        },
+        {
+          "ruta": "/defendkey",
+          "propiedad": "reg",
+          "valor": "hex:c883450000000004"
+        },
+        {
+          "ruta": "/defendkey",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/audio_data",
+          "propiedad": "compatible",
+          "valor": "amlogic, audio_data"
+        },
+        {
+          "ruta": "/audio_data",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/saradc",
+          "propiedad": "compatible",
+          "valor": "amlogic,meson-gxl-saradc"
+        },
+        {
+          "ruta": "/saradc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/saradc",
+          "propiedad": "reg",
+          "valor": "hex:00000000c11086800000000000000038"
+        },
+        {
+          "ruta": "/efuse",
+          "propiedad": "compatible",
+          "valor": "amlogic, efuse"
+        },
+        {
+          "ruta": "/efuse",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/rc@c8100580",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_remote"
+        },
+        {
+          "ruta": "/rc@c8100580",
+          "propiedad": "reg",
+          "valor": "hex:c810058000000044c810048000000020"
+        },
+        {
+          "ruta": "/rc@c8100580",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson-amvideom",
+          "propiedad": "compatible",
+          "valor": "amlogic, amvideom"
+        },
+        {
+          "ruta": "/meson-amvideom",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aml_reboot",
+          "propiedad": "compatible",
+          "valor": "aml, reboot"
+        },
+        {
+          "ruta": "/ddr_bandwidth",
+          "propiedad": "compatible",
+          "valor": "amlogic, ddr-bandwidth"
+        },
+        {
+          "ruta": "/ddr_bandwidth",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/ddr_bandwidth",
+          "propiedad": "reg",
+          "valor": "hex:c883800000000100c883700000000100"
+        },
+        {
+          "ruta": "/dmc_monitor",
+          "propiedad": "compatible",
+          "valor": "amlogic, dmc_monitor"
+        },
+        {
+          "ruta": "/dmc_monitor",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/dmc_monitor",
+          "propiedad": "reg_base",
+          "valor": "hex:da838400"
+        },
+        {
+          "ruta": "/ion_dev",
+          "propiedad": "compatible",
+          "valor": "amlogic, ion_dev"
+        },
+        {
+          "ruta": "/ion_dev",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000:"
+        },
+        {
+          "ruta": "/memory@00000000",
+          "propiedad": "linux,usable-memory",
+          "valor": "hex:001000007ff00000"
+        },
+        {
+          "ruta": "/reserved-memory",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/reserved-memory/ramoops@0x07400000",
+          "propiedad": "compatible",
+          "valor": "ramoops"
+        },
+        {
+          "ruta": "/reserved-memory/ramoops@0x07400000",
+          "propiedad": "reg",
+          "valor": "hex:0740000000100000"
+        },
+        {
+          "ruta": "/reserved-memory/linux,secmon",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,secos",
+          "propiedad": "status",
+          "valor": "disable"
+        },
+        {
+          "ruta": "/reserved-memory/linux,secos",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_secos_memory"
+        },
+        {
+          "ruta": "/reserved-memory/linux,secos",
+          "propiedad": "reg",
+          "valor": "hex:0530000002000000"
+        },
+        {
+          "ruta": "/reserved-memory/linux,meson-fb",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,di_cma",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,ion-dev",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,ppmgr",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,codec_mm_cma",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,codec_mm_cma",
+          "propiedad": "linux,contiguous-region",
+          "valor": ""
+        },
+        {
+          "ruta": "/reserved-memory/linux,picdec",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,picdec",
+          "propiedad": "linux,contiguous-region",
+          "valor": ""
+        },
+        {
+          "ruta": "/reserved-memory/linux,codec_mm_reserved",
+          "propiedad": "compatible",
+          "valor": "amlogic, codec-mm-reserved"
+        },
+        {
+          "ruta": "/reserved-memory/linux,vdin1_cma",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/gpioleds",
+          "propiedad": "compatible",
+          "valor": "gpio-leds"
+        },
+        {
+          "ruta": "/gpioleds",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/vout",
+          "propiedad": "compatible",
+          "valor": "amlogic, vout"
+        },
+        {
+          "ruta": "/vout",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/cvbsout",
+          "propiedad": "compatible",
+          "valor": "amlogic, cvbsout-gxlx"
+        },
+        {
+          "ruta": "/cvbsout",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson-fb",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-gxl"
+        },
+        {
+          "ruta": "/meson-fb",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000<"
+        },
+        {
+          "ruta": "/meson-fb",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson-fb",
+          "propiedad": "logo_addr",
+          "valor": "0x7f800000"
+        },
+        {
+          "ruta": "/ge2d",
+          "propiedad": "compatible",
+          "valor": "amlogic, ge2d-gxl"
+        },
+        {
+          "ruta": "/ge2d",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/codec_io",
+          "propiedad": "compatible",
+          "valor": "amlogic, codec_io"
+        },
+        {
+          "ruta": "/codec_io",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/codec_mm",
+          "propiedad": "compatible",
+          "valor": "amlogic, codec, mm"
+        },
+        {
+          "ruta": "/codec_mm",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000=\u0000\u0000\u0000>"
+        },
+        {
+          "ruta": "/codec_mm",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/canvas",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson, canvas"
+        },
+        {
+          "ruta": "/canvas",
+          "propiedad": "status",
+          "valor": "ok"
+        },
+        {
+          "ruta": "/canvas",
+          "propiedad": "reg",
+          "valor": "hex:c883800000000400"
+        },
+        {
+          "ruta": "/mesonstream",
+          "propiedad": "compatible",
+          "valor": "amlogic, codec, streambuf"
+        },
+        {
+          "ruta": "/mesonstream",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/vdec",
+          "propiedad": "compatible",
+          "valor": "amlogic, vdec"
+        },
+        {
+          "ruta": "/vdec",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/picdec",
+          "propiedad": "compatible",
+          "valor": "amlogic, picdec"
+        },
+        {
+          "ruta": "/picdec",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000?"
+        },
+        {
+          "ruta": "/picdec",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/ppmgr",
+          "propiedad": "compatible",
+          "valor": "amlogic, ppmgr"
+        },
+        {
+          "ruta": "/ppmgr",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000@"
+        },
+        {
+          "ruta": "/ppmgr",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/deinterlace",
+          "propiedad": "compatible",
+          "valor": "amlogic, deinterlace"
+        },
+        {
+          "ruta": "/deinterlace",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/deinterlace",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000A"
+        },
+        {
+          "ruta": "/tunnel_sync",
+          "propiedad": "compatible",
+          "valor": "amlogic, tunnel_sync"
+        },
+        {
+          "ruta": "/tunnel_sync",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/ionvideo",
+          "propiedad": "compatible",
+          "valor": "amlogic, ionvideo"
+        },
+        {
+          "ruta": "/ionvideo",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/amlvideo2_0",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlvideo2"
+        },
+        {
+          "ruta": "/amlvideo2_0",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/amlvideo2_1",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlvideo2"
+        },
+        {
+          "ruta": "/amlvideo2_1",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/amlvideo",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlvideo"
+        },
+        {
+          "ruta": "/amlvideo",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson_uvm",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson_uvm"
+        },
+        {
+          "ruta": "/meson_uvm",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson_videotunnel",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson_videotunnel"
+        },
+        {
+          "ruta": "/meson_videotunnel",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/video_composer",
+          "propiedad": "compatible",
+          "valor": "amlogic, video_composer"
+        },
+        {
+          "ruta": "/video_composer",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/dvb",
+          "propiedad": "compatible",
+          "valor": "amlogic, dvb"
+        },
+        {
+          "ruta": "/dvb",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/vdin0",
+          "propiedad": "compatible",
+          "valor": "amlogic, vdin"
+        },
+        {
+          "ruta": "/vdin0",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/vdin1",
+          "propiedad": "compatible",
+          "valor": "amlogic, vdin"
+        },
+        {
+          "ruta": "/vdin1",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000B"
+        },
+        {
+          "ruta": "/vdin1",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/amlvecm",
+          "propiedad": "compatible",
+          "valor": "amlogic, vecm"
+        },
+        {
+          "ruta": "/amlvecm",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/amvenc_avc",
+          "propiedad": "compatible",
+          "valor": "amlogic, amvenc_avc"
+        },
+        {
+          "ruta": "/amvenc_avc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/hevc_enc",
+          "propiedad": "compatible",
+          "valor": "cnm, HevcEnc"
+        },
+        {
+          "ruta": "/hevc_enc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/hevc_enc",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/vpu",
+          "propiedad": "compatible",
+          "valor": "amlogic, vpu-gxl"
+        },
+        {
+          "ruta": "/vpu",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/rdma",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson, rdma"
+        },
+        {
+          "ruta": "/rdma",
+          "propiedad": "status",
+          "valor": "ok"
+        },
+        {
+          "ruta": "/rtc",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_vrtc"
+        },
+        {
+          "ruta": "/rtc",
+          "propiedad": "alarm_reg_addr",
+          "valor": "hex:c81000a8"
+        },
+        {
+          "ruta": "/rtc",
+          "propiedad": "timer_e_addr",
+          "valor": "hex:c1109988"
+        },
+        {
+          "ruta": "/rtc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/bt-dev",
+          "propiedad": "compatible",
+          "valor": "amlogic, bt-dev"
+        },
+        {
+          "ruta": "/bt-dev",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/wifi",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_wifi"
+        },
+        {
+          "ruta": "/wifi",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/emmc@d0074000",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/emmc@d0074000",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-mmc-gxlx"
+        },
+        {
+          "ruta": "/emmc@d0074000",
+          "propiedad": "reg",
+          "valor": "hex:d007400000002000"
+        },
+        {
+          "ruta": "/sd@d0072000",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/sd@d0072000",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-mmc-gxlx"
+        },
+        {
+          "ruta": "/sd@d0072000",
+          "propiedad": "reg",
+          "valor": "hex:d007200000002000"
+        },
+        {
+          "ruta": "/sdio@d0070000",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/sdio@d0070000",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-mmc-gxlx"
+        },
+        {
+          "ruta": "/sdio@d0070000",
+          "propiedad": "reg",
+          "valor": "hex:d007000000002000"
+        },
+        {
+          "ruta": "/mtd_nand",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_mtd_nand"
+        },
+        {
+          "ruta": "/mtd_nand",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/mtd_nand",
+          "propiedad": "reg",
+          "valor": "hex:d007480000000200"
+        },
+        {
+          "ruta": "/ethernet@0xc9410000",
+          "propiedad": "compatible",
+          "valor": "amlogic, gxbb-eth-dwmac"
+        },
+        {
+          "ruta": "/ethernet@0xc9410000",
+          "propiedad": "reg",
+          "valor": "hex:c941000000010000c883454000000008c88345580000000cc110440800000004"
+        },
+        {
+          "ruta": "/dwc3@c9000000",
+          "propiedad": "compatible",
+          "valor": "synopsys, dwc3"
+        },
+        {
+          "ruta": "/dwc3@c9000000",
+          "propiedad": "reg",
+          "valor": "hex:c900000000100000"
+        },
+        {
+          "ruta": "/usb2phy@d0078000",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlogic-new-usb2"
+        },
+        {
+          "ruta": "/usb2phy@d0078000",
+          "propiedad": "reg",
+          "valor": "hex:d007800000000080c110440800000004"
+        },
+        {
+          "ruta": "/usb3phy@d0078080",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlogic-new-usb3"
+        },
+        {
+          "ruta": "/usb3phy@d0078080",
+          "propiedad": "reg",
+          "valor": "hex:d007808000000020"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "compatible",
+          "valor": "amlogic, dwc2"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "reg",
+          "valor": "hex:c910000000040000"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "phy-reg",
+          "valor": "hex:d0078000"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "phy-reg-size",
+          "valor": "hex:000000a0"
+        },
+        {
+          "ruta": "/unifykey",
+          "propiedad": "compatible",
+          "valor": "amlogic, unifykey"
+        },
+        {
+          "ruta": "/unifykey",
+          "propiedad": "status",
+          "valor": "ok"
+        },
+        {
+          "ruta": "/amhdmitx",
+          "propiedad": "compatible",
+          "valor": "amlogic, amhdmitx"
+        },
+        {
+          "ruta": "/amhdmitx",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aocec",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlogic-aocec"
+        },
+        {
+          "ruta": "/aocec",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aocec",
+          "propiedad": "reg",
+          "valor": "hex:c810023c00000004c810000000000200"
+        },
+        {
+          "ruta": "/aocec",
+          "propiedad": "reg-names",
+          "valor": "ao_exit\u0000ao"
+        },
+        {
+          "ruta": "/I2S",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-i2s-dai"
+        },
+        {
+          "ruta": "/snd_dmic",
+          "propiedad": "compatible",
+          "valor": "aml, aml_snd_dmic"
+        },
+        {
+          "ruta": "/snd_dmic",
+          "propiedad": "reg",
+          "valor": "hex:d004200000002000"
+        },
+        {
+          "ruta": "/snd_dmic",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/SPDIF",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-spdif-dai"
+        },
+        {
+          "ruta": "/PCM",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-pcm-dai"
+        },
+        {
+          "ruta": "/i2s_platform",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-i2s"
+        },
+        {
+          "ruta": "/pcm_platform",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-pcm"
+        },
+        {
+          "ruta": "/spdif_codec",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-spdif-codec"
+        },
+        {
+          "ruta": "/pcm_codec",
+          "propiedad": "compatible",
+          "valor": "amlogic, pcm2BT-codec"
+        },
+        {
+          "ruta": "/dummy",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_dummy_codec"
+        },
+        {
+          "ruta": "/dummy",
+          "propiedad": "status",
+          "valor": "disable"
+        },
+        {
+          "ruta": "/t9015",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_codec_T9015"
+        },
+        {
+          "ruta": "/t9015",
+          "propiedad": "reg",
+          "valor": "hex:c883200000000014"
+        },
+        {
+          "ruta": "/t9015",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aml_sound_meson",
+          "propiedad": "compatible",
+          "valor": "aml, meson-snd-card"
+        },
+        {
+          "ruta": "/aml_sound_meson",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aml-sensor@0",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-thermal"
+        },
+        {
+          "ruta": "/aml-sensor@0",
+          "propiedad": "status",
+          "valor": "okay"
+        }
+      ]
+    },
+    {
+      "item": "_aml_dtb",
+      "offset": 120832,
+      "bytes": 58849,
+      "version": 17,
+      "propiedades": [
+        {
+          "ruta": "/",
+          "propiedad": "model",
+          "valor": "Amlogic"
+        },
+        {
+          "ruta": "/",
+          "propiedad": "amlogic-dt-id",
+          "valor": "gxlx2_p291_3g"
+        },
+        {
+          "ruta": "/",
+          "propiedad": "compatible",
+          "valor": "amlogic, Gxl"
+        },
+        {
+          "ruta": "/",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/mali@d00c0000",
+          "propiedad": "compatible",
+          "valor": "arm,mali-450"
+        },
+        {
+          "ruta": "/mali@d00c0000",
+          "propiedad": "reg",
+          "valor": "hex:d00c000000040000c110444000001000c810000000001000c883c00000001000c110444000001000"
+        },
+        {
+          "ruta": "/cpus",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/timer",
+          "propiedad": "compatible",
+          "valor": "arm,armv7-timer"
+        },
+        {
+          "ruta": "/timer_bc",
+          "propiedad": "compatible",
+          "valor": "arm, meson-bc-timer"
+        },
+        {
+          "ruta": "/timer_bc",
+          "propiedad": "reg",
+          "valor": "hex:c110999000000004c110999400000004"
+        },
+        {
+          "ruta": "/xtal-clk",
+          "propiedad": "compatible",
+          "valor": "fixed-clock"
+        },
+        {
+          "ruta": "/arm_pmu",
+          "propiedad": "compatible",
+          "valor": "arm,cortex-a15-pmu"
+        },
+        {
+          "ruta": "/pm",
+          "propiedad": "compatible",
+          "valor": "amlogic, pm"
+        },
+        {
+          "ruta": "/pm",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/pm",
+          "propiedad": "debug_reg",
+          "valor": "hex:c81000a8"
+        },
+        {
+          "ruta": "/pm",
+          "propiedad": "exit_reg",
+          "valor": "hex:c810023c"
+        },
+        {
+          "ruta": "/interrupt-controller@2c001000",
+          "propiedad": "compatible",
+          "valor": "arm,cortex-a15-gic\u0000arm,cortex-a9-gic"
+        },
+        {
+          "ruta": "/interrupt-controller@2c001000",
+          "propiedad": "#address-cells",
+          "valor": ""
+        },
+        {
+          "ruta": "/interrupt-controller@2c001000",
+          "propiedad": "reg",
+          "valor": "hex:c430100000001000c430200000000100"
+        },
+        {
+          "ruta": "/psci",
+          "propiedad": "compatible",
+          "valor": "arm,psci-0.2"
+        },
+        {
+          "ruta": "/secmon",
+          "propiedad": "compatible",
+          "valor": "amlogic, secmon"
+        },
+        {
+          "ruta": "/secmon",
+          "propiedad": "memory-region",
+          "valor": "hex:0000000f"
+        },
+        {
+          "ruta": "/securitykey",
+          "propiedad": "compatible",
+          "valor": "aml, securitykey"
+        },
+        {
+          "ruta": "/securitykey",
+          "propiedad": "storage_status",
+          "valor": "hex:82000065"
+        },
+        {
+          "ruta": "/cpu_iomap",
+          "propiedad": "compatible",
+          "valor": "amlogic, iomap"
+        },
+        {
+          "ruta": "/cpu_iomap",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/mhu@c883c400",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson_mhu"
+        },
+        {
+          "ruta": "/mhu@c883c400",
+          "propiedad": "reg",
+          "valor": "hex:c883c4000000004cc801300000000800"
+        },
+        {
+          "ruta": "/scpi_clocks",
+          "propiedad": "compatible",
+          "valor": "arm, scpi-clks"
+        },
+        {
+          "ruta": "/watchdog@0xffd0f0d0",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-wdt"
+        },
+        {
+          "ruta": "/watchdog@0xffd0f0d0",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/watchdog@0xffd0f0d0",
+          "propiedad": "reg",
+          "valor": "hex:c11098d000000010"
+        },
+        {
+          "ruta": "/jtag",
+          "propiedad": "compatible",
+          "valor": "amlogic, jtag"
+        },
+        {
+          "ruta": "/jtag",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/spicc",
+          "propiedad": "compatible",
+          "valor": "amlogic, spicc"
+        },
+        {
+          "ruta": "/spicc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/spicc",
+          "propiedad": "reg",
+          "valor": "hex:c1108d800000003c"
+        },
+        {
+          "ruta": "/spifc@c1108c80",
+          "propiedad": "compatible",
+          "valor": "amlogic,aml-spi-nor"
+        },
+        {
+          "ruta": "/spifc@c1108c80",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/spifc@c1108c80",
+          "propiedad": "reg",
+          "valor": "hex:c1108c8000000080"
+        },
+        {
+          "ruta": "/cpu_info",
+          "propiedad": "compatible",
+          "valor": "amlogic, cpuinfo"
+        },
+        {
+          "ruta": "/cpu_info",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/pinctrl@14",
+          "propiedad": "compatible",
+          "valor": "amlogic,meson-gxlx-aobus-pinctrl"
+        },
+        {
+          "ruta": "/pinctrl@14",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/pinctrl@4b0",
+          "propiedad": "compatible",
+          "valor": "amlogic,meson-gxlx-periphs-pinctrl"
+        },
+        {
+          "ruta": "/pinctrl@4b0",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/soc",
+          "propiedad": "compatible",
+          "valor": "simple-bus"
+        },
+        {
+          "ruta": "/soc",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/vdac",
+          "propiedad": "compatible",
+          "valor": "amlogic, vdac-gxlx"
+        },
+        {
+          "ruta": "/vdac",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/defendkey",
+          "propiedad": "compatible",
+          "valor": "amlogic, defendkey"
+        },
+        {
+          "ruta": "/defendkey",
+          "propiedad": "reg",
+          "valor": "hex:c883450000000004"
+        },
+        {
+          "ruta": "/defendkey",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/audio_data",
+          "propiedad": "compatible",
+          "valor": "amlogic, audio_data"
+        },
+        {
+          "ruta": "/audio_data",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/saradc",
+          "propiedad": "compatible",
+          "valor": "amlogic,meson-gxl-saradc"
+        },
+        {
+          "ruta": "/saradc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/saradc",
+          "propiedad": "reg",
+          "valor": "hex:00000000c11086800000000000000038"
+        },
+        {
+          "ruta": "/efuse",
+          "propiedad": "compatible",
+          "valor": "amlogic, efuse"
+        },
+        {
+          "ruta": "/efuse",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/rc@c8100580",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_remote"
+        },
+        {
+          "ruta": "/rc@c8100580",
+          "propiedad": "reg",
+          "valor": "hex:c810058000000044c810048000000020"
+        },
+        {
+          "ruta": "/rc@c8100580",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson-amvideom",
+          "propiedad": "compatible",
+          "valor": "amlogic, amvideom"
+        },
+        {
+          "ruta": "/meson-amvideom",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aml_reboot",
+          "propiedad": "compatible",
+          "valor": "aml, reboot"
+        },
+        {
+          "ruta": "/ddr_bandwidth",
+          "propiedad": "compatible",
+          "valor": "amlogic, ddr-bandwidth"
+        },
+        {
+          "ruta": "/ddr_bandwidth",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/ddr_bandwidth",
+          "propiedad": "reg",
+          "valor": "hex:c883800000000100c883700000000100"
+        },
+        {
+          "ruta": "/dmc_monitor",
+          "propiedad": "compatible",
+          "valor": "amlogic, dmc_monitor"
+        },
+        {
+          "ruta": "/dmc_monitor",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/dmc_monitor",
+          "propiedad": "reg_base",
+          "valor": "hex:da838400"
+        },
+        {
+          "ruta": "/ion_dev",
+          "propiedad": "compatible",
+          "valor": "amlogic, ion_dev"
+        },
+        {
+          "ruta": "/ion_dev",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000:"
+        },
+        {
+          "ruta": "/memory@00000000",
+          "propiedad": "linux,usable-memory",
+          "valor": "hex:00100000bff00000"
+        },
+        {
+          "ruta": "/reserved-memory",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/reserved-memory/ramoops@0x07400000",
+          "propiedad": "compatible",
+          "valor": "ramoops"
+        },
+        {
+          "ruta": "/reserved-memory/ramoops@0x07400000",
+          "propiedad": "reg",
+          "valor": "hex:0740000000100000"
+        },
+        {
+          "ruta": "/reserved-memory/linux,secmon",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,secos",
+          "propiedad": "status",
+          "valor": "disable"
+        },
+        {
+          "ruta": "/reserved-memory/linux,secos",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_secos_memory"
+        },
+        {
+          "ruta": "/reserved-memory/linux,secos",
+          "propiedad": "reg",
+          "valor": "hex:0530000002000000"
+        },
+        {
+          "ruta": "/reserved-memory/linux,meson-fb",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,di_cma",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,ion-dev",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,ppmgr",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,codec_mm_cma",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,codec_mm_cma",
+          "propiedad": "linux,contiguous-region",
+          "valor": ""
+        },
+        {
+          "ruta": "/reserved-memory/linux,picdec",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,picdec",
+          "propiedad": "linux,contiguous-region",
+          "valor": ""
+        },
+        {
+          "ruta": "/reserved-memory/linux,codec_mm_reserved",
+          "propiedad": "compatible",
+          "valor": "amlogic, codec-mm-reserved"
+        },
+        {
+          "ruta": "/reserved-memory/linux,vdin1_cma",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/gpioleds",
+          "propiedad": "compatible",
+          "valor": "gpio-leds"
+        },
+        {
+          "ruta": "/gpioleds",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/vout",
+          "propiedad": "compatible",
+          "valor": "amlogic, vout"
+        },
+        {
+          "ruta": "/vout",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/cvbsout",
+          "propiedad": "compatible",
+          "valor": "amlogic, cvbsout-gxlx"
+        },
+        {
+          "ruta": "/cvbsout",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson-fb",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-gxl"
+        },
+        {
+          "ruta": "/meson-fb",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000<"
+        },
+        {
+          "ruta": "/meson-fb",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson-fb",
+          "propiedad": "logo_addr",
+          "valor": "0x7f800000"
+        },
+        {
+          "ruta": "/ge2d",
+          "propiedad": "compatible",
+          "valor": "amlogic, ge2d-gxl"
+        },
+        {
+          "ruta": "/ge2d",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/codec_io",
+          "propiedad": "compatible",
+          "valor": "amlogic, codec_io"
+        },
+        {
+          "ruta": "/codec_io",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/codec_mm",
+          "propiedad": "compatible",
+          "valor": "amlogic, codec, mm"
+        },
+        {
+          "ruta": "/codec_mm",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000=\u0000\u0000\u0000>"
+        },
+        {
+          "ruta": "/codec_mm",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/canvas",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson, canvas"
+        },
+        {
+          "ruta": "/canvas",
+          "propiedad": "status",
+          "valor": "ok"
+        },
+        {
+          "ruta": "/canvas",
+          "propiedad": "reg",
+          "valor": "hex:c883800000000400"
+        },
+        {
+          "ruta": "/mesonstream",
+          "propiedad": "compatible",
+          "valor": "amlogic, codec, streambuf"
+        },
+        {
+          "ruta": "/mesonstream",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/vdec",
+          "propiedad": "compatible",
+          "valor": "amlogic, vdec"
+        },
+        {
+          "ruta": "/vdec",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/picdec",
+          "propiedad": "compatible",
+          "valor": "amlogic, picdec"
+        },
+        {
+          "ruta": "/picdec",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000?"
+        },
+        {
+          "ruta": "/picdec",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/ppmgr",
+          "propiedad": "compatible",
+          "valor": "amlogic, ppmgr"
+        },
+        {
+          "ruta": "/ppmgr",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000@"
+        },
+        {
+          "ruta": "/ppmgr",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/deinterlace",
+          "propiedad": "compatible",
+          "valor": "amlogic, deinterlace"
+        },
+        {
+          "ruta": "/deinterlace",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/deinterlace",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000A"
+        },
+        {
+          "ruta": "/tunnel_sync",
+          "propiedad": "compatible",
+          "valor": "amlogic, tunnel_sync"
+        },
+        {
+          "ruta": "/tunnel_sync",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/ionvideo",
+          "propiedad": "compatible",
+          "valor": "amlogic, ionvideo"
+        },
+        {
+          "ruta": "/ionvideo",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/amlvideo2_0",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlvideo2"
+        },
+        {
+          "ruta": "/amlvideo2_0",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/amlvideo2_1",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlvideo2"
+        },
+        {
+          "ruta": "/amlvideo2_1",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/amlvideo",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlvideo"
+        },
+        {
+          "ruta": "/amlvideo",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson_uvm",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson_uvm"
+        },
+        {
+          "ruta": "/meson_uvm",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson_videotunnel",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson_videotunnel"
+        },
+        {
+          "ruta": "/meson_videotunnel",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/video_composer",
+          "propiedad": "compatible",
+          "valor": "amlogic, video_composer"
+        },
+        {
+          "ruta": "/video_composer",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/dvb",
+          "propiedad": "compatible",
+          "valor": "amlogic, dvb"
+        },
+        {
+          "ruta": "/dvb",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/vdin0",
+          "propiedad": "compatible",
+          "valor": "amlogic, vdin"
+        },
+        {
+          "ruta": "/vdin0",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/vdin1",
+          "propiedad": "compatible",
+          "valor": "amlogic, vdin"
+        },
+        {
+          "ruta": "/vdin1",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000B"
+        },
+        {
+          "ruta": "/vdin1",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/amlvecm",
+          "propiedad": "compatible",
+          "valor": "amlogic, vecm"
+        },
+        {
+          "ruta": "/amlvecm",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/amvenc_avc",
+          "propiedad": "compatible",
+          "valor": "amlogic, amvenc_avc"
+        },
+        {
+          "ruta": "/amvenc_avc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/hevc_enc",
+          "propiedad": "compatible",
+          "valor": "cnm, HevcEnc"
+        },
+        {
+          "ruta": "/hevc_enc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/hevc_enc",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/vpu",
+          "propiedad": "compatible",
+          "valor": "amlogic, vpu-gxl"
+        },
+        {
+          "ruta": "/vpu",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/rdma",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson, rdma"
+        },
+        {
+          "ruta": "/rdma",
+          "propiedad": "status",
+          "valor": "ok"
+        },
+        {
+          "ruta": "/rtc",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_vrtc"
+        },
+        {
+          "ruta": "/rtc",
+          "propiedad": "alarm_reg_addr",
+          "valor": "hex:c81000a8"
+        },
+        {
+          "ruta": "/rtc",
+          "propiedad": "timer_e_addr",
+          "valor": "hex:c1109988"
+        },
+        {
+          "ruta": "/rtc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/bt-dev",
+          "propiedad": "compatible",
+          "valor": "amlogic, bt-dev"
+        },
+        {
+          "ruta": "/bt-dev",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/wifi",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_wifi"
+        },
+        {
+          "ruta": "/wifi",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/emmc@d0074000",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/emmc@d0074000",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-mmc-gxlx"
+        },
+        {
+          "ruta": "/emmc@d0074000",
+          "propiedad": "reg",
+          "valor": "hex:d007400000002000"
+        },
+        {
+          "ruta": "/sd@d0072000",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/sd@d0072000",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-mmc-gxlx"
+        },
+        {
+          "ruta": "/sd@d0072000",
+          "propiedad": "reg",
+          "valor": "hex:d007200000002000"
+        },
+        {
+          "ruta": "/sdio@d0070000",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/sdio@d0070000",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-mmc-gxlx"
+        },
+        {
+          "ruta": "/sdio@d0070000",
+          "propiedad": "reg",
+          "valor": "hex:d007000000002000"
+        },
+        {
+          "ruta": "/mtd_nand",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_mtd_nand"
+        },
+        {
+          "ruta": "/mtd_nand",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/mtd_nand",
+          "propiedad": "reg",
+          "valor": "hex:d007480000000200"
+        },
+        {
+          "ruta": "/ethernet@0xc9410000",
+          "propiedad": "compatible",
+          "valor": "amlogic, gxbb-eth-dwmac"
+        },
+        {
+          "ruta": "/ethernet@0xc9410000",
+          "propiedad": "reg",
+          "valor": "hex:c941000000010000c883454000000008c88345580000000cc110440800000004"
+        },
+        {
+          "ruta": "/dwc3@c9000000",
+          "propiedad": "compatible",
+          "valor": "synopsys, dwc3"
+        },
+        {
+          "ruta": "/dwc3@c9000000",
+          "propiedad": "reg",
+          "valor": "hex:c900000000100000"
+        },
+        {
+          "ruta": "/usb2phy@d0078000",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlogic-new-usb2"
+        },
+        {
+          "ruta": "/usb2phy@d0078000",
+          "propiedad": "reg",
+          "valor": "hex:d007800000000080c110440800000004"
+        },
+        {
+          "ruta": "/usb3phy@d0078080",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlogic-new-usb3"
+        },
+        {
+          "ruta": "/usb3phy@d0078080",
+          "propiedad": "reg",
+          "valor": "hex:d007808000000020"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "compatible",
+          "valor": "amlogic, dwc2"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "reg",
+          "valor": "hex:c910000000040000"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "phy-reg",
+          "valor": "hex:d0078000"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "phy-reg-size",
+          "valor": "hex:000000a0"
+        },
+        {
+          "ruta": "/unifykey",
+          "propiedad": "compatible",
+          "valor": "amlogic, unifykey"
+        },
+        {
+          "ruta": "/unifykey",
+          "propiedad": "status",
+          "valor": "ok"
+        },
+        {
+          "ruta": "/amhdmitx",
+          "propiedad": "compatible",
+          "valor": "amlogic, amhdmitx"
+        },
+        {
+          "ruta": "/amhdmitx",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aocec",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlogic-aocec"
+        },
+        {
+          "ruta": "/aocec",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aocec",
+          "propiedad": "reg",
+          "valor": "hex:c810023c00000004c810000000000200"
+        },
+        {
+          "ruta": "/aocec",
+          "propiedad": "reg-names",
+          "valor": "ao_exit\u0000ao"
+        },
+        {
+          "ruta": "/I2S",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-i2s-dai"
+        },
+        {
+          "ruta": "/snd_dmic",
+          "propiedad": "compatible",
+          "valor": "aml, aml_snd_dmic"
+        },
+        {
+          "ruta": "/snd_dmic",
+          "propiedad": "reg",
+          "valor": "hex:d004200000002000"
+        },
+        {
+          "ruta": "/snd_dmic",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/SPDIF",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-spdif-dai"
+        },
+        {
+          "ruta": "/PCM",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-pcm-dai"
+        },
+        {
+          "ruta": "/i2s_platform",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-i2s"
+        },
+        {
+          "ruta": "/pcm_platform",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-pcm"
+        },
+        {
+          "ruta": "/spdif_codec",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-spdif-codec"
+        },
+        {
+          "ruta": "/pcm_codec",
+          "propiedad": "compatible",
+          "valor": "amlogic, pcm2BT-codec"
+        },
+        {
+          "ruta": "/dummy",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_dummy_codec"
+        },
+        {
+          "ruta": "/dummy",
+          "propiedad": "status",
+          "valor": "disable"
+        },
+        {
+          "ruta": "/t9015",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_codec_T9015"
+        },
+        {
+          "ruta": "/t9015",
+          "propiedad": "reg",
+          "valor": "hex:c883200000000014"
+        },
+        {
+          "ruta": "/t9015",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aml_sound_meson",
+          "propiedad": "compatible",
+          "valor": "aml, meson-snd-card"
+        },
+        {
+          "ruta": "/aml_sound_meson",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aml-sensor@0",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-thermal"
+        },
+        {
+          "ruta": "/aml-sensor@0",
+          "propiedad": "status",
+          "valor": "okay"
+        }
+      ]
+    },
+    {
+      "item": "_aml_dtb",
+      "offset": 180224,
+      "bytes": 58500,
+      "version": 17,
+      "propiedades": [
+        {
+          "ruta": "/",
+          "propiedad": "model",
+          "valor": "Amlogic"
+        },
+        {
+          "ruta": "/",
+          "propiedad": "amlogic-dt-id",
+          "valor": "gxlx2_p295_1g"
+        },
+        {
+          "ruta": "/",
+          "propiedad": "compatible",
+          "valor": "amlogic, Gxl"
+        },
+        {
+          "ruta": "/",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/mali@d00c0000",
+          "propiedad": "compatible",
+          "valor": "arm,mali-450"
+        },
+        {
+          "ruta": "/mali@d00c0000",
+          "propiedad": "reg",
+          "valor": "hex:d00c000000040000c110444000001000c810000000001000c883c00000001000c110444000001000"
+        },
+        {
+          "ruta": "/cpus",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/timer",
+          "propiedad": "compatible",
+          "valor": "arm,armv7-timer"
+        },
+        {
+          "ruta": "/timer_bc",
+          "propiedad": "compatible",
+          "valor": "arm, meson-bc-timer"
+        },
+        {
+          "ruta": "/timer_bc",
+          "propiedad": "reg",
+          "valor": "hex:c110999000000004c110999400000004"
+        },
+        {
+          "ruta": "/xtal-clk",
+          "propiedad": "compatible",
+          "valor": "fixed-clock"
+        },
+        {
+          "ruta": "/arm_pmu",
+          "propiedad": "compatible",
+          "valor": "arm,cortex-a15-pmu"
+        },
+        {
+          "ruta": "/pm",
+          "propiedad": "compatible",
+          "valor": "amlogic, pm"
+        },
+        {
+          "ruta": "/pm",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/pm",
+          "propiedad": "debug_reg",
+          "valor": "hex:c81000a8"
+        },
+        {
+          "ruta": "/pm",
+          "propiedad": "exit_reg",
+          "valor": "hex:c810023c"
+        },
+        {
+          "ruta": "/interrupt-controller@2c001000",
+          "propiedad": "compatible",
+          "valor": "arm,cortex-a15-gic\u0000arm,cortex-a9-gic"
+        },
+        {
+          "ruta": "/interrupt-controller@2c001000",
+          "propiedad": "#address-cells",
+          "valor": ""
+        },
+        {
+          "ruta": "/interrupt-controller@2c001000",
+          "propiedad": "reg",
+          "valor": "hex:c430100000001000c430200000000100"
+        },
+        {
+          "ruta": "/psci",
+          "propiedad": "compatible",
+          "valor": "arm,psci-0.2"
+        },
+        {
+          "ruta": "/secmon",
+          "propiedad": "compatible",
+          "valor": "amlogic, secmon"
+        },
+        {
+          "ruta": "/secmon",
+          "propiedad": "memory-region",
+          "valor": "hex:0000000e"
+        },
+        {
+          "ruta": "/securitykey",
+          "propiedad": "compatible",
+          "valor": "aml, securitykey"
+        },
+        {
+          "ruta": "/securitykey",
+          "propiedad": "storage_status",
+          "valor": "hex:82000065"
+        },
+        {
+          "ruta": "/cpu_iomap",
+          "propiedad": "compatible",
+          "valor": "amlogic, iomap"
+        },
+        {
+          "ruta": "/cpu_iomap",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/mhu@c883c400",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson_mhu"
+        },
+        {
+          "ruta": "/mhu@c883c400",
+          "propiedad": "reg",
+          "valor": "hex:c883c4000000004cc801300000000800"
+        },
+        {
+          "ruta": "/scpi_clocks",
+          "propiedad": "compatible",
+          "valor": "arm, scpi-clks"
+        },
+        {
+          "ruta": "/watchdog@0xffd0f0d0",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-wdt"
+        },
+        {
+          "ruta": "/watchdog@0xffd0f0d0",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/watchdog@0xffd0f0d0",
+          "propiedad": "reg",
+          "valor": "hex:c11098d000000010"
+        },
+        {
+          "ruta": "/jtag",
+          "propiedad": "compatible",
+          "valor": "amlogic, jtag"
+        },
+        {
+          "ruta": "/jtag",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/spicc",
+          "propiedad": "compatible",
+          "valor": "amlogic, spicc"
+        },
+        {
+          "ruta": "/spicc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/spicc",
+          "propiedad": "reg",
+          "valor": "hex:c1108d800000003c"
+        },
+        {
+          "ruta": "/spifc@c1108c80",
+          "propiedad": "compatible",
+          "valor": "amlogic,aml-spi-nor"
+        },
+        {
+          "ruta": "/spifc@c1108c80",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/spifc@c1108c80",
+          "propiedad": "reg",
+          "valor": "hex:c1108c8000000080"
+        },
+        {
+          "ruta": "/cpu_info",
+          "propiedad": "compatible",
+          "valor": "amlogic, cpuinfo"
+        },
+        {
+          "ruta": "/cpu_info",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/pinctrl@14",
+          "propiedad": "compatible",
+          "valor": "amlogic,meson-gxlx-aobus-pinctrl"
+        },
+        {
+          "ruta": "/pinctrl@14",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/pinctrl@4b0",
+          "propiedad": "compatible",
+          "valor": "amlogic,meson-gxlx-periphs-pinctrl"
+        },
+        {
+          "ruta": "/pinctrl@4b0",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/soc",
+          "propiedad": "compatible",
+          "valor": "simple-bus"
+        },
+        {
+          "ruta": "/soc",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/vdac",
+          "propiedad": "compatible",
+          "valor": "amlogic, vdac-gxlx"
+        },
+        {
+          "ruta": "/vdac",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/defendkey",
+          "propiedad": "compatible",
+          "valor": "amlogic, defendkey"
+        },
+        {
+          "ruta": "/defendkey",
+          "propiedad": "reg",
+          "valor": "hex:c883450000000004"
+        },
+        {
+          "ruta": "/defendkey",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/audio_data",
+          "propiedad": "compatible",
+          "valor": "amlogic, audio_data"
+        },
+        {
+          "ruta": "/audio_data",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/saradc",
+          "propiedad": "compatible",
+          "valor": "amlogic,meson-gxl-saradc"
+        },
+        {
+          "ruta": "/saradc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/saradc",
+          "propiedad": "reg",
+          "valor": "hex:00000000c11086800000000000000038"
+        },
+        {
+          "ruta": "/efuse",
+          "propiedad": "compatible",
+          "valor": "amlogic, efuse"
+        },
+        {
+          "ruta": "/efuse",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/rc@c8100580",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_remote"
+        },
+        {
+          "ruta": "/rc@c8100580",
+          "propiedad": "reg",
+          "valor": "hex:c810058000000044c810048000000020"
+        },
+        {
+          "ruta": "/rc@c8100580",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson-amvideom",
+          "propiedad": "compatible",
+          "valor": "amlogic, amvideom"
+        },
+        {
+          "ruta": "/meson-amvideom",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aml_reboot",
+          "propiedad": "compatible",
+          "valor": "aml, reboot"
+        },
+        {
+          "ruta": "/ddr_bandwidth",
+          "propiedad": "compatible",
+          "valor": "amlogic, ddr-bandwidth"
+        },
+        {
+          "ruta": "/ddr_bandwidth",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/ddr_bandwidth",
+          "propiedad": "reg",
+          "valor": "hex:c883800000000100c883700000000100"
+        },
+        {
+          "ruta": "/dmc_monitor",
+          "propiedad": "compatible",
+          "valor": "amlogic, dmc_monitor"
+        },
+        {
+          "ruta": "/dmc_monitor",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/dmc_monitor",
+          "propiedad": "reg_base",
+          "valor": "hex:da838400"
+        },
+        {
+          "ruta": "/ion_dev",
+          "propiedad": "compatible",
+          "valor": "amlogic, ion_dev"
+        },
+        {
+          "ruta": "/ion_dev",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u00008"
+        },
+        {
+          "ruta": "/memory@00000000",
+          "propiedad": "linux,usable-memory",
+          "valor": "hex:001000003ff00000"
+        },
+        {
+          "ruta": "/reserved-memory",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/reserved-memory/ramoops@0x07400000",
+          "propiedad": "compatible",
+          "valor": "ramoops"
+        },
+        {
+          "ruta": "/reserved-memory/ramoops@0x07400000",
+          "propiedad": "reg",
+          "valor": "hex:0740000000100000"
+        },
+        {
+          "ruta": "/reserved-memory/linux,secmon",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,secos",
+          "propiedad": "status",
+          "valor": "disable"
+        },
+        {
+          "ruta": "/reserved-memory/linux,secos",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_secos_memory"
+        },
+        {
+          "ruta": "/reserved-memory/linux,secos",
+          "propiedad": "reg",
+          "valor": "hex:0530000002000000"
+        },
+        {
+          "ruta": "/reserved-memory/linux,meson-fb",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,di_cma",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,ion-dev",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,ppmgr",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,ppmgr",
+          "propiedad": "linux,contiguous-region",
+          "valor": ""
+        },
+        {
+          "ruta": "/reserved-memory/linux,codec_mm_cma",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,codec_mm_cma",
+          "propiedad": "linux,contiguous-region",
+          "valor": ""
+        },
+        {
+          "ruta": "/reserved-memory/linux,picdec",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,picdec",
+          "propiedad": "linux,contiguous-region",
+          "valor": ""
+        },
+        {
+          "ruta": "/reserved-memory/linux,codec_mm_reserved",
+          "propiedad": "compatible",
+          "valor": "amlogic, codec-mm-reserved"
+        },
+        {
+          "ruta": "/reserved-memory/linux,vdin1_cma",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/gpioleds",
+          "propiedad": "compatible",
+          "valor": "gpio-leds"
+        },
+        {
+          "ruta": "/gpioleds",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/vout",
+          "propiedad": "compatible",
+          "valor": "amlogic, vout"
+        },
+        {
+          "ruta": "/vout",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/cvbsout",
+          "propiedad": "compatible",
+          "valor": "amlogic, cvbsout-gxlx"
+        },
+        {
+          "ruta": "/cvbsout",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson-fb",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-gxl"
+        },
+        {
+          "ruta": "/meson-fb",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000:"
+        },
+        {
+          "ruta": "/meson-fb",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson-fb",
+          "propiedad": "logo_addr",
+          "valor": "0x3f800000"
+        },
+        {
+          "ruta": "/ge2d",
+          "propiedad": "compatible",
+          "valor": "amlogic, ge2d-gxl"
+        },
+        {
+          "ruta": "/ge2d",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/codec_io",
+          "propiedad": "compatible",
+          "valor": "amlogic, codec_io"
+        },
+        {
+          "ruta": "/codec_io",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/codec_mm",
+          "propiedad": "compatible",
+          "valor": "amlogic, codec, mm"
+        },
+        {
+          "ruta": "/codec_mm",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000;\u0000\u0000\u0000<"
+        },
+        {
+          "ruta": "/codec_mm",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/canvas",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson, canvas"
+        },
+        {
+          "ruta": "/canvas",
+          "propiedad": "status",
+          "valor": "ok"
+        },
+        {
+          "ruta": "/canvas",
+          "propiedad": "reg",
+          "valor": "hex:c883800000000400"
+        },
+        {
+          "ruta": "/mesonstream",
+          "propiedad": "compatible",
+          "valor": "amlogic, codec, streambuf"
+        },
+        {
+          "ruta": "/mesonstream",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/vdec",
+          "propiedad": "compatible",
+          "valor": "amlogic, vdec"
+        },
+        {
+          "ruta": "/vdec",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/picdec",
+          "propiedad": "compatible",
+          "valor": "amlogic, picdec"
+        },
+        {
+          "ruta": "/picdec",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000="
+        },
+        {
+          "ruta": "/picdec",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/ppmgr",
+          "propiedad": "compatible",
+          "valor": "amlogic, ppmgr"
+        },
+        {
+          "ruta": "/ppmgr",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000>"
+        },
+        {
+          "ruta": "/ppmgr",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/deinterlace",
+          "propiedad": "compatible",
+          "valor": "amlogic, deinterlace"
+        },
+        {
+          "ruta": "/deinterlace",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/deinterlace",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000?"
+        },
+        {
+          "ruta": "/tunnel_sync",
+          "propiedad": "compatible",
+          "valor": "amlogic, tunnel_sync"
+        },
+        {
+          "ruta": "/tunnel_sync",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/ionvideo",
+          "propiedad": "compatible",
+          "valor": "amlogic, ionvideo"
+        },
+        {
+          "ruta": "/ionvideo",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/amlvideo2_0",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlvideo2"
+        },
+        {
+          "ruta": "/amlvideo2_0",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/amlvideo2_1",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlvideo2"
+        },
+        {
+          "ruta": "/amlvideo2_1",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/amlvideo",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlvideo"
+        },
+        {
+          "ruta": "/amlvideo",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson_uvm",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson_uvm"
+        },
+        {
+          "ruta": "/meson_uvm",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson_videotunnel",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson_videotunnel"
+        },
+        {
+          "ruta": "/meson_videotunnel",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/video_composer",
+          "propiedad": "compatible",
+          "valor": "amlogic, video_composer"
+        },
+        {
+          "ruta": "/video_composer",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/dvb",
+          "propiedad": "compatible",
+          "valor": "amlogic, dvb"
+        },
+        {
+          "ruta": "/dvb",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/vdin0",
+          "propiedad": "compatible",
+          "valor": "amlogic, vdin"
+        },
+        {
+          "ruta": "/vdin0",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/vdin1",
+          "propiedad": "compatible",
+          "valor": "amlogic, vdin"
+        },
+        {
+          "ruta": "/vdin1",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000@"
+        },
+        {
+          "ruta": "/vdin1",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/amlvecm",
+          "propiedad": "compatible",
+          "valor": "amlogic, vecm"
+        },
+        {
+          "ruta": "/amlvecm",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/amvenc_avc",
+          "propiedad": "compatible",
+          "valor": "amlogic, amvenc_avc"
+        },
+        {
+          "ruta": "/amvenc_avc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/hevc_enc",
+          "propiedad": "compatible",
+          "valor": "cnm, HevcEnc"
+        },
+        {
+          "ruta": "/hevc_enc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/hevc_enc",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/vpu",
+          "propiedad": "compatible",
+          "valor": "amlogic, vpu-gxl"
+        },
+        {
+          "ruta": "/vpu",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/rdma",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson, rdma"
+        },
+        {
+          "ruta": "/rdma",
+          "propiedad": "status",
+          "valor": "ok"
+        },
+        {
+          "ruta": "/rtc",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_vrtc"
+        },
+        {
+          "ruta": "/rtc",
+          "propiedad": "alarm_reg_addr",
+          "valor": "hex:c81000a8"
+        },
+        {
+          "ruta": "/rtc",
+          "propiedad": "timer_e_addr",
+          "valor": "hex:c1109988"
+        },
+        {
+          "ruta": "/rtc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/bt-dev",
+          "propiedad": "compatible",
+          "valor": "amlogic, bt-dev"
+        },
+        {
+          "ruta": "/bt-dev",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/wifi",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_wifi"
+        },
+        {
+          "ruta": "/wifi",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/emmc@d0074000",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/emmc@d0074000",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-mmc-gxlx"
+        },
+        {
+          "ruta": "/emmc@d0074000",
+          "propiedad": "reg",
+          "valor": "hex:d007400000002000"
+        },
+        {
+          "ruta": "/sd@d0072000",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/sd@d0072000",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-mmc-gxlx"
+        },
+        {
+          "ruta": "/sd@d0072000",
+          "propiedad": "reg",
+          "valor": "hex:d007200000002000"
+        },
+        {
+          "ruta": "/sdio@d0070000",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/sdio@d0070000",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-mmc-gxlx"
+        },
+        {
+          "ruta": "/sdio@d0070000",
+          "propiedad": "reg",
+          "valor": "hex:d007000000002000"
+        },
+        {
+          "ruta": "/mtd_nand",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_mtd_nand"
+        },
+        {
+          "ruta": "/mtd_nand",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/mtd_nand",
+          "propiedad": "reg",
+          "valor": "hex:d007480000000200"
+        },
+        {
+          "ruta": "/ethernet@0xc9410000",
+          "propiedad": "compatible",
+          "valor": "amlogic, gxbb-eth-dwmac"
+        },
+        {
+          "ruta": "/ethernet@0xc9410000",
+          "propiedad": "reg",
+          "valor": "hex:c941000000010000c883454000000008c88345580000000cc110440800000004"
+        },
+        {
+          "ruta": "/dwc3@c9000000",
+          "propiedad": "compatible",
+          "valor": "synopsys, dwc3"
+        },
+        {
+          "ruta": "/dwc3@c9000000",
+          "propiedad": "reg",
+          "valor": "hex:c900000000100000"
+        },
+        {
+          "ruta": "/usb2phy@d0078000",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlogic-new-usb2"
+        },
+        {
+          "ruta": "/usb2phy@d0078000",
+          "propiedad": "reg",
+          "valor": "hex:d007800000000080c110440800000004"
+        },
+        {
+          "ruta": "/usb3phy@d0078080",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlogic-new-usb3"
+        },
+        {
+          "ruta": "/usb3phy@d0078080",
+          "propiedad": "reg",
+          "valor": "hex:d007808000000020"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "compatible",
+          "valor": "amlogic, dwc2"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "reg",
+          "valor": "hex:c910000000040000"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "phy-reg",
+          "valor": "hex:d0078000"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "phy-reg-size",
+          "valor": "hex:000000a0"
+        },
+        {
+          "ruta": "/unifykey",
+          "propiedad": "compatible",
+          "valor": "amlogic, unifykey"
+        },
+        {
+          "ruta": "/unifykey",
+          "propiedad": "status",
+          "valor": "ok"
+        },
+        {
+          "ruta": "/amhdmitx",
+          "propiedad": "compatible",
+          "valor": "amlogic, amhdmitx"
+        },
+        {
+          "ruta": "/amhdmitx",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aocec",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlogic-aocec"
+        },
+        {
+          "ruta": "/aocec",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aocec",
+          "propiedad": "reg",
+          "valor": "hex:c810023c00000004c810000000000200"
+        },
+        {
+          "ruta": "/aocec",
+          "propiedad": "reg-names",
+          "valor": "ao_exit\u0000ao"
+        },
+        {
+          "ruta": "/I2S",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-i2s-dai"
+        },
+        {
+          "ruta": "/snd_dmic",
+          "propiedad": "compatible",
+          "valor": "aml, aml_snd_dmic"
+        },
+        {
+          "ruta": "/snd_dmic",
+          "propiedad": "reg",
+          "valor": "hex:d004200000002000"
+        },
+        {
+          "ruta": "/snd_dmic",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/SPDIF",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-spdif-dai"
+        },
+        {
+          "ruta": "/PCM",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-pcm-dai"
+        },
+        {
+          "ruta": "/i2s_platform",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-i2s"
+        },
+        {
+          "ruta": "/pcm_platform",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-pcm"
+        },
+        {
+          "ruta": "/spdif_codec",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-spdif-codec"
+        },
+        {
+          "ruta": "/pcm_codec",
+          "propiedad": "compatible",
+          "valor": "amlogic, pcm2BT-codec"
+        },
+        {
+          "ruta": "/dummy",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_dummy_codec"
+        },
+        {
+          "ruta": "/dummy",
+          "propiedad": "status",
+          "valor": "disable"
+        },
+        {
+          "ruta": "/t9015",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_codec_T9015"
+        },
+        {
+          "ruta": "/t9015",
+          "propiedad": "reg",
+          "valor": "hex:c883200000000014"
+        },
+        {
+          "ruta": "/t9015",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aml_sound_meson",
+          "propiedad": "compatible",
+          "valor": "aml, meson-snd-card"
+        },
+        {
+          "ruta": "/aml_sound_meson",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aml-sensor@0",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-thermal"
+        },
+        {
+          "ruta": "/aml-sensor@0",
+          "propiedad": "status",
+          "valor": "okay"
+        }
+      ]
+    },
+    {
+      "item": "_aml_dtb",
+      "offset": 239616,
+      "bytes": 58544,
+      "version": 17,
+      "propiedades": [
+        {
+          "ruta": "/",
+          "propiedad": "model",
+          "valor": "Amlogic"
+        },
+        {
+          "ruta": "/",
+          "propiedad": "amlogic-dt-id",
+          "valor": "gxlx2_p295_2g"
+        },
+        {
+          "ruta": "/",
+          "propiedad": "compatible",
+          "valor": "amlogic, Gxl"
+        },
+        {
+          "ruta": "/",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/mali@d00c0000",
+          "propiedad": "compatible",
+          "valor": "arm,mali-450"
+        },
+        {
+          "ruta": "/mali@d00c0000",
+          "propiedad": "reg",
+          "valor": "hex:d00c000000040000c110444000001000c810000000001000c883c00000001000c110444000001000"
+        },
+        {
+          "ruta": "/cpus",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/timer",
+          "propiedad": "compatible",
+          "valor": "arm,armv7-timer"
+        },
+        {
+          "ruta": "/timer_bc",
+          "propiedad": "compatible",
+          "valor": "arm, meson-bc-timer"
+        },
+        {
+          "ruta": "/timer_bc",
+          "propiedad": "reg",
+          "valor": "hex:c110999000000004c110999400000004"
+        },
+        {
+          "ruta": "/xtal-clk",
+          "propiedad": "compatible",
+          "valor": "fixed-clock"
+        },
+        {
+          "ruta": "/arm_pmu",
+          "propiedad": "compatible",
+          "valor": "arm,cortex-a15-pmu"
+        },
+        {
+          "ruta": "/pm",
+          "propiedad": "compatible",
+          "valor": "amlogic, pm"
+        },
+        {
+          "ruta": "/pm",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/pm",
+          "propiedad": "debug_reg",
+          "valor": "hex:c81000a8"
+        },
+        {
+          "ruta": "/pm",
+          "propiedad": "exit_reg",
+          "valor": "hex:c810023c"
+        },
+        {
+          "ruta": "/interrupt-controller@2c001000",
+          "propiedad": "compatible",
+          "valor": "arm,cortex-a15-gic\u0000arm,cortex-a9-gic"
+        },
+        {
+          "ruta": "/interrupt-controller@2c001000",
+          "propiedad": "#address-cells",
+          "valor": ""
+        },
+        {
+          "ruta": "/interrupt-controller@2c001000",
+          "propiedad": "reg",
+          "valor": "hex:c430100000001000c430200000000100"
+        },
+        {
+          "ruta": "/psci",
+          "propiedad": "compatible",
+          "valor": "arm,psci-0.2"
+        },
+        {
+          "ruta": "/secmon",
+          "propiedad": "compatible",
+          "valor": "amlogic, secmon"
+        },
+        {
+          "ruta": "/secmon",
+          "propiedad": "memory-region",
+          "valor": "hex:0000000e"
+        },
+        {
+          "ruta": "/securitykey",
+          "propiedad": "compatible",
+          "valor": "aml, securitykey"
+        },
+        {
+          "ruta": "/securitykey",
+          "propiedad": "storage_status",
+          "valor": "hex:82000065"
+        },
+        {
+          "ruta": "/cpu_iomap",
+          "propiedad": "compatible",
+          "valor": "amlogic, iomap"
+        },
+        {
+          "ruta": "/cpu_iomap",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/mhu@c883c400",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson_mhu"
+        },
+        {
+          "ruta": "/mhu@c883c400",
+          "propiedad": "reg",
+          "valor": "hex:c883c4000000004cc801300000000800"
+        },
+        {
+          "ruta": "/scpi_clocks",
+          "propiedad": "compatible",
+          "valor": "arm, scpi-clks"
+        },
+        {
+          "ruta": "/watchdog@0xffd0f0d0",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-wdt"
+        },
+        {
+          "ruta": "/watchdog@0xffd0f0d0",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/watchdog@0xffd0f0d0",
+          "propiedad": "reg",
+          "valor": "hex:c11098d000000010"
+        },
+        {
+          "ruta": "/jtag",
+          "propiedad": "compatible",
+          "valor": "amlogic, jtag"
+        },
+        {
+          "ruta": "/jtag",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/spicc",
+          "propiedad": "compatible",
+          "valor": "amlogic, spicc"
+        },
+        {
+          "ruta": "/spicc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/spicc",
+          "propiedad": "reg",
+          "valor": "hex:c1108d800000003c"
+        },
+        {
+          "ruta": "/spifc@c1108c80",
+          "propiedad": "compatible",
+          "valor": "amlogic,aml-spi-nor"
+        },
+        {
+          "ruta": "/spifc@c1108c80",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/spifc@c1108c80",
+          "propiedad": "reg",
+          "valor": "hex:c1108c8000000080"
+        },
+        {
+          "ruta": "/cpu_info",
+          "propiedad": "compatible",
+          "valor": "amlogic, cpuinfo"
+        },
+        {
+          "ruta": "/cpu_info",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/pinctrl@14",
+          "propiedad": "compatible",
+          "valor": "amlogic,meson-gxlx-aobus-pinctrl"
+        },
+        {
+          "ruta": "/pinctrl@14",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/pinctrl@4b0",
+          "propiedad": "compatible",
+          "valor": "amlogic,meson-gxlx-periphs-pinctrl"
+        },
+        {
+          "ruta": "/pinctrl@4b0",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/soc",
+          "propiedad": "compatible",
+          "valor": "simple-bus"
+        },
+        {
+          "ruta": "/soc",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/vdac",
+          "propiedad": "compatible",
+          "valor": "amlogic, vdac-gxlx"
+        },
+        {
+          "ruta": "/vdac",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/defendkey",
+          "propiedad": "compatible",
+          "valor": "amlogic, defendkey"
+        },
+        {
+          "ruta": "/defendkey",
+          "propiedad": "reg",
+          "valor": "hex:c883450000000004"
+        },
+        {
+          "ruta": "/defendkey",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/audio_data",
+          "propiedad": "compatible",
+          "valor": "amlogic, audio_data"
+        },
+        {
+          "ruta": "/audio_data",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/saradc",
+          "propiedad": "compatible",
+          "valor": "amlogic,meson-gxl-saradc"
+        },
+        {
+          "ruta": "/saradc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/saradc",
+          "propiedad": "reg",
+          "valor": "hex:00000000c11086800000000000000038"
+        },
+        {
+          "ruta": "/efuse",
+          "propiedad": "compatible",
+          "valor": "amlogic, efuse"
+        },
+        {
+          "ruta": "/efuse",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/rc@c8100580",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_remote"
+        },
+        {
+          "ruta": "/rc@c8100580",
+          "propiedad": "reg",
+          "valor": "hex:c810058000000044c810048000000020"
+        },
+        {
+          "ruta": "/rc@c8100580",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson-amvideom",
+          "propiedad": "compatible",
+          "valor": "amlogic, amvideom"
+        },
+        {
+          "ruta": "/meson-amvideom",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aml_reboot",
+          "propiedad": "compatible",
+          "valor": "aml, reboot"
+        },
+        {
+          "ruta": "/ddr_bandwidth",
+          "propiedad": "compatible",
+          "valor": "amlogic, ddr-bandwidth"
+        },
+        {
+          "ruta": "/ddr_bandwidth",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/ddr_bandwidth",
+          "propiedad": "reg",
+          "valor": "hex:c883800000000100c883700000000100"
+        },
+        {
+          "ruta": "/dmc_monitor",
+          "propiedad": "compatible",
+          "valor": "amlogic, dmc_monitor"
+        },
+        {
+          "ruta": "/dmc_monitor",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/dmc_monitor",
+          "propiedad": "reg_base",
+          "valor": "hex:da838400"
+        },
+        {
+          "ruta": "/ion_dev",
+          "propiedad": "compatible",
+          "valor": "amlogic, ion_dev"
+        },
+        {
+          "ruta": "/ion_dev",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u00008"
+        },
+        {
+          "ruta": "/memory@00000000",
+          "propiedad": "linux,usable-memory",
+          "valor": "hex:001000007ff00000"
+        },
+        {
+          "ruta": "/reserved-memory",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/reserved-memory/ramoops@0x07400000",
+          "propiedad": "compatible",
+          "valor": "ramoops"
+        },
+        {
+          "ruta": "/reserved-memory/ramoops@0x07400000",
+          "propiedad": "reg",
+          "valor": "hex:0740000000100000"
+        },
+        {
+          "ruta": "/reserved-memory/linux,secmon",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,secos",
+          "propiedad": "status",
+          "valor": "disable"
+        },
+        {
+          "ruta": "/reserved-memory/linux,secos",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_secos_memory"
+        },
+        {
+          "ruta": "/reserved-memory/linux,secos",
+          "propiedad": "reg",
+          "valor": "hex:0530000002000000"
+        },
+        {
+          "ruta": "/reserved-memory/linux,meson-fb",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,di_cma",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,ion-dev",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,ppmgr",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,codec_mm_cma",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,codec_mm_cma",
+          "propiedad": "linux,contiguous-region",
+          "valor": ""
+        },
+        {
+          "ruta": "/reserved-memory/linux,picdec",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,picdec",
+          "propiedad": "linux,contiguous-region",
+          "valor": ""
+        },
+        {
+          "ruta": "/reserved-memory/linux,codec_mm_reserved",
+          "propiedad": "compatible",
+          "valor": "amlogic, codec-mm-reserved"
+        },
+        {
+          "ruta": "/reserved-memory/linux,vdin1_cma",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/gpioleds",
+          "propiedad": "compatible",
+          "valor": "gpio-leds"
+        },
+        {
+          "ruta": "/gpioleds",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/vout",
+          "propiedad": "compatible",
+          "valor": "amlogic, vout"
+        },
+        {
+          "ruta": "/vout",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/cvbsout",
+          "propiedad": "compatible",
+          "valor": "amlogic, cvbsout-gxlx"
+        },
+        {
+          "ruta": "/cvbsout",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson-fb",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-gxl"
+        },
+        {
+          "ruta": "/meson-fb",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000:"
+        },
+        {
+          "ruta": "/meson-fb",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson-fb",
+          "propiedad": "logo_addr",
+          "valor": "0x7f800000"
+        },
+        {
+          "ruta": "/ge2d",
+          "propiedad": "compatible",
+          "valor": "amlogic, ge2d-gxl"
+        },
+        {
+          "ruta": "/ge2d",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/codec_io",
+          "propiedad": "compatible",
+          "valor": "amlogic, codec_io"
+        },
+        {
+          "ruta": "/codec_io",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/codec_mm",
+          "propiedad": "compatible",
+          "valor": "amlogic, codec, mm"
+        },
+        {
+          "ruta": "/codec_mm",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000;\u0000\u0000\u0000<"
+        },
+        {
+          "ruta": "/codec_mm",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/canvas",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson, canvas"
+        },
+        {
+          "ruta": "/canvas",
+          "propiedad": "status",
+          "valor": "ok"
+        },
+        {
+          "ruta": "/canvas",
+          "propiedad": "reg",
+          "valor": "hex:c883800000000400"
+        },
+        {
+          "ruta": "/mesonstream",
+          "propiedad": "compatible",
+          "valor": "amlogic, codec, streambuf"
+        },
+        {
+          "ruta": "/mesonstream",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/vdec",
+          "propiedad": "compatible",
+          "valor": "amlogic, vdec"
+        },
+        {
+          "ruta": "/vdec",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/picdec",
+          "propiedad": "compatible",
+          "valor": "amlogic, picdec"
+        },
+        {
+          "ruta": "/picdec",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000="
+        },
+        {
+          "ruta": "/picdec",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/ppmgr",
+          "propiedad": "compatible",
+          "valor": "amlogic, ppmgr"
+        },
+        {
+          "ruta": "/ppmgr",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000>"
+        },
+        {
+          "ruta": "/ppmgr",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/deinterlace",
+          "propiedad": "compatible",
+          "valor": "amlogic, deinterlace"
+        },
+        {
+          "ruta": "/deinterlace",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/deinterlace",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000?"
+        },
+        {
+          "ruta": "/tunnel_sync",
+          "propiedad": "compatible",
+          "valor": "amlogic, tunnel_sync"
+        },
+        {
+          "ruta": "/tunnel_sync",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/ionvideo",
+          "propiedad": "compatible",
+          "valor": "amlogic, ionvideo"
+        },
+        {
+          "ruta": "/ionvideo",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/amlvideo2_0",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlvideo2"
+        },
+        {
+          "ruta": "/amlvideo2_0",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/amlvideo2_1",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlvideo2"
+        },
+        {
+          "ruta": "/amlvideo2_1",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/amlvideo",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlvideo"
+        },
+        {
+          "ruta": "/amlvideo",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson_uvm",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson_uvm"
+        },
+        {
+          "ruta": "/meson_uvm",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson_videotunnel",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson_videotunnel"
+        },
+        {
+          "ruta": "/meson_videotunnel",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/video_composer",
+          "propiedad": "compatible",
+          "valor": "amlogic, video_composer"
+        },
+        {
+          "ruta": "/video_composer",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/dvb",
+          "propiedad": "compatible",
+          "valor": "amlogic, dvb"
+        },
+        {
+          "ruta": "/dvb",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/vdin0",
+          "propiedad": "compatible",
+          "valor": "amlogic, vdin"
+        },
+        {
+          "ruta": "/vdin0",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/vdin1",
+          "propiedad": "compatible",
+          "valor": "amlogic, vdin"
+        },
+        {
+          "ruta": "/vdin1",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000@"
+        },
+        {
+          "ruta": "/vdin1",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/amlvecm",
+          "propiedad": "compatible",
+          "valor": "amlogic, vecm"
+        },
+        {
+          "ruta": "/amlvecm",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/amvenc_avc",
+          "propiedad": "compatible",
+          "valor": "amlogic, amvenc_avc"
+        },
+        {
+          "ruta": "/amvenc_avc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/hevc_enc",
+          "propiedad": "compatible",
+          "valor": "cnm, HevcEnc"
+        },
+        {
+          "ruta": "/hevc_enc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/hevc_enc",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/vpu",
+          "propiedad": "compatible",
+          "valor": "amlogic, vpu-gxl"
+        },
+        {
+          "ruta": "/vpu",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/rdma",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson, rdma"
+        },
+        {
+          "ruta": "/rdma",
+          "propiedad": "status",
+          "valor": "ok"
+        },
+        {
+          "ruta": "/rtc",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_vrtc"
+        },
+        {
+          "ruta": "/rtc",
+          "propiedad": "alarm_reg_addr",
+          "valor": "hex:c81000a8"
+        },
+        {
+          "ruta": "/rtc",
+          "propiedad": "timer_e_addr",
+          "valor": "hex:c1109988"
+        },
+        {
+          "ruta": "/rtc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/bt-dev",
+          "propiedad": "compatible",
+          "valor": "amlogic, bt-dev"
+        },
+        {
+          "ruta": "/bt-dev",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/wifi",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_wifi"
+        },
+        {
+          "ruta": "/wifi",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/emmc@d0074000",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/emmc@d0074000",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-mmc-gxlx"
+        },
+        {
+          "ruta": "/emmc@d0074000",
+          "propiedad": "reg",
+          "valor": "hex:d007400000002000"
+        },
+        {
+          "ruta": "/sd@d0072000",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/sd@d0072000",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-mmc-gxlx"
+        },
+        {
+          "ruta": "/sd@d0072000",
+          "propiedad": "reg",
+          "valor": "hex:d007200000002000"
+        },
+        {
+          "ruta": "/sdio@d0070000",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/sdio@d0070000",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-mmc-gxlx"
+        },
+        {
+          "ruta": "/sdio@d0070000",
+          "propiedad": "reg",
+          "valor": "hex:d007000000002000"
+        },
+        {
+          "ruta": "/mtd_nand",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_mtd_nand"
+        },
+        {
+          "ruta": "/mtd_nand",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/mtd_nand",
+          "propiedad": "reg",
+          "valor": "hex:d007480000000200"
+        },
+        {
+          "ruta": "/ethernet@0xc9410000",
+          "propiedad": "compatible",
+          "valor": "amlogic, gxbb-eth-dwmac"
+        },
+        {
+          "ruta": "/ethernet@0xc9410000",
+          "propiedad": "reg",
+          "valor": "hex:c941000000010000c883454000000008c88345580000000cc110440800000004"
+        },
+        {
+          "ruta": "/dwc3@c9000000",
+          "propiedad": "compatible",
+          "valor": "synopsys, dwc3"
+        },
+        {
+          "ruta": "/dwc3@c9000000",
+          "propiedad": "reg",
+          "valor": "hex:c900000000100000"
+        },
+        {
+          "ruta": "/usb2phy@d0078000",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlogic-new-usb2"
+        },
+        {
+          "ruta": "/usb2phy@d0078000",
+          "propiedad": "reg",
+          "valor": "hex:d007800000000080c110440800000004"
+        },
+        {
+          "ruta": "/usb3phy@d0078080",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlogic-new-usb3"
+        },
+        {
+          "ruta": "/usb3phy@d0078080",
+          "propiedad": "reg",
+          "valor": "hex:d007808000000020"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "compatible",
+          "valor": "amlogic, dwc2"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "reg",
+          "valor": "hex:c910000000040000"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "phy-reg",
+          "valor": "hex:d0078000"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "phy-reg-size",
+          "valor": "hex:000000a0"
+        },
+        {
+          "ruta": "/unifykey",
+          "propiedad": "compatible",
+          "valor": "amlogic, unifykey"
+        },
+        {
+          "ruta": "/unifykey",
+          "propiedad": "status",
+          "valor": "ok"
+        },
+        {
+          "ruta": "/amhdmitx",
+          "propiedad": "compatible",
+          "valor": "amlogic, amhdmitx"
+        },
+        {
+          "ruta": "/amhdmitx",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aocec",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlogic-aocec"
+        },
+        {
+          "ruta": "/aocec",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aocec",
+          "propiedad": "reg",
+          "valor": "hex:c810023c00000004c810000000000200"
+        },
+        {
+          "ruta": "/aocec",
+          "propiedad": "reg-names",
+          "valor": "ao_exit\u0000ao"
+        },
+        {
+          "ruta": "/I2S",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-i2s-dai"
+        },
+        {
+          "ruta": "/snd_dmic",
+          "propiedad": "compatible",
+          "valor": "aml, aml_snd_dmic"
+        },
+        {
+          "ruta": "/snd_dmic",
+          "propiedad": "reg",
+          "valor": "hex:d004200000002000"
+        },
+        {
+          "ruta": "/snd_dmic",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/SPDIF",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-spdif-dai"
+        },
+        {
+          "ruta": "/PCM",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-pcm-dai"
+        },
+        {
+          "ruta": "/i2s_platform",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-i2s"
+        },
+        {
+          "ruta": "/pcm_platform",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-pcm"
+        },
+        {
+          "ruta": "/spdif_codec",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-spdif-codec"
+        },
+        {
+          "ruta": "/pcm_codec",
+          "propiedad": "compatible",
+          "valor": "amlogic, pcm2BT-codec"
+        },
+        {
+          "ruta": "/dummy",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_dummy_codec"
+        },
+        {
+          "ruta": "/dummy",
+          "propiedad": "status",
+          "valor": "disable"
+        },
+        {
+          "ruta": "/t9015",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_codec_T9015"
+        },
+        {
+          "ruta": "/t9015",
+          "propiedad": "reg",
+          "valor": "hex:c883200000000014"
+        },
+        {
+          "ruta": "/t9015",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aml_sound_meson",
+          "propiedad": "compatible",
+          "valor": "aml, meson-snd-card"
+        },
+        {
+          "ruta": "/aml_sound_meson",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aml-sensor@0",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-thermal"
+        },
+        {
+          "ruta": "/aml-sensor@0",
+          "propiedad": "status",
+          "valor": "okay"
+        }
+      ]
+    },
+    {
+      "item": "_aml_dtb",
+      "offset": 299008,
+      "bytes": 58548,
+      "version": 17,
+      "propiedades": [
+        {
+          "ruta": "/",
+          "propiedad": "model",
+          "valor": "Amlogic"
+        },
+        {
+          "ruta": "/",
+          "propiedad": "amlogic-dt-id",
+          "valor": "gxlx2_p295_3g"
+        },
+        {
+          "ruta": "/",
+          "propiedad": "compatible",
+          "valor": "amlogic, Gxl"
+        },
+        {
+          "ruta": "/",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/mali@d00c0000",
+          "propiedad": "compatible",
+          "valor": "arm,mali-450"
+        },
+        {
+          "ruta": "/mali@d00c0000",
+          "propiedad": "reg",
+          "valor": "hex:d00c000000040000c110444000001000c810000000001000c883c00000001000c110444000001000"
+        },
+        {
+          "ruta": "/cpus",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/timer",
+          "propiedad": "compatible",
+          "valor": "arm,armv7-timer"
+        },
+        {
+          "ruta": "/timer_bc",
+          "propiedad": "compatible",
+          "valor": "arm, meson-bc-timer"
+        },
+        {
+          "ruta": "/timer_bc",
+          "propiedad": "reg",
+          "valor": "hex:c110999000000004c110999400000004"
+        },
+        {
+          "ruta": "/xtal-clk",
+          "propiedad": "compatible",
+          "valor": "fixed-clock"
+        },
+        {
+          "ruta": "/arm_pmu",
+          "propiedad": "compatible",
+          "valor": "arm,cortex-a15-pmu"
+        },
+        {
+          "ruta": "/pm",
+          "propiedad": "compatible",
+          "valor": "amlogic, pm"
+        },
+        {
+          "ruta": "/pm",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/pm",
+          "propiedad": "debug_reg",
+          "valor": "hex:c81000a8"
+        },
+        {
+          "ruta": "/pm",
+          "propiedad": "exit_reg",
+          "valor": "hex:c810023c"
+        },
+        {
+          "ruta": "/interrupt-controller@2c001000",
+          "propiedad": "compatible",
+          "valor": "arm,cortex-a15-gic\u0000arm,cortex-a9-gic"
+        },
+        {
+          "ruta": "/interrupt-controller@2c001000",
+          "propiedad": "#address-cells",
+          "valor": ""
+        },
+        {
+          "ruta": "/interrupt-controller@2c001000",
+          "propiedad": "reg",
+          "valor": "hex:c430100000001000c430200000000100"
+        },
+        {
+          "ruta": "/psci",
+          "propiedad": "compatible",
+          "valor": "arm,psci-0.2"
+        },
+        {
+          "ruta": "/secmon",
+          "propiedad": "compatible",
+          "valor": "amlogic, secmon"
+        },
+        {
+          "ruta": "/secmon",
+          "propiedad": "memory-region",
+          "valor": "hex:0000000e"
+        },
+        {
+          "ruta": "/securitykey",
+          "propiedad": "compatible",
+          "valor": "aml, securitykey"
+        },
+        {
+          "ruta": "/securitykey",
+          "propiedad": "storage_status",
+          "valor": "hex:82000065"
+        },
+        {
+          "ruta": "/cpu_iomap",
+          "propiedad": "compatible",
+          "valor": "amlogic, iomap"
+        },
+        {
+          "ruta": "/cpu_iomap",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/mhu@c883c400",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson_mhu"
+        },
+        {
+          "ruta": "/mhu@c883c400",
+          "propiedad": "reg",
+          "valor": "hex:c883c4000000004cc801300000000800"
+        },
+        {
+          "ruta": "/scpi_clocks",
+          "propiedad": "compatible",
+          "valor": "arm, scpi-clks"
+        },
+        {
+          "ruta": "/watchdog@0xffd0f0d0",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-wdt"
+        },
+        {
+          "ruta": "/watchdog@0xffd0f0d0",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/watchdog@0xffd0f0d0",
+          "propiedad": "reg",
+          "valor": "hex:c11098d000000010"
+        },
+        {
+          "ruta": "/jtag",
+          "propiedad": "compatible",
+          "valor": "amlogic, jtag"
+        },
+        {
+          "ruta": "/jtag",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/spicc",
+          "propiedad": "compatible",
+          "valor": "amlogic, spicc"
+        },
+        {
+          "ruta": "/spicc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/spicc",
+          "propiedad": "reg",
+          "valor": "hex:c1108d800000003c"
+        },
+        {
+          "ruta": "/spifc@c1108c80",
+          "propiedad": "compatible",
+          "valor": "amlogic,aml-spi-nor"
+        },
+        {
+          "ruta": "/spifc@c1108c80",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/spifc@c1108c80",
+          "propiedad": "reg",
+          "valor": "hex:c1108c8000000080"
+        },
+        {
+          "ruta": "/cpu_info",
+          "propiedad": "compatible",
+          "valor": "amlogic, cpuinfo"
+        },
+        {
+          "ruta": "/cpu_info",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/pinctrl@14",
+          "propiedad": "compatible",
+          "valor": "amlogic,meson-gxlx-aobus-pinctrl"
+        },
+        {
+          "ruta": "/pinctrl@14",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/pinctrl@4b0",
+          "propiedad": "compatible",
+          "valor": "amlogic,meson-gxlx-periphs-pinctrl"
+        },
+        {
+          "ruta": "/pinctrl@4b0",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/soc",
+          "propiedad": "compatible",
+          "valor": "simple-bus"
+        },
+        {
+          "ruta": "/soc",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/vdac",
+          "propiedad": "compatible",
+          "valor": "amlogic, vdac-gxlx"
+        },
+        {
+          "ruta": "/vdac",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/defendkey",
+          "propiedad": "compatible",
+          "valor": "amlogic, defendkey"
+        },
+        {
+          "ruta": "/defendkey",
+          "propiedad": "reg",
+          "valor": "hex:c883450000000004"
+        },
+        {
+          "ruta": "/defendkey",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/audio_data",
+          "propiedad": "compatible",
+          "valor": "amlogic, audio_data"
+        },
+        {
+          "ruta": "/audio_data",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/saradc",
+          "propiedad": "compatible",
+          "valor": "amlogic,meson-gxl-saradc"
+        },
+        {
+          "ruta": "/saradc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/saradc",
+          "propiedad": "reg",
+          "valor": "hex:00000000c11086800000000000000038"
+        },
+        {
+          "ruta": "/efuse",
+          "propiedad": "compatible",
+          "valor": "amlogic, efuse"
+        },
+        {
+          "ruta": "/efuse",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/rc@c8100580",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_remote"
+        },
+        {
+          "ruta": "/rc@c8100580",
+          "propiedad": "reg",
+          "valor": "hex:c810058000000044c810048000000020"
+        },
+        {
+          "ruta": "/rc@c8100580",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson-amvideom",
+          "propiedad": "compatible",
+          "valor": "amlogic, amvideom"
+        },
+        {
+          "ruta": "/meson-amvideom",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aml_reboot",
+          "propiedad": "compatible",
+          "valor": "aml, reboot"
+        },
+        {
+          "ruta": "/ddr_bandwidth",
+          "propiedad": "compatible",
+          "valor": "amlogic, ddr-bandwidth"
+        },
+        {
+          "ruta": "/ddr_bandwidth",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/ddr_bandwidth",
+          "propiedad": "reg",
+          "valor": "hex:c883800000000100c883700000000100"
+        },
+        {
+          "ruta": "/dmc_monitor",
+          "propiedad": "compatible",
+          "valor": "amlogic, dmc_monitor"
+        },
+        {
+          "ruta": "/dmc_monitor",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/dmc_monitor",
+          "propiedad": "reg_base",
+          "valor": "hex:da838400"
+        },
+        {
+          "ruta": "/ion_dev",
+          "propiedad": "compatible",
+          "valor": "amlogic, ion_dev"
+        },
+        {
+          "ruta": "/ion_dev",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u00008"
+        },
+        {
+          "ruta": "/memory@00000000",
+          "propiedad": "linux,usable-memory",
+          "valor": "hex:00100000bff00000"
+        },
+        {
+          "ruta": "/reserved-memory",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/reserved-memory/ramoops@0x07400000",
+          "propiedad": "compatible",
+          "valor": "ramoops"
+        },
+        {
+          "ruta": "/reserved-memory/ramoops@0x07400000",
+          "propiedad": "reg",
+          "valor": "hex:0740000000100000"
+        },
+        {
+          "ruta": "/reserved-memory/linux,secmon",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,secos",
+          "propiedad": "status",
+          "valor": "disable"
+        },
+        {
+          "ruta": "/reserved-memory/linux,secos",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_secos_memory"
+        },
+        {
+          "ruta": "/reserved-memory/linux,secos",
+          "propiedad": "reg",
+          "valor": "hex:0530000002000000"
+        },
+        {
+          "ruta": "/reserved-memory/linux,meson-fb",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,di_cma",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,ion-dev",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,ppmgr",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,codec_mm_cma",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,codec_mm_cma",
+          "propiedad": "linux,contiguous-region",
+          "valor": ""
+        },
+        {
+          "ruta": "/reserved-memory/linux,picdec",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/reserved-memory/linux,picdec",
+          "propiedad": "linux,contiguous-region",
+          "valor": ""
+        },
+        {
+          "ruta": "/reserved-memory/linux,codec_mm_reserved",
+          "propiedad": "compatible",
+          "valor": "amlogic, codec-mm-reserved"
+        },
+        {
+          "ruta": "/reserved-memory/linux,vdin1_cma",
+          "propiedad": "compatible",
+          "valor": "shared-dma-pool"
+        },
+        {
+          "ruta": "/gpioleds",
+          "propiedad": "compatible",
+          "valor": "gpio-leds"
+        },
+        {
+          "ruta": "/gpioleds",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/vout",
+          "propiedad": "compatible",
+          "valor": "amlogic, vout"
+        },
+        {
+          "ruta": "/vout",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/cvbsout",
+          "propiedad": "compatible",
+          "valor": "amlogic, cvbsout-gxlx"
+        },
+        {
+          "ruta": "/cvbsout",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson-fb",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-gxl"
+        },
+        {
+          "ruta": "/meson-fb",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000:"
+        },
+        {
+          "ruta": "/meson-fb",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson-fb",
+          "propiedad": "logo_addr",
+          "valor": "0x7f800000"
+        },
+        {
+          "ruta": "/ge2d",
+          "propiedad": "compatible",
+          "valor": "amlogic, ge2d-gxl"
+        },
+        {
+          "ruta": "/ge2d",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/codec_io",
+          "propiedad": "compatible",
+          "valor": "amlogic, codec_io"
+        },
+        {
+          "ruta": "/codec_io",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/codec_mm",
+          "propiedad": "compatible",
+          "valor": "amlogic, codec, mm"
+        },
+        {
+          "ruta": "/codec_mm",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000;\u0000\u0000\u0000<"
+        },
+        {
+          "ruta": "/codec_mm",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/canvas",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson, canvas"
+        },
+        {
+          "ruta": "/canvas",
+          "propiedad": "status",
+          "valor": "ok"
+        },
+        {
+          "ruta": "/canvas",
+          "propiedad": "reg",
+          "valor": "hex:c883800000000400"
+        },
+        {
+          "ruta": "/mesonstream",
+          "propiedad": "compatible",
+          "valor": "amlogic, codec, streambuf"
+        },
+        {
+          "ruta": "/mesonstream",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/vdec",
+          "propiedad": "compatible",
+          "valor": "amlogic, vdec"
+        },
+        {
+          "ruta": "/vdec",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/picdec",
+          "propiedad": "compatible",
+          "valor": "amlogic, picdec"
+        },
+        {
+          "ruta": "/picdec",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000="
+        },
+        {
+          "ruta": "/picdec",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/ppmgr",
+          "propiedad": "compatible",
+          "valor": "amlogic, ppmgr"
+        },
+        {
+          "ruta": "/ppmgr",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000>"
+        },
+        {
+          "ruta": "/ppmgr",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/deinterlace",
+          "propiedad": "compatible",
+          "valor": "amlogic, deinterlace"
+        },
+        {
+          "ruta": "/deinterlace",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/deinterlace",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000?"
+        },
+        {
+          "ruta": "/tunnel_sync",
+          "propiedad": "compatible",
+          "valor": "amlogic, tunnel_sync"
+        },
+        {
+          "ruta": "/tunnel_sync",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/ionvideo",
+          "propiedad": "compatible",
+          "valor": "amlogic, ionvideo"
+        },
+        {
+          "ruta": "/ionvideo",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/amlvideo2_0",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlvideo2"
+        },
+        {
+          "ruta": "/amlvideo2_0",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/amlvideo2_1",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlvideo2"
+        },
+        {
+          "ruta": "/amlvideo2_1",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/amlvideo",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlvideo"
+        },
+        {
+          "ruta": "/amlvideo",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson_uvm",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson_uvm"
+        },
+        {
+          "ruta": "/meson_uvm",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/meson_videotunnel",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson_videotunnel"
+        },
+        {
+          "ruta": "/meson_videotunnel",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/video_composer",
+          "propiedad": "compatible",
+          "valor": "amlogic, video_composer"
+        },
+        {
+          "ruta": "/video_composer",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/dvb",
+          "propiedad": "compatible",
+          "valor": "amlogic, dvb"
+        },
+        {
+          "ruta": "/dvb",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/vdin0",
+          "propiedad": "compatible",
+          "valor": "amlogic, vdin"
+        },
+        {
+          "ruta": "/vdin0",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/vdin1",
+          "propiedad": "compatible",
+          "valor": "amlogic, vdin"
+        },
+        {
+          "ruta": "/vdin1",
+          "propiedad": "memory-region",
+          "valor": "\u0000\u0000\u0000@"
+        },
+        {
+          "ruta": "/vdin1",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/amlvecm",
+          "propiedad": "compatible",
+          "valor": "amlogic, vecm"
+        },
+        {
+          "ruta": "/amlvecm",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/amvenc_avc",
+          "propiedad": "compatible",
+          "valor": "amlogic, amvenc_avc"
+        },
+        {
+          "ruta": "/amvenc_avc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/hevc_enc",
+          "propiedad": "compatible",
+          "valor": "cnm, HevcEnc"
+        },
+        {
+          "ruta": "/hevc_enc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/hevc_enc",
+          "propiedad": "#address-cells",
+          "valor": "hex:00000001"
+        },
+        {
+          "ruta": "/vpu",
+          "propiedad": "compatible",
+          "valor": "amlogic, vpu-gxl"
+        },
+        {
+          "ruta": "/vpu",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/rdma",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson, rdma"
+        },
+        {
+          "ruta": "/rdma",
+          "propiedad": "status",
+          "valor": "ok"
+        },
+        {
+          "ruta": "/rtc",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_vrtc"
+        },
+        {
+          "ruta": "/rtc",
+          "propiedad": "alarm_reg_addr",
+          "valor": "hex:c81000a8"
+        },
+        {
+          "ruta": "/rtc",
+          "propiedad": "timer_e_addr",
+          "valor": "hex:c1109988"
+        },
+        {
+          "ruta": "/rtc",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/bt-dev",
+          "propiedad": "compatible",
+          "valor": "amlogic, bt-dev"
+        },
+        {
+          "ruta": "/bt-dev",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/wifi",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_wifi"
+        },
+        {
+          "ruta": "/wifi",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/emmc@d0074000",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/emmc@d0074000",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-mmc-gxlx"
+        },
+        {
+          "ruta": "/emmc@d0074000",
+          "propiedad": "reg",
+          "valor": "hex:d007400000002000"
+        },
+        {
+          "ruta": "/sd@d0072000",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/sd@d0072000",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-mmc-gxlx"
+        },
+        {
+          "ruta": "/sd@d0072000",
+          "propiedad": "reg",
+          "valor": "hex:d007200000002000"
+        },
+        {
+          "ruta": "/sdio@d0070000",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/sdio@d0070000",
+          "propiedad": "compatible",
+          "valor": "amlogic, meson-mmc-gxlx"
+        },
+        {
+          "ruta": "/sdio@d0070000",
+          "propiedad": "reg",
+          "valor": "hex:d007000000002000"
+        },
+        {
+          "ruta": "/mtd_nand",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_mtd_nand"
+        },
+        {
+          "ruta": "/mtd_nand",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/mtd_nand",
+          "propiedad": "reg",
+          "valor": "hex:d007480000000200"
+        },
+        {
+          "ruta": "/ethernet@0xc9410000",
+          "propiedad": "compatible",
+          "valor": "amlogic, gxbb-eth-dwmac"
+        },
+        {
+          "ruta": "/ethernet@0xc9410000",
+          "propiedad": "reg",
+          "valor": "hex:c941000000010000c883454000000008c88345580000000cc110440800000004"
+        },
+        {
+          "ruta": "/dwc3@c9000000",
+          "propiedad": "compatible",
+          "valor": "synopsys, dwc3"
+        },
+        {
+          "ruta": "/dwc3@c9000000",
+          "propiedad": "reg",
+          "valor": "hex:c900000000100000"
+        },
+        {
+          "ruta": "/usb2phy@d0078000",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlogic-new-usb2"
+        },
+        {
+          "ruta": "/usb2phy@d0078000",
+          "propiedad": "reg",
+          "valor": "hex:d007800000000080c110440800000004"
+        },
+        {
+          "ruta": "/usb3phy@d0078080",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlogic-new-usb3"
+        },
+        {
+          "ruta": "/usb3phy@d0078080",
+          "propiedad": "reg",
+          "valor": "hex:d007808000000020"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "compatible",
+          "valor": "amlogic, dwc2"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "reg",
+          "valor": "hex:c910000000040000"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "phy-reg",
+          "valor": "hex:d0078000"
+        },
+        {
+          "ruta": "/dwc2_a",
+          "propiedad": "phy-reg-size",
+          "valor": "hex:000000a0"
+        },
+        {
+          "ruta": "/unifykey",
+          "propiedad": "compatible",
+          "valor": "amlogic, unifykey"
+        },
+        {
+          "ruta": "/unifykey",
+          "propiedad": "status",
+          "valor": "ok"
+        },
+        {
+          "ruta": "/amhdmitx",
+          "propiedad": "compatible",
+          "valor": "amlogic, amhdmitx"
+        },
+        {
+          "ruta": "/amhdmitx",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aocec",
+          "propiedad": "compatible",
+          "valor": "amlogic, amlogic-aocec"
+        },
+        {
+          "ruta": "/aocec",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aocec",
+          "propiedad": "reg",
+          "valor": "hex:c810023c00000004c810000000000200"
+        },
+        {
+          "ruta": "/aocec",
+          "propiedad": "reg-names",
+          "valor": "ao_exit\u0000ao"
+        },
+        {
+          "ruta": "/I2S",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-i2s-dai"
+        },
+        {
+          "ruta": "/snd_dmic",
+          "propiedad": "compatible",
+          "valor": "aml, aml_snd_dmic"
+        },
+        {
+          "ruta": "/snd_dmic",
+          "propiedad": "reg",
+          "valor": "hex:d004200000002000"
+        },
+        {
+          "ruta": "/snd_dmic",
+          "propiedad": "status",
+          "valor": "disabled"
+        },
+        {
+          "ruta": "/SPDIF",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-spdif-dai"
+        },
+        {
+          "ruta": "/PCM",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-pcm-dai"
+        },
+        {
+          "ruta": "/i2s_platform",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-i2s"
+        },
+        {
+          "ruta": "/pcm_platform",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-pcm"
+        },
+        {
+          "ruta": "/spdif_codec",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-spdif-codec"
+        },
+        {
+          "ruta": "/pcm_codec",
+          "propiedad": "compatible",
+          "valor": "amlogic, pcm2BT-codec"
+        },
+        {
+          "ruta": "/dummy",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_dummy_codec"
+        },
+        {
+          "ruta": "/dummy",
+          "propiedad": "status",
+          "valor": "disable"
+        },
+        {
+          "ruta": "/t9015",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml_codec_T9015"
+        },
+        {
+          "ruta": "/t9015",
+          "propiedad": "reg",
+          "valor": "hex:c883200000000014"
+        },
+        {
+          "ruta": "/t9015",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aml_sound_meson",
+          "propiedad": "compatible",
+          "valor": "aml, meson-snd-card"
+        },
+        {
+          "ruta": "/aml_sound_meson",
+          "propiedad": "status",
+          "valor": "okay"
+        },
+        {
+          "ruta": "/aml-sensor@0",
+          "propiedad": "compatible",
+          "valor": "amlogic, aml-thermal"
+        },
+        {
+          "ruta": "/aml-sensor@0",
+          "propiedad": "status",
+          "valor": "okay"
+        }
+      ]
+    },
+    {
+      "item": "dtbo",
+      "offset": 64,
+      "bytes": 374,
+      "version": 17,
+      "propiedades": []
+    }
+  ],
+  "limites": [
+    "La coincidencia del DTB no acredita compatibilidad de placa, RAM, bootloader ni todos los perifericos.",
+    "Las propiedades de Android se localizaron como texto sin montar el sistema; pueden existir copias para recovery o valores configurados por el fabricante.",
+    "CRC interno y 12 SHA-1 verificados en integridad-interna.json. Gzip DTB sin ultimo byte00 de ISIZE; buffer temporal completo valido. Compatibilidad DDR y drivers no verificados; no flasheado."
+  ],
+  "integridad_posterior": {
+    "archivo": "integridad-interna.json",
+    "crc32_contenedor_coincide": true,
+    "sha1_particiones_verificadas": 12,
+    "dtb_gzip_observacion": "Falta solamente el ultimo byte 00 de ISIZE. Prueba en memoria valida CRC y longitud, datos descomprimidos identicos. Original intacto."
+  }
+}

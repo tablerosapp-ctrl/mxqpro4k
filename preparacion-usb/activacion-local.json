@@ -1,0 +1,12 @@
+{
+  "fecha": "2026-09-05T14:23:21.0077823-03:00",
+  "dispositivo": "USBSTOR\\DISK&VEN_KINGSTON&PROD_DATATRAVELER_3.0&REV_\\KINGSTON_SERIAL_LOCAL&0:PC_LOCAL",
+  "archivo": "update.zip",
+  "bytes": 22,
+  "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+  "contenido": "ZIP vacio sin firmware ni instrucciones de flasheo",
+  "proposito": "Prueba de entrada a modo update mediante la app local del TV box",
+  "estado": "copiado y leido correctamente; no ejecutado en TV box",
+  "fuente": "https://wiki.coreelec.org/coreelec:ceboot",
+  "advertencia_tecnica": "Al entrar en update, aml_autoscript de la imagen puede persistir el entorno de U-Boot con saveenv; no instala Android."
+}

@@ -1,0 +1,251 @@
+debugfs: rm "/priv-app/FHStartHome/oat/arm/FHStartHome.vdex"
+
+debugfs: rm "/priv-app/FHStartHome/oat/arm/FHStartHome.odex"
+
+debugfs: rm "/app/xiri5.6.1.1146757/lib/arm/libxfar_xiri_d.so"
+
+debugfs: rm "/app/xiri5.6.1.1146757/lib/arm/libxfar_parser.so"
+
+debugfs: rm "/app/xiri5.6.1.1146757/lib/arm/libxfar_jni.so"
+
+debugfs: rm "/app/xiri5.6.1.1146757/lib/arm/libxdriver_xiri_d.so"
+
+debugfs: rm "/app/xiri5.6.1.1146757/lib/arm/libvitvvad.so"
+
+debugfs: rm "/app/xiri5.6.1.1146757/lib/arm/libvitvsystemcommongrm.so"
+
+debugfs: rm "/app/xiri5.6.1.1146757/lib/arm/libvitvpinyin.so"
+
+debugfs: rm "/app/xiri5.6.1.1146757/lib/arm/libvitvphonecost.so"
+
+debugfs: rm "/app/xiri5.6.1.1146757/lib/arm/libvitvmspkcfg.so"
+
+debugfs: rm "/app/xiri5.6.1.1146757/lib/arm/libvitvmspk.so"
+
+debugfs: rm "/app/xiri5.6.1.1146757/lib/arm/libvitvmsc.so"
+
+debugfs: rm "/app/xiri5.6.1.1146757/lib/arm/libvitvmaindict.so"
+
+debugfs: rm "/app/xiri5.6.1.1146757/lib/arm/libvitvlsopencfg.so"
+
+debugfs: rm "/app/xiri5.6.1.1146757/lib/arm/libvitvlsopen.so"
+
+debugfs: rm "/app/xiri5.6.1.1146757/lib/arm/libvitvbasicphrasegrm.so"
+
+debugfs: rm "/app/xiri5.6.1.1146757/lib/arm/libsiren7codec.so"
+
+debugfs: rm "/app/xiri5.6.1.1146757/lib/arm/librecorder.so"
+
+debugfs: rm "/app/xiri5.6.1.1146757/lib/arm/libjiagu_x86.so"
+
+debugfs: rm "/app/xiri5.6.1.1146757/lib/arm/libjiagu.so"
+
+debugfs: rm "/app/xiri5.6.1.1146757/lib/arm/libjgdtc.so"
+
+debugfs: rm "/app/xiri5.6.1.1146757/lib/arm/libiflyblesvc_xiri_d.so"
+
+debugfs: rm "/app/xiri5.6.1.1146757/lib/arm/libicocodec.so"
+
+debugfs: rm "/app/xiri5.6.1.1146757/lib/arm/libaiui.so"
+
+debugfs: rm "/app/xiri5.6.1.1146757/lib/arm/libYoungCertify.so"
+
+debugfs: rm "/app/xiri5.6.1.1146757/lib/arm/libUsbInterrupt.so"
+
+debugfs: rm "/app/xiri5.6.1.1146757/lib/arm/libOpenVoiceWriter.so"
+
+debugfs: rm "/app/xiri5.6.1.1146757/lib/arm/libCrc16.so"
+
+debugfs: rm "/app/xiri5.6.1.1146757/lib/arm/libAudioHAL.so"
+
+debugfs: rm "/app/xiri5.6.1.1146757/lib/arm/libAshmemWriter.so"
+
+debugfs: rm "/app/tr069Service20210831103708/oat/arm/tr069Service20210831103708.vdex"
+
+debugfs: rm "/app/tr069Service20210831103708/oat/arm/tr069Service20210831103708.odex"
+
+debugfs: rm "/app/SystemXiri_release-2.0.4/oat/arm/SystemXiri_release-2.0.4.vdex"
+
+debugfs: rm "/app/SystemXiri_release-2.0.4/oat/arm/SystemXiri_release-2.0.4.odex"
+
+debugfs: rm "/app/FHTr069Agent/lib/arm/libagent.so"
+
+debugfs: rm "/app/FHRemoteDebugServer/oat/arm/FHRemoteDebugServer.vdex"
+
+debugfs: rm "/app/FHRemoteDebugServer/oat/arm/FHRemoteDebugServer.odex"
+
+debugfs: rm "/usr/share/zoneinfo/txsp.apk"
+
+debugfs: rm "/usr/share/zoneinfo/huya.apk"
+
+debugfs: rm "/usr/share/zoneinfo/huoxing.apk"
+
+debugfs: rm "/usr/share/zoneinfo/fantuan.apk"
+
+debugfs: rmdir "/priv-app/FHStartHome/oat/arm"
+
+debugfs: rmdir "/app/xiri5.6.1.1146757/lib/arm"
+
+debugfs: rmdir "/app/tr069Service20210831103708/oat/arm"
+
+debugfs: rmdir "/app/SystemXiri_release-2.0.4/oat/arm"
+
+debugfs: rmdir "/app/FHTr069Agent/lib/arm"
+
+debugfs: rmdir "/app/FHRemoteDebugServer/oat/arm"
+
+debugfs: rmdir "/priv-app/FHStartHome/oat"
+
+debugfs: rm "/priv-app/FHStartHome/FHStartHome.apk"
+
+debugfs: rm "/app/xiri5.6.1.1146757/xiri5.6.1.1146757.apk"
+
+debugfs: rmdir "/app/xiri5.6.1.1146757/lib"
+
+debugfs: rm "/app/tr069Service20210831103708/tr069Service20210831103708.apk"
+
+debugfs: rmdir "/app/tr069Service20210831103708/oat"
+
+debugfs: rmdir "/app/SystemXiri_release-2.0.4/oat"
+
+debugfs: rm "/app/SystemXiri_release-2.0.4/SystemXiri_release-2.0.4.apk"
+
+debugfs: rmdir "/app/FHTr069Agent/lib"
+
+debugfs: rm "/app/FHTr069Agent/FHTr069Agent.apk"
+
+debugfs: rmdir "/app/FHRemoteDebugServer/oat"
+
+debugfs: rm "/app/FHRemoteDebugServer/FHRemoteDebugServer.apk"
+
+debugfs: rmdir "/priv-app/FHStartHome"
+
+debugfs: rmdir "/app/xiri5.6.1.1146757"
+
+debugfs: rmdir "/app/tr069Service20210831103708"
+
+debugfs: rm "/app/sfzm.hw.launcher2.5.4.apk"
+
+debugfs: rm "/app/Tr069_Service.apk"
+
+debugfs: rmdir "/app/SystemXiri_release-2.0.4"
+
+debugfs: rm "/app/SoftDetector_V5.1.0_20210806_35250_x020_encrypt.apk"
+
+debugfs: rmdir "/app/FHTr069Agent"
+
+debugfs: rmdir "/app/FHRemoteDebugServer"
+
+debugfs: rm "/app/Andlink_V1.0.2_20210817_hy.apk"
+
+debugfs: mkdir "/app/Chrome"
+debugfs: set_inode_field "/app/Chrome" mode 040755
+debugfs: set_inode_field "/app/Chrome" uid 0
+debugfs: set_inode_field "/app/Chrome" gid 0
+debugfs: ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/system.context" "/app/Chrome" security.selinux
+debugfs: write "C:/Users/usuario-local/Desktop/mxqpro4k/actualizacion-chrome/chrome-138.0.7204.179-arm32.apk" "/app/Chrome/Chrome.apk"
+Allocated inode: 84
+debugfs: set_inode_field "/app/Chrome/Chrome.apk" mode 0100644
+debugfs: set_inode_field "/app/Chrome/Chrome.apk" uid 0
+debugfs: set_inode_field "/app/Chrome/Chrome.apk" gid 0
+debugfs: ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/system.context" "/app/Chrome/Chrome.apk" security.selinux
+debugfs: mkdir "/app/InicioTV"
+debugfs: set_inode_field "/app/InicioTV" mode 040755
+debugfs: set_inode_field "/app/InicioTV" uid 0
+debugfs: set_inode_field "/app/InicioTV" gid 0
+debugfs: ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/system.context" "/app/InicioTV" security.selinux
+debugfs: write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/compilacion/inicio/inicio.apk" "/app/InicioTV/InicioTV.apk"
+Allocated inode: 86
+debugfs: set_inode_field "/app/InicioTV/InicioTV.apk" mode 0100644
+debugfs: set_inode_field "/app/InicioTV/InicioTV.apk" uid 0
+debugfs: set_inode_field "/app/InicioTV/InicioTV.apk" gid 0
+debugfs: ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/system.context" "/app/InicioTV/InicioTV.apk" security.selinux
+debugfs: rm "/bin/preinstall.sh"
+
+debugfs: write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/preinstall.sh" "/bin/preinstall.sh"
+Allocated inode: 87
+debugfs: set_inode_field "/bin/preinstall.sh" mode 0100755
+debugfs: set_inode_field "/bin/preinstall.sh" uid 0
+debugfs: set_inode_field "/bin/preinstall.sh" gid 2000
+debugfs: ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/system.context" "/bin/preinstall.sh" security.selinux
+debugfs: rm "/bin/opt/etc/preinstall.sh"
+
+debugfs: write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/preinstall.sh" "/bin/opt/etc/preinstall.sh"
+Allocated inode: 88
+debugfs: set_inode_field "/bin/opt/etc/preinstall.sh" mode 0100755
+debugfs: set_inode_field "/bin/opt/etc/preinstall.sh" uid 0
+debugfs: set_inode_field "/bin/opt/etc/preinstall.sh" gid 2000
+debugfs: ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/system.context" "/bin/opt/etc/preinstall.sh" security.selinux
+debugfs: write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/tvbase.rc" "/etc/init/tvbase.rc"
+Allocated inode: 89
+debugfs: set_inode_field "/etc/init/tvbase.rc" mode 0100644
+debugfs: set_inode_field "/etc/init/tvbase.rc" uid 0
+debugfs: set_inode_field "/etc/init/tvbase.rc" gid 0
+debugfs: ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/system.context" "/etc/init/tvbase.rc" security.selinux
+debugfs: rm "/bin/opt/etc/init.common.sh"
+
+debugfs: write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/init.common.sh" "/bin/opt/etc/init.common.sh"
+Allocated inode: 96
+debugfs: set_inode_field "/bin/opt/etc/init.common.sh" mode 0100755
+debugfs: set_inode_field "/bin/opt/etc/init.common.sh" uid 0
+debugfs: set_inode_field "/bin/opt/etc/init.common.sh" gid 2000
+debugfs: ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/system.context" "/bin/opt/etc/init.common.sh" security.selinux
+debugfs: rm "/bin/opt/etc/init.fhservice.sh"
+
+debugfs: write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/init.fhservice.sh" "/bin/opt/etc/init.fhservice.sh"
+Allocated inode: 97
+debugfs: set_inode_field "/bin/opt/etc/init.fhservice.sh" mode 0100755
+debugfs: set_inode_field "/bin/opt/etc/init.fhservice.sh" uid 0
+debugfs: set_inode_field "/bin/opt/etc/init.fhservice.sh" gid 2000
+debugfs: ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/system.context" "/bin/opt/etc/init.fhservice.sh" security.selinux
+debugfs: rm "/build.prop"
+
+debugfs: write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/build.prop" "/build.prop"
+Allocated inode: 98
+debugfs: set_inode_field "/build.prop" mode 0100644
+debugfs: set_inode_field "/build.prop" uid 0
+debugfs: set_inode_field "/build.prop" gid 0
+debugfs: ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/system.context" "/build.prop" security.selinux
+debugfs: write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/tvbase.json" "/etc/tvbase.json"
+Allocated inode: 99
+debugfs: set_inode_field "/etc/tvbase.json" mode 0100644
+debugfs: set_inode_field "/etc/tvbase.json" uid 0
+debugfs: set_inode_field "/etc/tvbase.json" gid 0
+debugfs: ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/system.context" "/etc/tvbase.json" security.selinux
+debugfs 1.44.5 (15-Dec-2018)
+/app/Chrome/Chrome.apk: File not found by ext2_lookup 
+/app/Chrome/Chrome.apk: File not found by ext2_lookup 
+/app/Chrome/Chrome.apk: File not found by ext2_lookup 
+/app/Chrome/Chrome.apk: File not found by ext2_lookup 
+/app/InicioTV/InicioTV.apk: File not found by ext2_lookup 
+/app/InicioTV/InicioTV.apk: File not found by ext2_lookup 
+/app/InicioTV/InicioTV.apk: File not found by ext2_lookup 
+/app/InicioTV/InicioTV.apk: File not found by ext2_lookup 
+/bin/preinstall.sh: File not found by ext2_lookup 
+/bin/preinstall.sh: File not found by ext2_lookup 
+/bin/preinstall.sh: File not found by ext2_lookup 
+/bin/preinstall.sh: File not found by ext2_lookup 
+/bin/opt/etc/preinstall.sh: File not found by ext2_lookup 
+/bin/opt/etc/preinstall.sh: File not found by ext2_lookup 
+/bin/opt/etc/preinstall.sh: File not found by ext2_lookup 
+/bin/opt/etc/preinstall.sh: File not found by ext2_lookup 
+/etc/init/tvbase.rc: File not found by ext2_lookup 
+/etc/init/tvbase.rc: File not found by ext2_lookup 
+/etc/init/tvbase.rc: File not found by ext2_lookup 
+/etc/init/tvbase.rc: File not found by ext2_lookup 
+/bin/opt/etc/init.common.sh: File not found by ext2_lookup 
+/bin/opt/etc/init.common.sh: File not found by ext2_lookup 
+/bin/opt/etc/init.common.sh: File not found by ext2_lookup 
+/bin/opt/etc/init.common.sh: File not found by ext2_lookup 
+/bin/opt/etc/init.fhservice.sh: File not found by ext2_lookup 
+/bin/opt/etc/init.fhservice.sh: File not found by ext2_lookup 
+/bin/opt/etc/init.fhservice.sh: File not found by ext2_lookup 
+/bin/opt/etc/init.fhservice.sh: File not found by ext2_lookup 
+/build.prop: File not found by ext2_lookup 
+/build.prop: File not found by ext2_lookup 
+/build.prop: File not found by ext2_lookup 
+/build.prop: File not found by ext2_lookup 
+/etc/tvbase.json: File not found by ext2_lookup 
+/etc/tvbase.json: File not found by ext2_lookup 
+/etc/tvbase.json: File not found by ext2_lookup 
+/etc/tvbase.json: File not found by ext2_lookup 

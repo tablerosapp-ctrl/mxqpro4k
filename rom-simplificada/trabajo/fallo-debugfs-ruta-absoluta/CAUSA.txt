@@ -1,0 +1,1 @@
+Cygwin debugfs write interpretó el destino absoluto como nombre literal. fsck detectó nombres ilegales; no se empaquetó ni grabó. Corrección: cd al directorio de destino, write con basename, volver a raíz. Se conserva el intento fallido y se reconstruye desde fuente verificada.

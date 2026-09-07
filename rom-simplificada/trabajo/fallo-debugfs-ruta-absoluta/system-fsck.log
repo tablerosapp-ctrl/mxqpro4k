@@ -1,0 +1,37 @@
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Entry '/build.prop' in / (2) has illegal characters in its name.
+Fix? no
+
+Entry '/app/Chrome/Chrome.apk' in / (2) has illegal characters in its name.
+Fix? no
+
+Entry '/app/InicioTV/InicioTV.apk' in / (2) has illegal characters in its name.
+Fix? no
+
+Entry '/bin/preinstall.sh' in / (2) has illegal characters in its name.
+Fix? no
+
+Entry '/bin/opt/etc/preinstall.sh' in / (2) has illegal characters in its name.
+Fix? no
+
+Entry '/etc/init/tvbase.rc' in / (2) has illegal characters in its name.
+Fix? no
+
+Entry '/bin/opt/etc/init.common.sh' in / (2) has illegal characters in its name.
+Fix? no
+
+Entry '/bin/opt/etc/init.fhservice.sh' in / (2) has illegal characters in its name.
+Fix? no
+
+Entry '/etc/tvbase.json' in / (2) has illegal characters in its name.
+Fix? no
+
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+
+system: ********** WARNING: Filesystem still has errors **********
+
+system: 2660/81920 files (0.0% non-contiguous), 215045/327680 blocks
+e2fsck 1.44.5 (15-Dec-2018)

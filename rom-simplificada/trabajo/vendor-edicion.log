@@ -1,0 +1,33 @@
+debugfs: rm "/app/sfzm.hw.launcher2.5.4.apk"
+
+debugfs: rm "/app/sfgj_4.9.0_hwwh.apk"
+
+debugfs: mkdir "/overlay"
+debugfs: set_inode_field "/overlay" mode 040755
+debugfs: set_inode_field "/overlay" uid 0
+debugfs: set_inode_field "/overlay" gid 0
+debugfs: ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/overlay.context" "/overlay" security.selinux
+debugfs: mkdir "/overlay/TVBaseWebView"
+debugfs: set_inode_field "/overlay/TVBaseWebView" mode 040755
+debugfs: set_inode_field "/overlay/TVBaseWebView" uid 0
+debugfs: set_inode_field "/overlay/TVBaseWebView" gid 0
+debugfs: ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/overlay.context" "/overlay/TVBaseWebView" security.selinux
+debugfs: cd "/overlay/TVBaseWebView"
+debugfs: write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/compilacion/webview-overlay/webview-overlay.apk" "TVBaseWebView.apk"
+Allocated inode: 1154
+debugfs: cd /
+debugfs: set_inode_field "/overlay/TVBaseWebView/TVBaseWebView.apk" mode 0100644
+debugfs: set_inode_field "/overlay/TVBaseWebView/TVBaseWebView.apk" uid 0
+debugfs: set_inode_field "/overlay/TVBaseWebView/TVBaseWebView.apk" gid 0
+debugfs: ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/overlay.context" "/overlay/TVBaseWebView/TVBaseWebView.apk" security.selinux
+debugfs: rm "/etc/init/hw/init.amlogic.rc"
+
+debugfs: cd "/etc/init/hw"
+debugfs: write "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/init.amlogic.rc" "init.amlogic.rc"
+Allocated inode: 330
+debugfs: cd /
+debugfs: set_inode_field "/etc/init/hw/init.amlogic.rc" mode 0100644
+debugfs: set_inode_field "/etc/init/hw/init.amlogic.rc" uid 0
+debugfs: set_inode_field "/etc/init/hw/init.amlogic.rc" gid 0
+debugfs: ea_set -f "C:/Users/usuario-local/Desktop/mxqpro4k/rom-simplificada/trabajo/payload/vendor.context" "/etc/init/hw/init.amlogic.rc" security.selinux
+debugfs 1.44.5 (15-Dec-2018)

@@ -1,0 +1,241 @@
+{
+  "state": "passed",
+  "version": "0.5",
+  "apk_sha256": "7e251f9d202c6ac9407734f2ca4c19077a8b02994f3a115205fdc10cf21b0874",
+  "tested_source_sha256": {
+    "rom-simplificada/componentes/acceso-usb/Acceso.java": "95e02b9ecfd9f16fe9bc2f37be9938648f78caeb5de897e76ad1e456e56381b4",
+    "rom-simplificada/componentes/acceso-usb/AdbLocal.java": "d9635611fd4d0e32e9f77a0201e99f2e2d8950b899a0e77d600ff71142d552f7",
+    "rom-simplificada/componentes/acceso-usb/Evidencia.java": "89eed44123f6919e18ad58b22fd09f72513659eafd9e02b2d2f2a6453c5cc405",
+    "rom-simplificada/componentes/acceso-usb/EvidenciaScripts.java": "2e1da3d5ab17834583681ae00be992d9f2c6d4c4b1cb75b516b79353be88a8af"
+  },
+  "scope": "PC only; no TV commands executed",
+  "adb": [
+    {
+      "case": "shell",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 0
+    },
+    {
+      "case": "auth",
+      "passed": true,
+      "observed_services": [],
+      "exit": 1
+    },
+    {
+      "case": "bad_checksum",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 1
+    },
+    {
+      "case": "early_eof",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 1
+    },
+    {
+      "case": "refused",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 1
+    },
+    {
+      "case": "zero_close",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 0
+    },
+    {
+      "case": "unknown_channel",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 1
+    },
+    {
+      "case": "duplicate_ready",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 0
+    },
+    {
+      "case": "response_limit",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 1
+    },
+    {
+      "case": "flow",
+      "passed": true,
+      "observed_services": [
+        "profile",
+        "profile",
+        "profile",
+        "evidence-stage-0",
+        "evidence-stage-1",
+        "evidence-stage-2",
+        "evidence-stage-3",
+        "evidence-stage-4",
+        "evidence-stage-5",
+        "evidence-stage-6"
+      ],
+      "exit": 0
+    },
+    {
+      "case": "final_failure",
+      "passed": true,
+      "observed_services": [
+        "profile",
+        "profile",
+        "profile",
+        "evidence-stage-0",
+        "evidence-stage-1",
+        "evidence-stage-2",
+        "evidence-stage-3",
+        "evidence-stage-4",
+        "evidence-stage-5",
+        "evidence-stage-6"
+      ],
+      "exit": 1
+    },
+    {
+      "case": "deadline",
+      "passed": true,
+      "observed_services": [
+        "shell:id"
+      ],
+      "exit": 1
+    }
+  ],
+  "guard_result": "GUARDS_OK: profile x3; stages failure x4; wrong destination; final mandatory; no retry; path injection x3; packet sizes x7",
+  "external_host_rejected": true,
+  "shell_syntax": [
+    {
+      "path": "rom-simplificada/componentes/acceso-usb/scripts/etapa-0.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb/scripts/etapa-1.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb/scripts/etapa-2.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb/scripts/etapa-3.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb/scripts/etapa-4.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb/scripts/etapa-5.sh",
+      "passed": true
+    },
+    {
+      "path": "rom-simplificada/componentes/acceso-usb/scripts/etapa-6.sh",
+      "passed": true
+    }
+  ],
+  "shell_fixtures": [
+    {
+      "case": "binary_copy",
+      "passed": true,
+      "exit": 0
+    },
+    {
+      "case": "size_limit",
+      "passed": true,
+      "exit": 0
+    },
+    {
+      "case": "noclobber",
+      "passed": true,
+      "exit": 9
+    },
+    {
+      "case": "sync_failure",
+      "passed": true,
+      "exit": 9
+    },
+    {
+      "case": "hash_failure",
+      "passed": true,
+      "exit": 9
+    },
+    {
+      "case": "incomplete_report",
+      "passed": true,
+      "exit": 9
+    },
+    {
+      "case": "resolved_package",
+      "passed": true,
+      "exit": 0
+    },
+    {
+      "case": "resolved_fallback_deduplicated",
+      "passed": true,
+      "exit": 0
+    },
+    {
+      "case": "malicious_component",
+      "passed": true,
+      "exit": 0
+    },
+    {
+      "case": "ambiguous_components",
+      "passed": true,
+      "exit": 0
+    },
+    {
+      "case": "no_component",
+      "passed": true,
+      "exit": 0
+    },
+    {
+      "case": "android_resolver",
+      "passed": true,
+      "exit": 0
+    },
+    {
+      "case": "no_apk_available",
+      "passed": true,
+      "exit": 0
+    },
+    {
+      "case": "four_apk_global_limit",
+      "passed": true,
+      "exit": 9
+    },
+    {
+      "case": "missing_required_report",
+      "passed": true,
+      "exit": 9
+    }
+  ],
+  "fixture_adapters": "MinGit has no stat/sha256sum/sync: Python implements size/SHA, sync is a success/failure stub. Tests cover control flow and binary bytes, not Android toybox or physical flushing.",
+  "max_actual_open_bytes": 3531,
+  "total_response_limit_bytes": 65536,
+  "tv_shell_tested": false,
+  "tv_capture_tested": false,
+  "flush": "checked sync exit plus SHA readback; no claim of physical USB hardware durability"
+}

@@ -1,0 +1,23 @@
+{
+  "prueba": 1,
+  "objetivo_actual": "Android minimo en la memoria interna con amplia compatibilidad para APK actuales y futuras, WebView actualizable y videos locales. La composicion VP9 existente sera una referencia adicional; no se requiere una APK terminada para avanzar.",
+  "pendrive_estado_posterior_al_error": "Cuarta grabacion completada y verificada el 2026-09-05 a las 00:11:26, despues de cambiar fisicamente a USB(16)/SS04. Imager 2.0.11.1, codigo 0, SHA-256 de lectura coincidente, expulsion solicitada. Imagen lista para primera prueba de arranque en TV box; compatibilidad pendiente.",
+  "rol_de_esta_imagen": "Armbian: herramienta opcional de acceso e identificacion; no es la ROM Android final.",
+  "documento_objetivo": "../ARQUITECTURA-ANDROID-TV.md",
+  "archivo": "Armbian_26.05.0_amlogic_s905l2_noble_6.12.91_server_2026.06.01.img",
+  "url_gz": "https://github.com/ophub/amlogic-s9xxx-armbian/releases/download/Armbian_noble_arm64_server_2026.06/Armbian_26.05.0_amlogic_s905l2_noble_6.12.91_server_2026.06.01.img.gz",
+  "sha256_gz_publicado_y_verificado": "5503e37d606e883651a0b8d8a90c5c9ff987a27625cbeb86b66bd55089901f9b",
+  "sha256_img_calculado": "4479b09374d92ffe4be625b5dded96c5d7d7a0e8c6bcb0a7d2894a839214a2f8",
+  "bytes_img": 3686793216,
+  "fdt_inicial": "/dtb/amlogic/meson-gxl-s905l2-x7-5g.dtb",
+  "alternativas_presentes_en_la_imagen": [
+    "/dtb/amlogic/meson-gxl-s905l2-ipbs9505.dtb",
+    "/dtb/amlogic/meson-gxl-s905l3b-m302a.dtb",
+    "/dtb/amlogic/meson-gxl-s905w-p281.dtb"
+  ],
+  "compatibilidad_p291": "Pendiente de prueba fisica",
+  "nota_arranque": "La imagen original incluye saveenv en aml_autoscript. No se ha ejecutado ese script en el TV box. El primer arranque externo depende de su bootloader.",
+  "pendrive": "Kingston DataTraveler 3.0, 30943995904 bytes; E: antes de la cuarta grabacion. Actualmente contiene Armbian y fue expulsado por la herramienta.",
+  "resultado_prueba_tvbox": "Usuario informa arranque de Android habitual con USB. No se demostro entrada a modo update ni arranque externo.",
+  "preparacion_posterior": "Se agrego update.zip vacio de 22 bytes a BOOT para probar Actualizacion local sin red. Ver activacion-local.json. Esta adicion es posterior a la verificacion completa de la imagen."
+}
