@@ -16,7 +16,7 @@ No se publican claves privadas, contraseñas, tokens, firmware, APK, fotos origi
 | --- | --- |
 | Git de la raíz del proyecto | Historia operativa original, artefactos y guardas de esta unidad |
 | `privado/publicacion-redacciones.json` | Configuración del dueño/repositorio y sustituciones locales; excluida |
-| `.publicacion/repositorio/` | Espejo Git saneado, con remoto origin público; excluido del Git operativo |
+| `.publicacion/repositorio-<huella>/` | Espejo Git saneado, con remoto origin público; excluido del Git operativo |
 | `.publicacion/estado.json` | Relación de commits locales/públicos y última verificación; excluida |
 | `docs/herramientas/publicar-github.py` | Exporta, revisa y publica; usa el gestor de credenciales sin guardar tokens |
 
@@ -31,3 +31,7 @@ El repositorio público se puede leer o clonar sin invitación. Para aportar, us
 Antes de una nueva exportación, el operador revisa cualquier aporte remoto y lo integra en las fuentes operativas. Si hay commits remotos que no pertenecen a la línea exportada, resolver explícitamente esa integración; el chequeo de avance debe seguir activo. No instalar nada en un TV ni ejecutar preparadores USB como parte de la revisión documental en otra PC.
 
 La comprobación local de documentación incluye binarios y herramientas presentes solo en la PC operadora. En el clon público, los enlaces hacia esos artefactos locales pueden faltar: consultar manifiestos y conclusiones. No declarar pruebas físicas o compilación reproducida a partir de un clon que carece de esas dependencias.
+
+## Auditoría ampliada antes de publicar
+
+La primera solicitud de publicación fue rechazada automáticamente porque la auditoría inicial agrupaba coincidencias de correo e identificadores sin explicar cada clase. No llegó a crear ni subir el repositorio. Se amplió la comprobación de todos los blobs del espejo: rechaza claves/tokens, correos sin clasificar, IPv4 privadas, MAC, identificadores originales conocidos y rutas de archivos privados/binarios. Las coincidencias permitidas de correo son únicamente la identidad sintética de automatización, el correo público del certificado AOSP y nombres de interfaces/bibliotecas Android con @versión en sus dos inventarios. El reporte completo de la revisión queda en .publicacion/auditoria-publica.json.

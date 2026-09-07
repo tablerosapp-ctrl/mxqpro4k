@@ -17,7 +17,7 @@ from datetime import datetime, timezone
 
 ROOT = Path(__file__).resolve().parents[2]
 WORK = ROOT / '.publicacion'
-MIRROR = WORK / 'repositorio'
+MIRROR = None  # Directorio independiente por configuración de anonimización.
 CONFIG = ROOT / 'privado/publicacion-redacciones.json'
 GIT = Path.home() / '.cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe'
 ENV = dict(os.environ, GIT_TERMINAL_PROMPT='0', GCM_INTERACTIVE='Never')
@@ -92,16 +92,46 @@ def prepare(config):
 
 def audit(config):
     rows = git('rev-list', '--objects', 'main', cwd=MIRROR).decode().splitlines()
+    names = {x.partition(' ')[0]: x.partition(' ')[2] for x in rows}
+    packed = io.BytesIO(git('cat-file', '--batch', cwd=MIRROR,
+                           data=('\n'.join(names) + '\n').encode()))
+    blobs = 0
+    email_classes = {'automation_identity': 0, 'public_aosp_certificate': 0,
+                     'android_library_filename': 0}
     for row in rows:
         oid, _, name = row.partition(' ')
-        kind = git('cat-file', '-t', oid, cwd=MIRROR).strip()
+        header = packed.readline().decode().strip().split()
+        assert len(header) == 3 and header[0] == oid
+        kind, size = header[1].encode(), int(header[2])
+        body = packed.read(size)
+        assert len(body) == size and packed.read(1) == b'\n'
         if kind != b'blob':
             continue
+        blobs += 1
         assert not re.search(r'\.(?:apk|img|zip|jks|pk8|pem|key|exe|dll|bin|dex|class|png)$', name, re.I), 'Binario/clave/foto en historial: ' + name
         assert not name.startswith(('privado/', '.publicacion/')) and 'claves-desarrollo/' not in name
-        body = git('cat-file', 'blob', oid, cwd=MIRROR)
         assert b'\0' not in body and not SECRET.search(body), 'Contenido no publicable: ' + name
         assert all(x.encode() not in body for x in config['redactions']), 'Identificador pendiente: ' + name
+        assert not re.search(rb'(?<![0-9])(?:192\.168\.\d{1,3}\.\d{1,3}|10\.\d{1,3}\.\d{1,3}\.\d{1,3}|172\.(?:1[6-9]|2[0-9]|3[01])\.\d{1,3}\.\d{1,3})(?![0-9])', body), 'IP privada en ' + name
+        assert not re.search(rb'(?<![A-Za-z0-9])(?:[0-9a-fA-F]{2}:){5}[0-9a-fA-F]{2}(?![A-Za-z0-9])', body), 'MAC en ' + name
+        for value in re.findall(rb'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}', body):
+            if value == b'codex@local.invalid':
+                email_classes['automation_identity'] += 1
+            elif value == b'android@android.com':
+                email_classes['public_aosp_certificate'] += 1
+            elif name in ('rom-simplificada/inspeccion/system-inventario.json',
+                          'rom-simplificada/inspeccion/vendor-inventario.json') and re.fullmatch(
+                          rb'(?:android|vendor)\.[A-Za-z0-9_.-]+@\d+(?:\.\d+)+[A-Za-z0-9_.-]*', value):
+                email_classes['android_library_filename'] += 1
+            else:
+                raise AssertionError('Correo sin clasificar en ' + name)
+    report = {'checked_at': datetime.now(timezone.utc).isoformat(), 'history_blobs_checked': blobs,
+              'scope': 'Todos los blobs alcanzables desde main en el espejo público',
+              'private_keys_tokens': 0, 'unclassified_emails': 0, 'private_ipv4': 0,
+              'mac_addresses': 0, 'known_original_device_identifiers': 0,
+              'forbidden_binary_or_private_paths': 0, 'email_like_matches_classified': email_classes,
+              'notes': 'Las coincidencias permitidas son identidad sintética de automatización, correo público del certificado AOSP y nombres de bibliotecas Android. Loopback se conserva por el contrato ADB local.'}
+    (WORK / 'auditoria-publica.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf8')
 
 
 class NoRedirect(urllib.request.HTTPRedirectHandler):
@@ -177,5 +207,6 @@ if __name__ == '__main__':
     args = parser.parse_args()
     assert args.prepare != args.publish, 'Elegir solamente --prepare o --publish.'
     config = load_config()
+    MIRROR = WORK / ('repositorio-' + hashlib.sha256(CONFIG.read_bytes()).hexdigest()[:12])
     result = prepare(config) if args.prepare else publish(config)
     print(json.dumps({k: v for k, v in result.items() if k != 'commit_map'}, indent=2))
