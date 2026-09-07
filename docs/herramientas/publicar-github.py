@@ -121,7 +121,7 @@ def audit(config):
                 email_classes['public_aosp_certificate'] += 1
             elif name in ('rom-simplificada/inspeccion/system-inventario.json',
                           'rom-simplificada/inspeccion/vendor-inventario.json') and re.fullmatch(
-                          rb'(?:android|vendor)\.[A-Za-z0-9_.-]+@\d+(?:\.\d+)+[A-Za-z0-9_.-]*', value):
+                          rb'(?:(?:android|vendor|camera)\.[A-Za-z0-9_.-]+|libaudiohal|libamgralloc_ext)@\d+(?:\.\d+)*[A-Za-z0-9_.-]*', value):
                 email_classes['android_library_filename'] += 1
             else:
                 raise AssertionError('Correo sin clasificar en ' + name)
