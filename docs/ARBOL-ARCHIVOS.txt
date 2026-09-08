@@ -149,6 +149,7 @@ mxqpro4k/
 │   │   ├── PARTICIONES-AMLOGIC-P291-022.md
 │   │   ├── PREPARACION-ENTRADA-P291-09.md
 │   │   ├── publicacion-github.json
+│   │   ├── RESPALDO-CIFRADO.json
 │   │   └── ROM-ORIGINAL-P291-020.md
 │   ├── herramientas/
 │   │   ├── __pycache__/
@@ -157,7 +158,10 @@ mxqpro4k/
 │   │   ├── generar-mapa.py
 │   │   ├── mapa-template.html
 │   │   ├── planificar-limpieza.py
+│   │   ├── preparar-respaldo-cifrado.py
 │   │   ├── publicar-github.py
+│   │   ├── publicar-respaldo-cifrado.py
+│   │   ├── recuperar-respaldo-cifrado.py
 │   │   └── verificar-documentacion.py
 │   ├── hipotesis/
 │   │   ├── H1-CIERRE-ANDROID.md
@@ -182,6 +186,7 @@ mxqpro4k/
 │   ├── PROPUESTA-LOTES-Y-ACTUALIZACIONES.md
 │   ├── proyecto.json
 │   ├── PUBLICACION.md
+│   ├── RESPALDO-GITHUB.md
 │   └── ROADMAP.md
 ├── images/
 │   └── Armbian_26.05.0_amlogic_s905l2_noble_6.12.91_server_2026.06.01.img.gz
@@ -798,6 +803,7 @@ mxqpro4k/
 │   ├── SIN-BLUETOOTH-0.1.2.md
 │   └── verificar-y-empaquetar.py
 ├── tools/
+│   ├── age-1.3.2/ [5 archivos; 31.8 MB; agrupado]
 │   ├── compilar-android/ [4 archivos; 125.6 MB; agrupado]
 │   ├── ext4-cygwin/ [74 archivos; 38.8 MB; agrupado]
 │   ├── fable-referencias/ [10 archivos; 0.2 MB; agrupado]

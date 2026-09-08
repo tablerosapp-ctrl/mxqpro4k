@@ -1,5 +1,11 @@
 # Publicación pública y continuidad local
 
+## Ampliación solicitada · respaldo cifrado en Releases
+
+El 8/9/2026 el usuario pidió que el respaldo también estuviera en GitHub. Se autoriza una copia **cifrada con age**, publicada como archivos de Release y con la clave privada separada en esta PC. Se conserva el [alcance y procedimiento](RESPALDO-GITHUB.md). Las imágenes, userdata, registros y datos individuales permanecen cifrados; no se agregan sus originales al historial Git. La clave se excluye de Git y de las cargas. Esta excepción no habilita publicar firmware o datos privados en claro ni ejecutar nuevos cambios en el TV.
+
+El publicador de respaldos solo acepta las partes cifradas y el manifiesto público verificados, primero en borrador y luego con comprobación anónima de sus hashes. El espejo documental conserva sus controles y su historial. La auditoría de Git también rechaza claves privadas age completas.
+
 El [repositorio tablerosapp-ctrl/mxqpro4k](https://github.com/tablerosapp-ctrl/mxqpro4k) fue creado y publicado con visibilidad pública el 7/9/2026. Se verificaron la lectura anónima y el SHA remoto. [Recibo de la primera publicación](evidencia/publicacion-github.json). Claude Desktop se usará desde otra PC y otra cuenta; no se comparten credenciales.
 
 ## Qué se publica

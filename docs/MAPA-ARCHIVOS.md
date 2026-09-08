@@ -185,7 +185,7 @@ Requisitos: REQ-01, REQ-09, REQ-11, REQ-16.
 
 ### C-REC · Restaurador022
 
-**verificado_local**. Misma guardaMMC corregida; cincoOEM, conservauserdata; sin prueba física.
+**verificado_local**. Misma guardaMMC corregida; cincoOEM, conservauserdata; sin prueba física. Recuperación de archivos cifrados en PC separada de la restauración física del TV.
 
 Requisitos: REQ-11, REQ-16.
 
@@ -207,6 +207,7 @@ Requisitos: REQ-11, REQ-16.
 - [rom-simplificada/original-p291/restauracion-022/block_layout_test.go](../rom-simplificada/original-p291/restauracion-022/block_layout_test.go)
 - [rom-simplificada/original-p291/restauracion-022/REVISION-LAYOUT-022.json](../rom-simplificada/original-p291/restauracion-022/REVISION-LAYOUT-022.json)
 - [rom-simplificada/original-p291/restauracion-022/README.md](../rom-simplificada/original-p291/restauracion-022/README.md)
+- [docs/herramientas/recuperar-respaldo-cifrado.py](../docs/herramientas/recuperar-respaldo-cifrado.py)
 
 ### C-ENTRY · Entrada 0.9 lograda
 
@@ -359,6 +360,10 @@ Requisitos: REQ-02, REQ-09, REQ-11.
 - [diagnostico/test_respaldo_p291_lan.py](../diagnostico/test_respaldo_p291_lan.py)
 - [diagnostico/respaldo-p291-lan/EVIDENCIA-SANEADA.json](../diagnostico/respaldo-p291-lan/EVIDENCIA-SANEADA.json)
 - [diagnostico/primer-tv-instalado-20260908/resumen-saneado.json](../diagnostico/primer-tv-instalado-20260908/resumen-saneado.json)
+- [docs/RESPALDO-GITHUB.md](../docs/RESPALDO-GITHUB.md)
+- [docs/evidencia/RESPALDO-CIFRADO.json](../docs/evidencia/RESPALDO-CIFRADO.json)
+- [docs/herramientas/preparar-respaldo-cifrado.py](../docs/herramientas/preparar-respaldo-cifrado.py)
+- [docs/herramientas/publicar-respaldo-cifrado.py](../docs/herramientas/publicar-respaldo-cifrado.py)
 
 ### C-PRODUCTO · Producto común
 
@@ -416,12 +421,12 @@ Requisitos: REQ-15, REQ-16, REQ-17.
 | actualizacion-chrome | 51 | 0.417 |
 | analisis-rom | 15 | 1.822 |
 | diagnostico | 177 | 0.018 |
-| docs | 42 | 0.000 |
+| docs | 47 | 0.000 |
 | dossier-s905l2.html | 1 | 0.000 |
 | images | 1 | 1.352 |
 | platform-tools-latest-windows.zip | 1 | 0.008 |
 | preparacion-usb | 92 | 3.688 |
 | rom-simplificada | 4619 | 14.542 |
-| tools | 18081 | 1.141 |
+| tools | 18086 | 1.173 |
 
 El inventario excluye derivados documentales y contenido de claves; los tamaños son de archivos, no bloques físicos ocupados. Los temporales retirados se detallan en [LIMPIEZA](LIMPIEZA.md).

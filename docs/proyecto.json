@@ -32,7 +32,8 @@
     "lot_and_update_proposal": "docs/PROPUESTA-LOTES-Y-ACTUALIZACIONES.md",
     "historical_entry": "rom-simplificada/original-p291/entrada-apk/COMPILACION-09.json",
     "historical_entry_release": "rom-simplificada/original-p291/entrada-apk/LIBERACION-09.json",
-    "home_hypothesis": "docs/hipotesis/HOME-P291.md"
+    "home_hypothesis": "docs/hipotesis/HOME-P291.md",
+    "encrypted_backup": "docs/RESPALDO-GITHUB.md"
   },
   "components": [
     {
@@ -228,7 +229,7 @@
       "id": "C-REC",
       "label": "Restaurador022",
       "state": "verificado_local",
-      "description": "Misma guardaMMC corregida; cincoOEM, conservauserdata; sin prueba física.",
+      "description": "Misma guardaMMC corregida; cincoOEM, conservauserdata; sin prueba física. Recuperación de archivos cifrados en PC separada de la restauración física del TV.",
       "files": [
         "diagnostico/primer-tv-lan-20260907-184926/RECOVERY-ORIGINAL.md",
         "rom-simplificada/original-p291/restauracion-022/main_linux.go",
@@ -247,7 +248,8 @@
         "rom-simplificada/original-p291/restauracion-022/block_device_linux.go",
         "rom-simplificada/original-p291/restauracion-022/block_layout_test.go",
         "rom-simplificada/original-p291/restauracion-022/REVISION-LAYOUT-022.json",
-        "rom-simplificada/original-p291/restauracion-022/README.md"
+        "rom-simplificada/original-p291/restauracion-022/README.md",
+        "docs/herramientas/recuperar-respaldo-cifrado.py"
       ],
       "x": 2,
       "y": 1,
@@ -445,7 +447,11 @@
         "diagnostico/respaldar-p291-lan.py",
         "diagnostico/test_respaldo_p291_lan.py",
         "diagnostico/respaldo-p291-lan/EVIDENCIA-SANEADA.json",
-        "diagnostico/primer-tv-instalado-20260908/resumen-saneado.json"
+        "diagnostico/primer-tv-instalado-20260908/resumen-saneado.json",
+        "docs/RESPALDO-GITHUB.md",
+        "docs/evidencia/RESPALDO-CIFRADO.json",
+        "docs/herramientas/preparar-respaldo-cifrado.py",
+        "docs/herramientas/publicar-respaldo-cifrado.py"
       ],
       "x": 4,
       "y": 2,

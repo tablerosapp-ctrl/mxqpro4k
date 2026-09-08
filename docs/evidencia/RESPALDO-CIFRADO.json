@@ -1,0 +1,65 @@
+{
+  "format": 1,
+  "id": "P291-BACKUP-20260908",
+  "encryption": "age-v1-X25519",
+  "archive_format": "zip-deflate",
+  "encrypted_file": "TVBASE-P291-RESPALDO-20260908.zip.age",
+  "encrypted_bytes": 4504905988,
+  "encrypted_sha256": "ec2f47cef7dc4195e04ef60f70b8ac0552314526ba76ad7d637a8b1e8ddb48b2",
+  "parts": [
+    {
+      "name": "TVBASE-P291-RESPALDO-20260908.zip.age.part001",
+      "bytes": 536870912,
+      "sha256": "08178c42d7195f02cf72b465a131a054146e54e4ef31923fedafb1743279bd2a"
+    },
+    {
+      "name": "TVBASE-P291-RESPALDO-20260908.zip.age.part002",
+      "bytes": 536870912,
+      "sha256": "dda877c70c49b92e35b02b20f6c0280aa2e1082add88f058113418a06054cd36"
+    },
+    {
+      "name": "TVBASE-P291-RESPALDO-20260908.zip.age.part003",
+      "bytes": 536870912,
+      "sha256": "bfc3f956e41e6af156df4fc4c966746e3265bc38c4b4765cb2032a685da85035"
+    },
+    {
+      "name": "TVBASE-P291-RESPALDO-20260908.zip.age.part004",
+      "bytes": 536870912,
+      "sha256": "c4168f3cebb8f9a6b5f18284e7321881d135dbfbfeeb6d939a0123933247785d"
+    },
+    {
+      "name": "TVBASE-P291-RESPALDO-20260908.zip.age.part005",
+      "bytes": 536870912,
+      "sha256": "2f0b194c3d062a663f08bd716d646c939173acd921fe50bb46e33b53039eed20"
+    },
+    {
+      "name": "TVBASE-P291-RESPALDO-20260908.zip.age.part006",
+      "bytes": 536870912,
+      "sha256": "d1eb6e6ac8bb6d51f634a60a2a4eb797b8fe21fd009ecbcd371852356ad08924"
+    },
+    {
+      "name": "TVBASE-P291-RESPALDO-20260908.zip.age.part007",
+      "bytes": 536870912,
+      "sha256": "d19f39856f9b33b711d9be00fd497bc6bf18bc3f9c101762aee7ff0497d8be43"
+    },
+    {
+      "name": "TVBASE-P291-RESPALDO-20260908.zip.age.part008",
+      "bytes": 536870912,
+      "sha256": "1f39bbc688102371fe9543f2c430a850f028d06d4faaf752285b6cb4a95338fe"
+    },
+    {
+      "name": "TVBASE-P291-RESPALDO-20260908.zip.age.part009",
+      "bytes": 209938692,
+      "sha256": "53ef820f535640027566d34eb0ae330a0b2431b4c991f074485985c24dda5d28"
+    }
+  ],
+  "unique_partition_images": 13,
+  "unique_partition_bytes": 6157238272,
+  "deduplicated_partition_aliases": 5,
+  "installer_and_restorer_022_included": true,
+  "private_key_included": false,
+  "roundtrip_verified": true,
+  "device_restoration_tested": false,
+  "whole_emmc_backup": false,
+  "scope": "Original P291 images and pre-install userdata, related evidence, installer022 and OEM-restorer022. Files only; no automated flashing."
+}

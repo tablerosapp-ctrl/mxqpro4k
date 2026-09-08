@@ -12,6 +12,7 @@ La base incluye Chrome/WebView 138, inicio y ajustes propios y un gestor de actu
 
 **Próxima etapa, pendiente del OK del usuario:** resolver Home y completar la prueba funcional, definir una capa de producto común sobre bases por perfil y preparar dos recorridos. El primero calificará exhaustivamente un ejemplar de cada variante; el segundo permitirá instalar el resto con identidad individual comprobada y una política de respaldo aprobada. Se propone separar las futuras actualizaciones de APK, motor, contenido y ROM para evitar reinstalaciones innecesarias. [Propuesta completa, PROP-16](docs/PROPUESTA-LOTES-Y-ACTUALIZACIONES.md). Estos cambios todavía no se ejecutan; el contrato actual de seis respaldos se conserva.
 
+- [Respaldo cifrado para GitHub](docs/RESPALDO-GITHUB.md): originales, datos previos y paquetes 0.2.2, con clave privada separada.
 - [Estado](docs/ESTADO.md), [especificación](docs/ESPECIFICACION.md), [roadmap](docs/ROADMAP.md) y [decisiones](docs/DECISIONES.md).
 - [Grafo navegable](docs/index.html), [mapa](docs/MAPA-ARCHIVOS.md), [árbol](docs/ARBOL-ARCHIVOS.txt) y [contrato del grafo](docs/proyecto.json).
 - [Guía de instalación y estado](rom-simplificada/INSTALACION-USB.md), [entrega para Claude/Fable](docs/ENTREGA-FABLE.md) y [repositorio público](https://github.com/tablerosapp-ctrl/mxqpro4k).
