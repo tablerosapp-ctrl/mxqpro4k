@@ -1,5 +1,11 @@
 # Estado operativo
 
+## Vigente · SD sin particiones; elevación Windows cancelada
+
+El respaldo anterior de la SD está guardado. El formato se detuvo tras quitar la partición porque Windows conservó MBR en su estado. El continuador nuevo está listo, pero Windows canceló la solicitud de administrador; el proceso no llegó a iniciarse. No hay una continuación activa. Hace falta volver a mostrar esa solicitud cuando el usuario pueda aceptarla. Kingston sigue conservado. [Detalle y entregable preparado en PC](evidencia/SD-RK3229-C.md). No retirar medios hasta comprobar el cierre y la copia. La guía final aún no está copiada a la SD.
+
+## Antecedente · selección de USB C
+
 ## Vigente · RK3229-C capturado; paso a extraer originales
 
 La copia manual del último Rockchip llegó íntegra: dos ZIP de 41.155 B en total y dos recibos locales conservados y comprobados en PC. Son ficha inicial e inventario de la misma instalación APK. [Hallazgos C](../diagnostico/reconocimiento-20260908-rk3229-manual/HALLAZGOS.md). No necesita repetir reconocimiento. La selección USB funcionó según el usuario, pero la escritura automática no; la transferencia manual está comprobada por la lectura en PC.

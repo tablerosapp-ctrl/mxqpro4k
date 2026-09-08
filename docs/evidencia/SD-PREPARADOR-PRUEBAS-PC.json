@@ -1,0 +1,141 @@
+{
+  "schema": "tvbase-sd-normal-local-tests-1",
+  "passed": true,
+  "tests": 31,
+  "failures": 0,
+  "powershell_version": "5.1.26100.9168",
+  "script_sha256": "06423fbff7695413f5d5d104695b48968e898814ff5c81da25860ee075c99a08",
+  "parse_errors": 0,
+  "sd_accessed": false,
+  "kingston_accessed": false,
+  "main_script_executed": false,
+  "raw_windows_ioctl_executed": false,
+  "storage_cmdlets_executed": false,
+  "limits": "Pruebas de funciones puras y streams en archivos PC ordinarios. No prueban IOCTL real, clear, montaje, particionado ni formato fisico.",
+  "cases": [
+    {
+      "name": "identidad_original_exacta",
+      "passed": true
+    },
+    {
+      "name": "rechaza_kingston",
+      "passed": true
+    },
+    {
+      "name": "rechaza_serial_distinto",
+      "passed": true
+    },
+    {
+      "name": "rechaza_tamano_distinto",
+      "passed": true
+    },
+    {
+      "name": "rechaza_disco_sistema",
+      "passed": true
+    },
+    {
+      "name": "rechaza_disco_boot",
+      "passed": true
+    },
+    {
+      "name": "rechaza_sector_4k",
+      "passed": true
+    },
+    {
+      "name": "rechaza_disco_readonly",
+      "passed": true
+    },
+    {
+      "name": "rechaza_particion_ajena",
+      "passed": true
+    },
+    {
+      "name": "rechaza_offset_original_distinto",
+      "passed": true
+    },
+    {
+      "name": "rechaza_segunda_particion",
+      "passed": true
+    },
+    {
+      "name": "raw_vacio_valido",
+      "passed": true
+    },
+    {
+      "name": "rechaza_raw_con_particion",
+      "passed": true
+    },
+    {
+      "name": "mbr_vacio_valido",
+      "passed": true
+    },
+    {
+      "name": "particion_maxima_nueva_valida",
+      "passed": true
+    },
+    {
+      "name": "rechaza_particion_fuera_disco",
+      "passed": true
+    },
+    {
+      "name": "rechaza_nueva_particion_reducida",
+      "passed": true
+    },
+    {
+      "name": "rechaza_destino_fuera_proyecto",
+      "passed": true
+    },
+    {
+      "name": "compila_helper_csharp_sin_abrir_dispositivos",
+      "passed": true
+    },
+    {
+      "name": "backup_flush_y_dos_relecturas_regular",
+      "passed": true
+    },
+    {
+      "name": "backup_no_sobrescribe",
+      "passed": true
+    },
+    {
+      "name": "zero_solo_prefijo_y_cola_conservada_regular",
+      "passed": true
+    },
+    {
+      "name": "rechaza_longitud_raw_no_alineada",
+      "passed": true
+    },
+    {
+      "name": "rechaza_zero_superior_a_96MiB",
+      "passed": true
+    },
+    {
+      "name": "rechaza_lectura_corta",
+      "passed": true
+    },
+    {
+      "name": "snapshot_permite_tag_vacio",
+      "passed": true
+    },
+    {
+      "name": "respalda_tag_vacio_relee_flush",
+      "passed": true
+    },
+    {
+      "name": "snapshot_deteccion_cambio",
+      "passed": true
+    },
+    {
+      "name": "root_final_rechaza_imagen_antigua",
+      "passed": true
+    },
+    {
+      "name": "root_final_vacio_con_system_volume_information",
+      "passed": true
+    },
+    {
+      "name": "root_rechaza_archivo_inesperado",
+      "passed": true
+    }
+  ]
+}

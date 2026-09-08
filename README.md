@@ -1,5 +1,7 @@
 # TV Base · empezar aquí
 
+**La preparación de la SD sigue pendiente: Windows canceló la solicitud de administrador.** La SD está sin particiones; el continuador y el extractor RK1 están listos. El Kingston se conserva. [Estado actual](docs/ESTADO.md).
+
 **El último Rockchip ya está reconocido: RK3229-C. La copia manual llegó íntegra y quedó guardada en PC.** [Hallazgos C](diagnostico/reconocimiento-20260908-rk3229-manual/HALLAZGOS.md) · [Matriz P291/P271/RK3229-A/B/C](docs/MATRIZ-PERFILES.md). Son tres configuraciones RK distintas aunque compartan nombre comercial y DT; cambian memoria, firmware y radio. Sus API corresponden a Android7.1, pese a las etiquetas11.1/13.0.
 
 **Siguiente: extraer los originales del último C desde su recovery**, que el usuario confirma que puede abrir. El [pendrive ya está preparado y verificado](docs/evidencia/EXTRACCION-RK3229-C.md) con un único plan RK para el extractor ARM32 0.1 existente. No se vuelve a capturar Android ni se instala otra ROM en este paso. La copia de bloques y aceptación por recovery todavía requieren la prueba física; después se devuelve el USB a PC antes de cambiar de aparato. [Contrato de extracción](diagnostico/extractor-recovery-0.1/README.md).

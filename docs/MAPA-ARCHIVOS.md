@@ -15,7 +15,7 @@ flowchart LR
     C_ZIP["Instalador 0.2.2 usado · observado_tv"]
     C_REC["Restaurador022 · verificado_local"]
     C_ENTRY["Entrada 0.9 lograda · observado_tv"]
-    C_USB["Kingston: reconocimiento · observado_tv"]
+    C_USB["SD de carga y Kingston de copias · observado_tv"]
     C_TV["P291: TV Base y WiFi · observado_tv"]
     C_APP["APK del producto · propuesto"]
     C_GESTION["Gestor propio 0.1 · verificado_local"]
@@ -24,7 +24,7 @@ flowchart LR
     C_PRODUCTO["Producto común · propuesto"]
     C_LOTES["Dos recorridos de lote · propuesto"]
     C_RECON["Reconocimiento0.3 · observado_tv"]
-    C_EXTRACT["Extracción recovery0.1 · construido"]
+    C_EXTRACT["Extracción recovery 0.1 / RK1 · construido"]
     C_PERFIL -->|"selecciona"| C_BASE
     C_CHROME -->|"motor admitido"| C_WEB
     C_INICIO -->|"se integra"| C_ROM
@@ -251,9 +251,9 @@ Requisitos: REQ-11.
 - [rom-simplificada/original-p291/entrada-apk/EJECUCION-TV-09.json](../rom-simplificada/original-p291/entrada-apk/EJECUCION-TV-09.json)
 - [docs/evidencia/PREPARACION-ENTRADA-P291-09.md](../docs/evidencia/PREPARACION-ENTRADA-P291-09.md)
 
-### C-USB · Kingston: reconocimiento
+### C-USB · SD de carga y Kingston de copias
 
-**observado_tv**. Kingston con informes y respaldos preservados; nueva preparación añade únicamente plan del últimoRK3229-C y guía para extractorARM32 existente.
+**observado_tv**. SD8GB autorizada para recrear; prefijo y firmware preservados. Kingston32GB se conserva como destino con plan C único entre RK. Preparación actual detallada en recibos.
 
 Requisitos: REQ-01.
 
@@ -282,6 +282,16 @@ Requisitos: REQ-01.
 - [preparacion-usb/reconocimiento-02-estado.json](../preparacion-usb/reconocimiento-02-estado.json)
 - [preparacion-usb/preparar-reconocimiento-03.ps1](../preparacion-usb/preparar-reconocimiento-03.ps1)
 - [preparacion-usb/reconocimiento-03-estado.json](../preparacion-usb/reconocimiento-03-estado.json)
+- [preparacion-usb/preparar-sd-rk3229-c.ps1](../preparacion-usb/preparar-sd-rk3229-c.ps1)
+- [preparacion-usb/entregar-sd-rk3229-c.ps1](../preparacion-usb/entregar-sd-rk3229-c.ps1)
+- [preparacion-usb/sd-rk3229-c-formato-estado.json](../preparacion-usb/sd-rk3229-c-formato-estado.json)
+- [preparacion-usb/tests/test-preparar-sd-rk3229-c.ps1](../preparacion-usb/tests/test-preparar-sd-rk3229-c.ps1)
+- [docs/evidencia/SD-RK3229-C.md](../docs/evidencia/SD-RK3229-C.md)
+- [docs/evidencia/LEEME-SD-RK3229-C.txt](../docs/evidencia/LEEME-SD-RK3229-C.txt)
+- [docs/evidencia/HERRAMIENTA-SD-ROCKCHIP.md](../docs/evidencia/HERRAMIENTA-SD-ROCKCHIP.md)
+- [docs/evidencia/SD-PREPARADOR-PRUEBAS-PC.json](../docs/evidencia/SD-PREPARADOR-PRUEBAS-PC.json)
+- [preparacion-usb/continuar-sd-rk3229-c.ps1](../preparacion-usb/continuar-sd-rk3229-c.ps1)
+- [docs/evidencia/SD-CONTINUACION-PRUEBAS-PC.json](../docs/evidencia/SD-CONTINUACION-PRUEBAS-PC.json)
 
 ### C-TV · P291: TV Base y WiFi
 
@@ -471,9 +481,9 @@ Requisitos: REQ-02, REQ-14, REQ-18.
 - [diagnostico/reconocimiento-20260908-rk3229-manual/HALLAZGOS.md](../diagnostico/reconocimiento-20260908-rk3229-manual/HALLAZGOS.md)
 - [diagnostico/reconocimiento-20260908-rk3229-manual/EVIDENCIA-SANEADA.json](../diagnostico/reconocimiento-20260908-rk3229-manual/EVIDENCIA-SANEADA.json)
 
-### C-EXTRACT · Extracción recovery0.1
+### C-EXTRACT · Extracción recovery 0.1 / RK1
 
-**construido**. Extractor0.1 ARM32 preparado para el último RK3229-C con único plan RK. Recovery accesible segúnusuario; aceptaciónZIP y lectura real pendientes. PlanP271 diferente conservado.
+**construido**. Ejecutable ARM32 0.1 conservado; variante RK1 con firma CNV8b v3/SHA256 comprobada en PC. SD de carga y Kingston destino; aceptación física pendiente.
 
 Requisitos: REQ-11, REQ-18, REQ-19.
 
@@ -504,6 +514,14 @@ Requisitos: REQ-11, REQ-18, REQ-19.
 - [docs/evidencia/LEEME-EXTRACCION-RK3229-C.txt](../docs/evidencia/LEEME-EXTRACCION-RK3229-C.txt)
 - [preparacion-usb/preparar-extraccion-rk3229-c.ps1](../preparacion-usb/preparar-extraccion-rk3229-c.ps1)
 - [preparacion-usb/extraccion-rk3229-c-estado.json](../preparacion-usb/extraccion-rk3229-c-estado.json)
+- [diagnostico/extractor-recovery-rk1/README.md](../diagnostico/extractor-recovery-rk1/README.md)
+- [diagnostico/extractor-recovery-rk1/COMPILACION.json](../diagnostico/extractor-recovery-rk1/COMPILACION.json)
+- [diagnostico/extractor-recovery-rk1/REVISION.json](../diagnostico/extractor-recovery-rk1/REVISION.json)
+- [diagnostico/extractor-recovery-rk1/empaquetar.py](../diagnostico/extractor-recovery-rk1/empaquetar.py)
+- [diagnostico/extractor-recovery-rk1/firma_ota_v3.py](../diagnostico/extractor-recovery-rk1/firma_ota_v3.py)
+- [diagnostico/extractor-recovery-rk1/VerifyWholeZip.java](../diagnostico/extractor-recovery-rk1/VerifyWholeZip.java)
+- [docs/evidencia/RECOVERY-CNV8B-SD.md](../docs/evidencia/RECOVERY-CNV8B-SD.md)
+- [diagnostico/rockchip-sd-20260908/inspeccionar-paquete.py](../diagnostico/rockchip-sd-20260908/inspeccionar-paquete.py)
 
 ## Directorios y cuidado
 
@@ -544,12 +562,12 @@ Requisitos: REQ-11, REQ-18, REQ-19.
 | README.md | 1 | 0.000 |
 | actualizacion-chrome | 51 | 0.417 |
 | analisis-rom | 15 | 1.822 |
-| diagnostico | 251 | 0.019 |
-| docs | 60 | 0.001 |
+| diagnostico | 258 | 0.019 |
+| docs | 66 | 0.001 |
 | dossier-s905l2.html | 1 | 0.000 |
 | images | 1 | 1.352 |
 | platform-tools-latest-windows.zip | 1 | 0.008 |
-| preparacion-usb | 102 | 3.688 |
+| preparacion-usb | 107 | 3.688 |
 | rom-simplificada | 4619 | 14.542 |
 | tools | 18088 | 1.173 |
 

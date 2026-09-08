@@ -32,3 +32,9 @@
 *.xz binary
 *.jks binary
 *.pk8 binary
+
+# Preparadores SD sellados con hashes sobre LF: conservar bytes al clonar.
+/preparacion-usb/preparar-sd-rk3229-c.ps1 text eol=lf
+/preparacion-usb/continuar-sd-rk3229-c.ps1 text eol=lf
+/preparacion-usb/entregar-sd-rk3229-c.ps1 text eol=lf
+/preparacion-usb/tests/test-preparar-sd-rk3229-c.ps1 text eol=lf

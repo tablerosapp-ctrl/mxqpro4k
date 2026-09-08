@@ -1,5 +1,13 @@
 # Decisiones y lecciones
 
+## ADR-35 · SD de carga separada del Kingston y firma RK1
+
+La foto de recovery exige SD y la tarjeta aportada contiene una actualización automática (`fw_update=1`) con loader previo a la partición. El usuario autorizó borrarla. Se prepara una SD normal MBR/FAT32 después de preservar y verificar sus primeros96MiB y auxiliares; la imagen de firmware debe ser idéntica a la ya conservada en PC. Se elimina ese prefijo antes del nuevo layout, sin ejecutar Rockchip SD Firmware Tool ni instalar su firmware. El Kingston queda como destino, conservado.
+
+El recovery CNV8b extraído de la imagen aportada comparte fingerprint con C; no se presume igualdad física de partición. Su clave v3 y certificado RK requieren SHA256, distintos de P291. Se empaqueta el mismo extractor ARM32 0.1 en una variante RK1 nueva y revisada, conservando los releases anteriores. El ELF acredita la ruta fija SD/update.zip: ese nombre sólo se usa en SD y se comprueba byte a byte contra el ZIP RK1. Es una excepción fundamentada a la regla de no renombrar por tanteo de ADR-34.
+
+Los dos medios deben estar conectados antes de entrar a recovery: el ELF monta USB al inicio bajo argc<=1 y lo conserva al instalar un ZIP. Se comprueba ausencia de update.zip/update.img en Kingston para evitar su búsqueda automática. Plan C único entre los RK; devolver capturas a PC antes de cambiar de aparato. No se autoriza una ROM RK por esta preparación, ni se omite una guarda del extractor. [Análisis del recovery](evidencia/RECOVERY-CNV8B-SD.md), [variante RK1](../diagnostico/extractor-recovery-rk1/README.md), [herramienta aportada](evidencia/HERRAMIENTA-SD-ROCKCHIP.md).
+
 ## ADR-34 · Primera extracción RK con selección explícita del equipo
 
 La exportación manual del reconocedor0.3 produjo un inventario íntegro del tercer RK3229. Se conserva como vía válida, con evidencia PC independiente de su recibo local; no se necesita otra iteración del reconocedor para proseguir. El usuario confirma acceso al recovery de ese último equipo C.

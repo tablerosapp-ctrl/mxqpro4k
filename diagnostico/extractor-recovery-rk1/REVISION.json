@@ -1,0 +1,150 @@
+{
+  "schema": "tvbase-extractor-rk1-independent-review-1",
+  "state": "verified_pc_no_blocking_findings",
+  "created_utc": "2026-09-08T22:05:11.331018+00:00",
+  "review_method": "Static recipe review plus independent strict DER walk and direct pow(signature,e,N) with N decoded from recovery res/keys; no signer module imported and no private key opened",
+  "inputs_sha256": {
+    "tools/firmar-ota/testkey.x509.pem": "a4384ba815b9499a5ce349b4e33c1755278873fe2eac150a068823f526e6dbde",
+    "tools/verificacion-apk/java21/jdk-21.0.12.1+1-jre/bin/java.exe": "82051fdab26319d77d20cc0065045d05ec00b3e3d05f44935d7c06b96b621d55",
+    "tools/compilar-android/ecj-3.39.0.jar": "01f5a92ac19bb2b3bf85e295a68f2c73c264369109158b566ce9b490af982948",
+    "diagnostico/extractor-recovery-rk1/empaquetar.py": "3c39468b560edc2a5e6e570e651d088ec0fc09f5b33bf89326771f409f93c284",
+    "diagnostico/extractor-recovery-rk1/firma_ota_v3.py": "8a09a4e6963be53fc3f61ba267c99120fa4ef86ab6d149f62d9d220da945d6be",
+    "diagnostico/extractor-recovery-rk1/VerifyWholeZip.java": "5392c03a15969d3a18ef3406a159869a074a121ea3afbd58cb163fe0a8e016fa"
+  },
+  "package": {
+    "name": "TVBASE-EXTRACTOR-0.1-RK1-ARM32-RECOVERY.zip",
+    "bytes": 1380273,
+    "sha256": "0f7fe7a5f609290f69597c599ac8c72954b4fc7e04957cd27b279a368f060c38"
+  },
+  "signature": {
+    "signed_bytes": 1378654,
+    "signed_region_sha256": "9cc37449dc443442284a22381548e71569892fdd515601dfd45de5f71050f2f9",
+    "comment_bytes": 1617,
+    "pkcs7_bytes": 1549,
+    "rsa_bits": 2048,
+    "exponent": 3,
+    "direct_modular_exponentiation_verified": true,
+    "signed_attributes_present": false
+  },
+  "recovery_trust": {
+    "version": 3,
+    "digest": "SHA256",
+    "modulus_sha256": "e4bb357ac62c64f73383cd8fe62b9dabed4cf9ceb710ae437495a948bddffd8b",
+    "certificate_der_sha256": "cf2ab3818595c4eda08cec72bbe39bc377a30b764a3eebde52536eae01808525",
+    "montgomery_parameters_verified": true
+  },
+  "members": [
+    {
+      "name": "META-INF/com/google/android/update-binary",
+      "bytes": 3276960,
+      "sha256": "05221a82892e3aa6958d128d497c81645f8fdeae5cd494f320385f1e6d060e48"
+    },
+    {
+      "name": "tvbase/extractor.json",
+      "bytes": 2330,
+      "sha256": "b834f550ac42ff0bf50676e75940afd29095f1ff1372d76cbc3173a46adce431"
+    },
+    {
+      "name": "META-INF/com/google/android/updater-script",
+      "bytes": 83,
+      "sha256": "a2189bb0751a05a784cb904976ee8a72c1d4fc32d702060426075d32614bc458"
+    },
+    {
+      "name": "META-INF/com/android/otacert",
+      "bytes": 1440,
+      "sha256": "10a7b524d14750a12b44472524340df6b300f1b648fb63c3b17a161bde1e08d7"
+    }
+  ],
+  "elf": {
+    "bytes": 3276960,
+    "sha256": "05221a82892e3aa6958d128d497c81645f8fdeae5cd494f320385f1e6d060e48",
+    "class_bits": 32,
+    "endian": "little",
+    "machine": "ARM",
+    "type": "ET_EXEC",
+    "flags": "0x5000002",
+    "program_headers": 6,
+    "pt_dynamic": false,
+    "pt_interp": false
+  },
+  "negative_tests": [
+    {
+      "name": "existing signed-content corruption fixture",
+      "rejected": true,
+      "reason": "Direct RSA PKCS1/SHA256 verification failed"
+    },
+    {
+      "name": "existing malformed-footer fixture",
+      "rejected": true,
+      "reason": "Invalid OTA footer"
+    },
+    {
+      "name": "original SHA1 package under v3 policy",
+      "rejected": true,
+      "reason": "Unexpected algorithm"
+    },
+    {
+      "name": "wrong AOSP/P291 modulus",
+      "rejected": true,
+      "reason": "Direct RSA PKCS1/SHA256 verification failed"
+    },
+    {
+      "name": "RSA signature corruption in memory",
+      "rejected": true,
+      "reason": "Direct RSA PKCS1/SHA256 verification failed"
+    },
+    {
+      "name": "ambiguous EOCD in memory",
+      "rejected": true,
+      "reason": "Missing or duplicate EOCD"
+    }
+  ],
+  "metadata": {
+    "changed_fields": [
+      "package_id",
+      "signature_scope"
+    ],
+    "added_fields": [
+      "extractor_binary_unchanged",
+      "package_source_sha256",
+      "package_variant"
+    ],
+    "removed_fields": [],
+    "binary_and_updater_script_identical": true,
+    "compatibility_review": "The sealed main_linux.go does not read tvbase/extractor.json; strictJSON is used for MEDIA and PLANES. Therefore RK1 metadata additions do not enter DisallowUnknownFields. Independent second-agent static review agreed."
+  },
+  "reference": {
+    "url": "https://android.googlesource.com/platform/bootable/recovery/+/android-7.1.2_r8/verifier.cpp",
+    "retrieved_source_sha256": "d07a05fd3cf9e6010617b6a9166475985504f69dd1f782881f5b24952bdf0543",
+    "checked_rules": [
+      "v3 means RSA/e3/SHA256",
+      "signed length excludes EOCD comment length and comment",
+      "footer offsets and unique EOCD",
+      "direct SignerInfo signature OCTET STRING"
+    ]
+  },
+  "nonblocking_observations": [
+    "Java verifier is a complementary PKCS7 check; its EOCD validation is narrower than Python and this independent verifier, which both checked the final EOCD.",
+    "The build fixes and verifies its inputs and preserves prior output; this review did not rerun signing or open the development private key."
+  ],
+  "limitations": [
+    "PC cryptographic verification is not physical stock recovery acceptance.",
+    "Supplied CNV8b recovery fingerprint matches reported C, but no physical recovery hash was acquired.",
+    "The public development key provides compatibility, not exclusive production update security.",
+    "Unchanged extractor 0.1 retains all prior physical/runtime limitations; USB must already be mounted and recognized.",
+    "Recovery itself may write metadata; extractor source opens remain read-only.",
+    "No ROM image, firmware payload, or private key is included in the four-member ZIP."
+  ],
+  "blocking_findings": [],
+  "input_files_unchanged": true,
+  "sd_written": false,
+  "usb_written": false,
+  "tv_contacted": false,
+  "recovery_executed": false,
+  "physical_acceptance": false,
+  "reproduction": {
+    "python_version": "3.12.14",
+    "command": "python -B -X utf8 privado/revision-extractor-rk1-20260908-independiente/verify_independent.py --output privado/<new-review-directory>"
+  },
+  "private_receipt_sha256": "afee607b7cdce6329f1fe3e2687829d75f33293c6f4664072c38cc4140e1eea6"
+}

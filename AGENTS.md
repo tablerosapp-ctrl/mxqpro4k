@@ -1,5 +1,15 @@
 # Continuidad de TV Base
 
+## Vigente · elevación SD cancelada; continuación preparada pero no ejecutada
+
+SD8GB autorizada: respaldo prefijo96MiB/aux verificados, Clear-Disk dejó MBR sin particiones y el preparador abortó por exigir RAW. No volver a ejecutar preparar-sd-rk3229-c.ps1; su recibo failed_preserved es histórico e inmutable. Kingston intacto. PaqueteRK1 y guía terminados y revisados en PC; SD todavía NO entregable.
+
+Continuador separado listo: preparacion-usb/continuar-sd-rk3229-c.ps1, SHA6fb081de1c83f3b7cf75c5b873ac6b1d88026f35b201fef474fc9cc0ba11bd59. La solicitud RunAs para wrapper privado/sd-rk3229-c-continuar-ejecucion-20260908/ejecutar.ps1 terminó con «El usuario ha cancelado la operación». No arrancó el wrapper ni hay instancia pendiente; no se sabe si hubo acción del usuario o timeout. La salida de la consola dijo started=true con pidnull/exit0 por error de manejo del lanzador; NO acredita inicio. Usar ErrorActionPreference=Stop y validarPID en un futuro lanzamiento. Esperar al usuario para volver a mostrar la solicitud nativa. Tras aceptar Windows ejecutará continuación+CheckOnlyentrega+Prepareentrega. Revisar RESULTADO.json en esa carpeta y recibos sd-rk3229-c-continuacion-estado.json / sd-rk3229-c-entrega-estado.json antes de tocar medios. Si falla, conservar estado y analizar; nunca repetir ciegamente.
+
+Al terminar estado completed/código0: ejecutar privado/sd-rk3229-c-continuar-ejecucion-20260908/cerrar-documentacion.py, regenerar/validar grafo y publicar espejo saneado. Si todavía no hay resultado, no asumir formato/copia. Autorización del proyecto ya existe; falta obtener consentimiento nativo de Windows tras cancelarse la solicitud anterior. [Evidencia](docs/evidencia/SD-RK3229-C.md).
+
+## Antecedente · USB anterior a SD
+
 ## Vigente · RK3229-C recibido; primera extracción seleccionada
 
 - Usuario copió manualmente la carpeta a INFORMES/TVBASE-PARA-COPIAR y confirmó que SÍ puede abrir recovery en ese último Rockchip. No pedir otra captura ni repetir APK por rutina. [Hallazgos C](diagnostico/reconocimiento-20260908-rk3229-manual/HALLAZGOS.md), [matriz](docs/MATRIZ-PERFILES.md). DosZIP41155B íntegros: baseline1292B + inventario39863B, una instalación APK; dos recibos.local.json971B preservados inmutables. ImportaciónPC comprobada; recibo local dice usb_copy_verified=false y no se reescribe. Evidencia de transferencia manual es la lecturaPC, no exportación directaAndroid.

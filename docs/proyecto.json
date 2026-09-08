@@ -2,7 +2,7 @@
   "schema_version": 1,
   "title": "TV Base",
   "snapshot": "2026-09-08T21:15:30.393778+00:00",
-  "state": "P291 instalado; P271 y tres variantes RK3229 reconocidos. Copia manual C íntegra; pendrive preparado y verificado para extraer C desde recovery, ejecución física pendiente.",
+  "state": "RK1 verificado en PC. SD respaldada y sin particiones; elevación Windows cancelada, continuador no ejecutado. Kingston conservado.",
   "installed": true,
   "original_tv_backup_confirmed": true,
   "source_of_truth": {
@@ -49,7 +49,11 @@
     "profile_matrix": "docs/MATRIZ-PERFILES.md",
     "current_extraction_delivery": "preparacion-usb/extraccion-rk3229-c-estado.json",
     "recognition_acquisition_summary": "diagnostico/reconocimiento-20260908-rk3229-manual/EVIDENCIA-SANEADA.json",
-    "current_extraction_evidence": "docs/evidencia/EXTRACCION-RK3229-C.md"
+    "current_extraction_evidence": "docs/evidencia/SD-RK3229-C.md",
+    "sd_recovery_analysis": "docs/evidencia/RECOVERY-CNV8B-SD.md",
+    "sd_evidence": "docs/evidencia/SD-RK3229-C.md",
+    "rk1_build": "diagnostico/extractor-recovery-rk1/COMPILACION.json",
+    "rk1_review": "diagnostico/extractor-recovery-rk1/REVISION.json"
   },
   "components": [
     {
@@ -315,9 +319,9 @@
     },
     {
       "id": "C-USB",
-      "label": "Kingston: reconocimiento",
+      "label": "SD de carga y Kingston de copias",
       "state": "observado_tv",
-      "description": "Kingston con informes y respaldos preservados; nueva preparación añade únicamente plan del últimoRK3229-C y guía para extractorARM32 existente.",
+      "description": "SD8GB autorizada para recrear; prefijo y firmware preservados. Kingston32GB se conserva como destino con plan C único entre RK. Preparación actual detallada en recibos.",
       "files": [
         "rom-simplificada/INSTALACION-USB.md",
         "preparacion-usb/rom-012-estado.json",
@@ -343,7 +347,17 @@
         "preparacion-usb/preparar-reconocimiento-02.ps1",
         "preparacion-usb/reconocimiento-02-estado.json",
         "preparacion-usb/preparar-reconocimiento-03.ps1",
-        "preparacion-usb/reconocimiento-03-estado.json"
+        "preparacion-usb/reconocimiento-03-estado.json",
+        "preparacion-usb/preparar-sd-rk3229-c.ps1",
+        "preparacion-usb/entregar-sd-rk3229-c.ps1",
+        "preparacion-usb/sd-rk3229-c-formato-estado.json",
+        "preparacion-usb/tests/test-preparar-sd-rk3229-c.ps1",
+        "docs/evidencia/SD-RK3229-C.md",
+        "docs/evidencia/LEEME-SD-RK3229-C.txt",
+        "docs/evidencia/HERRAMIENTA-SD-ROCKCHIP.md",
+        "docs/evidencia/SD-PREPARADOR-PRUEBAS-PC.json",
+        "preparacion-usb/continuar-sd-rk3229-c.ps1",
+        "docs/evidencia/SD-CONTINUACION-PRUEBAS-PC.json"
       ],
       "x": 3,
       "y": 1,
@@ -600,9 +614,9 @@
     },
     {
       "id": "C-EXTRACT",
-      "label": "Extracción recovery0.1",
+      "label": "Extracción recovery 0.1 / RK1",
       "state": "construido",
-      "description": "Extractor0.1 ARM32 preparado para el último RK3229-C con único plan RK. Recovery accesible segúnusuario; aceptaciónZIP y lectura real pendientes. PlanP271 diferente conservado.",
+      "description": "Ejecutable ARM32 0.1 conservado; variante RK1 con firma CNV8b v3/SHA256 comprobada en PC. SD de carga y Kingston destino; aceptación física pendiente.",
       "files": [
         "diagnostico/extractor-recovery-0.1/COMPILACION.json",
         "diagnostico/extractor-recovery-0.1/LEEME-USB.txt",
@@ -630,7 +644,15 @@
         "docs/evidencia/EXTRACCION-RK3229-C.md",
         "docs/evidencia/LEEME-EXTRACCION-RK3229-C.txt",
         "preparacion-usb/preparar-extraccion-rk3229-c.ps1",
-        "preparacion-usb/extraccion-rk3229-c-estado.json"
+        "preparacion-usb/extraccion-rk3229-c-estado.json",
+        "diagnostico/extractor-recovery-rk1/README.md",
+        "diagnostico/extractor-recovery-rk1/COMPILACION.json",
+        "diagnostico/extractor-recovery-rk1/REVISION.json",
+        "diagnostico/extractor-recovery-rk1/empaquetar.py",
+        "diagnostico/extractor-recovery-rk1/firma_ota_v3.py",
+        "diagnostico/extractor-recovery-rk1/VerifyWholeZip.java",
+        "docs/evidencia/RECOVERY-CNV8B-SD.md",
+        "diagnostico/rockchip-sd-20260908/inspeccionar-paquete.py"
       ],
       "x": 2,
       "y": 3,
@@ -1607,6 +1629,13 @@
       "bytes": 123283,
       "sha256": "41e40007de8f14b37119b7335a4541a4c64d5a325e225a42d706195472047869",
       "scope": "USBcopied_read_verified_Android03physicaltest_pending"
+    },
+    {
+      "name": "TVBASE-EXTRACTOR-0.1-RK1-ARM32-RECOVERY.zip",
+      "path": "privado/extractor-rk1-20260908/TVBASE-EXTRACTOR-0.1-RK1-ARM32-RECOVERY.zip",
+      "bytes": 1380273,
+      "sha256": "0f7fe7a5f609290f69597c599ac8c72954b4fc7e04957cd27b279a368f060c38",
+      "scope": "verified_pc_signature_CNV8b_v3_physical_pending"
     }
   ],
   "protected_paths": [
@@ -1785,9 +1814,9 @@
       ]
     }
   ],
-  "delivery_label": "APK + extractor0.1 copiados y releídos; plan por equipo y ejecución física pendientes",
+  "delivery_label": "SD pendiente de elevación Windows",
   "date_label": "8/9/2026 ART · primer P291 funcionando",
-  "next_step_label": "Capturar con APK en el TV elegido; revisar ZIP y generar su plan en PC antes de extraer originales desde recovery compatible.",
+  "next_step_label": "Usuario disponible → nueva solicitud Windows",
   "public_repository": {
     "url": "https://github.com/tablerosapp-ctrl/mxqpro4k",
     "visibility_requested": "public",
@@ -1947,7 +1976,7 @@
       }
     }
   },
-  "current_instruction": "Recognition0.1 prepared once and read-verified on exact Kingston. Do not repeat preparer or use AccessUSB09/ROM to recognize hardware. First Android capture pending. Preserve and privately import each returned ZIP; no public raw reports.",
+  "current_instruction": "Windows cancelled the RunAs request; continuation did not start, no process is pending. SD remains without partitions. Do not repeat the initial preparer. Ask user availability before showing a new native elevation prompt; validate returned process and receipts, not a shell exit0. Kingston remains unchanged.",
   "encrypted_backup": {
     "state": "published_verified",
     "url": "https://github.com/tablerosapp-ctrl/mxqpro4k/releases/tag/respaldo-p291-20260908",

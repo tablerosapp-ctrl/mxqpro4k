@@ -1,5 +1,9 @@
 # Historial local y publicación pública
 
+## Registro del 8/9/2026 · recovery CNV8b y SD
+
+Se versionan inspector de paquete RKFW/RKAF, variante de firma RK1 del extractor, verificación Java/Python, preparadores SD y documentación del recovery/medio. La herramienta y firmware aportados, el prefijo de la tarjeta y las extracciones permanecen privados. Los recibos anteriores y el respaldo cifrado publicado no se modifican. La publicación usa exclusivamente el espejo saneado.
+
 ## Registro del 8/9/2026 · extractor combinado y revisión de servicios
 
 Nuevas fuentes Go/Python y pruebas del extractor independiente, generador de planes y verificador PC; documentación del P271, matriz de componentes heredados, contrato y recibos saneados. Los ZIP ejecutables y planes/datos por unidad permanecen privados. La publicación usa exclusivamente el espejo saneado; no vuelve a subir ni modifica el respaldo cifrado previo.

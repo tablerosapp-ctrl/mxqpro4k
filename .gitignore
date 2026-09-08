@@ -203,3 +203,11 @@ CLAVE-PRIVADA-RESPALDO-*.txt
 !/diagnostico/reconocedor-0.3/COMPILACION.json
 !/diagnostico/reconocedor-0.3/PRUEBAS-PC.json
 !/diagnostico/reconocedor-0.3/LEEME-USB.txt
+
+# Paquete aportado por usuario: firmware, ejecutables y registros originales locales.
+/Rockchip Create Upgrade Disk Tool v1.53/
+
+# Variante de firma RK1: fuentes y recibos; claves y ZIP siguen privados.
+!/diagnostico/extractor-recovery-rk1/VerifyWholeZip.java
+!/diagnostico/extractor-recovery-rk1/COMPILACION.json
+!/diagnostico/extractor-recovery-rk1/REVISION.json

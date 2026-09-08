@@ -1,0 +1,116 @@
+{
+  "schema": "tvbase-extractor-rk1-build-1",
+  "state": "verified_pc",
+  "created_utc": "2026-09-08T22:00:19.059974+00:00",
+  "package": "TVBASE-EXTRACTOR-0.1-RK1-ARM32-RECOVERY.zip",
+  "bytes": 1380273,
+  "sha256": "0f7fe7a5f609290f69597c599ac8c72954b4fc7e04957cd27b279a368f060c38",
+  "sources": {
+    "diagnostico/extractor-recovery-rk1/empaquetar.py": "3c39468b560edc2a5e6e570e651d088ec0fc09f5b33bf89326771f409f93c284",
+    "diagnostico/extractor-recovery-rk1/firma_ota_v3.py": "8a09a4e6963be53fc3f61ba267c99120fa4ef86ab6d149f62d9d220da945d6be",
+    "diagnostico/extractor-recovery-rk1/VerifyWholeZip.java": "5392c03a15969d3a18ef3406a159869a074a121ea3afbd58cb163fe0a8e016fa"
+  },
+  "original_package_sha256": "1f45405d22193b1e09cc694bc5328be6e8aa7f071e0d77323cacc15611063f08",
+  "extractor_version": "0.1",
+  "extractor_sha256": "05221a82892e3aa6958d128d497c81645f8fdeae5cd494f320385f1e6d060e48",
+  "extractor_unchanged": true,
+  "trust": {
+    "key_version": 3,
+    "rsa_exponent": 3,
+    "rsa_bits": 2048,
+    "digest": "SHA256",
+    "keyfile_sha256": "96a7556cb8f2f377a318def54bfb732a125fead794ad86fbcc9937b8718a36ca",
+    "certificate_sha256": "cf2ab3818595c4eda08cec72bbe39bc377a30b764a3eebde52536eae01808525"
+  },
+  "signature": {
+    "signature_algorithm": "RSA-PKCS1v1.5/SHA256",
+    "signed_bytes": 1378654,
+    "signed_region_sha256": "9cc37449dc443442284a22381548e71569892fdd515601dfd45de5f71050f2f9",
+    "sha256_policy_replay_verified": true,
+    "certificate_sha256": "cf2ab3818595c4eda08cec72bbe39bc377a30b764a3eebde52536eae01808525",
+    "oem_recovery_executed": false
+  },
+  "negative_tests": [
+    {
+      "name": "wrong P291 certificate against recovery key",
+      "rejected": true,
+      "exception": "ValueError"
+    },
+    {
+      "name": "original SHA1 package with RK cert",
+      "rejected": true,
+      "exception": "ValueError"
+    },
+    {
+      "name": "RK package with P291 cert",
+      "rejected": true,
+      "exception": "ValueError"
+    },
+    {
+      "name": "signed content corruption",
+      "rejected": true,
+      "exception": "InvalidSignature"
+    },
+    {
+      "name": "OTA footer corruption",
+      "rejected": true,
+      "exception": "ValueError"
+    }
+  ],
+  "command_logs": [
+    {
+      "file": "java-compile.log",
+      "exit": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "java-positive.log",
+      "exit": 0,
+      "sha256": "6e9d5d4d8ad7e982c9b77d8c0b298f44125bdb27e2f6a2ac367f3865955edb11"
+    },
+    {
+      "file": "java-negative-content.log",
+      "exit": 1,
+      "sha256": "1be91354956bc7da325c67a0555159d25238fd3ca6e3235e3d0c9c8289fb9b25"
+    },
+    {
+      "file": "java-negative-trust.log",
+      "exit": 1,
+      "sha256": "1aea3f72c9f9384c6470d03c7b3fed8a4d0414076ac6af62a2f44019614e7a03"
+    }
+  ],
+  "members": [
+    {
+      "name": "META-INF/com/google/android/update-binary",
+      "bytes": 3276960,
+      "sha256": "05221a82892e3aa6958d128d497c81645f8fdeae5cd494f320385f1e6d060e48"
+    },
+    {
+      "name": "tvbase/extractor.json",
+      "bytes": 2330,
+      "sha256": "b834f550ac42ff0bf50676e75940afd29095f1ff1372d76cbc3173a46adce431"
+    },
+    {
+      "name": "META-INF/com/google/android/updater-script",
+      "bytes": 83,
+      "sha256": "a2189bb0751a05a784cb904976ee8a72c1d4fc32d702060426075d32614bc458"
+    },
+    {
+      "name": "META-INF/com/android/otacert",
+      "bytes": 1440,
+      "sha256": "10a7b524d14750a12b44472524340df6b300f1b648fb63c3b17a161bde1e08d7"
+    }
+  ],
+  "python_verified": true,
+  "openjdk_verified": true,
+  "crc_verified": true,
+  "physical_acceptance": false,
+  "sd_written": false,
+  "usb_written": false,
+  "tv_contacted": false,
+  "limitations": [
+    "Public development key is not production update security",
+    "Recovery host may write its own metadata; extractor opens internal sources read-only",
+    "Binary 0.1 unchanged; no new physical extraction or restoration validation"
+  ]
+}

@@ -92,6 +92,13 @@ mxqpro4k/
 │   │   ├── test_preparar_plan.py
 │   │   ├── test_verificar_captura.py
 │   │   └── verificar-captura.py
+│   ├── extractor-recovery-rk1/
+│   │   ├── COMPILACION.json
+│   │   ├── empaquetar.py
+│   │   ├── firma_ota_v3.py
+│   │   ├── README.md
+│   │   ├── REVISION.json
+│   │   └── VerifyWholeZip.java
 │   ├── fable-20260907/
 │   │   └── resumen-saneado.json
 │   ├── h1-cierre-android/
@@ -217,6 +224,8 @@ mxqpro4k/
 │   │   │   └── analizar-captura08.cpython-312.pyc
 │   │   ├── analizar-captura08.py
 │   │   └── test_captura08.py
+│   ├── rockchip-sd-20260908/
+│   │   └── inspeccionar-paquete.py
 │   ├── android-20260905-142854-a8286d9a/ [32 archivos; 3.3 MB; agrupado]
 │   ├── LEEME.md
 │   ├── recoger-android-adb.ps1
@@ -231,9 +240,11 @@ mxqpro4k/
 │   │   ├── EXTRACCION-RK3229-C.md
 │   │   ├── EXTRACTOR-RECOVERY-01.md
 │   │   ├── git-inicial.json
+│   │   ├── HERRAMIENTA-SD-ROCKCHIP.md
 │   │   ├── INSTALACION-FISICA-P291-022.md
 │   │   ├── INSTALADOR-P291-022.md
 │   │   ├── LEEME-EXTRACCION-RK3229-C.txt
+│   │   ├── LEEME-SD-RK3229-C.txt
 │   │   ├── limpieza-plan.json
 │   │   ├── limpieza-resultado.json
 │   │   ├── mapa-ui.json
@@ -243,12 +254,16 @@ mxqpro4k/
 │   │   ├── RECONOCEDOR-USB-01.md
 │   │   ├── RECONOCEDOR-USB-02.md
 │   │   ├── RECONOCEDOR-USB-03.md
+│   │   ├── RECOVERY-CNV8B-SD.md
 │   │   ├── RECOVERY-P271-ALCANCE.md
 │   │   ├── RECUPERACION-RESPALDO-PC.json
 │   │   ├── REINICIOS-P291-SIN-USB.md
 │   │   ├── RESPALDO-CIFRADO.json
 │   │   ├── RESPALDO-GITHUB-PUBLICADO.json
-│   │   └── ROM-ORIGINAL-P291-020.md
+│   │   ├── ROM-ORIGINAL-P291-020.md
+│   │   ├── SD-CONTINUACION-PRUEBAS-PC.json
+│   │   ├── SD-PREPARADOR-PRUEBAS-PC.json
+│   │   └── SD-RK3229-C.md
 │   ├── herramientas/
 │   │   ├── __pycache__/
 │   │   │   └── publicar-github.cpython-312.pyc
@@ -297,12 +312,14 @@ mxqpro4k/
 │   ├── actualizar-instalador-kingston.ps1
 │   ├── boot-original/ [11 archivos; 0.2 MB; agrupado]
 │   ├── CIERRE-ENTREGA-022.json
+│   ├── continuar-sd-rk3229-c.ps1
 │   ├── entrada-amlogic-20260906-200427/ [2 archivos; 0.0 MB; agrupado]
 │   ├── entrada-amlogic-estado.json
 │   ├── entrada-oem-07-20260907-123446/ [3 archivos; 0.0 MB; agrupado]
 │   ├── entrada-oem-07-estado.json
 │   ├── entrega-original-021.json
 │   ├── entrega-original-022.json
+│   ├── entregar-sd-rk3229-c.ps1
 │   ├── estado-grabacion-anterior-20260904-225502.json
 │   ├── estado-grabacion.json
 │   ├── estado-recuperacion.json
@@ -339,6 +356,7 @@ mxqpro4k/
 │   ├── preparar-reconocimiento-02.ps1
 │   ├── preparar-reconocimiento-03.ps1
 │   ├── preparar-rom-012.ps1
+│   ├── preparar-sd-rk3229-c.ps1
 │   ├── probar-archivo-kingston.ps1
 │   ├── reconocimiento-01-estado.json
 │   ├── reconocimiento-02-estado.json
@@ -350,6 +368,8 @@ mxqpro4k/
 │   ├── REVISION-ORIGINAL-021.json
 │   ├── REVISION-ORIGINAL-022.json
 │   ├── rom-012-estado.json
+│   ├── sd-rk3229-c-formato-estado.json
+│   ├── tests/ [1 archivos; 0.0 MB; agrupado]
 │   ├── update.zip
 │   └── variantes/ [4 archivos; 0.0 MB; agrupado]
 ├── rom-simplificada/

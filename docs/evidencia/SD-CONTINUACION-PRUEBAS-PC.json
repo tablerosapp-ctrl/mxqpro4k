@@ -1,0 +1,12 @@
+{
+  "schema": "tvbase-sd-continuation-review-1",
+  "powershell_version": "5.1.26100.9168",
+  "parse_errors": 0,
+  "mock_checks_passed": 4,
+  "source_functions_loaded": 18,
+  "helper_csharp_compiled": true,
+  "script_sha256": "6fb081de1c83f3b7cf75c5b873ac6b1d88026f35b201fef474fc9cc0ba11bd59",
+  "sd_accessed": false,
+  "real_storage_commands_executed": false,
+  "main_script_executed": false
+}
