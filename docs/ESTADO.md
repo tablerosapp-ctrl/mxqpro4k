@@ -1,5 +1,19 @@
 # Estado operativo
 
+## Vigente · reconocedor 0.1 construido y entregado en Kingston
+
+El usuario autorizó implementar el reconocimiento y preparar el USB para varios TV consecutivos. [Reconocedor](../diagnostico/reconocedor-0.1/README.md) · [Entrega y pruebas](evidencia/RECONOCEDOR-USB-01.md) · [Recibo USB](../preparacion-usb/reconocimiento-01-estado.json).
+
+APK106899B, SHA f631d5a16fa26266276f3be6f7f1e9f924ff95ea26dd922ff18f105022e1d813, paquete `com.tvbase.reconocimiento`, API21+/target28. Es una aplicación normal sin root, ADB, red, reinicio o instalación de ROM. Recoge observaciones Android y copias seleccionadas de archivos estáticos legibles, registra límites y guarda un ZIP único por captura. Nombre sugerido por perfil y UUID local de instalación; no prueba identidad física ni compatibilidad para flashear.
+
+Kingston: nueva carpeta TVBASE-RECONOCIMIENTO con tres archivos verificados e INFORMES vacío; archivos anteriores conservados. Preparación única terminó código0. No se repite ni se formatea. Ya se indicó expulsarlo de Windows; no se observó esa retirada ni se acredita flush de volumen. Primera ejecución física de la aplicación y sus proveedores USB pendiente.
+
+Próximo paso: una captura en el P291 conocido, luego otros Android si el primer guardado funciona; cada resultado permanece separado. Ante exportación fallida usar la copia local terminada, no repetirlecturas por rutina. Al volver USB a PC, verificar/importar ZIP a un directorio privado nuevo. Un error de acceso se considera dato pendiente, no ausencia de hardware. Cambios Home/ROM/servidor no incluidos en esta entrega.
+
+La espera de OK de las secciones inferiores fue superada para reconocimiento por la instrucción posterior del usuario. Las evidencias de instalación del P291 permanecen vigentes con sus límites.
+
+## Antecedente · planificación previa al reconocedor
+
 ## Vigente · 8/9/2026, P291 funciona sin USB; reconocimiento como siguiente entregable
 
 El respaldo también está [publicado cifrado en GitHub](RESPALDO-GITHUB.md): nueve partes y manifiesto verificados, con la clave privada separada en esta PC. Se probó recuperar los archivos en PC; esto no acredita restauración física del TV.

@@ -1,5 +1,11 @@
 # Especificación del producto y aceptación
 
+## Reconocimiento autorizado · implementación 0.1
+
+REQ-18 tiene [APK y formato implementados](../diagnostico/reconocedor-0.1/README.md), pruebas PC y [entrega USB verificada](evidencia/RECONOCEDOR-USB-01.md). Aceptación física pendiente: capturas P291/P271 diferenciadas, acceso parcial explícito y exportación real desde Android. No hay reconocimiento privilegiado o instalación Rockchip acreditados. La autorización actual reemplaza la espera de OK para este trabajo; otros cambios de producto/ROM/servidor permanecen propuestos.
+
+**VAL-11 · Reconocimiento e informes por unidad.** APK en Android sin root/ADB, ficha por instalación y sesión, P291/P271 diferenciados con su evidencia, desconocidos sin autorización de instalación; omisiones/denegaciones explícitas. ZIP local y exportación real verificados por lectura, contenido anterior conservado, fallo USB recuperable sin repetir captura terminada y importación privada comprobada. Pruebas PC y entrega Windows son parciales respecto de esta aceptación física. Relaciona REQ-18 y C-RECON/C-USB/C-PERFIL.
+
 ## Actualización de aceptación · instalación física y siguiente etapa propuesta
 
 REQ-01 tiene instalación en memoria interna y primer arranque observados, ampliados por [varios reinicios sin pendrive informados por el usuario](evidencia/REINICIOS-P291-SIN-USB.md); no se especificó el tipo de ciclo. VAL-06 tiene seis respaldos guardados y adquiridos en PC, además de recibos verificados de formato, montaje vacío de solo lectura y cinco escrituras. VAL-07 es parcial: hay una foto del inicio, conexión WiFi y reinicios reportados; faltan comprobar el proveedor WebView, el hardware y la estabilidad medida. [Evidencia física](evidencia/INSTALACION-FISICA-P291-022.md).

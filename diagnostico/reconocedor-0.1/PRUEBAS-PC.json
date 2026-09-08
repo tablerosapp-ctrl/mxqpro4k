@@ -1,0 +1,31 @@
+{
+  "state": "passed_pc_only",
+  "date_utc": "2026-09-08T17:42:08.620193+00:00",
+  "apk_sha256": "f631d5a16fa26266276f3be6f7f1e9f924ff95ea26dd922ff18f105022e1d813",
+  "source_sha256": {
+    "diagnostico/reconocedor-0.1/src/AndroidManifest.xml": "93235b5ea8bd15533aca023ae6f70e5fff3b3722aeeea9fe3c9149d999c815bf",
+    "diagnostico/reconocedor-0.1/src/FileCollector.java": "8e97214948ca98e8c6a4e6292aaf9b882aefb52909261e4e2c1ed729d53ac634",
+    "diagnostico/reconocedor-0.1/src/HardwareCollector.java": "4eca474c2bca6f12eecb350c9aec5469215508a14c6b1d785ecddde73cdf7c5d",
+    "diagnostico/reconocedor-0.1/src/MainActivity.java": "2206a7414435469d1085420e2681b9921c5c13ed55730b1d04e88323b5d77765",
+    "diagnostico/reconocedor-0.1/src/ReportArchive.java": "d17b733e324fbc70908523181ec67d247151b394447b50ff782568df2dc79dd4",
+    "diagnostico/reconocedor-0.1/src/UsbStore.java": "89f76a19fd591381e27a069ac41dfa84352cc384494e11b534b0754746408a38"
+  },
+  "importer_unittest_methods_passed": 19,
+  "actual_java_zip_python_import_verified": true,
+  "archive_binary_fixture_bytes": 4194304,
+  "unsafe_archive_paths_rejected": 6,
+  "archive_overwrite_rejected": true,
+  "importer_source_sha256": "1190d43c58f8b87f87013b0f04e7f455cd66a3fb18173f82c0115d11fbae75fc",
+  "host_json_library": "org.json:json:20240303 (host only, not in APK)",
+  "reviews": [
+    "Independent collector review and SDK28 compilation",
+    "Independent exporter review: classified fsync failures, re-export, local directory sync and preferences commit"
+  ],
+  "limitations": [
+    "No Android UI/USB filesystem test",
+    "No full firmware or driver backup claim",
+    "No performance or malware certification",
+    "Truncated export sidecar requires PC review; verified ZIP retained"
+  ],
+  "usb_delivery_receipt": "preparacion-usb/reconocimiento-01-estado.json"
+}

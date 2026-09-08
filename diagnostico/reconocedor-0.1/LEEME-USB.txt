@@ -1,0 +1,43 @@
+TV BASE - PENDRIVE DE RECONOCIMIENTO 0.1
+
+Usar en cada TV box con Android 5 o posterior que permita instalar APK.
+No usar AccesoUSB-0.9 ni los ZIP P291 para reconocer otros equipos.
+
+1. Conectar el pendrive al TV box, encender Android y abrir Archivos.
+2. Entrar a TVBASE-RECONOCIMIENTO e instalar Reconocimiento-TVBase-0.1.apk.
+3. Abrir Reconocimiento TV Base. Aceptar acceso a archivos si lo solicita.
+4. Pulsar Capturar y guardar este equipo.
+   El nombre es automatico. Opcionalmente puede escribirse un nombre antes.
+5. Si necesita seleccionar destino, pulsar Elegir pendrive, elegir la carpeta
+   TVBASE-RECONOCIMIENTO de este USB y aceptar Usar esta carpeta / Permitir.
+   Si la captura local ya termino, usar Volver a guardar la ultima captura.
+6. Esperar GUARDADO Y RELEIDO EN EL PENDRIVE. La copia de bibliotecas puede
+   tardar varios minutos. Dejar la aplicacion abierta y el TV encendido.
+7. Expulsar el almacenamiento USB desde Android antes de retirarlo.
+8. Pasar al siguiente TV y repetir. No borrar INFORMES ni formatear.
+
+Cada captura crea un ZIP distinto en TVBASE-RECONOCIMIENTO/INFORMES.
+Ejemplo de nombre: TVBASE-p291-<equipo>-<captura>.zip.
+P291 es un perfil candidato, no autorizacion para instalar una ROM.
+Dos TV del mismo modelo tienen identificadores distintos de aplicacion.
+Reinstalar Android o borrar datos de la aplicacion puede cambiar ese ID.
+
+Se guardan datos de Android/hardware, codecs, entradas, WebView usado por
+esta aplicacion, GPU cuando responde, archivos accesibles de drivers,
+bibliotecas/configuraciones seleccionadas y arbol de dispositivos.
+El informe distingue datos declarados, denegados, omitidos y limites.
+No usa Internet, root ni ADB; no reinicia, no cambia radios ni instala ROM.
+No es una copia completa de la memoria ni certifica ausencia de malware.
+Los datos protegidos requieren luego una captura especifica del equipo.
+
+Si falla guardar, conservar el mensaje. La ultima captura local terminada
+puede copiarse otra vez sin repetir lecturas. Los .partial no son informes
+terminados y no deben renombrarse manualmente a .zip. No se sobrescriben
+capturas anteriores. Si se llena el USB, volver a la PC para conservarlas.
+
+Los informes y binarios originales son privados. No subirlos sin sanear.
+Para revision, devolver el pendrive a esta PC con todos los ZIP acumulados.
+
+Esta primera entrega esta compilada/verificada en PC; falta la primera
+prueba real de la APK y de escritura desde cada proveedor Android.
+No dar por compatibles todos los Amlogic o Rockchip por instalar esta APK.

@@ -122,6 +122,28 @@ mxqpro4k/
 │   ├── primer-tv-update-20260907-1326/
 │   │   ├── HALLAZGOS.md
 │   │   └── resumen-saneado.json
+│   ├── reconocedor-0.1/
+│   │   ├── __pycache__/
+│   │   │   ├── importar-informes.cpython-312.pyc
+│   │   │   └── test_importar_informes.cpython-312.pyc
+│   │   ├── src/
+│   │   │   ├── AndroidManifest.xml
+│   │   │   ├── FileCollector.java
+│   │   │   ├── HardwareCollector.java
+│   │   │   ├── MainActivity.java
+│   │   │   ├── ReportArchive.java
+│   │   │   └── UsbStore.java
+│   │   ├── tests/
+│   │   │   ├── ArchiveHarness.java
+│   │   │   └── test_archive.py
+│   │   ├── COMPILACION.json
+│   │   ├── compilar.py
+│   │   ├── CONTRATO-INFORMES.md
+│   │   ├── importar-informes.py
+│   │   ├── LEEME-USB.txt
+│   │   ├── PRUEBAS-PC.json
+│   │   ├── README.md
+│   │   └── test_importar_informes.py
 │   ├── respaldo-p291-lan/
 │   │   └── EVIDENCIA-SANEADA.json
 │   ├── revision-postintento/
@@ -149,6 +171,7 @@ mxqpro4k/
 │   │   ├── PARTICIONES-AMLOGIC-P291-022.md
 │   │   ├── PREPARACION-ENTRADA-P291-09.md
 │   │   ├── publicacion-github.json
+│   │   ├── RECONOCEDOR-USB-01.md
 │   │   ├── RECUPERACION-RESPALDO-PC.json
 │   │   ├── REINICIOS-P291-SIN-USB.md
 │   │   ├── RESPALDO-CIFRADO.json
@@ -234,8 +257,10 @@ mxqpro4k/
 │   ├── preparar-original-021.ps1
 │   ├── preparar-original-022.ps1
 │   ├── preparar-postintento-08.ps1
+│   ├── preparar-reconocimiento-01.ps1
 │   ├── preparar-rom-012.ps1
 │   ├── probar-archivo-kingston.ps1
+│   ├── reconocimiento-01-estado.json
 │   ├── recuperacion-20260905-000135/ [6 archivos; 0.0 MB; agrupado]
 │   ├── recuperar-kingston-windows.ps1
 │   ├── revision-011-20260906-192456/ [2 archivos; 0.0 MB; agrupado]
@@ -820,6 +845,7 @@ mxqpro4k/
 │   ├── instalador-go/ [15641 archivos; 325.9 MB; agrupado]
 │   ├── mksh-audit/ [16 archivos; 4.2 MB; agrupado]
 │   ├── platform-tools/ [14 archivos; 17.5 MB; agrupado]
+│   ├── pruebas-reconocedor-json/ [2 archivos; 0.1 MB; agrupado]
 │   ├── rufus-4.15p.exe
 │   └── verificacion-apk/ [488 archivos; 407.7 MB; agrupado]
 ├── .gitattributes

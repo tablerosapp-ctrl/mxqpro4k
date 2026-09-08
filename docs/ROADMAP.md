@@ -1,5 +1,11 @@
 # Roadmap y propuestas
 
+## Avance autorizado · paso 0 entregado para primera prueba
+
+[Reconocimiento0.1](../diagnostico/reconocedor-0.1/README.md) está compilado/verificado en PC y copiado/releído en Kingston. El usuario autorizó esta construcción y uso secuencial. Falta comprobar una captura física y su exportación Android, primero P291 y después P271/otros; no se declara cerrado REQ-18 por los tests PC. No hay adaptador privilegiado universal ni instalador rápido nuevo. [Entrega](evidencia/RECONOCEDOR-USB-01.md).
+
+El orden de abajo se conserva, con paso0 ahora construido y pendiente de aceptación física. La espera anterior de OK se mantiene para cambios de ROM, Home, servidor y modo rápido, no para el reconocimiento recién autorizado.
+
 ## Vigente · plataforma instalada; próximos cambios esperan OK
 
 El usuario confirmó varios reinicios correctos sin pendrive. [Registro](evidencia/REINICIOS-P291-SIN-USB.md). El orden operativo siguiente cambia según [PROP-17](PLAN-RECONOCIMIENTO-Y-PRODUCTO.md); los IDs M0–M7 se conservan para no romper la historia.

@@ -1,5 +1,16 @@
 # Continuidad de TV Base
 
+## Vigente · reconocedor 0.1 entregado el 8/9/2026
+
+- El usuario dio OK explícito para construir el reconocedor y preparar Kingston para varios TV secuenciales. Esta autorización sustituye la espera anterior para ese alcance; no autoriza aquí otra ROM, arreglo Home o activación del servidor. Leer [reconocedor](diagnostico/reconocedor-0.1/README.md) y [entrega](docs/evidencia/RECONOCEDOR-USB-01.md).
+- APK nueva `com.tvbase.reconocimiento`, 0.1, API21+, Java/SDK28: 106899B, SHA f631d5a16fa26266276f3be6f7f1e9f924ff95ea26dd922ff18f105022e1d813. Compilada/firma verificadas PC, fuentes en `diagnostico/reconocedor-0.1/src`, recibo COMPILACION.json. No root/ADB/INTERNET/reinicio/flash; captura normalAPK y archivos estáticos accesibles. No es respaldo completo de ROM ni certifica malware/driver en funcionamiento.
+- Kingston identificado exactamente, -CheckOnly y UNA preparación -Prepare con código0. Nueva carpeta `TVBASE-RECONOCIMIENTO`: APK/LEEME/MEDIA e INFORMES vacío; tres archivos copiados, Flush(true) y SHA releído. 197 archivos anteriores SHA verificados y siete grandes por metadatos, inventario preservado; no formato/limpieza. [Recibo](preparacion-usb/reconocimiento-01-estado.json). No volver a ejecutar preparador, que rechaza carpeta/recibo existente. Expulsión Windows indicada; no afirmar flushvolumen o retirada física comprobados.
+- Flujo: instalar la APK en cada Android, capturar, selectorUSB si hace falta, esperar GUARDADO Y RELEÍDO y expulsar desdeAndroid. Carpeta acumula ZIP por perfil candidato/UUID de instalación/UUID de captura. Perfil P291/P271/Rockchip inferido nunca autoriza instalar; datos desconocidos/denegados se conservan como tales. No usar AccesoUSB09/ZIPP291 para reconocimiento.
+- Física de APK/exportaciónAndroid pendiente. PruebasPC:19métodos importador y ZIPrealJava→lectorPython, seis nombres inseguros rechazados y sobrescritura rechazada. Nunca afirmar captura delTV por esas pruebas. `importar-informes.py --source <INFORMES> --output <nuevo-directorio-del-proyecto>` conserva copias privadas, sin extraer ni borrar origen. No publicarZIP de capturas.
+- Si fallaexportación conservarcopia local y usar Volver a guardar; .partial no es ZIP final. Si recibo .export.json quedó truncado, revisar enPC sin repetircaptura ni reescribirautomáticamente. Fsync solo tolera falta de soporte explícita; EIO real falla. CapturaWindows/Android diferentes. Fuentes/compilación/entregas selladas: futurascorrecciones requieren nueva versión/recibo.
+
+## Antecedente · planificación antes de autorizar el reconocedor
+
 ## Estado que prevalece · 8/9/2026, instalación física exitosa
 
 - Nuevo informe del usuario: varios reinicios correctos sin pendrive; [registro separado](docs/evidencia/REINICIOS-P291-SIN-USB.md). No insistir en que falta el primer arranque sin USB. No informó cantidad ni tipo de ciclo: no atribuir prueba de corte de alimentación ni recuperación.

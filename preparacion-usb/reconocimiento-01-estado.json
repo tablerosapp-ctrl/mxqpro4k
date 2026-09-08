@@ -1,0 +1,50 @@
+{
+  "schema": "tvbase-recognition-usb-delivery-1",
+  "state": "verified",
+  "version": "0.1",
+  "created_at": "2026-09-08T14:38:52.0965532-03:00",
+  "completed_at": "2026-09-08T14:38:56.0490026-03:00",
+  "exit_code": 0,
+  "compilation_receipt_sha256": "9e50ed8dca9b1e63c805b26044d63aecf99a7b4ed6ddaf140cab86c038164188",
+  "source_files_checked": 6,
+  "files": [
+    {
+      "name": "MEDIA.json",
+      "bytes": 99,
+      "sha256": "ce7c781d3c8f37ae81b08750fe770f7f00c0635b44d65641ac403541bd99793b",
+      "file_flush_verified": true,
+      "readback_verified": true
+    },
+    {
+      "name": "Reconocimiento-TVBase-0.1.apk",
+      "bytes": 106899,
+      "sha256": "f631d5a16fa26266276f3be6f7f1e9f924ff95ea26dd922ff18f105022e1d813",
+      "file_flush_verified": true,
+      "readback_verified": true
+    },
+    {
+      "name": "LEEME.txt",
+      "bytes": 2542,
+      "sha256": "8aba6d7b8c6612c85b94f8499b1ebe6cc4552504dca6aa2247c0689685647784",
+      "file_flush_verified": true,
+      "readback_verified": true
+    }
+  ],
+  "existing_inventory_preserved": true,
+  "old_small_files_sha_verified": 197,
+  "old_large_files_metadata_verified": 7,
+  "old_large_files_content_rehashed": false,
+  "small_file_limit_bytes": 67108864,
+  "before_file_bytes": 7578166330,
+  "after_file_bytes": 7578275870,
+  "free_bytes_after": 23344152576,
+  "reports_directory_empty": true,
+  "android_tested": false,
+  "android_usb_export_tested": false,
+  "tv_contacted": false,
+  "format_requested": false,
+  "repair_requested": false,
+  "existing_files_removed": 0,
+  "safe_removal_pending": true,
+  "volume_flush_verified": false
+}

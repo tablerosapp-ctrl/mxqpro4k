@@ -121,3 +121,11 @@ Se propone una aplicación de reconocimiento sobre Android y adaptadores de lect
 PROP-17 y REQ-18 amplían PROP-16: la capa común y los contratos se diseñan desde el inicio; un catálogo/perfiles firmados sirve a USB e Internet, con ejecutores separados para APK, contenido y ROM. El manifiesto actual no admite perfiles ni USB y necesita una versión nueva, sin relajar verificaciones. Una actualización conservadora no reutiliza el formateo de conversión OEM. Se miden video, recursos y tráfico antes de atribuir mejoras o certificar limpieza. [Plan completo](PLAN-RECONOCIMIENTO-Y-PRODUCTO.md).
 
 La implementación y las pruebas físicas siguen pendientes del OK pedido por el usuario. Esta revisión documenta el diseño y la nueva observación, sin cambios en TV, USB, servidor o artefactos sellados.
+
+## ADR-30 · Reconocedor normal Android autorizado y capturas secuenciales
+
+El usuario dio OK para implementar el paso0 y preparar Kingston, con distintos TV que irá conectando en secuencia. Se construye Reconocimiento0.1 como APK normal/API21+, sin root/ADB/red, que guarda una captura única por pasada y datos accesibles con límites explícitos. Identidad local de instalación, perfil candidato y evidencia se mantienen separados: el nombre P291 no autoriza instalar.
+
+Se conserva todo el contenido previo del USB. La carpeta nueva contiene APK/guía/marcador y acumula ZIP en INFORMES. Copia local, manifiesto/hash, relectura y recibo por transporte permiten revisar exportaciones; un archivo parcial no se convierte en éxito. El importadorPC no extrae ni ejecuta drivers, y almacena datos privados. [Entrega, revisión y pruebas](evidencia/RECONOCEDOR-USB-01.md).
+
+La autorización no activa servidor, modifica ROM ni corrige Home. La captura física y escritura desde Android siguen pendientes al entregar; no se declara reconocimiento completo de toda placa o respaldo de la ROM. Fuentes/entrega0.1 se conservan para comparar con los ZIP que devuelva el usuario.

@@ -1,5 +1,9 @@
 # Mensaje para Fable 5.1 en Claude Desktop
 
+## Reconocedor 0.1 implementado y entregado
+
+El usuario autorizó empezar. [Entrega](evidencia/RECONOCEDOR-USB-01.md): APK normal API21+ y formato de capturas secuenciales, ya copiados/releídos en Kingston; primera ejecución Android pendiente. [Fuentes y límites](../diagnostico/reconocedor-0.1/README.md). El importador verifica ZIP/manifiesto/tamaños/CRC/SHA sin extraer, conserva copias privadas y no convierte un perfil candidato en permiso de instalación. Las fuentes y el recibo vinculan la APK exacta; conservar esta versión para comparar con próximos informes. No publicar capturas/binarios crudos.
+
 ## Resultado físico y trabajo siguiente, pendiente de OK
 
 **Nuevo alcance del 8/9/2026:** el usuario confirma varios reinicios correctos sin pendrive. [Registro](evidencia/REINICIOS-P291-SIN-USB.md). [PROP-17](PLAN-RECONOCIMIENTO-Y-PRODUCTO.md) reordena el siguiente trabajo: reconocimiento sobre Android para varias familias, calificación P291/P271/Rockchip, capa común con logo y catálogo firmado compartido por USB/Internet. Se requieren mediciones de proveedor WebView en la APK, VP9/alfa/canvas, recursos y tráfico. No hay adaptación Rockchip ni actualización remota de ROM implementadas. Las revisiones de código confirman piezas reutilizables, no un diagnóstico universal ya listo.

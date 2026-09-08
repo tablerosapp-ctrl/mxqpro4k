@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "title": "TV Base",
-  "snapshot": "2026-09-08T17:09:11.640320+00:00",
+  "snapshot": "2026-09-08T17:42:08.620193+00:00",
   "state": "P291 con TV Base: WiFi y varios reinicios sin USB informados. Home pendiente; reconocimiento, producto común y actualizaciones por perfil propuestos.",
   "installed": true,
   "original_tv_backup_confirmed": true,
@@ -36,7 +36,10 @@
     "encrypted_backup": "docs/RESPALDO-GITHUB.md",
     "encrypted_backup_receipt": "docs/evidencia/RESPALDO-GITHUB-PUBLICADO.json",
     "next_stage_plan": "docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md",
-    "repeated_boot_user_report": "docs/evidencia/REINICIOS-P291-SIN-USB.md"
+    "repeated_boot_user_report": "docs/evidencia/REINICIOS-P291-SIN-USB.md",
+    "recognition": "diagnostico/reconocedor-0.1/README.md",
+    "recognition_delivery": "preparacion-usb/reconocimiento-01-estado.json",
+    "recognition_evidence": "docs/evidencia/RECONOCEDOR-USB-01.md"
   },
   "components": [
     {
@@ -300,9 +303,9 @@
     },
     {
       "id": "C-USB",
-      "label": "Respaldos conservados",
+      "label": "Kingston: reconocimiento",
       "state": "observado_tv",
-      "description": "199 archivos guardados y verificados en PC, incluidos seis respaldos. La adquisición no escribió al USB.",
+      "description": "Nueva carpeta de reconocimiento entregada; capturas anteriores y respaldos preservados. Tres archivos verificados, primer guardado Android pendiente.",
       "files": [
         "rom-simplificada/INSTALACION-USB.md",
         "preparacion-usb/rom-012-estado.json",
@@ -321,7 +324,10 @@
         "diagnostico/primer-tv-instalado-20260908/HALLAZGOS.md",
         "diagnostico/primer-tv-instalado-20260908/resumen-saneado.json",
         "diagnostico/primer-tv-instalado-20260908/adquirir-usb.ps1",
-        "diagnostico/primer-tv-instalado-20260908/verificar-adquisicion.py"
+        "diagnostico/primer-tv-instalado-20260908/verificar-adquisicion.py",
+        "preparacion-usb/preparar-reconocimiento-01.ps1",
+        "preparacion-usb/reconocimiento-01-estado.json",
+        "docs/evidencia/RECONOCEDOR-USB-01.md"
       ],
       "x": 3,
       "y": 1,
@@ -505,14 +511,27 @@
     },
     {
       "id": "C-RECON",
-      "label": "Reconocimiento Android",
-      "state": "propuesto",
-      "description": "APK e informes comparables por familia y nivel de acceso. No arranque USB universal; sin adaptador Rockchip implementado. Reutilización de lecturas requiere revisión.",
+      "label": "Reconocimiento0.1",
+      "state": "construido",
+      "description": "APK normal API21+ con informes secuenciales, archivos accesibles y límites. Entregada/releída en Kingston; Android físico pendiente, sin root/ADB/red.",
       "files": [
-        "docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md",
-        "diagnostico/recoger-android-adb.ps1",
-        "diagnostico/recoger-hardware-linux.sh",
-        "diagnostico/revision-postintento/analizar-captura08.py"
+        "diagnostico/reconocedor-0.1/README.md",
+        "docs/evidencia/RECONOCEDOR-USB-01.md",
+        "diagnostico/reconocedor-0.1/CONTRATO-INFORMES.md",
+        "diagnostico/reconocedor-0.1/LEEME-USB.txt",
+        "diagnostico/reconocedor-0.1/COMPILACION.json",
+        "diagnostico/reconocedor-0.1/PRUEBAS-PC.json",
+        "diagnostico/reconocedor-0.1/compilar.py",
+        "diagnostico/reconocedor-0.1/importar-informes.py",
+        "diagnostico/reconocedor-0.1/test_importar_informes.py",
+        "diagnostico/reconocedor-0.1/tests/ArchiveHarness.java",
+        "diagnostico/reconocedor-0.1/tests/test_archive.py",
+        "diagnostico/reconocedor-0.1/src/AndroidManifest.xml",
+        "diagnostico/reconocedor-0.1/src/FileCollector.java",
+        "diagnostico/reconocedor-0.1/src/HardwareCollector.java",
+        "diagnostico/reconocedor-0.1/src/MainActivity.java",
+        "diagnostico/reconocedor-0.1/src/ReportArchive.java",
+        "diagnostico/reconocedor-0.1/src/UsbStore.java"
       ],
       "x": 0,
       "y": 3,
@@ -643,6 +662,11 @@
       "source": "C-RECON",
       "target": "C-PRODUCTO",
       "relation": "propone contrato de capacidades"
+    },
+    {
+      "source": "C-RECON",
+      "target": "C-USB",
+      "relation": "entrega APK y acumula informes"
     }
   ],
   "requirements": [
@@ -812,7 +836,7 @@
         "C-PERFIL",
         "C-LOTES"
       ],
-      "state": "propuesto",
+      "state": "construido",
       "spec": "docs/ESPECIFICACION.md"
     }
   ],
@@ -1190,6 +1214,16 @@
         "C-GESTION"
       ],
       "state": "propuesto"
+    },
+    {
+      "id": "ADR-30",
+      "file": "docs/DECISIONES.md",
+      "components": [
+        "C-RECON",
+        "C-USB",
+        "C-PERFIL"
+      ],
+      "state": "construido"
     }
   ],
   "validations": [
@@ -1295,6 +1329,15 @@
         "REQ-09",
         "REQ-14"
       ]
+    },
+    {
+      "id": "VAL-11",
+      "file": "docs/ESPECIFICACION.md",
+      "state": "pendiente",
+      "requirements": [
+        "REQ-18"
+      ],
+      "note": "APK/ZIP/importador y entrega Windows verificados PC. Faltan capturas Android P291/P271 y exportación real, errores/accesos parciales explícitos."
     }
   ],
   "artifacts": [
@@ -1392,6 +1435,13 @@
       "bytes": 4412,
       "sha256": "4c4d6586285b36415f0dd7eb12499d9c8970d4f1b21d85647726c85dd1784320",
       "scope": "usb_copied_read_verified_usb_subsequently_detected_in_tv"
+    },
+    {
+      "name": "Reconocimiento-TVBase-0.1.apk",
+      "path": "diagnostico/reconocedor-0.1/privado/build-20260908-173659-963692/Reconocimiento-TVBase-0.1.apk",
+      "bytes": 106899,
+      "sha256": "f631d5a16fa26266276f3be6f7f1e9f924ff95ea26dd922ff18f105022e1d813",
+      "scope": "usb_copied_read_verified_android_first_capture_pending"
     }
   ],
   "protected_paths": [
@@ -1570,9 +1620,9 @@
       ]
     }
   ],
-  "delivery_label": "Instalación 0.2.2 completada; seis respaldos y registros adquiridos en PC",
+  "delivery_label": "Reconocimiento0.1 copiado y releído; informes secuenciales pendientes de primera captura Android",
   "date_label": "8/9/2026 ART · primer P291 funcionando",
-  "next_step_label": "Paso 0 propuesto: reconocimiento sobre Android. Producto común, auditoría y versiones USB/Internet por perfil; implementación espera OK.",
+  "next_step_label": "Reconocimiento0.1 listo en Kingston. Instalar/capturar en P291, luego otros Android; guardar ZIP por equipo y revisar en PC.",
   "public_repository": {
     "url": "https://github.com/tablerosapp-ctrl/mxqpro4k",
     "visibility_requested": "public",
@@ -1611,21 +1661,23 @@
     "reported_restart_type": "not_specified"
   },
   "authorization_for_next_changes": {
-    "state": "awaiting_user_ok",
+    "state": "recognition_build_and_usb_authorized",
     "allowed_now": [
-      "read_usb",
       "preserve_evidence",
       "local_review",
       "documentation",
-      "sanitized_git_publication"
+      "sanitized_git_publication",
+      "build_recognition_apk",
+      "prepare_recognition_usb",
+      "collect_accessible_hardware_reports"
     ],
     "not_executed": [
       "home_fix",
-      "tv_tests",
       "new_rom",
       "lot_installer",
       "remote_update_activation"
-    ]
+    ],
+    "scope": "User approved step0 and sequential USB reports; no new ROM or remote server changes."
   },
   "issues": [
     {
@@ -1730,7 +1782,7 @@
       }
     }
   },
-  "current_instruction": "Record repeated successful boots without USB as user report. Proposed next deliverable: Android recognition with explicit access tiers; shared product and signed per-profile releases for USB/Internet. Documentation only until user OK for implementation/device tests.",
+  "current_instruction": "Recognition0.1 prepared once and read-verified on exact Kingston. Do not repeat preparer or use AccessUSB09/ROM to recognize hardware. First Android capture pending. Preserve and privately import each returned ZIP; no public raw reports.",
   "encrypted_backup": {
     "state": "published_verified",
     "url": "https://github.com/tablerosapp-ctrl/mxqpro4k/releases/tag/respaldo-p291-20260908",
@@ -1744,7 +1796,7 @@
     "proposal": "PROP-17",
     "state": "propuesto",
     "file": "docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md",
-    "first_deliverable": "Android recognition from USB with comparable reports and explicit access levels",
+    "first_deliverable": "Recognition0.1 built and USB delivered; Android capture/export not yet tested",
     "hardware_order": [
       "P291 qualification",
       "P271 adaptation and qualification",
@@ -1755,10 +1807,27 @@
       "capabilities contract",
       "signed releases for USB and Internet"
     ],
-    "recognition_implemented": false,
+    "recognition_implemented": true,
     "rockchip_adapter_implemented": false,
     "remote_rom_update_tested": false,
     "logo_asset_identified": false,
-    "current_turn_device_or_usb_changes": false
+    "current_turn_device_or_usb_changes": false,
+    "recognition_delivery": "preparacion-usb/reconocimiento-01-estado.json"
+  },
+  "recognition_delivery": {
+    "version": "0.1",
+    "package": "com.tvbase.reconocimiento",
+    "apk_bytes": 106899,
+    "apk_sha256": "f631d5a16fa26266276f3be6f7f1e9f924ff95ea26dd922ff18f105022e1d813",
+    "state": "usb_copied_read_verified",
+    "file": "preparacion-usb/reconocimiento-01-estado.json",
+    "android_tested": false,
+    "android_usb_export_tested": false,
+    "raw_driver_or_rom_backup_complete": false,
+    "root_or_adb": false,
+    "network_permission": false,
+    "old_inventory_preserved": true,
+    "windows_safe_removal_pending": true,
+    "windows_volume_flush_verified": false
   }
 }

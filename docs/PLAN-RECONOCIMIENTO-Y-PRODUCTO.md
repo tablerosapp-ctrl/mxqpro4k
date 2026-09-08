@@ -1,5 +1,7 @@
 # Próxima etapa: reconocimiento, producto común e instalación por perfil
 
+**Actualización posterior:** el usuario autorizó empezar y preparar Kingston. Se implementó y entregó [Reconocimiento0.1](../diagnostico/reconocedor-0.1/README.md); [recibo y alcance](evidencia/RECONOCEDOR-USB-01.md). API21+, capturas separadas sin privilegios y copias de archivos accesibles. Falta la primera prueba Android. El texto siguiente conserva el diseño que motivó la entrega; su espera de OK para construir el reconocedor ya fue satisfecha, sin autorizar otros cambios de ROM/servidor.
+
 **PROP-17 / ADR-29 · diseño para revisar, 8/9/2026.** Reordena PROP-16 según el último pedido del usuario. El primer entregable propuesto es reconocimiento desde USB; la capa común y las actualizaciones se diseñan desde el comienzo. No se construyeron nuevas APK, no se prepararon pendrives y no se modificó el TV ni el servidor en esta revisión.
 
 El usuario confirma varios reinicios correctos del P291 sin pendrive. Se registra como [observación del usuario](evidencia/REINICIOS-P291-SIN-USB.md), separada de los recibos del instalador. Home sigue pendiente; el proveedor WebView efectivo, el rendimiento y el tráfico todavía requieren medición.

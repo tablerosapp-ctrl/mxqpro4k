@@ -15,7 +15,7 @@ flowchart LR
     C_ZIP["Instalador 0.2.2 usado · observado_tv"]
     C_REC["Restaurador022 · verificado_local"]
     C_ENTRY["Entrada 0.9 lograda · observado_tv"]
-    C_USB["Respaldos conservados · observado_tv"]
+    C_USB["Kingston: reconocimiento · observado_tv"]
     C_TV["P291: TV Base y WiFi · observado_tv"]
     C_APP["APK del producto · propuesto"]
     C_GESTION["Gestor propio 0.1 · verificado_local"]
@@ -23,7 +23,7 @@ flowchart LR
     C_ORIG["Originales del P291 · observado_tv"]
     C_PRODUCTO["Producto común · propuesto"]
     C_LOTES["Dos recorridos de lote · propuesto"]
-    C_RECON["Reconocimiento Android · propuesto"]
+    C_RECON["Reconocimiento0.1 · construido"]
     C_PERFIL -->|"selecciona"| C_BASE
     C_CHROME -->|"motor admitido"| C_WEB
     C_INICIO -->|"se integra"| C_ROM
@@ -48,6 +48,7 @@ flowchart LR
     C_RECON -->|"propone ficha y evidencia"| C_PERFIL
     C_RECON -->|"propone comparación por unidad"| C_LOTES
     C_RECON -->|"propone contrato de capacidades"| C_PRODUCTO
+    C_RECON -->|"entrega APK y acumula informes"| C_USB
 ```
 
 ## Archivos por componente
@@ -244,9 +245,9 @@ Requisitos: REQ-11.
 - [rom-simplificada/original-p291/entrada-apk/EJECUCION-TV-09.json](../rom-simplificada/original-p291/entrada-apk/EJECUCION-TV-09.json)
 - [docs/evidencia/PREPARACION-ENTRADA-P291-09.md](../docs/evidencia/PREPARACION-ENTRADA-P291-09.md)
 
-### C-USB · Respaldos conservados
+### C-USB · Kingston: reconocimiento
 
-**observado_tv**. 199 archivos guardados y verificados en PC, incluidos seis respaldos. La adquisición no escribió al USB.
+**observado_tv**. Nueva carpeta de reconocimiento entregada; capturas anteriores y respaldos preservados. Tres archivos verificados, primer guardado Android pendiente.
 
 Requisitos: REQ-01.
 
@@ -268,6 +269,9 @@ Requisitos: REQ-01.
 - [diagnostico/primer-tv-instalado-20260908/resumen-saneado.json](../diagnostico/primer-tv-instalado-20260908/resumen-saneado.json)
 - [diagnostico/primer-tv-instalado-20260908/adquirir-usb.ps1](../diagnostico/primer-tv-instalado-20260908/adquirir-usb.ps1)
 - [diagnostico/primer-tv-instalado-20260908/verificar-adquisicion.py](../diagnostico/primer-tv-instalado-20260908/verificar-adquisicion.py)
+- [preparacion-usb/preparar-reconocimiento-01.ps1](../preparacion-usb/preparar-reconocimiento-01.ps1)
+- [preparacion-usb/reconocimiento-01-estado.json](../preparacion-usb/reconocimiento-01-estado.json)
+- [docs/evidencia/RECONOCEDOR-USB-01.md](../docs/evidencia/RECONOCEDOR-USB-01.md)
 
 ### C-TV · P291: TV Base y WiFi
 
@@ -392,16 +396,29 @@ Requisitos: REQ-15, REQ-16, REQ-17.
 - [docs/PROPUESTA-LOTES-Y-ACTUALIZACIONES.md](../docs/PROPUESTA-LOTES-Y-ACTUALIZACIONES.md)
 - [docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md](../docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md)
 
-### C-RECON · Reconocimiento Android
+### C-RECON · Reconocimiento0.1
 
-**propuesto**. APK e informes comparables por familia y nivel de acceso. No arranque USB universal; sin adaptador Rockchip implementado. Reutilización de lecturas requiere revisión.
+**construido**. APK normal API21+ con informes secuenciales, archivos accesibles y límites. Entregada/releída en Kingston; Android físico pendiente, sin root/ADB/red.
 
 Requisitos: REQ-02, REQ-14, REQ-18.
 
-- [docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md](../docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md)
-- [diagnostico/recoger-android-adb.ps1](../diagnostico/recoger-android-adb.ps1)
-- [diagnostico/recoger-hardware-linux.sh](../diagnostico/recoger-hardware-linux.sh)
-- [diagnostico/revision-postintento/analizar-captura08.py](../diagnostico/revision-postintento/analizar-captura08.py)
+- [diagnostico/reconocedor-0.1/README.md](../diagnostico/reconocedor-0.1/README.md)
+- [docs/evidencia/RECONOCEDOR-USB-01.md](../docs/evidencia/RECONOCEDOR-USB-01.md)
+- [diagnostico/reconocedor-0.1/CONTRATO-INFORMES.md](../diagnostico/reconocedor-0.1/CONTRATO-INFORMES.md)
+- [diagnostico/reconocedor-0.1/LEEME-USB.txt](../diagnostico/reconocedor-0.1/LEEME-USB.txt)
+- [diagnostico/reconocedor-0.1/COMPILACION.json](../diagnostico/reconocedor-0.1/COMPILACION.json)
+- [diagnostico/reconocedor-0.1/PRUEBAS-PC.json](../diagnostico/reconocedor-0.1/PRUEBAS-PC.json)
+- [diagnostico/reconocedor-0.1/compilar.py](../diagnostico/reconocedor-0.1/compilar.py)
+- [diagnostico/reconocedor-0.1/importar-informes.py](../diagnostico/reconocedor-0.1/importar-informes.py)
+- [diagnostico/reconocedor-0.1/test_importar_informes.py](../diagnostico/reconocedor-0.1/test_importar_informes.py)
+- [diagnostico/reconocedor-0.1/tests/ArchiveHarness.java](../diagnostico/reconocedor-0.1/tests/ArchiveHarness.java)
+- [diagnostico/reconocedor-0.1/tests/test_archive.py](../diagnostico/reconocedor-0.1/tests/test_archive.py)
+- [diagnostico/reconocedor-0.1/src/AndroidManifest.xml](../diagnostico/reconocedor-0.1/src/AndroidManifest.xml)
+- [diagnostico/reconocedor-0.1/src/FileCollector.java](../diagnostico/reconocedor-0.1/src/FileCollector.java)
+- [diagnostico/reconocedor-0.1/src/HardwareCollector.java](../diagnostico/reconocedor-0.1/src/HardwareCollector.java)
+- [diagnostico/reconocedor-0.1/src/MainActivity.java](../diagnostico/reconocedor-0.1/src/MainActivity.java)
+- [diagnostico/reconocedor-0.1/src/ReportArchive.java](../diagnostico/reconocedor-0.1/src/ReportArchive.java)
+- [diagnostico/reconocedor-0.1/src/UsbStore.java](../diagnostico/reconocedor-0.1/src/UsbStore.java)
 
 ## Directorios y cuidado
 
@@ -442,13 +459,13 @@ Requisitos: REQ-02, REQ-14, REQ-18.
 | README.md | 1 | 0.000 |
 | actualizacion-chrome | 51 | 0.417 |
 | analisis-rom | 15 | 1.822 |
-| diagnostico | 177 | 0.018 |
-| docs | 51 | 0.001 |
+| diagnostico | 195 | 0.018 |
+| docs | 52 | 0.001 |
 | dossier-s905l2.html | 1 | 0.000 |
 | images | 1 | 1.352 |
 | platform-tools-latest-windows.zip | 1 | 0.008 |
-| preparacion-usb | 92 | 3.688 |
+| preparacion-usb | 94 | 3.688 |
 | rom-simplificada | 4619 | 14.542 |
-| tools | 18086 | 1.173 |
+| tools | 18088 | 1.173 |
 
 El inventario excluye derivados documentales y contenido de claves; los tamaños son de archivos, no bloques físicos ocupados. Los temporales retirados se detallan en [LIMPIEZA](LIMPIEZA.md).

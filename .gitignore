@@ -170,3 +170,11 @@ CLAVE-PRIVADA-RESPALDO-*.txt
 /rom-simplificada/instalador/host-classes-0.8/
 /rom-simplificada/instalador/fixture-evidencia-0.8*/
 /rom-simplificada/compilacion/acceso-usb-0.8/*.log
+
+# Reconocedor propio: código y recibos saneados; capturas/compilaciones privadas fuera de Git.
+!/diagnostico/reconocedor-0.1/src/*.java
+!/diagnostico/reconocedor-0.1/src/AndroidManifest.xml
+!/diagnostico/reconocedor-0.1/tests/ArchiveHarness.java
+!/diagnostico/reconocedor-0.1/COMPILACION.json
+!/diagnostico/reconocedor-0.1/PRUEBAS-PC.json
+!/diagnostico/reconocedor-0.1/LEEME-USB.txt

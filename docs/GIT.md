@@ -1,5 +1,9 @@
 # Historial local y publicación pública
 
+## Registro del 8/9/2026 · reconocedor autorizado y USB preparado
+
+Se versionan fuentes Java, constructor, importador/pruebas, contrato y guía del reconocedor0.1; recibos saneados de compilación y entrega. La APK y fixtures se conservan en privado. Las capturas futuras deben importarse a directorios privados nuevos; no se publican ZIP, identificadores o drivers adquiridos. La publicación usa el espejo saneado y no reemplaza las releases previas ni el respaldo cifrado.
+
 ## Registro del 8/9/2026 · reconocimiento, producto y actualización por perfil
 
 Se agrega el relato del usuario de varios reinicios sin USB, con su alcance explícito y separado de los recibos anteriores. PROP-17 / REQ-18 / ADR-29 documentan reconocimiento sobre Android como primer entregable, medición de WebView/recursos/tráfico, producto común con logo y versiones por perfil compartidas entre USB e Internet. Se actualizan grafo y roadmap; no se implementan aún esos cambios ni se contacta el TV o pendrive.
