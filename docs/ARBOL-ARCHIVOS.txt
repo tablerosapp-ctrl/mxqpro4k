@@ -137,6 +137,7 @@ mxqpro4k/
 │   │   ├── limpieza-plan.json
 │   │   ├── limpieza-resultado.json
 │   │   ├── mapa-ui.json
+│   │   ├── PREPARACION-ENTRADA-P291-09.md
 │   │   ├── publicacion-github.json
 │   │   └── ROM-ORIGINAL-P291-020.md
 │   ├── herramientas/
@@ -497,6 +498,7 @@ mxqpro4k/
 │   │   │   ├── COMPILACION-09.json
 │   │   │   ├── compilar-entrada09.py
 │   │   │   ├── compilar-probe.py
+│   │   │   ├── EJECUCION-TV-09.json
 │   │   │   ├── entrada-lan09.py
 │   │   │   ├── ESTADO-ENTRADA-09.md
 │   │   │   ├── INSTALACION-TV-09.json

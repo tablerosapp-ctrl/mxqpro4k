@@ -1,5 +1,9 @@
 # TV Base desde los originales del P291
 
+## Preparación física0.9 completada
+
+Tras la autorización explícita del usuario se ejecutó un único intento por LAN en el primer P291. ENV/BCB se guardaron y releían correctos, sus respaldos y el informe quedaron verificados enUSB y PC, y se neutralizaron las dos órdenes activas anteriores. [Evidencia física](../../docs/evidencia/PREPARACION-ENTRADA-P291-09.md). La preparación no reinició, borró userdata ni instaló la ROM. Después del ciclo físico indicado, el usuario informó un menú de recovery; aceptación del ZIP y arranque de TV Base siguen pendientes. Las referencias inferiores a autorización o ejecución pendientes corresponden a la entrega previa.
+
 Esta revisión implementa el pedido de construir una ROM interna simplificada desde los originales adquiridos del **primer P291 / gxlx2_p291_1g**. La preparación trabaja sobre archivos de PC; no instala ni reinicia el TV. El segundo P271 y la ROM candidata anterior no aportan sus drivers a esta imagen.
 
 **Entrega vigente: instalador0.2.1 y plataforma0.2.0.** Las cinco imágenes se conservan; el nuevo instalador respalda seis particiones y prepara userdata limpia antes de escribir Android. ZIP: **573.688.933 bytes**, SHA256 `dcb152c77e55cb067d6e88a8144990a3edb5d06568ea8cdfdc414a0fa21aac58`. El restaurador separado0.2.1 contiene cinco imágenes OEM: **913.294.443 bytes**, SHA256 `42580206f254fab0a2280cd263a48882677e7ddf5cfd609382a840c8d0fb103a`; conserva userdata y no recupera su respaldo. Ambos están sellados/verificados en PC. [Instalación y migración](instalacion-021/CONTRATO-MIGRACION.md) · [Restauración](restauracion-021/README.md) · [Estado de la copia USB](../INSTALACION-USB.md).

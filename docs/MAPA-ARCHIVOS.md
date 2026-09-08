@@ -14,9 +14,9 @@ flowchart LR
     C_WEB["Proveedor WebView · verificado_local"]
     C_ZIP["Instalador0.2.1, plataforma0.2.0 · verificado_local"]
     C_REC["Recovery original y restaurador0.2.1 · verificado_local"]
-    C_ENTRY["AccesoUSB0.9: entrada pendiente de decisión · observado_tv"]
-    C_USB["Kingston: entrega0.2.1 copiada/releída · verificado_local"]
-    C_TV["P291: root y bloqueo WiFi confirmados · observado_tv"]
+    C_ENTRY["AccesoUSB0.9: menú recovery confirmado · observado_tv"]
+    C_USB["Kingston: entrega0.2.1 y cierre0.9 enTV · observado_tv"]
+    C_TV["P291: recovery visible; ZIP0.2.1 indicado · observado_tv"]
     C_APP["APK del producto · propuesto"]
     C_GESTION["Gestor propio 0.1 · verificado_local"]
     C_BTCTRL["Control Bluetooth normal · observado_tv"]
@@ -36,7 +36,7 @@ flowchart LR
     C_ORIG -->|"fuente original verificada"| C_ROM
     C_GESTION -->|"gestor integrado"| C_ROM
     C_ORIG -->|"recovery adquirido"| C_REC
-    C_ENTRY -->|"ENV/BCB tras decisión específica"| C_REC
+    C_ENTRY -->|"menú observado por usuario; aceptación delZIP pendiente"| C_REC
     C_REC -->|"menú físico aún pendiente"| C_ZIP
 ```
 
@@ -159,9 +159,9 @@ Requisitos: REQ-11.
 - [rom-simplificada/original-p291/instalacion-021/RESTAURACION.md](../rom-simplificada/original-p291/instalacion-021/RESTAURACION.md)
 - [rom-simplificada/original-p291/restauracion-021/salida/TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-VERIFICACION.json](../rom-simplificada/original-p291/restauracion-021/salida/TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-VERIFICACION.json)
 
-### C-ENTRY · AccesoUSB0.9: entrada pendiente de decisión
+### C-ENTRY · AccesoUSB0.9: menú recovery confirmado
 
-**observado_tv**. APK0.9 liberada/instalada por LAN; captura confirma diálogo2% superpuesto y acceso no visible. Preparación ENV/BCB no ejecutada ni autorizada específicamente; no indicar botones ocultos o corte para abrirla. Cliente LAN preparado para operar la misma APK sin pulsaciones ocultas; 53 pruebas PC y revisión independiente; sin ejecución TV del cliente.
+**observado_tv**. Preparación ENV/BCB verificada. Tras el ciclo físico el usuario confirmó menú recovery; imagen/hash exactos no identificados. ZIP0.2.1 indicado, sin resultado. No repetir prepare.
 
 Requisitos: REQ-11.
 
@@ -185,10 +185,12 @@ Requisitos: REQ-11.
 - [rom-simplificada/original-p291/entrada-apk/OPERACION-LAN-09.md](../rom-simplificada/original-p291/entrada-apk/OPERACION-LAN-09.md)
 - [rom-simplificada/original-p291/entrada-apk/PRUEBAS-LAN09.json](../rom-simplificada/original-p291/entrada-apk/PRUEBAS-LAN09.json)
 - [rom-simplificada/original-p291/entrada-apk/REVISION-LAN09.json](../rom-simplificada/original-p291/entrada-apk/REVISION-LAN09.json)
+- [rom-simplificada/original-p291/entrada-apk/EJECUCION-TV-09.json](../rom-simplificada/original-p291/entrada-apk/EJECUCION-TV-09.json)
+- [docs/evidencia/PREPARACION-ENTRADA-P291-09.md](../docs/evidencia/PREPARACION-ENTRADA-P291-09.md)
 
-### C-USB · Kingston: entrega0.2.1 copiada/releída
+### C-USB · Kingston: entrega0.2.1 y cierre0.9 enTV
 
-**verificado_local**. Cuatro archivos copiados y releídos con SHA/código0; cuatro viejos archivados/verificados antes de retirarlos. Sin formato ni reparación. Expulsión segura Windows y traslado alTV pendientes; flush final del volumen no acreditado.
+**observado_tv**. Cuatro entregables copiados/releídos enPC, USB luego identificado enP291. Preparación0.9:21 archivos y21 sellos USB verificados independientemente. Sin formato/reparación; limitación de expulsión Windows histórica.
 
 Requisitos: REQ-01.
 
@@ -197,10 +199,12 @@ Requisitos: REQ-01.
 - [rom-simplificada/original-p291/LEEME-USB-021.txt](../rom-simplificada/original-p291/LEEME-USB-021.txt)
 - [preparacion-usb/original-021-estado.json](../preparacion-usb/original-021-estado.json)
 - [preparacion-usb/preparar-original-021.ps1](../preparacion-usb/preparar-original-021.ps1)
+- [rom-simplificada/original-p291/entrada-apk/EJECUCION-TV-09.json](../rom-simplificada/original-p291/entrada-apk/EJECUCION-TV-09.json)
+- [docs/evidencia/PREPARACION-ENTRADA-P291-09.md](../docs/evidencia/PREPARACION-ENTRADA-P291-09.md)
 
-### C-TV · P291: root y bloqueo WiFi confirmados
+### C-TV · P291: recovery visible; ZIP0.2.1 indicado
 
-**observado_tv**. Primer P291 original al2% y accesible por LAN; captura confirma diálogo encima de Acceso0.9. ENV/misc originales releídos sin cambios. Probes limitados aprobados; no preparación ENV/BCB ni ROM instalada.
+**observado_tv**. El usuario informó menú recovery tras ciclo físico. Indicado Apply update from EXT → Update from udisk → ZIP0.2.1, conservar USB/power y esperar final/error. Instalación sin resultado.
 
 Requisitos: REQ-13.
 
@@ -239,6 +243,8 @@ Requisitos: REQ-13.
 - [diagnostico/primer-tv-lan-20260907-184926/OPCIONES-INSTALACION-ROOT.md](../diagnostico/primer-tv-lan-20260907-184926/OPCIONES-INSTALACION-ROOT.md)
 - [docs/evidencia/ENTRADA-ORIGINAL-P291-021.md](../docs/evidencia/ENTRADA-ORIGINAL-P291-021.md)
 - [rom-simplificada/original-p291/instalacion-021/FORMATEADOR-PRUEBA-TV.json](../rom-simplificada/original-p291/instalacion-021/FORMATEADOR-PRUEBA-TV.json)
+- [rom-simplificada/original-p291/entrada-apk/EJECUCION-TV-09.json](../rom-simplificada/original-p291/entrada-apk/EJECUCION-TV-09.json)
+- [docs/evidencia/PREPARACION-ENTRADA-P291-09.md](../docs/evidencia/PREPARACION-ENTRADA-P291-09.md)
 
 ### C-APP · APK del producto
 
@@ -326,12 +332,12 @@ Requisitos: REQ-02, REQ-09, REQ-11.
 | actualizacion-chrome | 51 | 0.417 |
 | analisis-rom | 15 | 1.822 |
 | diagnostico | 173 | 0.018 |
-| docs | 33 | 0.000 |
+| docs | 34 | 0.000 |
 | dossier-s905l2.html | 1 | 0.000 |
 | images | 1 | 1.352 |
 | platform-tools-latest-windows.zip | 1 | 0.008 |
 | preparacion-usb | 87 | 3.688 |
-| rom-simplificada | 4564 | 13.055 |
+| rom-simplificada | 4565 | 13.055 |
 | tools | 18081 | 1.141 |
 
 El inventario excluye derivados documentales y contenido de claves; los tamaños son de archivos, no bloques físicos ocupados. Los temporales retirados se detallan en [LIMPIEZA](LIMPIEZA.md).

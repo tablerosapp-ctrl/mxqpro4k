@@ -1,5 +1,9 @@
 # Mensaje para Fable 5.1 en Claude Desktop
 
+## Resultado físico posterior · preparación0.9 completada
+
+Ya existe [evidencia física de la preparación ENV/BCB](evidencia/PREPARACION-ENTRADA-P291-09.md), autorizada expresamente y ejecutada una sola vez en el primer P291. Cierre `prepared`, respaldos/recibos verificados y adquisición posterior de ENV/misc exacta. La preparación no instaló Android ni reinició. Después del ciclo físico posterior, el usuario informó un menú de recovery; aún falta confirmar la aceptación del ZIP y la instalación. No repetir launch/Update. Los apartados inferiores conservan el pedido de revisión previo a esta ejecución.
+
 ## Revisión vigente · instalador0.2.1 y entrada0.9
 
 Empezar por [ESTADO](ESTADO.md) y la [evidencia0.2.1](evidencia/ENTRADA-ORIGINAL-P291-021.md). La plataforma deriva de las particiones originales del primer P291; root se obtuvo mediante el `su` existente con autorización del usuario. Las restricciones y afirmaciones sobre ausencia de root/respaldos que siguen abajo son antecedentes, no el estado actual. No instalar ni probar en otro equipo.

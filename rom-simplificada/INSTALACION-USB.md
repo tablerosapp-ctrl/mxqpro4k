@@ -1,5 +1,11 @@
 # Pendrive · estado de la instalación
 
+## Actualización física · preparación ejecutada el7/9/2026
+
+El usuario autorizó expresamente ENV/BCB y trasladó el Kingston al primer P291. Se ejecutó un único intento de Acceso USB0.9 por LAN: resultado `prepared`, códigos0 y lecturas finales verificadas. La adquisición independiente de ENV/misc actuales, respaldos e informes coincide con el cambio previsto; las órdenes antiguas de cache ya no están activas. [Resultado y siguiente paso](../docs/evidencia/PREPARACION-ENTRADA-P291-09.md).
+
+No repetir `prepare`, no usar la APK oculta ni volver a Update. La preparación no instaló Android ni reinició el equipo. Después del ciclo físico indicado, el usuario informó que apareció un menú de recovery. Se le indicó la ruta EXT → udisk → ZIP0.2.1; todavía falta confirmar aceptación del paquete y resultado de instalación. Los datos/Android originales todavía no se borraron. Los apartados inferiores describen el momento anterior a esta ejecución, incluido su estado de autorización.
+
 ## Vigente · entrega0.2.1 verificada el7/9/2026 a las23:06ART
 
 El Kingston autorizado contiene los cuatro archivos actuales. La copia terminó con código0 y se releían completos con SHA correcto. [Recibo de entrega](../preparacion-usb/original-021-estado.json) · [Contrato exacto](../preparacion-usb/entrega-original-021.json) · [Revisión independiente](../preparacion-usb/REVISION-ORIGINAL-021.json).

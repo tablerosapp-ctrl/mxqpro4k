@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "title": "TV Base",
-  "snapshot": "2026-09-08T02:12:16.299113+00:00",
-  "state": "Plataforma0.2.0 e instalación/restauración0.2.1 preparadas; USB copiado y releído, expulsión segura y decisión de entrada ENV/BCB pendientes; ROM no instalada",
+  "snapshot": "2026-09-08T02:48:48.986791+00:00",
+  "state": "Usuario confirmó menú de recovery tras ciclo físico; indicado aplicar ZIP0.2.1 desde EXT/udisk. Sin resultado de aceptación ni instalación todavía",
   "installed": false,
   "original_tv_backup_confirmed": true,
   "source_of_truth": {
@@ -24,7 +24,10 @@
     "current_restore": "rom-simplificada/original-p291/restauracion-021/salida/TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-VERIFICACION.json",
     "current_entry_release": "rom-simplificada/original-p291/entrada-apk/LIBERACION-09.json",
     "entry_tv_observation": "rom-simplificada/original-p291/entrada-apk/INSTALACION-TV-09.json",
-    "lan_entry_client_review": "rom-simplificada/original-p291/entrada-apk/PRUEBAS-LAN09.json"
+    "lan_entry_client_review": "rom-simplificada/original-p291/entrada-apk/PRUEBAS-LAN09.json",
+    "entry_tv_execution": "rom-simplificada/original-p291/entrada-apk/EJECUCION-TV-09.json",
+    "latest_entry_result": "docs/evidencia/PREPARACION-ENTRADA-P291-09.md",
+    "recovery_user_observation": "docs/evidencia/PREPARACION-ENTRADA-P291-09.md"
   },
   "components": [
     {
@@ -204,9 +207,9 @@
     },
     {
       "id": "C-ENTRY",
-      "label": "AccesoUSB0.9: entrada pendiente de decisión",
+      "label": "AccesoUSB0.9: menú recovery confirmado",
       "state": "observado_tv",
-      "description": "APK0.9 liberada/instalada por LAN; captura confirma diálogo2% superpuesto y acceso no visible. Preparación ENV/BCB no ejecutada ni autorizada específicamente; no indicar botones ocultos o corte para abrirla. Cliente LAN preparado para operar la misma APK sin pulsaciones ocultas; 53 pruebas PC y revisión independiente; sin ejecución TV del cliente.",
+      "description": "Preparación ENV/BCB verificada. Tras el ciclo físico el usuario confirmó menú recovery; imagen/hash exactos no identificados. ZIP0.2.1 indicado, sin resultado. No repetir prepare.",
       "files": [
         "rom-simplificada/original-p291/entrada-apk/README.md",
         "rom-simplificada/original-p291/entrada-apk/ESTADO-ENTRADA-09.md",
@@ -227,7 +230,9 @@
         "rom-simplificada/original-p291/entrada-apk/test_entrada_lan09.py",
         "rom-simplificada/original-p291/entrada-apk/OPERACION-LAN-09.md",
         "rom-simplificada/original-p291/entrada-apk/PRUEBAS-LAN09.json",
-        "rom-simplificada/original-p291/entrada-apk/REVISION-LAN09.json"
+        "rom-simplificada/original-p291/entrada-apk/REVISION-LAN09.json",
+        "rom-simplificada/original-p291/entrada-apk/EJECUCION-TV-09.json",
+        "docs/evidencia/PREPARACION-ENTRADA-P291-09.md"
       ],
       "x": 2,
       "y": 2,
@@ -237,15 +242,17 @@
     },
     {
       "id": "C-USB",
-      "label": "Kingston: entrega0.2.1 copiada/releída",
-      "state": "verificado_local",
-      "description": "Cuatro archivos copiados y releídos con SHA/código0; cuatro viejos archivados/verificados antes de retirarlos. Sin formato ni reparación. Expulsión segura Windows y traslado alTV pendientes; flush final del volumen no acreditado.",
+      "label": "Kingston: entrega0.2.1 y cierre0.9 enTV",
+      "state": "observado_tv",
+      "description": "Cuatro entregables copiados/releídos enPC, USB luego identificado enP291. Preparación0.9:21 archivos y21 sellos USB verificados independientemente. Sin formato/reparación; limitación de expulsión Windows histórica.",
       "files": [
         "rom-simplificada/INSTALACION-USB.md",
         "preparacion-usb/rom-012-estado.json",
         "rom-simplificada/original-p291/LEEME-USB-021.txt",
         "preparacion-usb/original-021-estado.json",
-        "preparacion-usb/preparar-original-021.ps1"
+        "preparacion-usb/preparar-original-021.ps1",
+        "rom-simplificada/original-p291/entrada-apk/EJECUCION-TV-09.json",
+        "docs/evidencia/PREPARACION-ENTRADA-P291-09.md"
       ],
       "x": 3,
       "y": 1,
@@ -255,9 +262,9 @@
     },
     {
       "id": "C-TV",
-      "label": "P291: root y bloqueo WiFi confirmados",
+      "label": "P291: recovery visible; ZIP0.2.1 indicado",
       "state": "observado_tv",
-      "description": "Primer P291 original al2% y accesible por LAN; captura confirma diálogo encima de Acceso0.9. ENV/misc originales releídos sin cambios. Probes limitados aprobados; no preparación ENV/BCB ni ROM instalada.",
+      "description": "El usuario informó menú recovery tras ciclo físico. Indicado Apply update from EXT → Update from udisk → ZIP0.2.1, conservar USB/power y esperar final/error. Instalación sin resultado.",
       "files": [
         "docs/ESTADO.md",
         "diagnostico/primer-tv-evidencia-20260907-000948/HALLAZGOS.md",
@@ -293,7 +300,9 @@
         "diagnostico/primer-tv-lan-20260907-184926/RESPALDO-resumen-saneado.json",
         "diagnostico/primer-tv-lan-20260907-184926/OPCIONES-INSTALACION-ROOT.md",
         "docs/evidencia/ENTRADA-ORIGINAL-P291-021.md",
-        "rom-simplificada/original-p291/instalacion-021/FORMATEADOR-PRUEBA-TV.json"
+        "rom-simplificada/original-p291/instalacion-021/FORMATEADOR-PRUEBA-TV.json",
+        "rom-simplificada/original-p291/entrada-apk/EJECUCION-TV-09.json",
+        "docs/evidencia/PREPARACION-ENTRADA-P291-09.md"
       ],
       "x": 4,
       "y": 1,
@@ -459,7 +468,7 @@
     {
       "source": "C-ENTRY",
       "target": "C-REC",
-      "relation": "ENV/BCB tras decisión específica"
+      "relation": "menú observado por usuario; aceptación delZIP pendiente"
     },
     {
       "source": "C-REC",
@@ -614,8 +623,8 @@
     },
     {
       "id": "M1",
-      "label": "Entrada USB",
-      "state": "pendiente",
+      "label": "Menú recovery visible",
+      "state": "observado_tv",
       "depends_on": [
         "M0"
       ],
@@ -624,7 +633,7 @@
         "C-REC",
         "C-TV"
       ],
-      "exit": "Expulsar seguro y conectar USB alTV conLAN; decidir método ENV/BCB tras riesgos. Luego preparación y recovery identificado. No botones ocultos, corte para abrirAPK ni Update; VAL-05 pendiente.",
+      "exit": "Menú confirmado por el usuario tras ciclo físico. Pendientes identidad exacta del recovery, ENV normal y aceptación delZIP0.2.1. VAL-05 aún parcial; no repetir prepare/Update.",
       "x": 1,
       "y": 0
     },
@@ -639,7 +648,7 @@
         "C-ZIP",
         "C-TV"
       ],
-      "exit": "Seis respaldos físicos verificados antes de formato, userdata realmente vacía y desmontada, cinco escrituras/relecturas y arranque interno sin USB: VAL-06/07.",
+      "exit": "ZIP0.2.1 indicado, sin resultado aún. Exigir seis respaldos, formato/RO, cinco escrituras/relecturas y arranque interno sinUSB: VAL-06/07.",
       "x": 2,
       "y": 0
     },
@@ -958,21 +967,21 @@
     {
       "id": "VAL-03",
       "file": "docs/ESPECIFICACION.md",
-      "state": "verificado_local",
+      "state": "observado_tv",
       "requirements": [
         "REQ-11"
       ],
-      "note": "APK0.9 liberada/instalada por LAN, oculta tras diálogo2% confirmado por captura; preparación ENV/BCB y fsyncUSB sin prueba física."
+      "note": "Preparación0.9 ejecutada una vez y verificada independientemente: ENV/BCB,21 archivos/21 sellosUSB y siete copias internas. Código0, sin reset/data/firmware. No acredita recovery."
     },
     {
       "id": "VAL-04",
       "file": "docs/ESPECIFICACION.md",
-      "state": "verificado_local",
+      "state": "observado_tv",
       "requirements": [
         "REQ-01",
         "REQ-11"
       ],
-      "note": "Cuatro archivos0.2.1/0.9 copiados y releídos, código0. Expulsión segura pendiente y volume_flush_verified=false; no prueba persistencia tras desconectar."
+      "note": "Cuatro entregables copiados/releídos enPC; USB luego identificado y utilizado enTV con cierre de entrada verificado. Limitación de expulsión/flushWindows permanece en reciboPC histórico."
     },
     {
       "id": "VAL-05",
@@ -982,7 +991,7 @@
         "REQ-01",
         "REQ-11"
       ],
-      "note": "Nueva entrada específica aún no autorizada ni ejecutada; no recovery demostrado."
+      "note": "Menú recovery confirmado por usuario tras ciclo físico. Sin identidad exacta/hash, ENV normal ni aceptación delZIP acreditados. Instalación0.2.1 indicada, resultado pendiente."
     },
     {
       "id": "VAL-06",
@@ -1094,28 +1103,28 @@
       "path": "rom-simplificada/original-p291/instalacion-021/salida/TVBASE-P291-A9-0.2.1-RECOVERY.zip",
       "bytes": 573688933,
       "sha256": "dcb152c77e55cb067d6e88a8144990a3edb5d06568ea8cdfdc414a0fa21aac58",
-      "scope": "usb_copied_read_verified_safe_removal_pending_not_physically_installed"
+      "scope": "usb_copied_read_verified_usb_subsequently_detected_in_tv_not_physically_installed"
     },
     {
       "name": "AccesoUSB-0.9.apk",
       "path": "rom-simplificada/original-p291/entrada-apk/privado/entrada09-20260908-015115-805753/AccesoUSB-0.9.apk",
       "bytes": 61843,
       "sha256": "1d0f267e818acca5562048f9961c7c234f36b8cc81f827cb3eac9e3fcd2505a4",
-      "scope": "installed_via_lan_and_usb_copy_verified_specific_method_decision_pending"
+      "scope": "installed_and_single_authorized_env_bcb_preparation_independently_verified_no_reset_no_rom"
     },
     {
       "name": "TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-RECOVERY.zip",
       "path": "rom-simplificada/original-p291/restauracion-021/salida/TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-RECOVERY.zip",
       "bytes": 913294443,
       "sha256": "42580206f254fab0a2280cd263a48882677e7ddf5cfd609382a840c8d0fb103a",
-      "scope": "usb_copied_read_verified_safe_removal_pending_not_physically_installed"
+      "scope": "usb_copied_read_verified_usb_subsequently_detected_in_tv_not_physically_installed"
     },
     {
       "name": "LEEME-AHORA.txt (0.2.1)",
       "path": "rom-simplificada/original-p291/LEEME-USB-021.txt",
       "bytes": 4412,
       "sha256": "4c4d6586285b36415f0dd7eb12499d9c8970d4f1b21d85647726c85dd1784320",
-      "scope": "usb_copied_read_verified_safe_removal_pending"
+      "scope": "usb_copied_read_verified_usb_subsequently_detected_in_tv"
     }
   ],
   "protected_paths": [
@@ -1127,8 +1136,8 @@
   "proposals": [
     {
       "id": "PROP-01",
-      "label": "Entrada ENV/BCB0.9 preparada; decisión pendiente",
-      "state": "verificado_local",
+      "label": "Recovery visible; selección deZIP0.2.1 indicada",
+      "state": "observado_tv",
       "file": "docs/evidencia/ENTRADA-ORIGINAL-P291-021.md",
       "components": [
         "C-ENTRY",
@@ -1271,9 +1280,9 @@
       ]
     }
   ],
-  "delivery_label": "Entrega0.2.1 copiada y releída en Kingston · falta expulsión segura Windows",
+  "delivery_label": "Entrega0.2.1 copiada/releída enPC y USB identificado enTV; preparación0.9 verificada",
   "date_label": "7/9/2026 ART · entrada y migración0.2.1",
-  "next_step_label": "Expulsión segura, USB alTV con LAN y decisión específica ENV/BCB; no repetir Update",
+  "next_step_label": "Aplicar TVBASE-P291-A9-0.2.1-RECOVERY.zip según instrucciones y esperar final/error antes de reiniciar; conservar USB/alimentación",
   "public_repository": {
     "url": "https://github.com/tablerosapp-ctrl/mxqpro4k",
     "visibility_requested": "public",
@@ -1282,8 +1291,8 @@
   },
   "original_backup_scope": "12 selected partitions,2538MiB; excludes userdata/cache and other eMMC regions; restore not tested",
   "restoration_tested": false,
-  "entry_method_authorized": false,
-  "entry_metadata_physically_written": false,
+  "entry_method_authorized": true,
+  "entry_metadata_physically_written": true,
   "userdata_backup_confirmed": false,
   "platform_version": "0.2.0",
   "installer_version": "0.2.1",
@@ -1292,8 +1301,53 @@
   "entry_ui_visible": false,
   "entry_ui_observation": "ADB screenshot shows Android update 2% dialog covering the installed APK; start acknowledgement did not prove a visible entry screen.",
   "usb_delivery_verified": true,
-  "safe_removal_pending": true,
+  "safe_removal_pending": false,
   "volume_flush_verified": false,
-  "usb_connected_to_tv_confirmed": false,
-  "lan_entry_client_physically_executed": false
+  "usb_connected_to_tv_confirmed": true,
+  "lan_entry_client_physically_executed": true,
+  "entry_authorization": {
+    "response": "si ejecuta",
+    "scope": "Preparación específica ENV/BCB explicada al usuario",
+    "repeat_confirmation_required": false,
+    "execution_result": "prepared_independently_verified"
+  },
+  "entry_preparation_started": true,
+  "entry_preparation_result": "prepared_independently_verified",
+  "entry_metadata_readback_verified": true,
+  "entry_preparation_independently_verified": true,
+  "entry_preparation_closed_art": "2026-09-07T23:41:53-03:00",
+  "entry_preparation_manifest_sha256": "2b2715266a782072487c750c976f0f96e35a74d88c0e3664be501e37194ced7c",
+  "entry_preparation_usb_files_verified": 21,
+  "entry_preparation_usb_sidecars_verified": 21,
+  "entry_preparation_internal_files_verified": 7,
+  "entry_reset_requested": false,
+  "entry_userdata_wiped": false,
+  "entry_firmware_images_written": false,
+  "entry_recovery_observed": true,
+  "safe_removal_verified": false,
+  "delivery_receipt_safe_removal_pending": true,
+  "safe_removal_note": "USB subsequently detected in firstTV; historical Windows safe removal and final volume flush remain unverified. TV entry files have separate fsync/readback evidence.",
+  "power_cycle_observed": true,
+  "recovery_observation": {
+    "source": "user_report_in_conversation",
+    "statement": "Apareció un menú de recovery",
+    "after_instructed_power_cycle": true,
+    "executed_image_identity_verified": false,
+    "executed_image_sha256": null,
+    "zip_acceptance_confirmed": false,
+    "sealed_preparation_receipt_modified": false
+  },
+  "installation_instructed": true,
+  "installation_instruction": {
+    "menu_path": [
+      "Apply update from EXT",
+      "Update from udisk"
+    ],
+    "zip": "TVBASE-P291-A9-0.2.1-RECOVERY.zip",
+    "keep_usb_and_power": true,
+    "separate_wipe_instructed": false,
+    "restore_zip_instructed": false,
+    "wait_for_final_or_error_before_reboot": true,
+    "result": "not_reported"
+  }
 }

@@ -1,5 +1,9 @@
 # Entrada original y preparación de datos 0.2.1
 
+## Resultado posterior a la entrega
+
+El usuario ya autorizó y se completó la [preparación física ENV/BCB](PREPARACION-ENTRADA-P291-09.md), con cierre y lectura independientes verificados. El helper no instaló la ROM ni emitió reinicio; tras el ciclo físico posterior, el usuario informó un menú de recovery. La instalación sigue pendiente. Este documento conserva la construcción y entrega previas; sus menciones a decisión/ejecución pendientes son históricas.
+
 Trabajo del 7/9/2026 ART, posterior a la construcción de plataforma0.2.0. Este documento distingue resultados físicos de artefactos terminados y pendientes de ejecución. El usuario volvió a conectar el Kingston a la PC y confirmó que el primer P291 continúa al2% con LAN.
 
 ## Observado en el primer TV

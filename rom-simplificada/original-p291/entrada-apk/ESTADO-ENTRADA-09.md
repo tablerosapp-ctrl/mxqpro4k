@@ -1,5 +1,9 @@
 # Acceso USB 0.9: preparación explícita y proceso independiente
 
+## Observación posterior · ejecución autorizada
+
+La [preparación física del primer P291](../../../docs/evidencia/PREPARACION-ENTRADA-P291-09.md) terminó con resultado verificado tras la autorización «si ejecuta». Los cambios previstos de ENV/BCB están escritos y releídos; el usuario informó posteriormente un menú de recovery tras el ciclo físico. La aceptación del ZIP y la ROM instalada todavía no se acreditan. No repetir launch. El contenido siguiente conserva el análisis previo de esta compilación.
+
 Estado del trabajo: APK 0.9 compilado, firmado contra API 28 y revisado de forma independiente, con el ZIP 0.2.1 exacto fijado. [Liberación offline](LIBERACION-09.json), [compilación](COMPILACION-09.json) y [cotejo independiente del artefacto](../entrada/REVISION-APK09-ARTEFACTO.json). El revisor obtuvo un DEX idéntico al recompilar las mismas fuentes y política. Este cierre no acredita entrega USB ni ejecución física: la preparación no se ejecutó en el TV ni se escribió su ENV/BCB durante el desarrollo.
 
 El APK mide 61843 bytes y tiene SHA256 `1d0f267e818acca5562048f9961c7c234f36b8cc81f827cb3eac9e3fcd2505a4`. Su ZIP admitido mide 573688933 bytes y tiene SHA256 `dcb152c77e55cb067d6e88a8144990a3edb5d06568ea8cdfdc414a0fa21aac58`. El archivo binario permanece en la salida privada identificada por el recibo.

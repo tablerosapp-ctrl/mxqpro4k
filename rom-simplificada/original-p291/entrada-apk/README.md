@@ -1,5 +1,9 @@
 # Entrada USB de la ROM original P291
 
+## Resultado físico posterior a la liberación
+
+El usuario autorizó explícitamente la preparación ENV/BCB y confirmó el Kingston conectado al primer P291. Se ejecutó una sola vez el cliente LAN con esta APK: `prepared`, códigos0, respaldos/informe y lectura posterior de ENV/misc verificados. [Resultado físico](../../../docs/evidencia/PREPARACION-ENTRADA-P291-09.md). No repetir preparación; el nonce activo y todos los recibos se conservan. El helper no reinició ni instaló Android. Tras el ciclo físico posterior, el usuario informó que apareció un menú de recovery; aceptación del ZIP e instalación pendientes. Las pruebas y limitaciones de liberación que siguen describen la revisión previa, no anulan esta observación posterior.
+
 **Estado vigente y archivos:** [Acceso USB 0.9](ESTADO-ENTRADA-09.md). El APK se compiló y firmó contra API 28 con el ZIP 0.2.1 exacto, y su cotejo independiente está aprobado en la [liberación offline](LIBERACION-09.json). El [RootProbe físico](PROBE-FISICO.json) ya fue aprobado en almacenamiento interno. El desacoplamiento del nuevo worker, fsync USB, entrada a recovery y escrituras ENV/BCB todavía no se probaron físicamente.
 
 ## Contrato previo conservado como antecedente

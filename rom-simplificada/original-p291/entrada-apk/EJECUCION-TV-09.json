@@ -1,0 +1,85 @@
+{
+  "state": "prepared_close_independently_verified",
+  "date_utc": "2026-09-08T02:45:07.086668+00:00",
+  "reviewer": "lecturas_adb_p291",
+  "profile": "gxlx2_p291_1g",
+  "apk_version": "0.9",
+  "rom_package_id": "TVBASE-P291-A9-0.2.1",
+  "preparation_close_verified": true,
+  "reviewed_power_cycle_precondition_satisfied": true,
+  "single_launch_verified": true,
+  "status_responses": 2,
+  "terminal_state": "prepared",
+  "terminal_remote_exit": 0,
+  "usb_manifest_files_verified": 21,
+  "sha256_sidecars_verified": 21,
+  "checkpoints_verified_in_order": 13,
+  "internal_files_crosschecked": 7,
+  "source_artifacts": {
+    "client_sha256": "8b60e1ab2e51182d332cc5648ec68f9c0ff1b0248861a62ea5d3aa333d2ba477",
+    "apk_sha256": "1d0f267e818acca5562048f9961c7c234f36b8cc81f827cb3eac9e3fcd2505a4",
+    "codec_sha256": "93883c9b329ffeaeba6fbe68b32a01660d0ba55c35bc3120a5c92743365ccfd2",
+    "zip_sha256": "dcb152c77e55cb067d6e88a8144990a3edb5d06568ea8cdfdc414a0fa21aac58"
+  },
+  "evidence_sha256": {
+    "acquisition_receipt": "49fb7bc0cf1820ce73ac3e3720dc232313f5567f4fe1a396d142af767b8fe328",
+    "attempt_snapshot": "bcd03b46d27a460be3b21e419225f7db2b6241c96fd922f76c72c80a2918d955",
+    "usb_manifest": "2b2715266a782072487c750c976f0f96e35a74d88c0e3664be501e37194ced7c",
+    "usb_archive": "7c74bbf258b9db8c209c69557ee0a3248306a9a7d0b1db1232b5d665205a79de",
+    "internal_archive": "6fed733ac68c3608f459a96ce2a3ca15943ce254bae9087ac9595907c1c8dcca",
+    "final_cache_and_failure_check": "7bc9ebb8040e6e90d3424e991b1a0fbc1c81cd84c56207f1bf586ad3095682f9"
+  },
+  "block_readbacks": {
+    "partition_bytes": 8388608,
+    "env_before_sha256": "49e48fddb963d1a4ebaf5889916bba8b59141bcc1eeef71ac1dad5c6425af775",
+    "env_after_sha256": "bbf9b6d51379a777576ffb96aa9776dc646c6300d70ee47dd2c475b747617b77",
+    "env_record_after_sha256": "4a769455ff8fdfd7a84d65c781259e34ca94657a833d8d55222b16acac2c31f6",
+    "misc_before_sha256": "c8b5991390836e2f03693d8a4f6f2f4ea2b223c20951a119155fba19cf542549",
+    "misc_after_sha256": "9793e0401880535b3a53d14436c3e59fb8d8e84cd96a649dca6a667d923648f2",
+    "bcb_prefix_after_sha256": "60e06b0f4afd4db33faef964133a5aa08991e42932b11302c72a36881a834e1b",
+    "actual_bytes_equal_independent_codec_outputs": true,
+    "bytes_outside_reviewed_fields_unchanged": true,
+    "env_crc_and_only_bootcmd_change_verified": true,
+    "bcb_is_menu_only_show_text": true
+  },
+  "checks": {
+    "binary_acquisition_hashes_sizes_and_remote_markers_verified": true,
+    "archive_members_equal_extracted_local_files": true,
+    "internal_candidate_prepared_status_match_usb_manifest": true,
+    "complete_marker_nonce_and_hash_match": true,
+    "no_timeout_truncation_or_local_transport_error": true,
+    "detached_process_checks_observed": true,
+    "usb_fsync_checkpoint_observed": true,
+    "backups_verified_before_mutation": true,
+    "cache_rename_checkpoints_verified": true,
+    "pending_cache_commands_absent_at_final_check": true,
+    "internal_and_usb_failure_markers_absent_at_final_check": true,
+    "bcb_then_env_write_readback_order_verified": true
+  },
+  "cache": {
+    "original_files_backed_up_and_preserved": 2,
+    "pending_names_checked": [
+      "command",
+      "uncrypt_file",
+      "zipinfo",
+      "block.map"
+    ],
+    "pending_count_at_final_check": 0
+  },
+  "env_bcb_prepared_in_tv": true,
+  "power_cycle_observed": false,
+  "recovery_entry_observed": false,
+  "rom_installed": false,
+  "userdata_wiped": false,
+  "automatic_reset_requested": false,
+  "reviewer_tv_accessed": false,
+  "reviewer_usb_accessed": false,
+  "limits": [
+    "El agente principal adquirio los datos del TV. Esta revision independiente recalculo y cotejo las copias exclusivamente en PC.",
+    "Los bytes adquiridos confirman la preparacion al momento de la captura; no descartan una modificacion posterior por otro proceso OEM.",
+    "El ciclo de alimentacion es el siguiente paso fisico del procedimiento autorizado. Esta comprobacion no garantiza que el cargador ejecute recovery ni que aparezca imagen.",
+    "La orden temporal restablece bootcmd solo si el flujo llega a ella y saveenv termina correctamente; no hay rollback atomico acreditado.",
+    "Fsync y relectura correctos no prueban resistencia a perdida electrica ni una via de rescate si falla el arranque.",
+    "BCB solicita un menu visible y no selecciona ni instala automaticamente un ZIP. No se ha instalado la ROM ni formateado userdata en esta preparacion."
+  ]
+}
