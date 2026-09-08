@@ -6,7 +6,7 @@ El usuario pidió conservar el respaldo en el repositorio público. Se prepara u
 
 La publicación se realiza como archivos de una Release, fuera del historial Git. GitHub permite distribuir archivos grandes mediante [Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases); se usan partes de 512 MiB para que cada archivo quede debajo de su límite. Los originales permanecen intactos.
 
-**Estado local verificado:** 465 archivos comprobados tras descifrar, más cinco equivalencias documentadas. El archivo cifrado ocupa 4.504.905.988 bytes y está dividido en nueve partes. [Manifiesto público de las partes](evidencia/RESPALDO-CIFRADO.json). La subida está pendiente; no considerar un borrador incompleto como respaldo disponible.
+**Publicado y verificado:** [Descargar el respaldo cifrado](https://github.com/tablerosapp-ctrl/mxqpro4k/releases/tag/respaldo-p291-20260908). Nueve partes, 4.504.905.988 bytes cifrados, y un manifiesto público. Se verificaron 465 archivos al descifrar en PC; GitHub confirmó tamaños y hashes de los diez assets y su acceso público anónimo. [Recibo de publicación](evidencia/RESPALDO-GITHUB-PUBLICADO.json) · [Manifiesto de las partes](evidencia/RESPALDO-CIFRADO.json). La comprobación remota usa los SHA256 de la API; no se descargaron nuevamente los 4,5 GB desde GitHub.
 
 ## Qué se conserva
 
@@ -22,6 +22,8 @@ Este conjunto contiene datos privados y por eso se cifra íntegramente. No inclu
 Se utiliza [age](https://github.com/FiloSottile/age), versión 1.3.2 oficial, con un destinatario X25519 generado para este respaldo. Su distribución de Windows se coteja con el tamaño y SHA256 publicados por GitHub. El contenido secreto de la clave nunca se pasa por argumentos ni se imprime; en Windows el archivo privado queda accesible únicamente para la cuenta operadora y SYSTEM.
 
 El [preparador](herramientas/preparar-respaldo-cifrado.py) comprueba los archivos contra los manifiestos existentes mientras los comprime. Después cifra, descifra de nuevo, compara el ZIP completo y relee todos sus archivos. También comprueba que concatenar las partes reproduce exactamente el archivo cifrado. Las fuentes no se montan ni se modifican.
+
+Se ejecutó también el recuperador completo contra las partes reales: **465 archivos y cinco copias equivalentes verificados**. [Recibo de la prueba en PC](evidencia/RECUPERACION-RESPALDO-PC.json). Se sincronizaron los archivos; en Windows no se acredita sincronización de directorios. El ensayo no restauró el TV.
 
 El [publicador](herramientas/publicar-respaldo-cifrado.py) acepta exclusivamente las partes cifradas declaradas y el manifiesto público. Primero sube a un borrador; solo publica cuando los nombres, tamaños y hashes de todos los archivos remotos coinciden. No carga originales ni claves. Ante una interrupción conserva el borrador para revisar y continuar, sin reemplazar archivos distintos por el mismo nombre.
 

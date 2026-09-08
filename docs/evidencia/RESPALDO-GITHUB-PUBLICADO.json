@@ -1,0 +1,91 @@
+{
+  "state": "published_verified",
+  "repository": "tablerosapp-ctrl/mxqpro4k",
+  "tag": "respaldo-p291-20260908",
+  "url": "https://github.com/tablerosapp-ctrl/mxqpro4k/releases/tag/respaldo-p291-20260908",
+  "public_head": "eb85b7c50fe6efbf10c5d041bbe112a26176d6f6",
+  "anonymous_public_verified": true,
+  "assets": [
+    {
+      "name": "RESPALDO-CIFRADO.json",
+      "id": 550856877,
+      "bytes": 2422,
+      "sha256": "c76fa31e8c9dc258b21f67a76342a0c1061711ac0dbbb118219f47b16c3f3e4f",
+      "url": "https://github.com/tablerosapp-ctrl/mxqpro4k/releases/download/respaldo-p291-20260908/RESPALDO-CIFRADO.json"
+    },
+    {
+      "name": "TVBASE-P291-RESPALDO-20260908.zip.age.part001",
+      "id": 550856895,
+      "bytes": 536870912,
+      "sha256": "08178c42d7195f02cf72b465a131a054146e54e4ef31923fedafb1743279bd2a",
+      "url": "https://github.com/tablerosapp-ctrl/mxqpro4k/releases/download/respaldo-p291-20260908/TVBASE-P291-RESPALDO-20260908.zip.age.part001"
+    },
+    {
+      "name": "TVBASE-P291-RESPALDO-20260908.zip.age.part002",
+      "id": 550862366,
+      "bytes": 536870912,
+      "sha256": "dda877c70c49b92e35b02b20f6c0280aa2e1082add88f058113418a06054cd36",
+      "url": "https://github.com/tablerosapp-ctrl/mxqpro4k/releases/download/respaldo-p291-20260908/TVBASE-P291-RESPALDO-20260908.zip.age.part002"
+    },
+    {
+      "name": "TVBASE-P291-RESPALDO-20260908.zip.age.part003",
+      "id": 550866441,
+      "bytes": 536870912,
+      "sha256": "bfc3f956e41e6af156df4fc4c966746e3265bc38c4b4765cb2032a685da85035",
+      "url": "https://github.com/tablerosapp-ctrl/mxqpro4k/releases/download/respaldo-p291-20260908/TVBASE-P291-RESPALDO-20260908.zip.age.part003"
+    },
+    {
+      "name": "TVBASE-P291-RESPALDO-20260908.zip.age.part004",
+      "id": 550871822,
+      "bytes": 536870912,
+      "sha256": "c4168f3cebb8f9a6b5f18284e7321881d135dbfbfeeb6d939a0123933247785d",
+      "url": "https://github.com/tablerosapp-ctrl/mxqpro4k/releases/download/respaldo-p291-20260908/TVBASE-P291-RESPALDO-20260908.zip.age.part004"
+    },
+    {
+      "name": "TVBASE-P291-RESPALDO-20260908.zip.age.part005",
+      "id": 550873499,
+      "bytes": 536870912,
+      "sha256": "2f0b194c3d062a663f08bd716d646c939173acd921fe50bb46e33b53039eed20",
+      "url": "https://github.com/tablerosapp-ctrl/mxqpro4k/releases/download/respaldo-p291-20260908/TVBASE-P291-RESPALDO-20260908.zip.age.part005"
+    },
+    {
+      "name": "TVBASE-P291-RESPALDO-20260908.zip.age.part006",
+      "id": 550875147,
+      "bytes": 536870912,
+      "sha256": "d1eb6e6ac8bb6d51f634a60a2a4eb797b8fe21fd009ecbcd371852356ad08924",
+      "url": "https://github.com/tablerosapp-ctrl/mxqpro4k/releases/download/respaldo-p291-20260908/TVBASE-P291-RESPALDO-20260908.zip.age.part006"
+    },
+    {
+      "name": "TVBASE-P291-RESPALDO-20260908.zip.age.part007",
+      "id": 550876929,
+      "bytes": 536870912,
+      "sha256": "d19f39856f9b33b711d9be00fd497bc6bf18bc3f9c101762aee7ff0497d8be43",
+      "url": "https://github.com/tablerosapp-ctrl/mxqpro4k/releases/download/respaldo-p291-20260908/TVBASE-P291-RESPALDO-20260908.zip.age.part007"
+    },
+    {
+      "name": "TVBASE-P291-RESPALDO-20260908.zip.age.part008",
+      "id": 550878581,
+      "bytes": 536870912,
+      "sha256": "1f39bbc688102371fe9543f2c430a850f028d06d4faaf752285b6cb4a95338fe",
+      "url": "https://github.com/tablerosapp-ctrl/mxqpro4k/releases/download/respaldo-p291-20260908/TVBASE-P291-RESPALDO-20260908.zip.age.part008"
+    },
+    {
+      "name": "TVBASE-P291-RESPALDO-20260908.zip.age.part009",
+      "id": 550880521,
+      "bytes": 209938692,
+      "sha256": "53ef820f535640027566d34eb0ae330a0b2431b4c991f074485985c24dda5d28",
+      "url": "https://github.com/tablerosapp-ctrl/mxqpro4k/releases/download/respaldo-p291-20260908/TVBASE-P291-RESPALDO-20260908.zip.age.part009"
+    }
+  ],
+  "verification": "GitHub asset digest SHA256 y tamaño consultados sin autenticación; no se descargaron de nuevo todos los bytes.",
+  "completed_at": "2026-09-08T16:37:09.295672+00:00",
+  "prepared_receipt_sha256": "a1b61003dea2b9cf88e5f92f87541f03bb0185070ee03c0133baff370053aba8",
+  "private_publication_receipt_sha256": "454f2f6285e5a1081ee1a344c8b7fcec77f540ec33972266e12fb2ff78cd67aa",
+  "encryption": "age-v1-X25519",
+  "private_key_uploaded": false,
+  "ciphertext_bytes": 4504905988,
+  "pc_files_verified": 465,
+  "pc_alias_copies_verified": 5,
+  "whole_emmc_backup": false,
+  "device_restoration_tested": false
+}

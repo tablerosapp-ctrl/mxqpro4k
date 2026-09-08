@@ -2,6 +2,8 @@
 
 ## Vigente · 8/9/2026, TV Base instalado y arrancado
 
+El respaldo también está [publicado cifrado en GitHub](RESPALDO-GITHUB.md): nueve partes y manifiesto verificados, con la clave privada separada en esta PC. Se probó recuperar los archivos en PC; esto no acredita restauración física del TV.
+
 **TV Base arrancó en el primer P291. La instalación 0.2.2 y los seis respaldos están verificados; el usuario confirma que puede conectarse por WiFi. Queda pendiente el botón Home del control.** La foto acredita el launcher y los recibos recuperados acreditan el cierre del instalador. El usuario prueba su APK; no se accedió al TV durante esta revisión.
 
 | Área | Resultado |

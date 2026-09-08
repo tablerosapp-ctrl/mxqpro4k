@@ -208,6 +208,7 @@ Requisitos: REQ-11, REQ-16.
 - [rom-simplificada/original-p291/restauracion-022/REVISION-LAYOUT-022.json](../rom-simplificada/original-p291/restauracion-022/REVISION-LAYOUT-022.json)
 - [rom-simplificada/original-p291/restauracion-022/README.md](../rom-simplificada/original-p291/restauracion-022/README.md)
 - [docs/herramientas/recuperar-respaldo-cifrado.py](../docs/herramientas/recuperar-respaldo-cifrado.py)
+- [docs/evidencia/RECUPERACION-RESPALDO-PC.json](../docs/evidencia/RECUPERACION-RESPALDO-PC.json)
 
 ### C-ENTRY · Entrada 0.9 lograda
 
@@ -350,7 +351,7 @@ Requisitos: REQ-13.
 
 ### C-ORIG · Originales del P291
 
-**observado_tv**. Doce particiones OEM seleccionadas, 2538 MiB, conservadas como fuente original. Se agrega un conjunto previo a la instalación de seis respaldos, incluida userdata. Hay cinco particiones comunes a ambos conjuntos; no es toda la eMMC ni restauración ensayada.
+**observado_tv**. Doce particiones OEM seleccionadas, 2538 MiB, conservadas como fuente original. Se agrega un conjunto previo a la instalación de seis respaldos, incluida userdata. Hay cinco particiones comunes a ambos conjuntos; no es toda la eMMC ni restauración ensayada. Copia cifrada y verificada disponible en GitHub, con clave privada separada.
 
 Requisitos: REQ-02, REQ-09, REQ-11.
 
@@ -364,6 +365,7 @@ Requisitos: REQ-02, REQ-09, REQ-11.
 - [docs/evidencia/RESPALDO-CIFRADO.json](../docs/evidencia/RESPALDO-CIFRADO.json)
 - [docs/herramientas/preparar-respaldo-cifrado.py](../docs/herramientas/preparar-respaldo-cifrado.py)
 - [docs/herramientas/publicar-respaldo-cifrado.py](../docs/herramientas/publicar-respaldo-cifrado.py)
+- [docs/evidencia/RESPALDO-GITHUB-PUBLICADO.json](../docs/evidencia/RESPALDO-GITHUB-PUBLICADO.json)
 
 ### C-PRODUCTO · Producto común
 
@@ -421,7 +423,7 @@ Requisitos: REQ-15, REQ-16, REQ-17.
 | actualizacion-chrome | 51 | 0.417 |
 | analisis-rom | 15 | 1.822 |
 | diagnostico | 177 | 0.018 |
-| docs | 47 | 0.000 |
+| docs | 49 | 0.000 |
 | dossier-s905l2.html | 1 | 0.000 |
 | images | 1 | 1.352 |
 | platform-tools-latest-windows.zip | 1 | 0.008 |

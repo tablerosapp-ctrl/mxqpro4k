@@ -33,7 +33,8 @@
     "historical_entry": "rom-simplificada/original-p291/entrada-apk/COMPILACION-09.json",
     "historical_entry_release": "rom-simplificada/original-p291/entrada-apk/LIBERACION-09.json",
     "home_hypothesis": "docs/hipotesis/HOME-P291.md",
-    "encrypted_backup": "docs/RESPALDO-GITHUB.md"
+    "encrypted_backup": "docs/RESPALDO-GITHUB.md",
+    "encrypted_backup_receipt": "docs/evidencia/RESPALDO-GITHUB-PUBLICADO.json"
   },
   "components": [
     {
@@ -249,7 +250,8 @@
         "rom-simplificada/original-p291/restauracion-022/block_layout_test.go",
         "rom-simplificada/original-p291/restauracion-022/REVISION-LAYOUT-022.json",
         "rom-simplificada/original-p291/restauracion-022/README.md",
-        "docs/herramientas/recuperar-respaldo-cifrado.py"
+        "docs/herramientas/recuperar-respaldo-cifrado.py",
+        "docs/evidencia/RECUPERACION-RESPALDO-PC.json"
       ],
       "x": 2,
       "y": 1,
@@ -440,7 +442,7 @@
       "id": "C-ORIG",
       "label": "Originales del P291",
       "state": "observado_tv",
-      "description": "Doce particiones OEM seleccionadas, 2538 MiB, conservadas como fuente original. Se agrega un conjunto previo a la instalación de seis respaldos, incluida userdata. Hay cinco particiones comunes a ambos conjuntos; no es toda la eMMC ni restauración ensayada.",
+      "description": "Doce particiones OEM seleccionadas, 2538 MiB, conservadas como fuente original. Se agrega un conjunto previo a la instalación de seis respaldos, incluida userdata. Hay cinco particiones comunes a ambos conjuntos; no es toda la eMMC ni restauración ensayada. Copia cifrada y verificada disponible en GitHub, con clave privada separada.",
       "files": [
         "diagnostico/primer-tv-lan-20260907-184926/RESPALDO-resumen-saneado.json",
         "diagnostico/primer-tv-lan-20260907-184926/RECOVERY-ORIGINAL.md",
@@ -451,7 +453,8 @@
         "docs/RESPALDO-GITHUB.md",
         "docs/evidencia/RESPALDO-CIFRADO.json",
         "docs/herramientas/preparar-respaldo-cifrado.py",
-        "docs/herramientas/publicar-respaldo-cifrado.py"
+        "docs/herramientas/publicar-respaldo-cifrado.py",
+        "docs/evidencia/RESPALDO-GITHUB-PUBLICADO.json"
       ],
       "x": 4,
       "y": 2,
@@ -1646,5 +1649,14 @@
       }
     }
   },
-  "current_instruction": "Document and preserve the completed installation and ISSUE-HOME-01. Do not repeat entry, install or reset. Wait for user OK before new device tests, fixes or product implementation."
+  "current_instruction": "Document and preserve the completed installation and ISSUE-HOME-01. Do not repeat entry, install or reset. Wait for user OK before new device tests, fixes or product implementation.",
+  "encrypted_backup": {
+    "state": "published_verified",
+    "url": "https://github.com/tablerosapp-ctrl/mxqpro4k/releases/tag/respaldo-p291-20260908",
+    "ciphertext_bytes": 4504905988,
+    "parts": 9,
+    "private_key_uploaded": false,
+    "pc_recovery_verified": true,
+    "device_restoration_tested": false
+  }
 }

@@ -1,0 +1,13 @@
+{
+  "state": "verified_files_only",
+  "files_verified": 465,
+  "alias_copies_verified": 5,
+  "encrypted_sha256": "ec2f47cef7dc4195e04ef60f70b8ac0552314526ba76ad7d637a8b1e8ddb48b2",
+  "index_sha256": "2c4a355f284679275a97658f6bbcc0b4b404889b4ad593a5dc59cffe9c441c95",
+  "file_fsync": true,
+  "directory_fsync": false,
+  "device_restoration_tested": false,
+  "scope": "Full recovery of the real encrypted backup on this PC; no USB, network or TV operation.",
+  "private_receipt_sha256": "1f2df3c77b21422d2112c4b53b62bf12c5cb69df9be6d842c76037980b8fa538",
+  "helper_sha256": "fd763badcb8f1ae74d954d2d19aa456697ea0e3639cb6c5e616881aba6b2b656"
+}

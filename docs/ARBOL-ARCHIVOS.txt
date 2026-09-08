@@ -149,7 +149,9 @@ mxqpro4k/
 │   │   ├── PARTICIONES-AMLOGIC-P291-022.md
 │   │   ├── PREPARACION-ENTRADA-P291-09.md
 │   │   ├── publicacion-github.json
+│   │   ├── RECUPERACION-RESPALDO-PC.json
 │   │   ├── RESPALDO-CIFRADO.json
+│   │   ├── RESPALDO-GITHUB-PUBLICADO.json
 │   │   └── ROM-ORIGINAL-P291-020.md
 │   ├── herramientas/
 │   │   ├── __pycache__/
