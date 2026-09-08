@@ -6,7 +6,7 @@ La flecha expresa la relación indicada, no que se haya completado la prueba de 
 
 ```mermaid
 flowchart LR
-    C_PERFIL["P291 instalado · observado_tv"]
+    C_PERFIL["P291/P271 y RK3229-A/B/C · observado_tv"]
     C_BASE["Candidato anterior · verificado_local"]
     C_CHROME["Chrome 138 · verificado_local"]
     C_INICIO["Inicio: Home pendiente · observado_tv"]
@@ -23,7 +23,7 @@ flowchart LR
     C_ORIG["Originales del P291 · observado_tv"]
     C_PRODUCTO["Producto común · propuesto"]
     C_LOTES["Dos recorridos de lote · propuesto"]
-    C_RECON["Reconocimiento0.3 · construido"]
+    C_RECON["Reconocimiento0.3 · observado_tv"]
     C_EXTRACT["Extracción recovery0.1 · construido"]
     C_PERFIL -->|"selecciona"| C_BASE
     C_CHROME -->|"motor admitido"| C_WEB
@@ -57,9 +57,9 @@ flowchart LR
 
 ## Archivos por componente
 
-### C-PERFIL · P291 instalado
+### C-PERFIL · P291/P271 y RK3229-A/B/C
 
-**observado_tv**. Primer P291 instalado. Topología nominal e inicios de partición registrados; WiFi conectado según el usuario. P271 requiere otro perfil.
+**observado_tv**. P291 instalado; P271 y tres RK3229 con inventarios distintos. DT compartido no acredita ROM intercambiable. C tiene recovery accesible según usuario.
 
 Requisitos: REQ-02, REQ-10, REQ-15.
 
@@ -76,6 +76,8 @@ Requisitos: REQ-02, REQ-10, REQ-15.
 - [diagnostico/primer-tv-instalado-20260908/HALLAZGOS.md](../diagnostico/primer-tv-instalado-20260908/HALLAZGOS.md)
 - [diagnostico/primer-tv-instalado-20260908/resumen-saneado.json](../diagnostico/primer-tv-instalado-20260908/resumen-saneado.json)
 - [docs/evidencia/REINICIOS-P291-SIN-USB.md](../docs/evidencia/REINICIOS-P291-SIN-USB.md)
+- [docs/MATRIZ-PERFILES.md](../docs/MATRIZ-PERFILES.md)
+- [diagnostico/reconocimiento-20260908-rk3229-manual/HALLAZGOS.md](../diagnostico/reconocimiento-20260908-rk3229-manual/HALLAZGOS.md)
 
 ### C-BASE · Candidato anterior
 
@@ -251,7 +253,7 @@ Requisitos: REQ-11.
 
 ### C-USB · Kingston: reconocimiento
 
-**observado_tv**. Kingston conserva APK, respaldos y releases anteriores; nueva carpetaTVBASE-EXTRACCION con dosZIP y guía verificados. Sin plan solo inventario; prueba recovery pendiente.
+**observado_tv**. Kingston con informes y respaldos preservados; nueva preparación añade únicamente plan del últimoRK3229-C y guía para extractorARM32 existente.
 
 Requisitos: REQ-01.
 
@@ -407,7 +409,7 @@ Requisitos: REQ-15, REQ-16, REQ-17.
 
 ### C-RECON · Reconocimiento0.3
 
-**construido**. DosvariantesRK3229capturadas;0.3entregado conselectorpropio yfallbacklocal. Reutiliza ficha0.2, pendiente prueba delRockchipque falló.
+**observado_tv**. P271 y tres configuraciones RK3229 recibidas. Copia manual0.3 del último C íntegra enPC; descubrimientoUSB observado, escritura automática falló segúnusuario.
 
 Requisitos: REQ-02, REQ-14, REQ-18.
 
@@ -466,10 +468,12 @@ Requisitos: REQ-02, REQ-14, REQ-18.
 - [diagnostico/reconocedor-0.3/tests/UsbLocatorHarness.java](../diagnostico/reconocedor-0.3/tests/UsbLocatorHarness.java)
 - [docs/evidencia/RECONOCEDOR-USB-03.md](../docs/evidencia/RECONOCEDOR-USB-03.md)
 - [diagnostico/reconocimiento-20260908-rk3229-usb/HALLAZGOS.md](../diagnostico/reconocimiento-20260908-rk3229-usb/HALLAZGOS.md)
+- [diagnostico/reconocimiento-20260908-rk3229-manual/HALLAZGOS.md](../diagnostico/reconocimiento-20260908-rk3229-manual/HALLAZGOS.md)
+- [diagnostico/reconocimiento-20260908-rk3229-manual/EVIDENCIA-SANEADA.json](../diagnostico/reconocimiento-20260908-rk3229-manual/EVIDENCIA-SANEADA.json)
 
 ### C-EXTRACT · Extracción recovery0.1
 
-**construido**. ExtractorRO compilado y entregado, sin prueba física. Plan P271 derivado de ZIP íntegro y copiado; entrada/firma recovery pendientes.
+**construido**. Extractor0.1 ARM32 preparado para el último RK3229-C con único plan RK. Recovery accesible segúnusuario; aceptaciónZIP y lectura real pendientes. PlanP271 diferente conservado.
 
 Requisitos: REQ-11, REQ-18, REQ-19.
 
@@ -495,6 +499,11 @@ Requisitos: REQ-11, REQ-18, REQ-19.
 - [docs/evidencia/RECOVERY-P271-ALCANCE.md](../docs/evidencia/RECOVERY-P271-ALCANCE.md)
 - [preparacion-usb/extractor-01-estado.json](../preparacion-usb/extractor-01-estado.json)
 - [preparacion-usb/preparar-extractor-01.ps1](../preparacion-usb/preparar-extractor-01.ps1)
+- [docs/MATRIZ-PERFILES.md](../docs/MATRIZ-PERFILES.md)
+- [docs/evidencia/EXTRACCION-RK3229-C.md](../docs/evidencia/EXTRACCION-RK3229-C.md)
+- [docs/evidencia/LEEME-EXTRACCION-RK3229-C.txt](../docs/evidencia/LEEME-EXTRACCION-RK3229-C.txt)
+- [preparacion-usb/preparar-extraccion-rk3229-c.ps1](../preparacion-usb/preparar-extraccion-rk3229-c.ps1)
+- [preparacion-usb/extraccion-rk3229-c-estado.json](../preparacion-usb/extraccion-rk3229-c-estado.json)
 
 ## Directorios y cuidado
 
@@ -535,12 +544,12 @@ Requisitos: REQ-11, REQ-18, REQ-19.
 | README.md | 1 | 0.000 |
 | actualizacion-chrome | 51 | 0.417 |
 | analisis-rom | 15 | 1.822 |
-| diagnostico | 249 | 0.019 |
-| docs | 57 | 0.001 |
+| diagnostico | 251 | 0.019 |
+| docs | 60 | 0.001 |
 | dossier-s905l2.html | 1 | 0.000 |
 | images | 1 | 1.352 |
 | platform-tools-latest-windows.zip | 1 | 0.008 |
-| preparacion-usb | 100 | 3.688 |
+| preparacion-usb | 102 | 3.688 |
 | rom-simplificada | 4619 | 14.542 |
 | tools | 18088 | 1.173 |
 

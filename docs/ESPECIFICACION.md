@@ -1,5 +1,11 @@
 # Especificación del producto y aceptación
 
+## Actualización · inventario C y primera extracción seleccionada
+
+REQ-18/VAL-11 tienen capturas importadas del P271 y tres variantes RK3229. En C,0.3 permitió conservar la ficha en Descargas y el usuario la trasladó al USB; PC comprobó su integridad. Esto no acredita exportación directa desde la APK ni capacidades de video. [Matriz de variantes y versiones reales](MATRIZ-PERFILES.md).
+
+REQ-19/VAL-12 avanzan con un plan único para el último RK3229-C y la confirmación del usuario de que puede abrir recovery. Se mantiene el extractor0.1; faltan aceptación de ZIP y copia real verificada. ADR-34 exige regresar a PC antes de cambiar a A/B, que tienen igual DT. No se instala una ROM nueva en esta fase.
+
 ## REQ-19 · Reconocimiento combinado y originales desde recovery
 
 El usuario amplió el reconocimiento: APK normal para identificar y observar Android, luego paquete independiente de extracción basado en su informe para recovery compatible. [Implementación y contrato](../diagnostico/extractor-recovery-0.1/README.md). No se instala una ROM ni se modifica el recovery al copiar; entrada y aceptación del paquete se califican por perfil. El plan liga SHA/UUID de la captura y DT declarado, no acredita identidad física ni habilita instalación. El mapa y tamaños se descubren y revalidan en recovery. El adaptador inicial admite eMMC interna y registra omisiones; no se promete extracción de RPMB/MTD/UFS o todos los TV.

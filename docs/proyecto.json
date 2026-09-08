@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "title": "TV Base",
-  "snapshot": "2026-09-08T20:43:54.435161+00:00",
-  "state": "P291 instalado. P271 y dos variantes RK3229 capturados; reconocimiento0.3 entregado para Rockchip sin selector. RAM/Android anómalos y recovery por variante pendientes.",
+  "snapshot": "2026-09-08T21:15:30.393778+00:00",
+  "state": "P291 instalado; P271 y tres variantes RK3229 reconocidos. Copia manual C íntegra; pendrive preparado y verificado para extraer C desde recovery, ejecución física pendiente.",
   "installed": true,
   "original_tv_backup_confirmed": true,
   "source_of_truth": {
@@ -45,14 +45,18 @@
     "extractor_build": "diagnostico/extractor-recovery-0.1/COMPILACION.json",
     "extractor_evidence": "docs/evidencia/EXTRACTOR-RECOVERY-01.md",
     "inherited_services": "docs/REVISION-COMPONENTES-HEREDADOS.md",
-    "latest_recognition_capture": "diagnostico/reconocimiento-20260908-rk3229-usb/HALLAZGOS.md"
+    "latest_recognition_capture": "diagnostico/reconocimiento-20260908-rk3229-manual/HALLAZGOS.md",
+    "profile_matrix": "docs/MATRIZ-PERFILES.md",
+    "current_extraction_delivery": "preparacion-usb/extraccion-rk3229-c-estado.json",
+    "recognition_acquisition_summary": "diagnostico/reconocimiento-20260908-rk3229-manual/EVIDENCIA-SANEADA.json",
+    "current_extraction_evidence": "docs/evidencia/EXTRACCION-RK3229-C.md"
   },
   "components": [
     {
       "id": "C-PERFIL",
-      "label": "P291 instalado",
+      "label": "P291/P271 y RK3229-A/B/C",
       "state": "observado_tv",
-      "description": "Primer P291 instalado. Topología nominal e inicios de partición registrados; WiFi conectado según el usuario. P271 requiere otro perfil.",
+      "description": "P291 instalado; P271 y tres RK3229 con inventarios distintos. DT compartido no acredita ROM intercambiable. C tiene recovery accesible según usuario.",
       "files": [
         "dossier-s905l2.html",
         "diagnostico/primer-tv-20260906-actualizacion-local/HALLAZGOS.md",
@@ -66,7 +70,9 @@
         "docs/evidencia/INSTALACION-FISICA-P291-022.md",
         "diagnostico/primer-tv-instalado-20260908/HALLAZGOS.md",
         "diagnostico/primer-tv-instalado-20260908/resumen-saneado.json",
-        "docs/evidencia/REINICIOS-P291-SIN-USB.md"
+        "docs/evidencia/REINICIOS-P291-SIN-USB.md",
+        "docs/MATRIZ-PERFILES.md",
+        "diagnostico/reconocimiento-20260908-rk3229-manual/HALLAZGOS.md"
       ],
       "x": 0,
       "y": 0,
@@ -311,7 +317,7 @@
       "id": "C-USB",
       "label": "Kingston: reconocimiento",
       "state": "observado_tv",
-      "description": "Kingston conserva APK, respaldos y releases anteriores; nueva carpetaTVBASE-EXTRACCION con dosZIP y guía verificados. Sin plan solo inventario; prueba recovery pendiente.",
+      "description": "Kingston con informes y respaldos preservados; nueva preparación añade únicamente plan del últimoRK3229-C y guía para extractorARM32 existente.",
       "files": [
         "rom-simplificada/INSTALACION-USB.md",
         "preparacion-usb/rom-012-estado.json",
@@ -523,8 +529,8 @@
     {
       "id": "C-RECON",
       "label": "Reconocimiento0.3",
-      "state": "construido",
-      "description": "DosvariantesRK3229capturadas;0.3entregado conselectorpropio yfallbacklocal. Reutiliza ficha0.2, pendiente prueba delRockchipque falló.",
+      "state": "observado_tv",
+      "description": "P271 y tres configuraciones RK3229 recibidas. Copia manual0.3 del último C íntegra enPC; descubrimientoUSB observado, escritura automática falló segúnusuario.",
       "files": [
         "diagnostico/reconocedor-0.1/README.md",
         "docs/evidencia/RECONOCEDOR-USB-01.md",
@@ -580,7 +586,9 @@
         "diagnostico/reconocedor-0.3/tests/test_usb_locator.py",
         "diagnostico/reconocedor-0.3/tests/UsbLocatorHarness.java",
         "docs/evidencia/RECONOCEDOR-USB-03.md",
-        "diagnostico/reconocimiento-20260908-rk3229-usb/HALLAZGOS.md"
+        "diagnostico/reconocimiento-20260908-rk3229-usb/HALLAZGOS.md",
+        "diagnostico/reconocimiento-20260908-rk3229-manual/HALLAZGOS.md",
+        "diagnostico/reconocimiento-20260908-rk3229-manual/EVIDENCIA-SANEADA.json"
       ],
       "x": 0,
       "y": 3,
@@ -594,7 +602,7 @@
       "id": "C-EXTRACT",
       "label": "Extracción recovery0.1",
       "state": "construido",
-      "description": "ExtractorRO compilado y entregado, sin prueba física. Plan P271 derivado de ZIP íntegro y copiado; entrada/firma recovery pendientes.",
+      "description": "Extractor0.1 ARM32 preparado para el último RK3229-C con único plan RK. Recovery accesible segúnusuario; aceptaciónZIP y lectura real pendientes. PlanP271 diferente conservado.",
       "files": [
         "diagnostico/extractor-recovery-0.1/COMPILACION.json",
         "diagnostico/extractor-recovery-0.1/LEEME-USB.txt",
@@ -617,7 +625,12 @@
         "docs/evidencia/EXTRACTOR-RECOVERY-01.md",
         "docs/evidencia/RECOVERY-P271-ALCANCE.md",
         "preparacion-usb/extractor-01-estado.json",
-        "preparacion-usb/preparar-extractor-01.ps1"
+        "preparacion-usb/preparar-extractor-01.ps1",
+        "docs/MATRIZ-PERFILES.md",
+        "docs/evidencia/EXTRACCION-RK3229-C.md",
+        "docs/evidencia/LEEME-EXTRACCION-RK3229-C.txt",
+        "preparacion-usb/preparar-extraccion-rk3229-c.ps1",
+        "preparacion-usb/extraccion-rk3229-c-estado.json"
       ],
       "x": 2,
       "y": 3,
@@ -1337,6 +1350,17 @@
         "C-PERFIL"
       ],
       "state": "construido"
+    },
+    {
+      "id": "ADR-34",
+      "file": "docs/DECISIONES.md",
+      "components": [
+        "C-RECON",
+        "C-EXTRACT",
+        "C-PERFIL",
+        "C-USB"
+      ],
+      "state": "verificado_local"
     }
   ],
   "validations": [
@@ -1446,11 +1470,11 @@
     {
       "id": "VAL-11",
       "file": "docs/ESPECIFICACION.md",
-      "state": "pendiente",
+      "state": "observado_tv",
       "requirements": [
         "REQ-18"
       ],
-      "note": "APK/ZIP/importador y entrega Windows verificados PC. Faltan capturas Android P291/P271 y exportación real, errores/accesos parciales explícitos."
+      "note": "P271 y tres RK3229 capturados/importados; C0.3 recibido por traslado manual íntegro, no acredita escritura directa APK enUSB."
     }
   ],
   "artifacts": [

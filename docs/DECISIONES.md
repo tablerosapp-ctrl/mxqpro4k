@@ -1,5 +1,13 @@
 # Decisiones y lecciones
 
+## ADR-34 · Primera extracción RK con selección explícita del equipo
+
+La exportación manual del reconocedor0.3 produjo un inventario íntegro del tercer RK3229. Se conserva como vía válida, con evidencia PC independiente de su recibo local; no se necesita otra iteración del reconocedor para proseguir. El usuario confirma acceso al recovery de ese último equipo C.
+
+Se mantiene el extractor0.1 sellado y se deriva un único plan de ese inventario. No se instalan simultáneamente planes A/B/C con el mismo DT, ni se fabrica un plan familiar que atribuya todos los equipos a una captura APK. La selección manual del último aparato permite la primera prueba de lectura; la identidad física y el mapa se contrastan de nuevo al recibir el inventario recovery. Es una asociación candidata, no un control de compatibilidad para flasheo.
+
+No se utiliza Update de Android, metadatos P291 ni un instalador de ROM para llegar al respaldo. El usuario usa el recovery al que ya sabe entrar y se prueba únicamente el ZIP extractor ARM32. Una firma/ruta/USB rechazados se registran sin forzar o renombrar automáticamente. Antes de cambiar de aparato se adquiere el resultado y se prepara su plan. [Matriz y límites](MATRIZ-PERFILES.md), [contrato](../diagnostico/extractor-recovery-0.1/README.md).
+
 ## ADR-31 · Extracción combinada, separada de instalación
 
 Se implementa el pedido del usuario de complementar la APK con copias de originales desde recovery. Un plan generado desde un ZIP de reconocimiento verificado vincula DT/perfil y captura; el ejecutable descubre de nuevo geometría y abre bloques exclusivamente en lectura. Sin plan coincidente registra inventario y no copia imágenes. Se preservan capturas anteriores, se comprueba espacio, se dividen fuentes en 1 GiB y se verifican por lectura. La selección omite áreas ocupadas/desconocidas sin desmontarlas. No se altera ni reutiliza el instalador0.2.2 como si tuviera modo de respaldo. Entrada, firma y ejecución física requieren evidencia por perfil; aún no comprobadas en P271/Rockchip.

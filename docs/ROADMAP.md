@@ -2,9 +2,9 @@
 
 ## Reconocimiento combinado · prioridad actual
 
-1. P271 y dos variantes RK3229: capturas verificadas. Completar el Rockchip que no pudo guardar con0.3; selector propio o Descargas+traslado manual. [Variantes](../diagnostico/reconocimiento-20260908-rk3229-usb/HALLAZGOS.md). Resolver datos Android/RAM anómalos y perfiles más específicos que el DT compartido antes de preparar planes RK.
-2. Plan de lectura derivado de esa captura; revisión de entrada/firma del recovery y ejecución del extractor0.1 en el equipo correspondiente. [Contrato](../diagnostico/extractor-recovery-0.1/README.md) · [P271](evidencia/RECOVERY-P271-ALCANCE.md).
-3. Verificación privada de imágenes/omisiones y ficha por perfil; repetir con los otros equipos conservando su identidad. La APK y el extractor son complementarios, y no hay arranque ni firma universales acreditados.
+1. P271 y tres variantes RK3229 reconocidos; [C recibido por copia manual](../diagnostico/reconocimiento-20260908-rk3229-manual/HALLAZGOS.md). Esta captura no necesita repetición. [Matriz de bases](MATRIZ-PERFILES.md): RAM anómala en B y diferentes particiones/radios; API25 impide trasladar directamente el motor138 deP291.
+2. Primera extracción en el último RK3229-C: usuario confirma acceso a recovery; plan único seleccionado en PC y extractor0.1 ARM32 existente. Aceptación de firma/ejecución/USB y lectura reales pendientes. No usar actualizador Android ni ROM P291.
+3. Verificar en PC imágenes, inventario nuevo y omisiones; conservar privado. Cambiar el plan antes de A/B porque comparten DT. P271 conserva su plan diferente y entrada por resolver. No hay extracción física nueva acreditada todavía.
 4. Calificar capa común, Home, WebView/video y recursos. Prioridad expresa: [revisión de telefonía, servicios heredados y malware](REVISION-COMPONENTES-HEREDADOS.md). Mantener auditoría de consumo/tráfico y dependencias antes de retirar paquetes.
 5. Instalación rápida por perfil y actualización propia siguen separadas del reconocedor y pendientes de validación/implementación.
 

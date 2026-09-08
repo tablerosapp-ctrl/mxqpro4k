@@ -1,0 +1,42 @@
+{
+  "schema": "tvbase-manual-import-summary-1",
+  "created_at_utc": "2026-09-08T21:12:38.175452+00:00",
+  "state": "imported_verified_pc",
+  "profile_label": "RK3229-C",
+  "app_installation_identity_count": 1,
+  "physical_identity_proven": false,
+  "captures": [
+    {
+      "capture_state": "inventory_with_explicit_limits",
+      "bytes": 39863,
+      "sha256": "96e18c9ae63d7aab82f0217f6e9b3f353d7b9cb1318f986e6c04fdfb2b155e03",
+      "zip_entries": 2,
+      "expanded_bytes": 399524,
+      "has_block_images": false
+    },
+    {
+      "capture_state": "basic_checkpoint",
+      "bytes": 1292,
+      "sha256": "5e2e0da77a74c03a4285553aad472919e49be154385a9cb2c5f09a33f2260d82",
+      "zip_entries": 2,
+      "expanded_bytes": 1910,
+      "has_block_images": false
+    }
+  ],
+  "total_zip_bytes": 41155,
+  "receipts": {
+    "count": 2,
+    "bytes": 971,
+    "preserved_unchanged": true,
+    "local_receipt_claims_usb_export": false,
+    "pc_receipt_readback_verified": true
+  },
+  "catalog_sha256": "eada1deb22865e5ef0ebd1e06dc8715a9224d452313149e45422ed98c98ccba8",
+  "receipt_acquisition_sha256": "505b9eeb77bccf0fc9d065db292590b1f18c6d2ba731acd45cd2898b14be4a29",
+  "usb_modified_during_acquisition": false,
+  "tv_contacted": false,
+  "root_or_firmware_actions": false,
+  "user_reports_recovery_access": true,
+  "extractor_executed": false,
+  "rom_installed": false
+}

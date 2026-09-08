@@ -1,5 +1,15 @@
 # Estado operativo
 
+## Vigente · RK3229-C capturado; paso a extraer originales
+
+La copia manual del último Rockchip llegó íntegra: dos ZIP de 41.155 B en total y dos recibos locales conservados y comprobados en PC. Son ficha inicial e inventario de la misma instalación APK. [Hallazgos C](../diagnostico/reconocimiento-20260908-rk3229-manual/HALLAZGOS.md). No necesita repetir reconocimiento. La selección USB funcionó según el usuario, pero la escritura automática no; la transferencia manual está comprobada por la lectura en PC.
+
+Tenemos P291 instalado, P271 reconocido y tres configuraciones RK3229 distintas. [Matriz y efecto sobre Android/WebView](MATRIZ-PERFILES.md). C es el último equipo, MBOX/CNV8b.20230725, eMMC Q7XSAB. El usuario confirmó que puede abrir su recovery. Se selecciona este para la primera extracción con el ejecutable ARM32 0.1 ya construido, sin rehacerlo. El plan solo asocia el informe candidato; no prueba identidad física ni fija offsets. Solo un plan RK puede quedar activo porque A/B/C anuncian el mismo DT.
+
+La [preparación C](../preparacion-usb/preparar-extraccion-rk3229-c.ps1) agrega plan y guía conservando los archivos anteriores. La [entrega](evidencia/EXTRACCION-RK3229-C.md) terminó código0: dos archivos nuevos, 5078B; anteriores conservados, 23.270.916.096B libres. No repetir el preparador. La aceptación del ZIP, lectura en recovery e imágenes C permanecen pendientes. No usar los instaladores P291 ni Update de Android para esta captura. Después de C, devolver el USB para verificar y cambiar el plan antes de A/B. No existe todavía una ROM RK construida.
+
+## Antecedente · entrega0.3
+
 ## Vigente · RK3229-A/B capturados; corrección0.3 entregada
 
 [Cinco ZIP verificados](../diagnostico/reconocimiento-20260908-rk3229-usb/HALLAZGOS.md): P271 histórico más dos fichas iniciales y sus inventarios RK3229. Diferencias de firmware, WiFi y particiones; igual DT no autoriza intercambiar ROM. API25/fingerprint7.1.2 contradicen etiquetas11.1/13.0; RAM anómala en una variante. Los cuatro nuevos ZIP suman84.222B, sin imágenes de bloques por diseño. No repetir estas capturas.

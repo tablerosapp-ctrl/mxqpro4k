@@ -205,6 +205,9 @@ mxqpro4k/
 │   │   └── README.md
 │   ├── reconocimiento-20260908-p271-mx9/
 │   │   └── HALLAZGOS.md
+│   ├── reconocimiento-20260908-rk3229-manual/
+│   │   ├── EVIDENCIA-SANEADA.json
+│   │   └── HALLAZGOS.md
 │   ├── reconocimiento-20260908-rk3229-usb/
 │   │   └── HALLAZGOS.md
 │   ├── respaldo-p291-lan/
@@ -225,10 +228,12 @@ mxqpro4k/
 │   │   ├── ENTRADA-ORIGINAL-P291-021.md
 │   │   ├── ERROR-INSTALADOR-P291-021.json
 │   │   ├── ERROR-INSTALADOR-P291-021.md
+│   │   ├── EXTRACCION-RK3229-C.md
 │   │   ├── EXTRACTOR-RECOVERY-01.md
 │   │   ├── git-inicial.json
 │   │   ├── INSTALACION-FISICA-P291-022.md
 │   │   ├── INSTALADOR-P291-022.md
+│   │   ├── LEEME-EXTRACCION-RK3229-C.txt
 │   │   ├── limpieza-plan.json
 │   │   ├── limpieza-resultado.json
 │   │   ├── mapa-ui.json
@@ -276,6 +281,7 @@ mxqpro4k/
 │   ├── GIT.md
 │   ├── INCIDENCIAS.md
 │   ├── LIMPIEZA.md
+│   ├── MATRIZ-PERFILES.md
 │   ├── PLAN-RECONOCIMIENTO-Y-PRODUCTO.md
 │   ├── PROPUESTA-LOTES-Y-ACTUALIZACIONES.md
 │   ├── proyecto.json
@@ -304,6 +310,7 @@ mxqpro4k/
 │   ├── evidencia-05-estado.json
 │   ├── evidencia-06-20260907-002158/ [3 archivos; 0.0 MB; agrupado]
 │   ├── evidencia-06-estado.json
+│   ├── extraccion-rk3229-c-estado.json
 │   ├── extractor-01-estado.json
 │   ├── fuentes-imager-2.0.11.1/ [5 archivos; 0.3 MB; agrupado]
 │   ├── grabacion-20260904-234011-a03e047f/ [5 archivos; 0.0 MB; agrupado]
@@ -322,6 +329,7 @@ mxqpro4k/
 │   ├── preparar-entrada-oem-07.ps1
 │   ├── preparar-evidencia-05.ps1
 │   ├── preparar-evidencia-06.ps1
+│   ├── preparar-extraccion-rk3229-c.ps1
 │   ├── preparar-extractor-01.ps1
 │   ├── preparar-instalador-android.ps1
 │   ├── preparar-original-021.ps1

@@ -1,0 +1,88 @@
+TV BASE — EXTRACCIÓN DEL ÚLTIMO ROCKCHIP (RK3229-C)
+Preparación específica del 8 de septiembre de 2026
+
+Usar primero y únicamente en el último equipo reconocido como MBOX,
+con fingerprint que contiene CNV8b.20230725 y memoria declarada Q7XSAB.
+No elegirlo por la carcasa «MXQ Pro 4K 5G»: otros equipos tienen el mismo
+nombre comercial y el mismo DT. El plan corresponde a la captura de este
+equipo, sin certificar su identidad física mediante ese DT.
+
+Esta entrega agrega un plan RK3229-C y esta guía. Conserva el plan P271,
+los paquetes y todos los informes anteriores. No ejecutar ahora el plan
+P271 ni instalar otro Android.
+
+PASOS EN EL EQUIPO
+
+1. Con el Kingston preparado y expulsado de Windows, conectarlo al último
+   Rockchip. Entrar al recovery con el método físico que ya conoces.
+   No usar Update desde Android ni la preparación ENV/BCB del P291.
+
+2. En recovery elegir la opción de aplicar un ZIP desde almacenamiento
+   externo/USB: puede decir «Apply update from EXT», «Apply update from
+   external storage» o «Apply update from SD card». Si aparece una segunda
+   selección, elegir USB/udisk. Los nombres dependen del recovery.
+
+3. Abrir TVBASE-EXTRACCION y seleccionar UNA VEZ exactamente:
+
+   TVBASE-EXTRACTOR-0.1-ARM32-RECOVERY.zip
+
+   No elegir ARM64, paquetes P291, ORIGINAL-RESTORE, update.img, opciones
+   de restauración del sistema, wipe, factory reset ni format. Si el menú
+   no permite ver este archivo, conservar la pantalla y comunicarlo;
+   no renombrar archivos a update.zip ni seleccionar otro como sustituto.
+
+4. El texto «Installing update» pertenece al recovery. El ZIP elegido
+   contiene solamente el extractor, sin imágenes de ROM ni instrucciones
+   de instalación. Su aceptación por este recovery todavía no está probada.
+   Si aparece error de firma/verificación o «Installation aborted», conservar
+   una foto del mensaje completo y quedarse en el menú. No forzar la firma,
+   reintentar automáticamente ni probar otro ZIP.
+
+5. Si comienza el extractor, debe aparecer:
+   «TV Base - Extraccion de originales 0.1. No instala ni formatea.»
+   Mantener alimentación y pendrive conectados mientras copia y relee.
+   Los contadores cambian entre copia y verificación; no hay una duración
+   física medida para este equipo.
+
+6. El resultado de copia esperado es:
+   «COPIA Y RELECTURA TERMINADAS. Revisar alcance y zonas omitidas en PC.»
+   «Archivos guardados en TVBASE-EXTRACCION/CAPTURAS.»
+
+   Fotografiar el final. «INVENTARIO GUARDADO» junto a «no se copiaron
+   imagenes» significa que sólo se guardó inventario: no es un respaldo.
+   Un mensaje genérico de instalación completada no sustituye los mensajes
+   del extractor y la verificación posterior de los archivos en PC.
+
+7. Esperar a que la operación haya terminado y vuelva al menú. Conservar
+   la pantalla antes de apagar o reiniciar mediante la opción normal del
+   recovery. Devolver luego el Kingston a la PC para comprobar los recibos,
+   los fragmentos y las zonas omitidas. No retirar el USB mientras trabaja.
+
+SI EL EXTRACTOR SE DETIENE
+
+- «se requiere un unico pendrive marcado y montado por recovery»:
+  no encontró un único destino USB físico válido y escribible (también puede
+  haber montajes ambiguos). No formatearlo ni intentar repararlo. Conservar
+  el mensaje y volver a la revisión en PC.
+- «paquete de origen no verificable», error de ejecución/ABI, contexto
+  recovery no reconocido, plan no coincidente o falta de áreas estables:
+  conservar pantalla y archivos parciales; no cambiar de ZIP ni forzar.
+- Error de espacio, lectura, escritura, sincronización o verificación:
+  detener los intentos y conservar los archivos. No borrar para reintentar.
+
+ALCANCE
+
+El extractor abre los bloques sólo para lectura y escribe copias nuevas
+en el pendrive. No monta, formatea ni modifica particiones del equipo,
+ni ordena wipe o reinicio. El recovery del fabricante puede mantener sus
+propios registros y metadatos de arranque: no se promete cero escrituras
+internas por parte del recovery.
+
+Se prevén 8 GiB para el área principal, una provisión de 128 MiB para áreas
+auxiliares y 128 MiB de margen: 8,25 GiB libres después de esta entrega.
+Es una reserva de preparación, no una medición de esas áreas auxiliares.
+El extractor comprueba de nuevo el espacio necesario para sus fuentes reales.
+Los archivos se dividen para FAT32 y se releen. Puede copiar sólo las áreas
+estables y omitir otras; no incluye RPMB ni acredita todos los chips del
+aparato o una restauración ensayada. No compartir estas copias privadas
+ni reutilizar identidad, claves o datos de este equipo en otro.
