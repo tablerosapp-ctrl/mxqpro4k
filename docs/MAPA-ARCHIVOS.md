@@ -23,6 +23,7 @@ flowchart LR
     C_ORIG["Originales del P291 · observado_tv"]
     C_PRODUCTO["Producto común · propuesto"]
     C_LOTES["Dos recorridos de lote · propuesto"]
+    C_RECON["Reconocimiento Android · propuesto"]
     C_PERFIL -->|"selecciona"| C_BASE
     C_CHROME -->|"motor admitido"| C_WEB
     C_INICIO -->|"se integra"| C_ROM
@@ -44,6 +45,9 @@ flowchart LR
     C_LOTES -->|"propone receta"| C_ZIP
     C_ROM -->|"soporta"| C_PRODUCTO
     C_PRODUCTO -->|"contrato común"| C_APP
+    C_RECON -->|"propone ficha y evidencia"| C_PERFIL
+    C_RECON -->|"propone comparación por unidad"| C_LOTES
+    C_RECON -->|"propone contrato de capacidades"| C_PRODUCTO
 ```
 
 ## Archivos por componente
@@ -66,6 +70,7 @@ Requisitos: REQ-02, REQ-10, REQ-15.
 - [docs/evidencia/INSTALACION-FISICA-P291-022.md](../docs/evidencia/INSTALACION-FISICA-P291-022.md)
 - [diagnostico/primer-tv-instalado-20260908/HALLAZGOS.md](../diagnostico/primer-tv-instalado-20260908/HALLAZGOS.md)
 - [diagnostico/primer-tv-instalado-20260908/resumen-saneado.json](../diagnostico/primer-tv-instalado-20260908/resumen-saneado.json)
+- [docs/evidencia/REINICIOS-P291-SIN-USB.md](../docs/evidencia/REINICIOS-P291-SIN-USB.md)
 
 ### C-BASE · Candidato anterior
 
@@ -266,7 +271,7 @@ Requisitos: REQ-01.
 
 ### C-TV · P291: TV Base y WiFi
 
-**observado_tv**. Arranque observado y WiFi conectado según el usuario. APK en prueba, Home no vuelve al inicio; restantes criterios pendientes.
+**observado_tv**. Arranque observado; WiFi y varios reinicios sin USB según el usuario. Home pendiente, WebView, video, consumo y tráfico por medir; recuperación no ensayada.
 
 Requisitos: REQ-13.
 
@@ -310,6 +315,7 @@ Requisitos: REQ-13.
 - [docs/evidencia/INSTALACION-FISICA-P291-022.md](../docs/evidencia/INSTALACION-FISICA-P291-022.md)
 - [diagnostico/primer-tv-instalado-20260908/HALLAZGOS.md](../diagnostico/primer-tv-instalado-20260908/HALLAZGOS.md)
 - [diagnostico/primer-tv-instalado-20260908/resumen-saneado.json](../diagnostico/primer-tv-instalado-20260908/resumen-saneado.json)
+- [docs/evidencia/REINICIOS-P291-SIN-USB.md](../docs/evidencia/REINICIOS-P291-SIN-USB.md)
 
 ### C-APP · APK del producto
 
@@ -336,6 +342,7 @@ Requisitos: REQ-07, REQ-09, REQ-14, REQ-17.
 - [rom-simplificada/original-p291/gestion/LIBERACION.json](../rom-simplificada/original-p291/gestion/LIBERACION.json)
 - [rom-simplificada/original-p291/gestion/pruebas-resultado.json](../rom-simplificada/original-p291/gestion/pruebas-resultado.json)
 - [rom-simplificada/original-p291/REVISION-GESTOR.md](../rom-simplificada/original-p291/REVISION-GESTOR.md)
+- [docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md](../docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md)
 
 ### C-BTCTRL · Control Bluetooth normal
 
@@ -369,19 +376,32 @@ Requisitos: REQ-02, REQ-09, REQ-11.
 
 ### C-PRODUCTO · Producto común
 
-**propuesto**. Contrato común de producto sobre bases por perfil; diseño y cambios pendientes de OK.
+**propuesto**. Producto común con logo, controles y contratos de capacidades/datos; diseño junto al reconocimiento. Implementación pendiente de OK.
 
 Requisitos: REQ-08, REQ-15, REQ-17.
 
 - [docs/PROPUESTA-LOTES-Y-ACTUALIZACIONES.md](../docs/PROPUESTA-LOTES-Y-ACTUALIZACIONES.md)
+- [docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md](../docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md)
 
 ### C-LOTES · Dos recorridos de lote
 
-**propuesto**. Calificación exhaustiva y posterior instalación rápida con identificación de cada unidad, política de respaldo y medición. Diseño propuesto, sin implementar.
+**propuesto**. Reconocimiento y calificación de perfiles antes de instalación rápida por unidad. Catálogo firmado compartido USB/Internet y política de respaldo por operación; propuesto.
 
 Requisitos: REQ-15, REQ-16, REQ-17.
 
 - [docs/PROPUESTA-LOTES-Y-ACTUALIZACIONES.md](../docs/PROPUESTA-LOTES-Y-ACTUALIZACIONES.md)
+- [docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md](../docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md)
+
+### C-RECON · Reconocimiento Android
+
+**propuesto**. APK e informes comparables por familia y nivel de acceso. No arranque USB universal; sin adaptador Rockchip implementado. Reutilización de lecturas requiere revisión.
+
+Requisitos: REQ-02, REQ-14, REQ-18.
+
+- [docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md](../docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md)
+- [diagnostico/recoger-android-adb.ps1](../diagnostico/recoger-android-adb.ps1)
+- [diagnostico/recoger-hardware-linux.sh](../diagnostico/recoger-hardware-linux.sh)
+- [diagnostico/revision-postintento/analizar-captura08.py](../diagnostico/revision-postintento/analizar-captura08.py)
 
 ## Directorios y cuidado
 
@@ -423,7 +443,7 @@ Requisitos: REQ-15, REQ-16, REQ-17.
 | actualizacion-chrome | 51 | 0.417 |
 | analisis-rom | 15 | 1.822 |
 | diagnostico | 177 | 0.018 |
-| docs | 49 | 0.000 |
+| docs | 51 | 0.001 |
 | dossier-s905l2.html | 1 | 0.000 |
 | images | 1 | 1.352 |
 | platform-tools-latest-windows.zip | 1 | 0.008 |

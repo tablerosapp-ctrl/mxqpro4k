@@ -2,22 +2,34 @@
 
 ## Vigente · plataforma instalada; próximos cambios esperan OK
 
+El usuario confirmó varios reinicios correctos sin pendrive. [Registro](evidencia/REINICIOS-P291-SIN-USB.md). El orden operativo siguiente cambia según [PROP-17](PLAN-RECONOCIMIENTO-Y-PRODUCTO.md); los IDs M0–M7 se conservan para no romper la historia.
+
+| Orden siguiente | Entregable propuesto | Dependencia |
+| --- | --- | --- |
+| 0 | USB de reconocimiento: APK sobre Android, ficha/evidencia comparables y niveles de acceso. Inicialmente P291/P271; Rockchip desconocido se informa como tal. | Contrato de perfiles y límites explícitos; no requiere una ROM universal ni supone root/ADB. |
+| 1 | Calificar P291: Home, WebView efectivo en la APK, dos VP9/alfa/canvas, consumo y tráfico explicado. | Usar la ficha, medir el sistema actual y contrastar cambios. |
+| En paralelo desde 0 | Capa común: logo, inicio, controles, capacidades, almacenamiento y configuración. | Los privilegios y drivers siguen siendo propios de cada base. |
+| 2 | Versiones por perfil compartidas por USB/Internet; probar APK/motor y resolver actualización de ROM y recuperación. | Servidor/confianza por configurar; preservar datos según operación; piloto antes del lote. |
+| 3 | USB de instalación rápida y expansión P291 → P271 → Rockchip concreto. | Perfil y recuperación calificados, segunda unidad validada y política individual de respaldo. |
+
 | Etapa | Resultado actual | Próximo entregable propuesto |
 | --- | --- | --- |
 | M0 | Plataforma 0.2.0 e instalador 0.2.2 sellados y usados | Conservar la versión reproducible y su evidencia; sin reconstruirla ahora. |
 | M1 | Entrada a recovery y ejecución de 0.2.2 logradas | No repetir la preparación 0.9. Resolver la reentrada desde el Android nuevo como parte de la recuperación. |
-| M2 | Seis respaldos, formato, cinco escrituras y primer arranque comprobados | Documentar el encendido en frío sin USB y conservar el respaldo individual. |
+| M2 | Seis respaldos, formato, cinco escrituras y primer arranque comprobados; varios reinicios sin USB reportados | Conservar el respaldo y completar estabilidad medida; no repetir el primer arranque por falta de un dato ya informado. |
 | M3 | Inicio visible, WiFi conectable según el usuario; APK en prueba | Diagnosticar y corregir Home después del OK. Comprobar proveedor WebView, dos videos VP9 (uno con transparencia) y canvas, almacenamiento, mandos y estabilidad. |
 | M4 | Restaurador preparado, sin ensayo | Probar entrada, reentrada y restauración por perfil antes de prometer recuperación. |
-| M5 | APK del usuario en evolución | Capa de producto común, contenido local y capacidades detectadas; diseño visual a convenir. |
+| M5 | APK del usuario en evolución | Capa de producto común, logo, contenido local y capacidades; contratos desde el paso 0. |
 | M6 | Gestor de APK y motor incluido y desactivado | Actualizaciones por componente con conservación de datos y pruebas de fallo. Servidor todavía sin configurar. |
-| M7 | Primer P291 probado; P271 es otro perfil | Dos recorridos: calificar cada variante o lote e instalar las unidades coincidentes con identidad individual y política de respaldo propia. |
+| M7 | Primer P291 instalado; P271 es otro perfil; Rockchip sin adaptador | Reconocimiento primero; después calificar cada variante e instalar unidades coincidentes. |
 
 [Resultado físico](evidencia/INSTALACION-FISICA-P291-022.md) · [Home pendiente](INCIDENCIAS.md) · [Propuesta de lotes y actualizaciones](PROPUESTA-LOTES-Y-ACTUALIZACIONES.md).
 
 La [revisión local de Home](hipotesis/HOME-P291.md) contiene hipótesis para orientar el diagnóstico. No acredita la configuración actual del TV ni la causa de la tecla que falla.
 
 **No se ejecuta ningún paso siguiente sin el OK explícito del usuario.** Esta revisión se limita a conservar y estudiar los archivos del pendrive y actualizar la documentación y Git. El respaldo masivo y las relecturas consumen parte del tiempo, pero los registros también muestran intervalos considerables durante las etapas de escritura y comprobación. Hay que medir cada fase y evaluar qué componentes necesitan actualizarse antes de fijar objetivos de duración. La propuesta se registra como PROP-16, REQ-15/16/17 y ADR-28; sigue pendiente de aprobación.
+
+PROP-17, REQ-18 y ADR-29 amplían ese diseño con reconocimiento de varias familias, auditoría de recursos/tráfico y catálogo firmado común para ambos medios. Esta ampliación es documental; no modifica la entrega 0.2.2 ni acredita funcionamiento remoto del gestor.
 
 
 ## Revisiones previas conservadas

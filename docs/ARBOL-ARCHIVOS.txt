@@ -150,6 +150,7 @@ mxqpro4k/
 │   │   ├── PREPARACION-ENTRADA-P291-09.md
 │   │   ├── publicacion-github.json
 │   │   ├── RECUPERACION-RESPALDO-PC.json
+│   │   ├── REINICIOS-P291-SIN-USB.md
 │   │   ├── RESPALDO-CIFRADO.json
 │   │   ├── RESPALDO-GITHUB-PUBLICADO.json
 │   │   └── ROM-ORIGINAL-P291-020.md
@@ -185,6 +186,7 @@ mxqpro4k/
 │   ├── GIT.md
 │   ├── INCIDENCIAS.md
 │   ├── LIMPIEZA.md
+│   ├── PLAN-RECONOCIMIENTO-Y-PRODUCTO.md
 │   ├── PROPUESTA-LOTES-Y-ACTUALIZACIONES.md
 │   ├── proyecto.json
 │   ├── PUBLICACION.md

@@ -2,6 +2,8 @@
 
 ## Resultado físico y trabajo siguiente, pendiente de OK
 
+**Nuevo alcance del 8/9/2026:** el usuario confirma varios reinicios correctos sin pendrive. [Registro](evidencia/REINICIOS-P291-SIN-USB.md). [PROP-17](PLAN-RECONOCIMIENTO-Y-PRODUCTO.md) reordena el siguiente trabajo: reconocimiento sobre Android para varias familias, calificación P291/P271/Rockchip, capa común con logo y catálogo firmado compartido por USB/Internet. Se requieren mediciones de proveedor WebView en la APK, VP9/alfa/canvas, recursos y tráfico. No hay adaptación Rockchip ni actualización remota de ROM implementadas. Las revisiones de código confirman piezas reutilizables, no un diagnóstico universal ya listo.
+
 El primer P291 arrancó TV Base; el usuario confirma que puede conectarse por WiFi. El pendrive trajo seis respaldos y los recibos de formato correcto, montaje vacío de solo lectura y cinco escrituras verificadas por lectura. El cierre del instalador 0.2.2 indica `installed_verified`. Se guardaron y verificaron en PC 199 archivos, con un total de 6.091.261.673 bytes; los seis respaldos incluidos suman 6.067.060.736 bytes. [Evidencia](evidencia/INSTALACION-FISICA-P291-022.md) · [Hallazgos y resumen](../diagnostico/primer-tv-instalado-20260908/HALLAZGOS.md).
 
 Incidencia abierta: Home, la tecla de la casita del control, no vuelve al inicio. El usuario prueba su APK; todavía no están comprobados el proveedor WebView efectivo ni el rendimiento multimedia. [ISSUE-HOME-01](INCIDENCIAS.md). La [revisión local de Home](hipotesis/HOME-P291.md) plantea hipótesis sobre la configuración inicial y la traducción de la tecla; los datos actuales del TV son desconocidos.

@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "title": "TV Base",
-  "snapshot": "2026-09-08T15:55:03.942356+00:00",
-  "state": "TV Base arrancó en el primer P291; instalación 0.2.2 y seis respaldos verificados. WiFi conectado según el usuario; Home del control pendiente.",
+  "snapshot": "2026-09-08T17:09:11.640320+00:00",
+  "state": "P291 con TV Base: WiFi y varios reinicios sin USB informados. Home pendiente; reconocimiento, producto común y actualizaciones por perfil propuestos.",
   "installed": true,
   "original_tv_backup_confirmed": true,
   "source_of_truth": {
@@ -34,7 +34,9 @@
     "historical_entry_release": "rom-simplificada/original-p291/entrada-apk/LIBERACION-09.json",
     "home_hypothesis": "docs/hipotesis/HOME-P291.md",
     "encrypted_backup": "docs/RESPALDO-GITHUB.md",
-    "encrypted_backup_receipt": "docs/evidencia/RESPALDO-GITHUB-PUBLICADO.json"
+    "encrypted_backup_receipt": "docs/evidencia/RESPALDO-GITHUB-PUBLICADO.json",
+    "next_stage_plan": "docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md",
+    "repeated_boot_user_report": "docs/evidencia/REINICIOS-P291-SIN-USB.md"
   },
   "components": [
     {
@@ -54,7 +56,8 @@
         "diagnostico/primer-tv-complemento-20260907-003114/resumen-saneado.json",
         "docs/evidencia/INSTALACION-FISICA-P291-022.md",
         "diagnostico/primer-tv-instalado-20260908/HALLAZGOS.md",
-        "diagnostico/primer-tv-instalado-20260908/resumen-saneado.json"
+        "diagnostico/primer-tv-instalado-20260908/resumen-saneado.json",
+        "docs/evidencia/REINICIOS-P291-SIN-USB.md"
       ],
       "x": 0,
       "y": 0,
@@ -330,7 +333,7 @@
       "id": "C-TV",
       "label": "P291: TV Base y WiFi",
       "state": "observado_tv",
-      "description": "Arranque observado y WiFi conectado según el usuario. APK en prueba, Home no vuelve al inicio; restantes criterios pendientes.",
+      "description": "Arranque observado; WiFi y varios reinicios sin USB según el usuario. Home pendiente, WebView, video, consumo y tráfico por medir; recuperación no ensayada.",
       "files": [
         "docs/ESTADO.md",
         "diagnostico/primer-tv-evidencia-20260907-000948/HALLAZGOS.md",
@@ -371,7 +374,8 @@
         "rom-simplificada/original-p291/instalacion-021/FORMATEADOR-PRUEBA-TV.json",
         "docs/evidencia/INSTALACION-FISICA-P291-022.md",
         "diagnostico/primer-tv-instalado-20260908/HALLAZGOS.md",
-        "diagnostico/primer-tv-instalado-20260908/resumen-saneado.json"
+        "diagnostico/primer-tv-instalado-20260908/resumen-saneado.json",
+        "docs/evidencia/REINICIOS-P291-SIN-USB.md"
       ],
       "x": 4,
       "y": 1,
@@ -409,7 +413,8 @@
         "rom-simplificada/original-p291/gestion/manifest_tool.py",
         "rom-simplificada/original-p291/gestion/LIBERACION.json",
         "rom-simplificada/original-p291/gestion/pruebas-resultado.json",
-        "rom-simplificada/original-p291/REVISION-GESTOR.md"
+        "rom-simplificada/original-p291/REVISION-GESTOR.md",
+        "docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md"
       ],
       "x": 4,
       "y": 3,
@@ -468,9 +473,10 @@
       "id": "C-PRODUCTO",
       "label": "Producto común",
       "state": "propuesto",
-      "description": "Contrato común de producto sobre bases por perfil; diseño y cambios pendientes de OK.",
+      "description": "Producto común con logo, controles y contratos de capacidades/datos; diseño junto al reconocimiento. Implementación pendiente de OK.",
       "files": [
-        "docs/PROPUESTA-LOTES-Y-ACTUALIZACIONES.md"
+        "docs/PROPUESTA-LOTES-Y-ACTUALIZACIONES.md",
+        "docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md"
       ],
       "x": 1,
       "y": 3,
@@ -484,9 +490,10 @@
       "id": "C-LOTES",
       "label": "Dos recorridos de lote",
       "state": "propuesto",
-      "description": "Calificación exhaustiva y posterior instalación rápida con identificación de cada unidad, política de respaldo y medición. Diseño propuesto, sin implementar.",
+      "description": "Reconocimiento y calificación de perfiles antes de instalación rápida por unidad. Catálogo firmado compartido USB/Internet y política de respaldo por operación; propuesto.",
       "files": [
-        "docs/PROPUESTA-LOTES-Y-ACTUALIZACIONES.md"
+        "docs/PROPUESTA-LOTES-Y-ACTUALIZACIONES.md",
+        "docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md"
       ],
       "x": 3,
       "y": 0,
@@ -494,6 +501,25 @@
         "REQ-15",
         "REQ-16",
         "REQ-17"
+      ]
+    },
+    {
+      "id": "C-RECON",
+      "label": "Reconocimiento Android",
+      "state": "propuesto",
+      "description": "APK e informes comparables por familia y nivel de acceso. No arranque USB universal; sin adaptador Rockchip implementado. Reutilización de lecturas requiere revisión.",
+      "files": [
+        "docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md",
+        "diagnostico/recoger-android-adb.ps1",
+        "diagnostico/recoger-hardware-linux.sh",
+        "diagnostico/revision-postintento/analizar-captura08.py"
+      ],
+      "x": 0,
+      "y": 3,
+      "requirements": [
+        "REQ-02",
+        "REQ-14",
+        "REQ-18"
       ]
     }
   ],
@@ -602,6 +628,21 @@
       "source": "C-PRODUCTO",
       "target": "C-APP",
       "relation": "contrato común"
+    },
+    {
+      "source": "C-RECON",
+      "target": "C-PERFIL",
+      "relation": "propone ficha y evidencia"
+    },
+    {
+      "source": "C-RECON",
+      "target": "C-LOTES",
+      "relation": "propone comparación por unidad"
+    },
+    {
+      "source": "C-RECON",
+      "target": "C-PRODUCTO",
+      "relation": "propone contrato de capacidades"
     }
   ],
   "requirements": [
@@ -728,7 +769,8 @@
       "components": [
         "C-ROM",
         "C-GESTION",
-        "C-TV"
+        "C-TV",
+        "C-RECON"
       ],
       "spec": "docs/ESPECIFICACION.md"
     },
@@ -761,6 +803,17 @@
         "C-LOTES"
       ],
       "state": "propuesto"
+    },
+    {
+      "id": "REQ-18",
+      "label": "Reconocimiento de varias familias con evidencia y límites de acceso",
+      "components": [
+        "C-RECON",
+        "C-PERFIL",
+        "C-LOTES"
+      ],
+      "state": "propuesto",
+      "spec": "docs/ESPECIFICACION.md"
     }
   ],
   "phases": [
@@ -806,7 +859,7 @@
         "C-ZIP",
         "C-TV"
       ],
-      "exit": "Seis respaldos, formato, cinco escrituras y primer arranque observados; encendido en frío sin USB pendiente.",
+      "exit": "Seis respaldos, formato, cinco escrituras y primer arranque observados; varios reinicios sin USB informados por el usuario, tipo de ciclo no especificado.",
       "x": 2,
       "y": 0
     },
@@ -823,7 +876,7 @@
         "C-TV",
         "C-INICIO"
       ],
-      "exit": "WiFi conectado según el usuario; Home pendiente. Validar APK, proveedor, video y estabilidad después del OK.",
+      "exit": "Home, proveedor efectivo en APK, VP9/alfa/canvas, recursos y tráfico por medir con el nuevo reconocimiento después del OK.",
       "x": 3,
       "y": 0
     },
@@ -854,7 +907,7 @@
         "C-APP",
         "C-PRODUCTO"
       ],
-      "exit": "Catálogo persistente, reproducción offline y APK común.",
+      "exit": "Producto común, logo, capacidades, catálogo persistente y reproducción offline. Contratos diseñados desde el reconocimiento; implementación pendiente.",
       "x": 1,
       "y": 1
     },
@@ -885,9 +938,10 @@
       "components": [
         "C-BASE",
         "C-PERFIL",
-        "C-LOTES"
+        "C-LOTES",
+        "C-RECON"
       ],
-      "exit": "Calificar variantes y lotes; registrar cada unidad. Instalador rápido pendiente de OK, sin copiar datos individuales entre equipos.",
+      "exit": "Reconocimiento propuesto como siguiente entregable independiente. Después calificar P291, P271 y Rockchip por identificar; instalación rápida solo por perfil aprobado.",
       "x": 3,
       "y": 1
     }
@@ -1125,6 +1179,17 @@
         "C-REC"
       ],
       "state": "propuesto"
+    },
+    {
+      "id": "ADR-29",
+      "file": "docs/DECISIONES.md",
+      "components": [
+        "C-RECON",
+        "C-PRODUCTO",
+        "C-LOTES",
+        "C-GESTION"
+      ],
+      "state": "propuesto"
     }
   ],
   "validations": [
@@ -1194,7 +1259,7 @@
         "REQ-02",
         "REQ-04"
       ],
-      "note": "Parcial: foto de Inicio y WiFi reportado. Encendido en frío sin USB, proveedor WebView y aceptación de hardware pendientes."
+      "note": "Parcial: foto de Inicio, WiFi y varios reinicios sin USB reportados. Tipo de ciclo no especificado; proveedor, hardware y estabilidad medida pendientes."
     },
     {
       "id": "VAL-08",
@@ -1491,11 +1556,23 @@
         "C-LOTES",
         "C-GESTION"
       ]
+    },
+    {
+      "id": "PROP-17",
+      "label": "Reconocimiento primero, producto común y versiones USB/Internet por perfil",
+      "state": "propuesto",
+      "file": "docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md",
+      "components": [
+        "C-RECON",
+        "C-PRODUCTO",
+        "C-LOTES",
+        "C-GESTION"
+      ]
     }
   ],
   "delivery_label": "Instalación 0.2.2 completada; seis respaldos y registros adquiridos en PC",
   "date_label": "8/9/2026 ART · primer P291 funcionando",
-  "next_step_label": "Registrar pruebas de APK y Home. Capa común, lotes y actualizaciones propuestos; esperar OK antes de actuar.",
+  "next_step_label": "Paso 0 propuesto: reconocimiento sobre Android. Producto común, auditoría y versiones USB/Internet por perfil; implementación espera OK.",
   "public_repository": {
     "url": "https://github.com/tablerosapp-ctrl/mxqpro4k",
     "visibility_requested": "public",
@@ -1527,7 +1604,11 @@
     "home_button_issue": "ISSUE-HOME-01",
     "raw_records_signed": false,
     "executed_zip_whole_hash_recorded": false,
-    "userdata_formatted_before_install": true
+    "userdata_formatted_before_install": true,
+    "repeated_boot_without_usb_user_report": true,
+    "repeated_boot_evidence": "docs/evidencia/REINICIOS-P291-SIN-USB.md",
+    "reported_restart_count": null,
+    "reported_restart_type": "not_specified"
   },
   "authorization_for_next_changes": {
     "state": "awaiting_user_ok",
@@ -1649,7 +1730,7 @@
       }
     }
   },
-  "current_instruction": "Document and preserve the completed installation and ISSUE-HOME-01. Do not repeat entry, install or reset. Wait for user OK before new device tests, fixes or product implementation.",
+  "current_instruction": "Record repeated successful boots without USB as user report. Proposed next deliverable: Android recognition with explicit access tiers; shared product and signed per-profile releases for USB/Internet. Documentation only until user OK for implementation/device tests.",
   "encrypted_backup": {
     "state": "published_verified",
     "url": "https://github.com/tablerosapp-ctrl/mxqpro4k/releases/tag/respaldo-p291-20260908",
@@ -1658,5 +1739,26 @@
     "private_key_uploaded": false,
     "pc_recovery_verified": true,
     "device_restoration_tested": false
+  },
+  "next_stage_plan": {
+    "proposal": "PROP-17",
+    "state": "propuesto",
+    "file": "docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md",
+    "first_deliverable": "Android recognition from USB with comparable reports and explicit access levels",
+    "hardware_order": [
+      "P291 qualification",
+      "P271 adaptation and qualification",
+      "Rockchip profiles to identify"
+    ],
+    "parallel_design": [
+      "shared product and logo",
+      "capabilities contract",
+      "signed releases for USB and Internet"
+    ],
+    "recognition_implemented": false,
+    "rockchip_adapter_implemented": false,
+    "remote_rom_update_tested": false,
+    "logo_asset_identified": false,
+    "current_turn_device_or_usb_changes": false
   }
 }

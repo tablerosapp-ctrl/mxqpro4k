@@ -1,5 +1,11 @@
 # Historial local y publicación pública
 
+## Registro del 8/9/2026 · reconocimiento, producto y actualización por perfil
+
+Se agrega el relato del usuario de varios reinicios sin USB, con su alcance explícito y separado de los recibos anteriores. PROP-17 / REQ-18 / ADR-29 documentan reconocimiento sobre Android como primer entregable, medición de WebView/recursos/tráfico, producto común con logo y versiones por perfil compartidas entre USB e Internet. Se actualizan grafo y roadmap; no se implementan aún esos cambios ni se contacta el TV o pendrive.
+
+El respaldo cifrado ya publicado conserva su release y sus recibos; esta publicación documental no vuelve a subirlo. El espejo público contiene documentos y fuentes saneadas. Los originales y claves permanecen privados.
+
 ## Registro del 8/9/2026 · instalación física 0.2.2 y Home pendiente
 
 Se versionan la evidencia de instalación terminada, los scripts de adquisición y revisión independiente, el resumen saneado, la incidencia Home y el diseño propuesto de capa común, lotes y actualizaciones. El estado, requisitos, grafo y roadmap distinguen lo instalado de las pruebas pendientes y de los cambios que esperan el OK del usuario.

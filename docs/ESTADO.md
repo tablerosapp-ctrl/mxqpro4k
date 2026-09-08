@@ -1,6 +1,6 @@
 # Estado operativo
 
-## Vigente · 8/9/2026, TV Base instalado y arrancado
+## Vigente · 8/9/2026, P291 funciona sin USB; reconocimiento como siguiente entregable
 
 El respaldo también está [publicado cifrado en GitHub](RESPALDO-GITHUB.md): nueve partes y manifiesto verificados, con la clave privada separada en esta PC. Se probó recuperar los archivos en PC; esto no acredita restauración física del TV.
 
@@ -10,7 +10,7 @@ El respaldo también está [publicado cifrado en GitHub](RESPALDO-GITHUB.md): nu
 | --- | --- |
 | Instalación 0.2.2 / plataforma 0.2.0 | Seis respaldos, formato correcto y userdata vacía antes de instalar. Cinco escrituras verificadas por lectura, con boot al final. |
 | Conservación | 199 archivos y 6.091.261.673 bytes guardados y verificados en PC. Los seis respaldos suman 6.067.060.736 bytes, incluida userdata. El USB se leyó sin limpiarlo ni escribir en él. |
-| Arranque | TV Base visible en la foto. Encendido en frío sin USB aún no documentado. |
+| Arranque | TV Base visible en la foto. El usuario confirma varios reinicios correctos sin pendrive; cantidad y tipo de ciclo no especificados. |
 | Red | El usuario confirma que puede conectarse por WiFi. Estabilidad, navegación y distintas redes pendientes de prueba específica. |
 | Control | ISSUE-HOME-01: casita/Home no vuelve al inicio. Prioridad funcional siguiente. |
 | APK y multimedia | El usuario sigue probando. Faltan comprobar el proveedor WebView efectivo y el rendimiento con dos videos VP9, uno con transparencia, más canvas. |
@@ -26,7 +26,9 @@ La [propuesta PROP-16](PROPUESTA-LOTES-Y-ACTUALIZACIONES.md) distingue producto,
 
 La [revisión local de Home](hipotesis/HOME-P291.md) propone comprobar la configuración inicial y la traducción de la tecla. Son hipótesis: no se conocen esos datos actuales del TV ni hay una corrección probada.
 
-M2 tiene instalación y primer arranque observados; VAL-06 tiene respaldo, formato y escrituras comprobados por los recibos y la adquisición. VAL-07 sigue parcial: faltan encendido en frío, pruebas de hardware y proveedor WebView. M3 incluye Home y multimedia; M4, con reentrada y restauración, sigue pendiente.
+M2 tiene instalación y primer arranque observados, ahora ampliados por [varios reinicios sin pendrive informados por el usuario](evidencia/REINICIOS-P291-SIN-USB.md). VAL-06 tiene respaldo, formato y escrituras comprobados por los recibos y la adquisición. VAL-07 sigue parcial: pruebas de hardware, proveedor WebView y estabilidad medida pendientes. El informe no especifica desconexiones de alimentación. M3 incluye Home y multimedia; M4, con reentrada y restauración, sigue pendiente.
+
+**Prioridad reformulada por el usuario:** [PROP-17](PLAN-RECONOCIMIENTO-Y-PRODUCTO.md) propone primero reconocimiento sobre Android para varias familias, con informes y permisos explícitos; después instalación rápida por perfil. El producto común con logo, auditoría de recursos/tráfico, proveedor WebView real y actualización remota se diseñan juntos. USB e Internet deben compartir catálogo/compatibilidad, con operaciones distintas para conversión OEM y actualización conservando datos. Orden de bases: P291 → P271 → Rockchip por identificar. REQ-18 y ADR-29 registran el alcance. Son cambios documentales; no hay nuevos programas ni pruebas en el TV o pendrive.
 
 
 ## Historial conservado: los estados siguientes son anteriores

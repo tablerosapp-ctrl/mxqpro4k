@@ -2,6 +2,8 @@
 
 **Estado: pendiente de aprobación del usuario.** Este documento propone el siguiente trabajo; no modifica el TV, el pendrive, el instalador ni el servidor. ADR-28, PROP-16 y REQ-15/16/17 están integrados en la documentación y el grafo como propuestas, sin implementación ni aceptación.
 
+**Actualización del 8/9/2026:** [PROP-17](PLAN-RECONOCIMIENTO-Y-PRODUCTO.md) fija reconocimiento sobre Android como paso 0, integra logo/capa común, consumo/tráfico/WebView y catálogo firmado para USB e Internet. El usuario informó varios reinicios sin pendrive correctos. La política de respaldo y separación de operaciones de este documento se mantiene; el orden operativo actualizado prevalece sobre la tabla de trabajo inicial de abajo.
+
 El usuario confirmó que TV Base arrancó, aportó una foto del launcher e indicó que puede conectarse por WiFi. Se adquirieron del USB y verificaron en PC seis imágenes de respaldo, los recibos de formato y el cierre `installed_verified`; el alcance se documenta en [estado](ESTADO.md). La casita del control no vuelve al inicio: [ISSUE-HOME-01](INCIDENCIAS.md), pendiente de revisar después del OK. Este avance no demuestra todavía rendimiento de WebView/video, estabilidad prolongada o restauración. Las fuentes de esta propuesta son la [especificación](ESPECIFICACION.md), la [arquitectura](../ARQUITECTURA-ANDROID-TV.md), el [contrato de instalación 0.2.2](../rom-simplificada/original-p291/instalacion-022/CONTRATO-MIGRACION.md) y el [gestor existente](../rom-simplificada/original-p291/gestion/README.md).
 
 ## Una capa común de producto, bases por perfil

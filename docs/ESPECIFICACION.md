@@ -2,7 +2,7 @@
 
 ## Actualización de aceptación · instalación física y siguiente etapa propuesta
 
-REQ-01 tiene instalación en memoria interna y primer arranque observados; queda documentar el encendido en frío sin pendrive. VAL-06 tiene seis respaldos guardados y adquiridos en PC, además de recibos verificados de formato, montaje vacío de solo lectura y cinco escrituras. VAL-07 es parcial: hay una foto del inicio y conexión WiFi reportada; faltan comprobar el proveedor WebView, el hardware y la repetibilidad. [Evidencia física](evidencia/INSTALACION-FISICA-P291-022.md).
+REQ-01 tiene instalación en memoria interna y primer arranque observados, ampliados por [varios reinicios sin pendrive informados por el usuario](evidencia/REINICIOS-P291-SIN-USB.md); no se especificó el tipo de ciclo. VAL-06 tiene seis respaldos guardados y adquiridos en PC, además de recibos verificados de formato, montaje vacío de solo lectura y cinco escrituras. VAL-07 es parcial: hay una foto del inicio, conexión WiFi y reinicios reportados; faltan comprobar el proveedor WebView, el hardware y la estabilidad medida. [Evidencia física](evidencia/INSTALACION-FISICA-P291-022.md).
 
 REQ-02/03/10 incluyen **ISSUE-HOME-01**: la tecla Home no vuelve al inicio. La [revisión local](hipotesis/HOME-P291.md) plantea hipótesis que requieren datos actuales del TV; no establece una causa ni una corrección. El usuario prueba su APK. Este avance todavía no permite aceptar multimedia, almacenamiento o actualizaciones.
 
@@ -13,8 +13,11 @@ REQ-02/03/10 incluyen **ISSUE-HOME-01**: la tecla Home no vuelve al inicio. La [
 | REQ-15 | Capa común de producto y perfiles de hardware calificados | Contratos y API comunes; inventario exacto por perfil y pruebas de video, red, controles, arranque y recuperación. Un nombre comercial compartido no basta para aceptar otra variante. |
 | REQ-16 | Dos recorridos: calificar el lote e instalar con rapidez sus unidades compatibles | Calificación exhaustiva del primer ejemplar e identificación individual obligatoria en todos. Política de respaldo aprobada para cada operación, sin clonar secretos ni calibración de otra unidad. Detención ante diferencias y resultado comprobado por unidad. |
 | REQ-17 | Actualizaciones por componente con menor trabajo y conservación de datos | Separar APK, motor, contenido y ROM. Medir tiempos por fase, evitar reinstalaciones innecesarias y probar migración, conservación de datos y recuperación. Mantener las comprobaciones de integridad y no prometer tiempos sin medirlos. |
+| REQ-18 | Reconocimiento de varias familias desde USB con Android operativo | Ficha comparable y evidencia con fuente, permisos y límites; P291 y P271 diferenciados, perfiles desconocidos rechazados para instalación. Captura parcial explícita sin ADB/root; informes persistentes con hashes y errores de acceso/USB controlados. Rockchip requiere adaptación y ensayo por perfil. |
 
 Estos requisitos extienden REQ-02/08/09/11/14; no están implementados ni aceptados. [PROP-16: propuesta y condiciones](PROPUESTA-LOTES-Y-ACTUALIZACIONES.md). ADR-28 registra la propuesta y el límite expresado por el usuario: documentar y proponer ahora, esperar su OK explícito para nuevos cambios o pruebas físicas. Cualquier reducción futura de respaldos exige una política aprobada; el contrato 0.2.2 de seis respaldos no se altera retroactivamente.
+
+**PROP-17 / ADR-29:** reconocimiento es el primer entregable propuesto. REQ-15 incorpora logo e interfaz común; REQ-17, catálogo/perfiles firmados compartidos por USB e Internet con ejecutores distintos y conservación/migración según operación. REQ-14 requiere inventario y observación de consumo/tráfico; REQ-04/05, proveedor real dentro de la APK y composición VP9/alfa/canvas medida. No se afirma limpieza total, rendimiento superior ni extracción universal de drivers. [Plan y aceptación](PLAN-RECONOCIMIENTO-Y-PRODUCTO.md).
 
 
 ## Antecedente: estado anterior a la prueba física de 0.2.2

@@ -111,3 +111,13 @@ La entrada09 ya se consiguió; no repetir preparación ni reiniciar para corregi
 Tras el primer arranque exitoso y WiFi reportado, el usuario solicita dos recorridos: uno exhaustivo para calificar nuevos lotes/variantes y otro rápido para instalar el resto que coincida. Se propone separar producto, perfil de hardware e identidad de unidad; revisar respaldos críticos y política de userdata por operación; actualizar APK/motor/contenido/ROM de forma independiente y medir antes de prometer reducción de tiempos. La receta exacta sigue como propuesta. [Diseño](PROPUESTA-LOTES-Y-ACTUALIZACIONES.md).
 
 La restricción inmediata sí rige: documentar/guardar/proponer, sin nuevos cambios ni pruebas físicas hasta su OK. ISSUE-HOME-01 queda registrado, sin corregir. Se conservan imágenes y recibos 0.2.2 inmutables; el éxito físico se registra en nueva evidencia, no reescribiendo los recibos de construcción.
+
+## ADR-29 · Reconocimiento primero, producto común y versiones por perfil
+
+El usuario solicita considerar logo, aprovechamiento de recursos, comprobación de tráfico sospechoso, WebView efectivo y actualización remota. Informa varios reinicios sin USB correctos y propone dos pendrives: reconocimiento de cualquier familia, incluidos Rockchip, e instalación rápida para perfiles conocidos. [Observación separada](evidencia/REINICIOS-P291-SIN-USB.md).
+
+Se propone una aplicación de reconocimiento sobre Android y adaptadores de lectura por permisos/familia, con ficha y evidencia comparables. No se promete arranque USB universal, acceso a drivers protegidos desde una APK normal ni una ROM automáticamente compatible. El diagnóstico distingue candidato de perfil calificado. Se prioriza P291, después P271 y cada Rockchip identificado.
+
+PROP-17 y REQ-18 amplían PROP-16: la capa común y los contratos se diseñan desde el inicio; un catálogo/perfiles firmados sirve a USB e Internet, con ejecutores separados para APK, contenido y ROM. El manifiesto actual no admite perfiles ni USB y necesita una versión nueva, sin relajar verificaciones. Una actualización conservadora no reutiliza el formateo de conversión OEM. Se miden video, recursos y tráfico antes de atribuir mejoras o certificar limpieza. [Plan completo](PLAN-RECONOCIMIENTO-Y-PRODUCTO.md).
+
+La implementación y las pruebas físicas siguen pendientes del OK pedido por el usuario. Esta revisión documenta el diseño y la nueva observación, sin cambios en TV, USB, servidor o artefactos sellados.
