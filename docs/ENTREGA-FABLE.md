@@ -1,5 +1,14 @@
 # Mensaje para Fable 5.1 en Claude Desktop
 
+## Vigente · error de nombre Amlogic corregido en0.2.2
+
+La preparaciónENV/BCB09 funcionó: menú recovery y ejecución021 observados. El instalador abortó con destino no eMMC particionada: system antes debackup/formato/flash. [Error y alcance](evidencia/ERROR-INSTALADOR-P291-021.md). La fuenteAmlogic asigna nombres lógicos manteniendo parent/part_type; [referencias fijadas y geometría](evidencia/PARTICIONES-AMLOGIC-P291-022.md).
+
+022 corrige instalación y restauración con validación completa de padreMMC, rdev/atributos/tamaños/rangos y revalidación. Misma plataforma0.2.0; dosZIP022 entregados/releídos, TV todavíarecovery. [Estado y evidencias](evidencia/INSTALADOR-P291-022.md). No repetir entrada09/Update, no proponer quitar la guarda. Próximas dos líneas de revisión: compatibilidad real del preflight de022 y plan de reentrada/actualización desdeAndroid nuevo. No hay respaldo deuserdata ni instalación física concluida.
+
+
+## Antecedente de la entrega 0.2.1
+
 ## Resultado físico posterior · preparación0.9 completada
 
 Ya existe [evidencia física de la preparación ENV/BCB](evidencia/PREPARACION-ENTRADA-P291-09.md), autorizada expresamente y ejecutada una sola vez en el primer P291. Cierre `prepared`, respaldos/recibos verificados y adquisición posterior de ENV/misc exacta. La preparación no instaló Android ni reinició. Después del ciclo físico posterior, el usuario informó un menú de recovery; aún falta confirmar la aceptación del ZIP y la instalación. No repetir launch/Update. Los apartados inferiores conservan el pedido de revisión previo a esta ejecución.

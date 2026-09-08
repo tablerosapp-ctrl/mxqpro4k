@@ -1,0 +1,1202 @@
+{
+  "estado": "verificado",
+  "version": "0.2.2",
+  "fecha": "2026-09-08T00:13:03.3593677-03:00",
+  "archivo_local": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\privado\\usb-retirados-original022-20260908-001000-09ec2582",
+  "tv_flasheado": false,
+  "reboot_requested": false,
+  "update_requested": false,
+  "files": [
+    {
+      "archivo": "TVBASE-P291-A9-0.2.2-RECOVERY.zip",
+      "bytes": 573820005,
+      "sha256": "163d4ce6e6fd4e02f06cb6646c53c259d1d3100547ee5c616c578782c3e54421",
+      "lectura_verificada": true
+    },
+    {
+      "archivo": "TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.2-RECOVERY.zip",
+      "bytes": 913294443,
+      "sha256": "914c683a1e15f4d5e6fa622c7b390184444d9071636e580b5818bf4794f47d09",
+      "lectura_verificada": true
+    },
+    {
+      "archivo": "LEEME-AHORA.txt",
+      "bytes": 2856,
+      "sha256": "762dfd86dfeeeb536de1d162718d182a8fd2020350abef417ba66d2ffe2184d4",
+      "lectura_verificada": true
+    }
+  ],
+  "retirados": [
+    {
+      "archivo": "TVBASE-P291-A9-0.2.1-RECOVERY.zip",
+      "bytes": 573688933,
+      "sha256": "dcb152c77e55cb067d6e88a8144990a3edb5d06568ea8cdfdc414a0fa21aac58",
+      "copia_pc_verificada": true,
+      "retirado": true
+    },
+    {
+      "archivo": "TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-RECOVERY.zip",
+      "bytes": 913294443,
+      "sha256": "42580206f254fab0a2280cd263a48882677e7ddf5cfd609382a840c8d0fb103a",
+      "copia_pc_verificada": true,
+      "retirado": true
+    },
+    {
+      "archivo": "LEEME-AHORA.txt",
+      "bytes": 4412,
+      "sha256": "4c4d6586285b36415f0dd7eb12499d9c8970d4f1b21d85647726c85dd1784320",
+      "copia_pc_verificada": true,
+      "retirado": true
+    }
+  ],
+  "bytes_retirados": 1486987788,
+  "codigo_nativo": 0,
+  "contract_sha256": "f5eb84dba37e014dec9ad9020cb3811e09a24d7771d78de7bd0eea17481b56db",
+  "drive_letter": "D",
+  "volume_health_before": "Warning",
+  "format_requested": false,
+  "repair_requested": false,
+  "safe_removal_pending": true,
+  "volume_flush_verified": false,
+  "preserved_reports": [
+    {
+      "path": "AccesoUSB-0.9.apk",
+      "kind": "file",
+      "bytes": 61843,
+      "sha256": "1d0f267e818acca5562048f9961c7c234f36b8cc81f827cb3eac9e3fcd2505a4"
+    },
+    {
+      "path": "TVBASE-diagnostico-20200101-004250-25473.txt",
+      "kind": "file",
+      "bytes": 14891,
+      "sha256": "77172874572e7c9968ebaa92f07d6db9af5ef50d59d68dba42383bf3f8f47dc2"
+    },
+    {
+      "path": "TVBASE-diagnostico-20200101-004256-25565.txt",
+      "kind": "file",
+      "bytes": 14891,
+      "sha256": "8788ec8b06ce663d4b63c2ccd384e8f4c1f24ac593cc8eb15dc32075a22bdb0e"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de",
+      "kind": "directory"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\cache-before-command.bin",
+      "kind": "file",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\cache-before-command.bin.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "3278a92913be639ff02b8476449070196526d42f0a84472ebc44f22e24bfb77a"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\cache-before-uncrypt_file.bin",
+      "kind": "file",
+      "bytes": 23,
+      "sha256": "6f50c0fb003f378687fffeabb00533ab494b8d2ba7c7db7d9d5a81ea1f6eb8f9"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\cache-before-uncrypt_file.bin.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "25db2b423637ffa8ef72625662dcba1239a34f52d92c90f724428896fe34d529"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\cache-before.json",
+      "kind": "file",
+      "bytes": 327,
+      "sha256": "f01285d6210f473d3c7ac8cfac1ec374f6f3e8c515e7d1fdb83afe5834535558"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\cache-before.json.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "484e5145946023d98bbb8b7fd914588cb0026c53d1a933dce9f5ef7d5318909a"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\changes-reviewed.json",
+      "kind": "file",
+      "bytes": 709,
+      "sha256": "4210a040fa3ceb9db175572304f166b9e834a46ee49dcd937238154c7dd0d18c"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\changes-reviewed.json.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "ec346643ae54ac2a0c3c9cbd60bba8cdd29fa0925549f71a440bc6f085ba31b2"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\COMPLETO.txt",
+      "kind": "file",
+      "bytes": 139,
+      "sha256": "76bb035e7dc357f9829d4df79ca68dfb055c8cf18ffc718901e914950c5429a3"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\env-before.img",
+      "kind": "file",
+      "bytes": 8388608,
+      "sha256": "49e48fddb963d1a4ebaf5889916bba8b59141bcc1eeef71ac1dad5c6425af775"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\env-before.img.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "f4099883c86603c8ec3a0d47b2acab5a151be80328eb857bf051e041c63ddf00"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\INFORME.json",
+      "kind": "file",
+      "bytes": 4383,
+      "sha256": "2b2715266a782072487c750c976f0f96e35a74d88c0e3664be501e37194ced7c"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\INICIO.txt",
+      "kind": "file",
+      "bytes": 56,
+      "sha256": "ed2fc727ac286a2939dff9640e62e818eb9e857850d656604e90ce65b3240eca"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\INICIO.txt.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "316f4a682859588a80ba6e8b5bee9926a999e5b2c0b2ecc05765a3292dbccaa5"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\misc-before.img",
+      "kind": "file",
+      "bytes": 8388608,
+      "sha256": "c8b5991390836e2f03693d8a4f6f2f4ea2b223c20951a119155fba19cf542549"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\misc-before.img.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "107b751c51483f053a12aa861cb2f772e51e02b4ef881a7524d1e6efab88b788"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\rom-verificada.json",
+      "kind": "file",
+      "bytes": 138,
+      "sha256": "57de8b24ee4069a1c84dc80b79536e17b2ab5d6dd2c8973179780646f9e1c5b0"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\rom-verificada.json.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "46fb1420cc4ec86b8650acbc1263162e6c44d98bbc4cafbafaf5a5ceabc91bb8"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\stage-01-usb_fsync_verified.json",
+      "kind": "file",
+      "bytes": 463,
+      "sha256": "de2871d0452c9f09eea36d6c1cec0dbe4e1ec3a382cf757f3658c3dba6b36be3"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\stage-01-usb_fsync_verified.json.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "97df417b40752dde9959582c8ec16078d7e1aee5d81151eccac166b8341e9b91"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\stage-02-rom_verified.json",
+      "kind": "file",
+      "bytes": 436,
+      "sha256": "2fdac3357e89c6de4f912ccadc1c0ee773f8954eddbcdf303bbd6a22a68099de"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\stage-02-rom_verified.json.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "36d620df37c4a95a1d16304aa67085f9550650970503cb3fb97d273348790f62"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\stage-03-backups_persisted.json",
+      "kind": "file",
+      "bytes": 452,
+      "sha256": "bdcbc53b458716340c9010574e95f74e21d0b70b3538da75804c377e310b47f4"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\stage-03-backups_persisted.json.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "5c6c6c5cc58470ff1e94d7a37a77fc4f7837bef9f3e4970941ddcc8a32b4f0e2"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\stage-04-prewrite_checks_passed.json",
+      "kind": "file",
+      "bytes": 492,
+      "sha256": "0cd9c2571abe6f38572be85afb0aab1e702af8aaef8273791785307c3a7c6bd9"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\stage-04-prewrite_checks_passed.json.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "75633c14859d8607bdb552b3ae3dcbef38221d132e7aa9eae45f8b0d8e4d39f0"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\stage-05-cache_rename_about_to_start_command.json",
+      "kind": "file",
+      "bytes": 495,
+      "sha256": "dd6978cf297836d59653a5caee7200de247d6a4b591689c83a002774bc8a40ff"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\stage-05-cache_rename_about_to_start_command.json.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "21c78e540dcefa60b1a6c6dc2e781b49789c6da173c9934736ba160a4e1e9263"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\stage-06-cache_preserved_command.json",
+      "kind": "file",
+      "bytes": 483,
+      "sha256": "09d7e4356d0748342853ea2d1c5f0191967a19b2b85dcc249be0227f5a480a19"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\stage-06-cache_preserved_command.json.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "c43d58b599ce36a65927e3e3d8ee44c7775591705215e1d6e88643fd4bbe476a"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\stage-07-cache_rename_about_to_start_uncrypt_file.json",
+      "kind": "file",
+      "bytes": 500,
+      "sha256": "718bd65c81e10f2b7478f8a92700558c3f334a01b236051e09fb42d9801af15a"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\stage-07-cache_rename_about_to_start_uncrypt_file.json.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "20b5eaf6813a06900115d6416c873e0d708ef9957bd918c8317a9b9b9e5ce50f"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\stage-08-cache_preserved_uncrypt_file.json",
+      "kind": "file",
+      "bytes": 488,
+      "sha256": "8f2f6a9b283e76bf7ec972bd38fb73a8688a419a7a0d6305761d54a031733708"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\stage-08-cache_preserved_uncrypt_file.json.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "767fa0a814f35a898d3febb3f407526c975175dbafef3e7ff4bf6e3b2689a16f"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\stage-09-cache_neutralized.json",
+      "kind": "file",
+      "bytes": 477,
+      "sha256": "439d6cfa5da991f16a1b49c4777bf97bcc8cbc8d32ad0edbb60729c375ebf275"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\stage-09-cache_neutralized.json.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "11d1a346c31390dd4f0646078773b4284e14bc60f8d0c793887eff65cacc10c6"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\stage-10-bcb_write_about_to_start.json",
+      "kind": "file",
+      "bytes": 469,
+      "sha256": "9da767346a2a30bad0a5b0495167d0720e5e8bcd7569e36da6d051a33184c066"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\stage-10-bcb_write_about_to_start.json.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "b49be88d2ac3e57610dac409f936220099bf9045aedfea4d8d3adbc1e15a218d"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\stage-11-bcb_verified.json",
+      "kind": "file",
+      "bytes": 456,
+      "sha256": "ba257f68f49041fb051b1ad303cb767adabf860661eaad05f77e67d1fa83c3f8"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\stage-11-bcb_verified.json.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "d248cf3297c870770ce4badc2491bfc8f1878a1af43010cf81b6a1461747616a"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\stage-12-env_write_about_to_start.json",
+      "kind": "file",
+      "bytes": 462,
+      "sha256": "d4980739ee01775b4f8efd91f1df447cdf0aba2a73e446fe161bbfe0df0cc384"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\stage-12-env_write_about_to_start.json.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "7b45ca0f1085528352cad975adba9d132f318168a90e5d337b1dab89f51b69eb"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\stage-13-env_verified.json",
+      "kind": "file",
+      "bytes": 449,
+      "sha256": "e674fe866a462c0efd0615a07561fbfa61782e3320df380fb52bb368c1eeb967"
+    },
+    {
+      "path": "TVBASE-entrada09-46054e4441c64e5d9235b6898dafc5de\\stage-13-env_verified.json.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "f49195d4221016ea6f5fe28563280a5898cbd77ee31b8bdc8924faae1d1bbdd5"
+    },
+    {
+      "path": "TVBASE-evidencia-690a4d7ced1f49f9916ac18cfe6106a2",
+      "kind": "directory"
+    },
+    {
+      "path": "TVBASE-evidencia-690a4d7ced1f49f9916ac18cfe6106a2\\actualizador.txt",
+      "kind": "file",
+      "bytes": 379,
+      "sha256": "b4c19c807f6db98ecebc667bfbe996452b2359554811093683a685421f36d1ab"
+    },
+    {
+      "path": "TVBASE-evidencia-690a4d7ced1f49f9916ac18cfe6106a2\\actualizador.txt.sha256",
+      "kind": "file",
+      "bytes": 152,
+      "sha256": "1dfc81d44a2edb62b5c438711cb1905054b2f0d646f15e26c4d4888be0a4dc4a"
+    },
+    {
+      "path": "TVBASE-evidencia-690a4d7ced1f49f9916ac18cfe6106a2\\autocontrol.bin",
+      "kind": "file",
+      "bytes": 3,
+      "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+    },
+    {
+      "path": "TVBASE-evidencia-690a4d7ced1f49f9916ac18cfe6106a2\\autocontrol.bin.sha256",
+      "kind": "file",
+      "bytes": 151,
+      "sha256": "1651e8d88e583b0e38e1d0d23201ec7e5004205b45b2812c5bbad74c54c4d368"
+    },
+    {
+      "path": "TVBASE-evidencia-690a4d7ced1f49f9916ac18cfe6106a2\\autocontrol.txt",
+      "kind": "file",
+      "bytes": 96,
+      "sha256": "4d77e6697d2d085e7fe707ae1bd65109888c44e1d434dac8cd2c9f37467ee2f5"
+    },
+    {
+      "path": "TVBASE-evidencia-690a4d7ced1f49f9916ac18cfe6106a2\\autocontrol.txt.sha256",
+      "kind": "file",
+      "bytes": 151,
+      "sha256": "e078fd84f096bb8ca51964e2f7168ac7d96af0e5c6c7f10687e03a7406dea4a0"
+    },
+    {
+      "path": "TVBASE-evidencia-690a4d7ced1f49f9916ac18cfe6106a2\\certificados.txt",
+      "kind": "file",
+      "bytes": 335,
+      "sha256": "28996fe9f2f62b914f68d1460752ec3cd56fbe4fae8341ec86dca49a2bf3b972"
+    },
+    {
+      "path": "TVBASE-evidencia-690a4d7ced1f49f9916ac18cfe6106a2\\certificados.txt.sha256",
+      "kind": "file",
+      "bytes": 152,
+      "sha256": "661f7fd6ab7a7795039cd6a8193fb645b296b09f14b7037ea200f00b4c83db92"
+    },
+    {
+      "path": "TVBASE-evidencia-690a4d7ced1f49f9916ac18cfe6106a2\\COMPLETO.txt",
+      "kind": "file",
+      "bytes": 391,
+      "sha256": "ac9ddbe86e1dd542e5dd6f8bb5b4c048230b99500c1d20341a07a8b5741e35d1"
+    },
+    {
+      "path": "TVBASE-evidencia-690a4d7ced1f49f9916ac18cfe6106a2\\COMPLETO.txt.sha256",
+      "kind": "file",
+      "bytes": 148,
+      "sha256": "ee148c6269e931f5d2796b83c465fbfce94e6ff3254e75a4091a0715d56269a0"
+    },
+    {
+      "path": "TVBASE-evidencia-690a4d7ced1f49f9916ac18cfe6106a2\\etapa-1.ok",
+      "kind": "file",
+      "bytes": 33,
+      "sha256": "b7173d4c4e96610af2e2d419580b38fc84cfbf12d84891263a3744e986a40f7c"
+    },
+    {
+      "path": "TVBASE-evidencia-690a4d7ced1f49f9916ac18cfe6106a2\\etapa-2.ok",
+      "kind": "file",
+      "bytes": 33,
+      "sha256": "b7173d4c4e96610af2e2d419580b38fc84cfbf12d84891263a3744e986a40f7c"
+    },
+    {
+      "path": "TVBASE-evidencia-690a4d7ced1f49f9916ac18cfe6106a2\\etapa-3.ok",
+      "kind": "file",
+      "bytes": 33,
+      "sha256": "b7173d4c4e96610af2e2d419580b38fc84cfbf12d84891263a3744e986a40f7c"
+    },
+    {
+      "path": "TVBASE-evidencia-690a4d7ced1f49f9916ac18cfe6106a2\\etapa-4.ok",
+      "kind": "file",
+      "bytes": 33,
+      "sha256": "b7173d4c4e96610af2e2d419580b38fc84cfbf12d84891263a3744e986a40f7c"
+    },
+    {
+      "path": "TVBASE-evidencia-690a4d7ced1f49f9916ac18cfe6106a2\\identidad.txt",
+      "kind": "file",
+      "bytes": 557,
+      "sha256": "7b09d693c8d416e4386ccaac461a60e929bfd231e32656dd261d21a9c427f1ca"
+    },
+    {
+      "path": "TVBASE-evidencia-690a4d7ced1f49f9916ac18cfe6106a2\\identidad.txt.sha256",
+      "kind": "file",
+      "bytes": 149,
+      "sha256": "070aa2a2a5d31ac01f43b37f5063afa8b9ebf963e2e1f8c823dace150a1c8ba3"
+    },
+    {
+      "path": "TVBASE-evidencia-690a4d7ced1f49f9916ac18cfe6106a2\\INICIO.txt",
+      "kind": "file",
+      "bytes": 33,
+      "sha256": "b7173d4c4e96610af2e2d419580b38fc84cfbf12d84891263a3744e986a40f7c"
+    },
+    {
+      "path": "TVBASE-evidencia-690a4d7ced1f49f9916ac18cfe6106a2\\init-y-fstab.txt",
+      "kind": "file",
+      "bytes": 10408,
+      "sha256": "2b596d66bbbaf530ea637f1b2d25a5b062acb4c06c3f2b72e9d074bff1ef03b4"
+    },
+    {
+      "path": "TVBASE-evidencia-690a4d7ced1f49f9916ac18cfe6106a2\\init-y-fstab.txt.sha256",
+      "kind": "file",
+      "bytes": 152,
+      "sha256": "885e636bcd25b1ac1a0544e9cf432a1bf1bad4e467496969a39adac8733f919f"
+    },
+    {
+      "path": "TVBASE-evidencia-690a4d7ced1f49f9916ac18cfe6106a2\\otacerts.zip",
+      "kind": "file",
+      "bytes": 1073,
+      "sha256": "7dd077650421772a3114c9132cd3da989b65f073459b7d8023e7138f2323a6c8"
+    },
+    {
+      "path": "TVBASE-evidencia-690a4d7ced1f49f9916ac18cfe6106a2\\otacerts.zip.sha256",
+      "kind": "file",
+      "bytes": 148,
+      "sha256": "9f868089c911bf17b7b16c966a04df580fbbf9b5550af5f90f5a7cce2a96ea1f"
+    },
+    {
+      "path": "TVBASE-evidencia-690a4d7ced1f49f9916ac18cfe6106a2\\OTAUpgrade.apk",
+      "kind": "file",
+      "bytes": 190988,
+      "sha256": "9ffb822fc76974ee9df8c5493f0929638b69140f71506946cb410bab489a1d9c"
+    },
+    {
+      "path": "TVBASE-evidencia-690a4d7ced1f49f9916ac18cfe6106a2\\OTAUpgrade.apk.sha256",
+      "kind": "file",
+      "bytes": 150,
+      "sha256": "4d3cb9f666900db5f775bb8534af33f7fca47cea6706f1c6f72f129259a4c977"
+    },
+    {
+      "path": "TVBASE-evidencia-690a4d7ced1f49f9916ac18cfe6106a2\\pm-path.txt",
+      "kind": "file",
+      "bytes": 84,
+      "sha256": "797982093cfec4d98d726029cf96b53e47b4b8dea0d56eb61e4d830e19081936"
+    },
+    {
+      "path": "TVBASE-evidencia-690a4d7ced1f49f9916ac18cfe6106a2\\pm-path.txt.sha256",
+      "kind": "file",
+      "bytes": 147,
+      "sha256": "79ff7551a8166119ef85fbd6a288c0abcef8538a471e1e976c33acc4f772f878"
+    },
+    {
+      "path": "TVBASE-evidencia-d5cec3a75764497890668bd1e2f085dd",
+      "kind": "directory"
+    },
+    {
+      "path": "TVBASE-evidencia-d5cec3a75764497890668bd1e2f085dd\\actualizador-2.apk",
+      "kind": "file",
+      "bytes": 917714,
+      "sha256": "1362e915451f24ac2050fcde8f2762faac5be38e9b06374da2a830d0184cce09"
+    },
+    {
+      "path": "TVBASE-evidencia-d5cec3a75764497890668bd1e2f085dd\\actualizador-2.apk.sha256",
+      "kind": "file",
+      "bytes": 90,
+      "sha256": "56a5cc87a0bb66be78020f19ad4490f60594c759b0ab5ab25a3a25fb55682642"
+    },
+    {
+      "path": "TVBASE-evidencia-d5cec3a75764497890668bd1e2f085dd\\actualizador-3.apk",
+      "kind": "file",
+      "bytes": 1528018,
+      "sha256": "77fdf8404bae21cc8352eac23a4e968eaf93288beeaf60ba9fdf5c4a02a34d7b"
+    },
+    {
+      "path": "TVBASE-evidencia-d5cec3a75764497890668bd1e2f085dd\\actualizador-3.apk.sha256",
+      "kind": "file",
+      "bytes": 90,
+      "sha256": "a334628e5daf7c74635e9d4e923ca2a4b5816d62a17aa126a574e59cd266374a"
+    },
+    {
+      "path": "TVBASE-evidencia-d5cec3a75764497890668bd1e2f085dd\\actualizador-4.apk",
+      "kind": "file",
+      "bytes": 726884,
+      "sha256": "50652cd94fdc9347dbf9dcb914042ebda3eaa85d2206674c4732a06de74a1865"
+    },
+    {
+      "path": "TVBASE-evidencia-d5cec3a75764497890668bd1e2f085dd\\actualizador-4.apk.sha256",
+      "kind": "file",
+      "bytes": 90,
+      "sha256": "fa8470a6d5b1e2900a6ad3fc417f25487f84ac3e0b59589e1cc09c7e0685c65a"
+    },
+    {
+      "path": "TVBASE-evidencia-d5cec3a75764497890668bd1e2f085dd\\actualizador.txt",
+      "kind": "file",
+      "bytes": 119134,
+      "sha256": "28f8770256d635dbc289f9b2475ef3ec9f439d4adb6fd8593b482af9038da0e9"
+    },
+    {
+      "path": "TVBASE-evidencia-d5cec3a75764497890668bd1e2f085dd\\actualizador.txt.sha256",
+      "kind": "file",
+      "bytes": 152,
+      "sha256": "901f92418cc87d16f3f4a543c3269bf594eef748249310ef07fb69f32c33e93e"
+    },
+    {
+      "path": "TVBASE-evidencia-d5cec3a75764497890668bd1e2f085dd\\apk-y-certificados.txt",
+      "kind": "file",
+      "bytes": 776,
+      "sha256": "052822c9a35bf97c3b459f1c7962735074f2e4e237e579bf1159947d43475681"
+    },
+    {
+      "path": "TVBASE-evidencia-d5cec3a75764497890668bd1e2f085dd\\arranque.txt",
+      "kind": "file",
+      "bytes": 77232,
+      "sha256": "6b8ba19c8b202b8d5a69b124df3857363874639978a4867331d14aaad0ce2ad9"
+    },
+    {
+      "path": "TVBASE-evidencia-d5cec3a75764497890668bd1e2f085dd\\arranque.txt.sha256",
+      "kind": "file",
+      "bytes": 148,
+      "sha256": "aa9804ecdbd3e8d52444a4af3eb17fcaf90150865fb4cb81c7986a3bd4c8e941"
+    },
+    {
+      "path": "TVBASE-evidencia-d5cec3a75764497890668bd1e2f085dd\\etapa-1.ok",
+      "kind": "file",
+      "bytes": 33,
+      "sha256": "c8f87aa5fa1d42b752aec385cb81a376252a96349326e1597c64555829bd4d3e"
+    },
+    {
+      "path": "TVBASE-evidencia-d5cec3a75764497890668bd1e2f085dd\\etapa-2.ok",
+      "kind": "file",
+      "bytes": 33,
+      "sha256": "c8f87aa5fa1d42b752aec385cb81a376252a96349326e1597c64555829bd4d3e"
+    },
+    {
+      "path": "TVBASE-evidencia-d5cec3a75764497890668bd1e2f085dd\\etapa-3.ok",
+      "kind": "file",
+      "bytes": 33,
+      "sha256": "c8f87aa5fa1d42b752aec385cb81a376252a96349326e1597c64555829bd4d3e"
+    },
+    {
+      "path": "TVBASE-evidencia-d5cec3a75764497890668bd1e2f085dd\\INICIO.txt",
+      "kind": "file",
+      "bytes": 33,
+      "sha256": "c8f87aa5fa1d42b752aec385cb81a376252a96349326e1597c64555829bd4d3e"
+    },
+    {
+      "path": "TVBASE-evidencia-d5cec3a75764497890668bd1e2f085dd\\paquetes.txt",
+      "kind": "file",
+      "bytes": 86,
+      "sha256": "c73751a42b4df46ed29ddbebc8dae726cff1e8204b580dc6e9c2b145c0f6377e"
+    },
+    {
+      "path": "TVBASE-evidencia-d5cec3a75764497890668bd1e2f085dd\\paquetes.txt.sha256",
+      "kind": "file",
+      "bytes": 148,
+      "sha256": "07781e0722bc51a2bf9885fb5f3e7f650e71262f67b202f798a4c7f20e8316ce"
+    },
+    {
+      "path": "TVBASE-evidencia-d5cec3a75764497890668bd1e2f085dd\\pm-path.txt",
+      "kind": "file",
+      "bytes": 420,
+      "sha256": "8532805b6f693505abb467588b882601845ce094a195638ed84b001f8d4a8e21"
+    },
+    {
+      "path": "TVBASE-evidencia-d5cec3a75764497890668bd1e2f085dd\\pm-path.txt.sha256",
+      "kind": "file",
+      "bytes": 147,
+      "sha256": "eaef618e789bcf6389dcca0030391739c01b7bbb06cd16605b5dc36538714182"
+    },
+    {
+      "path": "TVBASE-evidencia-d5cec3a75764497890668bd1e2f085dd\\pstore-1.bin",
+      "kind": "file",
+      "bytes": 32756,
+      "sha256": "708cae6320f0de63ab764269003d3bfb1a52a45815cc2d6da85849210f4331b8"
+    },
+    {
+      "path": "TVBASE-evidencia-d5cec3a75764497890668bd1e2f085dd\\pstore-1.bin.sha256",
+      "kind": "file",
+      "bytes": 84,
+      "sha256": "76c3c9b23d942c23a95e7a86be8c409925a50e3de921b579e15cd515099ae008"
+    },
+    {
+      "path": "TVBASE-evidencia-d5cec3a75764497890668bd1e2f085dd\\pstore.txt",
+      "kind": "file",
+      "bytes": 377,
+      "sha256": "96fe7a8002376e42a2825dd005d4b2e7bf5d482b3fc11da708986e6acc5ff595"
+    },
+    {
+      "path": "TVBASE-evidencia-d5cec3a75764497890668bd1e2f085dd\\pstore.txt.sha256",
+      "kind": "file",
+      "bytes": 146,
+      "sha256": "5da1e71060f026f060064a23626ed2004a7faecb853546db7e91d886515ab964"
+    },
+    {
+      "path": "TVBASE-evidencia-d5cec3a75764497890668bd1e2f085dd\\resolucion.txt",
+      "kind": "file",
+      "bytes": 165,
+      "sha256": "d65ce86199e83069dd50f26e12a324adb93c41319d28b12adcef01de3807c612"
+    },
+    {
+      "path": "TVBASE-evidencia-d5cec3a75764497890668bd1e2f085dd\\resolucion.txt.sha256",
+      "kind": "file",
+      "bytes": 150,
+      "sha256": "541668f268ff539f188bebe67b17fff578eab930ae24476528548105567fa6ab"
+    },
+    {
+      "path": "TVBASE-evidencia-e315690ee54f4639abe422fbd9cc46b4",
+      "kind": "directory"
+    },
+    {
+      "path": "TVBASE-evidencia-e315690ee54f4639abe422fbd9cc46b4\\actualizador-2.apk",
+      "kind": "file",
+      "bytes": 917714,
+      "sha256": "1362e915451f24ac2050fcde8f2762faac5be38e9b06374da2a830d0184cce09"
+    },
+    {
+      "path": "TVBASE-evidencia-e315690ee54f4639abe422fbd9cc46b4\\actualizador-2.apk.sha256",
+      "kind": "file",
+      "bytes": 90,
+      "sha256": "00d6600b76939ea34f51654acaddf872e4c268e966062cd24f9beb3e936df9c0"
+    },
+    {
+      "path": "TVBASE-evidencia-e315690ee54f4639abe422fbd9cc46b4\\actualizador-3.apk",
+      "kind": "file",
+      "bytes": 1528018,
+      "sha256": "77fdf8404bae21cc8352eac23a4e968eaf93288beeaf60ba9fdf5c4a02a34d7b"
+    },
+    {
+      "path": "TVBASE-evidencia-e315690ee54f4639abe422fbd9cc46b4\\actualizador-3.apk.sha256",
+      "kind": "file",
+      "bytes": 90,
+      "sha256": "7b6f6f0566a93d0c96196578faa4d1ba2d57c5d16b3e2939d3e123144f1d0d69"
+    },
+    {
+      "path": "TVBASE-evidencia-e315690ee54f4639abe422fbd9cc46b4\\actualizador-4.apk",
+      "kind": "file",
+      "bytes": 726884,
+      "sha256": "50652cd94fdc9347dbf9dcb914042ebda3eaa85d2206674c4732a06de74a1865"
+    },
+    {
+      "path": "TVBASE-evidencia-e315690ee54f4639abe422fbd9cc46b4\\actualizador-4.apk.sha256",
+      "kind": "file",
+      "bytes": 90,
+      "sha256": "63bc55578e6dc7e99e7adb359236fd3b33d3a41d7bc1fd6b3bb199f65ec21171"
+    },
+    {
+      "path": "TVBASE-evidencia-e315690ee54f4639abe422fbd9cc46b4\\actualizador.txt",
+      "kind": "file",
+      "bytes": 119243,
+      "sha256": "c9129c867c325b85d051d53597dc3ff7dc3a767858265dbd5870783a659fdc78"
+    },
+    {
+      "path": "TVBASE-evidencia-e315690ee54f4639abe422fbd9cc46b4\\actualizador.txt.sha256",
+      "kind": "file",
+      "bytes": 152,
+      "sha256": "d618b521dbe373d6b4110accd12c43d19abfdc7eb8ac7f09e3b98f5589b141d9"
+    },
+    {
+      "path": "TVBASE-evidencia-e315690ee54f4639abe422fbd9cc46b4\\apk-y-certificados.txt",
+      "kind": "file",
+      "bytes": 776,
+      "sha256": "052822c9a35bf97c3b459f1c7962735074f2e4e237e579bf1159947d43475681"
+    },
+    {
+      "path": "TVBASE-evidencia-e315690ee54f4639abe422fbd9cc46b4\\arranque.txt",
+      "kind": "file",
+      "bytes": 77232,
+      "sha256": "dcdb836e36e6267aa8ccedaaf5fad280a670c313053f30b76ecb6d80ef472706"
+    },
+    {
+      "path": "TVBASE-evidencia-e315690ee54f4639abe422fbd9cc46b4\\arranque.txt.sha256",
+      "kind": "file",
+      "bytes": 148,
+      "sha256": "6d70540389b8e8bc6748ce82683f2f7b7d5b6a8efb1df3a56b5b50652175ba4d"
+    },
+    {
+      "path": "TVBASE-evidencia-e315690ee54f4639abe422fbd9cc46b4\\etapa-1.ok",
+      "kind": "file",
+      "bytes": 33,
+      "sha256": "8849572510ef0b92fa9cc6a375de5ed64bf3b22dc9ba50fb81674f4e53a7024e"
+    },
+    {
+      "path": "TVBASE-evidencia-e315690ee54f4639abe422fbd9cc46b4\\etapa-2.ok",
+      "kind": "file",
+      "bytes": 33,
+      "sha256": "8849572510ef0b92fa9cc6a375de5ed64bf3b22dc9ba50fb81674f4e53a7024e"
+    },
+    {
+      "path": "TVBASE-evidencia-e315690ee54f4639abe422fbd9cc46b4\\etapa-3.ok",
+      "kind": "file",
+      "bytes": 33,
+      "sha256": "8849572510ef0b92fa9cc6a375de5ed64bf3b22dc9ba50fb81674f4e53a7024e"
+    },
+    {
+      "path": "TVBASE-evidencia-e315690ee54f4639abe422fbd9cc46b4\\INICIO.txt",
+      "kind": "file",
+      "bytes": 33,
+      "sha256": "8849572510ef0b92fa9cc6a375de5ed64bf3b22dc9ba50fb81674f4e53a7024e"
+    },
+    {
+      "path": "TVBASE-evidencia-e315690ee54f4639abe422fbd9cc46b4\\paquetes.txt",
+      "kind": "file",
+      "bytes": 86,
+      "sha256": "91f98cc6335945abc10cfa95e35de670f4452d1ba03c2bc7aae49502a35aa671"
+    },
+    {
+      "path": "TVBASE-evidencia-e315690ee54f4639abe422fbd9cc46b4\\paquetes.txt.sha256",
+      "kind": "file",
+      "bytes": 148,
+      "sha256": "0106764001b98742042561c533a5dd9afb9111b92c07007ae37f307914b58711"
+    },
+    {
+      "path": "TVBASE-evidencia-e315690ee54f4639abe422fbd9cc46b4\\pm-path.txt",
+      "kind": "file",
+      "bytes": 420,
+      "sha256": "0676e3a38ef06b098d895064a26a6245f72b8123b1578d40c57c82f50b85ee68"
+    },
+    {
+      "path": "TVBASE-evidencia-e315690ee54f4639abe422fbd9cc46b4\\pm-path.txt.sha256",
+      "kind": "file",
+      "bytes": 147,
+      "sha256": "fab70ef6eebdd7f41214e884f743cade576b7cb8f23fc9128c2ad41419afdb07"
+    },
+    {
+      "path": "TVBASE-evidencia-e315690ee54f4639abe422fbd9cc46b4\\pstore-1.bin",
+      "kind": "file",
+      "bytes": 32756,
+      "sha256": "708cae6320f0de63ab764269003d3bfb1a52a45815cc2d6da85849210f4331b8"
+    },
+    {
+      "path": "TVBASE-evidencia-e315690ee54f4639abe422fbd9cc46b4\\pstore-1.bin.sha256",
+      "kind": "file",
+      "bytes": 84,
+      "sha256": "aff75e337eb64778309dc4091eb49b9e75f47ab994de9d24a9a72a85431d06f9"
+    },
+    {
+      "path": "TVBASE-evidencia-e315690ee54f4639abe422fbd9cc46b4\\pstore.txt",
+      "kind": "file",
+      "bytes": 377,
+      "sha256": "c3558cb0c46dacf749fff13af1d98e0a90beda9f5e4c958a1aa5779f41c65762"
+    },
+    {
+      "path": "TVBASE-evidencia-e315690ee54f4639abe422fbd9cc46b4\\pstore.txt.sha256",
+      "kind": "file",
+      "bytes": 146,
+      "sha256": "5c9261e13d3536ee9f1faccb7efff89a0571d988d0d18045a3c33b13c74d8736"
+    },
+    {
+      "path": "TVBASE-evidencia-e315690ee54f4639abe422fbd9cc46b4\\resolucion.txt",
+      "kind": "file",
+      "bytes": 165,
+      "sha256": "f70617213da54c6167ba52e8976cf0ed27874b1279b25558642713b8c88f04f1"
+    },
+    {
+      "path": "TVBASE-evidencia-e315690ee54f4639abe422fbd9cc46b4\\resolucion.txt.sha256",
+      "kind": "file",
+      "bytes": 150,
+      "sha256": "9d67fe6831c71c0923477c682af636dace36a74113769c3e0d17e372877745f3"
+    },
+    {
+      "path": "TVBASE-MEDIA.txt",
+      "kind": "file",
+      "bytes": 30,
+      "sha256": "b85e17970936540b2e15e8c68a09570fb7ea337e4b569a849cba98279f0a0ea2"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd",
+      "kind": "directory"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\autocontrol.bin",
+      "kind": "file",
+      "bytes": 3,
+      "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\autocontrol.bin.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "620a3df236da0af638c2a61c86951463731998f91dbb3ed629f47b9fe00ad118"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\bateria.estado",
+      "kind": "file",
+      "bytes": 90,
+      "sha256": "24b593614d91c38f191a915749ce8bfb650118d2c8d86e21992004327a1500ba"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\bateria.estado.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "5e5824b204c7d95b143d58850c1c9fb9810152117a135c6417406c63280cccb6"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\bateria.rc",
+      "kind": "file",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\bateria.rc.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "142463dbd4788849038b7baa0e07f73ed758a04a65254524998faae9db372c5d"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\bateria.txt",
+      "kind": "file",
+      "bytes": 128,
+      "sha256": "ec27db155320a866d17b1a30931385f4b6fd38ab40de66f361f5ecff61d486c3"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\bateria.txt.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "1b75193b42a922b9aca42c597ad6d715b8eefe565a7ebcbe1c4a993eecc47f60"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\bluetooth.estado",
+      "kind": "file",
+      "bytes": 91,
+      "sha256": "bee5c31ae156d18b5f63e359e17247f95783071d071285bc28a620125af32fdb"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\bluetooth.estado.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "47c5936258c6e0140fc4e8f80c3fe47c66d8fc8f77cf33a1df4841dcb12ef920"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\bluetooth.rc",
+      "kind": "file",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\bluetooth.rc.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "142463dbd4788849038b7baa0e07f73ed758a04a65254524998faae9db372c5d"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\bluetooth.txt",
+      "kind": "file",
+      "bytes": 1374,
+      "sha256": "56acf2177823c071aabb71b018df99b0453d17262a58e28c1acdcac4bc446b11"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\bluetooth.txt.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "1578d441bb73c9e738d310872814d4e864ba9dbafe42b946470d418937051622"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\COMPLETO.txt",
+      "kind": "file",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\COMPLETO.txt.sha256",
+      "kind": "file",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\console-ramoops-0.bin",
+      "kind": "file",
+      "bytes": 32756,
+      "sha256": "498a57cc784ce32b2cd47951fc090779e4ef5af9da6bf5af6d0ff896ec3765fa"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\console-ramoops-0.bin.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "8b55955b65300e4359c2e8b483c9c94fdc6a1376cb6610a9db118202db2d3fce"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\espacio.estado",
+      "kind": "file",
+      "bytes": 90,
+      "sha256": "365c36db07f253172038a611c01aed3f9be18ff73d594f6ce273cbccc211c430"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\espacio.estado.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "cbdcbe2b0ba5b5a67d6e0a2063b22a8074850ee84a3d0f8bbaae5e545dc6c1c9"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\espacio.rc",
+      "kind": "file",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\espacio.rc.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "142463dbd4788849038b7baa0e07f73ed758a04a65254524998faae9db372c5d"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\espacio.txt",
+      "kind": "file",
+      "bytes": 174,
+      "sha256": "e1ffb096a6a61d8deb058b44a1bad36d9db88a2779d332421c6b40cf9ad557e6"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\espacio.txt.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "bc009729672d286663612baeb888786f6c758b83ee9656420b1bb6760dc59861"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\etapa-1.ok",
+      "kind": "file",
+      "bytes": 33,
+      "sha256": "ab52e80021cb0a49a1c0baea4bae79af3e174f86778c2ff2e0e87fd80ff1fab0"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\etapa-10.ok",
+      "kind": "file",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\etapa-2.ok",
+      "kind": "file",
+      "bytes": 33,
+      "sha256": "ab52e80021cb0a49a1c0baea4bae79af3e174f86778c2ff2e0e87fd80ff1fab0"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\etapa-3.ok",
+      "kind": "file",
+      "bytes": 33,
+      "sha256": "ab52e80021cb0a49a1c0baea4bae79af3e174f86778c2ff2e0e87fd80ff1fab0"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\etapa-4.ok",
+      "kind": "file",
+      "bytes": 33,
+      "sha256": "ab52e80021cb0a49a1c0baea4bae79af3e174f86778c2ff2e0e87fd80ff1fab0"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\etapa-5.ok",
+      "kind": "file",
+      "bytes": 33,
+      "sha256": "ab52e80021cb0a49a1c0baea4bae79af3e174f86778c2ff2e0e87fd80ff1fab0"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\etapa-6.ok",
+      "kind": "file",
+      "bytes": 33,
+      "sha256": "ab52e80021cb0a49a1c0baea4bae79af3e174f86778c2ff2e0e87fd80ff1fab0"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\etapa-7.ok",
+      "kind": "file",
+      "bytes": 33,
+      "sha256": "ab52e80021cb0a49a1c0baea4bae79af3e174f86778c2ff2e0e87fd80ff1fab0"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\etapa-8.ok",
+      "kind": "file",
+      "bytes": 33,
+      "sha256": "ab52e80021cb0a49a1c0baea4bae79af3e174f86778c2ff2e0e87fd80ff1fab0"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\etapa-9.ok",
+      "kind": "file",
+      "bytes": 33,
+      "sha256": "ab52e80021cb0a49a1c0baea4bae79af3e174f86778c2ff2e0e87fd80ff1fab0"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\identidad.txt",
+      "kind": "file",
+      "bytes": 620,
+      "sha256": "68d95546d538b76ed92f42e8fef36f44f797994d34e0a1459651518c52fde2e7"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\identidad.txt.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "f5f763502d1cfe545749c110e173af3ac8f4225ea5d7e2f9a35e2f20a11e18e5"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\INICIO.txt",
+      "kind": "file",
+      "bytes": 33,
+      "sha256": "ab52e80021cb0a49a1c0baea4bae79af3e174f86778c2ff2e0e87fd80ff1fab0"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\log-actual.estado",
+      "kind": "file",
+      "bytes": 92,
+      "sha256": "d7d4bc61b4277dd00605b95ae259ff6758169b4b6eb821ab70093958e4df3254"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\log-actual.estado.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "4894c9220a79c06de0c0cda5be580e8f146c87731a74505500dddd9265cf907a"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\log-actual.rc",
+      "kind": "file",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\log-actual.rc.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "142463dbd4788849038b7baa0e07f73ed758a04a65254524998faae9db372c5d"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\log-actual.txt",
+      "kind": "file",
+      "bytes": 41497,
+      "sha256": "9a603932796509836232a85342d8fabbc54b95fa9a6e18b04b0e89ac97ba3a8e"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\log-actual.txt.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "1c0fade4d631dc5edb8e6882110b38ccb66bd49c54ed6540b20808767e9161d1"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\log-anterior.estado",
+      "kind": "file",
+      "bytes": 89,
+      "sha256": "9391d79c66b7cc25adf01594905cf5aa229d8bd4cd6a78290f8940d712afa4fd"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\log-anterior.estado.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "28cbcacb0975194d10db9e2d1995607c2bc1a9e6afd633e7327dcc37570c7072"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\log-anterior.rc",
+      "kind": "file",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\log-anterior.rc.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "693d23225ebe839ae6d47e54de0b0d46d08d3fe0cefeb4ace48bacca9933e814"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\log-anterior.txt",
+      "kind": "file",
+      "bytes": 20,
+      "sha256": "d37758be21f762dbec36f44f1d4b5cbc0cd3457fe6513fb390dfa566e2d6e777"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\log-anterior.txt.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "855e89be2585f49bf12ae21589ce9e1ddc24f0b32165a3c55b3628ed8d907aa2"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\pstore.txt",
+      "kind": "file",
+      "bytes": 241,
+      "sha256": "de445608dc3a8d53d7e90cb0307bf974f8041493f907585e7a2ced8590d0f348"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\pstore.txt.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "a682f6f62ab7a6a61773aefa6c23b2fa3a8f5c1990e091e8df7a309e92d6d39f"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\webview.estado",
+      "kind": "file",
+      "bytes": 90,
+      "sha256": "46c75f210bb250f3501e9d7f1466f7cb1e878462e847fb70b9870b25cecfb876"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\webview.estado.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "ae23babf471f4124fd232cfecae1268c83cff7944ec071c3517d061bdcfab548"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\webview.rc",
+      "kind": "file",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\webview.rc.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "142463dbd4788849038b7baa0e07f73ed758a04a65254524998faae9db372c5d"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\webview.txt",
+      "kind": "file",
+      "bytes": 805,
+      "sha256": "52afcda10b9a255f7ce3f324c84a72f15bac8c98e548bf6c0907313ba792b3dd"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\webview.txt.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "3d218d9bfb3055774e367d36d04e72c57429a1c726c873b4bc813e7c46858b02"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\wifi.estado",
+      "kind": "file",
+      "bytes": 91,
+      "sha256": "0efd124a96f5d075d8173e115d566256d0acd3bd7f6fd7d53dea3fc2c57dda38"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\wifi.estado.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "fd0ae1f2ad7776e7fc11cdf48184f55fe92f9b47bd9a635ed0863ceb521dfaf5"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\wifi.rc",
+      "kind": "file",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\wifi.rc.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "142463dbd4788849038b7baa0e07f73ed758a04a65254524998faae9db372c5d"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\wifi.txt",
+      "kind": "file",
+      "bytes": 2138,
+      "sha256": "f2df3be04519db0c9bb7659dfec3a3508e86f7401f69082c8b6ceb0d43d22237"
+    },
+    {
+      "path": "TVBASE-postintento-ecd4e0799a9d47f2a0eec3a0300bc6fd\\wifi.txt.sha256",
+      "kind": "file",
+      "bytes": 65,
+      "sha256": "ebbb2bd9017f2c4e13312e5eda3d13a53823327144d5130b0eba276c62479c92"
+    }
+  ],
+  "reports_unchanged_verified": true,
+  "free_bytes_after": 29411508224,
+  "detalle": "Entrega original P291 copiada y leida; tres archivos021 archivados en PC antes de retirarlos. Informes y respaldos conservados. Sin formato ni modificacion del TV por este preparador. Falta expulsion segura: Flush de archivos y relectura no acreditan persistencia de metadatos FAT tras desconectar. Recovery ya observado; instalador022 y restaurador022 todavia sin prueba fisica. No usar de nuevo la preparacion AccesoUSB09."
+}

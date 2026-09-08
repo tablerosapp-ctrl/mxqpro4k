@@ -1,0 +1,85 @@
+{
+  "state": "passed",
+  "date_utc": "2026-09-08T03:03:16.475892+00:00",
+  "reviewer": "lecturas_adb_p291",
+  "package_id": "TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.2",
+  "approval_scope": "Fuentes, adaptadores y binarios compilados de la correccion de layout 0.2.2, aptos para empaquetar una nueva entrega sin sobrescribir 0.2.1. No es una verificacion fisica del nuevo instalador.",
+  "source_sha256": {
+    "backup_verified.go": "d39deec84a988c7c1b85c9525d6a258f9fcee8e451ee2c0a10bca233c8a71bcf",
+    "backup_verified_test.go": "8be9413e96c4ea8531cd5db19032ee943546b2cac9a35400d0c01f6e86bb34f1",
+    "block_abi.go": "11fe6dd8b9a29667b71964a64f7312e9d65e4e0a3b99d0d0080090e0812e5ec5",
+    "block_abi_test.go": "47bb71ddb2fc166e5ffa9f4f3247bf4dd996b11763d548274f49777e2c0966ee",
+    "block_device_linux.go": "ffcbaa5366669a4ace94bfad8f1a122bffd301c28ffb183fb3d553e61cd5f05d",
+    "block_layout.go": "42816190d597b7f1de4ea4c3d56132bd4d38139b4fe9f72cd7997fd8a5bd7e66",
+    "block_layout_test.go": "6eff4a7810da18925961e2c55996c0bfd239497b0918b367760237f7b8e0e11e",
+    "env_guard.go": "eeeb557641f684a2101a487688fe85e2a38a137fe279564466e7abff98905562",
+    "env_guard_test.go": "40190395d101a1c86443b8507bc867d426c4edbd27e48b91f1cdd34741456af0",
+    "env_read_linux.go": "1763c9afd30d25d048f2f36d4194cc8fb12885073fae2105533db57a08f74fb2",
+    "go.mod": "04aa79d7d5c20ecf0b5759a4d8ee74ca6685bd3fffd29591719ec649f2911fe8",
+    "main_linux.go": "0d63e48cd09775207012c7f7a69e93a21b2c12940ecff247b88a0f1f6cf680c0",
+    "main_windows.go": "f3d097f1fc33537dda2ae552e001ca51ec776f43f760445303b328e5a9526040",
+    "package.go": "d3c88c7c1c3ce115530ea24472c95e5aff99eb381fff7b4f947814f7604b6a34",
+    "package_test.go": "da56070a68e24c8711b6eba69cd2c38d03c5fdf99732de095abf0139856d4f6b",
+    "transaction_linux.go": "10cda5b277bdb7aaa81ae197c5201ca57a37c1ed243e86c9f23415c75dece44c"
+  },
+  "builder_sha256": "6d8d42211513e579e6c19ddff0b7f84863c314946d6f6005b5480c1ee354462f",
+  "signature_helper_sha256": "aeb2b7d212e6472a9334c3ce7586effff3d7dc767266cb35233c25e02dc3f54e",
+  "shared_source_sha256": {
+    "block_layout.go": "42816190d597b7f1de4ea4c3d56132bd4d38139b4fe9f72cd7997fd8a5bd7e66",
+    "block_device_linux.go": "ffcbaa5366669a4ace94bfad8f1a122bffd301c28ffb183fb3d553e61cd5f05d",
+    "block_layout_test.go": "6eff4a7810da18925961e2c55996c0bfd239497b0918b367760237f7b8e0e11e"
+  },
+  "shared_files_identical_between_variants": true,
+  "all_go_files_accounted_for": true,
+  "original_geometry_constants_crosschecked": true,
+  "compilation_receipt_sha256": "e0085d861f865ba17172af7a674577996e66a3702614ac4d87979efc334f135f",
+  "installer_arm32_sha256": "a77e5ca83c964f4187e029e09c2c19082daa9b16ca473062a57701acf246d2c9",
+  "validator_windows_sha256": "42e2bca85097c0f50c6d00d9550e897f4fd926e50705c6a4a1058a8e357f1d21",
+  "static_arm32_elf_rechecked": true,
+  "impact_tests": {
+    "filter": "^TestP291",
+    "host": "windows/amd64",
+    "independent_run_exit": 0,
+    "pass_events": 61,
+    "subcases": 58,
+    "top_level_tests": 3,
+    "receipt_sha256": "da34b3b16d83352113a60edea6c9687f6055cd4f76c4692532135bfdbafdcf80",
+    "stdout_sha256": "a5b684248c50ee85a54fa9c09a006781de5fe4fb0acec683adba1d8dc6dbbe6b",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source_hashes_unchanged": true,
+    "native_device_adapter_executed": false
+  },
+  "reviewed": [
+    "Nombres sysfs Amlogic y mmcblkNpN solo se aceptan con nombre logico autorizado, rdev, dev, partition, size e ioctl exactos del P291.",
+    "El padre fisico canonico debe coincidir por clase y rdev, tener tipo MMC, 179:0 y 7650410496 bytes; se rechazan USB, SD, rutas virtuales, disco entero, boot0/rpmb y nombres cruzados.",
+    "Atributos leidos con limite y errores propagados; start se valida dentro del disco sin overflow. No se inventan offsets originales no adquiridos.",
+    "Primera observacion de cada layout queda congelada; las siguientes rechazan deriva, padres distintos, rdev compartido o intervalos superpuestos.",
+    "Preparacion de destinos, ENV, userdata y revalidaciones previas a respaldo/formato/flash usan el nuevo guard. No queda llamada al block antiguo.",
+    "Las tres fuentes compartidas son identicas entre instalacion y restauracion. La politica de datos, formatter, imagenes y drivers permanece fuera de esta correccion.",
+    "Los identificadores y carpetas de entrega cambian a 0.2.2; sigue reconociendo intentos incompletos de 0.2.1 y agrega 0.2.2.",
+    "Builder exige este recibo y sus hashes exactos antes de empaquetar, y coteja los fuentes y binarios del recibo de compilacion."
+  ],
+  "physical_021_failure_scope": {
+    "site": "prepareTargets -> block -> regex del basename sysfs",
+    "before_installer_backups": true,
+    "before_userdata_unmount_or_format": true,
+    "before_flash": true,
+    "recovery_internal_side_effects_not_excluded": true
+  },
+  "primary_source": {
+    "url": "https://raw.githubusercontent.com/khadas/linux/khadas-vims-pie/drivers/amlogic/mmc/emmc_partitions.c",
+    "sha256": "e43bec994e36ae5f0d0e708ecee512b3ebd96f92e682998e621be15cc6c56395",
+    "finding": "dev_set_name(pdev, pname); pdev->parent=disk_to_dev(disk); pdev->type=&part_type; investigacion primaria del agente compatibilidad."
+  },
+  "start_offsets_originally_captured": false,
+  "physical_layout_revalidated_by_022": false,
+  "physically_installed": false,
+  "tv_accessed": false,
+  "usb_accessed": false,
+  "limits": [
+    "Fixtures construidos con forma de sysfs respaldada por fuente primaria y geometria real; sus starts son artificiales. No son una captura del recovery.",
+    "Esta revision cubre el cambio de reconocimiento y sus adaptadores. No repite fsck, generacion de imagenes, firmas o toda la bateria de 0.2.1 fuera de su impacto.",
+    "La aceptacion en recovery, respaldos, formato y flasheo con 0.2.2 siguen pendientes. Cualquier atributo real incompatible debe producir rechazo antes de las escrituras.",
+    "No se modificaron releases previas, TV, USB ni Git en la revision."
+  ]
+}

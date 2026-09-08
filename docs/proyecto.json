@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "title": "TV Base",
-  "snapshot": "2026-09-08T02:48:48.986791+00:00",
-  "state": "Usuario confirmó menú de recovery tras ciclo físico; indicado aplicar ZIP0.2.1 desde EXT/udisk. Sin resultado de aceptación ni instalación todavía",
+  "snapshot": "2026-09-08T03:13:13.594449+00:00",
+  "state": "Corrección 0.2.2 copiada y releída en Kingston; TV en recovery. Instalación física pendiente.",
   "installed": false,
   "original_tv_backup_confirmed": true,
   "source_of_truth": {
@@ -10,24 +10,25 @@
     "state": "docs/ESTADO.md",
     "decisions": "docs/DECISIONES.md",
     "roadmap": "docs/ROADMAP.md",
-    "delivery_receipt": "preparacion-usb/original-021-estado.json",
+    "delivery_receipt": "preparacion-usb/original-022-estado.json",
     "collaboration": "docs/COLABORACION.md",
     "publication": "docs/PUBLICACION.md",
     "h1_review": "docs/hipotesis/H1-RESULTADO-CODEX.md",
     "fable_review": "docs/hipotesis/REVISION-CONJUNTA-FABLE.md",
     "latest_capture": "diagnostico/primer-tv-lan-20260907-184926/resumen-saneado.json",
     "current_build": "rom-simplificada/original-p291/IMAGENES-0.2.0.json",
-    "current_package": "rom-simplificada/original-p291/instalacion-021/salida/TVBASE-P291-A9-0.2.1-VERIFICACION.json",
-    "current_review": "docs/evidencia/ENTRADA-ORIGINAL-P291-021.md",
+    "current_package": "rom-simplificada/original-p291/instalacion-022/salida/TVBASE-P291-A9-0.2.2-VERIFICACION.json",
+    "current_review": "docs/evidencia/INSTALADOR-P291-022.md",
     "current_entry": "rom-simplificada/original-p291/entrada-apk/COMPILACION-09.json",
     "historical_delivery_receipt": "preparacion-usb/rom-012-estado.json",
-    "current_restore": "rom-simplificada/original-p291/restauracion-021/salida/TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-VERIFICACION.json",
+    "current_restore": "rom-simplificada/original-p291/restauracion-022/salida/TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.2-VERIFICACION.json",
     "current_entry_release": "rom-simplificada/original-p291/entrada-apk/LIBERACION-09.json",
     "entry_tv_observation": "rom-simplificada/original-p291/entrada-apk/INSTALACION-TV-09.json",
     "lan_entry_client_review": "rom-simplificada/original-p291/entrada-apk/PRUEBAS-LAN09.json",
     "entry_tv_execution": "rom-simplificada/original-p291/entrada-apk/EJECUCION-TV-09.json",
     "latest_entry_result": "docs/evidencia/PREPARACION-ENTRADA-P291-09.md",
-    "recovery_user_observation": "docs/evidencia/PREPARACION-ENTRADA-P291-09.md"
+    "recovery_user_observation": "docs/evidencia/PREPARACION-ENTRADA-P291-09.md",
+    "installer_021_error": "docs/evidencia/ERROR-INSTALADOR-P291-021.md"
   },
   "components": [
     {
@@ -159,10 +160,21 @@
     },
     {
       "id": "C-ZIP",
-      "label": "Instalador0.2.1, plataforma0.2.0",
+      "label": "Instalador022: identidad Amlogic",
       "state": "verificado_local",
-      "description": "Cinco payloads0.2.0 inmutables y seis respaldos previos incluido userdata antes de preparar ext4 y flashear. Firma SHA1/Python/OpenJDK, SHA/CRC y pruebas PC correctos; no instalado.",
+      "description": "022 corrige nombre/identidadMMC; cinco imágenes0.2.0, backup6 y userdata limpia. VerificadoPC y entregado; físico pendiente.",
       "files": [
+        "rom-simplificada/original-p291/instalacion-022/CONTRATO-MIGRACION.md",
+        "rom-simplificada/original-p291/instalacion-022/main_linux.go",
+        "rom-simplificada/original-p291/instalacion-022/package.go",
+        "rom-simplificada/original-p291/instalacion-022/backup_verified.go",
+        "rom-simplificada/original-p291/instalacion-022/transaction_linux.go",
+        "rom-simplificada/original-p291/instalacion-022/userdata_linux.go",
+        "rom-simplificada/original-p291/instalacion-022/env_guard.go",
+        "rom-simplificada/original-p291/instalacion-022/block_abi.go",
+        "rom-simplificada/original-p291/instalacion-022/empaquetar_original.py",
+        "rom-simplificada/original-p291/instalacion-022/EVIDENCIA-TESTS.json",
+        "rom-simplificada/original-p291/instalacion-022/salida/TVBASE-P291-A9-0.2.2-VERIFICACION.json",
         "rom-simplificada/original-p291/instalacion-021/CONTRATO-MIGRACION.md",
         "rom-simplificada/original-p291/instalacion-021/main_linux.go",
         "rom-simplificada/original-p291/instalacion-021/package.go",
@@ -174,7 +186,15 @@
         "rom-simplificada/original-p291/instalacion-021/empaquetar_original.py",
         "rom-simplificada/original-p291/instalacion-021/EVIDENCIA-TESTS.json",
         "rom-simplificada/original-p291/instalacion-021/FORMATEADOR-PRUEBA-TV.json",
-        "rom-simplificada/original-p291/instalacion-021/salida/TVBASE-P291-A9-0.2.1-VERIFICACION.json"
+        "rom-simplificada/original-p291/instalacion-021/salida/TVBASE-P291-A9-0.2.1-VERIFICACION.json",
+        "docs/evidencia/INSTALADOR-P291-022.md",
+        "docs/evidencia/ERROR-INSTALADOR-P291-021.md",
+        "docs/evidencia/PARTICIONES-AMLOGIC-P291-022.md",
+        "rom-simplificada/original-p291/instalacion-022/block_layout.go",
+        "rom-simplificada/original-p291/instalacion-022/block_device_linux.go",
+        "rom-simplificada/original-p291/instalacion-022/block_layout_test.go",
+        "rom-simplificada/original-p291/instalacion-022/REVISION-LAYOUT-022.json",
+        "rom-simplificada/original-p291/instalacion-022/README.md"
       ],
       "x": 2,
       "y": 0,
@@ -186,18 +206,28 @@
     },
     {
       "id": "C-REC",
-      "label": "Recovery original y restaurador0.2.1",
+      "label": "Restaurador022",
       "state": "verificado_local",
-      "description": "Restaurador separado de cinco imágenes OEM, ABI ARM32 corregido y ENV normal exigida. Conserva userdata; no restaura data.img. Recovery físico, reentrada desde Android nuevo y restore sin ensayo.",
+      "description": "Misma guardaMMC corregida; cincoOEM, conservauserdata; sin prueba física.",
       "files": [
         "diagnostico/primer-tv-lan-20260907-184926/RECOVERY-ORIGINAL.md",
+        "rom-simplificada/original-p291/restauracion-022/main_linux.go",
+        "rom-simplificada/original-p291/restauracion-022/package.go",
+        "rom-simplificada/original-p291/restauracion-022/env_read_linux.go",
+        "rom-simplificada/original-p291/restauracion-022/empaquetar_original.py",
+        "rom-simplificada/original-p291/restauracion-022/salida/TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.2-VERIFICACION.json",
         "rom-simplificada/original-p291/restauracion-021/REVISION-INDEPENDIENTE.json",
         "rom-simplificada/original-p291/restauracion-021/main_linux.go",
         "rom-simplificada/original-p291/restauracion-021/package.go",
         "rom-simplificada/original-p291/restauracion-021/env_read_linux.go",
         "rom-simplificada/original-p291/restauracion-021/empaquetar_original.py",
         "rom-simplificada/original-p291/instalacion-021/RESTAURACION.md",
-        "rom-simplificada/original-p291/restauracion-021/salida/TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-VERIFICACION.json"
+        "rom-simplificada/original-p291/restauracion-021/salida/TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-VERIFICACION.json",
+        "rom-simplificada/original-p291/restauracion-022/block_layout.go",
+        "rom-simplificada/original-p291/restauracion-022/block_device_linux.go",
+        "rom-simplificada/original-p291/restauracion-022/block_layout_test.go",
+        "rom-simplificada/original-p291/restauracion-022/REVISION-LAYOUT-022.json",
+        "rom-simplificada/original-p291/restauracion-022/README.md"
       ],
       "x": 2,
       "y": 1,
@@ -207,9 +237,9 @@
     },
     {
       "id": "C-ENTRY",
-      "label": "AccesoUSB0.9: menú recovery confirmado",
+      "label": "Acceso0.9: recovery ejecutó ZIP0.2.1",
       "state": "observado_tv",
-      "description": "Preparación ENV/BCB verificada. Tras el ciclo físico el usuario confirmó menú recovery; imagen/hash exactos no identificados. ZIP0.2.1 indicado, sin resultado. No repetir prepare.",
+      "description": "ENV/BCB verificados; recovery tras ciclo físico. Foto demuestra update-binary0.2.1 ejecutado; luego aborto por guarda eMMC de system. No repetir entrada ni instalar otra vez sin corregir causa.",
       "files": [
         "rom-simplificada/original-p291/entrada-apk/README.md",
         "rom-simplificada/original-p291/entrada-apk/ESTADO-ENTRADA-09.md",
@@ -242,17 +272,23 @@
     },
     {
       "id": "C-USB",
-      "label": "Kingston: entrega0.2.1 y cierre0.9 enTV",
-      "state": "observado_tv",
-      "description": "Cuatro entregables copiados/releídos enPC, USB luego identificado enP291. Preparación0.9:21 archivos y21 sellos USB verificados independientemente. Sin formato/reparación; limitación de expulsión Windows histórica.",
+      "label": "Kingston: entrega022 verificada",
+      "state": "verificado_local",
+      "description": "DosZIP022+guía copiados/releídos. Tresarchivos021 archivados; informes/respaldos iguales. PendrivePC.",
       "files": [
         "rom-simplificada/INSTALACION-USB.md",
         "preparacion-usb/rom-012-estado.json",
+        "rom-simplificada/original-p291/LEEME-USB-022.txt",
+        "preparacion-usb/original-022-estado.json",
+        "preparacion-usb/preparar-original-022.ps1",
+        "rom-simplificada/original-p291/entrada-apk/EJECUCION-TV-09.json",
+        "docs/evidencia/PREPARACION-ENTRADA-P291-09.md",
         "rom-simplificada/original-p291/LEEME-USB-021.txt",
         "preparacion-usb/original-021-estado.json",
         "preparacion-usb/preparar-original-021.ps1",
-        "rom-simplificada/original-p291/entrada-apk/EJECUCION-TV-09.json",
-        "docs/evidencia/PREPARACION-ENTRADA-P291-09.md"
+        "preparacion-usb/entrega-original-022.json",
+        "preparacion-usb/REVISION-ORIGINAL-022.json",
+        "preparacion-usb/CIERRE-ENTREGA-022.json"
       ],
       "x": 3,
       "y": 1,
@@ -262,9 +298,9 @@
     },
     {
       "id": "C-TV",
-      "label": "P291: recovery visible; ZIP0.2.1 indicado",
+      "label": "P291 enrecovery; ROMpendiente",
       "state": "observado_tv",
-      "description": "El usuario informó menú recovery tras ciclo físico. Indicado Apply update from EXT → Update from udisk → ZIP0.2.1, conservar USB/power y esperar final/error. Instalación sin resultado.",
+      "description": "Recovery ejecutó021, aborto antesdemigración por nombresystem. Usuario mantiene recovery abierto;022 pendiente.",
       "files": [
         "docs/ESTADO.md",
         "diagnostico/primer-tv-evidencia-20260907-000948/HALLAZGOS.md",
@@ -300,9 +336,9 @@
         "diagnostico/primer-tv-lan-20260907-184926/RESPALDO-resumen-saneado.json",
         "diagnostico/primer-tv-lan-20260907-184926/OPCIONES-INSTALACION-ROOT.md",
         "docs/evidencia/ENTRADA-ORIGINAL-P291-021.md",
-        "rom-simplificada/original-p291/instalacion-021/FORMATEADOR-PRUEBA-TV.json",
         "rom-simplificada/original-p291/entrada-apk/EJECUCION-TV-09.json",
-        "docs/evidencia/PREPARACION-ENTRADA-P291-09.md"
+        "docs/evidencia/PREPARACION-ENTRADA-P291-09.md",
+        "rom-simplificada/original-p291/instalacion-021/FORMATEADOR-PRUEBA-TV.json"
       ],
       "x": 4,
       "y": 1,
@@ -468,7 +504,7 @@
     {
       "source": "C-ENTRY",
       "target": "C-REC",
-      "relation": "menú observado por usuario; aceptación delZIP pendiente"
+      "relation": "recovery ejecutóZIP; instalador abortado"
     },
     {
       "source": "C-REC",
@@ -617,13 +653,13 @@
         "C-ZIP",
         "C-GESTION"
       ],
-      "exit": "Plataforma y ambos ZIP verificados enPC; Acceso0.9 liberado. Cuatro archivos copiados/releídos en USB, VAL-04 completada; expulsión segura pendiente.",
+      "exit": "DosZIP022 y guía copiados/releídos; plataforma0.2.0 inmutable; expulsión seguraWindows indicada.",
       "x": 0,
       "y": 0
     },
     {
       "id": "M1",
-      "label": "Menú recovery visible",
+      "label": "Recovery ejecutó update-binary",
       "state": "observado_tv",
       "depends_on": [
         "M0"
@@ -633,13 +669,13 @@
         "C-REC",
         "C-TV"
       ],
-      "exit": "Menú confirmado por el usuario tras ciclo físico. Pendientes identidad exacta del recovery, ENV normal y aceptación delZIP0.2.1. VAL-05 aún parcial; no repetir prepare/Update.",
+      "exit": "Recovery y ejecución delZIP observados por foto; identidad exacta/hash y ENV normal no acreditados. VAL-05 parcial; ROM no instalada.",
       "x": 1,
       "y": 0
     },
     {
       "id": "M2",
-      "label": "Instalación y arranque",
+      "label": "022 listo; instalación física pendiente",
       "state": "pendiente",
       "depends_on": [
         "M1"
@@ -648,9 +684,10 @@
         "C-ZIP",
         "C-TV"
       ],
-      "exit": "ZIP0.2.1 indicado, sin resultado aún. Exigir seis respaldos, formato/RO, cinco escrituras/relecturas y arranque interno sinUSB: VAL-06/07.",
+      "exit": "021 abortó antes de respaldo/formato/flash.022 corrige guarda y está entregado. Exigir seis respaldos, formato/RO, cinco escrituras y arranque interno.",
       "x": 2,
-      "y": 0
+      "y": 0,
+      "note": "021 abortó antes de migración.022 entregado; backups/formato/flash/arranque físicos pendientes."
     },
     {
       "id": "M3",
@@ -943,6 +980,16 @@
         "C-REC",
         "C-TV"
       ]
+    },
+    {
+      "id": "ADR-27",
+      "file": "docs/DECISIONES.md",
+      "components": [
+        "C-ZIP",
+        "C-REC",
+        "C-USB",
+        "C-TV"
+      ]
     }
   ],
   "validations": [
@@ -976,12 +1023,12 @@
     {
       "id": "VAL-04",
       "file": "docs/ESPECIFICACION.md",
-      "state": "observado_tv",
+      "state": "verificado_local",
       "requirements": [
         "REQ-01",
         "REQ-11"
       ],
-      "note": "Cuatro entregables copiados/releídos enPC; USB luego identificado y utilizado enTV con cierre de entrada verificado. Limitación de expulsión/flushWindows permanece en reciboPC histórico."
+      "note": "Entrega022: dosZIP y guía copiados/releídos enPC; informes/respaldos iguales. Su uso enTV está pendiente. Entrega021 y entrada09 enTV tienen recibos históricos separados."
     },
     {
       "id": "VAL-05",
@@ -991,7 +1038,7 @@
         "REQ-01",
         "REQ-11"
       ],
-      "note": "Menú recovery confirmado por usuario tras ciclo físico. Sin identidad exacta/hash, ENV normal ni aceptación delZIP acreditados. Instalación0.2.1 indicada, resultado pendiente."
+      "note": "Foto acredita recovery ejecutando update-binary0.2.1; aborto Status1. Identidad exacta/hash delrecovery y ENV normal pendientes. No cerrar instalación por la entrada delZIP."
     },
     {
       "id": "VAL-06",
@@ -1001,7 +1048,7 @@
         "REQ-01",
         "REQ-11"
       ],
-      "note": "Doce particiones originales PC ya existen; los seis respaldos previos a instalación y userdata física aún no."
+      "note": "021 abortó enprepareTargets/system, antes de respaldo/formato/flash.022 pendiente físico; exige seis respaldos, formato/RO, cinco escrituras y arranque."
     },
     {
       "id": "VAL-07",
@@ -1049,6 +1096,24 @@
     }
   ],
   "artifacts": [
+    {
+      "name": "TVBASE-P291-A9-0.2.2-RECOVERY.zip",
+      "path": "rom-simplificada/original-p291/instalacion-022/salida/TVBASE-P291-A9-0.2.2-RECOVERY.zip",
+      "bytes": 573820005,
+      "sha256": "163d4ce6e6fd4e02f06cb6646c53c259d1d3100547ee5c616c578782c3e54421"
+    },
+    {
+      "name": "TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.2-RECOVERY.zip",
+      "path": "rom-simplificada/original-p291/restauracion-022/salida/TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.2-RECOVERY.zip",
+      "bytes": 913294443,
+      "sha256": "914c683a1e15f4d5e6fa622c7b390184444d9071636e580b5818bf4794f47d09"
+    },
+    {
+      "name": "LEEME-AHORA.txt",
+      "path": "rom-simplificada/original-p291/LEEME-USB-022.txt",
+      "bytes": 2856,
+      "sha256": "762dfd86dfeeeb536de1d162718d182a8fd2020350abef417ba66d2ffe2184d4"
+    },
     {
       "name": "TVBASE-P291-A9-0.1.2-RECOVERY.zip",
       "path": "rom-simplificada/salida/TVBASE-P291-A9-0.1.2-RECOVERY.zip",
@@ -1099,7 +1164,7 @@
       "scope": "integrated_verified_pc_only"
     },
     {
-      "name": "TVBASE-P291-A9-0.2.1-RECOVERY.zip",
+      "name": "TVBASE-P291-A9-0.2.1-RECOVERY.zip (histórico; no usar)",
       "path": "rom-simplificada/original-p291/instalacion-021/salida/TVBASE-P291-A9-0.2.1-RECOVERY.zip",
       "bytes": 573688933,
       "sha256": "dcb152c77e55cb067d6e88a8144990a3edb5d06568ea8cdfdc414a0fa21aac58",
@@ -1113,14 +1178,14 @@
       "scope": "installed_and_single_authorized_env_bcb_preparation_independently_verified_no_reset_no_rom"
     },
     {
-      "name": "TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-RECOVERY.zip",
+      "name": "TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-RECOVERY.zip (histórico; no usar)",
       "path": "rom-simplificada/original-p291/restauracion-021/salida/TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-RECOVERY.zip",
       "bytes": 913294443,
       "sha256": "42580206f254fab0a2280cd263a48882677e7ddf5cfd609382a840c8d0fb103a",
       "scope": "usb_copied_read_verified_usb_subsequently_detected_in_tv_not_physically_installed"
     },
     {
-      "name": "LEEME-AHORA.txt (0.2.1)",
+      "name": "LEEME-AHORA.txt (0.2.1) (histórico)",
       "path": "rom-simplificada/original-p291/LEEME-USB-021.txt",
       "bytes": 4412,
       "sha256": "4c4d6586285b36415f0dd7eb12499d9c8970d4f1b21d85647726c85dd1784320",
@@ -1136,7 +1201,7 @@
   "proposals": [
     {
       "id": "PROP-01",
-      "label": "Recovery visible; selección deZIP0.2.1 indicada",
+      "label": "ZIP ejecutó instalador; corregir guarda eMMC",
       "state": "observado_tv",
       "file": "docs/evidencia/ENTRADA-ORIGINAL-P291-021.md",
       "components": [
@@ -1146,9 +1211,9 @@
     },
     {
       "id": "PROP-02",
-      "label": "Restaurador0.2.1 de cinco originales; sin userdata",
+      "label": "Restaurador0.2.2 de cinco originales; sin restaurar userdata",
       "state": "verificado_local",
-      "file": "rom-simplificada/original-p291/instalacion-021/RESTAURACION.md",
+      "file": "rom-simplificada/original-p291/restauracion-022/README.md",
       "components": [
         "C-ZIP",
         "C-REC"
@@ -1280,9 +1345,9 @@
       ]
     }
   ],
-  "delivery_label": "Entrega0.2.1 copiada/releída enPC y USB identificado enTV; preparación0.9 verificada",
-  "date_label": "7/9/2026 ART · entrada y migración0.2.1",
-  "next_step_label": "Aplicar TVBASE-P291-A9-0.2.1-RECOVERY.zip según instrucciones y esperar final/error antes de reiniciar; conservar USB/alimentación",
+  "delivery_label": "Entrega022: dosZIP y guía copiados/releídos; reportes y respaldos conservados",
+  "date_label": "8/9/2026 ART · correcciónAmlogic022",
+  "next_step_label": "ConectarKingston alTV enrecovery; Apply update from EXT → Update from udisk → ZIP0.2.2. No repetirAccesoUSB09",
   "public_repository": {
     "url": "https://github.com/tablerosapp-ctrl/mxqpro4k",
     "visibility_requested": "public",
@@ -1295,15 +1360,15 @@
   "entry_metadata_physically_written": true,
   "userdata_backup_confirmed": false,
   "platform_version": "0.2.0",
-  "installer_version": "0.2.1",
+  "installer_version": "0.2.2",
   "entry_apk_installed": true,
   "entry_ui_visually_confirmed": false,
   "entry_ui_visible": false,
   "entry_ui_observation": "ADB screenshot shows Android update 2% dialog covering the installed APK; start acknowledgement did not prove a visible entry screen.",
   "usb_delivery_verified": true,
-  "safe_removal_pending": false,
+  "safe_removal_pending": true,
   "volume_flush_verified": false,
-  "usb_connected_to_tv_confirmed": true,
+  "usb_connected_to_tv_confirmed": false,
   "lan_entry_client_physically_executed": true,
   "entry_authorization": {
     "response": "si ejecuta",
@@ -1326,16 +1391,17 @@
   "entry_recovery_observed": true,
   "safe_removal_verified": false,
   "delivery_receipt_safe_removal_pending": true,
-  "safe_removal_note": "USB subsequently detected in firstTV; historical Windows safe removal and final volume flush remain unverified. TV entry files have separate fsync/readback evidence.",
+  "safe_removal_note": "Entrega022 completada por archivos; expulsión seguraWindows indicada, no acreditada.",
   "power_cycle_observed": true,
   "recovery_observation": {
-    "source": "user_report_in_conversation",
+    "source": "user_report_and_subsequent_photo_in_conversation",
     "statement": "Apareció un menú de recovery",
     "after_instructed_power_cycle": true,
     "executed_image_identity_verified": false,
     "executed_image_sha256": null,
-    "zip_acceptance_confirmed": false,
-    "sealed_preparation_receipt_modified": false
+    "zip_acceptance_confirmed": true,
+    "sealed_preparation_receipt_modified": false,
+    "zip_acceptance_scope": "Recovery handed control to the project update-binary, which reported the block guard error; no successful installation."
   },
   "installation_instructed": true,
   "installation_instruction": {
@@ -1348,6 +1414,32 @@
     "separate_wipe_instructed": false,
     "restore_zip_instructed": false,
     "wait_for_final_or_error_before_reboot": true,
-    "result": "not_reported"
+    "result": "aborted_status_1_block_guard_system",
+    "superseded_by": "ConectarUSB y seleccionarZIP0.2.2 enrecovery abierto. Sin nueva preparación."
+  },
+  "installer_execution_observed": true,
+  "installer_execution_result": {
+    "source": "user_photo_in_conversation",
+    "package_id": "TVBASE-P291-A9-0.2.1",
+    "error": "destino no eMMC particionada: system",
+    "status": 1,
+    "recovery_message": "Installation aborted",
+    "rom_installed": false,
+    "exact_write_scope_under_review": false,
+    "cause_under_review": null,
+    "hardware_failure_proven": false,
+    "retry_instructed": false,
+    "cause": "Guarda021 exige nombreMMC tradicional; Amlogic usa nombre lógico system.",
+    "backup_stage_reached": false,
+    "userdata_format_reached": false,
+    "image_flash_reached": false
+  },
+  "usb_connected_to_pc_confirmed": true,
+  "next_installation_instruction": {
+    "zip": "TVBASE-P291-A9-0.2.2-RECOVERY.zip",
+    "result": "pending_physical_execution",
+    "keep_usb_and_power": true,
+    "separate_wipe_instructed": false,
+    "restore_zip_instructed": false
   }
 }

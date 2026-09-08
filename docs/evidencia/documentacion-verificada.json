@@ -1,12 +1,27 @@
 {
-  "date_utc": "2026-09-08T02:49:07.564874+00:00",
+  "date_utc": "2026-09-08T03:13:27.899137+00:00",
   "state": "passed",
-  "links_checked": 526,
-  "component_paths_checked": 148,
+  "links_checked": 586,
+  "component_paths_checked": 183,
   "graph_valid": true,
   "roadmap_acyclic": true,
   "html_embedded_data_matches": true,
   "artifacts": [
+    {
+      "name": "TVBASE-P291-A9-0.2.2-RECOVERY.zip",
+      "sha256": "163d4ce6e6fd4e02f06cb6646c53c259d1d3100547ee5c616c578782c3e54421",
+      "matched": true
+    },
+    {
+      "name": "TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.2-RECOVERY.zip",
+      "sha256": "914c683a1e15f4d5e6fa622c7b390184444d9071636e580b5818bf4794f47d09",
+      "matched": true
+    },
+    {
+      "name": "LEEME-AHORA.txt",
+      "sha256": "762dfd86dfeeeb536de1d162718d182a8fd2020350abef417ba66d2ffe2184d4",
+      "matched": true
+    },
     {
       "name": "TVBASE-P291-A9-0.1.2-RECOVERY.zip",
       "sha256": "6c0c4307208c8d0e1a958a3fc6c790fa94021a850599985b0a41b340b821bb99",
@@ -43,7 +58,7 @@
       "matched": true
     },
     {
-      "name": "TVBASE-P291-A9-0.2.1-RECOVERY.zip",
+      "name": "TVBASE-P291-A9-0.2.1-RECOVERY.zip (histórico; no usar)",
       "sha256": "dcb152c77e55cb067d6e88a8144990a3edb5d06568ea8cdfdc414a0fa21aac58",
       "matched": true
     },
@@ -53,12 +68,12 @@
       "matched": true
     },
     {
-      "name": "TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-RECOVERY.zip",
+      "name": "TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-RECOVERY.zip (histórico; no usar)",
       "sha256": "42580206f254fab0a2280cd263a48882677e7ddf5cfd609382a840c8d0fb103a",
       "matched": true
     },
     {
-      "name": "LEEME-AHORA.txt (0.2.1)",
+      "name": "LEEME-AHORA.txt (0.2.1) (histórico)",
       "sha256": "4c4d6586285b36415f0dd7eb12499d9c8970d4f1b21d85647726c85dd1784320",
       "matched": true
     }

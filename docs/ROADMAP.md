@@ -1,21 +1,18 @@
 # Roadmap y propuestas
 
-## Actualización vigente · recovery visible; instalación0.2.1 indicada
+## Vigente · corrección0.2.2 entregada
 
-| Etapa | Avance actual | Salida pendiente |
+| Etapa | Avance | Salida pendiente |
 | --- | --- | --- |
-| M0 · Plataforma y paquete | Plataforma0.2.0 inmutable; instalación0.2.1 firmada/verificada en PC; Acceso0.9 compilado/revisado; restaurador0.2.1 separado | Instalación/restaurador0.2.1 y APK0.9 copiados y releídos en USB, VAL-04 completada. USB ya identificado y usado enTV; reciboPC y prueba física posterior se conservan por separado. |
-| M1 · Entrada | Preparación ENV/BCB verificada; tras el ciclo físico el usuario confirmó el menú de recovery | Identidad exacta del recovery, ENV normal y aceptación delZIP0.2.1 indicado. El menú visible no acredita instalación ni cierra toda VAL-05. |
-| M2 · Instalación | Migración implementada: seis respaldos íntegros antes de preparar userdata, cinco imágenes0.2.0 y boot al final | Selección delZIP0.2.1 indicada; todavía sin resultado. Exigir respaldo físico, formato/RO, cinco relecturas y arranque interno sinUSB, VAL-06/07. |
-| M3 · Hardware/web/video | Drivers/kernel/DTB preservados y Chrome138 declarado | Proveedor efectivo, WiFi/Ethernet, controles, instalación APK y dos VP9/alfa/canvas medidos. |
-| M4 · Recuperación | Restaurador0.2.1 devuelve cinco OEM conservando userdata | Ensayar entrada desde Android nuevo/fallido y restauración; data.img requiere receta propia fijada al respaldo futuro. |
-| M5–M7 | Gestor APK/motor integrado y desactivado; resto conserva su alcance | App/contenido, servidor y VAL-10, ROM remota, producción y nuevas bases/perfiles. |
+| M0 · Plataforma/paquete | Imágenes0.2.0 inmutables; instalación/restauración022 verificadas y copiadas enKingston | Ejecutar el paquete corregido en recovery. |
+| M1 · Entrada | ENV/BCB09 verificados; menú y update-binary021 observados | No repetir preparación. Mantener documentado el límite de identidad exacta del recovery. |
+| M2 · Instalación | Error021 localizado antes de migración; guardaAmlogic corregida en022 | Respaldos físicos, userdata limpia, cinco escrituras/verificaciones y arranque interno sinUSB. |
+| M3 · Hardware/web/video | Drivers originales y Chrome138 preparados | Proveedor real, WiFi/Ethernet, controles y dosVP9/alfa/canvas medidos. |
+| M4 · Recuperación | Restaurador022 de cincoOEM listo, conserva datos | Reentrada desdeAndroid nuevo/fallido y restauración física; receta fijada adata.img cuando exista. |
+| M5–M7 | GestorAPK/motor incluido y desactivado | APK/contenido, servidor propio, VAL-10, OTA deROM, producción y nuevos perfiles. |
 
-**ADR-26 / PROP-01:** la siguiente entrada ya no es repetir Update. La ejecución única preparó64KiB de ENV y2KiB BCB para el recovery interno y preservó/neutralizó las órdenes antiguas, sin reset automático. Código0 y relecturas/respaldos fueron comprobados independientemente; no se borró userdata ni se escribieron imágenes Android. El usuario ya decidió usar este método mediante «si ejecuta» después de conocer el riesgo de ENV/BCB. No volver a preguntar; la escritura de ENV conserva el riesgo explicado. M1 queda pendiente aunque el pendrive se prepare correctamente. La APK0.9 ya está instalada, pero el diálogo2% la oculta: no ordenar una pulsación invisible ni cortar para abrirla. El [cliente LAN](../rom-simplificada/original-p291/entrada-apk/OPERACION-LAN-09.md) está preparado para acompañar la APK sin pulsaciones ocultas; su único intento terminó prepared y verificado. No repetir prepare; el usuario ya confirmó el menú de recovery tras el ciclo físico. Se indicó aplicar elZIP0.2.1 desde udisk, sin wipe separado ni restaurador; conservar alimentación/USB y esperar final/error antes de reiniciar. [Resultado físico](evidencia/PREPARACION-ENTRADA-P291-09.md).
+[Corrección y entrega](evidencia/INSTALADOR-P291-022.md) · [Error físico021](evidencia/ERROR-INSTALADOR-P291-021.md). ADR-27 corrige identidad sin eliminar comprobaciones. El siguiente intento usa022 desde el recovery ya abierto; no vuelve al diálogo OEM2% ni al helper09.
 
-**PROP-02 / C-REC:** restaurar cinco imágenes no recupera los archivos de userdata. No presentar el respaldo de doce particiones actual como copia de toda eMMC, ni el futuro respaldo de seis como ya creado. El Android nuevo elimina su/ADB TCP inicial y no tiene gestor con REBOOT/RECOVERY: la reentrada y actualización completa posterior deben demostrarse.
-
-**C-USB:** copia/relectura0.2.1 completadas a23:06:04ART, cuatro archivos verificados y código0 en [recibo propio](../preparacion-usb/original-021-estado.json). La limitación de expulsión/flushWindows quedó en el reciboPC original. ElUSB ya se identificó enTV y sus respaldos/sellos de entrada se comprobaron después, sin atribuir retrospectivamente una expulsiónWindows no observada. Cuatro archivos viejos fueron archivados y comprobados enPC antes de retirarlos; no hubo formato/reparación. VAL-04 no cierra M1 ni acredita instalación. [Evidencia vigente](evidencia/ENTRADA-ORIGINAL-P291-021.md).
 
 ## Revisiones previas conservadas
 

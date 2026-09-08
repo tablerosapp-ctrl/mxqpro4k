@@ -1,0 +1,95 @@
+{
+  "state": "reviewed_offline_pending_contract",
+  "date_utc": "2026-09-08T03:02:46.257055+00:00",
+  "approved": false,
+  "script_review_approved": true,
+  "delivery_approved": false,
+  "approval_scope": "Revisión del preparador y guía, con pruebas PC de funciones aisladas. Falta cotejar contrato final y ambos paquetes sellados antes de ejecutar la copia USB.",
+  "script": "preparacion-usb/preparar-original-022.ps1",
+  "script_sha256": "26e00c87a06a22d006be60c7237394cf850d3937ef7a11972f96c62bd864f898",
+  "guide": "rom-simplificada/original-p291/LEEME-USB-022.txt",
+  "guide_sha256": "762dfd86dfeeeb536de1d162718d182a8fd2020350abef417ba66d2ffe2184d4",
+  "guide_bytes": 2856,
+  "guide_modified_by_reviewer": false,
+  "contract": "preparacion-usb/entrega-original-022.json",
+  "contract_present_at_review": false,
+  "contract_review_pending": true,
+  "sealed_packages_review_pending": true,
+  "contract_sha256": null,
+  "delivery_names": [
+    "TVBASE-P291-A9-0.2.2-RECOVERY.zip",
+    "TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.2-RECOVERY.zip",
+    "LEEME-AHORA.txt"
+  ],
+  "retirement_scope": [
+    {
+      "name": "TVBASE-P291-A9-0.2.1-RECOVERY.zip",
+      "bytes": 573688933,
+      "sha256": "dcb152c77e55cb067d6e88a8144990a3edb5d06568ea8cdfdc414a0fa21aac58"
+    },
+    {
+      "name": "TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-RECOVERY.zip",
+      "bytes": 913294443,
+      "sha256": "42580206f254fab0a2280cd263a48882677e7ddf5cfd609382a840c8d0fb103a"
+    },
+    {
+      "name": "LEEME-AHORA.txt",
+      "bytes": 4412,
+      "sha256": "4c4d6586285b36415f0dd7eb12499d9c8970d4f1b21d85647726c85dd1784320"
+    }
+  ],
+  "preserved_apk": {
+    "name": "AccesoUSB-0.9.apk",
+    "bytes": 61843,
+    "sha256": "1d0f267e818acca5562048f9961c7c234f36b8cc81f827cb3eac9e3fcd2505a4"
+  },
+  "checks": {
+    "only_three_exact_retirements": true,
+    "retirements_match_verified_021_delivery": true,
+    "all_retirements_archived_and_verified_before_any_delete": true,
+    "both_new_zips_copied_and_verified_before_old_files_removed": true,
+    "delete_uses_literal_absolute_root_file_path_only": true,
+    "kingston_identity_marker_and_volume_rechecked": true,
+    "exact_apk_required_before_snapshot": true,
+    "snapshot_includes_marker_and_root_reports_any_extension": true,
+    "snapshot_includes_nested_empty_directories": true,
+    "snapshot_sorted_for_stable_comparison": true,
+    "snapshot_excludes_only_four_delivery_zips_among_tvbase_root_files": true,
+    "snapshot_excludes_leeme_ahora": true,
+    "fixture_new_zip_and_guide_changes_keep_snapshot_equal": true,
+    "fixture_report_or_directory_changes_detected": true,
+    "file_flush_and_readback_required": true,
+    "no_format_partition_repair_or_tv_action": true,
+    "guide_uses_existing_recovery_and_does_not_repeat_apk09_prepare": true,
+    "guide_separates_install_and_restore_and_discloses_userdata_loss": true
+  },
+  "resolved_findings": [
+    "Se ordenan los directorios y el resultado para no atribuir a corrupción un cambio de orden de enumeración.",
+    "Se incluyen subdirectorios vacíos e informes raíz TVBASE de extensiones distintas de .txt.",
+    "Se exige la APK09 exacta antes de registrar el inventario; su ausencia ya no puede pasar como preservación."
+  ],
+  "tests": {
+    "scope": "PC, definiciones de funciones extraídas por AST; nunca se ejecutó el cuerpo del preparador ni Check-USB.",
+    "cases": 34,
+    "passed": 34,
+    "powershell_parse_errors": 0,
+    "exit_code": 0,
+    "private_harness": "privado/revision-usb022-funciones.ps1",
+    "private_harness_sha256": "26d4afa573636b0b920d64515e5e5db4109dddd0ef24ba354fa50c2d3febc0d2",
+    "private_receipt": "privado/revision-usb022-0af9a2d1244c40daabc15d645edc75c9/resultado.json",
+    "private_receipt_sha256": "153d72327dc77b075dbea344fe1a8b7c423681441cabe0eeeef3af1517b11f71"
+  },
+  "copy_script_executed": false,
+  "usb_accessed": false,
+  "tv_accessed": false,
+  "safe_removal_pending": true,
+  "volume_flush_verified": false,
+  "limits": [
+    "No acredita entrega de 0.2.2: falta revisión de contenido/estado/hashes del contrato y de los paquetes finales.",
+    "El preparador verifica hashes de los recibos del contrato; no interpreta por sí solo su aprobación semántica.",
+    "Los tests escribieron y leyeron archivos sintéticos en una carpeta privada de PC, no en el Kingston.",
+    "Flush de archivos y lectura en Windows no acreditan todos los metadatos FAT tras desconectar; requiere expulsión segura.",
+    "La preservación se comprueba contra el estado encontrado al iniciar; no repara informes previamente incompletos ni borra históricos.",
+    "Recovery observado proviene de la evidencia de la sesión principal. Este revisor no ejecutó el instalador/restaurador022."
+  ]
+}

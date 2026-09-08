@@ -1,0 +1,21 @@
+{
+  "state": "contract_and_packages_verified_for_usb_copy",
+  "date": "2026-09-08T00:09:46.4076228-03:00",
+  "reviewer": "root",
+  "contract_sha256": "f5eb84dba37e014dec9ad9020cb3811e09a24d7771d78de7bd0eea17481b56db",
+  "preparer_review_sha256": "e390efc7d3ce8a1fb3aa3a08de1ad5a6059734125b8ddf0227fc3ec5b3e327c5",
+  "verification_script_sha256": "435ae39d4e6b136a10365cc176c93c6bb44e877e224b79b013e9b08f9fe1a197",
+  "checks": {
+    "contract_all_artifact_sizes_sha_match": true,
+    "source_hashes_match_independent_reviews": true,
+    "builders_and_embedded_installers_match_reviews": true,
+    "five_images_each_equal_021_manifest": true,
+    "package_crc_payload_and_python_openjdk_receipts_pass": true,
+    "preparer_and_guide_match_review": true,
+    "no_repeated_entry_preparation": true
+  },
+  "script_review_pending_contract_resolved": true,
+  "usb_copy_executed": false,
+  "tv_installation_tested": false,
+  "scope": "Cotejo final PC posterior a REVISION-ORIGINAL-022, sin modificar ese recibo previo; copia USB y prueba fisica tienen recibos distintos."
+}

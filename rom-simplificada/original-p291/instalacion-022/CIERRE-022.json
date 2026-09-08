@@ -1,0 +1,30 @@
+{
+  "state": "passed",
+  "date_utc": "2026-09-08T03:09:35.541619+00:00",
+  "large_payloads_rehashed_again": false,
+  "basis": "Sealing already verified payload hashes/CRC/signatures; this closure compares manifest and source receipt identities.",
+  "packages": [
+    {
+      "package_id": "TVBASE-P291-A9-0.2.2",
+      "file": "rom-simplificada/original-p291/instalacion-022/salida/TVBASE-P291-A9-0.2.2-RECOVERY.zip",
+      "bytes": 573820005,
+      "sha256": "163d4ce6e6fd4e02f06cb6646c53c259d1d3100547ee5c616c578782c3e54421",
+      "receipt_sha256": "55177ba801abab5c2c32391ac3ddc3139cd39bcff50b88e06e3ddcff9b39fbba",
+      "five_payloads_match": true,
+      "matched_to": "platform0.2.0",
+      "sources_and_binary_match_independent_review": true,
+      "physically_installed": false
+    },
+    {
+      "package_id": "TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.2",
+      "file": "rom-simplificada/original-p291/restauracion-022/salida/TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.2-RECOVERY.zip",
+      "bytes": 913294443,
+      "sha256": "914c683a1e15f4d5e6fa622c7b390184444d9071636e580b5818bf4794f47d09",
+      "receipt_sha256": "0e5cbf4bf68271e6475c0a489dce2af82c19ca212aead27b09902932500b52b3",
+      "five_payloads_match": true,
+      "matched_to": "five_originals",
+      "sources_and_binary_match_independent_review": true,
+      "physically_installed": false
+    }
+  ]
+}

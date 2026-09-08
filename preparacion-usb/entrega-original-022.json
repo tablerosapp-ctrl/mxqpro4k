@@ -1,0 +1,68 @@
+{
+  "version": "0.2.2",
+  "profile": "gxlx2_p291_1g",
+  "state": "reviewed_for_usb_copy",
+  "files": [
+    {
+      "name": "TVBASE-P291-A9-0.2.2-RECOVERY.zip",
+      "source": "rom-simplificada/original-p291/instalacion-022/salida/TVBASE-P291-A9-0.2.2-RECOVERY.zip",
+      "bytes": 573820005,
+      "sha256": "163d4ce6e6fd4e02f06cb6646c53c259d1d3100547ee5c616c578782c3e54421"
+    },
+    {
+      "name": "TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.2-RECOVERY.zip",
+      "source": "rom-simplificada/original-p291/restauracion-022/salida/TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.2-RECOVERY.zip",
+      "bytes": 913294443,
+      "sha256": "914c683a1e15f4d5e6fa622c7b390184444d9071636e580b5818bf4794f47d09"
+    },
+    {
+      "name": "LEEME-AHORA.txt",
+      "source": "rom-simplificada/original-p291/LEEME-USB-022.txt",
+      "bytes": 2856,
+      "sha256": "762dfd86dfeeeb536de1d162718d182a8fd2020350abef417ba66d2ffe2184d4"
+    }
+  ],
+  "proofs": [
+    {
+      "source": "rom-simplificada/original-p291/instalacion-022/salida/TVBASE-P291-A9-0.2.2-VERIFICACION.json",
+      "bytes": 6401,
+      "sha256": "55177ba801abab5c2c32391ac3ddc3139cd39bcff50b88e06e3ddcff9b39fbba"
+    },
+    {
+      "source": "rom-simplificada/original-p291/instalacion-022/REVISION-LAYOUT-022.json",
+      "bytes": 6111,
+      "sha256": "55532d0e7d4566dbba5f5760ae80eef93482b482e2fee51406e21490df9eb72d"
+    },
+    {
+      "source": "rom-simplificada/original-p291/instalacion-022/EVIDENCIA-TESTS.json",
+      "bytes": 3129,
+      "sha256": "e965b29b8132bf0e2d949f2c56b53a3558037a19c8ad3dc97c9d7c5c362a4070"
+    },
+    {
+      "source": "rom-simplificada/original-p291/restauracion-022/salida/TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.2-VERIFICACION.json",
+      "bytes": 5065,
+      "sha256": "0e5cbf4bf68271e6475c0a489dce2af82c19ca212aead27b09902932500b52b3"
+    },
+    {
+      "source": "rom-simplificada/original-p291/restauracion-022/REVISION-LAYOUT-022.json",
+      "bytes": 6038,
+      "sha256": "8bd6d3c3029feb0823f7529eadf047465721133afaa8ac8c95509fa253395c9b"
+    },
+    {
+      "source": "rom-simplificada/original-p291/restauracion-022/EVIDENCIA-TESTS.json",
+      "bytes": 3055,
+      "sha256": "4283ca41814687ce6a6dddd421d60b785d9ff46da8a17af63e5b39bb7d4b0534"
+    },
+    {
+      "source": "preparacion-usb/REVISION-ORIGINAL-022.json",
+      "bytes": 4832,
+      "sha256": "e390efc7d3ce8a1fb3aa3a08de1ad5a6059734125b8ddf0227fc3ec5b3e327c5"
+    }
+  ],
+  "physical_recovery_observed": true,
+  "installer_022_physically_executed": false,
+  "platform_images_unchanged_from_021": true,
+  "entry_preparation_repeated": false,
+  "safe_removal_required": true,
+  "existing_apk09_preserved_but_not_used_for_022": true
+}

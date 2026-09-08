@@ -1,5 +1,12 @@
 # TV Base desde los originales del P291
 
+## Vigente · instalador/restaurador0.2.2
+
+La plataforma0.2.0 conserva sus cinco imágenes. [022](../../docs/evidencia/INSTALADOR-P291-022.md) corrige el rechazo del nombreAmlogic system en instalación/restauración; susZIP ya están copiados/releídos enKingston. TV todavíarecovery, ROM noinstalada. Usar022 desdeese menú, sin repetir AccesoUSB09/prepare/Update. El error021 ocurrió antesdebackup/formato/flash; fuentes/recibos anteriores se conservan.
+
+
+## Antecedente de la entrega 0.2.1
+
 ## Preparación física0.9 completada
 
 Tras la autorización explícita del usuario se ejecutó un único intento por LAN en el primer P291. ENV/BCB se guardaron y releían correctos, sus respaldos y el informe quedaron verificados enUSB y PC, y se neutralizaron las dos órdenes activas anteriores. [Evidencia física](../../docs/evidencia/PREPARACION-ENTRADA-P291-09.md). La preparación no reinició, borró userdata ni instaló la ROM. Después del ciclo físico indicado, el usuario informó un menú de recovery; aceptación del ZIP y arranque de TV Base siguen pendientes. Las referencias inferiores a autorización o ejecución pendientes corresponden a la entrega previa.

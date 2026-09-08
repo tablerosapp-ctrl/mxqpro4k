@@ -133,10 +133,14 @@ mxqpro4k/
 ├── docs/
 │   ├── evidencia/
 │   │   ├── ENTRADA-ORIGINAL-P291-021.md
+│   │   ├── ERROR-INSTALADOR-P291-021.json
+│   │   ├── ERROR-INSTALADOR-P291-021.md
 │   │   ├── git-inicial.json
+│   │   ├── INSTALADOR-P291-022.md
 │   │   ├── limpieza-plan.json
 │   │   ├── limpieza-resultado.json
 │   │   ├── mapa-ui.json
+│   │   ├── PARTICIONES-AMLOGIC-P291-022.md
 │   │   ├── PREPARACION-ENTRADA-P291-09.md
 │   │   ├── publicacion-github.json
 │   │   └── ROM-ORIGINAL-P291-020.md
@@ -177,11 +181,13 @@ mxqpro4k/
 │   ├── activacion-local.json
 │   ├── actualizar-instalador-kingston.ps1
 │   ├── boot-original/ [11 archivos; 0.2 MB; agrupado]
+│   ├── CIERRE-ENTREGA-022.json
 │   ├── entrada-amlogic-20260906-200427/ [2 archivos; 0.0 MB; agrupado]
 │   ├── entrada-amlogic-estado.json
 │   ├── entrada-oem-07-20260907-123446/ [3 archivos; 0.0 MB; agrupado]
 │   ├── entrada-oem-07-estado.json
 │   ├── entrega-original-021.json
+│   ├── entrega-original-022.json
 │   ├── estado-grabacion-anterior-20260904-225502.json
 │   ├── estado-grabacion.json
 │   ├── estado-recuperacion.json
@@ -200,6 +206,7 @@ mxqpro4k/
 │   ├── instalador-android-estado.json
 │   ├── INVESTIGACION-USB.md
 │   ├── original-021-estado.json
+│   ├── original-022-estado.json
 │   ├── postintento-08-estado.json
 │   ├── preparar-entrada-amlogic.ps1
 │   ├── preparar-entrada-oem-07.ps1
@@ -207,6 +214,7 @@ mxqpro4k/
 │   ├── preparar-evidencia-06.ps1
 │   ├── preparar-instalador-android.ps1
 │   ├── preparar-original-021.ps1
+│   ├── preparar-original-022.ps1
 │   ├── preparar-postintento-08.ps1
 │   ├── preparar-rom-012.ps1
 │   ├── probar-archivo-kingston.ps1
@@ -215,6 +223,7 @@ mxqpro4k/
 │   ├── revision-011-20260906-192456/ [2 archivos; 0.0 MB; agrupado]
 │   ├── revision-011-estado.json
 │   ├── REVISION-ORIGINAL-021.json
+│   ├── REVISION-ORIGINAL-022.json
 │   ├── rom-012-estado.json
 │   ├── update.zip
 │   └── variantes/ [4 archivos; 0.0 MB; agrupado]
@@ -553,6 +562,36 @@ mxqpro4k/
 │   │   │   ├── transaction_linux.go
 │   │   │   ├── userdata_linux.go
 │   │   │   └── VerifyWholeZip.java
+│   │   ├── instalacion-022/
+│   │   │   ├── salida/
+│   │   │   │   ├── TVBASE-P291-A9-0.2.2-manifest.json
+│   │   │   │   ├── TVBASE-P291-A9-0.2.2-RECOVERY.zip
+│   │   │   │   └── TVBASE-P291-A9-0.2.2-VERIFICACION.json
+│   │   │   ├── backup_verified.go
+│   │   │   ├── backup_verified_test.go
+│   │   │   ├── block_abi.go
+│   │   │   ├── block_abi_test.go
+│   │   │   ├── block_device_linux.go
+│   │   │   ├── block_layout.go
+│   │   │   ├── block_layout_test.go
+│   │   │   ├── CIERRE-022.json
+│   │   │   ├── CONTRATO-MIGRACION.md
+│   │   │   ├── data_policy.go
+│   │   │   ├── empaquetar_original.py
+│   │   │   ├── env_guard.go
+│   │   │   ├── env_guard_test.go
+│   │   │   ├── EVIDENCIA-TESTS.json
+│   │   │   ├── firma_ota_v1.py
+│   │   │   ├── go.mod
+│   │   │   ├── main_linux.go
+│   │   │   ├── main_windows.go
+│   │   │   ├── package.go
+│   │   │   ├── package_test.go
+│   │   │   ├── README.md
+│   │   │   ├── REVISION-LAYOUT-022.json
+│   │   │   ├── transaction_linux.go
+│   │   │   ├── userdata_linux.go
+│   │   │   └── VerifyWholeZip.java
 │   │   ├── restauracion-021/
 │   │   │   ├── __pycache__/
 │   │   │   │   └── firma_ota_v1.cpython-312.pyc
@@ -578,6 +617,33 @@ mxqpro4k/
 │   │   │   ├── REVISION-INDEPENDIENTE.json
 │   │   │   ├── transaction_linux.go
 │   │   │   └── VerifyWholeZip.java
+│   │   ├── restauracion-022/
+│   │   │   ├── salida/
+│   │   │   │   ├── TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.2-manifest.json
+│   │   │   │   ├── TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.2-RECOVERY.zip
+│   │   │   │   └── TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.2-VERIFICACION.json
+│   │   │   ├── backup_verified.go
+│   │   │   ├── backup_verified_test.go
+│   │   │   ├── block_abi.go
+│   │   │   ├── block_abi_test.go
+│   │   │   ├── block_device_linux.go
+│   │   │   ├── block_layout.go
+│   │   │   ├── block_layout_test.go
+│   │   │   ├── empaquetar_original.py
+│   │   │   ├── env_guard.go
+│   │   │   ├── env_guard_test.go
+│   │   │   ├── env_read_linux.go
+│   │   │   ├── EVIDENCIA-TESTS.json
+│   │   │   ├── firma_ota_v1.py
+│   │   │   ├── go.mod
+│   │   │   ├── main_linux.go
+│   │   │   ├── main_windows.go
+│   │   │   ├── package.go
+│   │   │   ├── package_test.go
+│   │   │   ├── README.md
+│   │   │   ├── REVISION-LAYOUT-022.json
+│   │   │   ├── transaction_linux.go
+│   │   │   └── VerifyWholeZip.java
 │   │   ├── AUDITORIA-SERVICIOS.md
 │   │   ├── boot.py
 │   │   ├── compilar-componentes.py
@@ -588,6 +654,7 @@ mxqpro4k/
 │   │   ├── INCIDENTES-CONSTRUCCION.md
 │   │   ├── inventariar-originales.py
 │   │   ├── LEEME-USB-021.txt
+│   │   ├── LEEME-USB-022.txt
 │   │   ├── politica-paquetes.json
 │   │   ├── product_ea.py
 │   │   ├── README.md

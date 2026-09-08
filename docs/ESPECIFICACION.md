@@ -1,10 +1,21 @@
 # Especificación del producto y aceptación
 
+## Contrato vigente · corrección de identidad0.2.2
+
+**ADR-27** mantiene la plataforma0.2.0 y el contrato de migración respaldada deADR-26. Instalación/restauración022 sustituyen la guarda de nombre insuficiente de021 por identidad del descriptor y sysfs, padreMMC exacto, geometría, rangos sin solapamiento y revalidación antes de escribir. Los starts se capturan en cada ejecución y se fijan durante ella; no se inventan offsets originales. [Contrato/evidencia](evidencia/INSTALADOR-P291-022.md).
+
+REQ-01/02/10/11/14: ejecución021 abortada antes debackup/formato/flash; entrega022 verificadaPC, instalación física pendiente. REQ-04/05 y el resto del producto mantienen su aceptación física pendiente. La preparación09 ya autorizada y ejecutada no se repite;022 se selecciona en el recovery abierto. La APK09 fija021 y no se adapta implícitamente por cambiar deZIP.
+
+VAL-02/04 acreditan pruebas y copia022; VAL-05 acredita menú y ejecución021 con límite de identidad delrecovery. VAL-06/07 exigen respaldo físico, formato/RO, cinco relecturas, arranque y proveedor efectivos. No cerrar M2 por testsPC. No reescribir los recibos sellados de versiones anteriores.
+
+
+## Antecedente de la entrega 0.2.1
+
 ## Contrato vigente · plataforma0.2.0, instalador0.2.1 y acceso0.9
 
 REQ-01/11/14 mantienen el objetivo de Android interno por pendrive. **ADR-26** separa tres operaciones: preparar la entrada ENV/BCB, instalar con migración respaldada y restaurar cinco imágenes OEM. La plataforma0.2.0 no cambia; los ejecutables de instalación/restauración0.2.1 corrigen la consulta de tamaño ARM32. El usuario ya autorizó el método específico de entrada al responder «si ejecuta», después de conocer el riesgo de ENV/BCB. No se requiere reiterar esa confirmación; identidad, ZIP, USB y LAN siguen siendo comprobaciones técnicas obligatorias.
 
-La preparación0.9 ya autorizada conserva el contrato: perfil y ZIP exactos, respaldo de metadatos, sincronización/relectura, modificación acotada de64KiB ENV y2KiB BCB y neutralización de órdenes antiguas. No selecciona paquete ni reinicia automáticamente. La ejecución única terminó prepared y fue comprobada independientemente a23:41:53ART: metadatos/respaldos y relecturas ENV/BCB correctos. [Evidencia física](evidencia/PREPARACION-ENTRADA-P291-09.md). No se pidió reset ni se borró userdata ni se escribieron las imágenes Android; el usuario después confirmó el menú de recovery tras el ciclo físico indicado. Esa observación no fija la imagen/hash ejecutada ni la aceptación delZIP. No repetir la preparación.
+La preparación0.9 ya autorizada conserva el contrato: perfil y ZIP exactos, respaldo de metadatos, sincronización/relectura, modificación acotada de64KiB ENV y2KiB BCB y neutralización de órdenes antiguas. No selecciona paquete ni reinicia automáticamente. La ejecución única terminó prepared y fue comprobada independientemente a23:41:53ART: metadatos/respaldos y relecturas ENV/BCB correctos. [Evidencia física](evidencia/PREPARACION-ENTRADA-P291-09.md). No se pidió reset ni se borró userdata ni se escribieron las imágenes Android; el usuario después confirmó el menú de recovery tras el ciclo físico indicado. La foto posterior acredita ejecución de nuestro update-binary y aborto Status1 por «destino no eMMC particionada: system». No fija la imagen/hash de recovery ni acredita instalación. No repetir la preparación.
 
 El instalador0.2.1 exige data179:20 de3495952384B, sin montajes ni mappings, y seis respaldos crudos verificados en el USB antes de crear ext4. Reserva16KiB para footer; la preparación debe terminar con superblock exacto, contenido vacío comprobado RO y volumen nuevamente desmontado. Exige6603931648B libres; el mayor archivo cabe FAT32. ENV debe haber vuelto a `bootcmd=run storeboot`, con CRC y flujo originales, antes de cualquier formato. [Contrato exacto](../rom-simplificada/original-p291/instalacion-021/CONTRATO-MIGRACION.md).
 
@@ -24,7 +35,7 @@ El usuario autorizó construir desde las particiones originales ya respaldadas, 
 
 El proveedor WebView efectivo, las dos capas VP9 (una con alfa) y canvas, los controles, Ethernet/WiFi y el arranque interno siguen sujetos a VAL-07/08. Chrome 138 es el techo de Android 9; una versión nueva del navegador no demuestra mayor rendimiento.
 
-Versión documental6, actualizada tras confirmar el usuario el menú de recovery y recibir instrucciones de instalación0.2.1; todavía sin resultado delZIP. El2% describe el estado OEM anterior al ciclo físico. Recoge el pedido vigente del usuario. La evolución de su APK no bloquea preparar y probar la plataforma. El alcance no incluye investigar la actualización automática que afectó al WiFi del primer equipo.
+Versión documental6, actualizada tras confirmar el usuario el menú de recovery y recibir instrucciones de instalación0.2.1; elZIP ejecutó update-binary y abortó con Status1 por la guarda eMMC de system. El2% describe el estado OEM anterior al ciclo físico. Recoge el pedido vigente del usuario. La evolución de su APK no bloquea preparar y probar la plataforma. El alcance no incluye investigar la actualización automática que afectó al WiFi del primer equipo.
 
 ## Objetivo y alcance
 
@@ -39,7 +50,7 @@ Sustituir el Android del integrador por una base propia interna, con servicios n
 | ID | Requisito | Criterio de aceptación | Estado actual / componentes |
 | --- | --- | --- | --- |
 | REQ-13 | P291 sin Bluetooth, con red conservada | Tras arrancar la nueva ROM no se carga btmtksdio ni HAL/servicio Bluetooth; WiFi/Ethernet e inputs se prueban por separado | Plataforma0.2.0 verificada en PC; físico pendiente · C-ROM/C-TV |
-| REQ-01 | Android interno mediante pendrive | Instalar en P291, retirar USB y completar arranques normales con identificación TVBASE | ZIP construido/verificado; físico pendiente · C-ROM, C-ZIP, C-USB |
+| REQ-01 | Android interno mediante pendrive | Instalar en P291, retirar USB y completar arranques normales con identificación TVBASE | ZIP ejecutado enrecovery; instalador0.2.1 abortó en guarda eMMC de system, sin ROM instalada · C-ROM, C-ZIP, C-USB |
 | REQ-02 | Compatibilidad por placa | Registrar codecs, audio, red, almacenamiento, inputs y encendido con perfil real | Originales P291 respaldados, geometría/kernel/DTB preservados; ROM sin prueba física · C-ORIG/C-PERFIL |
 | REQ-03 | Android simplificado con APIs estándar | Inicio/ajustes, instalación APK y drivers funcionales sin servicios retirados | 51 APK retiradas,34 originales y5 agregadas; comprobado en imágenes · C-ROM/C-INICIO |
 | REQ-04 | Navegador y proveedor WebView mejorados | Verificar paquete/versión realmente usados por la APK, navegación y su actualización sin Play Store | Chrome138 y overlay integrados; proveedor físico pendiente · C-CHROME, C-WEB |
@@ -49,7 +60,7 @@ Sustituir el Android del integrador por una base propia interna, con servicios n
 | REQ-08 | Misma APK y evolución del producto | APK firmada funciona en nuestra ROM y Android TV; detecta capacidades y no requiere recompilar ROM por cada lógica de negocio | Propuesto; sin exigir APK terminada para avanzar · C-APP |
 | REQ-09 | Actualizaciones propias | APK/motor/sistema/contenido separados, firmas, compatibilidad y reporte | Gestor APK/motor integrado y desactivado; servidor y prueba física pendientes, OTA completa no implementada · C-GESTION/C-ZIP |
 | REQ-10 | Controles remotos | Recorrer inicio, ajustes y aplicación con flechas/OK/atrás; registrar mapas IR/USB/Bluetooth/CEC aplicables | Inicio construido; pruebas de control pendientes · C-INICIO, C-PERFIL |
-| REQ-11 | Recuperabilidad y diagnóstico | Respaldar y verificar antes de escribir; demostrar restauración desde una entrada disponible si Android falla | 12 particiones originales respaldadas; instalación0.2.1 prepara seis respaldos futuros. Entrada0.9 preparada/verificada y menú de recovery confirmado por el usuario; aceptación delZIP/restauración pendientes · C-ENTRY/C-REC/C-ZIP |
+| REQ-11 | Recuperabilidad y diagnóstico | Respaldar y verificar antes de escribir; demostrar restauración desde una entrada disponible si Android falla | 12 particiones originales respaldadas; instalación0.2.1 prepara seis respaldos futuros. Entrada0.9 preparada/verificada; recovery ejecutó update-binary0.2.1, que abortó. Restauración sin ensayo físico · C-ENTRY/C-REC/C-ZIP |
 | REQ-12 | Segundo WebView opcional | Automatización en segundo plano sin degradación inaceptable del video principal, tolerando cierre por memoria | Secundario y propuesto · C-APP |
 
 No se deducen FPS, bitrate, perfil VP9 ni resolución completa de la descripción «1280». La doble composición es referencia obligatoria; sus archivos se incorporarán cuando existan. La limpieza o un motor nuevo pueden cambiar el rendimiento en ambas direcciones: **mejorar rendimiento es una hipótesis que debe medirse**.
@@ -75,8 +86,8 @@ No se deducen FPS, bitrate, perfil VP9 ni resolución completa de la descripció
 | VAL-02 | ext4/metadatos y composición0.2.0; firma/CRC/payload de paquetes0.2.1 | Instalación y restauración0.2.1 verificadas en PC con recibos propios. No ejecución física. |
 | VAL-03 | Protocolo y contrato por versión de acceso | APK0.9 revisada e instalada por LAN, apertura solicitada pero APK oculta tras diálogo2% confirmado por captura; helpers de archivo/ABI probados en TV. Preparación ENV/BCB física completada; código0, fsync/relecturas y cierre comprobados independientemente. No acredita recovery. |
 | VAL-04 | Copia y relectura del USB con recibo de esta entrega | Completadas0.2.1/Acceso0.9 a23:06:04ART, cuatro SHA y código0 en `preparacion-usb/original-021-estado.json`. El reciboPC conserva la limitación histórica de expulsión/flush; USB ya identificado y utilizado enTV, con cierre0.9 posterior verificado por separado. |
-| VAL-05 | Recovery identificado, ENV normal y ZIP directo USB aceptado | Preparación autorizada («si ejecuta»), ejecutada y verificada. Ciclo físico y menú de recovery confirmados por el usuario. Pendientes identidad exacta del recovery, ENV normal y aceptación delZIP0.2.1 indicado. No repetir prepare ni OEM/Update al2%. |
-| VAL-06 | Seis respaldos previos, migración y cinco escrituras verificadas | Pendiente. Exigir `00-backup-verified.json`, resultado de formato/RO y `90-installed-verified.json` físicos, sin sustituirlos por pruebas PC. |
+| VAL-05 | Recovery identificado, ENV normal y ZIP directo USB aceptado | Preparación autorizada («si ejecuta»), ejecutada y verificada. Ciclo físico y menú de recovery confirmados por el usuario. Foto posterior: ZIP0.2.1 ejecutó update-binary, aborto Status1 por guarda eMMC de system. Identidad exacta/hash delrecovery y ENV normal no acreditados; no confundir ejecución con instalación. No repetir prepare ni OEM/Update al2%. |
+| VAL-06 | Seis respaldos previos, migración y cinco escrituras verificadas | Instalador0.2.1 abortado con Status1; alcance del punto de fallo en revisión. Exigir `00-backup-verified.json`, resultado de formato/RO y `90-installed-verified.json` físicos, sin sustituirlos por pruebas PC. |
 | VAL-07 | Primer arranque sin USB, identificación, hardware y proveedor WebView efectivo | Pendiente |
 | VAL-08 | Suite APK/web/video/local/controles comparada con referencia | Pendiente |
 | VAL-09 | Restauración ensayada, actualización y fallo controlado recuperable | Pendiente |

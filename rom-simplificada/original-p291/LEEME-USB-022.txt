@@ -1,0 +1,62 @@
+TV BASE P291 - ENTREGA 0.2.2
+
+PARA EL TV QUE YA ESTA ENCENDIDO EN RECOVERY
+
+El ZIP anterior 0.2.1 aborto al identificar system, antes del respaldo,
+formato o grabacion de las imagenes Android. Esta version corrige esa
+identificacion en el instalador y el restaurador. Conserva las mismas
+cinco imagenes Android y los drivers originales del primer P291.
+
+1. Expulsa el Kingston de forma segura desde Windows y conectalo al TV,
+   manteniendo el TV encendido en el menu de recovery.
+2. Si todavia ves el resultado del error, volve al menu con el control.
+3. Selecciona Apply update from EXT y luego Update from udisk.
+4. Elegi exactamente:
+
+   TVBASE-P291-A9-0.2.2-RECOVERY.zip
+
+No elijas ORIGINAL-RESTORE. Es el paquete reservado para restauracion.
+No repitas la preparacion de AccesoUSB0.9: esa etapa ya termino.
+No hagas wipe, factory reset, ni Update desde el Android viejo.
+
+QUE HACE LA INSTALACION
+
+Primero comprueba placa, particiones, USB, imagenes y estado de arranque.
+Despues respalda seis particiones en el Kingston: system, vendor,
+product, odm, boot y datos. Son aproximadamente 6,1 GB de copia con
+relecturas; puede tardar y muestra avances.
+
+Solo despues de verificar y sincronizar ese respaldo, borra los datos
+internos y prepara Android limpio. Esto elimina apps, cuentas y datos
+del TV. Finalmente escribe cinco imagenes, deja boot para el final
+y comprueba cada escritura.
+
+Conserva alimentacion y USB mientras trabaja. No hay reinicio automatico.
+Si aparece un error, guarda el texto exacto y permanece en recovery.
+No repitas, borres ni elijas restaurar por tu cuenta. Si la grabacion ya
+empezo, conservar el respaldo y recovery es especialmente importante.
+
+Al terminar, comunica el mensaje final antes de elegir reiniciar.
+El primer arranque y la prueba sin pendrive todavia deben comprobarse.
+
+QUE CONTIENE ANDROID
+
+Base Android9 derivada de los originales del primer P291, Chrome y
+WebView138, inicio y ajustes propios; sin Play ni precargas OEM retiradas.
+Conserva kernel, DTB y drivers originales. No garantiza reparar WiFi.
+Bluetooth esta excluido. El gestor de actualizaciones propias queda
+desactivado hasta configurar servidor y clave. La app multimedia y el
+proveedor WebView efectivo deben validarse en el TV despues de instalar.
+
+RESPALDOS Y LIMITES
+
+No borres ninguna carpeta TVBASE-respaldo-* ni TVBASE-entrada09-*.
+El ZIP ORIGINAL-RESTORE-0.2.2 devuelve cinco particiones originales;
+no recupera los datos borrados, ni ofrece restauracion automatica.
+Reentrada a recovery desde Android nuevo y restauracion fisica todavia
+no demostradas. Un respaldo disponible no garantiza recuperar un equipo
+que deje de arrancar.
+
+La APK AccesoUSB0.9 queda conservada como antecedente. Verifica el ZIP021,
+por lo que no se usa para preparar esta entrega022. El menu de recovery
+ya disponible es el punto de entrada para este intento.

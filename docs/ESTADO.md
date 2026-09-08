@@ -1,32 +1,27 @@
 # Estado operativo
 
-## Vigente · menú de recovery confirmado por el usuario; instalación indicada
+## Vigente · corrección0.2.2 entregada, TV en recovery
 
-**El usuario confirmó «Apareció un menú de recovery» tras el ciclo de alimentación indicado.** Se indicó seleccionar «Apply update from EXT» → «Update from udisk» → `TVBASE-P291-A9-0.2.1-RECOVERY.zip` y confirmar. Conservar alimentación y USB, sin wipe/factory reset separado ni restaurador; esperar el mensaje final o error antes de reiniciar. La aceptación del ZIP y la instalación todavía no tienen resultado. La identidad exacta/hash del recovery ejecutado no se deduce del reporte del menú.
-
-La entrada había quedado preparada y verificada a23:41:53ART. El usuario autorizó expresamente el método con «si ejecuta», tras conocer el riesgo de ENV/BCB. Se comprobó el Kingston en el primer P291 y se ejecutó una sola preparación por la conexión LAN existente. [Resultado físico](evidencia/PREPARACION-ENTRADA-P291-09.md) · [Recibo saneado independiente](../rom-simplificada/original-p291/entrada-apk/EJECUCION-TV-09.json).
+**Corrección 0.2.2 copiada y releída en Kingston; TV en recovery. Instalación física pendiente.** El usuario confirmó ambos estados. No se solicitó reinicio ni otra preparaciónENV. El LED roto no se usa para diagnóstico.
 
 | Componente | Resultado y límite |
 | --- | --- |
-| C-ENTRY / AccesoUSB0.9 | Preparación terminada, código remoto0. ENV64KiB y BCB2KiB escritos/releídos, metadatos respaldados y órdenes antiguas preservadas. Revisión independiente: informe4383B,21 archivos y21 sellosUSB, siete copias internas, ENV/misc actuales y ausencia de INCOMPLETO/órdenes activas antiguas. |
-| C-USB | Cuatro entregables copiados/releídos enPC y luego USB identificado enTV con la ROM exacta. Los respaldos/recibos de entrada se sincronizaron y comprobaron en el TV. La limitación de expulsión/flushWindows del reciboPC permanece histórica, sin reescribirlo. |
-| C-ZIP / instalador0.2.1 | ZIP573688933B, SHA `dcb152c77e55cb067d6e88a8144990a3edb5d06568ea8cdfdc414a0fa21aac58`. Firma Python/OpenJDK, CRC/payloadSHA y validadorWindows correctos. Cinco imágenes0.2.0 inmutables; no ejecutado en recovery. |
-| C-REC / restaurador0.2.1 | ZIP913294443B, SHA `42580206f254fab0a2280cd263a48882677e7ddf5cfd609382a840c8d0fb103a`. Repone cinco imágenesOEM, conserva userdata y no restaura data.img. Verificado enPC, sin ensayo físico. |
-| C-TV / M1–M2 | Android original seguía al2% y accesible porLAN durante la preparación. El helper no pidió reset ni borró userdata/imágenes. Después del ciclo físico el usuario confirmó el menú de recovery; instalación y arranque deTVBASE pendientes. |
+| C-ENTRY / M1 | PreparaciónENV/BCB09 ejecutada una vez y verificada; menú recovery y ejecución de update-binary021 observados. No se identificó mediante hash el recovery ejecutado. |
+| C-ZIP | 021 abortó antes de respaldo/formato/flash por nombre sysfs `system`. 022 corrige identidad MMC con geometría exacta y revalidación; firmado y verificado enPC. |
+| C-USB | DosZIP022 y guía copiados/releídos, código0. DosZIP021 y guía archivados antes de retiro; informes/respaldos/APK09 iguales. Expulsión segura indicada. |
+| C-REC | Restaurador022 corrige la misma guarda, devuelve cincoOEM conservando datos; sin restauración física probada. |
+| C-ROM / M2 | Imágenes0.2.0 inmutables. ROM todavía no instalada; no existe respaldo adicional de userdata. |
 
-El informe final tiene SHA `2b2715266a782072487c750c976f0f96e35a74d88c0e3664be501e37194ced7c`. El estado prepared está respaldado por relecturas independientes; no es solamente la salida de lanzamiento. La APK0.9 estaba instalada pero oculta por el diálogo2%, por lo que se utilizó el [clienteLAN revisado](../rom-simplificada/original-p291/entrada-apk/OPERACION-LAN-09.md), sin indicar una pulsación invisible. Las53 pruebasPC y las pruebas físicas tienen [recibos separados](../rom-simplificada/original-p291/entrada-apk/PRUEBAS-LAN09.json).
+[Error021 y alcance](evidencia/ERROR-INSTALADOR-P291-021.md) · [Corrección, hashes y entrega022](evidencia/INSTALADOR-P291-022.md) · [Fuente Amlogic](evidencia/PARTICIONES-AMLOGIC-P291-022.md).
 
-**No repetir prepare ni Update ni otro ciclo.** La autorización ya se recibió y la preparación terminó. El ciclo físico posterior produjo el menú de recovery según el usuario; ahora falta el resultado de seleccionar el ZIP0.2.1 indicado. No confundir el menú visible con firma aceptada, instalador ejecutado o ROM instalada. El registro del cierre previo no acredita la terminación del hiloOEM.
+Siguiente paso: conectar Kingston al TV encendido en recovery; Apply update from EXT → Update from udisk → TVBASE-P291-A9-0.2.2-RECOVERY.zip. No elegir ORIGINAL-RESTORE, repetir APK09/prepare/Update, ni hacer wipe separado. La APK09 conserva el hash de021 y no se usa para022. Esperar resultado final o conservar el error exacto antes de decidir reinicio.
 
-La escritura de ENV conserva el riesgo explicado de impedir el arranque; los respaldos no prueban una vía física de rescate. El bootcmd transitorio intenta restaurar `run storeboot` y guardar ENV antes de cargar recovery. Instalación y restauración comprueban que el ENV ya sea normal antes de escribir. Un fallo de esa guarda debe conservarse, sin saltarlo ni repetir métodos anteriores.
+Instalador022 comprueba destinos, USB y ENV normal, respalda seis particiones con sincronización y tresSHA, prepara userdata limpia y escribe cinco imágenes con boot al final. Requiere6603931648B libres. La entrega deja29411508224B. Las validacionesPC no acreditan ejecución física; VAL-06/07 siguen pendientes.
 
-El instalador0.2.1 exige seis respaldos nuevos, sincronizados y releídos, incluidos3.495.952.384B de userdata, antes de borrar datos. Requiere6.603.931.648B libres enUSB. Luego crea ext4 limpio, valida contenido vacío mediante montajeRO, desmonta y escribe las cinco imágenes, con boot al final. Si falla copia, SHA, sync o ENV, no formatea; si falla formato/verificación, no inicia el flasheo. **El respaldo futuro de userdata todavía no existe.** Los12 respaldos originales enPC cubren2538MiB, sin userdata/cache/todaeMMC.
+El estado previo de ENV/BCB tiene [recibo propio inmutable](../rom-simplificada/original-p291/entrada-apk/EJECUCION-TV-09.json). La comprobación del ENV normal dentro del instalador sigue obligatoria: no saltarla si falla. Doce respaldosOEM/2538MiB ya verificados enPC no incluyen userdata/cache/todaeMMC. No afirmar cero escrituras internas: preparación y recovery escribieron o pueden escribir metadatos, aunque el intento021 no llegó a migrar/grabarAndroid.
 
-El restaurador0.2.1 devuelve cinco imágenesOEM y conserva los datos presentes; no restaura automáticamente data.img ni ofrece rollback. La ROM nueva retira su y ADB TCP inicial; el gestor no tiene REBOOT/RECOVERY. La siguiente entrada desde Android nuevo y cualquier restauración completa siguen pendientes de demostración.
+Arranque interno sinUSB, proveedorWebView, WiFi/Ethernet, controles, dosVP9/alfa/canvas, actualización propia y reentrada/restauración desdeAndroid nuevo permanecen pendientes. Gestor desactivado sinURL/clave del servidor. Plataforma Android9 conserva SELinuxpermisivo/framework original y Chrome138; no es un AOSP limpio ni una certificación de ausencia de tráfico ajeno.
 
-Los probes anteriores comprobaron el formateador original sobre un archivo regular temporal y la consulta de tamaño ARM32 en lectura. No acreditan formato/montaje de particiones. La plataforma mantiene Chrome138, kernel/DTB y controladores originales; proveedorWebView, WiFi/Ethernet, mandos y dosVP9/alfa/canvas siguen pendientes de ensayo enAndroid nuevo.
-
-**VAL-03:** preparación0.9 observada enTV con cierre verificado. **VAL-04:** entregaPC y uso posterior delUSB comprobados por recibos distintos. **VAL-05/M1:** menú de recovery observado por el usuario; identidad exacta, ENV normal y aceptación delZIP aún pendientes. **VAL-06/07/M2:** respaldo de datos, migración, cinco escrituras y arranque interno sinUSB pendientes. Copiar archivos o preparar ENV/BCB no cierra instalación.
 
 ## Historial conservado: los estados siguientes son anteriores
 

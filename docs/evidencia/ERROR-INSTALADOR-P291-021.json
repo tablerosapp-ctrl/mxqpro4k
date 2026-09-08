@@ -1,0 +1,19 @@
+{
+  "recorded_at": "2026-09-07T23:57:54.3781040-03:00",
+  "state": "installer_aborted_before_migration",
+  "version": "0.2.1",
+  "message": "destino no eMMC particionada: system",
+  "recovery_status": 1,
+  "photo": {
+    "private_path": "privado/error-instalador021/recovery-status1.png",
+    "bytes": 161252,
+    "sha256": "716c440af5013f4bac8093f3c655e12f36fe5a47621360602523eb8a352d0316",
+    "copy_verified": true
+  },
+  "user_confirmed_recovery_open": true,
+  "user_confirmed_usb_on_pc": true,
+  "backup_stage_reached": false,
+  "userdata_format_reached": false,
+  "image_flash_reached": false,
+  "scope": "Alcance inferido del mensaje exacto y del orden de llamadas de update-binary021. No excluye registros/metadatos escritos por recovery ni las escrituras ENV/BCB anteriores."
+}
