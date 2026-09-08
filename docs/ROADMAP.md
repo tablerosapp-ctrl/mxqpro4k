@@ -2,7 +2,7 @@
 
 ## Reconocimiento combinado · prioridad actual
 
-1. P271: captura0.1 verificada y plan privado preparado. MX9: probar reconocedor0.2 con ficha inicial persistida antes del inventario; hardware exacto pendiente. [Resultado](../diagnostico/reconocimiento-20260908-p271-mx9/HALLAZGOS.md).
+1. P271 y dos variantes RK3229: capturas verificadas. Completar el Rockchip que no pudo guardar con0.3; selector propio o Descargas+traslado manual. [Variantes](../diagnostico/reconocimiento-20260908-rk3229-usb/HALLAZGOS.md). Resolver datos Android/RAM anómalos y perfiles más específicos que el DT compartido antes de preparar planes RK.
 2. Plan de lectura derivado de esa captura; revisión de entrada/firma del recovery y ejecución del extractor0.1 en el equipo correspondiente. [Contrato](../diagnostico/extractor-recovery-0.1/README.md) · [P271](evidencia/RECOVERY-P271-ALCANCE.md).
 3. Verificación privada de imágenes/omisiones y ficha por perfil; repetir con los otros equipos conservando su identidad. La APK y el extractor son complementarios, y no hay arranque ni firma universales acreditados.
 4. Calificar capa común, Home, WebView/video y recursos. Prioridad expresa: [revisión de telefonía, servicios heredados y malware](REVISION-COMPONENTES-HEREDADOS.md). Mantener auditoría de consumo/tráfico y dependencias antes de retirar paquetes.

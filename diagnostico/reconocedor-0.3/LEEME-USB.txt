@@ -1,0 +1,33 @@
+RECONOCIMIENTO TV BASE 0.3 — EQUIPO ROCKCHIP QUE NO DEJÓ GUARDAR
+
+Los informes de los otros equipos ya están conservados en la PC. No repetirlos.
+
+1. Conectá este pendrive al TV que mostró los errores.
+2. Instalá TVBASE-RECONOCIMIENTO/Reconocimiento-TVBase-0.3.apk.
+   Aceptá actualizar; no desinstales la aplicación ni borres sus datos.
+3. Abrí Reconocimiento TV Base y comprobá que diga 0.3.
+4. Pulsá Elegir pendrive. Ahora el selector es nuestro y busca rutas USB
+   anidadas; no necesita que Android tenga su selector de carpetas.
+5. Si encuentra el pendrive preparado, elegilo y pulsá Completar inventario
+   desde la ficha inicial. La ficha de 0.2 se conserva y no se vuelve a leer.
+6. Esperá INVENTARIO GUARDADO Y RELEÍDO, expulsá desde Android y devolvé USB.
+
+SI ANDROID SIGUE IMPIDIENDO EL ACCESO AL USB:
+
+7. Pulsá Guardar en Descargas para copiar al USB. Con la ficha inicial disponible
+   intentará completar el inventario y guardarlo en Descargas/TVBASE-PARA-COPIAR.
+8. Esperá GUARDADO LOCAL PARA COPIAR AL USB. Fijate si dice Inventario o Ficha inicial.
+9. Abrí la aplicación Archivos/FileBrowser del TV y copiá la carpeta completa
+   TVBASE-PARA-COPIAR desde Descargas a la raíz del pendrive. Incluí ZIP y .local.json.
+10. Expulsá el USB desde Android y devolvelo a la PC para verificar la copia real.
+
+No se anuncia copia USB en el modo Descargas. Si el propio Android no permite
+guardar allí, se mostrará el error y la ficha original seguirá conservada.
+Si una consulta sigue pendiente, permite copiar lo ya terminado y no repite lecturas.
+La búsqueda acotada no garantiza que una llamada de copia/sincronización pueda
+interrumpirse. Ante error, conservá su texto; no repitas capturas por rutina.
+
+Son normales dos ZIP por intento: ficha inicial e inventario enlazado. Las carcasas
+MXQ Pro 4K 5G no diferencian placas; la PC compara los datos del hardware.
+No ejecutar aquí Update, AccesoUSB09, ROM P291 ni restauradores.
+Este reconocimiento no instala ROM, no activa root/ADB/red y no borra datos.

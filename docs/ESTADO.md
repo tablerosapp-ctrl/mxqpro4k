@@ -1,5 +1,16 @@
 # Estado operativo
 
+## Vigente · RK3229-A/B capturados; corrección0.3 entregada
+
+[Cinco ZIP verificados](../diagnostico/reconocimiento-20260908-rk3229-usb/HALLAZGOS.md): P271 histórico más dos fichas iniciales y sus inventarios RK3229. Diferencias de firmware, WiFi y particiones; igual DT no autoriza intercambiar ROM. API25/fingerprint7.1.2 contradicen etiquetas11.1/13.0; RAM anómala en una variante. Los cuatro nuevos ZIP suman84.222B, sin imágenes de bloques por diseño. No repetir estas capturas.
+
+El equipo que no guardó es otro Rockchip según el usuario, con carcasa igual y sin DT exacto. Fotos0.2 acreditan selector Android ausente y ficha inicial local. [Reconocedor0.3](../diagnostico/reconocedor-0.3/README.md) y guía copiados/releídos en Kingston, [recibo](../preparacion-usb/reconocimiento-03-estado.json); fuentes/recibos sellados. Selector propio, búsqueda acotada y alternativa explícita Descargas para copiar manualmente con Archivos. Una copia local nunca se declara USB. [Pruebas y entrega](evidencia/RECONOCEDOR-USB-03.md). Ejecución Android0.3 pendiente; no garantía de acceso siAndroidloimpide.
+
+Siguiente: actualizar0.3 soloelTVfallido, conservar datos y completar su ficha; si usaDescargas copiarTVBASE-PARA-COPIAR alUSB. Próximarecepción revisar esa carpeta eINFORMES. No preparar dos planes RK conigualDT; no se añadieronplanes. Entrada/firma/ejecuciónrecoveryRK/P271 y copia profunda siguenpendientes. SinTVcontact, formato, borrados o nuevasROM. Home/multimedia/limpieza/auditoría/servidor permanecen fuera deestaentrega.
+
+## Antecedente · corrección0.2
+
+
 ## Vigente · captura P271 verificada; reconocedor0.2 preparado para MX9
 
 El USB volvió con un informe P271 íntegro y sin informe MX9 ni extracción desde recovery. [Hallazgos](../diagnostico/reconocimiento-20260908-p271-mx9/HALLAZGOS.md). La captura P271 agrega mapa sysfs con inicios y 157.174.723 bytes de archivos accesibles. No equivale a un respaldo de particiones. P271 difiere de P291 en memoria y WiFi; no reutilizar su ROM.

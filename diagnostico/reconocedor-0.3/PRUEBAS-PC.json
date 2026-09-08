@@ -1,0 +1,47 @@
+{
+  "schema": "tvbase-recognition-pc-tests-3",
+  "state": "passed",
+  "created_utc": "2026-09-08T20:43:54.428677+00:00",
+  "groups": [
+    {
+      "receipt": "diagnostico/reconocedor-0.3/privado/test-local-export-nrp1ukr8/result.json",
+      "sha256": "04361ea105cb7286731fdff9ae15ee9e56932f7bf6994da213cc57b0aa818975",
+      "passed_cases_or_groups": 13,
+      "skipped": 1
+    },
+    {
+      "receipt": "diagnostico/reconocedor-0.3/privado/test-usb-locator-5331h4cl/result.json",
+      "sha256": "7a809847180dd177bde36ea31d80029e2ceacb2def15c4caaaacef0cf5983129",
+      "passed_cases_or_groups": 11,
+      "skipped": 0
+    }
+  ],
+  "compilation_sha256": "478d8fda7d0a023e382487001ca4858179dd6042025c9807b06de4f08e7977af",
+  "apk_sha256": "41e40007de8f14b37119b7335a4541a4c64d5a325e225a42d706195472047869",
+  "source_sha256": {
+    "diagnostico/reconocedor-0.3/src/AndroidManifest.xml": "56e19f6815b9aa3df098157b476b3f0af9856cefcdd86382e62ee13740a1317f",
+    "diagnostico/reconocedor-0.3/src/CaptureSequence.java": "938247611028abec45a8273a46008916b1ebd1a422a6df978300952175239a2d",
+    "diagnostico/reconocedor-0.3/src/HardwareCollector.java": "e15d85fbbd3a68ce52cf3d2845c006d7f66bd88d02653000d24f4cdb3740cb4d",
+    "diagnostico/reconocedor-0.3/src/LocalExport.java": "8d2f4932b1edd3371871404ac7476e848db2110cae075073de737a99e6d5fe74",
+    "diagnostico/reconocedor-0.3/src/MainActivity.java": "4a30d8fc2c80ec7d9743a83dd08fd79cc76c1b9d31b8ec35a6a390e7faef3331",
+    "diagnostico/reconocedor-0.3/src/ReportArchive.java": "b0aba65236622ebb65fed75b5fd976045c4b9ec6264bd2e3aaa15078d4f5253f",
+    "diagnostico/reconocedor-0.3/src/UsbLocator.java": "ccf47ea99f7d03a9e36e4ae612b94857974be9bf2494dbc5677d9c71cfa17eaf",
+    "diagnostico/reconocedor-0.3/src/UsbStore.java": "4ef9927f727b50d3d3fe38794557e79b1f136ae379da87488fdcbf6b124ee5f4"
+  },
+  "test_source_sha256": {
+    "diagnostico/reconocedor-0.3/tests/LocalExportHarness.java": "516df2a1c99eff23c0a8f75025242a4f6d3c75494e9137db1d47bb3e69064fb2",
+    "diagnostico/reconocedor-0.3/tests/test_local_export.py": "640649d7e8c98f53e2d6e6a3b5152589057d2ef0017de159842fe44a0fef4b97",
+    "diagnostico/reconocedor-0.3/tests/test_usb_locator.py": "d9ccddbb2777f2024213a0588f06d956765bcfb84067b4d5c95ba2b450f654a2",
+    "diagnostico/reconocedor-0.3/tests/UsbLocatorHarness.java": "423741b90f37a0cacaca4ef81aa9c3da12c56e21159d2db4f836ac4698e42868"
+  },
+  "legacy_hardware_collector_text_unchanged": true,
+  "android_ui_tested": false,
+  "third_rockchip_export_resolved": false,
+  "physical_usb_delivery_separate_receipt": true,
+  "limits": [
+    "Host fixtures do not establish Android USB discovery, permissions, selector UI or manual-copy completion.",
+    "One real symlink case skipped due to Windows permission, not marked passed.",
+    "Discovery timeout is not a deadline for all filesystem writes/syncs.",
+    "Local receipt never accredits USB copy; original 0.1/0.2 sources and receipts preserved."
+  ]
+}

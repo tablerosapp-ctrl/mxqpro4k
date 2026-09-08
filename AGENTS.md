@@ -1,5 +1,17 @@
 # Continuidad de TV Base
 
+## Vigente · dos variantes RK3229 recibidas y reconocedor0.3 entregado
+
+- [Hallazgos RK](diagnostico/reconocimiento-20260908-rk3229-usb/HALLAZGOS.md):5ZIP69545179B verificados/importadosPC nuevos,5sidecars+2fotos preservados. IncluyeP271histórico;4ZIPnuevos84222B son2basic+2inventory conparentcorrecto, no4TV. DosconfiguracionesRK3229-A(QNW00M/ssv6158) yB(008GB0/ssv6x5x), eMMCambas7818182656B, p13/p14distintas. API25/fingerprint7.1.2 frenteetiquetas11.1/13.0; no afirmarAndroid11/13. B RAMdeclara512GiBtambiénproc: RAMfísicaindeterminada. NoROM/respaldo departiciones/video/WiFi físico acreditados.
+- Usuario confirma equipoque falló OTRO Rockchip, noP291/P271; carcasascompartenMXQPro4K5G. SinDTexacto niZIPdeeseaparato. Fotos0.2 muestranActivityNotFoundExceptionACTION_OPEN_DOCUMENT_TREE yautomaticnull confichainiciallocal; noatribuirrutapermisoexactos desdeotrosRK. AmbosRKcapturadosDTrockchip,rk3229: dosplanesmatchingabortaríanextractor. No agregarRKplanes niROMporsemejanza; entrada/firma/maparecovery pendientes.
+- APK0.3 [contrato](diagnostico/reconocedor-0.3/README.md), [entrega](docs/evidencia/RECONOCEDOR-USB-03.md):123283B SHA41e40007de8f14b37119b7335a4541a4c64d5a325e225a42d706195472047869,mismopaquete/firma,API21/target28. Selectorpropio,rutasUSBanidadas,mounts/env,marcadorexacto+identidadfs,revalidación antescopia. Descubrimiento8s con1workerUSBúnico,sinsustitución siquedaactivo; separadolectorhardware0.2reutilizado. No red/root/ADB/reinicio/flash. Futurascorreccionesnueva versión, noeditarfuentes/COMPILACIONselladas.
+- Alternativa explícita GuardarenDescargasparacopiaralUSB: LocalExportenDownloads/TVBASE-PARA-COPIAR, copia SHA/fsynclocal yrecibo.local.json conusb_copy_verified=false/dirsyncfalse. Usuario deberá copiarcarpetaenteraalUSB. No claimUSBnisalto depermisos. Reanuda baseline0.2/0.3sinDTnuevo. Never interpretarrecibolocalcomoexportAndroidUSB. PróximadevoluciónrevisarINFORMESyraízTVBASE-PARA-COPIAR. Almacenamiento/copia/sync no tienendeadlineabsoluto.
+- Entrega03CheckOnly+UNA Prepareexit0, [recibo](preparacion-usb/reconocimiento-03-estado.json).2nuevosAPK+LEEME0.3,125331B;216anterioresSHA+8grandesmetadatosidénticos,23271063552B libres. No borrados/formato/repair/planesnuevos/TVcontacto. No repetirpreparador. Flusharchivos/relectura sí, flushvolumen/expulsiónfísica noacreditados. Mantenerinformes/respaldos/versionsanteriores.
+- Siguiente sóloTVfallido: actualizarAPK0.3sin desinstalar/borrardatos; elegirUSBselectorpropio+Completar inventario; siAndroidniegaacceso usarDescargas ycopiarcarpetaconArchivos. Otrascapturasnonecesitanrepetición. PruebasPC11gruposdiscovery+13localpassed/1symlinkskip, revisiónintegración; Android0.3pending. Grafo/docsGitactualizados, soloespejosaneado. Home/ROM/serviciosmalware/WebViewvideo/servidor siguenpendientes.
+
+## Antecedente · entrega0.2
+
+
 ## Vigente · P271 capturado y reconocedor0.2 entregado para MX9
 
 - [P271/MX9](diagnostico/reconocimiento-20260908-p271-mx9/HALLAZGOS.md): ZIP P27169.460.957B SHA3824c4355ec7f75d25dd09a5ca406c90cc017ceab3d45b14732c94f62a7e073f,2464entradas/2463archivosmanifest verificados y originales/copias/recibo/foto privados. Exportación Android0.1 real, fileSynctrue/dirSyncfalse; adquisiciónPC íntegra. No MX9ZIP ni captura deextractor.

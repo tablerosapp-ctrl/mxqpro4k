@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "title": "TV Base",
-  "snapshot": "2026-09-08T20:01:57.938270+00:00",
-  "state": "P291 instalado. Captura P271 verificada y plan derivado; reconocedor0.2 entregado para MX9 con ficha inicial persistida. RecoveryP271 y pruebaMX9 pendientes.",
+  "snapshot": "2026-09-08T20:43:54.435161+00:00",
+  "state": "P291 instalado. P271 y dos variantes RK3229 capturados; reconocimiento0.3 entregado para Rockchip sin selector. RAM/Android anómalos y recovery por variante pendientes.",
   "installed": true,
   "original_tv_backup_confirmed": true,
   "source_of_truth": {
@@ -37,15 +37,15 @@
     "encrypted_backup_receipt": "docs/evidencia/RESPALDO-GITHUB-PUBLICADO.json",
     "next_stage_plan": "docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md",
     "repeated_boot_user_report": "docs/evidencia/REINICIOS-P291-SIN-USB.md",
-    "recognition": "diagnostico/reconocedor-0.2/README.md",
-    "recognition_delivery": "preparacion-usb/reconocimiento-02-estado.json",
-    "recognition_evidence": "docs/evidencia/RECONOCEDOR-USB-02.md",
+    "recognition": "diagnostico/reconocedor-0.3/README.md",
+    "recognition_delivery": "preparacion-usb/reconocimiento-03-estado.json",
+    "recognition_evidence": "docs/evidencia/RECONOCEDOR-USB-03.md",
     "extractor": "diagnostico/extractor-recovery-0.1/README.md",
     "extractor_delivery": "preparacion-usb/extractor-01-estado.json",
     "extractor_build": "diagnostico/extractor-recovery-0.1/COMPILACION.json",
     "extractor_evidence": "docs/evidencia/EXTRACTOR-RECOVERY-01.md",
     "inherited_services": "docs/REVISION-COMPONENTES-HEREDADOS.md",
-    "latest_recognition_capture": "diagnostico/reconocimiento-20260908-p271-mx9/HALLAZGOS.md"
+    "latest_recognition_capture": "diagnostico/reconocimiento-20260908-rk3229-usb/HALLAZGOS.md"
   },
   "components": [
     {
@@ -335,7 +335,9 @@
         "preparacion-usb/reconocimiento-01-estado.json",
         "docs/evidencia/RECONOCEDOR-USB-01.md",
         "preparacion-usb/preparar-reconocimiento-02.ps1",
-        "preparacion-usb/reconocimiento-02-estado.json"
+        "preparacion-usb/reconocimiento-02-estado.json",
+        "preparacion-usb/preparar-reconocimiento-03.ps1",
+        "preparacion-usb/reconocimiento-03-estado.json"
       ],
       "x": 3,
       "y": 1,
@@ -520,9 +522,9 @@
     },
     {
       "id": "C-RECON",
-      "label": "Reconocimiento0.2",
+      "label": "Reconocimiento0.3",
       "state": "construido",
-      "description": "P2710.1 recibido y verificado; correcciónMX9 con ficha inicial exportada, inventario acotado y un solo lector real.0.2 USBverificado, pruebaAndroidpendiente.",
+      "description": "DosvariantesRK3229capturadas;0.3entregado conselectorpropio yfallbacklocal. Reutiliza ficha0.2, pendiente prueba delRockchipque falló.",
       "files": [
         "diagnostico/reconocedor-0.1/README.md",
         "docs/evidencia/RECONOCEDOR-USB-01.md",
@@ -559,7 +561,26 @@
         "diagnostico/reconocedor-0.2/tests/test_hardware_collector.py",
         "docs/evidencia/RECONOCEDOR-USB-02.md",
         "diagnostico/reconocimiento-20260908-p271-mx9/HALLAZGOS.md",
-        "diagnostico/reconocedor-0.2/PRUEBAS-PC.json"
+        "diagnostico/reconocedor-0.2/PRUEBAS-PC.json",
+        "diagnostico/reconocedor-0.3/COMPILACION.json",
+        "diagnostico/reconocedor-0.3/compilar.py",
+        "diagnostico/reconocedor-0.3/LEEME-USB.txt",
+        "diagnostico/reconocedor-0.3/PRUEBAS-PC.json",
+        "diagnostico/reconocedor-0.3/README.md",
+        "diagnostico/reconocedor-0.3/src/AndroidManifest.xml",
+        "diagnostico/reconocedor-0.3/src/CaptureSequence.java",
+        "diagnostico/reconocedor-0.3/src/HardwareCollector.java",
+        "diagnostico/reconocedor-0.3/src/LocalExport.java",
+        "diagnostico/reconocedor-0.3/src/MainActivity.java",
+        "diagnostico/reconocedor-0.3/src/ReportArchive.java",
+        "diagnostico/reconocedor-0.3/src/UsbLocator.java",
+        "diagnostico/reconocedor-0.3/src/UsbStore.java",
+        "diagnostico/reconocedor-0.3/tests/LocalExportHarness.java",
+        "diagnostico/reconocedor-0.3/tests/test_local_export.py",
+        "diagnostico/reconocedor-0.3/tests/test_usb_locator.py",
+        "diagnostico/reconocedor-0.3/tests/UsbLocatorHarness.java",
+        "docs/evidencia/RECONOCEDOR-USB-03.md",
+        "diagnostico/reconocimiento-20260908-rk3229-usb/HALLAZGOS.md"
       ],
       "x": 0,
       "y": 3,
@@ -1554,7 +1575,14 @@
       "path": "diagnostico/reconocedor-0.2/privado/build-20260908-195935-725420/Reconocimiento-TVBase-0.2.apk",
       "bytes": 90515,
       "sha256": "336bfab87d9d4d2983cad8f920545988cb2bbea44b6ff31edde066b5b0604b51",
-      "scope": "USBcopied_read_verified_MX9physicaltest_pending"
+      "scope": "Two RK3229 capture pairs physically received; another Rockchip has no picker or automatic USB destination"
+    },
+    {
+      "name": "Reconocimiento-TVBase-0.3.apk",
+      "path": "diagnostico/reconocedor-0.3/privado/build-20260908-204031-349284/Reconocimiento-TVBase-0.3.apk",
+      "bytes": 123283,
+      "sha256": "41e40007de8f14b37119b7335a4541a4c64d5a325e225a42d706195472047869",
+      "scope": "USBcopied_read_verified_Android03physicaltest_pending"
     }
   ],
   "protected_paths": [

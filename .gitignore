@@ -195,3 +195,11 @@ CLAVE-PRIVADA-RESPALDO-*.txt
 !/diagnostico/reconocedor-0.2/COMPILACION.json
 !/diagnostico/reconocedor-0.2/PRUEBAS-PC.json
 !/diagnostico/reconocedor-0.2/LEEME-USB.txt
+
+# Reconocimiento0.3: código/recibos públicos, capturas/compilaciones privadas.
+!/diagnostico/reconocedor-0.3/src/*.java
+!/diagnostico/reconocedor-0.3/src/AndroidManifest.xml
+!/diagnostico/reconocedor-0.3/tests/*.java
+!/diagnostico/reconocedor-0.3/COMPILACION.json
+!/diagnostico/reconocedor-0.3/PRUEBAS-PC.json
+!/diagnostico/reconocedor-0.3/LEEME-USB.txt

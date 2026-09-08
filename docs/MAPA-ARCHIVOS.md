@@ -23,7 +23,7 @@ flowchart LR
     C_ORIG["Originales del P291 · observado_tv"]
     C_PRODUCTO["Producto común · propuesto"]
     C_LOTES["Dos recorridos de lote · propuesto"]
-    C_RECON["Reconocimiento0.2 · construido"]
+    C_RECON["Reconocimiento0.3 · construido"]
     C_EXTRACT["Extracción recovery0.1 · construido"]
     C_PERFIL -->|"selecciona"| C_BASE
     C_CHROME -->|"motor admitido"| C_WEB
@@ -278,6 +278,8 @@ Requisitos: REQ-01.
 - [docs/evidencia/RECONOCEDOR-USB-01.md](../docs/evidencia/RECONOCEDOR-USB-01.md)
 - [preparacion-usb/preparar-reconocimiento-02.ps1](../preparacion-usb/preparar-reconocimiento-02.ps1)
 - [preparacion-usb/reconocimiento-02-estado.json](../preparacion-usb/reconocimiento-02-estado.json)
+- [preparacion-usb/preparar-reconocimiento-03.ps1](../preparacion-usb/preparar-reconocimiento-03.ps1)
+- [preparacion-usb/reconocimiento-03-estado.json](../preparacion-usb/reconocimiento-03-estado.json)
 
 ### C-TV · P291: TV Base y WiFi
 
@@ -403,9 +405,9 @@ Requisitos: REQ-15, REQ-16, REQ-17.
 - [docs/PROPUESTA-LOTES-Y-ACTUALIZACIONES.md](../docs/PROPUESTA-LOTES-Y-ACTUALIZACIONES.md)
 - [docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md](../docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md)
 
-### C-RECON · Reconocimiento0.2
+### C-RECON · Reconocimiento0.3
 
-**construido**. P2710.1 recibido y verificado; correcciónMX9 con ficha inicial exportada, inventario acotado y un solo lector real.0.2 USBverificado, pruebaAndroidpendiente.
+**construido**. DosvariantesRK3229capturadas;0.3entregado conselectorpropio yfallbacklocal. Reutiliza ficha0.2, pendiente prueba delRockchipque falló.
 
 Requisitos: REQ-02, REQ-14, REQ-18.
 
@@ -445,6 +447,25 @@ Requisitos: REQ-02, REQ-14, REQ-18.
 - [docs/evidencia/RECONOCEDOR-USB-02.md](../docs/evidencia/RECONOCEDOR-USB-02.md)
 - [diagnostico/reconocimiento-20260908-p271-mx9/HALLAZGOS.md](../diagnostico/reconocimiento-20260908-p271-mx9/HALLAZGOS.md)
 - [diagnostico/reconocedor-0.2/PRUEBAS-PC.json](../diagnostico/reconocedor-0.2/PRUEBAS-PC.json)
+- [diagnostico/reconocedor-0.3/COMPILACION.json](../diagnostico/reconocedor-0.3/COMPILACION.json)
+- [diagnostico/reconocedor-0.3/compilar.py](../diagnostico/reconocedor-0.3/compilar.py)
+- [diagnostico/reconocedor-0.3/LEEME-USB.txt](../diagnostico/reconocedor-0.3/LEEME-USB.txt)
+- [diagnostico/reconocedor-0.3/PRUEBAS-PC.json](../diagnostico/reconocedor-0.3/PRUEBAS-PC.json)
+- [diagnostico/reconocedor-0.3/README.md](../diagnostico/reconocedor-0.3/README.md)
+- [diagnostico/reconocedor-0.3/src/AndroidManifest.xml](../diagnostico/reconocedor-0.3/src/AndroidManifest.xml)
+- [diagnostico/reconocedor-0.3/src/CaptureSequence.java](../diagnostico/reconocedor-0.3/src/CaptureSequence.java)
+- [diagnostico/reconocedor-0.3/src/HardwareCollector.java](../diagnostico/reconocedor-0.3/src/HardwareCollector.java)
+- [diagnostico/reconocedor-0.3/src/LocalExport.java](../diagnostico/reconocedor-0.3/src/LocalExport.java)
+- [diagnostico/reconocedor-0.3/src/MainActivity.java](../diagnostico/reconocedor-0.3/src/MainActivity.java)
+- [diagnostico/reconocedor-0.3/src/ReportArchive.java](../diagnostico/reconocedor-0.3/src/ReportArchive.java)
+- [diagnostico/reconocedor-0.3/src/UsbLocator.java](../diagnostico/reconocedor-0.3/src/UsbLocator.java)
+- [diagnostico/reconocedor-0.3/src/UsbStore.java](../diagnostico/reconocedor-0.3/src/UsbStore.java)
+- [diagnostico/reconocedor-0.3/tests/LocalExportHarness.java](../diagnostico/reconocedor-0.3/tests/LocalExportHarness.java)
+- [diagnostico/reconocedor-0.3/tests/test_local_export.py](../diagnostico/reconocedor-0.3/tests/test_local_export.py)
+- [diagnostico/reconocedor-0.3/tests/test_usb_locator.py](../diagnostico/reconocedor-0.3/tests/test_usb_locator.py)
+- [diagnostico/reconocedor-0.3/tests/UsbLocatorHarness.java](../diagnostico/reconocedor-0.3/tests/UsbLocatorHarness.java)
+- [docs/evidencia/RECONOCEDOR-USB-03.md](../docs/evidencia/RECONOCEDOR-USB-03.md)
+- [diagnostico/reconocimiento-20260908-rk3229-usb/HALLAZGOS.md](../diagnostico/reconocimiento-20260908-rk3229-usb/HALLAZGOS.md)
 
 ### C-EXTRACT · Extracción recovery0.1
 
@@ -514,12 +535,12 @@ Requisitos: REQ-11, REQ-18, REQ-19.
 | README.md | 1 | 0.000 |
 | actualizacion-chrome | 51 | 0.417 |
 | analisis-rom | 15 | 1.822 |
-| diagnostico | 231 | 0.018 |
-| docs | 56 | 0.001 |
+| diagnostico | 249 | 0.019 |
+| docs | 57 | 0.001 |
 | dossier-s905l2.html | 1 | 0.000 |
 | images | 1 | 1.352 |
 | platform-tools-latest-windows.zip | 1 | 0.008 |
-| preparacion-usb | 98 | 3.688 |
+| preparacion-usb | 100 | 3.688 |
 | rom-simplificada | 4619 | 14.542 |
 | tools | 18088 | 1.173 |
 

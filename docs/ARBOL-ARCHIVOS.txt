@@ -183,7 +183,29 @@ mxqpro4k/
 │   │   ├── LEEME-USB.txt
 │   │   ├── PRUEBAS-PC.json
 │   │   └── README.md
+│   ├── reconocedor-0.3/
+│   │   ├── src/
+│   │   │   ├── AndroidManifest.xml
+│   │   │   ├── CaptureSequence.java
+│   │   │   ├── HardwareCollector.java
+│   │   │   ├── LocalExport.java
+│   │   │   ├── MainActivity.java
+│   │   │   ├── ReportArchive.java
+│   │   │   ├── UsbLocator.java
+│   │   │   └── UsbStore.java
+│   │   ├── tests/
+│   │   │   ├── LocalExportHarness.java
+│   │   │   ├── test_local_export.py
+│   │   │   ├── test_usb_locator.py
+│   │   │   └── UsbLocatorHarness.java
+│   │   ├── COMPILACION.json
+│   │   ├── compilar.py
+│   │   ├── LEEME-USB.txt
+│   │   ├── PRUEBAS-PC.json
+│   │   └── README.md
 │   ├── reconocimiento-20260908-p271-mx9/
+│   │   └── HALLAZGOS.md
+│   ├── reconocimiento-20260908-rk3229-usb/
 │   │   └── HALLAZGOS.md
 │   ├── respaldo-p291-lan/
 │   │   └── EVIDENCIA-SANEADA.json
@@ -215,6 +237,7 @@ mxqpro4k/
 │   │   ├── publicacion-github.json
 │   │   ├── RECONOCEDOR-USB-01.md
 │   │   ├── RECONOCEDOR-USB-02.md
+│   │   ├── RECONOCEDOR-USB-03.md
 │   │   ├── RECOVERY-P271-ALCANCE.md
 │   │   ├── RECUPERACION-RESPALDO-PC.json
 │   │   ├── REINICIOS-P291-SIN-USB.md
@@ -306,10 +329,12 @@ mxqpro4k/
 │   ├── preparar-postintento-08.ps1
 │   ├── preparar-reconocimiento-01.ps1
 │   ├── preparar-reconocimiento-02.ps1
+│   ├── preparar-reconocimiento-03.ps1
 │   ├── preparar-rom-012.ps1
 │   ├── probar-archivo-kingston.ps1
 │   ├── reconocimiento-01-estado.json
 │   ├── reconocimiento-02-estado.json
+│   ├── reconocimiento-03-estado.json
 │   ├── recuperacion-20260905-000135/ [6 archivos; 0.0 MB; agrupado]
 │   ├── recuperar-kingston-windows.ps1
 │   ├── revision-011-20260906-192456/ [2 archivos; 0.0 MB; agrupado]

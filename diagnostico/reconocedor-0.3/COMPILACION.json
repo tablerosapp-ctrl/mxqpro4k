@@ -1,0 +1,27 @@
+{
+  "state": "built_verified_pc",
+  "version": "0.3",
+  "package": "com.tvbase.reconocimiento",
+  "min_api": 21,
+  "target_api": 28,
+  "apk": "diagnostico/reconocedor-0.3/privado/build-20260908-204031-349284/Reconocimiento-TVBase-0.3.apk",
+  "bytes": 123283,
+  "sha256": "41e40007de8f14b37119b7335a4541a4c64d5a325e225a42d706195472047869",
+  "source_sha256": {
+    "diagnostico/reconocedor-0.3/src/AndroidManifest.xml": "56e19f6815b9aa3df098157b476b3f0af9856cefcdd86382e62ee13740a1317f",
+    "diagnostico/reconocedor-0.3/src/CaptureSequence.java": "938247611028abec45a8273a46008916b1ebd1a422a6df978300952175239a2d",
+    "diagnostico/reconocedor-0.3/src/HardwareCollector.java": "e15d85fbbd3a68ce52cf3d2845c006d7f66bd88d02653000d24f4cdb3740cb4d",
+    "diagnostico/reconocedor-0.3/src/LocalExport.java": "8d2f4932b1edd3371871404ac7476e848db2110cae075073de737a99e6d5fe74",
+    "diagnostico/reconocedor-0.3/src/MainActivity.java": "4a30d8fc2c80ec7d9743a83dd08fd79cc76c1b9d31b8ec35a6a390e7faef3331",
+    "diagnostico/reconocedor-0.3/src/ReportArchive.java": "b0aba65236622ebb65fed75b5fd976045c4b9ec6264bd2e3aaa15078d4f5253f",
+    "diagnostico/reconocedor-0.3/src/UsbLocator.java": "ccf47ea99f7d03a9e36e4ae612b94857974be9bf2494dbc5677d9c71cfa17eaf",
+    "diagnostico/reconocedor-0.3/src/UsbStore.java": "4ef9927f727b50d3d3fe38794557e79b1f136ae379da87488fdcbf6b124ee5f4"
+  },
+  "signer_sha256": "d2136c0e519d477d2be34b55590d9e548137682f9c2573f330a0a6e91833b613",
+  "signing_inputs_unchanged": true,
+  "network_permission": false,
+  "root_or_adb": false,
+  "tv_tested": false,
+  "usb_export_on_android_tested": false,
+  "created_at": "2026-09-08T20:40:44.283743+00:00"
+}
