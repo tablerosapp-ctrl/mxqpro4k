@@ -1,17 +1,10 @@
-# Pendrive · instalación0.2.2 desde recovery abierto
+# Pendrive · instalación finalizada
 
-**Entrega copiada y releída; TV permanece en recovery según el usuario.** [Recibo](../preparacion-usb/original-022-estado.json) · [Cambio y pruebas](../docs/evidencia/INSTALADOR-P291-022.md).
+**TV Base arrancó en el primer P291; el usuario confirmó que puede conectarse por WiFi.** El USB regresó a PC con los seis respaldos y el cierre de instalación 0.2.2. [Evidencia física](../docs/evidencia/INSTALACION-FISICA-P291-022.md) · [Resumen de adquisición](../diagnostico/primer-tv-instalado-20260908/resumen-saneado.json).
 
-1. Expulsar el Kingston de forma segura desdeWindows y conectarlo al TV manteniendo el TV encendido.
-2. Volver al menú de recovery si sigue visible el error anterior.
-3. Apply update from EXT → Update from udisk.
-4. Elegir **TVBASE-P291-A9-0.2.2-RECOVERY.zip**.
+El pendrive conserva los respaldos, informes y ZIP. Se copiaron y verificaron en PC 199 archivos, con un total de 6.091.261.673 bytes; los seis respaldos incluidos suman 6.067.060.736 bytes. No se formateó, limpió ni modificó el USB durante esta adquisición. No volver a seleccionar el ZIP 0.2.2, el restaurador o Acceso USB 0.9 para repetir una instalación ya realizada. La guía LEEME del USB describe la entrega histórica; la instalación está terminada y este documento prevalece como estado.
 
-No elegir ORIGINAL-RESTORE. No usar de nuevo AccesoUSB09, que conserva el hash021, ni Update en Android viejo. No hacer wipe/factoryreset separado. El intento021 abortó al identificar system, antes de respaldar/formatear/grabarAndroid;022 corrige ese punto conservando las cinco imágenes.
-
-El instalador verifica destinos/USB/ENV normal, copia seis particiones (~6,1GB) y relee sus hashes antes de borrar datos internos. Después preparauserdata limpia y escribe cinco imágenes con boot al final. Mantener alimentación y USB; puede tardar durante copia/relectura. Comunicar mensaje final o error exacto antes de reiniciar. No hay reinicio ni rollbackautomáticos.
-
-Conservar TVBASE-respaldo-* y TVBASE-entrada09-*. El restaurador separado devuelve cincoOEM, conserva datos presentes y no recupera userdata borrada. Reentrada desdeAndroid nuevo y restauración física todavía no probadas. [Guía del USB](original-p291/LEEME-USB-022.txt).
+Home, la tecla de la casita del control, no vuelve al inicio y el usuario sigue probando su APK. La [revisión de Home](../docs/hipotesis/HOME-P291.md) contiene hipótesis, sin datos actuales del TV que confirmen la causa. La documentación y la propuesta de lotes y actualizaciones están preparadas; **no ejecutar nuevas acciones sobre el TV o el USB hasta recibir el OK explícito solicitado**. Conservar todas las carpetas `TVBASE-respaldo-*` y `TVBASE-entrada09-*`.
 
 
 ## Historial conservado: las instrucciones siguientes no son vigentes

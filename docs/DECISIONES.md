@@ -105,3 +105,9 @@ El restaurador0.2.1 repone únicamente cinco imágenes OEM, con copia previa de 
 La foto del error021 demuestra que sysfs termina en system; el código aborta antes de migración. La fuente del kernel Amlogic admite nombres lógicos de partición. Se crean instalador/restaurador022 separados; se conserva la plataforma y se verifica descriptor/rdev, atributos, padreMMC canónico exacto, tamaños/rangos/no solapamiento y revalidación. No admitir cualquier nombre ni ignorar errores. Los offsets no capturados se leen/fijan durantepreflight. [Evidencia](evidencia/INSTALADOR-P291-022.md) · [Fuente](evidencia/PARTICIONES-AMLOGIC-P291-022.md).
 
 La entrada09 ya se consiguió; no repetir preparación ni reiniciar para corregir un error de instalador. Entrega por archivos, archivando los dosZIP021 y su guía, y verificando que reportes/respaldos permanezcan iguales. La prueba enPC no acredita la instalación022. Las fuentes y recibos021 se conservan sin sobrescribir.
+
+## ADR-28 · Propuesta de capa común, lotes y actualizaciones; ejecución pendiente de OK
+
+Tras el primer arranque exitoso y WiFi reportado, el usuario solicita dos recorridos: uno exhaustivo para calificar nuevos lotes/variantes y otro rápido para instalar el resto que coincida. Se propone separar producto, perfil de hardware e identidad de unidad; revisar respaldos críticos y política de userdata por operación; actualizar APK/motor/contenido/ROM de forma independiente y medir antes de prometer reducción de tiempos. La receta exacta sigue como propuesta. [Diseño](PROPUESTA-LOTES-Y-ACTUALIZACIONES.md).
+
+La restricción inmediata sí rige: documentar/guardar/proponer, sin nuevos cambios ni pruebas físicas hasta su OK. ISSUE-HOME-01 queda registrado, sin corregir. Se conservan imágenes y recibos 0.2.2 inmutables; el éxito físico se registra en nueva evidencia, no reescribiendo los recibos de construcción.

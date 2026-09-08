@@ -1,5 +1,24 @@
 # Especificación del producto y aceptación
 
+## Actualización de aceptación · instalación física y siguiente etapa propuesta
+
+REQ-01 tiene instalación en memoria interna y primer arranque observados; queda documentar el encendido en frío sin pendrive. VAL-06 tiene seis respaldos guardados y adquiridos en PC, además de recibos verificados de formato, montaje vacío de solo lectura y cinco escrituras. VAL-07 es parcial: hay una foto del inicio y conexión WiFi reportada; faltan comprobar el proveedor WebView, el hardware y la repetibilidad. [Evidencia física](evidencia/INSTALACION-FISICA-P291-022.md).
+
+REQ-02/03/10 incluyen **ISSUE-HOME-01**: la tecla Home no vuelve al inicio. La [revisión local](hipotesis/HOME-P291.md) plantea hipótesis que requieren datos actuales del TV; no establece una causa ni una corrección. El usuario prueba su APK. Este avance todavía no permite aceptar multimedia, almacenamiento o actualizaciones.
+
+**Ampliación solicitada, con el diseño pendiente del OK del usuario:**
+
+| ID | Requisito propuesto | Criterio de aceptación futuro |
+| --- | --- | --- |
+| REQ-15 | Capa común de producto y perfiles de hardware calificados | Contratos y API comunes; inventario exacto por perfil y pruebas de video, red, controles, arranque y recuperación. Un nombre comercial compartido no basta para aceptar otra variante. |
+| REQ-16 | Dos recorridos: calificar el lote e instalar con rapidez sus unidades compatibles | Calificación exhaustiva del primer ejemplar e identificación individual obligatoria en todos. Política de respaldo aprobada para cada operación, sin clonar secretos ni calibración de otra unidad. Detención ante diferencias y resultado comprobado por unidad. |
+| REQ-17 | Actualizaciones por componente con menor trabajo y conservación de datos | Separar APK, motor, contenido y ROM. Medir tiempos por fase, evitar reinstalaciones innecesarias y probar migración, conservación de datos y recuperación. Mantener las comprobaciones de integridad y no prometer tiempos sin medirlos. |
+
+Estos requisitos extienden REQ-02/08/09/11/14; no están implementados ni aceptados. [PROP-16: propuesta y condiciones](PROPUESTA-LOTES-Y-ACTUALIZACIONES.md). ADR-28 registra la propuesta y el límite expresado por el usuario: documentar y proponer ahora, esperar su OK explícito para nuevos cambios o pruebas físicas. Cualquier reducción futura de respaldos exige una política aprobada; el contrato 0.2.2 de seis respaldos no se altera retroactivamente.
+
+
+## Antecedente: estado anterior a la prueba física de 0.2.2
+
 ## Contrato vigente · corrección de identidad0.2.2
 
 **ADR-27** mantiene la plataforma0.2.0 y el contrato de migración respaldada deADR-26. Instalación/restauración022 sustituyen la guarda de nombre insuficiente de021 por identidad del descriptor y sysfs, padreMMC exacto, geometría, rangos sin solapamiento y revalidación antes de escribir. Los starts se capturan en cada ejecución y se fijan durante ella; no se inventan offsets originales. [Contrato/evidencia](evidencia/INSTALADOR-P291-022.md).

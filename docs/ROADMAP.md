@@ -1,17 +1,23 @@
 # Roadmap y propuestas
 
-## Vigente · corrección0.2.2 entregada
+## Vigente · plataforma instalada; próximos cambios esperan OK
 
-| Etapa | Avance | Salida pendiente |
+| Etapa | Resultado actual | Próximo entregable propuesto |
 | --- | --- | --- |
-| M0 · Plataforma/paquete | Imágenes0.2.0 inmutables; instalación/restauración022 verificadas y copiadas enKingston | Ejecutar el paquete corregido en recovery. |
-| M1 · Entrada | ENV/BCB09 verificados; menú y update-binary021 observados | No repetir preparación. Mantener documentado el límite de identidad exacta del recovery. |
-| M2 · Instalación | Error021 localizado antes de migración; guardaAmlogic corregida en022 | Respaldos físicos, userdata limpia, cinco escrituras/verificaciones y arranque interno sinUSB. |
-| M3 · Hardware/web/video | Drivers originales y Chrome138 preparados | Proveedor real, WiFi/Ethernet, controles y dosVP9/alfa/canvas medidos. |
-| M4 · Recuperación | Restaurador022 de cincoOEM listo, conserva datos | Reentrada desdeAndroid nuevo/fallido y restauración física; receta fijada adata.img cuando exista. |
-| M5–M7 | GestorAPK/motor incluido y desactivado | APK/contenido, servidor propio, VAL-10, OTA deROM, producción y nuevos perfiles. |
+| M0 | Plataforma 0.2.0 e instalador 0.2.2 sellados y usados | Conservar la versión reproducible y su evidencia; sin reconstruirla ahora. |
+| M1 | Entrada a recovery y ejecución de 0.2.2 logradas | No repetir la preparación 0.9. Resolver la reentrada desde el Android nuevo como parte de la recuperación. |
+| M2 | Seis respaldos, formato, cinco escrituras y primer arranque comprobados | Documentar el encendido en frío sin USB y conservar el respaldo individual. |
+| M3 | Inicio visible, WiFi conectable según el usuario; APK en prueba | Diagnosticar y corregir Home después del OK. Comprobar proveedor WebView, dos videos VP9 (uno con transparencia) y canvas, almacenamiento, mandos y estabilidad. |
+| M4 | Restaurador preparado, sin ensayo | Probar entrada, reentrada y restauración por perfil antes de prometer recuperación. |
+| M5 | APK del usuario en evolución | Capa de producto común, contenido local y capacidades detectadas; diseño visual a convenir. |
+| M6 | Gestor de APK y motor incluido y desactivado | Actualizaciones por componente con conservación de datos y pruebas de fallo. Servidor todavía sin configurar. |
+| M7 | Primer P291 probado; P271 es otro perfil | Dos recorridos: calificar cada variante o lote e instalar las unidades coincidentes con identidad individual y política de respaldo propia. |
 
-[Corrección y entrega](evidencia/INSTALADOR-P291-022.md) · [Error físico021](evidencia/ERROR-INSTALADOR-P291-021.md). ADR-27 corrige identidad sin eliminar comprobaciones. El siguiente intento usa022 desde el recovery ya abierto; no vuelve al diálogo OEM2% ni al helper09.
+[Resultado físico](evidencia/INSTALACION-FISICA-P291-022.md) · [Home pendiente](INCIDENCIAS.md) · [Propuesta de lotes y actualizaciones](PROPUESTA-LOTES-Y-ACTUALIZACIONES.md).
+
+La [revisión local de Home](hipotesis/HOME-P291.md) contiene hipótesis para orientar el diagnóstico. No acredita la configuración actual del TV ni la causa de la tecla que falla.
+
+**No se ejecuta ningún paso siguiente sin el OK explícito del usuario.** Esta revisión se limita a conservar y estudiar los archivos del pendrive y actualizar la documentación y Git. El respaldo masivo y las relecturas consumen parte del tiempo, pero los registros también muestran intervalos considerables durante las etapas de escritura y comprobación. Hay que medir cada fase y evaluar qué componentes necesitan actualizarse antes de fijar objetivos de duración. La propuesta se registra como PROP-16, REQ-15/16/17 y ADR-28; sigue pendiente de aprobación.
 
 
 ## Revisiones previas conservadas

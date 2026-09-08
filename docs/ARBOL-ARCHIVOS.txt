@@ -99,6 +99,11 @@ mxqpro4k/
 │   ├── primer-tv-evidencia-20260907-000948/
 │   │   ├── HALLAZGOS.md
 │   │   └── resumen-saneado.json
+│   ├── primer-tv-instalado-20260908/
+│   │   ├── adquirir-usb.ps1
+│   │   ├── HALLAZGOS.md
+│   │   ├── resumen-saneado.json
+│   │   └── verificar-adquisicion.py
 │   ├── primer-tv-lan-20260907-184926/
 │   │   ├── ANALISIS-UPDATE-012.md
 │   │   ├── COMPARACION-RADIOS.md
@@ -136,6 +141,7 @@ mxqpro4k/
 │   │   ├── ERROR-INSTALADOR-P291-021.json
 │   │   ├── ERROR-INSTALADOR-P291-021.md
 │   │   ├── git-inicial.json
+│   │   ├── INSTALACION-FISICA-P291-022.md
 │   │   ├── INSTALADOR-P291-022.md
 │   │   ├── limpieza-plan.json
 │   │   ├── limpieza-resultado.json
@@ -157,6 +163,7 @@ mxqpro4k/
 │   │   ├── H1-CIERRE-ANDROID.md
 │   │   ├── H1-RESULTADO-CODEX.md
 │   │   ├── H2-PREPARACION-RECOVERY.md
+│   │   ├── HOME-P291.md
 │   │   └── REVISION-CONJUNTA-FABLE.md
 │   ├── historico/
 │   │   ├── AGENTS-hasta-20260906-2004.md
@@ -170,7 +177,9 @@ mxqpro4k/
 │   ├── ESPECIFICACION.md
 │   ├── ESTADO.md
 │   ├── GIT.md
+│   ├── INCIDENCIAS.md
 │   ├── LIMPIEZA.md
+│   ├── PROPUESTA-LOTES-Y-ACTUALIZACIONES.md
 │   ├── proyecto.json
 │   ├── PUBLICACION.md
 │   └── ROADMAP.md

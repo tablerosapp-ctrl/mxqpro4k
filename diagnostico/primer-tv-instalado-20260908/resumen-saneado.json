@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "state": "physical_installation_022_evidence_independently_verified",
+  "reviewed_at_utc": "2026-09-08T15:49:50.305180+00:00",
+  "reviewer_script_sha256": "639660da45e05000f9d6dd57eaee72f9801350c1e9577bf51a5e7b35ee6bd867",
+  "scope": "Read existing PC acquisition only; no TV, USB, network, install, restore or configuration operation",
+  "acquisition": {
+    "state": "verified",
+    "exit_code": 0,
+    "receipt_sha256": "9cda3bb9690d288ffeb8dc6da2872e7732973bf8791d7e0c397ccf08875bb525",
+    "declared_files": 199,
+    "declared_bytes": 6091261673,
+    "independently_rehashed_files": 13,
+    "scope_note": "12 transaction files plus launcher photo; historical acquisitions not rehashed"
+  },
+  "release": {
+    "package_id": "TVBASE-P291-A9-0.2.2",
+    "platform_version": "0.2.0",
+    "receipt_sha256": "55177ba801abab5c2c32391ac3ddc3139cd39bcff50b88e06e3ddcff9b39fbba",
+    "sealed_pc_zip_sha256": "163d4ce6e6fd4e02f06cb6646c53c259d1d3100547ee5c616c578782c3e54421",
+    "executed_zip_whole_hash_recorded_by_installer": false
+  },
+  "installer_result": {
+    "physical_installation_verified_by_persisted_receipts": true,
+    "userdata_backup_confirmed": true,
+    "userdata_format_completed": true,
+    "formatter_exit": 0,
+    "formatter_timeout": false,
+    "formatter_output_truncated": false,
+    "filesystem_bytes": 3495936000,
+    "footer_zero_readback": true,
+    "empty_readonly_mount_and_unmount_verified": true,
+    "five_image_fsync_and_readback_completed": true,
+    "flash_order": [
+      "system",
+      "vendor",
+      "product",
+      "odm",
+      "boot"
+    ],
+    "installed_image_sha256": {
+      "system": "e602d62182400f2b785b9044dd28b767791bcafb411146f988b719c6e722dc7b",
+      "vendor": "57c1f319e1c1f7df6918b2ffd513b1b0a63611e498fa6000826ee34206ef9fee",
+      "product": "c8550c937cb85257e58d8d70414b9162141d9e20cf199406d4ca3cfacf8ab00e",
+      "odm": "97836d5a1b016b64d3875c82cb5f3b4daee0f56d8eea3675b4231086429cbe67",
+      "boot": "c1a71479498bdfd8368fb1ade42ae293cb97f6087c43c3a8f8f31535725113fc"
+    },
+    "terminal_state": "installed_verified"
+  },
+  "backups": {
+    "count": 6,
+    "bytes": 6067060736,
+    "records": [
+      {
+        "name": "system",
+        "bytes": 1342177280,
+        "sha256": "249611912b7b1fa277d169f8612f9a719df3abf99dc98ed8e817657e2c9beb2c",
+        "original_p291_hash_matches": true,
+        "independent_pc_read_matches_tv_three_hashes": true
+      },
+      {
+        "name": "vendor",
+        "bytes": 943718400,
+        "sha256": "d542fc091469a7c1223c1d5091f8ec6b3456f38dd1218b779d18d1942190d2a7",
+        "original_p291_hash_matches": true,
+        "independent_pc_read_matches_tv_three_hashes": true
+      },
+      {
+        "name": "product",
+        "bytes": 134217728,
+        "sha256": "ef2c71f6208e25fa1cc9d5c12cb04972ac20d772e2c11a76972859403b530075",
+        "original_p291_hash_matches": true,
+        "independent_pc_read_matches_tv_three_hashes": true
+      },
+      {
+        "name": "odm",
+        "bytes": 134217728,
+        "sha256": "97836d5a1b016b64d3875c82cb5f3b4daee0f56d8eea3675b4231086429cbe67",
+        "original_p291_hash_matches": true,
+        "independent_pc_read_matches_tv_three_hashes": true
+      },
+      {
+        "name": "boot",
+        "bytes": 16777216,
+        "sha256": "13e027a3aae1af232d1d700421486f32b7958a9fa0a157d8cbd3c47243ab697d",
+        "original_p291_hash_matches": true,
+        "independent_pc_read_matches_tv_three_hashes": true
+      },
+      {
+        "name": "data",
+        "bytes": 3495952384,
+        "sha256": "b58c363f8712254b8da01376db4408237d2af52d0ea7e79f1b8a375e31616b88",
+        "original_p291_hash_matches": null,
+        "independent_pc_read_matches_tv_three_hashes": true
+      }
+    ],
+    "restoration_tested": false
+  },
+  "layouts": {
+    "source": "Physical recovery receipt00, initial observations; later guard executions inferred from completed sealed installer",
+    "start_offsets_now_observed": true,
+    "parent_bytes": 7650410496,
+    "parent_major_minor": "179:0",
+    "parent_type_raw_field_recorded": false,
+    "records": [
+      {
+        "name": "system",
+        "major_minor": "179:18",
+        "bytes": 1342177280,
+        "start_sector": 5197824,
+        "sectors": 2621440,
+        "sysfs_basename": "system"
+      },
+      {
+        "name": "vendor",
+        "major_minor": "179:16",
+        "bytes": 943718400,
+        "start_sector": 3059712,
+        "sectors": 1843200,
+        "sysfs_basename": "vendor"
+      },
+      {
+        "name": "product",
+        "major_minor": "179:19",
+        "bytes": 134217728,
+        "start_sector": 7835648,
+        "sectors": 262144,
+        "sysfs_basename": "product"
+      },
+      {
+        "name": "odm",
+        "major_minor": "179:17",
+        "bytes": 134217728,
+        "start_sector": 4919296,
+        "sectors": 262144,
+        "sysfs_basename": "odm"
+      },
+      {
+        "name": "boot",
+        "major_minor": "179:11",
+        "bytes": 16777216,
+        "start_sector": 2809856,
+        "sectors": 32768,
+        "sysfs_basename": "boot"
+      },
+      {
+        "name": "data",
+        "major_minor": "179:20",
+        "bytes": 3495952384,
+        "start_sector": 8114176,
+        "sectors": 6828032,
+        "sysfs_basename": "data"
+      },
+      {
+        "name": "env",
+        "major_minor": "179:4",
+        "bytes": 8388608,
+        "start_sector": 2531328,
+        "sectors": 16384,
+        "sysfs_basename": "env"
+      }
+    ]
+  },
+  "receipt_sha256": {
+    "00-backup-verified.json": "9d8d3b12a1454c335cf86f9a7176ab962564596b1fce4c7b8657d7dc1ece5bf5",
+    "10-format-started.json": "e0d1600e66de4c001b2d7ead1fde1f48258164c60eda19cb130f3ca2a916f05f",
+    "11-format-result.json": "c6ff2acfb04e4b25385f8bbe7d335ace48d5cc02e37e77c2cd62dbd402fe43a9",
+    "20-userdata-prepared.json": "eb57416098f799e3c91d3fa94a4690ade4b19d84520f01a18b876cecac8cb7ab",
+    "90-installed-verified.json": "e3385093f244593210572cb98b3e81e7999b1686ab96adcc59c53ae5fc2c1ed0",
+    "instalacion.log": "23d9b32221d3f17923cf807f2516fe3749d367087e935c500b8ec738d3bd91d4"
+  },
+  "timing": {
+    "clock_trusted_as_real_date": false,
+    "backup_receipt_declared_utc": "2020-01-01T01:11:00Z",
+    "flash_start_declared_utc": {
+      "system": "2020-01-01T01:24:54Z",
+      "vendor": "2020-01-01T01:31:55Z",
+      "product": "2020-01-01T01:38:49Z",
+      "odm": "2020-01-01T01:40:03Z",
+      "boot": "2020-01-01T01:41:16Z"
+    },
+    "backup_receipt_to_first_flash_start_seconds": 834,
+    "successive_flash_start_intervals_seconds": [
+      421,
+      414,
+      74,
+      73
+    ],
+    "exact_total_or_per_image_duration_known": false
+  },
+  "parser_tests": {
+    "valid_metadata_case_passed": true,
+    "rejected_cases": [
+      "duplicate_json",
+      "nonzero_formatter",
+      "formatter_timeout",
+      "output_truncated",
+      "missing_footer",
+      "wrong_package",
+      "wrong_size",
+      "hash_disagreement",
+      "duplicate_backup",
+      "wrong_parent",
+      "out_of_disk",
+      "overlap",
+      "wrong_flash_hash",
+      "extra_flash_line",
+      "invalid_clock"
+    ],
+    "scope": "PC metadata only; no device calls"
+  },
+  "separate_user_observations": {
+    "launcher_visible": {
+      "source": "User photo",
+      "photo_sha256": "bab991620b84b3b574c994daa8ea8a23a7e5fde603e7b17e758cc9fbb5eac6bd",
+      "bytes": 271722
+    },
+    "wifi_reconnected": {
+      "source": "User statement, not measured by this verifier"
+    },
+    "home_key_does_not_return_to_launcher": {
+      "source": "User statement",
+      "issue": "ISSUE-HOME-01"
+    }
+  },
+  "limits": [
+    "Receipts and log are unsigned; PC acquisition hashes preserve received evidence, not cryptographic attestation from the TV.",
+    "Installer receipts pin package_id and five payload hashes; they do not record the whole executed ZIP hash or executed recovery hash.",
+    "TV clock says January 2020. Intervals between starts include intervening checks; exact backup, format and total installation durations are unknown.",
+    "No post-boot partition rehash was performed. Current running Android identity is supported by user observations, separately from recovery readback.",
+    "Cold boot with USB absent, reentry into recovery, five-image restore and raw userdata restore remain untested.",
+    "WiFi reconnection does not establish Internet access, stability, throughput, WebView provider or multimedia performance.",
+    "HOME issue remains open; no fixes or new product tests are authorized before user OK."
+  ]
+}

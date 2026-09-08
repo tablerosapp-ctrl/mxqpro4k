@@ -1,5 +1,11 @@
 # Historial local y publicación pública
 
+## Registro del 8/9/2026 · instalación física 0.2.2 y Home pendiente
+
+Se versionan la evidencia de instalación terminada, los scripts de adquisición y revisión independiente, el resumen saneado, la incidencia Home y el diseño propuesto de capa común, lotes y actualizaciones. El estado, requisitos, grafo y roadmap distinguen lo instalado de las pruebas pendientes y de los cambios que esperan el OK del usuario.
+
+Los 199 archivos adquiridos, incluidas seis imágenes y la foto, permanecen en el archivo privado local. No se publican datos de usuario, firmware ni registros completos. Los recibos anteriores permanecen inmutables. La publicación sigue usando exclusivamente el espejo saneado de [GitHub](https://github.com/tablerosapp-ctrl/mxqpro4k); los registros siguientes son antecedentes fechados.
+
 ## Registro instalador0.2.1 y acceso0.9
 
 La nueva entrega agrega preparación de userdata con seis respaldos, restaurador de cinco particiones corregido para ARM32 y acceso ENV/BCB revisado. Se versionan fuentes, pruebas, recibos y [evidencia actual](evidencia/ENTRADA-ORIGINAL-P291-021.md); los ZIP/APK, extracciones y observaciones crudas permanecen locales. La exclusión `**/privado/` cubre también los nuevos directorios anidados. Preparar el pendrive no equivale a aprobar el método de entrada ni a instalar la ROM.

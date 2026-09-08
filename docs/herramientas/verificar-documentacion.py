@@ -17,6 +17,10 @@ for c in data['components']:
     for rel in c['files']:
         if not (ROOT / rel).is_file():
             errors.append('Archivo de componente ausente: ' + rel)
+for kind in ('components', 'phases'):
+    positions = [(n['x'], n['y']) for n in data[kind]]
+    if len(positions) != len(set(positions)):
+        errors.append('Nodos superpuestos en el grafo: ' + kind)
 for e in data['edges']:
     if e['source'] not in ids or e['target'] not in ids:
         errors.append('Arista inválida: ' + str(e))
@@ -45,7 +49,8 @@ files = [ROOT / 'README.md', ROOT / 'AGENTS.md', ROOT / 'rom-simplificada/INSTAL
 files += [p for p in (ROOT / 'rom-simplificada/original-p291').rglob('*.md')
           if 'privado' not in p.relative_to(ROOT).parts]
 files += list((ROOT / 'rom-simplificada/componentes/gestion-tvbase').glob('*.md'))
-files += [DOC / 'evidencia/ROM-ORIGINAL-P291-020.md', DOC / 'evidencia/ENTRADA-ORIGINAL-P291-021.md', DOC / 'evidencia/PREPARACION-ENTRADA-P291-09.md', DOC / 'evidencia/ERROR-INSTALADOR-P291-021.md', DOC / 'evidencia/PARTICIONES-AMLOGIC-P291-022.md', DOC / 'evidencia/INSTALADOR-P291-022.md']
+files += [DOC / 'hipotesis/HOME-P291.md']
+files += [DOC / 'evidencia/ROM-ORIGINAL-P291-020.md', DOC / 'evidencia/ENTRADA-ORIGINAL-P291-021.md', DOC / 'evidencia/PREPARACION-ENTRADA-P291-09.md', DOC / 'evidencia/ERROR-INSTALADOR-P291-021.md', DOC / 'evidencia/PARTICIONES-AMLOGIC-P291-022.md', DOC / 'evidencia/INSTALADOR-P291-022.md', DOC / 'evidencia/INSTALACION-FISICA-P291-022.md', ROOT / 'diagnostico/primer-tv-instalado-20260908/HALLAZGOS.md']
 count = 0
 for p in files:
     text = p.read_text(encoding='utf8')

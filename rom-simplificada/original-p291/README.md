@@ -1,5 +1,16 @@
 # TV Base desde los originales del P291
 
+## Resultado físico · primer P291 instalado
+
+La plataforma 0.2.0 quedó instalada mediante el instalador 0.2.2. Se comprobaron cinco escrituras verificadas por lectura y seis respaldos. La foto muestra el inicio de TV Base; el usuario confirma que puede conectarse por WiFi. Se guardaron y verificaron en PC 199 archivos, con un total de 6.091.261.673 bytes, incluidos los seis respaldos de 6.067.060.736 bytes. [Evidencia física](../../docs/evidencia/INSTALACION-FISICA-P291-022.md).
+
+La tecla Home del control no vuelve al inicio y la APK del usuario sigue en prueba. La [revisión local de Home](../../docs/hipotesis/HOME-P291.md) aporta hipótesis, sin confirmar la configuración actual del TV ni la causa. El proveedor WebView efectivo, el rendimiento multimedia y la recuperación desde el Android nuevo siguen pendientes de prueba.
+
+No modificar los artefactos históricos ni repetir la instalación. Los nuevos cambios y la [propuesta de capa común, lotes y actualizaciones](../../docs/PROPUESTA-LOTES-Y-ACTUALIZACIONES.md) esperan el OK explícito del usuario.
+
+
+## Antecedente: estado anterior a la prueba física de 0.2.2
+
 ## Vigente · instalador/restaurador0.2.2
 
 La plataforma0.2.0 conserva sus cinco imágenes. [022](../../docs/evidencia/INSTALADOR-P291-022.md) corrige el rechazo del nombreAmlogic system en instalación/restauración; susZIP ya están copiados/releídos enKingston. TV todavíarecovery, ROM noinstalada. Usar022 desdeese menú, sin repetir AccesoUSB09/prepare/Update. El error021 ocurrió antesdebackup/formato/flash; fuentes/recibos anteriores se conservan.

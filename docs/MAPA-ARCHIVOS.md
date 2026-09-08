@@ -6,21 +6,23 @@ La flecha expresa la relación indicada, no que se haya completado la prueba de 
 
 ```mermaid
 flowchart LR
-    C_PERFIL["Perfil del equipo · observado_tv"]
+    C_PERFIL["P291 instalado · observado_tv"]
     C_BASE["Candidato anterior · verificado_local"]
     C_CHROME["Chrome 138 · verificado_local"]
-    C_INICIO["Inicio TV 0.2.0 · verificado_local"]
-    C_ROM["ROM original P291 0.2.0 · verificado_local"]
+    C_INICIO["Inicio: Home pendiente · observado_tv"]
+    C_ROM["TV Base 0.2.0 instalada · observado_tv"]
     C_WEB["Proveedor WebView · verificado_local"]
-    C_ZIP["Instalador022: identidad Amlogic · verificado_local"]
+    C_ZIP["Instalador 0.2.2 usado · observado_tv"]
     C_REC["Restaurador022 · verificado_local"]
-    C_ENTRY["Acceso0.9: recovery ejecutó ZIP0.2.1 · observado_tv"]
-    C_USB["Kingston: entrega022 verificada · verificado_local"]
-    C_TV["P291 enrecovery; ROMpendiente · observado_tv"]
+    C_ENTRY["Entrada 0.9 lograda · observado_tv"]
+    C_USB["Respaldos conservados · observado_tv"]
+    C_TV["P291: TV Base y WiFi · observado_tv"]
     C_APP["APK del producto · propuesto"]
     C_GESTION["Gestor propio 0.1 · verificado_local"]
     C_BTCTRL["Control Bluetooth normal · observado_tv"]
     C_ORIG["Originales del P291 · observado_tv"]
+    C_PRODUCTO["Producto común · propuesto"]
+    C_LOTES["Dos recorridos de lote · propuesto"]
     C_PERFIL -->|"selecciona"| C_BASE
     C_CHROME -->|"motor admitido"| C_WEB
     C_INICIO -->|"se integra"| C_ROM
@@ -38,15 +40,19 @@ flowchart LR
     C_ORIG -->|"recovery adquirido"| C_REC
     C_ENTRY -->|"recovery ejecutóZIP; instalador abortado"| C_REC
     C_REC -->|"menú físico aún pendiente"| C_ZIP
+    C_PERFIL -->|"califica"| C_LOTES
+    C_LOTES -->|"propone receta"| C_ZIP
+    C_ROM -->|"soporta"| C_PRODUCTO
+    C_PRODUCTO -->|"contrato común"| C_APP
 ```
 
 ## Archivos por componente
 
-### C-PERFIL · Perfil del equipo
+### C-PERFIL · P291 instalado
 
-**observado_tv**. Primer TV P291 identificado por ADB local; segundo P271 solo diagnóstico. Capacidades físicas de la ROM nueva pendientes.
+**observado_tv**. Primer P291 instalado. Topología nominal e inicios de partición registrados; WiFi conectado según el usuario. P271 requiere otro perfil.
 
-Requisitos: REQ-02, REQ-10.
+Requisitos: REQ-02, REQ-10, REQ-15.
 
 - [dossier-s905l2.html](../dossier-s905l2.html)
 - [diagnostico/primer-tv-20260906-actualizacion-local/HALLAZGOS.md](../diagnostico/primer-tv-20260906-actualizacion-local/HALLAZGOS.md)
@@ -57,6 +63,9 @@ Requisitos: REQ-02, REQ-10.
 - [diagnostico/primer-tv-evidencia-20260907-000948/resumen-saneado.json](../diagnostico/primer-tv-evidencia-20260907-000948/resumen-saneado.json)
 - [diagnostico/primer-tv-complemento-20260907-003114/HALLAZGOS.md](../diagnostico/primer-tv-complemento-20260907-003114/HALLAZGOS.md)
 - [diagnostico/primer-tv-complemento-20260907-003114/resumen-saneado.json](../diagnostico/primer-tv-complemento-20260907-003114/resumen-saneado.json)
+- [docs/evidencia/INSTALACION-FISICA-P291-022.md](../docs/evidencia/INSTALACION-FISICA-P291-022.md)
+- [diagnostico/primer-tv-instalado-20260908/HALLAZGOS.md](../diagnostico/primer-tv-instalado-20260908/HALLAZGOS.md)
+- [diagnostico/primer-tv-instalado-20260908/resumen-saneado.json](../diagnostico/primer-tv-instalado-20260908/resumen-saneado.json)
 
 ### C-BASE · Candidato anterior
 
@@ -82,9 +91,9 @@ Requisitos: REQ-04.
 - [actualizacion-chrome/chrome-138.0.7204.179-arm32.apk](../actualizacion-chrome/chrome-138.0.7204.179-arm32.apk)
 - [actualizacion-chrome/verificacion/LEEME.md](../actualizacion-chrome/verificacion/LEEME.md)
 
-### C-INICIO · Inicio TV 0.2.0
+### C-INICIO · Inicio: Home pendiente
 
-**verificado_local**. Inicio propio con Ajustes TV y selección de APK por documentos/USB. Firma API28 comprobada; recorrido con mando pendiente.
+**observado_tv**. Foto del menú TV Base. El botón Home físico no retorna al inicio según el usuario. ISSUE-HOME-01 abierta; configuración inicial pendiente es una hipótesis, sin valores actuales capturados.
 
 Requisitos: REQ-03, REQ-10.
 
@@ -92,10 +101,15 @@ Requisitos: REQ-03, REQ-10.
 - [rom-simplificada/original-p291/componentes/inicio/AndroidManifest.xml](../rom-simplificada/original-p291/componentes/inicio/AndroidManifest.xml)
 - [rom-simplificada/original-p291/compilar-componentes.py](../rom-simplificada/original-p291/compilar-componentes.py)
 - [rom-simplificada/original-p291/COMPONENTES.json](../rom-simplificada/original-p291/COMPONENTES.json)
+- [docs/evidencia/INSTALACION-FISICA-P291-022.md](../docs/evidencia/INSTALACION-FISICA-P291-022.md)
+- [diagnostico/primer-tv-instalado-20260908/HALLAZGOS.md](../diagnostico/primer-tv-instalado-20260908/HALLAZGOS.md)
+- [diagnostico/primer-tv-instalado-20260908/resumen-saneado.json](../diagnostico/primer-tv-instalado-20260908/resumen-saneado.json)
+- [docs/INCIDENCIAS.md](../docs/INCIDENCIAS.md)
+- [docs/hipotesis/HOME-P291.md](../docs/hipotesis/HOME-P291.md)
 
-### C-ROM · ROM original P291 0.2.0
+### C-ROM · TV Base 0.2.0 instalada
 
-**verificado_local**. Cinco imágenes derivadas del P291 real: 34 APK conservadas, 51 retiradas y 5 agregadas. Kernel/DTB y drivers ajenos al recorte preservados. Android original depurado, no AOSP reconstruido.
+**observado_tv**. Cinco imágenes de plataforma 0.2.0 escritas y releídas por el instalador 0.2.2; primer arranque observado. Aceptación completa de hardware y producto pendiente.
 
 Requisitos: REQ-01, REQ-03, REQ-13, REQ-14.
 
@@ -112,6 +126,9 @@ Requisitos: REQ-01, REQ-03, REQ-13, REQ-14.
 - [rom-simplificada/original-p291/verificar-composicion.py](../rom-simplificada/original-p291/verificar-composicion.py)
 - [rom-simplificada/original-p291/COMPOSICION-VERIFICADA.json](../rom-simplificada/original-p291/COMPOSICION-VERIFICADA.json)
 - [rom-simplificada/original-p291/INCIDENTES-CONSTRUCCION.md](../rom-simplificada/original-p291/INCIDENTES-CONSTRUCCION.md)
+- [docs/evidencia/INSTALACION-FISICA-P291-022.md](../docs/evidencia/INSTALACION-FISICA-P291-022.md)
+- [diagnostico/primer-tv-instalado-20260908/HALLAZGOS.md](../diagnostico/primer-tv-instalado-20260908/HALLAZGOS.md)
+- [diagnostico/primer-tv-instalado-20260908/resumen-saneado.json](../diagnostico/primer-tv-instalado-20260908/resumen-saneado.json)
 
 ### C-WEB · Proveedor WebView
 
@@ -125,11 +142,11 @@ Requisitos: REQ-04, REQ-05, REQ-06.
 - [rom-simplificada/original-p291/componentes/defaults/res/values/defaults.xml](../rom-simplificada/original-p291/componentes/defaults/res/values/defaults.xml)
 - [rom-simplificada/original-p291/COMPONENTES.json](../rom-simplificada/original-p291/COMPONENTES.json)
 
-### C-ZIP · Instalador022: identidad Amlogic
+### C-ZIP · Instalador 0.2.2 usado
 
-**verificado_local**. 022 corrige nombre/identidadMMC; cinco imágenes0.2.0, backup6 y userdata limpia. VerificadoPC y entregado; físico pendiente.
+**observado_tv**. Cierre verificado con seis respaldos, userdata preparada y cinco escrituras y relecturas, boot al final. No repetir la instalación.
 
-Requisitos: REQ-01, REQ-09, REQ-11.
+Requisitos: REQ-01, REQ-09, REQ-11, REQ-16.
 
 - [rom-simplificada/original-p291/instalacion-022/CONTRATO-MIGRACION.md](../rom-simplificada/original-p291/instalacion-022/CONTRATO-MIGRACION.md)
 - [rom-simplificada/original-p291/instalacion-022/main_linux.go](../rom-simplificada/original-p291/instalacion-022/main_linux.go)
@@ -162,12 +179,15 @@ Requisitos: REQ-01, REQ-09, REQ-11.
 - [rom-simplificada/original-p291/instalacion-022/block_layout_test.go](../rom-simplificada/original-p291/instalacion-022/block_layout_test.go)
 - [rom-simplificada/original-p291/instalacion-022/REVISION-LAYOUT-022.json](../rom-simplificada/original-p291/instalacion-022/REVISION-LAYOUT-022.json)
 - [rom-simplificada/original-p291/instalacion-022/README.md](../rom-simplificada/original-p291/instalacion-022/README.md)
+- [docs/evidencia/INSTALACION-FISICA-P291-022.md](../docs/evidencia/INSTALACION-FISICA-P291-022.md)
+- [diagnostico/primer-tv-instalado-20260908/HALLAZGOS.md](../diagnostico/primer-tv-instalado-20260908/HALLAZGOS.md)
+- [diagnostico/primer-tv-instalado-20260908/resumen-saneado.json](../diagnostico/primer-tv-instalado-20260908/resumen-saneado.json)
 
 ### C-REC · Restaurador022
 
 **verificado_local**. Misma guardaMMC corregida; cincoOEM, conservauserdata; sin prueba física.
 
-Requisitos: REQ-11.
+Requisitos: REQ-11, REQ-16.
 
 - [diagnostico/primer-tv-lan-20260907-184926/RECOVERY-ORIGINAL.md](../diagnostico/primer-tv-lan-20260907-184926/RECOVERY-ORIGINAL.md)
 - [rom-simplificada/original-p291/restauracion-022/main_linux.go](../rom-simplificada/original-p291/restauracion-022/main_linux.go)
@@ -188,9 +208,9 @@ Requisitos: REQ-11.
 - [rom-simplificada/original-p291/restauracion-022/REVISION-LAYOUT-022.json](../rom-simplificada/original-p291/restauracion-022/REVISION-LAYOUT-022.json)
 - [rom-simplificada/original-p291/restauracion-022/README.md](../rom-simplificada/original-p291/restauracion-022/README.md)
 
-### C-ENTRY · Acceso0.9: recovery ejecutó ZIP0.2.1
+### C-ENTRY · Entrada 0.9 lograda
 
-**observado_tv**. ENV/BCB verificados; recovery tras ciclo físico. Foto demuestra update-binary0.2.1 ejecutado; luego aborto por guarda eMMC de system. No repetir entrada ni instalar otra vez sin corregir causa.
+**observado_tv**. Antecedente: ENV/BCB preparados y verificados una vez, seguido de entrada física a recovery. 0.2.1 abortó en su guarda; 0.2.2 la corrigió y terminó. APK 0.9 fija 0.2.1 y no corresponde a próximos pasos. Reentrada desde Android nuevo pendiente.
 
 Requisitos: REQ-11.
 
@@ -217,9 +237,9 @@ Requisitos: REQ-11.
 - [rom-simplificada/original-p291/entrada-apk/EJECUCION-TV-09.json](../rom-simplificada/original-p291/entrada-apk/EJECUCION-TV-09.json)
 - [docs/evidencia/PREPARACION-ENTRADA-P291-09.md](../docs/evidencia/PREPARACION-ENTRADA-P291-09.md)
 
-### C-USB · Kingston: entrega022 verificada
+### C-USB · Respaldos conservados
 
-**verificado_local**. DosZIP022+guía copiados/releídos. Tresarchivos021 archivados; informes/respaldos iguales. PendrivePC.
+**observado_tv**. 199 archivos guardados y verificados en PC, incluidos seis respaldos. La adquisición no escribió al USB.
 
 Requisitos: REQ-01.
 
@@ -236,10 +256,15 @@ Requisitos: REQ-01.
 - [preparacion-usb/entrega-original-022.json](../preparacion-usb/entrega-original-022.json)
 - [preparacion-usb/REVISION-ORIGINAL-022.json](../preparacion-usb/REVISION-ORIGINAL-022.json)
 - [preparacion-usb/CIERRE-ENTREGA-022.json](../preparacion-usb/CIERRE-ENTREGA-022.json)
+- [docs/evidencia/INSTALACION-FISICA-P291-022.md](../docs/evidencia/INSTALACION-FISICA-P291-022.md)
+- [diagnostico/primer-tv-instalado-20260908/HALLAZGOS.md](../diagnostico/primer-tv-instalado-20260908/HALLAZGOS.md)
+- [diagnostico/primer-tv-instalado-20260908/resumen-saneado.json](../diagnostico/primer-tv-instalado-20260908/resumen-saneado.json)
+- [diagnostico/primer-tv-instalado-20260908/adquirir-usb.ps1](../diagnostico/primer-tv-instalado-20260908/adquirir-usb.ps1)
+- [diagnostico/primer-tv-instalado-20260908/verificar-adquisicion.py](../diagnostico/primer-tv-instalado-20260908/verificar-adquisicion.py)
 
-### C-TV · P291 enrecovery; ROMpendiente
+### C-TV · P291: TV Base y WiFi
 
-**observado_tv**. Recovery ejecutó021, aborto antesdemigración por nombresystem. Usuario mantiene recovery abierto;022 pendiente.
+**observado_tv**. Arranque observado y WiFi conectado según el usuario. APK en prueba, Home no vuelve al inicio; restantes criterios pendientes.
 
 Requisitos: REQ-13.
 
@@ -280,6 +305,9 @@ Requisitos: REQ-13.
 - [rom-simplificada/original-p291/entrada-apk/EJECUCION-TV-09.json](../rom-simplificada/original-p291/entrada-apk/EJECUCION-TV-09.json)
 - [docs/evidencia/PREPARACION-ENTRADA-P291-09.md](../docs/evidencia/PREPARACION-ENTRADA-P291-09.md)
 - [rom-simplificada/original-p291/instalacion-021/FORMATEADOR-PRUEBA-TV.json](../rom-simplificada/original-p291/instalacion-021/FORMATEADOR-PRUEBA-TV.json)
+- [docs/evidencia/INSTALACION-FISICA-P291-022.md](../docs/evidencia/INSTALACION-FISICA-P291-022.md)
+- [diagnostico/primer-tv-instalado-20260908/HALLAZGOS.md](../diagnostico/primer-tv-instalado-20260908/HALLAZGOS.md)
+- [diagnostico/primer-tv-instalado-20260908/resumen-saneado.json](../diagnostico/primer-tv-instalado-20260908/resumen-saneado.json)
 
 ### C-APP · APK del producto
 
@@ -293,7 +321,7 @@ Implementación pendiente; especificación en [ESPECIFICACION](ESPECIFICACION.md
 
 **verificado_local**. APK para actualizaciones de aplicaciones y Chrome, 38 pruebas host y revisión independiente. Integrado como priv-app con permiso acotado. Desactivado, sin endpoint; no hay prueba Android ni OTA completa.
 
-Requisitos: REQ-07, REQ-09, REQ-14.
+Requisitos: REQ-07, REQ-09, REQ-14, REQ-17.
 
 - [rom-simplificada/componentes/gestion-tvbase/README.md](../rom-simplificada/componentes/gestion-tvbase/README.md)
 - [rom-simplificada/componentes/gestion-tvbase/AndroidManifest.xml](../rom-simplificada/componentes/gestion-tvbase/AndroidManifest.xml)
@@ -321,7 +349,7 @@ Requisitos: REQ-13.
 
 ### C-ORIG · Originales del P291
 
-**observado_tv**. Doce particiones seleccionadas (2538 MiB) verificadas; fuente de la ROM y ZIP de restauración. No incluye userdata/cache ni toda eMMC; restauración física pendiente.
+**observado_tv**. Doce particiones OEM seleccionadas, 2538 MiB, conservadas como fuente original. Se agrega un conjunto previo a la instalación de seis respaldos, incluida userdata. Hay cinco particiones comunes a ambos conjuntos; no es toda la eMMC ni restauración ensayada.
 
 Requisitos: REQ-02, REQ-09, REQ-11.
 
@@ -330,6 +358,23 @@ Requisitos: REQ-02, REQ-09, REQ-11.
 - [diagnostico/respaldar-p291-lan.py](../diagnostico/respaldar-p291-lan.py)
 - [diagnostico/test_respaldo_p291_lan.py](../diagnostico/test_respaldo_p291_lan.py)
 - [diagnostico/respaldo-p291-lan/EVIDENCIA-SANEADA.json](../diagnostico/respaldo-p291-lan/EVIDENCIA-SANEADA.json)
+- [diagnostico/primer-tv-instalado-20260908/resumen-saneado.json](../diagnostico/primer-tv-instalado-20260908/resumen-saneado.json)
+
+### C-PRODUCTO · Producto común
+
+**propuesto**. Contrato común de producto sobre bases por perfil; diseño y cambios pendientes de OK.
+
+Requisitos: REQ-08, REQ-15, REQ-17.
+
+- [docs/PROPUESTA-LOTES-Y-ACTUALIZACIONES.md](../docs/PROPUESTA-LOTES-Y-ACTUALIZACIONES.md)
+
+### C-LOTES · Dos recorridos de lote
+
+**propuesto**. Calificación exhaustiva y posterior instalación rápida con identificación de cada unidad, política de respaldo y medición. Diseño propuesto, sin implementar.
+
+Requisitos: REQ-15, REQ-16, REQ-17.
+
+- [docs/PROPUESTA-LOTES-Y-ACTUALIZACIONES.md](../docs/PROPUESTA-LOTES-Y-ACTUALIZACIONES.md)
 
 ## Directorios y cuidado
 
@@ -343,7 +388,11 @@ Requisitos: REQ-02, REQ-09, REQ-11.
 | `rom-simplificada/original-p291/` | Plataforma0.2.0 inmutable, selección y gestor | Fuentes y recibos versionados; privados excluidos |
 | `rom-simplificada/original-p291/instalacion-021/` | Instalador0.2.1: seis respaldos y migración de datos | Release inmutable; preparación PC no acredita instalación |
 | `rom-simplificada/original-p291/restauracion-021/` | Restaurador0.2.1 de cinco imágenes OEM | Conserva userdata; no restaura su respaldo ni ofrece rollback |
-| `rom-simplificada/original-p291/entrada-apk/` | AccesoUSB0.9 y contrato ENV/BCB | Uso del método específico pendiente de decisión; no reset automático |
+| `rom-simplificada/original-p291/entrada-apk/` | Acceso USB 0.9 y contrato ENV/BCB | Preparación y entrada logradas; recibos históricos, no repetir |
+| `rom-simplificada/original-p291/instalacion-022/` | Instalador 0.2.2 ejecutado en el primer P291 | Conservar release y enlazar evidencia física; no reinstalar por rutina |
+| `rom-simplificada/original-p291/restauracion-022/` | Restaurador de cinco imágenes OEM | Preparado, sin ensayo físico; no restaura userdata |
+| `diagnostico/primer-tv-instalado-20260908/` | Adquisición y revisión del cierre 0.2.2 | Fuentes y resumen públicos; imágenes y registros completos privados |
+| `privado/instalacion022-adquisicion-*/` | Seis respaldos previos a la instalación, incluida userdata | Conservar completos e inmutables; nunca publicar ni clonar a otra unidad |
 | `rom-simplificada/original-p291/empaquetado/salida/` | Releases0.2.0 históricas | Conservar; ioctl ARM32 corregido en0.2.1 |
 | `privado/TVBASE-respaldo-*/` | Adquisiciones originales P291 | Inmutables; no publicar ni confundir con userdata |
 | `preparacion-usb/` | Preparadores y recibos de operaciones | Usar identidad estable; no repetir por rutina |
@@ -366,8 +415,8 @@ Requisitos: REQ-02, REQ-09, REQ-11.
 | README.md | 1 | 0.000 |
 | actualizacion-chrome | 51 | 0.417 |
 | analisis-rom | 15 | 1.822 |
-| diagnostico | 173 | 0.018 |
-| docs | 38 | 0.000 |
+| diagnostico | 177 | 0.018 |
+| docs | 42 | 0.000 |
 | dossier-s905l2.html | 1 | 0.000 |
 | images | 1 | 1.352 |
 | platform-tools-latest-windows.zip | 1 | 0.008 |

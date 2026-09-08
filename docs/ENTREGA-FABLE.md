@@ -1,5 +1,18 @@
 # Mensaje para Fable 5.1 en Claude Desktop
 
+## Resultado físico y trabajo siguiente, pendiente de OK
+
+El primer P291 arrancó TV Base; el usuario confirma que puede conectarse por WiFi. El pendrive trajo seis respaldos y los recibos de formato correcto, montaje vacío de solo lectura y cinco escrituras verificadas por lectura. El cierre del instalador 0.2.2 indica `installed_verified`. Se guardaron y verificaron en PC 199 archivos, con un total de 6.091.261.673 bytes; los seis respaldos incluidos suman 6.067.060.736 bytes. [Evidencia](evidencia/INSTALACION-FISICA-P291-022.md) · [Hallazgos y resumen](../diagnostico/primer-tv-instalado-20260908/HALLAZGOS.md).
+
+Incidencia abierta: Home, la tecla de la casita del control, no vuelve al inicio. El usuario prueba su APK; todavía no están comprobados el proveedor WebView efectivo ni el rendimiento multimedia. [ISSUE-HOME-01](INCIDENCIAS.md). La [revisión local de Home](hipotesis/HOME-P291.md) plantea hipótesis sobre la configuración inicial y la traducción de la tecla; los datos actuales del TV son desconocidos.
+
+La [propuesta PROP-16](PROPUESTA-LOTES-Y-ACTUALIZACIONES.md) separa una capa común de producto de las bases por perfil de hardware. Distingue la calificación del primer ejemplar de la instalación rápida del resto, con identidad y respaldos individuales, y plantea actualizaciones por componente. REQ-15/16/17 y ADR-28 registran ese diseño como propuesto. Se deben medir las fases: no todo el tiempo de instalación correspondió a copiar respaldos, y aún no se puede prometer un ahorro.
+
+El usuario pidió revisar las propuestas antes de actuar: no modificar el TV, construir o instalar otra ROM, corregir Home ni activar el servidor sin su OK explícito. Se permiten revisiones documentales; los cambios siguientes siguen pendientes. La recuperación y la reentrada desde el Android nuevo no se probaron.
+
+
+## Antecedente: estado anterior a la prueba física de 0.2.2
+
 ## Vigente · error de nombre Amlogic corregido en0.2.2
 
 La preparaciónENV/BCB09 funcionó: menú recovery y ejecución021 observados. El instalador abortó con destino no eMMC particionada: system antes debackup/formato/flash. [Error y alcance](evidencia/ERROR-INSTALADOR-P291-021.md). La fuenteAmlogic asigna nombres lógicos manteniendo parent/part_type; [referencias fijadas y geometría](evidencia/PARTICIONES-AMLOGIC-P291-022.md).

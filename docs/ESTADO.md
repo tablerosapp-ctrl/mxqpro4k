@@ -1,26 +1,30 @@
 # Estado operativo
 
-## Vigente · corrección0.2.2 entregada, TV en recovery
+## Vigente · 8/9/2026, TV Base instalado y arrancado
 
-**Corrección 0.2.2 copiada y releída en Kingston; TV en recovery. Instalación física pendiente.** El usuario confirmó ambos estados. No se solicitó reinicio ni otra preparaciónENV. El LED roto no se usa para diagnóstico.
+**TV Base arrancó en el primer P291. La instalación 0.2.2 y los seis respaldos están verificados; el usuario confirma que puede conectarse por WiFi. Queda pendiente el botón Home del control.** La foto acredita el launcher y los recibos recuperados acreditan el cierre del instalador. El usuario prueba su APK; no se accedió al TV durante esta revisión.
 
-| Componente | Resultado y límite |
+| Área | Resultado |
 | --- | --- |
-| C-ENTRY / M1 | PreparaciónENV/BCB09 ejecutada una vez y verificada; menú recovery y ejecución de update-binary021 observados. No se identificó mediante hash el recovery ejecutado. |
-| C-ZIP | 021 abortó antes de respaldo/formato/flash por nombre sysfs `system`. 022 corrige identidad MMC con geometría exacta y revalidación; firmado y verificado enPC. |
-| C-USB | DosZIP022 y guía copiados/releídos, código0. DosZIP021 y guía archivados antes de retiro; informes/respaldos/APK09 iguales. Expulsión segura indicada. |
-| C-REC | Restaurador022 corrige la misma guarda, devuelve cincoOEM conservando datos; sin restauración física probada. |
-| C-ROM / M2 | Imágenes0.2.0 inmutables. ROM todavía no instalada; no existe respaldo adicional de userdata. |
+| Instalación 0.2.2 / plataforma 0.2.0 | Seis respaldos, formato correcto y userdata vacía antes de instalar. Cinco escrituras verificadas por lectura, con boot al final. |
+| Conservación | 199 archivos y 6.091.261.673 bytes guardados y verificados en PC. Los seis respaldos suman 6.067.060.736 bytes, incluida userdata. El USB se leyó sin limpiarlo ni escribir en él. |
+| Arranque | TV Base visible en la foto. Encendido en frío sin USB aún no documentado. |
+| Red | El usuario confirma que puede conectarse por WiFi. Estabilidad, navegación y distintas redes pendientes de prueba específica. |
+| Control | ISSUE-HOME-01: casita/Home no vuelve al inicio. Prioridad funcional siguiente. |
+| APK y multimedia | El usuario sigue probando. Faltan comprobar el proveedor WebView efectivo y el rendimiento con dos videos VP9, uno con transparencia, más canvas. |
+| Recuperación y actualizaciones | Restaurador de cinco particiones OEM preparado, sin ensayo físico ni recuperación automática. Conserva userdata; no recupera su respaldo. Gestor integrado y desactivado; nuevas actualizaciones pendientes. |
 
-[Error021 y alcance](evidencia/ERROR-INSTALADOR-P291-021.md) · [Corrección, hashes y entrega022](evidencia/INSTALADOR-P291-022.md) · [Fuente Amlogic](evidencia/PARTICIONES-AMLOGIC-P291-022.md).
+[Evidencia física](evidencia/INSTALACION-FISICA-P291-022.md) · [Hallazgos](../diagnostico/primer-tv-instalado-20260908/HALLAZGOS.md) · [Resumen verificado](../diagnostico/primer-tv-instalado-20260908/resumen-saneado.json) · [Incidencia Home](INCIDENCIAS.md).
 
-Siguiente paso: conectar Kingston al TV encendido en recovery; Apply update from EXT → Update from udisk → TVBASE-P291-A9-0.2.2-RECOVERY.zip. No elegir ORIGINAL-RESTORE, repetir APK09/prepare/Update, ni hacer wipe separado. La APK09 conserva el hash de021 y no se usa para022. Esperar resultado final o conservar el error exacto antes de decidir reinicio.
+Los sectores de inicio de las particiones y sus enlaces sysfs con nombres lógicos quedaron registrados durante esta ejecución. La ausencia de esas capturas en documentos anteriores corresponde a su fecha; no se deben reescribir los recibos sellados. El error de 0.2.1 quedó superado por 0.2.2 y no reapareció en esta instalación. El reloj del TV marcaba 2020: impide fechar la operación con fiabilidad y calcular su duración total exacta.
 
-Instalador022 comprueba destinos, USB y ENV normal, respalda seis particiones con sincronización y tresSHA, prepara userdata limpia y escribe cinco imágenes con boot al final. Requiere6603931648B libres. La entrega deja29411508224B. Las validacionesPC no acreditan ejecución física; VAL-06/07 siguen pendientes.
+**Límite de trabajo vigente:** documentar, guardar evidencias y proponer. El usuario pidió no ejecutar el trabajo siguiente sin su OK explícito. Esto prevalece sobre la autorización general anterior para continuar instalando. No modificar el TV, instalar otra ROM, corregir Home, configurar el servidor ni aplicar un modo rápido ahora.
 
-El estado previo de ENV/BCB tiene [recibo propio inmutable](../rom-simplificada/original-p291/entrada-apk/EJECUCION-TV-09.json). La comprobación del ENV normal dentro del instalador sigue obligatoria: no saltarla si falla. Doce respaldosOEM/2538MiB ya verificados enPC no incluyen userdata/cache/todaeMMC. No afirmar cero escrituras internas: preparación y recovery escribieron o pueden escribir metadatos, aunque el intento021 no llegó a migrar/grabarAndroid.
+La [propuesta PROP-16](PROPUESTA-LOTES-Y-ACTUALIZACIONES.md) distingue producto, perfil de hardware e identidad de cada unidad. Separa la calificación de nuevos lotes de la instalación rápida de unidades que coincidan. Optimizar los respaldos y las actualizaciones por componente requiere una política explícita; no se clonan datos específicos de otra unidad ni se omiten comprobaciones de integridad. Ningún ahorro de tiempo está medido todavía.
 
-Arranque interno sinUSB, proveedorWebView, WiFi/Ethernet, controles, dosVP9/alfa/canvas, actualización propia y reentrada/restauración desdeAndroid nuevo permanecen pendientes. Gestor desactivado sinURL/clave del servidor. Plataforma Android9 conserva SELinuxpermisivo/framework original y Chrome138; no es un AOSP limpio ni una certificación de ausencia de tráfico ajeno.
+La [revisión local de Home](hipotesis/HOME-P291.md) propone comprobar la configuración inicial y la traducción de la tecla. Son hipótesis: no se conocen esos datos actuales del TV ni hay una corrección probada.
+
+M2 tiene instalación y primer arranque observados; VAL-06 tiene respaldo, formato y escrituras comprobados por los recibos y la adquisición. VAL-07 sigue parcial: faltan encendido en frío, pruebas de hardware y proveedor WebView. M3 incluye Home y multimedia; M4, con reentrada y restauración, sigue pendiente.
 
 
 ## Historial conservado: los estados siguientes son anteriores
