@@ -1,0 +1,50 @@
+{
+  "format": 2,
+  "id": "TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.0",
+  "dt_id": "gxlx2_p291_1g",
+  "media_id": "TVBASE-P291-20260906-4dc82786",
+  "operation": "restore_original",
+  "data_policy": "preserve_existing_userdata",
+  "images": [
+    {
+      "name": "system",
+      "entry": "tvbase/system.img",
+      "size": 1342177280,
+      "sha256": "249611912b7b1fa277d169f8612f9a719df3abf99dc98ed8e817657e2c9beb2c",
+      "major_minor": "179:18",
+      "original_sha256": "249611912b7b1fa277d169f8612f9a719df3abf99dc98ed8e817657e2c9beb2c"
+    },
+    {
+      "name": "vendor",
+      "entry": "tvbase/vendor.img",
+      "size": 943718400,
+      "sha256": "d542fc091469a7c1223c1d5091f8ec6b3456f38dd1218b779d18d1942190d2a7",
+      "major_minor": "179:16",
+      "original_sha256": "d542fc091469a7c1223c1d5091f8ec6b3456f38dd1218b779d18d1942190d2a7"
+    },
+    {
+      "name": "product",
+      "entry": "tvbase/product.img",
+      "size": 134217728,
+      "sha256": "ef2c71f6208e25fa1cc9d5c12cb04972ac20d772e2c11a76972859403b530075",
+      "major_minor": "179:19",
+      "original_sha256": "ef2c71f6208e25fa1cc9d5c12cb04972ac20d772e2c11a76972859403b530075"
+    },
+    {
+      "name": "odm",
+      "entry": "tvbase/odm.img",
+      "size": 134217728,
+      "sha256": "97836d5a1b016b64d3875c82cb5f3b4daee0f56d8eea3675b4231086429cbe67",
+      "major_minor": "179:17",
+      "original_sha256": "97836d5a1b016b64d3875c82cb5f3b4daee0f56d8eea3675b4231086429cbe67"
+    },
+    {
+      "name": "boot",
+      "entry": "tvbase/boot.img",
+      "size": 16777216,
+      "sha256": "13e027a3aae1af232d1d700421486f32b7958a9fa0a157d8cbd3c47243ab697d",
+      "major_minor": "179:11",
+      "original_sha256": "13e027a3aae1af232d1d700421486f32b7958a9fa0a157d8cbd3c47243ab697d"
+    }
+  ]
+}

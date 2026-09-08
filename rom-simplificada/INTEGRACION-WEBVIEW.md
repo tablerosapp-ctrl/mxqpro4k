@@ -1,5 +1,7 @@
 # Chrome/WebView integrado en la ROM Android 9
 
+**Actualización 0.2.0:** la [derivación de los originales P291](original-p291/README.md) declara Chrome138 como único proveedor y retira WebView66. Los componentes y evidencias siguientes describen la integración candidata anterior cuando indiquen un respaldo WebView66. El proveedor efectivo y la composición de video continúan pendientes de prueba física en la nueva ROM.
+
 Estado: investigacion y componentes preparados; no se modifico una imagen ni se instalo software en el TV box. El objetivo vigente es entregar Android simplificado con el navegador/WebView ya integrado en su memoria interna. El APK se utiliza como componente de esa imagen, no como instalacion individual a realizar por el usuario.
 
 ## Decision tecnica

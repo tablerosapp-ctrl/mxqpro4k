@@ -1,0 +1,89 @@
+{
+  "fixture_bytes": 16777216,
+  "source_sha256": "2a2cd34bc52e088ecbe63ee93290d299383450071c504e9b07daeb38cdcb5459",
+  "original_fixture_unchanged": true,
+  "edited_verification": {
+    "unchanged_files_verified": 2,
+    "removed_nodes": 2,
+    "changed_files_verified": 2,
+    "free_bytes": 11436032,
+    "unchanged_nodes_xattrs_verified": 6,
+    "new_directory_contexts_verified": 1
+  },
+  "final_verification": {
+    "unchanged_files_verified": 2,
+    "removed_nodes": 2,
+    "changed_files_verified": 2,
+    "free_bytes": 11436032,
+    "unchanged_nodes_xattrs_verified": 6,
+    "new_directory_contexts_verified": 1
+  },
+  "free_zero_blocks_verified": 2792,
+  "removed_apk_marker_absent": true,
+  "firmware_bytes_preserved": true,
+  "negative_cases": {
+    "new_directory_selinux_missing": {
+      "rejected": true,
+      "reason": "/app/New"
+    },
+    "new_directory_selinux_changed": {
+      "rejected": true,
+      "reason": "/app/New"
+    },
+    "preserved_capability_same_size_changed": {
+      "rejected": true,
+      "reason": "An unrelated extended attribute changed"
+    },
+    "preserved_user_attribute_same_size_changed": {
+      "rejected": true,
+      "reason": "An unrelated extended attribute changed"
+    },
+    "preserved_selinux_41_bytes_changed": {
+      "rejected": true,
+      "reason": "An unrelated extended attribute changed"
+    },
+    "preserved_attribute_added": {
+      "rejected": true,
+      "reason": "An unrelated extended attribute changed"
+    },
+    "preserved_file_mode_changed": {
+      "rejected": true,
+      "reason": "/firmware/firmware.bin"
+    },
+    "new_directory_uid_changed": {
+      "rejected": true,
+      "reason": ""
+    },
+    "edited_file_gid_changed": {
+      "rejected": true,
+      "reason": "/etc/config.txt"
+    },
+    "preserved_file_content_changed": {
+      "rejected": true,
+      "reason": "/firmware/firmware.bin"
+    },
+    "symlink_target_changed": {
+      "rejected": true,
+      "reason": "/firmware/driver-link"
+    }
+  },
+  "all_negative_cases_rejected": true,
+  "new_directory_missing_selinux_accepted": false,
+  "long_attribute_display_omits_value": true,
+  "long_selinux_attribute_verified": {
+    "bytes": 41,
+    "sha256": "a3442be847de89f96f37f0c27056a0d0073c67700ec5ef7e61e399546fb9ac3e"
+  },
+  "malformed_parser_cases_rejected": {
+    "unexpected_error_line": true,
+    "negative_attribute_size": true,
+    "duplicate_attribute": true,
+    "missing_command": true,
+    "wrong_path": true,
+    "truncated_attribute": true
+  },
+  "real_rom_touched": false,
+  "tv_accessed": false,
+  "usb_accessed": false,
+  "test_sha256": "97077deb615691a8b4a712f92ac3c010dbbb0834a6bc3f86b16fba2a2dfcd239"
+}

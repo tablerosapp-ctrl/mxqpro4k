@@ -1,0 +1,23 @@
+[
+  {
+    "component": "inicio",
+    "path": "rom-simplificada/original-p291/privado/componentes/inicio/inicio.apk",
+    "bytes": 16787,
+    "sha256": "7ede3e34862d238754e9294f7d1a9b8e0fb940e1d491142d0244cfbe2ddf2d4a",
+    "signature_verified_api28": true
+  },
+  {
+    "component": "webview-overlay",
+    "path": "rom-simplificada/original-p291/privado/componentes/webview-overlay/webview-overlay.apk",
+    "bytes": 8619,
+    "sha256": "593bf666a48fef1dae910294ffef59598aa8039dd02fbc6864e307e74abc9dc9",
+    "signature_verified_api28": true
+  },
+  {
+    "component": "defaults",
+    "path": "rom-simplificada/original-p291/privado/componentes/defaults/defaults.apk",
+    "bytes": 8538,
+    "sha256": "39c173ca93fe49fbaff1c2ec2806478db4d02898c162bcbdae5ff056cdd03c32",
+    "signature_verified_api28": true
+  }
+]

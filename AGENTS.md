@@ -1,5 +1,19 @@
 # Continuidad de TV Base
 
+## Estado que prevalece · 7/9/2026 ART, original P291 0.2.0 construida
+
+- Leer README, docs/ESTADO.md y docs/evidencia/ROM-ORIGINAL-P291-020.md. Usuario autorizó construir ROM simplificada desde originales reales, conserva prioridad APK/WebView/video y excluir Bluetooth. Servidor propio existe, URL no proporcionada: gestor desactivado sin conexiones ni endpoint inventado.
+- ROM0.2.0 e imágenes VERIFICADAS EN PC; original-p291/IMAGENES-0.2.0.json y COMPOSICION-VERIFICADA.json. ZIPinstall 573492264 B SHA bd4a8dd7df8d61580c5b450867bda2ef2b214b400b4cafcce5a26baa5c48a614; ZIPrestore 913228907 B SHA a10aee68042ef9f945a4160fd897d0db1943e28dd58e0a03918d138e9f1a8e3f, ambos en rom-simplificada/original-p291/empaquetado/salida. Payloads/CRC/firma SHA1 compatible con clave recovery v1 comprobados Python+OpenJDK. No prueba aceptación OEM.
+- 34 APK originales conservadas, 51 retiradas, 5 agregadas. Kernel/multi-DTB originales preservados; boot ramdisk cambia init.rc/init.usb.rc, system install-recovery.sh noop. Se retiran BT/prescindibles/preinstall/su/procmem elevados/consola/ADB abierto predeterminado. Drivers y APIs conservados. WiFi inicialmente OFF, no reparación acreditada.
+- Gestor APK57810 B SHA73f0a2e73857cc83484caa3034bf69b8aa88422945153d71499f81c8ab81d320, 38 tests y revisión independiente ligados a LIBERACION.json. HTTPS firmado, INSTALL_PACKAGES, sin root/listener. APK/motor solamente, no OTA completa ni catálogo. Fuentes congeladas; nuevas ediciones requieren nuevo recibo.
+- Sigue framework/SELinux permisivo/firma de plataforma original: NO AOSP limpio ni certificación antimalware. Tráfico por proceso, controles, WiFi y dos VP9/alfa/canvas pendientes físicos. Chrome138 techo Android9, sin prometer rendimiento ni actualizaciones futuras de esa rama.
+- No TV/USB modificado en esta construcción. Último USB contiene0.1.2 histórico; no repetir Update. Pendientes entrada real recovery y migración userdata; instalador exige data original179:20,RO,vacía salvo lost+found vacío. NO monta/borra/migra data. Restore recupera5particionesOEM, conserva data existente, sin rollback ni restauración ensayada.
+- Continúa condición anterior: ZIP0.1.2 renombrado íntegro, BCB y Java NO cancelados. No forzar reset ni borrar datos sin procedimiento concreto y revisar contenido a conservar. Autorización general persiste; no repetir preguntas rutinarias. No inferir estado actual del TV desde los resultados PC.
+- Fuentes/adquisiciones inmutables en privado/TVBASE-respaldo-P291-20260907-194104-0deb291b y ...194413-6d502965. 12particiones/2538MiB, no userdata/cache/todaeMMC. Nunca publicar imágenes, claves, originales ni registros privados.
+- Construcción conserva intentos fallidos: ea_list omite valor visible de etiquetas41B; extraer EA binaria por ea_get y SHA exacto. debugfs rm en product con inodos128B deja8 bloquesEA huérfanos; helper product_ea.py aplica corrección acotada probada, no reparación genérica. No sobreescribir releases para corregir documentación.
+
+## Antecedentes: las secciones siguientes no sustituyen este estado
+
 ## Estado que prevalece · 7/9/2026, root confirmado y cierre WiFi localizado
 
 - Se preservó ZIPinterno mediante renombradoreversible a /data/cache/TVBASE-0.1.2-preservada-no-instalar.zip paraevitar queintentoanteriorloinstaleantesdedecisión. Hashantes/después exacto,código0, fuenteupdate.zipausente. No borradoZIP ni escritura boot/system/vendor. BCB NOlimpio;uncrypt_filetodavíarefiereviejaruta,hiloJavaNOcancelado. NoprometerarranqueAndroidtrascorteni«cancelacióntotal». Reciboprivado/retirar-update-pendiente.json.

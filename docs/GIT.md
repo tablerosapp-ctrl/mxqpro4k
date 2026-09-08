@@ -1,5 +1,11 @@
 # Historial local y publicación pública
 
+## Registro 0.2.0 desde originales P291
+
+Se incorporan fuentes de construcción, política de paquetes, auditorías de servicios/gestor, pruebas, manifiestos de las cinco imágenes y recibos de los ZIP de instalación/restauración. [Resultado](evidencia/ROM-ORIGINAL-P291-020.md). El grafo y el estado distinguen verificación PC de instalación física pendiente.
+
+Las adquisiciones, APK, imágenes, ZIP, herramientas, claves y pruebas privadas siguen fuera del historial público. No hubo otra limpieza de USB ni de las versiones anteriores. Se conservan los intentos de construcción fallidos y se documentan sus causas, sin convertirlos en releases. La publicación usa el espejo saneado existente y no fuerza el historial de GitHub.
+
 Git conserva los cambios de fuentes, especificación, decisiones y evidencias revisadas. El pendrive y los archivos de varios GB siguen fuera del repositorio: sus manifiestos, tamaños, orígenes y SHA-256 permiten identificar qué se probó. Un commit acredita una versión de los archivos; no acredita que la ROM haya arrancado ni que una instalación física haya terminado.
 
 ## Qué entra al historial

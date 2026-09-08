@@ -1,5 +1,11 @@
 # Mensaje para Fable 5.1 en Claude Desktop
 
+## Actualización para la revisión conjunta · ROM original 0.2.0
+
+Ya se construyó una derivación desde los originales del primer P291 y un ZIP separado de restauración. Revisar [composición/evidencias](evidencia/ROM-ORIGINAL-P291-020.md) y [receta](../rom-simplificada/original-p291/README.md). No hay instalación física ni entrega USB nueva. La candidata0.1.2 y el menú OEM bloqueado no son la próxima prueba.
+
+La revisión externa puede concentrarse en dependencias tras el recorte, entrada/recovery con geometría original, migración de userdata y límites de confianza del framework heredado. El gestor APK/Chrome ya tiene revisión independiente offline; faltan pruebas Android y el servidor del dueño. No ejecutar scripts sobre otro TV ni inferir compatibilidad del P271.
+
 Revisá el repositorio público https://github.com/tablerosapp-ctrl/mxqpro4k. Trabajamos sobre un TV box P291 y necesitamos una revisión independiente de la hipótesis H2, coordinada con Codex, que revisará H1. Primero leé docs/COLABORACION.md y el estado actual; registrá el commit público que recibiste.
 
 Queremos instalar en su memoria interna una ROM Android simplificada desde un pendrive, conservar drivers de video y APIs para APK Flutter/WebView, videos locales y actualización propia. No buscamos solo actualizar Chrome en el Android existente. El primer TV no tendrá red como requisito. Su ADB local ya funciona como shell UID2000; no habilites root ni cambies autenticación.

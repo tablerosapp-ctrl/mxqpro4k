@@ -1,5 +1,15 @@
 # Pendrive · estado de la instalación
 
+## Vigente · ROM 0.2.0 verificada solamente en PC
+
+La [nueva ROM desde originales y la restauración](original-p291/README.md) están construidas y verificadas, pero **todavía no fueron copiadas al Kingston**. No se hizo otro formato, grabación ni limpieza. Se conservan los entregables y recibos anteriores.
+
+No repetir Update con 0.1.2 ni ejecutar su guía antigua. El ZIP nuevo no corrige por sí solo la espera del cierre de Android. Antes de una prueba se necesita una entrada a recovery y una ruta de paquete verificadas, además de preparar userdata limpia. Su instalador comprueba esos datos, pero no los borra o migra automáticamente. [Resultados y límites](../docs/evidencia/ROM-ORIGINAL-P291-020.md).
+
+El paquete separado de restauración recupera cinco particiones OEM si se logra ejecutar recovery; no es una recuperación probada ni restaura userdata retirada. No se indicó otro reset en esta revisión. El BCB/hilo Java anteriores no quedaron cancelados al renombrar el ZIP.
+
+## Historia de las entregas anteriores
+
 ## Vigente: no repetir Update con0.1.2
 
 Elpendrive conserva ROM0.1.2 ysu [recibo de entrega](../preparacion-usb/rom-012-estado.json). Elintento posterior quedó al2%; ahora hayroot confirmado yuna traza que identifica laesperaWiFi. ElZIPinterno sepreservóíntegro conotronombre y se retiróde larutaactiva; faltaba elmapa requerido porrecovery. BCB yelhiloJava no quedaroncancelados.

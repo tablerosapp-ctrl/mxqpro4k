@@ -1,0 +1,37 @@
+{
+  "profile": "gxlx2_p291_1g",
+  "version": "0.2.0",
+  "policy": "Keep explicit platform/API/hardware packages; replace browser and home with reviewed components; omit vendor preinstall entirely.",
+  "keep_groups": {
+    "framework_and_providers": [
+      "android", "com.android.providers.settings", "com.android.providers.media",
+      "com.android.providers.downloads", "com.android.providers.contacts",
+      "com.android.providers.calendar", "com.android.providers.userdictionary",
+      "com.android.providers.telephony", "com.android.externalstorage",
+      "android.ext.services", "android.ext.shared", "com.android.statementservice",
+      "com.android.location.fused", "com.android.se"
+    ],
+    "system_ui_installation_settings": [
+      "com.android.systemui", "com.android.settings", "com.android.tv.settings",
+      "com.android.packageinstaller", "com.android.defcontainer", "com.android.documentsui",
+      "com.android.inputdevices", "com.android.inputmethod.latin", "com.android.onetimeinitializer",
+      "com.android.keychain", "com.android.certinstaller", "com.android.shell"
+    ],
+    "platform_network_apis": [
+      "com.android.captiveportallogin", "com.android.pacprocessor", "com.android.proxyhandler",
+      "com.android.vpndialogs"
+    ],
+    "hardware_settings_local_files": [
+      "com.droidlogic", "com.droidlogic.overlay", "com.droidlogic.tv.settings",
+      "com.droidlogic.FileBrower"
+    ]
+  },
+  "replacement_packages": ["com.android.chrome", "local.tvbase.inicio", "local.tvbase.webview", "local.tvbase.defaults", "local.tvbase.gestion"],
+  "notes": [
+    "VpnDialogs, PacProcessor and ProxyHandler are platform facilities; their presence does not establish a configured proxy or VPN.",
+    "FileBrowser declares no INTERNET permission in this original manifest and preserves local USB file access.",
+    "Google services, Play, bundled entertainment, mirroring, network remote input, factory test, OEM updater, old WebView and old home are omitted.",
+    "Runtime API compatibility, absence of unsolicited traffic and physical video playback require device testing.",
+    "Original framework/native libraries are retained for this experimental build; this is not a full AOSP source rebuild or a malware-free certification."
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "state": "passed",
+  "date_utc": "2026-09-08T01:09:14.896604+00:00",
+  "image_report_sha256": "11927b01a773a6b4dc7e762fb85e86bf7bc15782f34d035a3aa202bc917c7a12",
+  "verifier_sha256": "2cb06308f28fe2bc9682a444d0c7e29f0937ab5f684133f70f13708a18f7113f",
+  "apk_count": 39,
+  "retained_original_packages": 34,
+  "added_apks": 5,
+  "apks": [
+    {
+      "partition": "product",
+      "path": "/priv-app/droidlogic-res/droidlogic-res.apk",
+      "sha256": "e72cc33e3cca56c3bd313cb88f23c9e4bfbfb62e3da7ae19305f09c6a7534cde"
+    },
+    {
+      "partition": "system",
+      "path": "/app/CaptivePortalLogin/CaptivePortalLogin.apk",
+      "sha256": "cbff874280b14ac99f944a0c76657db5eec5063c2fcb0726782cd72ee74affe7"
+    },
+    {
+      "partition": "system",
+      "path": "/app/CertInstaller/CertInstaller.apk",
+      "sha256": "a18bbf8c7db67a8cd759efa9343fa4e331c2965c841bf9110f2d9049bbf32358"
+    },
+    {
+      "partition": "system",
+      "path": "/app/Chrome/Chrome.apk",
+      "sha256": "3d9414001b3e2555831cd014df2c9ae5a6eab10190c4cffce7ecaad3c0f53f23"
+    },
+    {
+      "partition": "system",
+      "path": "/app/ExtShared/ExtShared.apk",
+      "sha256": "428e3f1cd79c9a28e95d6692da788e66db79fba4a4f9fe36e44b4f668312cad7"
+    },
+    {
+      "partition": "system",
+      "path": "/app/InicioTV/InicioTV.apk",
+      "sha256": "7ede3e34862d238754e9294f7d1a9b8e0fb940e1d491142d0244cfbe2ddf2d4a"
+    },
+    {
+      "partition": "system",
+      "path": "/app/KeyChain/KeyChain.apk",
+      "sha256": "1a5ff2d43344314976cc3a16e4304b2fca4f150e54e9390c69856d7bec14ce5a"
+    },
+    {
+      "partition": "system",
+      "path": "/app/LatinIME/LatinIME.apk",
+      "sha256": "e84a4028df6dcc2bec4b43c99293feeff5adf824b964ea948fb13122b0f22d84"
+    },
+    {
+      "partition": "system",
+      "path": "/app/PacProcessor/PacProcessor.apk",
+      "sha256": "b150313009dd492e5dedf961764f1e2ca4e0548a3aebe7174a8d9abd4112e88a"
+    },
+    {
+      "partition": "system",
+      "path": "/app/SecureElement/SecureElement.apk",
+      "sha256": "1db3184a52248b1e8691354145d9b775ac65028b731a8162281e1e121c5ff193"
+    },
+    {
+      "partition": "system",
+      "path": "/framework/framework-res.apk",
+      "sha256": "c21f8aa12606b193535460ddc7f0068432d9094c1f5da6074d59d8ecf303ab4a"
+    },
+    {
+      "partition": "system",
+      "path": "/priv-app/CalendarProvider/CalendarProvider.apk",
+      "sha256": "a0a5e4d70e9d725c35bcb6db7a4248fd1bb01a5db6fe7752f514b1d5b4224541"
+    },
+    {
+      "partition": "system",
+      "path": "/priv-app/ContactsProvider/ContactsProvider.apk",
+      "sha256": "ca1351867d0a447462628bc61bf5c18bba50762d63bb00e596aa22e41fad988a"
+    },
+    {
+      "partition": "system",
+      "path": "/priv-app/DefaultContainerService/DefaultContainerService.apk",
+      "sha256": "8ae93f0c480a0607d5bdddbd8e216dacfe55ac29b70063a6a9684301767504fe"
+    },
+    {
+      "partition": "system",
+      "path": "/priv-app/DocumentsUI/DocumentsUI.apk",
+      "sha256": "a6df8c599719aa9d726e383c4490eddd23d8809c54ae18f1e09a2188399af712"
+    },
+    {
+      "partition": "system",
+      "path": "/priv-app/DownloadProvider/DownloadProvider.apk",
+      "sha256": "0907e8c52c352304b2c727dd93027e189cddaacd9ad29b7865284fe52e4f1ce8"
+    },
+    {
+      "partition": "system",
+      "path": "/priv-app/ExtServices/ExtServices.apk",
+      "sha256": "141154930cf0d6f4782b5383c1b04214442ce7f84677a671350fd95451b6182e"
+    },
+    {
+      "partition": "system",
+      "path": "/priv-app/ExternalStorageProvider/ExternalStorageProvider.apk",
+      "sha256": "1093479251effb29950604642b1dfb6c38f1448b7e88c75407e05d94bd9f627d"
+    },
+    {
+      "partition": "system",
+      "path": "/priv-app/FusedLocation/FusedLocation.apk",
+      "sha256": "1dcf4976b187e9a6af5ba42c70d5cbac8aa3be34bbed6271722b3846a21a3e9b"
+    },
+    {
+      "partition": "system",
+      "path": "/priv-app/InputDevices/InputDevices.apk",
+      "sha256": "25bd7ff9e6f5c0c4755aba113c8f61a79fd2eda0295b5573a2cd821ccd219ea4"
+    },
+    {
+      "partition": "system",
+      "path": "/priv-app/MediaProvider/MediaProvider.apk",
+      "sha256": "6c8dca2661e657be3182f7359fe93e355674d640a8e6ca5ae9b2113288b7d663"
+    },
+    {
+      "partition": "system",
+      "path": "/priv-app/OneTimeInitializer/OneTimeInitializer.apk",
+      "sha256": "fca3ecb37ac9faf73ea60674607d250d9b3de34f3358876fa3426a6151a457a6"
+    },
+    {
+      "partition": "system",
+      "path": "/priv-app/PackageInstaller/PackageInstaller.apk",
+      "sha256": "2dbf4414d474e8b16cc9cac9465284f9244d77b88e777080749871f55eb93e46"
+    },
+    {
+      "partition": "system",
+      "path": "/priv-app/ProxyHandler/ProxyHandler.apk",
+      "sha256": "3b7ee1fc7b7cfa1f766702a5deea3d8bfec45fc3305d95ea710359b11173925d"
+    },
+    {
+      "partition": "system",
+      "path": "/priv-app/Settings/Settings.apk",
+      "sha256": "8a0ef8cdaba8632572ff16b4e50280b9b73934210d3a51bd7efc002fe93a8643"
+    },
+    {
+      "partition": "system",
+      "path": "/priv-app/SettingsProvider/SettingsProvider.apk",
+      "sha256": "0ab2ac814e542c7329ef60eaf944ec8f244df0966985cf49a42a4319d7cff454"
+    },
+    {
+      "partition": "system",
+      "path": "/priv-app/Shell/Shell.apk",
+      "sha256": "fba01778711703612ae08f94d53b9ab44383afbacaa1c36a05444a5e1beb7a4b"
+    },
+    {
+      "partition": "system",
+      "path": "/priv-app/StatementService/StatementService.apk",
+      "sha256": "f020a53d5c4ff60e456e72ae6015dcc32e682191151246840b1c6fc9d7687e13"
+    },
+    {
+      "partition": "system",
+      "path": "/priv-app/SystemUI/SystemUI.apk",
+      "sha256": "d3ab7e32fa7a8a0fd29e9670e1c0b2e46ae638610eafbc55c607259a2ad9fb5f"
+    },
+    {
+      "partition": "system",
+      "path": "/priv-app/TVBaseGestion/TVBaseGestion.apk",
+      "sha256": "73f0a2e73857cc83484caa3034bf69b8aa88422945153d71499f81c8ab81d320"
+    },
+    {
+      "partition": "system",
+      "path": "/priv-app/TelephonyProvider/TelephonyProvider.apk",
+      "sha256": "d2ffc2742db8bf7b554034be9e2b5187849770dc22ac498a67d617b9c6245dff"
+    },
+    {
+      "partition": "system",
+      "path": "/priv-app/TvSettings/TvSettings.apk",
+      "sha256": "f1605c8dbb1d9e7a949e61b03293657c98a990d6a7a394f54732b718de869861"
+    },
+    {
+      "partition": "system",
+      "path": "/priv-app/UserDictionaryProvider/UserDictionaryProvider.apk",
+      "sha256": "8b9a1c468c0e638b1a5331e6bbaefa7588f378cffb1c58e53db8e60f97fb4020"
+    },
+    {
+      "partition": "system",
+      "path": "/priv-app/VpnDialogs/VpnDialogs.apk",
+      "sha256": "b9e3351ba3124dcc0fa7b3c5fde3b92542f6ab5227359bb430fc7e6266669da8"
+    },
+    {
+      "partition": "vendor",
+      "path": "/app/DroidTvSettings/DroidTvSettings.apk",
+      "sha256": "10fcd12871dffe2cd6496e9b0f82dff2994ca3237a4fe937b734377f3626ceac"
+    },
+    {
+      "partition": "vendor",
+      "path": "/app/FileBrowser/FileBrowser.apk",
+      "sha256": "5d5a58be692426ed61f857c9a31f6f1a63aaceb7131de062057a188716a9818e"
+    },
+    {
+      "partition": "vendor",
+      "path": "/overlay/DroidOverlay.apk",
+      "sha256": "bd7b434eb13bacd129f0e8c1a04147ed31bedb136dac2bcb1402641cfb9cf17e"
+    },
+    {
+      "partition": "vendor",
+      "path": "/overlay/TVBaseDefaults/TVBaseDefaults.apk",
+      "sha256": "39c173ca93fe49fbaff1c2ec2806478db4d02898c162bcbdae5ff056cdd03c32"
+    },
+    {
+      "partition": "vendor",
+      "path": "/overlay/TVBaseWebView/TVBaseWebView.apk",
+      "sha256": "593bf666a48fef1dae910294ffef59598aa8039dd02fbc6864e307e74abc9dc9"
+    }
+  ],
+  "free_blocks": {
+    "system": {
+      "zero_free_blocks": 111845,
+      "zero_free_bytes": 458117120,
+      "uninitialized_groups_reconstructed": []
+    },
+    "vendor": {
+      "zero_free_blocks": 178848,
+      "zero_free_bytes": 732561408,
+      "uninitialized_groups_reconstructed": [
+        {
+          "group": 4,
+          "metadata_blocks": 0,
+          "free_blocks": 32768
+        },
+        {
+          "group": 5,
+          "metadata_blocks": 58,
+          "free_blocks": 32710
+        },
+        {
+          "group": 6,
+          "metadata_blocks": 0,
+          "free_blocks": 32768
+        }
+      ]
+    },
+    "product": {
+      "zero_free_blocks": 31584,
+      "zero_free_bytes": 129368064,
+      "uninitialized_groups_reconstructed": []
+    },
+    "odm": {
+      "zero_free_blocks": 31613,
+      "zero_free_bytes": 129486848,
+      "uninitialized_groups_reconstructed": []
+    }
+  },
+  "manager_configuration_disabled": true,
+  "kernel_sha256": "9968c75f691f67dcb805ef8105e1ca534f73430bcf8b3920a066580e326b791a",
+  "dtb_sha256": "13e54b5f1bba959e398da74b9d0859d08ba1747840ed3866eca1f3461c550d01",
+  "elevated_legacy_su_and_procmem_absent": true,
+  "vendor_preinstall_absent": true,
+  "physical_boot_tested": false,
+  "traffic_audited_on_device": false,
+  "limits": "Exact APK inventory and all free blocks checked; not a full code security or allocated-slack audit."
+}

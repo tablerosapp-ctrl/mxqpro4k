@@ -1,5 +1,19 @@
 # Especificación del producto y aceptación
 
+## Ampliación vigente · derivación original P291 0.2.0
+
+El usuario autorizó construir desde las particiones originales ya respaldadas, preservando los drivers de video y las APIs de Android. Se mantiene Android 9 para esta primera derivación; cambiar a Linux o a un framework nuevo sigue condicionado a demostrar compatibilidad APK y multimedia. [Composición y límites](../rom-simplificada/original-p291/README.md).
+
+**REQ-14 · Reducir software y conexiones ajenas.** Retirar precargas, reinstaladores OEM y accesos de diagnóstico elevados que no requiere el producto, con una selección explícita y comprobable. Conservar servicios de plataforma/hardware por dependencia. La denuncia de llamadas de red del usuario no identifica por sí sola procesos, VPN ni malware. La aceptación exige inventario final y tráfico atribuido por proceso durante arranque, reposo, reproducción y actualización; no puede haber destinos OEM inexplicados. La auditoría estática y la eliminación de APK son preparación local, no aceptación física ni certificación de limpieza total.
+
+**REQ-09, primera implementación.** El gestor independiente puede actualizar APK únicas y Chrome mediante HTTPS, manifiesto firmado, hash, certificado, versión, API/ABI y ventana de mantenimiento. Se entrega desactivado porque el usuario aún no proporcionó dirección ni clave pública de su servidor. No inventar un endpoint. Actualizar toda la ROM, administrar videos, trabajar con APK divididas, rotar claves y reanudar automáticamente la reproducción siguen pendientes.
+
+**VAL-10 · Gestor y comunicaciones.** En PC: probar firma alterada, caducidad, repetición, hosts, metadatos, cancelación y horario; vincular fuentes y APK revisadas. En TV: confirmar permiso de instalación, TLS con servidor propio, instalación válida y rechazada, interrupción, reinicio, persistencia y actualización de Chrome mientras hay consumidores WebView. Capturar destinos y atribuir tráfico. Los resultados locales no acreditan esta salida física. Relaciona REQ-09/14 y M6.
+
+**Migración y confianza.** La primera instalación debe partir de userdata limpia para no reintroducir APK o preferencias OEM desde los datos anteriores. El ZIP 0.2.0 comprueba esa condición; todavía no implementa su preparación. Antes de retirar datos se debe identificar qué se conserva y producir un procedimiento concreto recuperable. El experimento conserva framework original, SELinux permisivo y firma de plataforma heredada: la base de producción exige otro trabajo de integración, claves propias y pruebas. No equiparar el ZIP local con un producto terminado.
+
+El proveedor WebView efectivo, las dos capas VP9 (una con alfa) y canvas, los controles, Ethernet/WiFi y el arranque interno siguen sujetos a VAL-07/08. Chrome 138 es el techo de Android 9; una versión nueva del navegador no demuestra mayor rendimiento.
+
 Versión documental5, 7/9/2026, tras completar la captura0.6 y probar el ZIP real por el menú OEM, detenido al2%. Recoge el pedido vigente del usuario. La evolución de su APK no bloquea preparar y probar la plataforma. El alcance no incluye investigar la actualización automática que afectó al WiFi del primer equipo.
 
 ## Objetivo y alcance

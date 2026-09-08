@@ -1,5 +1,13 @@
 # Desarrollo, reproducción y continuidad
 
+## Construcción vigente 0.2.0 desde originales P291
+
+La receta activa está en [original-p291/README.md](../rom-simplificada/original-p291/README.md), con inventario/política, compilación propia, transformación acotada de boot, imágenes verificadas y dos ZIP separados. [Gestor y provisión](../rom-simplificada/original-p291/gestion/README.md). Los scripts 0.1.x siguientes son históricos; no se usan para reconstruir0.2.0.
+
+El clon público aporta fuentes, recetas, pruebas y recibos; las adquisiciones originales, APK de terceros, herramientas, claves y ZIP permanecen locales. No se promete una compilación autónoma desde un clon sin esas entradas. Las salidas existentes se rechazan para preservar releases. La prueba de composición inspecciona las APK reales y todos los bloques libres de las imágenes finales.
+
+Tras cambiar código se necesitan nuevos recibos ligados a fuentes/APK. Los bytes de releases existentes no se cambian para corregir documentación. Una prueba PC no cierra validaciones físicas de recovery, drivers, WebView o actualización.
+
 ## Dónde está cada verdad
 
 | Información | Fuente principal |

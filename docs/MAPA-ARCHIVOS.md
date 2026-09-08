@@ -7,36 +7,35 @@ La flecha expresa la relación indicada, no que se haya completado la prueba de 
 ```mermaid
 flowchart LR
     C_PERFIL["Perfil del equipo · observado_tv"]
-    C_BASE["Android candidato · verificado_local"]
+    C_BASE["Candidato anterior · verificado_local"]
     C_CHROME["Chrome 138 · verificado_local"]
-    C_INICIO["Inicio TV · construido"]
-    C_ROM["ROM0.1.2 sin Bluetooth · verificado_local"]
-    C_WEB["Proveedor WebView · construido"]
-    C_ZIP["ZIP de instalación · verificado_local"]
-    C_REC["Recovery externo · verificado_local"]
+    C_INICIO["Inicio TV 0.2.0 · verificado_local"]
+    C_ROM["ROM original P291 0.2.0 · verificado_local"]
+    C_WEB["Proveedor WebView · verificado_local"]
+    C_ZIP["ZIP instalación y restauración · verificado_local"]
+    C_REC["Recovery original: entrada pendiente · verificado_local"]
     C_ENTRY["Diagnóstico USB0.8 · observado_tv"]
-    C_USB["Kingston preparado · verificado_local"]
+    C_USB["Kingston: entrega 0.1.2 histórica · verificado_local"]
     C_TV["P291: root y bloqueo WiFi confirmados · observado_tv"]
     C_APP["APK del producto · propuesto"]
-    C_GESTION["Administración propia · propuesto"]
+    C_GESTION["Gestor propio 0.1 · verificado_local"]
     C_BTCTRL["Control Bluetooth normal · observado_tv"]
     C_ORIG["Originales del P291 · observado_tv"]
     C_PERFIL -->|"selecciona"| C_BASE
-    C_BASE -->|"aporta hardware"| C_ROM
     C_CHROME -->|"motor admitido"| C_WEB
     C_INICIO -->|"se integra"| C_ROM
     C_WEB -->|"se integra"| C_ROM
     C_ROM -->|"se empaqueta"| C_ZIP
-    C_BASE -->|"recovery fuente"| C_REC
-    C_ZIP -->|"se copia"| C_USB
-    C_REC -->|"se copia"| C_USB
+    C_ZIP -->|"copia 0.2.0 pendiente"| C_USB
     C_ENTRY -->|"se copia"| C_USB
     C_USB -->|"completar evidencia"| C_TV
     C_TV -->|"habilita validación"| C_APP
-    C_APP -->|"contrato propuesto"| C_GESTION
+    C_APP -->|"actualización por contrato"| C_GESTION
     C_BTCTRL -->|"inhabilita Bluetooth actual"| C_TV
     C_TV -->|"respaldo por root"| C_ORIG
-    C_ORIG -->|"nueva base propuesta"| C_ROM
+    C_ORIG -->|"fuente original verificada"| C_ROM
+    C_GESTION -->|"gestor integrado"| C_ROM
+    C_ORIG -->|"recovery adquirido"| C_REC
 ```
 
 ## Archivos por componente
@@ -57,9 +56,9 @@ Requisitos: REQ-02, REQ-10.
 - [diagnostico/primer-tv-complemento-20260907-003114/HALLAZGOS.md](../diagnostico/primer-tv-complemento-20260907-003114/HALLAZGOS.md)
 - [diagnostico/primer-tv-complemento-20260907-003114/resumen-saneado.json](../diagnostico/primer-tv-complemento-20260907-003114/resumen-saneado.json)
 
-### C-BASE · Android candidato
+### C-BASE · Candidato anterior
 
-**verificado_local**. Base community Android9 P291 inspeccionada; compatibilidad física no confirmada.
+**verificado_local**. Fuente comunitaria histórica. Sus diferencias con los originales P291 impiden usarla como base de la revisión 0.2.0; se conserva para análisis.
 
 Requisitos: REQ-02, REQ-05.
 
@@ -81,77 +80,75 @@ Requisitos: REQ-04.
 - [actualizacion-chrome/chrome-138.0.7204.179-arm32.apk](../actualizacion-chrome/chrome-138.0.7204.179-arm32.apk)
 - [actualizacion-chrome/verificacion/LEEME.md](../actualizacion-chrome/verificacion/LEEME.md)
 
-### C-INICIO · Inicio TV
+### C-INICIO · Inicio TV 0.2.0
 
-**construido**. Launcher propio y ajustes; recorrido físico con control pendiente.
+**verificado_local**. Inicio propio con Ajustes TV y selección de APK por documentos/USB. Firma API28 comprobada; recorrido con mando pendiente.
 
 Requisitos: REQ-03, REQ-10.
 
-- [rom-simplificada/componentes/inicio/Inicio.java](../rom-simplificada/componentes/inicio/Inicio.java)
-- [rom-simplificada/componentes/inicio/AndroidManifest.xml](../rom-simplificada/componentes/inicio/AndroidManifest.xml)
-- [rom-simplificada/compilar-componentes.py](../rom-simplificada/compilar-componentes.py)
+- [rom-simplificada/original-p291/componentes/inicio/Inicio.java](../rom-simplificada/original-p291/componentes/inicio/Inicio.java)
+- [rom-simplificada/original-p291/componentes/inicio/AndroidManifest.xml](../rom-simplificada/original-p291/componentes/inicio/AndroidManifest.xml)
+- [rom-simplificada/original-p291/compilar-componentes.py](../rom-simplificada/original-p291/compilar-componentes.py)
+- [rom-simplificada/original-p291/COMPONENTES.json](../rom-simplificada/original-p291/COMPONENTES.json)
 
-### C-ROM · ROM0.1.2 sin Bluetooth
+### C-ROM · ROM original P291 0.2.0
 
-**verificado_local**. 0.1.2 construida y conservada. Revisiónoriginal detecta diferencias dearranque/firma; nueva derivación desdeoriginales propuesta, aún no implementada.
+**verificado_local**. Cinco imágenes derivadas del P291 real: 34 APK conservadas, 51 retiradas y 5 agregadas. Kernel/DTB y drivers ajenos al recorte preservados. Android original depurado, no AOSP reconstruido.
 
-Requisitos: REQ-01, REQ-03, REQ-13.
+Requisitos: REQ-01, REQ-03, REQ-13, REQ-14.
 
-- [rom-simplificada/LEEME.md](../rom-simplificada/LEEME.md)
-- [rom-simplificada/preparar-copias.py](../rom-simplificada/preparar-copias.py)
-- [rom-simplificada/simplificar.py](../rom-simplificada/simplificar.py)
-- [rom-simplificada/verificar-y-empaquetar.py](../rom-simplificada/verificar-y-empaquetar.py)
-- [rom-simplificada/trabajo/cambios.json](../rom-simplificada/trabajo/cambios.json)
-- [rom-simplificada/instalador/corregir-recovery-0.1.1.py](../rom-simplificada/instalador/corregir-recovery-0.1.1.py)
-- [rom-simplificada/trabajo/revision-0.1.1/revision.json](../rom-simplificada/trabajo/revision-0.1.1/revision.json)
-- [rom-simplificada/trabajo/revision-0.1.1/system.raw.img](../rom-simplificada/trabajo/revision-0.1.1/system.raw.img)
-- [rom-simplificada/SIN-BLUETOOTH-0.1.2.md](../rom-simplificada/SIN-BLUETOOTH-0.1.2.md)
-- [rom-simplificada/instalador/preparar-sin-bluetooth-0.1.2.py](../rom-simplificada/instalador/preparar-sin-bluetooth-0.1.2.py)
-- [rom-simplificada/trabajo/revision-0.1.2/revision.json](../rom-simplificada/trabajo/revision-0.1.2/revision.json)
+- [rom-simplificada/original-p291/README.md](../rom-simplificada/original-p291/README.md)
+- [rom-simplificada/original-p291/construir.py](../rom-simplificada/original-p291/construir.py)
+- [rom-simplificada/original-p291/product_ea.py](../rom-simplificada/original-p291/product_ea.py)
+- [rom-simplificada/original-p291/boot.py](../rom-simplificada/original-p291/boot.py)
+- [rom-simplificada/original-p291/inventariar-originales.py](../rom-simplificada/original-p291/inventariar-originales.py)
+- [rom-simplificada/original-p291/politica-paquetes.json](../rom-simplificada/original-p291/politica-paquetes.json)
+- [rom-simplificada/original-p291/AUDITORIA-SERVICIOS.md](../rom-simplificada/original-p291/AUDITORIA-SERVICIOS.md)
+- [rom-simplificada/original-p291/seleccion-servicios.json](../rom-simplificada/original-p291/seleccion-servicios.json)
+- [rom-simplificada/original-p291/IMAGENES-0.2.0.json](../rom-simplificada/original-p291/IMAGENES-0.2.0.json)
+- [docs/evidencia/ROM-ORIGINAL-P291-020.md](../docs/evidencia/ROM-ORIGINAL-P291-020.md)
+- [rom-simplificada/original-p291/verificar-composicion.py](../rom-simplificada/original-p291/verificar-composicion.py)
+- [rom-simplificada/original-p291/COMPOSICION-VERIFICADA.json](../rom-simplificada/original-p291/COMPOSICION-VERIFICADA.json)
+- [rom-simplificada/original-p291/INCIDENTES-CONSTRUCCION.md](../rom-simplificada/original-p291/INCIDENTES-CONSTRUCCION.md)
 
 ### C-WEB · Proveedor WebView
 
-**construido**. Overlay permite Chrome como proveedor; WebView66 queda de respaldo. Motor efectivo y composición por comprobar.
+**verificado_local**. Chrome138 declarado como único proveedor; WebView66 retirado. Overlays compilados y presentes en imagen; proveedor efectivo, dos VP9/alfa/canvas y rendimiento pendientes.
 
 Requisitos: REQ-04, REQ-05, REQ-06.
 
-- [rom-simplificada/componentes/webview-overlay/AndroidManifest.xml](../rom-simplificada/componentes/webview-overlay/AndroidManifest.xml)
-- [rom-simplificada/componentes/webview-overlay/res/xml/config_webview_packages.xml](../rom-simplificada/componentes/webview-overlay/res/xml/config_webview_packages.xml)
-- [rom-simplificada/INTEGRACION-WEBVIEW.md](../rom-simplificada/INTEGRACION-WEBVIEW.md)
-- [rom-simplificada/fuentes-webview/fuentes.json](../rom-simplificada/fuentes-webview/fuentes.json)
+- [rom-simplificada/original-p291/componentes/webview-overlay/AndroidManifest.xml](../rom-simplificada/original-p291/componentes/webview-overlay/AndroidManifest.xml)
+- [rom-simplificada/original-p291/componentes/webview-overlay/res/xml/config_webview_packages.xml](../rom-simplificada/original-p291/componentes/webview-overlay/res/xml/config_webview_packages.xml)
+- [rom-simplificada/original-p291/componentes/defaults/AndroidManifest.xml](../rom-simplificada/original-p291/componentes/defaults/AndroidManifest.xml)
+- [rom-simplificada/original-p291/componentes/defaults/res/values/defaults.xml](../rom-simplificada/original-p291/componentes/defaults/res/values/defaults.xml)
+- [rom-simplificada/original-p291/COMPONENTES.json](../rom-simplificada/original-p291/COMPONENTES.json)
 
-### C-ZIP · ZIP de instalación
+### C-ZIP · ZIP instalación y restauración
 
-**verificado_local**. Cinco particiones, controles, respaldo completo previo y hashes de lectura. No A/B ni rollback automático. Firma integral válida contra otacerts capturado del P291; claves internas de recovery desconocidas.
+**verificado_local**. Dos paquetes 0.2.0 con geometría original y firma SHA1 acorde a la clave v1. Payloads SHA256, CRC y firma Python/OpenJDK verificados; aceptación física pendiente. Instalación exige userdata limpia, sin borrarla.
 
 Requisitos: REQ-01, REQ-09, REQ-11.
 
-- [rom-simplificada/instalador/README.md](../rom-simplificada/instalador/README.md)
-- [rom-simplificada/instalador/main_linux.go](../rom-simplificada/instalador/main_linux.go)
-- [rom-simplificada/instalador/package.go](../rom-simplificada/instalador/package.go)
-- [rom-simplificada/instalador/package_test.go](../rom-simplificada/instalador/package_test.go)
-- [rom-simplificada/instalador/main_windows.go](../rom-simplificada/instalador/main_windows.go)
-- [rom-simplificada/instalador/empaquetar.py](../rom-simplificada/instalador/empaquetar.py)
-- [rom-simplificada/instalador/manifest-0.1.1.json](../rom-simplificada/instalador/manifest-0.1.1.json)
-- [rom-simplificada/salida/TVBASE-P291-A9-0.1.1-RECOVERY.zip](../rom-simplificada/salida/TVBASE-P291-A9-0.1.1-RECOVERY.zip)
-- [rom-simplificada/salida/RECOVERY-VERIFICACION-0.1.1.json](../rom-simplificada/salida/RECOVERY-VERIFICACION-0.1.1.json)
-- [rom-simplificada/salida/RECOVERY-COMPROBACION-0.1.1.json](../rom-simplificada/salida/RECOVERY-COMPROBACION-0.1.1.json)
-- [rom-simplificada/instalador/empaquetar-sin-bluetooth.py](../rom-simplificada/instalador/empaquetar-sin-bluetooth.py)
-- [rom-simplificada/instalador/manifest-0.1.2.json](../rom-simplificada/instalador/manifest-0.1.2.json)
-- [rom-simplificada/salida/RECOVERY-VERIFICACION-0.1.2.json](../rom-simplificada/salida/RECOVERY-VERIFICACION-0.1.2.json)
+- [rom-simplificada/original-p291/empaquetado/README.md](../rom-simplificada/original-p291/empaquetado/README.md)
+- [rom-simplificada/original-p291/empaquetado/main_linux.go](../rom-simplificada/original-p291/empaquetado/main_linux.go)
+- [rom-simplificada/original-p291/empaquetado/package.go](../rom-simplificada/original-p291/empaquetado/package.go)
+- [rom-simplificada/original-p291/empaquetado/data_policy.go](../rom-simplificada/original-p291/empaquetado/data_policy.go)
+- [rom-simplificada/original-p291/empaquetado/package_test.go](../rom-simplificada/original-p291/empaquetado/package_test.go)
+- [rom-simplificada/original-p291/empaquetado/empaquetar_original.py](../rom-simplificada/original-p291/empaquetado/empaquetar_original.py)
+- [rom-simplificada/original-p291/empaquetado/firma_ota_v1.py](../rom-simplificada/original-p291/empaquetado/firma_ota_v1.py)
+- [rom-simplificada/original-p291/empaquetado/EVIDENCIA-TESTS.json](../rom-simplificada/original-p291/empaquetado/EVIDENCIA-TESTS.json)
+- [rom-simplificada/original-p291/empaquetado/salida/TVBASE-P291-A9-0.2.0-VERIFICACION.json](../rom-simplificada/original-p291/empaquetado/salida/TVBASE-P291-A9-0.2.0-VERIFICACION.json)
+- [rom-simplificada/original-p291/empaquetado/salida/TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.0-VERIFICACION.json](../rom-simplificada/original-p291/empaquetado/salida/TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.0-VERIFICACION.json)
 
-### C-REC · Recovery externo
+### C-REC · Recovery original: entrada pendiente
 
-**verificado_local**. Archivo para RAM preparado del candidato. Clave del ZIP agregada con verificación activa; bootloader real sin probar. La vía OEM pide recovery interno, no acredita carga de este archivo.
+**verificado_local**. Recovery real adquirido: clave v1 y geometría conocidas. ZIP nuevos compatibles con esa política en pruebas PC; entrada/aceptación física sin demostrar. Recovery externo anterior es histórico.
 
 Requisitos: REQ-11.
 
-- [rom-simplificada/instalador/preparar-recovery-externo.py](../rom-simplificada/instalador/preparar-recovery-externo.py)
-- [rom-simplificada/instalador/inspeccionar-recovery-externo.py](../rom-simplificada/instalador/inspeccionar-recovery-externo.py)
-- [rom-simplificada/inspeccion/recovery-original.img](../rom-simplificada/inspeccion/recovery-original.img)
-- [rom-simplificada/instalador/recovery-externo/recovery.img](../rom-simplificada/instalador/recovery-externo/recovery.img)
-- [rom-simplificada/instalador/recovery-externo/PREPARADO.json](../rom-simplificada/instalador/recovery-externo/PREPARADO.json)
-- [rom-simplificada/instalador/gxl_p271_v1-referencia.h](../rom-simplificada/instalador/gxl_p271_v1-referencia.h)
+- [diagnostico/primer-tv-lan-20260907-184926/RECOVERY-ORIGINAL.md](../diagnostico/primer-tv-lan-20260907-184926/RECOVERY-ORIGINAL.md)
+- [diagnostico/primer-tv-lan-20260907-184926/OPCIONES-INSTALACION-ROOT.md](../diagnostico/primer-tv-lan-20260907-184926/OPCIONES-INSTALACION-ROOT.md)
+- [rom-simplificada/original-p291/empaquetado/EVIDENCIA-TESTS.json](../rom-simplificada/original-p291/empaquetado/EVIDENCIA-TESTS.json)
 
 ### C-ENTRY · Diagnóstico USB0.8
 
@@ -182,9 +179,9 @@ Requisitos: REQ-11.
 - [rom-simplificada/instalador/EvidenciaHarness08.java](../rom-simplificada/instalador/EvidenciaHarness08.java)
 - [rom-simplificada/instalador/EVIDENCIA-TESTS-0.8.json](../rom-simplificada/instalador/EVIDENCIA-TESTS-0.8.json)
 
-### C-USB · Kingston preparado
+### C-USB · Kingston: entrega 0.1.2 histórica
 
-**verificado_local**. ROM0.1.2, auxiliar y guía copiados/leídos; tres archivos anteriores archivados/verificados antes de retirar. Informes y respaldos conservados.
+**verificado_local**. La última copia comprobada conserva 0.1.2; no repetir Update. No se copió 0.2.0 ni se formateó el USB en esta construcción.
 
 Requisitos: REQ-01.
 
@@ -244,13 +241,23 @@ Requisitos: REQ-07, REQ-08, REQ-12.
 
 Implementación pendiente; especificación en [ESPECIFICACION](ESPECIFICACION.md) y propuestas en [ROADMAP](ROADMAP.md).
 
-### C-GESTION · Administración propia
+### C-GESTION · Gestor propio 0.1
 
-**propuesto**. Actualizaciones independientes, catálogo, limpieza selectiva y despliegues por grupos. Aún sin implementación.
+**verificado_local**. APK para actualizaciones de aplicaciones y Chrome, 38 pruebas host y revisión independiente. Integrado como priv-app con permiso acotado. Desactivado, sin endpoint; no hay prueba Android ni OTA completa.
 
-Requisitos: REQ-07, REQ-09.
+Requisitos: REQ-07, REQ-09, REQ-14.
 
-- [docs/hipotesis/REVISION-CONJUNTA-FABLE.md](../docs/hipotesis/REVISION-CONJUNTA-FABLE.md)
+- [rom-simplificada/componentes/gestion-tvbase/README.md](../rom-simplificada/componentes/gestion-tvbase/README.md)
+- [rom-simplificada/componentes/gestion-tvbase/AndroidManifest.xml](../rom-simplificada/componentes/gestion-tvbase/AndroidManifest.xml)
+- [rom-simplificada/componentes/gestion-tvbase/ManagerEngine.java](../rom-simplificada/componentes/gestion-tvbase/ManagerEngine.java)
+- [rom-simplificada/componentes/gestion-tvbase/UpdateCore.java](../rom-simplificada/componentes/gestion-tvbase/UpdateCore.java)
+- [rom-simplificada/componentes/gestion-tvbase/UpdateJob.java](../rom-simplificada/componentes/gestion-tvbase/UpdateJob.java)
+- [rom-simplificada/componentes/gestion-tvbase/MainActivity.java](../rom-simplificada/componentes/gestion-tvbase/MainActivity.java)
+- [rom-simplificada/original-p291/gestion/README.md](../rom-simplificada/original-p291/gestion/README.md)
+- [rom-simplificada/original-p291/gestion/manifest_tool.py](../rom-simplificada/original-p291/gestion/manifest_tool.py)
+- [rom-simplificada/original-p291/gestion/LIBERACION.json](../rom-simplificada/original-p291/gestion/LIBERACION.json)
+- [rom-simplificada/original-p291/gestion/pruebas-resultado.json](../rom-simplificada/original-p291/gestion/pruebas-resultado.json)
+- [rom-simplificada/original-p291/REVISION-GESTOR.md](../rom-simplificada/original-p291/REVISION-GESTOR.md)
 
 ### C-BTCTRL · Control Bluetooth normal
 
@@ -266,7 +273,7 @@ Requisitos: REQ-13.
 
 ### C-ORIG · Originales del P291
 
-**observado_tv**. 12 particiones originales verificadas (2538MiB). Excluyeuserdata/cache yotrasáreas; restauración pendiente. Recovery/DTB originales fundamentan nueva base.
+**observado_tv**. Doce particiones seleccionadas (2538 MiB) verificadas; fuente de la ROM y ZIP de restauración. No incluye userdata/cache ni toda eMMC; restauración física pendiente.
 
 Requisitos: REQ-02, REQ-09, REQ-11.
 
@@ -284,7 +291,10 @@ Requisitos: REQ-02, REQ-09, REQ-11.
 | `rom-simplificada/componentes/` | Fuente de APK propias | Versionar cambios y conservar firma |
 | `rom-simplificada/trabajo/` | RAW activos y recetas aplicadas | No son respaldo original del TV |
 | `rom-simplificada/instalador/` | ZIP, recovery externo y pruebas | Revisar versión antes de reconstruir |
-| `rom-simplificada/salida/` | Releases y evidencias | 0.1.2 en revisión; conservar releases verificadas |
+| `rom-simplificada/salida/` | Releases históricas 0.1.x | Conservar; no repetir su instalación |
+| `rom-simplificada/original-p291/` | ROM 0.2.0, selección, gestor y empaquetado | Fuentes y recibos versionados; privados excluidos |
+| `rom-simplificada/original-p291/empaquetado/salida/` | ZIP de instalación y restauración | Locales, no sustituyen una recuperación probada |
+| `privado/TVBASE-respaldo-*/` | Adquisiciones originales P291 | Inmutables; no publicar ni confundir con userdata |
 | `preparacion-usb/` | Preparadores y recibos de operaciones | Usar identidad estable; no repetir por rutina |
 | `diagnostico/` | Evidencia de ambos equipos | No mezclar perfiles P291 y P271 |
 | `actualizacion-chrome/` | Chrome fuente y firmas | Conservar APK integrado y evidencia |
@@ -306,12 +316,12 @@ Requisitos: REQ-02, REQ-09, REQ-11.
 | actualizacion-chrome | 51 | 0.417 |
 | analisis-rom | 15 | 1.822 |
 | diagnostico | 173 | 0.018 |
-| docs | 31 | 0.000 |
+| docs | 32 | 0.000 |
 | dossier-s905l2.html | 1 | 0.000 |
 | images | 1 | 1.352 |
 | platform-tools-latest-windows.zip | 1 | 0.008 |
 | preparacion-usb | 83 | 3.688 |
-| rom-simplificada | 4409 | 10.080 |
+| rom-simplificada | 4480 | 11.567 |
 | tools | 18081 | 1.141 |
 
 El inventario excluye derivados documentales y contenido de claves; los tamaños son de archivos, no bloques físicos ocupados. Los temporales retirados se detallan en [LIMPIEZA](LIMPIEZA.md).

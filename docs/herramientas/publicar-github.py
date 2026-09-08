@@ -110,7 +110,7 @@ def audit(config):
                            data=('\n'.join(names) + '\n').encode()))
     blobs = 0
     email_classes = {'automation_identity': 0, 'public_aosp_certificate': 0,
-                     'android_library_filename': 0}
+                     'android_library_filename': 0, 'reserved_negative_test': 0}
     ipv4_classes = {'rfc1918_network_constant': 0, 'declared_offline_test_fixture': 0}
     for row in rows:
         oid, _, name = row.partition(' ')
@@ -123,7 +123,7 @@ def audit(config):
             continue
         blobs += 1
         assert not re.search(r'\.(?:apk|img|zip|jks|pk8|pem|key|exe|dll|bin|dex|class|png)$', name, re.I), 'Binario/clave/foto en historial: ' + name
-        assert not name.startswith(('privado/', '.publicacion/')) and 'claves-desarrollo/' not in name
+        assert not name.startswith(('privado/', '.publicacion/')) and '/privado/' not in name and 'claves-desarrollo/' not in name
         assert b'\0' not in body and not SECRET.search(body), 'Contenido no publicable: ' + name
         assert all(x.encode() not in body for x in config['redactions']), 'Identificador pendiente: ' + name
         for match in re.finditer(rb'(?<![0-9])(?:192\.168\.\d{1,3}\.\d{1,3}|10\.\d{1,3}\.\d{1,3}\.\d{1,3}|172\.(?:1[6-9]|2[0-9]|3[01])\.\d{1,3}\.\d{1,3})(?![0-9])', body):
@@ -140,9 +140,16 @@ def audit(config):
                           'rom-simplificada/inspeccion/vendor-inventario.json',
                           'rom-simplificada/instalador/preparar-sin-bluetooth-0.1.2.py',
                           'rom-simplificada/trabajo/revision-0.1.2/revision.json',
-                          'rom-simplificada/salida/RECOVERY-VERIFICACION-0.1.2.json') and re.fullmatch(
+                          'rom-simplificada/salida/RECOVERY-VERIFICACION-0.1.2.json',
+                          'rom-simplificada/original-p291/construir.py',
+                          'rom-simplificada/original-p291/seleccion-servicios.json',
+                          'rom-simplificada/original-p291/IMAGENES-0.2.0.json') and re.fullmatch(
                           rb'(?:(?:android|vendor|camera)\.[A-Za-z0-9_.-]+|libaudiohal|libamgralloc_ext)@\d+(?:\.\d+)*[A-Za-z0-9_.-]*', value):
                 email_classes['android_library_filename'] += 1
+            elif name in ('rom-simplificada/original-p291/gestion/CoreTest.java',
+                          'docs/herramientas/publicar-github.py') and value == b'secret@updates.invalid':
+                # Exact reserved-domain fixture exercises rejection of URL credentials.
+                email_classes['reserved_negative_test'] += 1
             else:
                 raise AssertionError('Correo sin clasificar en ' + name)
     report = {'checked_at': datetime.now(timezone.utc).isoformat(), 'history_blobs_checked': blobs,

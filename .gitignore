@@ -97,6 +97,7 @@ Desktop.ini
 /rom-simplificada/instalador/recovery-externo/*.rc
 /rom-simplificada/instalador/recovery-externo/keys-prepared.txt
 /rom-simplificada/instalador/recovery-externo/recovery-strings.json
+/rom-simplificada/original-p291/privado/
 
 # Fuentes externas descargadas para consulta: versiones/orígenes en manifiestos.
 /rom-simplificada/fuentes-webview/*

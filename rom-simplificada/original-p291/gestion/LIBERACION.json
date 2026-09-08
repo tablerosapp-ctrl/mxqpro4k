@@ -1,0 +1,43 @@
+{
+  "state": "reviewed_offline",
+  "component": "local.tvbase.gestion",
+  "version": "0.1-experimental",
+  "created_at_utc": "2026-09-08T00:49:42.816833+00:00",
+  "apk": "rom-simplificada/original-p291/gestion/privado/build-20260908-004733-795344/TVBaseGestion-0.1.apk",
+  "apk_sha256": "73f0a2e73857cc83484caa3034bf69b8aa88422945153d71499f81c8ab81d320",
+  "apk_bytes": 57810,
+  "source_sha256": {
+    "rom-simplificada/componentes/gestion-tvbase/AndroidManifest.xml": "cda2f27a0d73558aba236fada63eae2992e1269a01e9fc23b7f9a827b4f533cf",
+    "rom-simplificada/componentes/gestion-tvbase/assets/owner.conf": "d2b6d961e1b6726a07d325c1bf006fcff83d7630b53b50bb73a0bea65999af86",
+    "rom-simplificada/componentes/gestion-tvbase/BootReceiver.java": "079192448966b70a4b100686da1d39cc51a75ba11d4a7dec4c14b1ebcfc591a1",
+    "rom-simplificada/componentes/gestion-tvbase/InstallReceiver.java": "4c10eeb5b0d51ffd2faa0b4364735542baa0fbc9214872637c8573e7c0531523",
+    "rom-simplificada/componentes/gestion-tvbase/MainActivity.java": "59afdaf79966a0fdb8c26b3cce570b2aba1501cdab54c70263bbe9318bb408e3",
+    "rom-simplificada/componentes/gestion-tvbase/ManagerEngine.java": "710cf5363c77133dbbb9cb5de1bec6809927a2ce7d0df18a35b712f4f8d7d117",
+    "rom-simplificada/componentes/gestion-tvbase/README.md": "f3d618d3a7d7983d354e5dd57a54d7b174d9ac412b3cd774a03bd9e2099071bd",
+    "rom-simplificada/componentes/gestion-tvbase/UpdateCore.java": "fd41e4dd27d10d57553fe961cf025f2959a37c1f43d95b18301036e5f669c347",
+    "rom-simplificada/componentes/gestion-tvbase/UpdateJob.java": "858210afbd9a13131f43a338201b7fc52b264604949e3516d9de4c1c830a7cee"
+  },
+  "configuration_disabled": true,
+  "allowlist": "rom-simplificada/original-p291/gestion/privapp-permissions-tvbase-gestion.xml",
+  "allowlist_sha256": "54214be0e36fe00693724b07ac2746d1f2599533e4178de06c1bd93196b7cbeb",
+  "reviewer_received": true,
+  "reviewer": "lecturas_adb_p291",
+  "tests_passed": true,
+  "host_tests_passed": 38,
+  "build_receipt_sha256": "983ed25e83910c603760abafae89f93d4301d3b6240e120416b9789aa5b60349",
+  "tests_receipt_sha256": "313a1f722383ec54504d04c7c3e9ca977e2fc3776b66c2d002f3937fd6ac6b16",
+  "independent_review_receipt_sha256": "5e1056d2734adc060ea6e28c606120d8fc28479f7b00912dae463eede08566cb",
+  "review_scope": "Exact source/APK/configuration consistency; independent APK signature/API28 metadata verification; offline source review of concurrency, callbacks, trust policy and commit guards.",
+  "limits": {
+    "image_integrated": false,
+    "physical_device_tested": false,
+    "privileged_permission_grant_tested": false,
+    "https_server_configured": false,
+    "https_on_android_tested": false,
+    "packageinstaller_on_android_tested": false,
+    "jobscheduler_on_android_tested": false,
+    "chrome_update_on_android_tested": false,
+    "automatic_video_resume": false,
+    "automatic_rollback": false
+  }
+}

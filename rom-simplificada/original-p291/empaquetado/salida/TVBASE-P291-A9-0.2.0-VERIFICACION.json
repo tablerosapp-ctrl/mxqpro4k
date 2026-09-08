@@ -1,0 +1,117 @@
+{
+  "version": "0.2.0",
+  "package_id": "TVBASE-P291-A9-0.2.0",
+  "operation": "install_reviewed",
+  "file": "rom-simplificada/original-p291/empaquetado/salida/TVBASE-P291-A9-0.2.0-RECOVERY.zip",
+  "bytes": 573492264,
+  "sha256": "bd4a8dd7df8d61580c5b450867bda2ef2b214b400b4cafcce5a26baa5c48a614",
+  "manifest": {
+    "format": 2,
+    "id": "TVBASE-P291-A9-0.2.0",
+    "dt_id": "gxlx2_p291_1g",
+    "media_id": "TVBASE-P291-20260906-4dc82786",
+    "operation": "install_reviewed",
+    "data_policy": "fresh_userdata_required",
+    "images": [
+      {
+        "name": "system",
+        "entry": "tvbase/system.img",
+        "size": 1342177280,
+        "sha256": "e602d62182400f2b785b9044dd28b767791bcafb411146f988b719c6e722dc7b",
+        "major_minor": "179:18",
+        "original_sha256": "249611912b7b1fa277d169f8612f9a719df3abf99dc98ed8e817657e2c9beb2c"
+      },
+      {
+        "name": "vendor",
+        "entry": "tvbase/vendor.img",
+        "size": 943718400,
+        "sha256": "57c1f319e1c1f7df6918b2ffd513b1b0a63611e498fa6000826ee34206ef9fee",
+        "major_minor": "179:16",
+        "original_sha256": "d542fc091469a7c1223c1d5091f8ec6b3456f38dd1218b779d18d1942190d2a7"
+      },
+      {
+        "name": "product",
+        "entry": "tvbase/product.img",
+        "size": 134217728,
+        "sha256": "c8550c937cb85257e58d8d70414b9162141d9e20cf199406d4ca3cfacf8ab00e",
+        "major_minor": "179:19",
+        "original_sha256": "ef2c71f6208e25fa1cc9d5c12cb04972ac20d772e2c11a76972859403b530075"
+      },
+      {
+        "name": "odm",
+        "entry": "tvbase/odm.img",
+        "size": 134217728,
+        "sha256": "97836d5a1b016b64d3875c82cb5f3b4daee0f56d8eea3675b4231086429cbe67",
+        "major_minor": "179:17",
+        "original_sha256": "97836d5a1b016b64d3875c82cb5f3b4daee0f56d8eea3675b4231086429cbe67"
+      },
+      {
+        "name": "boot",
+        "entry": "tvbase/boot.img",
+        "size": 16777216,
+        "sha256": "c1a71479498bdfd8368fb1ade42ae293cb97f6087c43c3a8f8f31535725113fc",
+        "major_minor": "179:11",
+        "original_sha256": "13e027a3aae1af232d1d700421486f32b7958a9fa0a157d8cbd3c47243ab697d"
+      }
+    ]
+  },
+  "original_backup_manifests": [
+    {
+      "path": "privado/TVBASE-respaldo-P291-20260907-194104-0deb291b/manifest.json",
+      "sha256": "f6dfa30b2f06af499e978f4a4cf7b4317eb32743897f7120d325382d79052522"
+    },
+    {
+      "path": "privado/TVBASE-respaldo-P291-20260907-194413-6d502965/manifest.json",
+      "sha256": "9943d0634aad628159869cace6c47034668e2cbb56632fdd2c5337e5fd2ffe2e"
+    }
+  ],
+  "review_report": "rom-simplificada/original-p291/IMAGENES-0.2.0.json",
+  "review_report_sha256": "11927b01a773a6b4dc7e762fb85e86bf7bc15782f34d035a3aa202bc917c7a12",
+  "boot_validation": {
+    "kernel_sha256": "9968c75f691f67dcb805ef8105e1ca534f73430bcf8b3920a066580e326b791a",
+    "dtb_sha256": "13e54b5f1bba959e398da74b9d0859d08ba1747840ed3866eca1f3461c550d01",
+    "ramdisk_sha256": "ab85369fe4883d272be2c1914f45624b0e882393e99b7dbd230189b3cc93feb1",
+    "header_version": 1,
+    "header_size": 1648,
+    "header_id_verified": true,
+    "bytes": 16777216
+  },
+  "signature": {
+    "signature_algorithm": "RSA-PKCS1v1.5/SHA1",
+    "signed_bytes": 573490486,
+    "signed_region_sha256": "a5556e75c2e41c254849c21f384f525fce98d1d8877db394526aa6f9f7a7b175",
+    "sha1_policy_replay_verified": true,
+    "certificate_sha256": "a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc",
+    "oem_recovery_executed": false
+  },
+  "recovery_v1_trust": {
+    "key_version": 1,
+    "rsa_exponent": 3,
+    "rsa_bits": 2048,
+    "digest": "SHA1",
+    "keyfile_sha256": "cd0788004cfa998c7bbede4811b791187139504a01415b9d30df5609458398df",
+    "certificate_sha256": "a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc"
+  },
+  "openjdk_signature_verified": true,
+  "payload_sha256_verified": true,
+  "zip_crc_verified": true,
+  "windows_package_verifier_passed": true,
+  "installer_sha256": "fbff3f83648f09c8fcdb3997849e598ad236122eb608a44effb26441548f940e",
+  "builder_sha256": "f8bfe66c6b8cb7b0f764b769419fae29fdf35dc439a50c0af701ce0a51656d1d",
+  "signature_helper_sha256": "a7100a026eaea8586fba5c5daa770ffbb6c991daff67df7801f05bb4bb0469ce",
+  "originals_unchanged": true,
+  "data_policy": "fresh_userdata_required",
+  "automatic_userdata_wipe": false,
+  "physically_installed": false,
+  "oem_recovery_acceptance_confirmed": false,
+  "restore_path_tested": false,
+  "pending_before_install": [
+    "recovery_entry_and_package_path",
+    "separate_explicit_userdata_migration"
+  ],
+  "limits": [
+    "Non-A/B; no automatic rollback",
+    "Test key and legacy SHA1 are compatibility measures, not production update security",
+    "Restore package restores five OEM partitions including their original software; it does not sanitize userdata"
+  ]
+}

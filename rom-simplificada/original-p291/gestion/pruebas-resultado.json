@@ -1,0 +1,10 @@
+{
+  "tests": 38,
+  "exit_code": 0,
+  "network_used": false,
+  "device_used": false,
+  "apk_sha256": "73f0a2e73857cc83484caa3034bf69b8aa88422945153d71499f81c8ab81d320",
+  "core_sha256": "fd41e4dd27d10d57553fe961cf025f2959a37c1f43d95b18301036e5f669c347",
+  "log_sha256": "597f3de2d35456ae89436941da7a93cdef68caeee8fe31fdfc51bdcc082e00be",
+  "scope": "Host JVM: signature, replay/time/policy/API/ABI guards and actual compiled APK metadata. Android adapter not executed."
+}

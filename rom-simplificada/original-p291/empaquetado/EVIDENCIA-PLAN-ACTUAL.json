@@ -1,0 +1,72 @@
+{
+  "fixture_bytes": 16777216,
+  "source_sha256": "c565bfa790bb0e65038bec4d74fa20ac57e619dee67e17ad40e13ad73c990953",
+  "original_fixture_unchanged": true,
+  "edited_verification": {
+    "unchanged_files_verified": 2,
+    "removed_nodes": 2,
+    "changed_files_verified": 2,
+    "free_bytes": 11436032,
+    "unchanged_nodes_xattrs_verified": 6,
+    "new_directory_contexts_verified": 1
+  },
+  "final_verification": {
+    "unchanged_files_verified": 2,
+    "removed_nodes": 2,
+    "changed_files_verified": 2,
+    "free_bytes": 11436032,
+    "unchanged_nodes_xattrs_verified": 6,
+    "new_directory_contexts_verified": 1
+  },
+  "free_zero_blocks_verified": 2792,
+  "removed_apk_marker_absent": true,
+  "firmware_bytes_preserved": true,
+  "negative_cases": {
+    "new_directory_selinux_missing": {
+      "rejected": true,
+      "reason": "/app/New"
+    },
+    "new_directory_selinux_changed": {
+      "rejected": true,
+      "reason": "/app/New"
+    },
+    "preserved_capability_same_size_changed": {
+      "rejected": true,
+      "reason": "An unrelated extended attribute changed"
+    },
+    "preserved_user_attribute_same_size_changed": {
+      "rejected": true,
+      "reason": "An unrelated extended attribute changed"
+    },
+    "preserved_attribute_added": {
+      "rejected": true,
+      "reason": "An unrelated extended attribute changed"
+    },
+    "preserved_file_mode_changed": {
+      "rejected": true,
+      "reason": "/firmware/firmware.bin"
+    },
+    "new_directory_uid_changed": {
+      "rejected": true,
+      "reason": ""
+    },
+    "edited_file_gid_changed": {
+      "rejected": true,
+      "reason": "/etc/config.txt"
+    },
+    "preserved_file_content_changed": {
+      "rejected": true,
+      "reason": "/firmware/firmware.bin"
+    },
+    "symlink_target_changed": {
+      "rejected": true,
+      "reason": "/firmware/driver-link"
+    }
+  },
+  "all_negative_cases_rejected": true,
+  "new_directory_missing_selinux_accepted": false,
+  "real_rom_touched": false,
+  "tv_accessed": false,
+  "usb_accessed": false,
+  "test_sha256": "5fe1594104a30606db031e67fcfca177fd86606e3d33afbd1e54e7a1386fa5e5"
+}

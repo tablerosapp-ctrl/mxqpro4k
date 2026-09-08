@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "title": "TV Base",
-  "snapshot": "2026-09-07T22:58:32.535352+00:00",
-  "state": "Root confirmado y12 particiones originales verificadas; nueva base P291 propuesta",
+  "snapshot": "2026-09-08T01:06:55.045972+00:00",
+  "state": "ROM 0.2.0 desde originales P291 y restauración verificadas en PC; instalación física pendiente",
   "installed": false,
   "original_tv_backup_confirmed": true,
   "source_of_truth": {
@@ -15,7 +15,10 @@
     "publication": "docs/PUBLICACION.md",
     "h1_review": "docs/hipotesis/H1-RESULTADO-CODEX.md",
     "fable_review": "docs/hipotesis/REVISION-CONJUNTA-FABLE.md",
-    "latest_capture": "diagnostico/primer-tv-lan-20260907-184926/resumen-saneado.json"
+    "latest_capture": "diagnostico/primer-tv-lan-20260907-184926/resumen-saneado.json",
+    "current_build": "rom-simplificada/original-p291/IMAGENES-0.2.0.json",
+    "current_package": "rom-simplificada/original-p291/empaquetado/salida/TVBASE-P291-A9-0.2.0-VERIFICACION.json",
+    "current_review": "docs/evidencia/ROM-ORIGINAL-P291-020.md"
   },
   "components": [
     {
@@ -43,9 +46,9 @@
     },
     {
       "id": "C-BASE",
-      "label": "Android candidato",
+      "label": "Candidato anterior",
       "state": "verificado_local",
-      "description": "Base community Android9 P291 inspeccionada; compatibilidad física no confirmada.",
+      "description": "Fuente comunitaria histórica. Sus diferencias con los originales P291 impiden usarla como base de la revisión 0.2.0; se conserva para análisis.",
       "files": [
         "analisis-rom/manifiesto.json",
         "analisis-rom/RESULTADO.md",
@@ -80,13 +83,14 @@
     },
     {
       "id": "C-INICIO",
-      "label": "Inicio TV",
-      "state": "construido",
-      "description": "Launcher propio y ajustes; recorrido físico con control pendiente.",
+      "label": "Inicio TV 0.2.0",
+      "state": "verificado_local",
+      "description": "Inicio propio con Ajustes TV y selección de APK por documentos/USB. Firma API28 comprobada; recorrido con mando pendiente.",
       "files": [
-        "rom-simplificada/componentes/inicio/Inicio.java",
-        "rom-simplificada/componentes/inicio/AndroidManifest.xml",
-        "rom-simplificada/compilar-componentes.py"
+        "rom-simplificada/original-p291/componentes/inicio/Inicio.java",
+        "rom-simplificada/original-p291/componentes/inicio/AndroidManifest.xml",
+        "rom-simplificada/original-p291/compilar-componentes.py",
+        "rom-simplificada/original-p291/COMPONENTES.json"
       ],
       "x": 1,
       "y": 0,
@@ -97,40 +101,44 @@
     },
     {
       "id": "C-ROM",
-      "label": "ROM0.1.2 sin Bluetooth",
+      "label": "ROM original P291 0.2.0",
       "state": "verificado_local",
-      "description": "0.1.2 construida y conservada. Revisiónoriginal detecta diferencias dearranque/firma; nueva derivación desdeoriginales propuesta, aún no implementada.",
+      "description": "Cinco imágenes derivadas del P291 real: 34 APK conservadas, 51 retiradas y 5 agregadas. Kernel/DTB y drivers ajenos al recorte preservados. Android original depurado, no AOSP reconstruido.",
       "files": [
-        "rom-simplificada/LEEME.md",
-        "rom-simplificada/preparar-copias.py",
-        "rom-simplificada/simplificar.py",
-        "rom-simplificada/verificar-y-empaquetar.py",
-        "rom-simplificada/trabajo/cambios.json",
-        "rom-simplificada/instalador/corregir-recovery-0.1.1.py",
-        "rom-simplificada/trabajo/revision-0.1.1/revision.json",
-        "rom-simplificada/trabajo/revision-0.1.1/system.raw.img",
-        "rom-simplificada/SIN-BLUETOOTH-0.1.2.md",
-        "rom-simplificada/instalador/preparar-sin-bluetooth-0.1.2.py",
-        "rom-simplificada/trabajo/revision-0.1.2/revision.json"
+        "rom-simplificada/original-p291/README.md",
+        "rom-simplificada/original-p291/construir.py",
+        "rom-simplificada/original-p291/product_ea.py",
+        "rom-simplificada/original-p291/boot.py",
+        "rom-simplificada/original-p291/inventariar-originales.py",
+        "rom-simplificada/original-p291/politica-paquetes.json",
+        "rom-simplificada/original-p291/AUDITORIA-SERVICIOS.md",
+        "rom-simplificada/original-p291/seleccion-servicios.json",
+        "rom-simplificada/original-p291/IMAGENES-0.2.0.json",
+        "docs/evidencia/ROM-ORIGINAL-P291-020.md",
+        "rom-simplificada/original-p291/verificar-composicion.py",
+        "rom-simplificada/original-p291/COMPOSICION-VERIFICADA.json",
+        "rom-simplificada/original-p291/INCIDENTES-CONSTRUCCION.md"
       ],
       "x": 1,
       "y": 1,
       "requirements": [
         "REQ-01",
         "REQ-03",
-        "REQ-13"
+        "REQ-13",
+        "REQ-14"
       ]
     },
     {
       "id": "C-WEB",
       "label": "Proveedor WebView",
-      "state": "construido",
-      "description": "Overlay permite Chrome como proveedor; WebView66 queda de respaldo. Motor efectivo y composición por comprobar.",
+      "state": "verificado_local",
+      "description": "Chrome138 declarado como único proveedor; WebView66 retirado. Overlays compilados y presentes en imagen; proveedor efectivo, dos VP9/alfa/canvas y rendimiento pendientes.",
       "files": [
-        "rom-simplificada/componentes/webview-overlay/AndroidManifest.xml",
-        "rom-simplificada/componentes/webview-overlay/res/xml/config_webview_packages.xml",
-        "rom-simplificada/INTEGRACION-WEBVIEW.md",
-        "rom-simplificada/fuentes-webview/fuentes.json"
+        "rom-simplificada/original-p291/componentes/webview-overlay/AndroidManifest.xml",
+        "rom-simplificada/original-p291/componentes/webview-overlay/res/xml/config_webview_packages.xml",
+        "rom-simplificada/original-p291/componentes/defaults/AndroidManifest.xml",
+        "rom-simplificada/original-p291/componentes/defaults/res/values/defaults.xml",
+        "rom-simplificada/original-p291/COMPONENTES.json"
       ],
       "x": 1,
       "y": 2,
@@ -142,23 +150,20 @@
     },
     {
       "id": "C-ZIP",
-      "label": "ZIP de instalación",
+      "label": "ZIP instalación y restauración",
       "state": "verificado_local",
-      "description": "Cinco particiones, controles, respaldo completo previo y hashes de lectura. No A/B ni rollback automático. Firma integral válida contra otacerts capturado del P291; claves internas de recovery desconocidas.",
+      "description": "Dos paquetes 0.2.0 con geometría original y firma SHA1 acorde a la clave v1. Payloads SHA256, CRC y firma Python/OpenJDK verificados; aceptación física pendiente. Instalación exige userdata limpia, sin borrarla.",
       "files": [
-        "rom-simplificada/instalador/README.md",
-        "rom-simplificada/instalador/main_linux.go",
-        "rom-simplificada/instalador/package.go",
-        "rom-simplificada/instalador/package_test.go",
-        "rom-simplificada/instalador/main_windows.go",
-        "rom-simplificada/instalador/empaquetar.py",
-        "rom-simplificada/instalador/manifest-0.1.1.json",
-        "rom-simplificada/salida/TVBASE-P291-A9-0.1.1-RECOVERY.zip",
-        "rom-simplificada/salida/RECOVERY-VERIFICACION-0.1.1.json",
-        "rom-simplificada/salida/RECOVERY-COMPROBACION-0.1.1.json",
-        "rom-simplificada/instalador/empaquetar-sin-bluetooth.py",
-        "rom-simplificada/instalador/manifest-0.1.2.json",
-        "rom-simplificada/salida/RECOVERY-VERIFICACION-0.1.2.json"
+        "rom-simplificada/original-p291/empaquetado/README.md",
+        "rom-simplificada/original-p291/empaquetado/main_linux.go",
+        "rom-simplificada/original-p291/empaquetado/package.go",
+        "rom-simplificada/original-p291/empaquetado/data_policy.go",
+        "rom-simplificada/original-p291/empaquetado/package_test.go",
+        "rom-simplificada/original-p291/empaquetado/empaquetar_original.py",
+        "rom-simplificada/original-p291/empaquetado/firma_ota_v1.py",
+        "rom-simplificada/original-p291/empaquetado/EVIDENCIA-TESTS.json",
+        "rom-simplificada/original-p291/empaquetado/salida/TVBASE-P291-A9-0.2.0-VERIFICACION.json",
+        "rom-simplificada/original-p291/empaquetado/salida/TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.0-VERIFICACION.json"
       ],
       "x": 2,
       "y": 0,
@@ -170,16 +175,13 @@
     },
     {
       "id": "C-REC",
-      "label": "Recovery externo",
+      "label": "Recovery original: entrada pendiente",
       "state": "verificado_local",
-      "description": "Archivo para RAM preparado del candidato. Clave del ZIP agregada con verificación activa; bootloader real sin probar. La vía OEM pide recovery interno, no acredita carga de este archivo.",
+      "description": "Recovery real adquirido: clave v1 y geometría conocidas. ZIP nuevos compatibles con esa política en pruebas PC; entrada/aceptación física sin demostrar. Recovery externo anterior es histórico.",
       "files": [
-        "rom-simplificada/instalador/preparar-recovery-externo.py",
-        "rom-simplificada/instalador/inspeccionar-recovery-externo.py",
-        "rom-simplificada/inspeccion/recovery-original.img",
-        "rom-simplificada/instalador/recovery-externo/recovery.img",
-        "rom-simplificada/instalador/recovery-externo/PREPARADO.json",
-        "rom-simplificada/instalador/gxl_p271_v1-referencia.h"
+        "diagnostico/primer-tv-lan-20260907-184926/RECOVERY-ORIGINAL.md",
+        "diagnostico/primer-tv-lan-20260907-184926/OPCIONES-INSTALACION-ROOT.md",
+        "rom-simplificada/original-p291/empaquetado/EVIDENCIA-TESTS.json"
       ],
       "x": 2,
       "y": 1,
@@ -224,9 +226,9 @@
     },
     {
       "id": "C-USB",
-      "label": "Kingston preparado",
+      "label": "Kingston: entrega 0.1.2 histórica",
       "state": "verificado_local",
-      "description": "ROM0.1.2, auxiliar y guía copiados/leídos; tres archivos anteriores archivados/verificados antes de retirar. Informes y respaldos conservados.",
+      "description": "La última copia comprobada conserva 0.1.2; no repetir Update. No se copió 0.2.0 ni se formateó el USB en esta construcción.",
       "files": [
         "preparacion-usb/preparar-postintento-08.ps1",
         "preparacion-usb/postintento-08-estado.json",
@@ -304,17 +306,28 @@
     },
     {
       "id": "C-GESTION",
-      "label": "Administración propia",
-      "state": "propuesto",
-      "description": "Actualizaciones independientes, catálogo, limpieza selectiva y despliegues por grupos. Aún sin implementación.",
+      "label": "Gestor propio 0.1",
+      "state": "verificado_local",
+      "description": "APK para actualizaciones de aplicaciones y Chrome, 38 pruebas host y revisión independiente. Integrado como priv-app con permiso acotado. Desactivado, sin endpoint; no hay prueba Android ni OTA completa.",
       "files": [
-        "docs/hipotesis/REVISION-CONJUNTA-FABLE.md"
+        "rom-simplificada/componentes/gestion-tvbase/README.md",
+        "rom-simplificada/componentes/gestion-tvbase/AndroidManifest.xml",
+        "rom-simplificada/componentes/gestion-tvbase/ManagerEngine.java",
+        "rom-simplificada/componentes/gestion-tvbase/UpdateCore.java",
+        "rom-simplificada/componentes/gestion-tvbase/UpdateJob.java",
+        "rom-simplificada/componentes/gestion-tvbase/MainActivity.java",
+        "rom-simplificada/original-p291/gestion/README.md",
+        "rom-simplificada/original-p291/gestion/manifest_tool.py",
+        "rom-simplificada/original-p291/gestion/LIBERACION.json",
+        "rom-simplificada/original-p291/gestion/pruebas-resultado.json",
+        "rom-simplificada/original-p291/REVISION-GESTOR.md"
       ],
       "x": 4,
       "y": 3,
       "requirements": [
         "REQ-07",
-        "REQ-09"
+        "REQ-09",
+        "REQ-14"
       ]
     },
     {
@@ -339,7 +352,7 @@
       "id": "C-ORIG",
       "label": "Originales del P291",
       "state": "observado_tv",
-      "description": "12 particiones originales verificadas (2538MiB). Excluyeuserdata/cache yotrasáreas; restauración pendiente. Recovery/DTB originales fundamentan nueva base.",
+      "description": "Doce particiones seleccionadas (2538 MiB) verificadas; fuente de la ROM y ZIP de restauración. No incluye userdata/cache ni toda eMMC; restauración física pendiente.",
       "files": [
         "diagnostico/primer-tv-lan-20260907-184926/RESPALDO-resumen-saneado.json",
         "diagnostico/primer-tv-lan-20260907-184926/RECOVERY-ORIGINAL.md",
@@ -363,11 +376,6 @@
       "relation": "selecciona"
     },
     {
-      "source": "C-BASE",
-      "target": "C-ROM",
-      "relation": "aporta hardware"
-    },
-    {
       "source": "C-CHROME",
       "target": "C-WEB",
       "relation": "motor admitido"
@@ -388,19 +396,9 @@
       "relation": "se empaqueta"
     },
     {
-      "source": "C-BASE",
-      "target": "C-REC",
-      "relation": "recovery fuente"
-    },
-    {
       "source": "C-ZIP",
       "target": "C-USB",
-      "relation": "se copia"
-    },
-    {
-      "source": "C-REC",
-      "target": "C-USB",
-      "relation": "se copia"
+      "relation": "copia 0.2.0 pendiente"
     },
     {
       "source": "C-ENTRY",
@@ -420,7 +418,7 @@
     {
       "source": "C-APP",
       "target": "C-GESTION",
-      "relation": "contrato propuesto"
+      "relation": "actualización por contrato"
     },
     {
       "source": "C-BTCTRL",
@@ -435,7 +433,17 @@
     {
       "source": "C-ORIG",
       "target": "C-ROM",
-      "relation": "nueva base propuesta"
+      "relation": "fuente original verificada"
+    },
+    {
+      "source": "C-GESTION",
+      "target": "C-ROM",
+      "relation": "gestor integrado"
+    },
+    {
+      "source": "C-ORIG",
+      "target": "C-REC",
+      "relation": "recovery adquirido"
     }
   ],
   "requirements": [
@@ -454,7 +462,7 @@
       "label": "Hardware por placa",
       "components": [
         "C-PERFIL",
-        "C-BASE"
+        "C-ORIG"
       ],
       "spec": "docs/ESPECIFICACION.md"
     },
@@ -481,7 +489,7 @@
       "label": "Dos VP9, alfa y canvas",
       "components": [
         "C-WEB",
-        "C-BASE"
+        "C-ORIG"
       ],
       "spec": "docs/ESPECIFICACION.md"
     },
@@ -555,6 +563,16 @@
         "C-BTCTRL"
       ],
       "spec": "docs/ESPECIFICACION.md"
+    },
+    {
+      "id": "REQ-14",
+      "label": "Software y conexiones justificadas",
+      "components": [
+        "C-ROM",
+        "C-GESTION",
+        "C-TV"
+      ],
+      "spec": "docs/ESPECIFICACION.md"
     }
   ],
   "phases": [
@@ -564,13 +582,12 @@
       "state": "verificado_local",
       "depends_on": [],
       "components": [
-        "C-BASE",
+        "C-ORIG",
         "C-ROM",
-        "C-ENTRY",
-        "C-REC",
-        "C-USB"
+        "C-ZIP",
+        "C-GESTION"
       ],
-      "exit": "VAL-01 a VAL-04: artefactos y copia local verificados.",
+      "exit": "0.2.0 y restauración verificadas en PC. Nueva copia USB aún pendiente; recibos 0.1.2 son históricos.",
       "x": 0,
       "y": 0
     },
@@ -586,7 +603,7 @@
         "C-REC",
         "C-TV"
       ],
-      "exit": "VAL-05 sin superar: ZIP real probado mediante OEM, detenido al2% más de10min. Falta recuperación/entrada efectiva y aceptación del paquete.",
+      "exit": "VAL-05 pendiente: resolver entrada y ruta real en recovery; no repetir OEM al 2% ni reinicio sin preparación.",
       "x": 1,
       "y": 0
     },
@@ -601,7 +618,7 @@
         "C-ZIP",
         "C-TV"
       ],
-      "exit": "VAL-06/07: originales respaldados, instalación leída y Android interno sin USB.",
+      "exit": "Preparar userdata según contenido a conservar, respaldo y cinco escrituras verificadas; VAL-06/07 arranque interno sin USB.",
       "x": 2,
       "y": 0
     },
@@ -654,7 +671,7 @@
     {
       "id": "M6",
       "label": "Administración propia",
-      "state": "propuesto",
+      "state": "construido",
       "depends_on": [
         "M3",
         "M4",
@@ -663,7 +680,7 @@
       "components": [
         "C-GESTION"
       ],
-      "exit": "Firmas, grupos, actualización y datos conservados.",
+      "exit": "Gestor APK/motor construido; VAL-10 física, servidor, catálogo/ROM/rollback y firma de producción pendientes.",
       "x": 2,
       "y": 1
     },
@@ -867,6 +884,24 @@
         "C-ROM",
         "C-TV"
       ]
+    },
+    {
+      "id": "ADR-24",
+      "file": "docs/DECISIONES.md",
+      "components": [
+        "C-ORIG",
+        "C-ROM",
+        "C-WEB"
+      ]
+    },
+    {
+      "id": "ADR-25",
+      "file": "docs/DECISIONES.md",
+      "components": [
+        "C-GESTION",
+        "C-ZIP",
+        "C-REC"
+      ]
     }
   ],
   "validations": [
@@ -899,11 +934,12 @@
     {
       "id": "VAL-04",
       "file": "docs/ESPECIFICACION.md",
-      "state": "verificado_local",
+      "state": "pendiente",
       "requirements": [
         "REQ-01",
         "REQ-11"
-      ]
+      ],
+      "note": "Copia USB 0.2.0 pendiente; anteriores preservadas con recibos propios."
     },
     {
       "id": "VAL-05",
@@ -957,6 +993,15 @@
         "REQ-09",
         "REQ-11"
       ]
+    },
+    {
+      "id": "VAL-10",
+      "file": "docs/ESPECIFICACION.md",
+      "state": "pendiente",
+      "requirements": [
+        "REQ-09",
+        "REQ-14"
+      ]
     }
   ],
   "artifacts": [
@@ -964,25 +1009,50 @@
       "name": "TVBASE-P291-A9-0.1.2-RECOVERY.zip",
       "path": "rom-simplificada/salida/TVBASE-P291-A9-0.1.2-RECOVERY.zip",
       "bytes": 573082917,
-      "sha256": "6c0c4307208c8d0e1a958a3fc6c790fa94021a850599985b0a41b340b821bb99"
+      "sha256": "6c0c4307208c8d0e1a958a3fc6c790fa94021a850599985b0a41b340b821bb99",
+      "scope": "historical_usb_delivery_012"
     },
     {
       "name": "ControlBluetooth-0.1.apk",
       "path": "rom-simplificada/compilacion/control-bluetooth-0.1/ControlBluetooth-0.1.apk",
       "bytes": 24979,
-      "sha256": "6d7c866478c859ac3948a1132aa75ceebc13d059c32098aaecc0cbb82dbf031f"
+      "sha256": "6d7c866478c859ac3948a1132aa75ceebc13d059c32098aaecc0cbb82dbf031f",
+      "scope": "historical_usb_delivery_012"
     },
     {
       "name": "recovery.img",
       "path": "rom-simplificada/instalador/recovery-externo/recovery.img",
       "bytes": 25165824,
-      "sha256": "e59ef077378f8b1ba644bcfbef2a0f55e9914258696f203e813392e0a9fed01b"
+      "sha256": "e59ef077378f8b1ba644bcfbef2a0f55e9914258696f203e813392e0a9fed01b",
+      "scope": "historical_usb_delivery_012"
     },
     {
       "name": "LEEME-AHORA.txt",
       "path": "rom-simplificada/instalador/LEEME-ROM-0.1.2.txt",
       "bytes": 1752,
-      "sha256": "3f26f214f96f126e89cdba0fb68e445b780ed590f762efe03b45b05399643273"
+      "sha256": "3f26f214f96f126e89cdba0fb68e445b780ed590f762efe03b45b05399643273",
+      "scope": "historical_usb_delivery_012"
+    },
+    {
+      "name": "TVBASE-P291-A9-0.2.0-RECOVERY.zip",
+      "path": "rom-simplificada/original-p291/empaquetado/salida/TVBASE-P291-A9-0.2.0-RECOVERY.zip",
+      "bytes": 573492264,
+      "sha256": "bd4a8dd7df8d61580c5b450867bda2ef2b214b400b4cafcce5a26baa5c48a614",
+      "scope": "verified_pc_only"
+    },
+    {
+      "name": "TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.0-RECOVERY.zip",
+      "path": "rom-simplificada/original-p291/empaquetado/salida/TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.0-RECOVERY.zip",
+      "bytes": 913228907,
+      "sha256": "a10aee68042ef9f945a4160fd897d0db1943e28dd58e0a03918d138e9f1a8e3f",
+      "scope": "verified_pc_only"
+    },
+    {
+      "name": "TVBaseGestion-0.1.apk",
+      "path": "rom-simplificada/original-p291/gestion/privado/build-20260908-004733-795344/TVBaseGestion-0.1.apk",
+      "bytes": 57810,
+      "sha256": "73f0a2e73857cc83484caa3034bf69b8aa88422945153d71499f81c8ab81d320",
+      "scope": "integrated_verified_pc_only"
     }
   ],
   "protected_paths": [
@@ -1005,8 +1075,8 @@
     {
       "id": "PROP-02",
       "label": "Restauración desde originales reales",
-      "state": "propuesto",
-      "file": "docs/ROADMAP.md",
+      "state": "verificado_local",
+      "file": "rom-simplificada/original-p291/README.md",
       "components": [
         "C-ZIP",
         "C-REC"
@@ -1099,9 +1169,9 @@
     },
     {
       "id": "PROP-12",
-      "label": "Actualizador propio: diseño corregido",
-      "state": "propuesto",
-      "file": "docs/hipotesis/REVISION-CONJUNTA-FABLE.md",
+      "label": "Gestor APK/motor construido; sistema/contenido pendientes",
+      "state": "construido",
+      "file": "rom-simplificada/original-p291/gestion/README.md",
       "components": [
         "C-GESTION"
       ]
@@ -1119,7 +1189,7 @@
       "id": "PROP-14",
       "label": "P291 sin Bluetooth",
       "state": "verificado_local",
-      "file": "rom-simplificada/SIN-BLUETOOTH-0.1.2.md",
+      "file": "rom-simplificada/original-p291/README.md",
       "components": [
         "C-ROM",
         "C-TV",
@@ -1129,8 +1199,8 @@
     {
       "id": "PROP-15",
       "label": "ROM desde originales P291",
-      "state": "propuesto",
-      "file": "diagnostico/primer-tv-lan-20260907-184926/RECOVERY-ORIGINAL.md",
+      "state": "verificado_local",
+      "file": "rom-simplificada/original-p291/README.md",
       "components": [
         "C-ORIG",
         "C-ROM",
@@ -1138,9 +1208,9 @@
       ]
     }
   ],
-  "delivery_label": "ROM0.1.2 conservada · siguiente base en revisión",
-  "date_label": "7/9/2026",
-  "next_step_label": "Preparar ROM desde originales; resolver firma y arranque antes de forzar",
+  "delivery_label": "0.2.0 y restauración verificadas en PC · no entregadas al USB",
+  "date_label": "7/9/2026 ART · originales P291",
+  "next_step_label": "Resolver entrada recovery y preparar userdata; después instalar y medir hardware/WebView",
   "public_repository": {
     "url": "https://github.com/tablerosapp-ctrl/mxqpro4k",
     "visibility_requested": "public",

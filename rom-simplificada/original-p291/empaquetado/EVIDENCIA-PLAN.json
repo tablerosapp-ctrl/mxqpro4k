@@ -1,0 +1,24 @@
+{
+  "fixture_bytes": 16777216,
+  "source_sha256": "88f00c22dc7fe847eda084b4839bffcaafee33a1a56d4ef4aa0a12835178a78b",
+  "original_fixture_unchanged": true,
+  "edited_verification": {
+    "unchanged_files_verified": 1,
+    "removed_nodes": 2,
+    "changed_files_verified": 2,
+    "free_bytes": 11440128
+  },
+  "final_verification": {
+    "unchanged_files_verified": 1,
+    "removed_nodes": 2,
+    "changed_files_verified": 2,
+    "free_bytes": 11440128
+  },
+  "free_zero_blocks_verified": 2793,
+  "removed_apk_marker_absent": true,
+  "firmware_bytes_preserved": true,
+  "new_directory_missing_selinux_accepted": true,
+  "real_rom_touched": false,
+  "tv_accessed": false,
+  "usb_accessed": false
+}

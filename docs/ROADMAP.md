@@ -1,5 +1,21 @@
 # Roadmap y propuestas
 
+## Actualización vigente · derivación original 0.2.0
+
+**M0 / PROP-15:** cinco imágenes y ZIP0.2.0 construidos desde los originales, verificados en PC. Firma según recovery v1 y recorte por política. La copia USB de esta versión está pendiente; M0 no acredita entrada física.
+
+**PROP-02:** paquete separado de restauración original construido y verificado. No cierra M4: todavía no se ensayó ejecutar recovery y recuperar el equipo.
+
+**M1 → M2:** resolver entrada efectiva y ruta de paquete; diseñar preparación de userdata con conservación explícita de lo necesario. El instalador se niega a escribir sobre una migración pendiente. Luego instalar cinco particiones y probar arranque desde memoria interna sin pendrive. No repetir la ruta OEM bloqueada al2%.
+
+**M3:** proveedor Chrome/WebView efectivo, ajustes/mando, instalación USB, Ethernet/WiFi, video local, dos VP9/alfa/canvas, memoria y tráfico atribuido. La eliminación de Bluetooth no acredita recuperar WiFi.
+
+**M6 / PROP-12:** gestor APK/navegador implementado y revisado offline; falta servidor/configuración y VAL-10 en Android. Contenido, actualización de ROM, rollback, firmas de producción y reanudación automática siguen propuestos. El usuario dispone de servidor, pero no indicó su URL.
+
+**M7 / PROP-05/06:** mover el framework a una base mantenida, conservar compatibilidad de video y desplegar SELinux/firma de producción. La derivación actual no sustituye ese trabajo. [Evidencia del avance](evidencia/ROM-ORIGINAL-P291-020.md).
+
+## Roadmap y propuestas anteriores conservados
+
 Orden por dependencias, sin fechas prometidas. Una etapa se cierra con evidencia y sus criterios de salida; la preparación local no sustituye el resultado físico.
 
 | Etapa | Situación | Trabajo y salida verificable | Dependencia |

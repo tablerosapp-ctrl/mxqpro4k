@@ -1,0 +1,513 @@
+{
+  "format": 1,
+  "profile": "P291/gxlx2_p291_1g/API28",
+  "status": "audited_selection_not_applied_by_auditor",
+  "scope": "boot/init/props/permisos/servicios; APK completas y builder gestionados por agente principal",
+  "private_proof_sha256": {
+    "extraccion.json": "3eab98ec482c94a4d969363c6d67d37f548cfaae23ae7fa868a4bbe68c838381",
+    "init-bloques.json": "1369a7219da1ab858d023ef1ccd47ee237adc092f9ff049967bab99ef9884707",
+    "setid-y-root.json": "5e65d1a53c233f1451137267296ba2fdf36a405bd513cf939dd742a015f3e164",
+    "servicios-binarios-estaticos.json": "9d990c0dfb82ca6d745dd4e05998c388a17bba96c4061a51829ff388395cef17",
+    "revision-boot.json": "ae02b541e1ef87e79d2f6310611bf379ad7b674503fae04294883fe7ea069d9d"
+  },
+  "decisions": [
+    {
+      "id": "SVC-01",
+      "action": "edit",
+      "title": "Cerrar configuración de depuración",
+      "targets": [
+        {
+          "part": "system",
+          "path": "/etc/prop.default",
+          "source_sha256": "234c2d864236dade19b61657c030bdf5543a733f4b471b46f0e178f0c51d9bb6",
+          "selector": [
+            "ro.secure=1",
+            "ro.debuggable=0",
+            "ro.adb.secure=1",
+            "persist.sys.usb.config=none"
+          ]
+        },
+        {
+          "part": "vendor",
+          "path": "/build.prop",
+          "source_sha256": "f19250a709e9ee710b11aeb44c3bf9fcdb362835883ee0926dd44283b5dbee77",
+          "selector": [
+            "service.adb.tcp.port=-1",
+            "ro.adb.secure=1"
+          ]
+        }
+      ],
+      "rationale": "El original fija TCP5555 sin autenticación y USBADB por defecto. No sustituye revisar propiedades persistentes heredadas de data.",
+      "acceptance_checks": [
+        "Sin TCP ADB habilitado por defecto ni autenticación desactivada.",
+        "Si se conserva ADB USB, acceso explícito autenticado y sin root.",
+        "Comprobar estado efectivo tras arrancar; no inferirlo solo de build.prop."
+      ],
+      "applied_by_this_audit": false,
+      "implementation_observed": false
+    },
+    {
+      "id": "SVC-02",
+      "action": "remove",
+      "title": "Retirar ejecutables elevados de diagnóstico",
+      "targets": [
+        {
+          "part": "system",
+          "path": "/xbin/su",
+          "source_sha256": "79030b7434c4ef606b32f6cd02caf2c47d64a67adbedf8eba06da96ce6b7429c"
+        },
+        {
+          "part": "system",
+          "path": "/xbin/procmem",
+          "source_sha256": "b8187babf6b9da73e9eb2efe8e0fa36f794dfc04672113609990af7b61435fad"
+        }
+      ],
+      "rationale": "su es setuid04750 root:shell; procmem es setuid/setgid06755 root:root. No son necesarios para video o instalación Android normal.",
+      "acceptance_checks": [
+        "Archivos ausentes en la imagen nueva.",
+        "Nuevo barrido completo de setuid/setgid.",
+        "No introducir un sustituto root público en el gestor propio."
+      ],
+      "applied_by_this_audit": false,
+      "implementation_observed": false
+    },
+    {
+      "id": "SVC-03",
+      "action": "edit",
+      "title": "Cerrar consola y opción de contexto root de adbd en boot",
+      "targets": [
+        {
+          "part": "boot",
+          "path": "/init.rc",
+          "source_sha256": "ea0fc7b934b1e0ef0fd22582f3fa322adef4c7164fa384a4bb280683f1b33fd2",
+          "selector": "service console y start console"
+        },
+        {
+          "part": "boot",
+          "path": "/init.usb.rc",
+          "source_sha256": "3a6299d5e72a9e79cd6bb749b048688fe5de9ebb24fe7d31b4c6765593d08ca5",
+          "selector": "--root_seclabel=u:r:su:s0"
+        }
+      ],
+      "rationale": "El transformador boot.py elimina estos elementos conservando kernel/DTB; se revisó en memoria con el original.",
+      "acceptance_checks": [
+        "Solo init.rc/init.usb.rc cambian en CPIO.",
+        "Conservar modos, UID/GID, nombres, kernel, DTB y cmdline.",
+        "La eliminación del argumento no cierra ADB por sí sola; aplicar SVC-01."
+      ],
+      "applied_by_this_audit": false,
+      "implementation_observed": true
+    },
+    {
+      "id": "SVC-04",
+      "action": "edit",
+      "title": "Quitar arranque incondicional de consola y depuración serie",
+      "targets": [
+        {
+          "part": "vendor",
+          "path": "/etc/init/hw/init.amlogic.board.rc",
+          "source_sha256": "55822e668a87504fab140701d808e5ede3b3cf66cf2962f5185e72e7dc5299eb",
+          "selector": "start console en early-init L4 y on init L12"
+        },
+        {
+          "part": "vendor",
+          "path": "/etc/init/hw/init.amlogic.rc",
+          "source_sha256": "1bcefe53a9d53f7aa75b7ea8a241bede897ac1e087a53265a05ce8e20af86914",
+          "selector": "bloque ro.debuggable=1 L473–475: kgdboc/fiq_debugger"
+        }
+      ],
+      "rationale": "ro.debuggable0 no cancela los dos start console incondicionales; preservar en esos archivos todos los ajustes de hardware ajenos a la retirada.",
+      "acceptance_checks": [
+        "No quedan arranques de consola en init normal.",
+        "Mismos módulos/configuración multimedia fuera de las líneas previstas."
+      ],
+      "applied_by_this_audit": false,
+      "implementation_observed": false
+    },
+    {
+      "id": "SVC-05",
+      "action": "remove_and_edit",
+      "title": "Eliminar reinyección de aplicaciones OEM",
+      "targets": [
+        {
+          "part": "vendor",
+          "path": "/bin/preinstall.sh",
+          "source_sha256": "b433ab931d691f4594efd6bf70c5a9e83f15245618f57e73b6724d1d082844a8"
+        },
+        {
+          "part": "vendor",
+          "path": "/etc/init/hw/init.amlogic.rc",
+          "source_sha256": "1bcefe53a9d53f7aa75b7ea8a241bede897ac1e087a53265a05ce8e20af86914",
+          "selector": "service preinstall L500–504 y start preinstall L512–513"
+        },
+        {
+          "part": "vendor",
+          "path": "/preinstall/",
+          "selector": "árbol de APK, contrastar inventario del agente principal"
+        }
+      ],
+      "rationale": "El script llama su, concede permisos a Facebook, instala desde vendor/preinstall y se reactiva según marcadores/conteo de data; también cambia HDMI CEC.",
+      "acceptance_checks": [
+        "No queda trigger ni servicio ni contenido OEM de reinyección.",
+        "El inicio/provisionamiento propio no depende del script retirado.",
+        "Ninguna conclusión de malware basada en este script."
+      ],
+      "applied_by_this_audit": false,
+      "implementation_observed": false
+    },
+    {
+      "id": "SVC-06",
+      "action": "edit",
+      "title": "Desactivar reconstrucción heredada de recovery",
+      "targets": [
+        {
+          "part": "boot",
+          "path": "/init.rc",
+          "source_sha256": "ea0fc7b934b1e0ef0fd22582f3fa322adef4c7164fa384a4bb280683f1b33fd2",
+          "selector": "service flash_recovery L767"
+        },
+        {
+          "part": "system",
+          "path": "/bin/install-recovery.sh",
+          "source_sha256": "8f6768683ef07abb3a6f699f8951d493fe09128f16a8f6558cb9363e029cf796"
+        }
+      ],
+      "rationale": "El servicio ejecuta applypatch contra recovery desde boot y recovery-from-boot.p. Debe quedar desactivado de forma coherente con el nuevo sistema de actualización.",
+      "acceptance_checks": [
+        "No puede reescribir recovery durante el arranque normal.",
+        "Conservar recovery/bootloader originales respaldados.",
+        "No retirar uncrypt/setup-bcb/clear-bcb solo por ser componentes de actualización."
+      ],
+      "applied_by_this_audit": false,
+      "implementation_observed": false
+    },
+    {
+      "id": "SVC-07",
+      "action": "edit",
+      "title": "Desactivar servicio OEM factoryreset y llamada ausente",
+      "targets": [
+        {
+          "part": "vendor",
+          "path": "/etc/init/hw/init.amlogic.rc",
+          "source_sha256": "1bcefe53a9d53f7aa75b7ea8a241bede897ac1e087a53265a05ce8e20af86914",
+          "selector": "service factoryreset L492–498 y start factoryreset L518"
+        }
+      ],
+      "rationale": "El init lo inicia tras boot_completed, pero vendor/bin/factoryreset.sh no existe en la imagen original. Retirar ese arranque residual; no sustituir el mecanismo estándar de reset Android.",
+      "acceptance_checks": [
+        "No se borra el bloque que también habilita ZRAM y ajusta CPU.",
+        "No se inventa comportamiento para el script ausente."
+      ],
+      "applied_by_this_audit": false,
+      "implementation_observed": false
+    },
+    {
+      "id": "SVC-08",
+      "action": "edit",
+      "title": "Deshabilitar Bluetooth coherentemente",
+      "targets": [
+        {
+          "part": "vendor",
+          "path": "/etc/init/hw/init.amlogic.rc",
+          "source_sha256": "1bcefe53a9d53f7aa75b7ea8a241bede897ac1e087a53265a05ce8e20af86914",
+          "selector": "persist.vendor.btmodule=btmtksdio/sprdbt_tty, L523–528"
+        },
+        {
+          "part": "vendor",
+          "path": "/etc/init/android.hardware.bluetooth@1.0-service.rc",
+          "source_sha256": "a1a79c808317d403a4364c949307628895434e0b6201a9cc4d5a75bd61f89699",
+          "selector": "servicio y triggers de reinicio"
+        },
+        {
+          "part": "vendor",
+          "path": "/etc/vintf/manifest.xml",
+          "source_sha256": "0980112ad459944079253afa8499fd40df91834266089ff1290d746261c64d73",
+          "selector": "HAL android.hardware.bluetooth"
+        },
+        {
+          "part": "vendor",
+          "path": "/build.prop",
+          "source_sha256": "f19250a709e9ee710b11aeb44c3bf9fcdb362835883ee0926dd44283b5dbee77",
+          "selector": "config.disable_bluetooth=true"
+        },
+        {
+          "part": "system",
+          "path": "/etc/permissions/android.hardware.bluetooth.xml",
+          "source_sha256": "9c19fa570a54eb77d4391c196987dedecaa8e7c700b6a1e965f8a9db3116a232"
+        },
+        {
+          "part": "system",
+          "path": "/etc/permissions/android.hardware.bluetooth_le.xml",
+          "source_sha256": "845f59a4e13fbdda3b48c30a3a0510db45a261af15f31d4925c939dc48d8e3e0"
+        },
+        {
+          "part": "vendor",
+          "path": "/etc/permissions/android.hardware.bluetooth.xml",
+          "source_sha256": "08305a972411f4f0068c23e77e00154826f5335a3e12fc1d6042ca130e1db3fd"
+        },
+        {
+          "part": "vendor",
+          "path": "/etc/permissions/android.hardware.bluetooth_le.xml",
+          "source_sha256": "845f59a4e13fbdda3b48c30a3a0510db45a261af15f31d4925c939dc48d8e3e0"
+        }
+      ],
+      "rationale": "El usuario excluye Bluetooth. El original usa btmodule, diferente del bt_module del candidato; un cambio de preferencia aislado no frena servicio/HAL/módulo.",
+      "acceptance_checks": [
+        "Aplicaciones Bluetooth retiradas según política de paquetes.",
+        "No se declara soporte Bluetooth ni arranca su HAL/módulo.",
+        "Conservar bytes de drivers/firmware WiFi y video.",
+        "No borrar por coincidencia textual librerías o módulos compartidos."
+      ],
+      "applied_by_this_audit": false,
+      "implementation_observed": false
+    },
+    {
+      "id": "SVC-09",
+      "action": "preserve",
+      "title": "Conservar pila de video, audio y pantalla",
+      "targets": [
+        {
+          "part": "vendor",
+          "path": "/etc/init/hw/init.amlogic.media.rc",
+          "source_sha256": "5aaf1d01d652dcff703b8da2e177fbf26a7a945b0eb14562cd248c4417ea6d61"
+        },
+        {
+          "part": "vendor",
+          "path": "/etc/init/android.hardware.media.omx@1.0-service.rc",
+          "source_sha256": "764d52f4043dfff6297ebde167e7c30dc1cff6354a3c2e19aedce3eb96c8f2b2"
+        },
+        {
+          "part": "vendor",
+          "path": "/etc/init/android.hardware.graphics.composer@2.2-service.rc",
+          "source_sha256": "c26aa9df5aa063c9f04901ff647c9a1f765e22ce2f05b0a4585daa0a161b21a8"
+        },
+        {
+          "part": "vendor",
+          "path": "/etc/init/android.hardware.graphics.allocator@2.0-service.rc",
+          "source_sha256": "bf196b7d0accd30fb6f35d4351e2708dfebcc3c00c03140a72a3064888aea5bd"
+        },
+        {
+          "part": "vendor",
+          "path": "/etc/init/systemcontrol.rc",
+          "source_sha256": "c20c5fd7beacbfec194833a5e32d74e170933be1d1b7b2a4e473e09da51e41c4"
+        },
+        {
+          "part": "vendor",
+          "path": "/etc/init/subtitleserver.rc",
+          "source_sha256": "16906e6dd18eb26136241a77a7b717edf2301eacd3a3980f1ffbd33c7f66e2c8"
+        }
+      ],
+      "rationale": "Carga amvdec_vp9, VPU, firmware, códecs, OMX y composición. Quitar DRM/TEE o fabricantes por nombre puede romper dependencias aun reproduciendo contenido sin DRM.",
+      "acceptance_checks": [
+        "Conservar hashes de módulos, firmware y bibliotecas de medios.",
+        "VP9 alfa + segunda capa + canvas deben verificarse físicamente.",
+        "Mantener HAL audio, mediaserver/extractor, SurfaceFlinger y sus permisos."
+      ],
+      "applied_by_this_audit": false,
+      "implementation_observed": false
+    },
+    {
+      "id": "SVC-10",
+      "action": "preserve",
+      "title": "Conservar acceso a red y almacenamiento Android",
+      "targets": [
+        {
+          "part": "system",
+          "path": "/etc/init/netd.rc",
+          "source_sha256": "6bfb1a6f22bb8219b69e48e06cce858487faf6dc981d4368a5db658c56847ff2"
+        },
+        {
+          "part": "system",
+          "path": "/etc/init/wificond.rc",
+          "source_sha256": "7ec3ef548e88bcd13577b59239ca88b594454622818e4a9190ad274b1aadee38"
+        },
+        {
+          "part": "vendor",
+          "path": "/etc/init/android.hardware.wifi@1.0-service.rc",
+          "source_sha256": "51e16c30b99057e14de3aaabe5a90d56c4b65042e2b84f289a111c40b25d62d7"
+        },
+        {
+          "part": "vendor",
+          "path": "/etc/init/hw/init.amlogic.wifi.rc",
+          "source_sha256": "4a9b38f2c8c4d1e4f5a11d68c3fbcfcbd850c81d60768ae640f07da545f35066"
+        },
+        {
+          "part": "vendor",
+          "path": "/etc/init/wifi_preload.rc",
+          "source_sha256": "249489a76f8059a226788029111bd62e4baa73365332fc613fe4ccc7157e5b44"
+        },
+        {
+          "part": "system",
+          "path": "/etc/init/vold.rc",
+          "source_sha256": "bb5f56cb813e4fd5944df8d3dced223cf8f57f4d6a9b3b34c3518f6dfd341e5d"
+        },
+        {
+          "part": "system",
+          "path": "/etc/init/uncrypt.rc",
+          "source_sha256": "63b33e2a2271d0c598bca842d0e6b03564004ed1e0e2995e8dd8ed5616455e82"
+        }
+      ],
+      "rationale": "Son dependencias de Ethernet/WiFi/DNS, USB, almacenamiento y preparación de actualizaciones propias; el fallo WiFi observado no se corrige borrando la pila de red.",
+      "acceptance_checks": [
+        "No eliminar cfg80211/WLAN/firmware ni modificar DTB/SDIO.",
+        "Mantener Ethernet y acceso USB host.",
+        "Validar cierre y WiFi en equipo; la captura previa mostró espera HAL start."
+      ],
+      "applied_by_this_audit": false,
+      "implementation_observed": false
+    },
+    {
+      "id": "SVC-11",
+      "action": "preserve_pending_dependency_audit",
+      "title": "Conservar control remoto y servicios de fabricante relevantes",
+      "targets": [
+        {
+          "part": "vendor",
+          "path": "/bin/remotecfg.sh",
+          "source_sha256": "1971cc18c7e365c87d5a4b08761567ced2d47924997fcbcfa2db7fb673b9fe7a"
+        },
+        {
+          "part": "vendor",
+          "path": "/etc/init/hw/init.amlogic.board.rc",
+          "source_sha256": "55822e668a87504fab140701d808e5ede3b3cf66cf2962f5185e72e7dc5299eb",
+          "selector": "load_remote"
+        },
+        {
+          "part": "vendor",
+          "path": "/etc/init/hdmicecd.rc",
+          "source_sha256": "eccbe3ad18dfe64c92a77d9408a4c6e44e20f57ef34528ddb3d0dc2e9f031038"
+        },
+        {
+          "part": "vendor",
+          "path": "/etc/init/android.hardware.tv.cec@1.0-service.rc",
+          "source_sha256": "e555eefb75d0a2f6099128448bbe0306b31a12fbee4cebaa1b8be9a1dbdbb42a"
+        },
+        {
+          "part": "vendor",
+          "path": "/etc/init/android.hardware.ir@1.0-service.rc",
+          "source_sha256": "77397eecb12aa6e7216d24338671b0bc058a54605f6eebcccb060cfaf314556b"
+        },
+        {
+          "part": "vendor",
+          "path": "/etc/init/rc_server.rc",
+          "source_sha256": "07ab8dc90dce96509387ac6c4736c05c47573965ce2ce754e5c6e5c79ceadcc8"
+        },
+        {
+          "part": "vendor",
+          "path": "/etc/permissions/droidlogic.software.core.xml",
+          "source_sha256": "c6f23fdab51a5b1b0e9e7802deea300fe225bd57b6acbfd940ac68ff38a6dedb"
+        }
+      ],
+      "rationale": "Preservar IR/CEC y droidlogic.jar/servicios hasta demostrar qué consumidores se retiran. rc_server depende de libremotecontrolserver y Binder; su nombre no prueba un listener externo.",
+      "acceptance_checks": [
+        "Comprobar mapas de mando y CEC físicos.",
+        "No confundir controles locales con telemetría por el nombre del servicio."
+      ],
+      "applied_by_this_audit": false,
+      "implementation_observed": false
+    },
+    {
+      "id": "SVC-12",
+      "action": "edit_by_package_policy",
+      "title": "Recortar privilegios y excepciones junto con APK retiradas",
+      "targets": [
+        {
+          "part": "system",
+          "path": "/etc/permissions/privapp-permissions-google.xml",
+          "source_sha256": "bdd350eaf495d629ffedccc1880bdceeda021b973a35247fbb8fffee497fd893"
+        },
+        {
+          "part": "system",
+          "path": "/etc/sysconfig/google.xml",
+          "source_sha256": "bc761eab478bbe627ba5b5e73120b9f0b3b766fd743ecfa139f19bb976140b8b"
+        },
+        {
+          "part": "system",
+          "path": "/etc/sysconfig/google_build.xml",
+          "source_sha256": "724875dc95f7fb7eb950714f9a474a9a304e081626d9364647e02409e4bdae9c"
+        },
+        {
+          "part": "system",
+          "path": "/etc/sysconfig/google_exclusives_enable.xml",
+          "source_sha256": "ef4b126c4c1059390b8ee3c761152b6d6612314701e4e073e365ebabd9fcf99a"
+        },
+        {
+          "part": "system",
+          "path": "/etc/sysconfig/google-hiddenapi-package-whitelist.xml",
+          "source_sha256": "4a05c0f7bd05951399425422d0bb5f750c12ae3baf23f4c0c4db38a3482d4b00"
+        }
+      ],
+      "rationale": "GMS/Vending/check-in/backup tienen privilegios y excepciones. Retirar por identidad de paquete, conservando las entradas de cualquier componente mantenido; la política real mantiene com.android.packageinstaller.",
+      "acceptance_checks": [
+        "Sin excepciones de paquetes retirados ni nueva concesión genérica.",
+        "Instalador APK, almacenamiento, WebView y proveedores esenciales funcionales.",
+        "Auditoría de componentes/endpoints APK a cargo del inventario principal."
+      ],
+      "applied_by_this_audit": false,
+      "implementation_observed": false
+    },
+    {
+      "id": "SVC-13",
+      "action": "preserve_or_defer",
+      "title": "No confundir servicios de plataforma con VPN/proxy ajenos",
+      "targets": [
+        {
+          "part": "system",
+          "path": "/etc/init/racoon.rc",
+          "source_sha256": "c58b0ffdf22e92b58655464d6a9671c00830f572bd3ca4b8afdbaae6f60f7b91"
+        },
+        {
+          "part": "system",
+          "path": "/etc/init/mtpd.rc",
+          "source_sha256": "242323dcf2fa1517f0c89e2dd58697aa4f378df1da0c9223270171f7e9e9a380"
+        },
+        {
+          "part": "system",
+          "path": "/etc/init/mdnsd.rc",
+          "source_sha256": "6dcc3f787ed0bb94abb3843504604625c62852072219d8bf15e8628baef2cb95"
+        },
+        {
+          "part": "system",
+          "path": "/etc/init/statsd.rc",
+          "source_sha256": "a5e9b759a9f0f3316c8f6798397216d43c4b27430dfe4722746ee2f640763b86"
+        },
+        {
+          "part": "system",
+          "path": "/etc/init/mediametrics.rc",
+          "source_sha256": "9577f9b48e8672cd85052ed096818864efdac9d2af4a31ba5aaa7db095477d5d"
+        }
+      ],
+      "rationale": "racoon/mtpd/mdnsd están disabled/oneshot; no acreditan una conexión VPN ni proxy remoto configurado. statsd/mediametrics registran métricas locales y pueden tener clientes framework.",
+      "acceptance_checks": [
+        "No borrar netd/dnsproxyd por la palabra proxy.",
+        "No afirmar ausencia de tráfico: no se analizó ejecución ni todas las bibliotecas/APK.",
+        "Eliminar agentes de envío concretos identificados antes que APIs internas por nombre."
+      ],
+      "applied_by_this_audit": false,
+      "implementation_observed": false
+    },
+    {
+      "id": "SVC-14",
+      "action": "document_limit",
+      "title": "SELinux y control privilegiado propio",
+      "targets": [
+        {
+          "part": "boot",
+          "path": "header.cmdline",
+          "selector": "androidboot.selinux=permissive"
+        }
+      ],
+      "rationale": "El prototipo conserva el modo permisivo original por decisión de integración. Quitar su/TCP/console reduce accesos, pero no certifica seguridad de producción.",
+      "acceptance_checks": [
+        "El gestor propio debe verificar firmas, versión y acciones permitidas.",
+        "No exponer shell genérico ni root a APK/red.",
+        "Enforcing requiere validar políticas/drivers; no es un cambio automático de esta auditoría."
+      ],
+      "applied_by_this_audit": false,
+      "implementation_observed": false
+    }
+  ],
+  "no_tv_calls": true,
+  "original_images_unchanged": true,
+  "no_release_created": true
+}

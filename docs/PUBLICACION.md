@@ -38,3 +38,5 @@ La primera solicitud de publicación fue rechazada automáticamente porque la au
 
 
 La auditoría de septiembre también clasifica los tres rangosRFC1918 escritos como límites exactos delscript de respaldo y el endpoint ficticio declarado por sus pruebas offline. La excepción se limita a esos archivos y valores; otrasIPv4privadas siguen rechazándose. Las pruebas no contactan elTV ni leen su sesión.
+
+Para 0.2.0 se amplía la misma clasificación de nombres HAL a los archivos exactos de la nueva receta/manifiesto/selección. El fixture de credenciales de URL usa exclusivamente el dominio reservado `.invalid`, nunca se conecta y debe ser rechazado por el gestor. Se clasifica ese valor exacto en su prueba y en el propio auditor; no se admiten correos o credenciales reales por esa excepción. También se rechazan rutas de archivo con `privado` anidado. Los originales y los binarios del nuevo empaquetado siguen siendo archivos locales.

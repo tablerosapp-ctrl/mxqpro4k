@@ -1,0 +1,132 @@
+{
+  "source_sha256": "ef2c71f6208e25fa1cc9d5c12cb04972ac20d772e2c11a76972859403b530075",
+  "source_inode_bytes": 128,
+  "failed_image_sha256": "5130d9bd50163a89f68e2ca16f6844f494c4a6b635f8e8f844e4aa71156f20b3",
+  "helper_sha256": "ebe3e72ad1ec718ed29dc00f03c00c17884bbcafdf966d25e46239735050ba01",
+  "test_sha256": "f6d6a5f0d7ff22297123e78b78cfce3ef65da9f4164141f74083787cb4611dbb",
+  "positive": {
+    "source_sha256": "ef2c71f6208e25fa1cc9d5c12cb04972ac20d772e2c11a76972859403b530075",
+    "before_sha256": "5130d9bd50163a89f68e2ca16f6844f494c4a6b635f8e8f844e4aa71156f20b3",
+    "after_sha256": "3c6869ce0f816cfa54b4d609d8acf624649142d08170edbb20101ef590e8b413",
+    "reclaimed_blocks": [
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015
+    ],
+    "native_commands": [
+      "freeb 2008 8",
+      "set_super_value free_blocks_count 31584",
+      "set_bg 0 free_blocks_count 31584",
+      "set_bg 0 checksum calc"
+    ],
+    "changed_bytes": [
+      {
+        "offset": 1036,
+        "old": 88,
+        "new": 96
+      },
+      {
+        "offset": 1072,
+        "old": 176,
+        "new": 185
+      },
+      {
+        "offset": 1073,
+        "old": 92,
+        "new": 94
+      },
+      {
+        "offset": 4108,
+        "old": 88,
+        "new": 96
+      },
+      {
+        "offset": 4126,
+        "old": 225,
+        "new": 108
+      },
+      {
+        "offset": 4127,
+        "old": 229,
+        "new": 136
+      },
+      {
+        "offset": 37115,
+        "old": 255,
+        "new": 0
+      }
+    ],
+    "all_other_bytes_identical": true,
+    "native_wtime_only_extra_metadata": true,
+    "remaining_before": {
+      "unchanged_files_verified": 6,
+      "removed_nodes": 8,
+      "changed_files_verified": 0,
+      "free_bytes": 129335296,
+      "unchanged_nodes_xattrs_verified": 14,
+      "new_directory_contexts_verified": 0
+    },
+    "remaining_after": {
+      "unchanged_files_verified": 6,
+      "removed_nodes": 8,
+      "changed_files_verified": 0,
+      "free_bytes": 129368064,
+      "unchanged_nodes_xattrs_verified": 14,
+      "new_directory_contexts_verified": 0
+    },
+    "post_fsck_exit": 0,
+    "source_unchanged": true,
+    "tv_accessed": false,
+    "usb_accessed": false
+  },
+  "negative_cases": {
+    "wrong_source_sha": {
+      "rejected": true,
+      "reason": "Unexpected original product SHA256",
+      "image_unchanged": true
+    },
+    "wrong_bitmap": {
+      "rejected": true,
+      "reason": "Expected eight orphan bits are not all set",
+      "image_unchanged": true
+    },
+    "remaining_owner": {
+      "rejected": true,
+      "reason": "A live inode still owns an external EA block",
+      "image_unchanged": true
+    },
+    "wrong_size": {
+      "rejected": true,
+      "reason": "Unexpected product byte count",
+      "image_unchanged": true
+    },
+    "wrong_counts": {
+      "rejected": true,
+      "reason": "Unexpected free-block counters",
+      "image_unchanged": true
+    },
+    "wrong_removed_inode": {
+      "rejected": true,
+      "reason": "Unexpected removal owner",
+      "image_unchanged": true
+    },
+    "wrong_commands": {
+      "rejected": true,
+      "reason": "Unexpected product removal commands",
+      "image_unchanged": true
+    },
+    "wrong_partition": {
+      "rejected": true,
+      "reason": "Product-only correction",
+      "image_unchanged": true
+    }
+  },
+  "original_and_main_unchanged": true,
+  "real_tv_or_usb_accessed": false,
+  "private_evidence": "privado/original-p291-empaquetado/test-product-ea-1da86accfc"
+}

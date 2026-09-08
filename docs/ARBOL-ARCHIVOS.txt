@@ -136,7 +136,8 @@ mxqpro4k/
 │   │   ├── limpieza-plan.json
 │   │   ├── limpieza-resultado.json
 │   │   ├── mapa-ui.json
-│   │   └── publicacion-github.json
+│   │   ├── publicacion-github.json
+│   │   └── ROM-ORIGINAL-P291-020.md
 │   ├── herramientas/
 │   │   ├── __pycache__/
 │   │   │   └── publicar-github.cpython-312.pyc
@@ -282,6 +283,17 @@ mxqpro4k/
 │   │   │   ├── AndroidManifest.xml
 │   │   │   ├── ControlActivity.java
 │   │   │   └── README.md
+│   │   ├── gestion-tvbase/
+│   │   │   ├── assets/
+│   │   │   │   └── owner.conf
+│   │   │   ├── AndroidManifest.xml
+│   │   │   ├── BootReceiver.java
+│   │   │   ├── InstallReceiver.java
+│   │   │   ├── MainActivity.java
+│   │   │   ├── ManagerEngine.java
+│   │   │   ├── README.md
+│   │   │   ├── UpdateCore.java
+│   │   │   └── UpdateJob.java
 │   │   ├── inicio/
 │   │   │   ├── AndroidManifest.xml
 │   │   │   └── Inicio.java
@@ -405,6 +417,82 @@ mxqpro4k/
 │   │   ├── test_evidencia08.py
 │   │   ├── update-binary
 │   │   └── VerifyWholeZip.java
+│   ├── original-p291/
+│   │   ├── __pycache__/
+│   │   │   ├── boot.cpython-312.pyc
+│   │   │   └── construir.cpython-312.pyc
+│   │   ├── componentes/
+│   │   │   ├── defaults/
+│   │   │   │   ├── res/
+│   │   │   │   │   └── values/
+│   │   │   │   │       └── defaults.xml
+│   │   │   │   └── AndroidManifest.xml
+│   │   │   ├── inicio/
+│   │   │   │   ├── AndroidManifest.xml
+│   │   │   │   └── Inicio.java
+│   │   │   └── webview-overlay/
+│   │   │       ├── res/
+│   │   │       │   └── xml/
+│   │   │       │       └── config_webview_packages.xml
+│   │   │       └── AndroidManifest.xml
+│   │   ├── empaquetado/
+│   │   │   ├── __pycache__/
+│   │   │   │   └── firma_ota_v1.cpython-312.pyc
+│   │   │   ├── salida/
+│   │   │   │   ├── TVBASE-P291-A9-0.2.0-manifest.json
+│   │   │   │   ├── TVBASE-P291-A9-0.2.0-RECOVERY.zip
+│   │   │   │   ├── TVBASE-P291-A9-0.2.0-VERIFICACION.json
+│   │   │   │   ├── TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.0-manifest.json
+│   │   │   │   ├── TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.0-RECOVERY.zip
+│   │   │   │   └── TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.0-VERIFICACION.json
+│   │   │   ├── data_policy.go
+│   │   │   ├── empaquetar_original.py
+│   │   │   ├── EVIDENCIA-PLAN-ACTUAL.json
+│   │   │   ├── EVIDENCIA-PLAN-EA41.json
+│   │   │   ├── EVIDENCIA-PLAN-FINAL.json
+│   │   │   ├── EVIDENCIA-PLAN.json
+│   │   │   ├── EVIDENCIA-PRODUCT-EA.json
+│   │   │   ├── EVIDENCIA-TESTS.json
+│   │   │   ├── firma_ota_v1.py
+│   │   │   ├── go.mod
+│   │   │   ├── investigar_bitmap_product.py
+│   │   │   ├── main_linux.go
+│   │   │   ├── main_windows.go
+│   │   │   ├── package.go
+│   │   │   ├── package_test.go
+│   │   │   ├── README.md
+│   │   │   ├── test_firma_ota_v1.py
+│   │   │   ├── test_plan_offline.py
+│   │   │   ├── test_product_ea.py
+│   │   │   ├── validar_empaquetado.py
+│   │   │   └── VerifyWholeZip.java
+│   │   ├── gestion/
+│   │   │   ├── .gitignore
+│   │   │   ├── compilacion-resultado.json
+│   │   │   ├── compilar-gestion.py
+│   │   │   ├── CoreTest.java
+│   │   │   ├── LIBERACION.json
+│   │   │   ├── manifest_tool.py
+│   │   │   ├── PolicyCheck.java
+│   │   │   ├── privapp-permissions-tvbase-gestion.xml
+│   │   │   ├── probar-gestion.py
+│   │   │   ├── pruebas-resultado.json
+│   │   │   └── README.md
+│   │   ├── AUDITORIA-SERVICIOS.md
+│   │   ├── boot.py
+│   │   ├── compilar-componentes.py
+│   │   ├── COMPONENTES.json
+│   │   ├── COMPOSICION-VERIFICADA.json
+│   │   ├── construir.py
+│   │   ├── IMAGENES-0.2.0.json
+│   │   ├── INCIDENTES-CONSTRUCCION.md
+│   │   ├── inventariar-originales.py
+│   │   ├── politica-paquetes.json
+│   │   ├── product_ea.py
+│   │   ├── README.md
+│   │   ├── REVISION-GESTOR.md
+│   │   ├── seleccion-servicios.json
+│   │   └── verificar-composicion.py
 │   ├── salida/
 │   │   ├── RECOVERY-COMPROBACION-0.1.1.json
 │   │   ├── RECOVERY-VERIFICACION-0.1.1.json

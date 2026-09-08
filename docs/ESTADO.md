@@ -1,5 +1,23 @@
 # Estado operativo
 
+## Vigente · 7/9/2026 ART, ROM original P291 0.2.0 verificada en PC
+
+La autorización de construir desde los originales se implementó en [original-p291](../rom-simplificada/original-p291/README.md). Las cinco imágenes conservan geometría real, kernel y multi-DTB; los archivos ajenos al recorte conservan bytes, dueño, modo y atributos. Se retiran 51 APK y quedan 34 originales más Chrome y cuatro componentes propios. [Evidencia y grafo del cambio](evidencia/ROM-ORIGINAL-P291-020.md).
+
+- Instalación: `TVBASE-P291-A9-0.2.0-RECOVERY.zip`, 573492264 bytes, SHA256 `bd4a8dd7df8d61580c5b450867bda2ef2b214b400b4cafcce5a26baa5c48a614`.
+- Restauración de cinco particiones originales: `TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.0-RECOVERY.zip`, 913228907 bytes, SHA256 `a10aee68042ef9f945a4160fd897d0db1943e28dd58e0a03918d138e9f1a8e3f`.
+- Gestor 0.1: 57810 bytes; revisión exacta y 38 pruebas host. Incluido como priv-app con INSTALL_PACKAGES; desactivado, sin URL ni clave pública de servidor. APK y Chrome, sin OTA completa ni administración de videos todavía.
+
+Los dos ZIP superan CRC, hashes de payload, validador del instalador y firma integral Python/OpenJDK acorde a la clave v1 del recovery real. **No se ejecutó recovery ni se instaló/restauró una ROM. No se modificaron TV ni USB durante esta construcción.** La última copia física sigue siendo 0.1.2 histórica; no se debe repetir su Update.
+
+La receta elimina Play/GMS, precargas, reinstalador OEM, entrada remota prescindible, Bluetooth, su/procmem elevados y consola. Desactiva depuración por USB/red inicial y exige autenticación ADB. Conserva drivers WiFi/video/red/IR/CEC y empieza con WiFi apagado. No acredita reparar el bloqueo del driver. El framework original, SELinux permisivo y firma de plataforma heredada siguen siendo límites experimentales; falta observación de tráfico por proceso.
+
+**Trabajo necesario antes de instalar:** entrada a recovery y ruta de paquete comprobadas; preparación revisada de userdata según lo que haya que conservar. El instalador exige /data de solo lectura y realmente limpia; no hace el borrado ni acepta un marcador como sustituto. El ZIP de restauración repone las cinco imágenes OEM, incluido su software, conservando userdata; no tiene rollback automático ni restauración física probada. Después se validan arranque interno, ajustes, APK por USB, Ethernet/WiFi, dos VP9/alfa/canvas, proveedor WebView y actualizaciones propias.
+
+El último estado persistente observado del TV no cambia por construir archivos en PC: el ZIP0.1.2 quedó preservado fuera de la ruta activa, pero BCB y el hilo Java no fueron cancelados. No indicar un corte o reset suponiendo vuelta segura a Android. [Opciones conocidas](../diagnostico/primer-tv-lan-20260907-184926/OPCIONES-INSTALACION-ROOT.md).
+
+## Antecedentes fechados: lo siguiente describe revisiones previas
+
 ## Vigente · 7/9/2026, root y espera del servicio WiFi
 
 [Root ya confirmado](../diagnostico/primer-tv-lan-20260907-184926/ROOT-RESULTADO.md), solicitado ahora por el usuario: el su incorporado devuelve UID 0. No se instaló root ni cambió la autenticación. La traza Java identifica ShutdownThread → Future de BatteryStats → consulta WiFi → IWifi.start esperando respuesta. [Detalle verificable](../diagnostico/primer-tv-lan-20260907-184926/ANALISIS-UPDATE-012.md). Root lee el ZIP interno íntegro y demuestra que block.map falta. Las denegaciones descritas abajo corresponden al acceso shell anterior.

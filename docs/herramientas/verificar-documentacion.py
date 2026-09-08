@@ -42,6 +42,10 @@ for p in phases:
     visit(p, set(), set())
 
 files = [ROOT / 'README.md', ROOT / 'AGENTS.md', ROOT / 'rom-simplificada/INSTALACION-USB.md', ROOT / 'rom-simplificada/instalador/README.md'] + list(DOC.glob('*.md')) + [DOC / 'historico/README.md']
+files += [p for p in (ROOT / 'rom-simplificada/original-p291').rglob('*.md')
+          if 'privado' not in p.relative_to(ROOT).parts]
+files += list((ROOT / 'rom-simplificada/componentes/gestion-tvbase').glob('*.md'))
+files += [DOC / 'evidencia/ROM-ORIGINAL-P291-020.md']
 count = 0
 for p in files:
     text = p.read_text(encoding='utf8')

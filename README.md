@@ -2,11 +2,13 @@
 
 Android simplificado instalado en la memoria interna de TV boxes, con una APK común para Android TV, WebView, video local y administración propia. El primer destino es **P291 / `gxlx2_p291_1g`**. El segundo equipo P271 es únicamente una referencia de diagnóstico.
 
-**Estado al 7/9/2026:** [root confirmado mediante el acceso incorporado](diagnostico/primer-tv-lan-20260907-184926/ROOT-RESULTADO.md). La [ROM 0.1.2 sin Bluetooth](rom-simplificada/SIN-BLUETOOTH-0.1.2.md) está en Kingston y su copia interna fue verificada. **No está instalada.** El respaldo de doce particiones seleccionadas está verificado; no incluye datos/cache ni toda la eMMC y no hay restauración probada.
+**Estado al 7/9/2026 ART:** [ROM 0.2.0 desde los originales del primer P291](rom-simplificada/original-p291/README.md) construida y verificada en PC, con un paquete separado de restauración original. Incluye Chrome/WebView 138, inicio y ajustes, 34 paquetes originales conservados, 51 retirados y cuatro componentes propios. El gestor de APK/navegador está integrado y desactivado hasta configurar el servidor del dueño.
 
-El intento volvió al 2%. Una traza Java identifica la cadena de espera: cierre de Android → estadísticas de consumo → servicio WiFi → arranque del HAL. El mapa requerido por recovery todavía no existe. Se preservan originales antes de proponer una intervención forzada, que el usuario quiere decidir tras conocer sus riesgos. [Análisis actual](diagnostico/primer-tv-lan-20260907-184926/ANALISIS-UPDATE-012.md) · [Estado](docs/ESTADO.md).
+**No está instalada ni copiada al pendrive.** Falta resolver la entrada efectiva a recovery y preparar userdata limpia antes de la prueba. No repetir Update con 0.1.2 ni interpretar el ZIP nuevo como una solución automática al cierre bloqueado. [Resultados, archivos y límites](docs/evidencia/ROM-ORIGINAL-P291-020.md) · [Estado operativo](docs/ESTADO.md).
 
-La [comparación con los originales](diagnostico/primer-tv-lan-20260907-184926/RECOVERY-ORIGINAL.md) detectó diferencias de configuración de arranque y una compatibilidad de firma pendiente. **No forzar 0.1.2 tal como está.** La propuesta es derivar la siguiente ROM de los originales de este P291, conservando su kernel/DTB/video y aplicando la simplificación y las mejoras. [Opciones y riesgos](diagnostico/primer-tv-lan-20260907-184926/OPCIONES-INSTALACION-ROOT.md).
+Se conservan kernel, multi-DTB y controladores de los originales reales, además de parte del framework. Es una derivación depurada de Android 9, no una reconstrucción AOSP ni una certificación de ausencia de tráfico OEM. SELinux permisivo y firma de plataforma heredada son límites del experimento. WiFi, proveedor WebView efectivo, video y restauración física siguen pendientes.
+
+Los respaldos verifican doce particiones seleccionadas (2538 MiB), sin userdata/cache ni toda la eMMC. La espera del intento anterior está localizada en el cierre de Android por WiFi/HAL. Su ZIP se preservó fuera de la ruta activa, pero BCB y el hilo Java no quedaron cancelados. [Diagnóstico original](diagnostico/primer-tv-lan-20260907-184926/ANALISIS-UPDATE-012.md).
 
 El [repositorio público](https://github.com/tablerosapp-ctrl/mxqpro4k) conserva el hilo saneado de colaboración con Fable. Los binarios y registros privados permanecen locales.
 

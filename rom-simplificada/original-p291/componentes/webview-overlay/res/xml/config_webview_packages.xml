@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webviewproviders>
+    <webviewprovider packageName="com.android.chrome" description="Chrome WebView" availableByDefault="true" />
+</webviewproviders>
