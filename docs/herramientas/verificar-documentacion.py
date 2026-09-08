@@ -53,6 +53,8 @@ files += [DOC / 'hipotesis/HOME-P291.md']
 files += [DOC / 'evidencia/REINICIOS-P291-SIN-USB.md']
 files += [DOC / 'evidencia/RECONOCEDOR-USB-01.md']
 files += list((ROOT / 'diagnostico/reconocedor-0.1').glob('*.md'))
+files += list((ROOT / 'diagnostico/extractor-recovery-0.1').glob('*.md'))
+files += [DOC / 'evidencia/RECOVERY-P271-ALCANCE.md', DOC / 'evidencia/EXTRACTOR-RECOVERY-01.md']
 files += [DOC / 'evidencia/ROM-ORIGINAL-P291-020.md', DOC / 'evidencia/ENTRADA-ORIGINAL-P291-021.md', DOC / 'evidencia/PREPARACION-ENTRADA-P291-09.md', DOC / 'evidencia/ERROR-INSTALADOR-P291-021.md', DOC / 'evidencia/PARTICIONES-AMLOGIC-P291-022.md', DOC / 'evidencia/INSTALADOR-P291-022.md', DOC / 'evidencia/INSTALACION-FISICA-P291-022.md', ROOT / 'diagnostico/primer-tv-instalado-20260908/HALLAZGOS.md']
 count = 0
 for p in files:

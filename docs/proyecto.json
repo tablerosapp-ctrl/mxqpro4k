@@ -2,7 +2,7 @@
   "schema_version": 1,
   "title": "TV Base",
   "snapshot": "2026-09-08T17:42:08.620193+00:00",
-  "state": "P291 con TV Base: WiFi y varios reinicios sin USB informados. Home pendiente; reconocimiento, producto común y actualizaciones por perfil propuestos.",
+  "state": "P291 con TV Base y WiFi/reinicios informados. APK y extractor combinado entregados; primera captura y plan por equipo pendientes. Home, multimedia y auditoría de servicios pendientes.",
   "installed": true,
   "original_tv_backup_confirmed": true,
   "source_of_truth": {
@@ -39,7 +39,12 @@
     "repeated_boot_user_report": "docs/evidencia/REINICIOS-P291-SIN-USB.md",
     "recognition": "diagnostico/reconocedor-0.1/README.md",
     "recognition_delivery": "preparacion-usb/reconocimiento-01-estado.json",
-    "recognition_evidence": "docs/evidencia/RECONOCEDOR-USB-01.md"
+    "recognition_evidence": "docs/evidencia/RECONOCEDOR-USB-01.md",
+    "extractor": "diagnostico/extractor-recovery-0.1/README.md",
+    "extractor_delivery": "preparacion-usb/extractor-01-estado.json",
+    "extractor_build": "diagnostico/extractor-recovery-0.1/COMPILACION.json",
+    "extractor_evidence": "docs/evidencia/EXTRACTOR-RECOVERY-01.md",
+    "inherited_services": "docs/REVISION-COMPONENTES-HEREDADOS.md"
   },
   "components": [
     {
@@ -305,7 +310,7 @@
       "id": "C-USB",
       "label": "Kingston: reconocimiento",
       "state": "observado_tv",
-      "description": "Nueva carpeta de reconocimiento entregada; capturas anteriores y respaldos preservados. Tres archivos verificados, primer guardado Android pendiente.",
+      "description": "Kingston conserva APK, respaldos y releases anteriores; nueva carpetaTVBASE-EXTRACCION con dosZIP y guía verificados. Sin plan solo inventario; prueba recovery pendiente.",
       "files": [
         "rom-simplificada/INSTALACION-USB.md",
         "preparacion-usb/rom-012-estado.json",
@@ -482,7 +487,8 @@
       "description": "Producto común con logo, controles y contratos de capacidades/datos; diseño junto al reconocimiento. Implementación pendiente de OK.",
       "files": [
         "docs/PROPUESTA-LOTES-Y-ACTUALIZACIONES.md",
-        "docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md"
+        "docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md",
+        "docs/REVISION-COMPONENTES-HEREDADOS.md"
       ],
       "x": 1,
       "y": 3,
@@ -539,6 +545,43 @@
         "REQ-02",
         "REQ-14",
         "REQ-18"
+      ]
+    },
+    {
+      "id": "C-EXTRACT",
+      "label": "Extracción recovery0.1",
+      "state": "construido",
+      "description": "APK verificada→plan DT→inventario y copias eMMCRO desde recovery compatible. Entregado USB; física y aceptación por perfil pendientes.",
+      "files": [
+        "diagnostico/extractor-recovery-0.1/COMPILACION.json",
+        "diagnostico/extractor-recovery-0.1/LEEME-USB.txt",
+        "diagnostico/extractor-recovery-0.1/PRUEBAS-PC.json",
+        "diagnostico/extractor-recovery-0.1/README-EMPAQUETADO.md",
+        "diagnostico/extractor-recovery-0.1/README.md",
+        "diagnostico/extractor-recovery-0.1/capture.go",
+        "diagnostico/extractor-recovery-0.1/capture_test.go",
+        "diagnostico/extractor-recovery-0.1/compilar.py",
+        "diagnostico/extractor-recovery-0.1/go.mod",
+        "diagnostico/extractor-recovery-0.1/main_linux.go",
+        "diagnostico/extractor-recovery-0.1/main_windows.go",
+        "diagnostico/extractor-recovery-0.1/platform_linux.go",
+        "diagnostico/extractor-recovery-0.1/preparar-plan.py",
+        "diagnostico/extractor-recovery-0.1/selection.go",
+        "diagnostico/extractor-recovery-0.1/selection_test.go",
+        "diagnostico/extractor-recovery-0.1/test_preparar_plan.py",
+        "diagnostico/extractor-recovery-0.1/test_verificar_captura.py",
+        "diagnostico/extractor-recovery-0.1/verificar-captura.py",
+        "docs/evidencia/EXTRACTOR-RECOVERY-01.md",
+        "docs/evidencia/RECOVERY-P271-ALCANCE.md",
+        "preparacion-usb/extractor-01-estado.json",
+        "preparacion-usb/preparar-extractor-01.ps1"
+      ],
+      "x": 2,
+      "y": 3,
+      "requirements": [
+        "REQ-11",
+        "REQ-18",
+        "REQ-19"
       ]
     }
   ],
@@ -667,6 +710,21 @@
       "source": "C-RECON",
       "target": "C-USB",
       "relation": "entrega APK y acumula informes"
+    },
+    {
+      "source": "C-RECON",
+      "target": "C-EXTRACT",
+      "relation": "informa plan DT"
+    },
+    {
+      "source": "C-EXTRACT",
+      "target": "C-ORIG",
+      "relation": "adquiere originales verificables"
+    },
+    {
+      "source": "C-EXTRACT",
+      "target": "C-PERFIL",
+      "relation": "contrasta mapa real"
     }
   ],
   "requirements": [
@@ -835,6 +893,18 @@
         "C-RECON",
         "C-PERFIL",
         "C-LOTES"
+      ],
+      "state": "construido",
+      "spec": "docs/ESPECIFICACION.md"
+    },
+    {
+      "id": "REQ-19",
+      "label": "APK y extracción de originales desde recovery por perfil",
+      "components": [
+        "C-RECON",
+        "C-EXTRACT",
+        "C-PERFIL",
+        "C-USB"
       ],
       "state": "construido",
       "spec": "docs/ESPECIFICACION.md"
@@ -1442,6 +1512,20 @@
       "bytes": 106899,
       "sha256": "f631d5a16fa26266276f3be6f7f1e9f924ff95ea26dd922ff18f105022e1d813",
       "scope": "usb_copied_read_verified_android_first_capture_pending"
+    },
+    {
+      "name": "TVBASE-EXTRACTOR-0.1-ARM32-RECOVERY.zip",
+      "path": "diagnostico/extractor-recovery-0.1/privado/release-20260908-154731-69ecb368/TVBASE-EXTRACTOR-0.1-ARM32-RECOVERY.zip",
+      "bytes": 1380373,
+      "sha256": "1f45405d22193b1e09cc694bc5328be6e8aa7f071e0d77323cacc15611063f08",
+      "scope": "usb_copied_read_verified_recovery_execution_pending"
+    },
+    {
+      "name": "TVBASE-EXTRACTOR-0.1-ARM64-RECOVERY.zip",
+      "path": "diagnostico/extractor-recovery-0.1/privado/release-20260908-154731-69ecb368/TVBASE-EXTRACTOR-0.1-ARM64-RECOVERY.zip",
+      "bytes": 1308031,
+      "sha256": "5502123db9fc92cfd5f3173b32bfaff37e83e733752c91c888d70652fec0ac85",
+      "scope": "usb_copied_read_verified_recovery_execution_pending"
     }
   ],
   "protected_paths": [
@@ -1620,9 +1704,9 @@
       ]
     }
   ],
-  "delivery_label": "Reconocimiento0.1 copiado y releído; informes secuenciales pendientes de primera captura Android",
+  "delivery_label": "APK + extractor0.1 copiados y releídos; plan por equipo y ejecución física pendientes",
   "date_label": "8/9/2026 ART · primer P291 funcionando",
-  "next_step_label": "Reconocimiento0.1 listo en Kingston. Instalar/capturar en P291, luego otros Android; guardar ZIP por equipo y revisar en PC.",
+  "next_step_label": "Capturar con APK en el TV elegido; revisar ZIP y generar su plan en PC antes de extraer originales desde recovery compatible.",
   "public_repository": {
     "url": "https://github.com/tablerosapp-ctrl/mxqpro4k",
     "visibility_requested": "public",
@@ -1829,5 +1913,11 @@
     "old_inventory_preserved": true,
     "windows_safe_removal_pending": true,
     "windows_volume_flush_verified": false
+  },
+  "extractor_delivery": {
+    "receipt": "preparacion-usb/extractor-01-estado.json",
+    "verified_pc": true,
+    "physical_recovery_tested": false,
+    "plan_present": false
   }
 }

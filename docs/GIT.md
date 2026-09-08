@@ -1,5 +1,9 @@
 # Historial local y publicación pública
 
+## Registro del 8/9/2026 · extractor combinado y revisión de servicios
+
+Nuevas fuentes Go/Python y pruebas del extractor independiente, generador de planes y verificador PC; documentación del P271, matriz de componentes heredados, contrato y recibos saneados. Los ZIP ejecutables y planes/datos por unidad permanecen privados. La publicación usa exclusivamente el espejo saneado; no vuelve a subir ni modifica el respaldo cifrado previo.
+
 ## Registro del 8/9/2026 · reconocedor autorizado y USB preparado
 
 Se versionan fuentes Java, constructor, importador/pruebas, contrato y guía del reconocedor0.1; recibos saneados de compilación y entrega. La APK y fixtures se conservan en privado. Las capturas futuras deben importarse a directorios privados nuevos; no se publican ZIP, identificadores o drivers adquiridos. La publicación usa el espejo saneado y no reemplaza las releases previas ni el respaldo cifrado.

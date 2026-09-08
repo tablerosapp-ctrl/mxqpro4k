@@ -1,5 +1,17 @@
 # Continuidad de TV Base
 
+## Vigente · extractor combinado 0.1 entregado
+
+- Usuario aprobó APK + paquete de extracción desde recovery basado en informeAPK. [Contrato](diagnostico/extractor-recovery-0.1/README.md), [evidencia](docs/evidencia/EXTRACTOR-RECOVERY-01.md), [P271](docs/evidencia/RECOVERY-P271-ALCANCE.md). No se modifica/flashea recovery ni se ejecuta el instalador022 parcialmente.
+- DosZIP en TVBASE-EXTRACCION copiados/releídos Kingston: ARM32 1380373B SHA1f45405d22193b1e09cc694bc5328be6e8aa7f071e0d77323cacc15611063f08; ARM64 1308031B SHA5502123db9fc92cfd5f3173b32bfaff37e83e733752c91c888d70652fec0ac85. FirmaPython/OpenJDK/ELF/CRC PC; Linux tests compilados no ejecutados. COMPILACION.json y fuentesGo/builder sellados, no editarlos sin nueva versión.
+- EntregaUSB una Prepare exit0 tras CheckOnly, preparacion-usb/extractor-01-estado.json;4archivos/nuevascarpetas,200previos hash y7grandes metadatos iguales. APK anterior intacta,23341367296B libres, sin formato/repair/borrados. PLANES yCAPTURAS vacíos. No repetir preparador/limpieza, no tocarrecibo/guías selladas. Expulsión indicada, flushvolumen no acreditado.
+- Siguiente capturaAPK física→ZIP íntegro PC→preparar-plan.py a salida NUEVA bajo privado→copia plan al USB con revalidación específica. No plan real aún. Sin planmatchingDT extractor SOLOinventario. Dosplanesmatching rechaza. DT/vínculoAPKUUID no prueban identidad física; recovery registraCIDhash disponible. P2717.820.083.200B difiereP2917.650.410.496B, no trasladar geometría/ENV/BCB. ClaveAndroidP271 igual no prueba recovery. No instruir Update/AccesoUSB09 a ciegas.
+- Extracción eMMC interna solo lectura, wholeuserarea si estable o particionesestables+boot0/1; checks mountsRO/superRO/holders/swap+sysfs/ioctl+rdev; revalida, partes1GiB, SHA3lecturas. RPMB/MTD/UFS/noaccesible omitidos. Sin montaje/desmontaje/formato/flash/reboot. Recoveryhost puede escribirlogs/metadatos. No snapshotatómico ni copiaTODOTV/restauraciónensayada.
+- Partes mantienen .img.partial inclusoverificadas; report.json+resultado.json determinan cierre, failed-report.json/resultado-error.json prevalecen. No borrar/renombrar. Verificar-captura.py lee enPC, no abrepathsdeorigen delJSON niinterpretauserdata. Anteerror conservar sinrepetir automáticamente. No nueva captura física acreditada.
+- User pidió anotar prioridadpróximaetapa: removerremanentes teléfono/SMS/contactos y revisarllavero/IntentFilterVerificationService yotros pormalware/conexiones. [Matriz](docs/REVISION-COMPONENTES-HEREDADOS.md) enlaza5APKconservadas+hash ydependencias. No clasificar por nombre; no serviciosretiradosahora. Home/WebView/rendimiento/servidor/nuevaROM pendientes. Publicarsoloespejosaneado, nunca capturas/planes/imágenes/credenciales en claro.
+
+## Antecedente · APK de reconocimiento conservada
+
 ## Vigente · reconocedor 0.1 entregado el 8/9/2026
 
 - El usuario dio OK explícito para construir el reconocedor y preparar Kingston para varios TV secuenciales. Esta autorización sustituye la espera anterior para ese alcance; no autoriza aquí otra ROM, arreglo Home o activación del servidor. Leer [reconocedor](diagnostico/reconocedor-0.1/README.md) y [entrega](docs/evidencia/RECONOCEDOR-USB-01.md).

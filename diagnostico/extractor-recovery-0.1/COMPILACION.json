@@ -1,0 +1,382 @@
+{
+  "schema": "tvbase-recovery-extractor-build-1",
+  "state": "built_verified_pc",
+  "version": "0.1",
+  "created_at": "2026-09-08T18:49:01.464039+00:00",
+  "build_directory": "diagnostico/extractor-recovery-0.1/privado/build-20260908-154731-69ecb368",
+  "output_directory": "diagnostico/extractor-recovery-0.1/privado/release-20260908-154731-69ecb368",
+  "go_version": "go version go1.27.1 windows/amd64",
+  "source_sha256": {
+    "diagnostico/extractor-recovery-0.1/capture.go": "33da14782b3c9a7a9fba521e3a46a3d95c255c27ee395f855d5aef1ab0b04604",
+    "diagnostico/extractor-recovery-0.1/capture_test.go": "bc79b9624545663b157defc7d82ce75257ab5539ea317c5559e579b796ff73a0",
+    "diagnostico/extractor-recovery-0.1/main_linux.go": "a72035f574ab65108793a7bc5fd07c1d231c8b4d2278cba3b40bf96a1d03b4e5",
+    "diagnostico/extractor-recovery-0.1/main_windows.go": "1ca9aff8f1b39743fea7dcb53c5c5765f3d4a7eac60404f25106acab2f38f3b7",
+    "diagnostico/extractor-recovery-0.1/platform_linux.go": "2b6da6168abaf47b31c636946dc0841029715dacb1b6f0c0dd5a234a0ad800ea",
+    "diagnostico/extractor-recovery-0.1/selection.go": "2556d881ca4b51fc1ed1ece57b31047d0e7791991189ebd9cb7c49c2212e1ea4",
+    "diagnostico/extractor-recovery-0.1/selection_test.go": "8c52da642d7f629ee975adb540df0eca89bad311213c40ba19c8611fc6d80d75",
+    "diagnostico/extractor-recovery-0.1/go.mod": "0419c40702daf109b6ed79a8802d1ddf82aa9e30bdd3ea56c05e480df54166c9",
+    "diagnostico/extractor-recovery-0.1/compilar.py": "0f97d74e9b78e1d6b7f64d59e15d6c45c66903435b6f1de24a5d3707f7b63cc5"
+  },
+  "tool_input_sha256": {
+    "tools/instalador-go/go/bin/go.exe": "d3ccdb604eafa6031133aefe1a3db24f0bb7362b857bc2125ac4e4c178b4b490",
+    "tools/verificacion-apk/java21/jdk-21.0.12.1+1-jre/bin/java.exe": "82051fdab26319d77d20cc0065045d05ec00b3e3d05f44935d7c06b96b621d55",
+    "tools/compilar-android/ecj-3.39.0.jar": "01f5a92ac19bb2b3bf85e295a68f2c73c264369109158b566ce9b490af982948",
+    "rom-simplificada/original-p291/instalacion-022/firma_ota_v1.py": "aeb2b7d212e6472a9334c3ce7586effff3d7dc767266cb35233c25e02dc3f54e",
+    "rom-simplificada/original-p291/instalacion-022/VerifyWholeZip.java": "b9380030c31be175756c8f29bf74d88476b8d6154201e3ceca11bd3389fd7de8",
+    "tools/firmar-ota/testkey.x509.pem": "a4384ba815b9499a5ce349b4e33c1755278873fe2eac150a068823f526e6dbde",
+    "diagnostico/primer-tv-lan-20260907-184926/privado/recovery-original-analisis/res--keys": "cd0788004cfa998c7bbede4811b791187139504a01415b9d30df5609458398df"
+  },
+  "go_host_tests": {
+    "os": "windows",
+    "arch": "amd64",
+    "count": 71,
+    "passed": [
+      "TestCaptureSplitsRereadsAndReports",
+      "TestCaptureSizeBoundaries/1",
+      "TestCaptureSizeBoundaries/6",
+      "TestCaptureSizeBoundaries/7",
+      "TestCaptureSizeBoundaries/8",
+      "TestCaptureSizeBoundaries/14",
+      "TestCaptureSizeBoundaries/15",
+      "TestCaptureSizeBoundaries",
+      "TestCaptureRejectsShortAndLongSource/short-first",
+      "TestCaptureRejectsShortAndLongSource/short-next-part",
+      "TestCaptureRejectsShortAndLongSource/long",
+      "TestCaptureRejectsShortAndLongSource",
+      "TestCaptureRejectsChangingSource",
+      "TestCaptureRejectsRereadSizeChange/abc",
+      "TestCaptureRejectsRereadSizeChange/abcde",
+      "TestCaptureRejectsRereadSizeChange",
+      "TestCaptureRejectsDestinationCorruption/changed",
+      "TestCaptureRejectsDestinationCorruption/short",
+      "TestCaptureRejectsDestinationCorruption/long",
+      "TestCaptureRejectsDestinationCorruption",
+      "TestCaptureNeverOverwritesExistingFiles",
+      "TestCaptureReportsSuccessfulFailedAndOmittedSources",
+      "TestCaptureFailsOnSyncCloseAndShortWrite/file-sync",
+      "TestCaptureFailsOnSyncCloseAndShortWrite/directory-sync",
+      "TestCaptureFailsOnSyncCloseAndShortWrite/close",
+      "TestCaptureFailsOnSyncCloseAndShortWrite/short-write",
+      "TestCaptureFailsOnSyncCloseAndShortWrite",
+      "TestCapturePreflightSpaceAndHooks/exact",
+      "TestCapturePreflightSpaceAndHooks/one-less",
+      "TestCapturePreflightSpaceAndHooks/space-error",
+      "TestCapturePreflightSpaceAndHooks/revalidate-error",
+      "TestCapturePreflightSpaceAndHooks/missing-hook",
+      "TestCapturePreflightSpaceAndHooks",
+      "TestCaptureRevalidatesDuringAndAfterCopy/2",
+      "TestCaptureRevalidatesDuringAndAfterCopy/3",
+      "TestCaptureRevalidatesDuringAndAfterCopy/4",
+      "TestCaptureRevalidatesDuringAndAfterCopy/5",
+      "TestCaptureRevalidatesDuringAndAfterCopy/6",
+      "TestCaptureRevalidatesDuringAndAfterCopy/7",
+      "TestCaptureRevalidatesDuringAndAfterCopy",
+      "TestCaptureSafeNamesForUntrustedMetadata/../../outside",
+      "TestCaptureSafeNamesForUntrustedMetadata/C:\\\\unsafe\\\\target",
+      "TestCaptureSafeNamesForUntrustedMetadata/a/b",
+      "TestCaptureSafeNamesForUntrustedMetadata/.",
+      "TestCaptureSafeNamesForUntrustedMetadata/área",
+      "TestCaptureSafeNamesForUntrustedMetadata/system_boot",
+      "TestCaptureSafeNamesForUntrustedMetadata",
+      "TestCaptureInvalidPlansWriteNothing/too-large",
+      "TestCaptureInvalidPlansWriteNothing/missing-identity",
+      "TestCaptureInvalidPlansWriteNothing/nul",
+      "TestCaptureInvalidPlansWriteNothing/too-many",
+      "TestCaptureInvalidPlansWriteNothing/empty",
+      "TestCaptureInvalidPlansWriteNothing/zero",
+      "TestCaptureInvalidPlansWriteNothing/negative",
+      "TestCaptureInvalidPlansWriteNothing/duplicate",
+      "TestCaptureInvalidPlansWriteNothing",
+      "TestCaptureReportPersistenceFailure/existing",
+      "TestCaptureReportPersistenceFailure/corrupt",
+      "TestCaptureReportPersistenceFailure/open-denied",
+      "TestCaptureReportPersistenceFailure",
+      "TestCaptureFinalDirectorySyncFailureSupersedesVerifiedDataReport",
+      "TestCaptureSourceIOErrors/open",
+      "TestCaptureSourceIOErrors/read",
+      "TestCaptureSourceIOErrors/close",
+      "TestCaptureSourceIOErrors/reopen",
+      "TestCaptureSourceIOErrors",
+      "TestMountParsing",
+      "TestWholeAndPartialSelection",
+      "TestHoldersAndOverlap",
+      "TestBusyParentBlocksChildren",
+      "TestWritableRequiresBothFlags"
+    ]
+  },
+  "java_verifier_class_sha256": "3a37de93514db7161e998f30f53faf5bd8436f4424915dd076e222d5b6a2728e",
+  "recovery_v1_trust": {
+    "key_version": 1,
+    "rsa_exponent": 3,
+    "rsa_bits": 2048,
+    "digest": "SHA1",
+    "keyfile_sha256": "cd0788004cfa998c7bbede4811b791187139504a01415b9d30df5609458398df",
+    "certificate_sha256": "a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc"
+  },
+  "signing_inputs_unchanged": true,
+  "sources_unchanged": true,
+  "packages": [
+    {
+      "architecture": "ARM32",
+      "file": "diagnostico/extractor-recovery-0.1/privado/release-20260908-154731-69ecb368/TVBASE-EXTRACTOR-0.1-ARM32-RECOVERY.zip",
+      "bytes": 1380373,
+      "sha256": "1f45405d22193b1e09cc694bc5328be6e8aa7f071e0d77323cacc15611063f08",
+      "binary_file": "diagnostico/extractor-recovery-0.1/privado/build-20260908-154731-69ecb368/ARM32/update-binary",
+      "binary_bytes": 3276960,
+      "binary_sha256": "05221a82892e3aa6958d128d497c81645f8fdeae5cd494f320385f1e6d060e48",
+      "elf": {
+        "elf_class_bits": 32,
+        "machine": 40,
+        "type": "ET_EXEC",
+        "little_endian": true,
+        "flags": 83886082,
+        "program_headers": 6,
+        "pt_interp_absent": true,
+        "pt_dynamic_absent": true
+      },
+      "metadata": {
+        "schema": "tvbase-recovery-extractor-1",
+        "version": "0.1",
+        "package_id": "TVBASE-EXTRACTOR-0.1-ARM32",
+        "operation": "capture_read_only",
+        "architecture": "ARM32",
+        "goos": "linux",
+        "goarch": "arm",
+        "goarm": "5",
+        "goarm64": "",
+        "cgo_enabled": false,
+        "recovery_arguments": [
+          "api_version_1_2_or_3",
+          "status_fd",
+          "package_zip_path"
+        ],
+        "media_directory": "TVBASE-EXTRACCION",
+        "media_config": "MEDIA.json",
+        "media_schema": "tvbase-recovery-media-1",
+        "device_images_in_package": false,
+        "default_capture": "inventory_only",
+        "image_capture_requires_matching_apk_plan": true,
+        "plans_directory": "PLANES",
+        "plan_schema": "tvbase-recovery-plan-1",
+        "plan_source": "validated_android_recognition_capture",
+        "plan_match": "exact_dt_identity",
+        "extractor_sha256": "05221a82892e3aa6958d128d497c81645f8fdeae5cd494f320385f1e6d060e48",
+        "source_sha256": {
+          "diagnostico/extractor-recovery-0.1/capture.go": "33da14782b3c9a7a9fba521e3a46a3d95c255c27ee395f855d5aef1ab0b04604",
+          "diagnostico/extractor-recovery-0.1/capture_test.go": "bc79b9624545663b157defc7d82ce75257ab5539ea317c5559e579b796ff73a0",
+          "diagnostico/extractor-recovery-0.1/main_linux.go": "a72035f574ab65108793a7bc5fd07c1d231c8b4d2278cba3b40bf96a1d03b4e5",
+          "diagnostico/extractor-recovery-0.1/main_windows.go": "1ca9aff8f1b39743fea7dcb53c5c5765f3d4a7eac60404f25106acab2f38f3b7",
+          "diagnostico/extractor-recovery-0.1/platform_linux.go": "2b6da6168abaf47b31c636946dc0841029715dacb1b6f0c0dd5a234a0ad800ea",
+          "diagnostico/extractor-recovery-0.1/selection.go": "2556d881ca4b51fc1ed1ece57b31047d0e7791991189ebd9cb7c49c2212e1ea4",
+          "diagnostico/extractor-recovery-0.1/selection_test.go": "8c52da642d7f629ee975adb540df0eca89bad311213c40ba19c8611fc6d80d75",
+          "diagnostico/extractor-recovery-0.1/go.mod": "0419c40702daf109b6ed79a8802d1ddf82aa9e30bdd3ea56c05e480df54166c9",
+          "diagnostico/extractor-recovery-0.1/compilar.py": "0f97d74e9b78e1d6b7f64d59e15d6c45c66903435b6f1de24a5d3707f7b63cc5"
+        },
+        "recovery_execution_tested": false,
+        "signature_scope": "Original P291 recovery v1 key; other recovery trust is unverified"
+      },
+      "linux_tests_compiled": true,
+      "linux_tests_sha256": "87b35d5cd88cca8b341ff957bc2db02e0ca9682ee0c60a4c4ee6d4ae51706499",
+      "linux_tests_executed": false,
+      "members": [
+        {
+          "name": "META-INF/com/google/android/update-binary",
+          "bytes": 3276960,
+          "sha256": "05221a82892e3aa6958d128d497c81645f8fdeae5cd494f320385f1e6d060e48"
+        },
+        {
+          "name": "tvbase/extractor.json",
+          "bytes": 2143,
+          "sha256": "aa52289a2832940c057c78bab4169279c579b8d41072487c3210660676a8d519"
+        },
+        {
+          "name": "META-INF/com/google/android/updater-script",
+          "bytes": 83,
+          "sha256": "a2189bb0751a05a784cb904976ee8a72c1d4fc32d702060426075d32614bc458"
+        },
+        {
+          "name": "META-INF/com/android/otacert",
+          "bytes": 1675,
+          "sha256": "a4384ba815b9499a5ce349b4e33c1755278873fe2eac150a068823f526e6dbde"
+        }
+      ],
+      "signature": {
+        "signature_algorithm": "RSA-PKCS1v1.5/SHA1",
+        "signed_bytes": 1378595,
+        "signed_region_sha256": "be1724b79ad909bee3d7a73481ebfae430c72af8e779ab55d0b46fe04831c9e0",
+        "sha1_policy_replay_verified": true,
+        "certificate_sha256": "a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc",
+        "oem_recovery_executed": false
+      },
+      "python_signature_verified": true,
+      "openjdk_signature_verified": true,
+      "zip_crc_verified": true,
+      "zip_member_content_verified": true
+    },
+    {
+      "architecture": "ARM64",
+      "file": "diagnostico/extractor-recovery-0.1/privado/release-20260908-154731-69ecb368/TVBASE-EXTRACTOR-0.1-ARM64-RECOVERY.zip",
+      "bytes": 1308031,
+      "sha256": "5502123db9fc92cfd5f3173b32bfaff37e83e733752c91c888d70652fec0ac85",
+      "binary_file": "diagnostico/extractor-recovery-0.1/privado/build-20260908-154731-69ecb368/ARM64/update-binary",
+      "binary_bytes": 3211424,
+      "binary_sha256": "612a0ad397554126e6147fbc7ebd4d0f611c28c9ec045a928c4e5f5ae0f37932",
+      "elf": {
+        "elf_class_bits": 64,
+        "machine": 183,
+        "type": "ET_EXEC",
+        "little_endian": true,
+        "flags": 0,
+        "program_headers": 6,
+        "pt_interp_absent": true,
+        "pt_dynamic_absent": true
+      },
+      "metadata": {
+        "schema": "tvbase-recovery-extractor-1",
+        "version": "0.1",
+        "package_id": "TVBASE-EXTRACTOR-0.1-ARM64",
+        "operation": "capture_read_only",
+        "architecture": "ARM64",
+        "goos": "linux",
+        "goarch": "arm64",
+        "goarm": "",
+        "goarm64": "v8.0",
+        "cgo_enabled": false,
+        "recovery_arguments": [
+          "api_version_1_2_or_3",
+          "status_fd",
+          "package_zip_path"
+        ],
+        "media_directory": "TVBASE-EXTRACCION",
+        "media_config": "MEDIA.json",
+        "media_schema": "tvbase-recovery-media-1",
+        "device_images_in_package": false,
+        "default_capture": "inventory_only",
+        "image_capture_requires_matching_apk_plan": true,
+        "plans_directory": "PLANES",
+        "plan_schema": "tvbase-recovery-plan-1",
+        "plan_source": "validated_android_recognition_capture",
+        "plan_match": "exact_dt_identity",
+        "extractor_sha256": "612a0ad397554126e6147fbc7ebd4d0f611c28c9ec045a928c4e5f5ae0f37932",
+        "source_sha256": {
+          "diagnostico/extractor-recovery-0.1/capture.go": "33da14782b3c9a7a9fba521e3a46a3d95c255c27ee395f855d5aef1ab0b04604",
+          "diagnostico/extractor-recovery-0.1/capture_test.go": "bc79b9624545663b157defc7d82ce75257ab5539ea317c5559e579b796ff73a0",
+          "diagnostico/extractor-recovery-0.1/main_linux.go": "a72035f574ab65108793a7bc5fd07c1d231c8b4d2278cba3b40bf96a1d03b4e5",
+          "diagnostico/extractor-recovery-0.1/main_windows.go": "1ca9aff8f1b39743fea7dcb53c5c5765f3d4a7eac60404f25106acab2f38f3b7",
+          "diagnostico/extractor-recovery-0.1/platform_linux.go": "2b6da6168abaf47b31c636946dc0841029715dacb1b6f0c0dd5a234a0ad800ea",
+          "diagnostico/extractor-recovery-0.1/selection.go": "2556d881ca4b51fc1ed1ece57b31047d0e7791991189ebd9cb7c49c2212e1ea4",
+          "diagnostico/extractor-recovery-0.1/selection_test.go": "8c52da642d7f629ee975adb540df0eca89bad311213c40ba19c8611fc6d80d75",
+          "diagnostico/extractor-recovery-0.1/go.mod": "0419c40702daf109b6ed79a8802d1ddf82aa9e30bdd3ea56c05e480df54166c9",
+          "diagnostico/extractor-recovery-0.1/compilar.py": "0f97d74e9b78e1d6b7f64d59e15d6c45c66903435b6f1de24a5d3707f7b63cc5"
+        },
+        "recovery_execution_tested": false,
+        "signature_scope": "Original P291 recovery v1 key; other recovery trust is unverified"
+      },
+      "linux_tests_compiled": true,
+      "linux_tests_sha256": "f36978f8fe5f1c2c9dcea4ba733f59abb96eaaf3b60308096b8627407a0afe2a",
+      "linux_tests_executed": false,
+      "members": [
+        {
+          "name": "META-INF/com/google/android/update-binary",
+          "bytes": 3211424,
+          "sha256": "612a0ad397554126e6147fbc7ebd4d0f611c28c9ec045a928c4e5f5ae0f37932"
+        },
+        {
+          "name": "tvbase/extractor.json",
+          "bytes": 2148,
+          "sha256": "393ff84a0f69759a5b9ca099af83ebbe4129c88e5144706b2eea5c35c76c7cca"
+        },
+        {
+          "name": "META-INF/com/google/android/updater-script",
+          "bytes": 83,
+          "sha256": "a2189bb0751a05a784cb904976ee8a72c1d4fc32d702060426075d32614bc458"
+        },
+        {
+          "name": "META-INF/com/android/otacert",
+          "bytes": 1675,
+          "sha256": "a4384ba815b9499a5ce349b4e33c1755278873fe2eac150a068823f526e6dbde"
+        }
+      ],
+      "signature": {
+        "signature_algorithm": "RSA-PKCS1v1.5/SHA1",
+        "signed_bytes": 1306253,
+        "signed_region_sha256": "bb75d7ec4a55e3ead7f4c53eb79cfe8577166d84c4b48212c697dce553e8102a",
+        "sha1_policy_replay_verified": true,
+        "certificate_sha256": "a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc",
+        "oem_recovery_executed": false
+      },
+      "python_signature_verified": true,
+      "openjdk_signature_verified": true,
+      "zip_crc_verified": true,
+      "zip_member_content_verified": true
+    }
+  ],
+  "command_logs": [
+    {
+      "file": "diagnostico/extractor-recovery-0.1/privado/build-20260908-154731-69ecb368/go-version.log",
+      "sha256": "e37270413fda49039b4f31dd90726df0e94c163cf9bca2f62fd40a47d12b5db1",
+      "exit": 0
+    },
+    {
+      "file": "diagnostico/extractor-recovery-0.1/privado/build-20260908-154731-69ecb368/go-tests.jsonl",
+      "sha256": "98d9be90264c3a1155370c8d2184260cb3c0758f5c7f938dd116b3df479e4f6d",
+      "exit": 0
+    },
+    {
+      "file": "diagnostico/extractor-recovery-0.1/privado/build-20260908-154731-69ecb368/openjdk-compile.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exit": 0
+    },
+    {
+      "file": "diagnostico/extractor-recovery-0.1/privado/build-20260908-154731-69ecb368/ARM32-compile.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exit": 0
+    },
+    {
+      "file": "diagnostico/extractor-recovery-0.1/privado/build-20260908-154731-69ecb368/ARM32-test-compile.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exit": 0
+    },
+    {
+      "file": "diagnostico/extractor-recovery-0.1/privado/build-20260908-154731-69ecb368/ARM32-build-info.log",
+      "sha256": "b8732dde027c34f596e36b2101529ca13083f1a8de23191315e966e992157d9b",
+      "exit": 0
+    },
+    {
+      "file": "diagnostico/extractor-recovery-0.1/privado/build-20260908-154731-69ecb368/ARM32-openjdk-signature.log",
+      "sha256": "9291581e665097cb2624b34ad4e78e8c6e7ed1f206caeba3ee80f2c342ba215b",
+      "exit": 0
+    },
+    {
+      "file": "diagnostico/extractor-recovery-0.1/privado/build-20260908-154731-69ecb368/ARM64-compile.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exit": 0
+    },
+    {
+      "file": "diagnostico/extractor-recovery-0.1/privado/build-20260908-154731-69ecb368/ARM64-test-compile.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exit": 0
+    },
+    {
+      "file": "diagnostico/extractor-recovery-0.1/privado/build-20260908-154731-69ecb368/ARM64-build-info.log",
+      "sha256": "0258b4aa3f24260c9d88de1ff5765f82538e267d51c09c784c8a236c2fe7aa1b",
+      "exit": 0
+    },
+    {
+      "file": "diagnostico/extractor-recovery-0.1/privado/build-20260908-154731-69ecb368/ARM64-openjdk-signature.log",
+      "sha256": "9291581e665097cb2624b34ad4e78e8c6e7ed1f206caeba3ee80f2c342ba215b",
+      "exit": 0
+    }
+  ],
+  "tv_contacted": false,
+  "usb_prepared": false,
+  "physical_recovery_tested": false,
+  "limits": [
+    "Local build and signature verification do not prove execution on a TV",
+    "Without an exact DT match to a plan from a validated APK capture, only inventory is saved",
+    "ARM32 and ARM64 are independent choices; no automatic architecture dispatch",
+    "Original P291 recovery trust does not certify P271 or Rockchip recovery trust",
+    "Legacy test key and SHA1 are compatibility measures, not production update security",
+    "The extractor does not implement entry to recovery or restoration"
+  ]
+}

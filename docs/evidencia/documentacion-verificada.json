@@ -1,8 +1,8 @@
 {
-  "date_utc": "2026-09-08T17:42:48.409221+00:00",
+  "date_utc": "2026-09-08T18:53:54.558882+00:00",
   "state": "passed",
-  "links_checked": 764,
-  "component_paths_checked": 240,
+  "links_checked": 832,
+  "component_paths_checked": 263,
   "graph_valid": true,
   "roadmap_acyclic": true,
   "html_embedded_data_matches": true,
@@ -80,6 +80,16 @@
     {
       "name": "Reconocimiento-TVBase-0.1.apk",
       "sha256": "f631d5a16fa26266276f3be6f7f1e9f924ff95ea26dd922ff18f105022e1d813",
+      "matched": true
+    },
+    {
+      "name": "TVBASE-EXTRACTOR-0.1-ARM32-RECOVERY.zip",
+      "sha256": "1f45405d22193b1e09cc694bc5328be6e8aa7f071e0d77323cacc15611063f08",
+      "matched": true
+    },
+    {
+      "name": "TVBASE-EXTRACTOR-0.1-ARM64-RECOVERY.zip",
+      "sha256": "5502123db9fc92cfd5f3173b32bfaff37e83e733752c91c888d70652fec0ac85",
       "matched": true
     }
   ],

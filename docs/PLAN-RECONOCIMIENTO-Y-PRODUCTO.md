@@ -1,5 +1,7 @@
 # Próxima etapa: reconocimiento, producto común e instalación por perfil
 
+**Ampliación posterior autorizada: modo combinado APK → plan en PC → extracción desde recovery.** El usuario pidió originales profundos, y confirmó mantener la APK para preparar el paquete adecuado. Se implementa [extractor0.1](../diagnostico/extractor-recovery-0.1/README.md) independiente sin instalación: DT/perfil asociado a captura validada, mapa real revalidado, imágenes divididas/verificadas y omisiones explícitas. Sin plan solo inventario; no se promete extracción universal ni equivalencia de firma/entrada P271/P291. REQ-19 y ADR-31 prevalecen sobre el alcance inicial limitado a la APK.
+
 **Actualización posterior:** el usuario autorizó empezar y preparar Kingston. Se implementó y entregó [Reconocimiento0.1](../diagnostico/reconocedor-0.1/README.md); [recibo y alcance](evidencia/RECONOCEDOR-USB-01.md). API21+, capturas separadas sin privilegios y copias de archivos accesibles. Falta la primera prueba Android. El texto siguiente conserva el diseño que motivó la entrega; su espera de OK para construir el reconocedor ya fue satisfecha, sin autorizar otros cambios de ROM/servidor.
 
 **PROP-17 / ADR-29 · diseño para revisar, 8/9/2026.** Reordena PROP-16 según el último pedido del usuario. El primer entregable propuesto es reconocimiento desde USB; la capa común y las actualizaciones se diseñan desde el comienzo. No se construyeron nuevas APK, no se prepararon pendrives y no se modificó el TV ni el servidor en esta revisión.
@@ -52,6 +54,8 @@ Se toma primero una línea de base del TV Base actual y se compara después de c
 No se deduce mayor velocidad de haber eliminado aplicaciones. Tampoco se supone aceleración completa del video con alfa por ver «VP9 compatible». En API28 no existe el indicador público `MediaCodecInfo.isHardwareAccelerated()` agregado en API29; se combinarán capacidades, implementación seleccionada y reproducción real. [Documentación de codecs](https://developer.android.com/media/optimize/performance/codec?hl=en). Cualquier ajuste debe mantener o mejorar esa carga y la estabilidad; no se proponen overclock ni cambios de drivers antes de medir.
 
 ### Revisión de software y conexiones
+
+**Prioridad explícita agregada por el usuario el 8/9/2026:** revisar y quitar en la siguiente etapa los remanentes de teléfono innecesarios —almacenamiento de mensajes, teléfono, contactos, llavero y otros—, investigar `IntentFilterVerificationService` y auditar posible malware y conexiones. Se trata junto con la optimización de recursos y la carga APK/WebView/video. La [matriz de componentes heredados](REVISION-COMPONENTES-HEREDADOS.md) registra identidades pendientes, dependencias, criterios de retirada y pruebas. Esta incorporación es documental; no cambia ahora paquetes, permisos, TV ni ROM. Los nombres visibles no identifican por sí solos una APK ni prueban malware: llavero/KeyChain y verificación de enlaces también tienen funciones habituales en Android.
 
 REQ-14 exige estudiar el software retenido y su comportamiento. La base conserva framework y código del fabricante; todavía no puede calificarse como sistema libre de malware. La [auditoría de servicios existente](../rom-simplificada/original-p291/AUDITORIA-SERVICIOS.md) es un punto de partida, no una certificación.
 

@@ -1,5 +1,11 @@
 # Mensaje para Fable 5.1 en Claude Desktop
 
+## Trabajo actual · captura combinada
+
+El usuario pidió APK + extracción de originales en recovery. [Extractor0.1](../diagnostico/extractor-recovery-0.1/README.md) implementa mapa eMMC observado, apertura RO, salida USB con descriptores fijados, partes1GiB y hashes. No modifica el instalador022 ni entra por sí mismo a recovery. Sin plan derivado del ZIP APK íntegro solo inventario. Física y aceptación por perfil pendientes. [Límites P271](evidencia/RECOVERY-P271-ALCANCE.md).
+
+También priorizó retirar residuos de telefonía y auditar malware; ver [matriz](REVISION-COMPONENTES-HEREDADOS.md). No afirmar que nombres como KeyChain o StatementService prueban malware; identificar los binarios OEM y probar dependencias/tráfico.
+
 ## Reconocedor 0.1 implementado y entregado
 
 El usuario autorizó empezar. [Entrega](evidencia/RECONOCEDOR-USB-01.md): APK normal API21+ y formato de capturas secuenciales, ya copiados/releídos en Kingston; primera ejecución Android pendiente. [Fuentes y límites](../diagnostico/reconocedor-0.1/README.md). El importador verifica ZIP/manifiesto/tamaños/CRC/SHA sin extraer, conserva copias privadas y no convierte un perfil candidato en permiso de instalación. Las fuentes y el recibo vinculan la APK exacta; conservar esta versión para comparar con próximos informes. No publicar capturas/binarios crudos.

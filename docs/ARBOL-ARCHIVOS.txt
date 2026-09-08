@@ -73,6 +73,25 @@ mxqpro4k/
 │   ├── RESULTADO.md
 │   └── verificar-integridad-interna.py
 ├── diagnostico/
+│   ├── extractor-recovery-0.1/
+│   │   ├── capture.go
+│   │   ├── capture_test.go
+│   │   ├── COMPILACION.json
+│   │   ├── compilar.py
+│   │   ├── go.mod
+│   │   ├── LEEME-USB.txt
+│   │   ├── main_linux.go
+│   │   ├── main_windows.go
+│   │   ├── platform_linux.go
+│   │   ├── preparar-plan.py
+│   │   ├── PRUEBAS-PC.json
+│   │   ├── README-EMPAQUETADO.md
+│   │   ├── README.md
+│   │   ├── selection.go
+│   │   ├── selection_test.go
+│   │   ├── test_preparar_plan.py
+│   │   ├── test_verificar_captura.py
+│   │   └── verificar-captura.py
 │   ├── fable-20260907/
 │   │   └── resumen-saneado.json
 │   ├── h1-cierre-android/
@@ -162,6 +181,7 @@ mxqpro4k/
 │   │   ├── ENTRADA-ORIGINAL-P291-021.md
 │   │   ├── ERROR-INSTALADOR-P291-021.json
 │   │   ├── ERROR-INSTALADOR-P291-021.md
+│   │   ├── EXTRACTOR-RECOVERY-01.md
 │   │   ├── git-inicial.json
 │   │   ├── INSTALACION-FISICA-P291-022.md
 │   │   ├── INSTALADOR-P291-022.md
@@ -172,6 +192,7 @@ mxqpro4k/
 │   │   ├── PREPARACION-ENTRADA-P291-09.md
 │   │   ├── publicacion-github.json
 │   │   ├── RECONOCEDOR-USB-01.md
+│   │   ├── RECOVERY-P271-ALCANCE.md
 │   │   ├── RECUPERACION-RESPALDO-PC.json
 │   │   ├── REINICIOS-P291-SIN-USB.md
 │   │   ├── RESPALDO-CIFRADO.json
@@ -214,6 +235,7 @@ mxqpro4k/
 │   ├── proyecto.json
 │   ├── PUBLICACION.md
 │   ├── RESPALDO-GITHUB.md
+│   ├── REVISION-COMPONENTES-HEREDADOS.md
 │   └── ROADMAP.md
 ├── images/
 │   └── Armbian_26.05.0_amlogic_s905l2_noble_6.12.91_server_2026.06.01.img.gz
@@ -236,6 +258,7 @@ mxqpro4k/
 │   ├── evidencia-05-estado.json
 │   ├── evidencia-06-20260907-002158/ [3 archivos; 0.0 MB; agrupado]
 │   ├── evidencia-06-estado.json
+│   ├── extractor-01-estado.json
 │   ├── fuentes-imager-2.0.11.1/ [5 archivos; 0.3 MB; agrupado]
 │   ├── grabacion-20260904-234011-a03e047f/ [5 archivos; 0.0 MB; agrupado]
 │   ├── grabacion-20260905-000644-562f503b/ [6 archivos; 0.0 MB; agrupado]
@@ -253,6 +276,7 @@ mxqpro4k/
 │   ├── preparar-entrada-oem-07.ps1
 │   ├── preparar-evidencia-05.ps1
 │   ├── preparar-evidencia-06.ps1
+│   ├── preparar-extractor-01.ps1
 │   ├── preparar-instalador-android.ps1
 │   ├── preparar-original-021.ps1
 │   ├── preparar-original-022.ps1

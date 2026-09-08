@@ -24,6 +24,7 @@ flowchart LR
     C_PRODUCTO["Producto común · propuesto"]
     C_LOTES["Dos recorridos de lote · propuesto"]
     C_RECON["Reconocimiento0.1 · construido"]
+    C_EXTRACT["Extracción recovery0.1 · construido"]
     C_PERFIL -->|"selecciona"| C_BASE
     C_CHROME -->|"motor admitido"| C_WEB
     C_INICIO -->|"se integra"| C_ROM
@@ -49,6 +50,9 @@ flowchart LR
     C_RECON -->|"propone comparación por unidad"| C_LOTES
     C_RECON -->|"propone contrato de capacidades"| C_PRODUCTO
     C_RECON -->|"entrega APK y acumula informes"| C_USB
+    C_RECON -->|"informa plan DT"| C_EXTRACT
+    C_EXTRACT -->|"adquiere originales verificables"| C_ORIG
+    C_EXTRACT -->|"contrasta mapa real"| C_PERFIL
 ```
 
 ## Archivos por componente
@@ -247,7 +251,7 @@ Requisitos: REQ-11.
 
 ### C-USB · Kingston: reconocimiento
 
-**observado_tv**. Nueva carpeta de reconocimiento entregada; capturas anteriores y respaldos preservados. Tres archivos verificados, primer guardado Android pendiente.
+**observado_tv**. Kingston conserva APK, respaldos y releases anteriores; nueva carpetaTVBASE-EXTRACCION con dosZIP y guía verificados. Sin plan solo inventario; prueba recovery pendiente.
 
 Requisitos: REQ-01.
 
@@ -386,6 +390,7 @@ Requisitos: REQ-08, REQ-15, REQ-17.
 
 - [docs/PROPUESTA-LOTES-Y-ACTUALIZACIONES.md](../docs/PROPUESTA-LOTES-Y-ACTUALIZACIONES.md)
 - [docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md](../docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md)
+- [docs/REVISION-COMPONENTES-HEREDADOS.md](../docs/REVISION-COMPONENTES-HEREDADOS.md)
 
 ### C-LOTES · Dos recorridos de lote
 
@@ -419,6 +424,35 @@ Requisitos: REQ-02, REQ-14, REQ-18.
 - [diagnostico/reconocedor-0.1/src/MainActivity.java](../diagnostico/reconocedor-0.1/src/MainActivity.java)
 - [diagnostico/reconocedor-0.1/src/ReportArchive.java](../diagnostico/reconocedor-0.1/src/ReportArchive.java)
 - [diagnostico/reconocedor-0.1/src/UsbStore.java](../diagnostico/reconocedor-0.1/src/UsbStore.java)
+
+### C-EXTRACT · Extracción recovery0.1
+
+**construido**. APK verificada→plan DT→inventario y copias eMMCRO desde recovery compatible. Entregado USB; física y aceptación por perfil pendientes.
+
+Requisitos: REQ-11, REQ-18, REQ-19.
+
+- [diagnostico/extractor-recovery-0.1/COMPILACION.json](../diagnostico/extractor-recovery-0.1/COMPILACION.json)
+- [diagnostico/extractor-recovery-0.1/LEEME-USB.txt](../diagnostico/extractor-recovery-0.1/LEEME-USB.txt)
+- [diagnostico/extractor-recovery-0.1/PRUEBAS-PC.json](../diagnostico/extractor-recovery-0.1/PRUEBAS-PC.json)
+- [diagnostico/extractor-recovery-0.1/README-EMPAQUETADO.md](../diagnostico/extractor-recovery-0.1/README-EMPAQUETADO.md)
+- [diagnostico/extractor-recovery-0.1/README.md](../diagnostico/extractor-recovery-0.1/README.md)
+- [diagnostico/extractor-recovery-0.1/capture.go](../diagnostico/extractor-recovery-0.1/capture.go)
+- [diagnostico/extractor-recovery-0.1/capture_test.go](../diagnostico/extractor-recovery-0.1/capture_test.go)
+- [diagnostico/extractor-recovery-0.1/compilar.py](../diagnostico/extractor-recovery-0.1/compilar.py)
+- [diagnostico/extractor-recovery-0.1/go.mod](../diagnostico/extractor-recovery-0.1/go.mod)
+- [diagnostico/extractor-recovery-0.1/main_linux.go](../diagnostico/extractor-recovery-0.1/main_linux.go)
+- [diagnostico/extractor-recovery-0.1/main_windows.go](../diagnostico/extractor-recovery-0.1/main_windows.go)
+- [diagnostico/extractor-recovery-0.1/platform_linux.go](../diagnostico/extractor-recovery-0.1/platform_linux.go)
+- [diagnostico/extractor-recovery-0.1/preparar-plan.py](../diagnostico/extractor-recovery-0.1/preparar-plan.py)
+- [diagnostico/extractor-recovery-0.1/selection.go](../diagnostico/extractor-recovery-0.1/selection.go)
+- [diagnostico/extractor-recovery-0.1/selection_test.go](../diagnostico/extractor-recovery-0.1/selection_test.go)
+- [diagnostico/extractor-recovery-0.1/test_preparar_plan.py](../diagnostico/extractor-recovery-0.1/test_preparar_plan.py)
+- [diagnostico/extractor-recovery-0.1/test_verificar_captura.py](../diagnostico/extractor-recovery-0.1/test_verificar_captura.py)
+- [diagnostico/extractor-recovery-0.1/verificar-captura.py](../diagnostico/extractor-recovery-0.1/verificar-captura.py)
+- [docs/evidencia/EXTRACTOR-RECOVERY-01.md](../docs/evidencia/EXTRACTOR-RECOVERY-01.md)
+- [docs/evidencia/RECOVERY-P271-ALCANCE.md](../docs/evidencia/RECOVERY-P271-ALCANCE.md)
+- [preparacion-usb/extractor-01-estado.json](../preparacion-usb/extractor-01-estado.json)
+- [preparacion-usb/preparar-extractor-01.ps1](../preparacion-usb/preparar-extractor-01.ps1)
 
 ## Directorios y cuidado
 
@@ -459,12 +493,12 @@ Requisitos: REQ-02, REQ-14, REQ-18.
 | README.md | 1 | 0.000 |
 | actualizacion-chrome | 51 | 0.417 |
 | analisis-rom | 15 | 1.822 |
-| diagnostico | 195 | 0.018 |
-| docs | 52 | 0.001 |
+| diagnostico | 213 | 0.018 |
+| docs | 55 | 0.001 |
 | dossier-s905l2.html | 1 | 0.000 |
 | images | 1 | 1.352 |
 | platform-tools-latest-windows.zip | 1 | 0.008 |
-| preparacion-usb | 94 | 3.688 |
+| preparacion-usb | 96 | 3.688 |
 | rom-simplificada | 4619 | 14.542 |
 | tools | 18088 | 1.173 |
 

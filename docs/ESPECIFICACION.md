@@ -1,5 +1,13 @@
 # Especificación del producto y aceptación
 
+## REQ-19 · Reconocimiento combinado y originales desde recovery
+
+El usuario amplió el reconocimiento: APK normal para identificar y observar Android, luego paquete independiente de extracción basado en su informe para recovery compatible. [Implementación y contrato](../diagnostico/extractor-recovery-0.1/README.md). No se instala una ROM ni se modifica el recovery al copiar; entrada y aceptación del paquete se califican por perfil. El plan liga SHA/UUID de la captura y DT declarado, no acredita identidad física ni habilita instalación. El mapa y tamaños se descubren y revalidan en recovery. El adaptador inicial admite eMMC interna y registra omisiones; no se promete extracción de RPMB/MTD/UFS o todos los TV.
+
+**VAL-12:** primera APK íntegra, plan derivado sin campos arbitrarios, selección de ABI/entrada/firma revisadas, copia física de fuentes compatibles con SHA de origen/destino/relectura y adquisición privada PC. Debe rechazar diferencias, espacio insuficiente, fuentes ocupadas y USB cambiado sin sobrescribir otras capturas. Sin plan coincidente solo inventario. Pruebas PC no cierran VAL-12 ni acreditan recuperación/restauración. Relaciona C-RECON/C-EXTRACT/C-PERFIL/C-USB y REQ-11/18/19.
+
+**REQ-14 y optimización, prioridad explícita:** revisar remanentes de teléfono, mensajes y contactos, KeyChain/Llavero e Intent Filter Verification Service, además del resto del software heredado. [Matriz de revisión](REVISION-COMPONENTES-HEREDADOS.md). Identificar paquete, hash, origen, dependencias y tráfico real antes de clasificar o retirar; no etiquetar malware por nombre ni certificar limpieza por la lista de APK. En esta etapa solo se registra el trabajo; no se quitan servicios.
+
 ## Reconocimiento autorizado · implementación 0.1
 
 REQ-18 tiene [APK y formato implementados](../diagnostico/reconocedor-0.1/README.md), pruebas PC y [entrega USB verificada](evidencia/RECONOCEDOR-USB-01.md). Aceptación física pendiente: capturas P291/P271 diferenciadas, acceso parcial explícito y exportación real desde Android. No hay reconocimiento privilegiado o instalación Rockchip acreditados. La autorización actual reemplaza la espera de OK para este trabajo; otros cambios de producto/ROM/servidor permanecen propuestos.

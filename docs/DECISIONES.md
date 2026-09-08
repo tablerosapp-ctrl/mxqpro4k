@@ -1,5 +1,11 @@
 # Decisiones y lecciones
 
+## ADR-31 · Extracción combinada, separada de instalación
+
+Se implementa el pedido del usuario de complementar la APK con copias de originales desde recovery. Un plan generado desde un ZIP de reconocimiento verificado vincula DT/perfil y captura; el ejecutable descubre de nuevo geometría y abre bloques exclusivamente en lectura. Sin plan coincidente registra inventario y no copia imágenes. Se preservan capturas anteriores, se comprueba espacio, se dividen fuentes en 1 GiB y se verifican por lectura. La selección omite áreas ocupadas/desconocidas sin desmontarlas. No se altera ni reutiliza el instalador0.2.2 como si tuviera modo de respaldo. Entrada, firma y ejecución física requieren evidencia por perfil; aún no comprobadas en P271/Rockchip.
+
+La petición adicional de revisar residuos de telefonía y posible malware queda priorizada en [componentes heredados](REVISION-COMPONENTES-HEREDADOS.md), con comprobación de identidad y dependencias. La construcción del extractor no modifica servicios del TV.
+
 Cada decisión identifica su alcance. Las referencias de AOSP/Amlogic explican el diseño, pero no prueban que el cargador instalado en el P291 sea idéntico.
 
 | ID | Decisión y motivo | Consecuencia / revisión |

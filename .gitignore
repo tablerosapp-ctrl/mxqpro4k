@@ -178,3 +178,10 @@ CLAVE-PRIVADA-RESPALDO-*.txt
 !/diagnostico/reconocedor-0.1/COMPILACION.json
 !/diagnostico/reconocedor-0.1/PRUEBAS-PC.json
 !/diagnostico/reconocedor-0.1/LEEME-USB.txt
+
+# Extractor independiente: fuentes/recibos; imagenes y planes por unidad privados.
+!/diagnostico/extractor-recovery-0.1/*.go
+!/diagnostico/extractor-recovery-0.1/go.mod
+!/diagnostico/extractor-recovery-0.1/COMPILACION.json
+!/diagnostico/extractor-recovery-0.1/PRUEBAS-PC.json
+!/diagnostico/extractor-recovery-0.1/LEEME-USB.txt

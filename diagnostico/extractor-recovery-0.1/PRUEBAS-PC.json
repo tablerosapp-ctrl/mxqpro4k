@@ -1,0 +1,61 @@
+{
+  "schema": "tvbase-recovery-pc-tests-1",
+  "created_at_utc": "2026-09-08T18:53:34.330284+00:00",
+  "state": "passed_with_explicit_skip",
+  "compilation_receipt_sha256": "2e07c944881cd8a0debcc9247798f87c695aa6646f8b1d43cf0d62885decb338",
+  "source_sha256": {
+    "diagnostico/extractor-recovery-0.1/capture.go": "33da14782b3c9a7a9fba521e3a46a3d95c255c27ee395f855d5aef1ab0b04604",
+    "diagnostico/extractor-recovery-0.1/capture_test.go": "bc79b9624545663b157defc7d82ce75257ab5539ea317c5559e579b796ff73a0",
+    "diagnostico/extractor-recovery-0.1/main_linux.go": "a72035f574ab65108793a7bc5fd07c1d231c8b4d2278cba3b40bf96a1d03b4e5",
+    "diagnostico/extractor-recovery-0.1/main_windows.go": "1ca9aff8f1b39743fea7dcb53c5c5765f3d4a7eac60404f25106acab2f38f3b7",
+    "diagnostico/extractor-recovery-0.1/platform_linux.go": "2b6da6168abaf47b31c636946dc0841029715dacb1b6f0c0dd5a234a0ad800ea",
+    "diagnostico/extractor-recovery-0.1/selection.go": "2556d881ca4b51fc1ed1ece57b31047d0e7791991189ebd9cb7c49c2212e1ea4",
+    "diagnostico/extractor-recovery-0.1/selection_test.go": "8c52da642d7f629ee975adb540df0eca89bad311213c40ba19c8611fc6d80d75",
+    "diagnostico/extractor-recovery-0.1/go.mod": "0419c40702daf109b6ed79a8802d1ddf82aa9e30bdd3ea56c05e480df54166c9",
+    "diagnostico/extractor-recovery-0.1/compilar.py": "0f97d74e9b78e1d6b7f64d59e15d6c45c66903435b6f1de24a5d3707f7b63cc5"
+  },
+  "python_source_sha256": {
+    "diagnostico/extractor-recovery-0.1/preparar-plan.py": "8e29f923d85020da320de2f69e642d1394d90afd4480367ff080a1d3bd70da34",
+    "diagnostico/extractor-recovery-0.1/test_preparar_plan.py": "fb472de582b51c7bbf48dd4ab97a85a106aa86c118db668fa91473a455e4e63a",
+    "diagnostico/extractor-recovery-0.1/verificar-captura.py": "e98295fc446fff60f0f068863bb9c234d716eb7ff3bf8567bcad059d78046992",
+    "diagnostico/extractor-recovery-0.1/test_verificar_captura.py": "e50185bdb43364aed177810af3adc6c4efff83b98ef497fba19dbf417ea9b6e1"
+  },
+  "recognition_verifier_sha256": "1190d43c58f8b87f87013b0f04e7f455cd66a3fb18173f82c0115d11fbae75fc",
+  "go_host": {
+    "platform": "windows_amd64",
+    "top_level_test_functions": 21,
+    "pass_events_including_parents": 71,
+    "exit_code": 0
+  },
+  "linux_cross_compile": {
+    "arm32": true,
+    "arm64": true,
+    "tests_executed": false
+  },
+  "python_combined": {
+    "methods_run": 40,
+    "passed": 39,
+    "skipped": 1,
+    "skip_reason": "Windows account cannot create real symlinks; simulated reparse guard and real hardlink test passed",
+    "exit_code": 0
+  },
+  "independent_review": {
+    "scope": "static Linux selection, source IO, USB destination and entry context",
+    "resolved": [
+      "normal sysfs device symlink",
+      "busy parent prevents child copy",
+      "USB pinned directory descriptors with openat/mkdirat",
+      "destination mount and superblock RW",
+      "swap consumers",
+      "boot areas with unhandled child partitions"
+    ],
+    "physical_execution": false
+  },
+  "usb_delivery": "preparacion-usb/extractor-01-estado.json",
+  "limits": [
+    "No APK capture or per-device plan received in this delivery",
+    "No recovery execution or Android USB export tested",
+    "No universal recovery trust or entry claimed",
+    "No full-device coverage, malware absence or restore tested"
+  ]
+}

@@ -1,0 +1,46 @@
+TV BASE - RECONOCIMIENTO COMBINADO Y EXTRACCION 0.1
+
+PRIMERO: APK EN ANDROID
+Abrir TVBASE-RECONOCIMIENTO/Reconocimiento-TVBase-0.1.apk.
+Instalar, abrir y pulsar Capturar y guardar este equipo.
+Si pide carpeta, elegir TVBASE-RECONOCIMIENTO del pendrive.
+Esperar GUARDADO Y RELEIDO EN EL PENDRIVE antes de expulsarlo.
+Se puede repetir en otros equipos: cada captura queda separada.
+Despues devolver el pendrive a la PC para preparar el plan de cada perfil.
+
+DESPUES: COPIA DESDE RECOVERY
+Esta carpeta contiene extractores independientes ARM32 y ARM64.
+No son ROM y no instalan, borran ni formatean el TV.
+No reemplazan ni abren el recovery: hay que resolver esa entrada por modelo.
+En P271 sabemos que Android es ARM32, pero la aceptacion de la firma
+por su recovery y el procedimiento de entrada aun no estan probados.
+
+No ejecutar por ahora un Update de ROM ni AccesoUSB0.9 del P291.
+Cuando se haya revisado el informe APK, se agregara su plan en PLANES
+y se indicara el ZIP de extraccion y la entrada adecuados para ese TV.
+PLANES esta vacio en esta entrega: sin plan coincidente el extractor
+guarda SOLO INVENTARIO. No debe confundirse con un respaldo.
+
+Si recovery acepta el paquete y existe un plan compatible, el extractor
+comprueba el mapa real y guarda las areas eMMC que pueda leer estables.
+No desmonta particiones en uso. Informa las areas omitidas.
+MTD/NAND, UFS y RPMB requieren otros procedimientos; no se prometen copiados.
+
+Las imagenes se dividen en partes de 1 GiB y se releen para verificar.
+CAPTURAS acumula una carpeta nueva por ejecucion. Nunca sobrescribe.
+Los archivos .img.partial tambien pueden estar completos: el informe
+report.json y resultado.json indican que partes quedaron verificadas.
+No borrar ni renombrar partes. Llevar el conjunto a la PC para comprobarlo.
+
+Esperar COPIA Y RELECTURA TERMINADAS antes de salir. No reinicia solo.
+Ante error, conservar el mensaje y todos los archivos; no repetir a ciegas.
+El propio recovery puede guardar registros en el TV, aunque el extractor
+solo lea sus bloques. La restauracion no esta probada.
+
+El espacio libre se comprueba antes de copiar; no se borran respaldos
+para hacer lugar. Varias imagenes completas pueden llenar el pendrive.
+Los originales pueden contener datos privados: no subirlos en claro.
+
+Los ZIP antiguos TVBASE-P291 y ORIGINAL-RESTORE conservados en la raiz
+pertenecen a instalacion/restauracion de ese P291. No usarlos para extraer
+originales de otro equipo: el instalador continua al borrado y grabacion.

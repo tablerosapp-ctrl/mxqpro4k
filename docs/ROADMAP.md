@@ -1,5 +1,15 @@
 # Roadmap y propuestas
 
+## Reconocimiento combinado · prioridad actual
+
+1. Primera captura con la APK0.1 ya entregada y verificación en PC.
+2. Plan de lectura derivado de esa captura; revisión de entrada/firma del recovery y ejecución del extractor0.1 en el equipo correspondiente. [Contrato](../diagnostico/extractor-recovery-0.1/README.md) · [P271](evidencia/RECOVERY-P271-ALCANCE.md).
+3. Verificación privada de imágenes/omisiones y ficha por perfil; repetir con los otros equipos conservando su identidad. La APK y el extractor son complementarios, y no hay arranque ni firma universales acreditados.
+4. Calificar capa común, Home, WebView/video y recursos. Prioridad expresa: [revisión de telefonía, servicios heredados y malware](REVISION-COMPONENTES-HEREDADOS.md). Mantener auditoría de consumo/tráfico y dependencias antes de retirar paquetes.
+5. Instalación rápida por perfil y actualización propia siguen separadas del reconocedor y pendientes de validación/implementación.
+
+REQ-19/VAL-12/ADR-31 amplían el paso0 previo. La autorización actual cubre construir y preparar el extractor; no instalar ROM, cambiar ENV/BCB a ciegas ni activar servidor.
+
 ## Avance autorizado · paso 0 entregado para primera prueba
 
 [Reconocimiento0.1](../diagnostico/reconocedor-0.1/README.md) está compilado/verificado en PC y copiado/releído en Kingston. El usuario autorizó esta construcción y uso secuencial. Falta comprobar una captura física y su exportación Android, primero P291 y después P271/otros; no se declara cerrado REQ-18 por los tests PC. No hay adaptador privilegiado universal ni instalador rápido nuevo. [Entrega](evidencia/RECONOCEDOR-USB-01.md).

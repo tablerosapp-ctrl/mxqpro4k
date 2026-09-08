@@ -1,5 +1,15 @@
 # Estado operativo
 
+## Vigente · modo combinado y extractor0.1 entregados
+
+El usuario aprobó APK de identificación y paquete independiente para extraer originales desde recovery según esa información. [Contrato](../diagnostico/extractor-recovery-0.1/README.md) · [Entrega verificada](evidencia/EXTRACTOR-RECOVERY-01.md). DosZIP ARM32/ARM64 compilados, firmas Python/OpenJDK y copia/relectura Kingston comprobadas. La APK anterior y todos los respaldos permanecen; nueva carpeta TVBASE-EXTRACCION con CAPTURAS/PLANES vacíos. Recibo extractor-01-estado.json código0; no repetir preparador ni modificar la guía sellada.
+
+**Siguiente:** primera captura APK en P271/TV elegido, importación y plan derivado del ZIP íntegro. Después comprobar entrada/firma/ABI del recovery y ejecutar solo extractor adecuado. Sin plan coincidente guarda inventario, sin imágenes. No hay captura física del extractor, nueva APK recibida ni aceptación P271/Rockchip. No ejecutar Update/AccesoUSB09/ENV-BCB P291 a ciegas para reconocer. Las guardas abren fuentesRO, validan mapa real y omiten áreas ocupadas/desconocidas; no desmontan, formatean, flashean ni reinician.
+
+**Nueva prioridad para la etapa de producto:** [telefonía, mensajes, contactos, llavero e Intent Filter Verification Service y resto del software heredado](REVISION-COMPONENTES-HEREDADOS.md). Revisar identidad/dependencias y tráfico/malware; ningún servicio retirado y ninguna clasificación de malware basada solo en su nombre. Home, WebView de la APK, rendimiento, servidor y nueva ROM siguen pendientes.
+
+La autorización de extracción amplía la captura de Android; no autoriza esta vez instalar otra ROM ni cambiar el recovery. La siguiente sección documenta la primera entrega APK, que sigue conservada.
+
 ## Vigente · reconocedor 0.1 construido y entregado en Kingston
 
 El usuario autorizó implementar el reconocimiento y preparar el USB para varios TV consecutivos. [Reconocedor](../diagnostico/reconocedor-0.1/README.md) · [Entrega y pruebas](evidencia/RECONOCEDOR-USB-01.md) · [Recibo USB](../preparacion-usb/reconocimiento-01-estado.json).
