@@ -1,5 +1,20 @@
 # Mensaje para Fable 5.1 en Claude Desktop
 
+## Revisión vigente · instalador0.2.1 y entrada0.9
+
+Empezar por [ESTADO](ESTADO.md) y la [evidencia0.2.1](evidencia/ENTRADA-ORIGINAL-P291-021.md). La plataforma deriva de las particiones originales del primer P291; root se obtuvo mediante el `su` existente con autorización del usuario. Las restricciones y afirmaciones sobre ausencia de root/respaldos que siguen abajo son antecedentes, no el estado actual. No instalar ni probar en otro equipo.
+
+La entrada propuesta ya está implementada y revisada en [Acceso USB0.9](../rom-simplificada/original-p291/entrada-apk/README.md): copia/verifica ENV y BCB, neutraliza órdenes antiguas y prepara una orden de arranque transitoria para mostrar recovery interno. **No se ejecutó: modifica ENV con riesgo de impedir el arranque y el usuario pidió decidir tras conocer ese riesgo.** La APK está instalada, pero el diálogo del sistema al2% continúa superpuesto. Instalarla o abrirla no lo cancela; el siguiente acompañamiento será por LAN, después de esa decisión.
+
+La revisión externa útil puede seguir dos líneas independientes:
+
+- Entrada: [análisis de recovery/ENV](../rom-simplificada/original-p291/entrada/ANALISIS-RECOVERY.md), orden preboot/bootcmd, limitaciones de saveenv, concurrencia del cierre OEM pendiente y persistencia del helper. No proponer como probado un rescate de un equipo sin arranque.
+- Instalación/restauración: [contrato de migración](../rom-simplificada/original-p291/instalacion-021/CONTRATO-MIGRACION.md), seis copias antes del formato, verificación de ext4 vacío, cinco destinos/boot al final y [restaurador separado](../rom-simplificada/original-p291/restauracion-021/README.md). La constante ARM32 de tamaño fue confirmada físicamente en lectura; los ZIP anteriores0.2.0 quedan históricos.
+
+Registrar commit público, hallazgo con ruta/línea, evidencia, supuesto y condición de parada. Los recibos acreditan firma/copia o pruebas locales según su alcance; recuperación, instalación, WebView activo y video físico siguen pendientes. El [estado USB vigente](../rom-simplificada/INSTALACION-USB.md) distingue la copia del resultado en TV.
+
+## Historial del pedido anterior
+
 ## Actualización para la revisión conjunta · ROM original 0.2.0
 
 Ya se construyó una derivación desde los originales del primer P291 y un ZIP separado de restauración. Revisar [composición/evidencias](evidencia/ROM-ORIGINAL-P291-020.md) y [receta](../rom-simplificada/original-p291/README.md). No hay instalación física ni entrega USB nueva. La candidata0.1.2 y el menú OEM bloqueado no son la próxima prueba.

@@ -1,0 +1,76 @@
+{
+  "estado": "verificado",
+  "version": "0.2.1",
+  "fecha": "2026-09-07T23:06:04.3311177-03:00",
+  "archivo_local": "C:\\Users\\usuario-local\\Desktop\\mxqpro4k\\privado\\usb-retirados-original021-20260907-230333-a31fe4c8",
+  "tv_flasheado": false,
+  "reboot_requested": false,
+  "update_requested": false,
+  "files": [
+    {
+      "archivo": "TVBASE-P291-A9-0.2.1-RECOVERY.zip",
+      "bytes": 573688933,
+      "sha256": "dcb152c77e55cb067d6e88a8144990a3edb5d06568ea8cdfdc414a0fa21aac58",
+      "lectura_verificada": true
+    },
+    {
+      "archivo": "TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-RECOVERY.zip",
+      "bytes": 913294443,
+      "sha256": "42580206f254fab0a2280cd263a48882677e7ddf5cfd609382a840c8d0fb103a",
+      "lectura_verificada": true
+    },
+    {
+      "archivo": "AccesoUSB-0.9.apk",
+      "bytes": 61843,
+      "sha256": "1d0f267e818acca5562048f9961c7c234f36b8cc81f827cb3eac9e3fcd2505a4",
+      "lectura_verificada": true
+    },
+    {
+      "archivo": "LEEME-AHORA.txt",
+      "bytes": 4412,
+      "sha256": "4c4d6586285b36415f0dd7eb12499d9c8970d4f1b21d85647726c85dd1784320",
+      "lectura_verificada": true
+    }
+  ],
+  "retirados": [
+    {
+      "archivo": "TVBASE-P291-A9-0.1.2-RECOVERY.zip",
+      "bytes": 573082917,
+      "sha256": "6c0c4307208c8d0e1a958a3fc6c790fa94021a850599985b0a41b340b821bb99",
+      "copia_pc_verificada": true,
+      "retirado": true
+    },
+    {
+      "archivo": "recovery.img",
+      "bytes": 25165824,
+      "sha256": "e59ef077378f8b1ba644bcfbef2a0f55e9914258696f203e813392e0a9fed01b",
+      "copia_pc_verificada": true,
+      "retirado": true
+    },
+    {
+      "archivo": "ControlBluetooth-0.1.apk",
+      "bytes": 24979,
+      "sha256": "6d7c866478c859ac3948a1132aa75ceebc13d059c32098aaecc0cbb82dbf031f",
+      "copia_pc_verificada": true,
+      "retirado": true
+    },
+    {
+      "archivo": "LEEME-AHORA.txt",
+      "bytes": 1752,
+      "sha256": "3f26f214f96f126e89cdba0fb68e445b780ed590f762efe03b45b05399643273",
+      "copia_pc_verificada": true,
+      "retirado": true
+    }
+  ],
+  "bytes_retirados": 598275472,
+  "codigo_nativo": 0,
+  "contract_sha256": "b9543e01244c6e3dcef794ce3d129a619879077eae0bbc7c599eed57f780952f",
+  "drive_letter": "D",
+  "volume_health_before": "Warning",
+  "format_requested": false,
+  "repair_requested": false,
+  "safe_removal_pending": true,
+  "volume_flush_verified": false,
+  "free_bytes_after": 29429121024,
+  "detalle": "Entrega original P291 copiada y leida; cuatro archivos antiguos archivados en PC antes de retirarlos. Informes y respaldos conservados. Sin formato ni modificacion del TV por este preparador. Falta expulsion segura: Flush de archivos y relectura no acreditan persistencia de metadatos FAT tras desconectar. Entrada y ROM sin prueba fisica."
+}

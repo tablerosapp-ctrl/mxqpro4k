@@ -132,6 +132,7 @@ mxqpro4k/
 │   └── test_respaldo_p291_lan.py
 ├── docs/
 │   ├── evidencia/
+│   │   ├── ENTRADA-ORIGINAL-P291-021.md
 │   │   ├── git-inicial.json
 │   │   ├── limpieza-plan.json
 │   │   ├── limpieza-resultado.json
@@ -179,6 +180,7 @@ mxqpro4k/
 │   ├── entrada-amlogic-estado.json
 │   ├── entrada-oem-07-20260907-123446/ [3 archivos; 0.0 MB; agrupado]
 │   ├── entrada-oem-07-estado.json
+│   ├── entrega-original-021.json
 │   ├── estado-grabacion-anterior-20260904-225502.json
 │   ├── estado-grabacion.json
 │   ├── estado-recuperacion.json
@@ -196,12 +198,14 @@ mxqpro4k/
 │   ├── instalador-android-20260906-191110/ [4 archivos; 3686.8 MB; agrupado]
 │   ├── instalador-android-estado.json
 │   ├── INVESTIGACION-USB.md
+│   ├── original-021-estado.json
 │   ├── postintento-08-estado.json
 │   ├── preparar-entrada-amlogic.ps1
 │   ├── preparar-entrada-oem-07.ps1
 │   ├── preparar-evidencia-05.ps1
 │   ├── preparar-evidencia-06.ps1
 │   ├── preparar-instalador-android.ps1
+│   ├── preparar-original-021.ps1
 │   ├── preparar-postintento-08.ps1
 │   ├── preparar-rom-012.ps1
 │   ├── probar-archivo-kingston.ps1
@@ -209,6 +213,7 @@ mxqpro4k/
 │   ├── recuperar-kingston-windows.ps1
 │   ├── revision-011-20260906-192456/ [2 archivos; 0.0 MB; agrupado]
 │   ├── revision-011-estado.json
+│   ├── REVISION-ORIGINAL-021.json
 │   ├── rom-012-estado.json
 │   ├── update.zip
 │   └── variantes/ [4 archivos; 0.0 MB; agrupado]
@@ -466,6 +471,47 @@ mxqpro4k/
 │   │   │   ├── test_product_ea.py
 │   │   │   ├── validar_empaquetado.py
 │   │   │   └── VerifyWholeZip.java
+│   │   ├── entrada/
+│   │   │   ├── __pycache__/
+│   │   │   │   └── codec_entrada.cpython-312.pyc
+│   │   │   ├── ANALISIS-RECOVERY.md
+│   │   │   ├── codec_entrada.py
+│   │   │   ├── REVISION-APK09-ARTEFACTO.json
+│   │   │   ├── REVISION-APK09.json
+│   │   │   ├── REVISION-APK09.md
+│   │   │   ├── test_codec_entrada.py
+│   │   │   └── VALIDACION-CODEC.json
+│   │   ├── entrada-apk/
+│   │   │   ├── __pycache__/
+│   │   │   │   ├── entrada-lan09.cpython-312.pyc
+│   │   │   │   └── test_entrada_lan09.cpython-312.pyc
+│   │   │   ├── src/
+│   │   │   │   ├── Acceso.java
+│   │   │   │   ├── AdbLocal.java
+│   │   │   │   ├── AndroidManifest.xml
+│   │   │   │   ├── EntryCodec.java
+│   │   │   │   ├── EntryContract.java
+│   │   │   │   ├── EntryIO.java
+│   │   │   │   └── PreparationHelper.java
+│   │   │   ├── .gitignore
+│   │   │   ├── COMPILACION-09.json
+│   │   │   ├── compilar-entrada09.py
+│   │   │   ├── compilar-probe.py
+│   │   │   ├── entrada-lan09.py
+│   │   │   ├── ESTADO-ENTRADA-09.md
+│   │   │   ├── INSTALACION-TV-09.json
+│   │   │   ├── LIBERACION-09.json
+│   │   │   ├── OPERACION-LAN-09.md
+│   │   │   ├── PROBE-COMPILADO.json
+│   │   │   ├── PROBE-EJECUCION.md
+│   │   │   ├── PROBE-FISICO.json
+│   │   │   ├── ProbeContract.java
+│   │   │   ├── ProbeContractTest.java
+│   │   │   ├── PRUEBAS-LAN09.json
+│   │   │   ├── README.md
+│   │   │   ├── REVISION-LAN09.json
+│   │   │   ├── RootProbe.java
+│   │   │   └── test_entrada_lan09.py
 │   │   ├── gestion/
 │   │   │   ├── .gitignore
 │   │   │   ├── compilacion-resultado.json
@@ -478,6 +524,58 @@ mxqpro4k/
 │   │   │   ├── probar-gestion.py
 │   │   │   ├── pruebas-resultado.json
 │   │   │   └── README.md
+│   │   ├── instalacion-021/
+│   │   │   ├── salida/
+│   │   │   │   ├── TVBASE-P291-A9-0.2.1-manifest.json
+│   │   │   │   ├── TVBASE-P291-A9-0.2.1-RECOVERY.zip
+│   │   │   │   └── TVBASE-P291-A9-0.2.1-VERIFICACION.json
+│   │   │   ├── backup_verified.go
+│   │   │   ├── backup_verified_test.go
+│   │   │   ├── block_abi.go
+│   │   │   ├── block_abi_test.go
+│   │   │   ├── comprobar_abi.go
+│   │   │   ├── CONTRATO-MIGRACION.md
+│   │   │   ├── data_policy.go
+│   │   │   ├── empaquetar_original.py
+│   │   │   ├── env_guard.go
+│   │   │   ├── env_guard_test.go
+│   │   │   ├── EVIDENCIA-TESTS.json
+│   │   │   ├── firma_ota_v1.py
+│   │   │   ├── FORMATEADOR-PRUEBA-TV.json
+│   │   │   ├── go.mod
+│   │   │   ├── main_linux.go
+│   │   │   ├── main_windows.go
+│   │   │   ├── package.go
+│   │   │   ├── package_test.go
+│   │   │   ├── RESTAURACION.md
+│   │   │   ├── transaction_linux.go
+│   │   │   ├── userdata_linux.go
+│   │   │   └── VerifyWholeZip.java
+│   │   ├── restauracion-021/
+│   │   │   ├── __pycache__/
+│   │   │   │   └── firma_ota_v1.cpython-312.pyc
+│   │   │   ├── salida/
+│   │   │   │   ├── TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-manifest.json
+│   │   │   │   ├── TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-RECOVERY.zip
+│   │   │   │   └── TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-VERIFICACION.json
+│   │   │   ├── backup_verified.go
+│   │   │   ├── backup_verified_test.go
+│   │   │   ├── block_abi.go
+│   │   │   ├── block_abi_test.go
+│   │   │   ├── empaquetar_original.py
+│   │   │   ├── env_guard.go
+│   │   │   ├── env_guard_test.go
+│   │   │   ├── env_read_linux.go
+│   │   │   ├── firma_ota_v1.py
+│   │   │   ├── go.mod
+│   │   │   ├── main_linux.go
+│   │   │   ├── main_windows.go
+│   │   │   ├── package.go
+│   │   │   ├── package_test.go
+│   │   │   ├── README.md
+│   │   │   ├── REVISION-INDEPENDIENTE.json
+│   │   │   ├── transaction_linux.go
+│   │   │   └── VerifyWholeZip.java
 │   │   ├── AUDITORIA-SERVICIOS.md
 │   │   ├── boot.py
 │   │   ├── compilar-componentes.py
@@ -487,6 +585,7 @@ mxqpro4k/
 │   │   ├── IMAGENES-0.2.0.json
 │   │   ├── INCIDENTES-CONSTRUCCION.md
 │   │   ├── inventariar-originales.py
+│   │   ├── LEEME-USB-021.txt
 │   │   ├── politica-paquetes.json
 │   │   ├── product_ea.py
 │   │   ├── README.md

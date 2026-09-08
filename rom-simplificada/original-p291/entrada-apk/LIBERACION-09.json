@@ -1,0 +1,69 @@
+{
+  "state": "reviewed_offline",
+  "date_utc": "2026-09-08T01:57:42.342421+00:00",
+  "approval_scope": "Exact APK and source review for experimental delivery; no physical preparation or recovery success is accredited.",
+  "reviewer_received": true,
+  "tests_passed": true,
+  "apk_review_complete": true,
+  "package": "local.tvbase.acceso",
+  "version": "0.9",
+  "version_code": 9,
+  "apk": "rom-simplificada/original-p291/entrada-apk/privado/entrada09-20260908-015115-805753/AccesoUSB-0.9.apk",
+  "bytes": 61843,
+  "apk_sha256": "1d0f267e818acca5562048f9961c7c234f36b8cc81f827cb3eac9e3fcd2505a4",
+  "dex_sha256": "2e3dd8ee2d7c42e74b15eafb477282643d13ead9acc28a523e681455315ed753",
+  "apk_signer_certificate_sha256": "d2136c0e519d477d2be34b55590d9e548137682f9c2573f330a0a6e91833b613",
+  "source_sha256": {
+    "rom-simplificada/original-p291/entrada-apk/src/Acceso.java": "241fa06f78c0bca8a01275fa411b0a7deeeb0ec695d264f628c60107240c5351",
+    "rom-simplificada/original-p291/entrada-apk/src/AdbLocal.java": "154392ce2003ce60b653f23bd0cce1dae777d1c61a12f18be071db38278c9f2d",
+    "rom-simplificada/original-p291/entrada-apk/src/AndroidManifest.xml": "50127452b69b03debede4b57fc5d636406b282be4aa1353215806d95bb4fe2cb",
+    "rom-simplificada/original-p291/entrada-apk/src/EntryCodec.java": "584bcbc99b73a0206232228b6d797db301fea50e9b43c26c3ee8fc90a126c416",
+    "rom-simplificada/original-p291/entrada-apk/src/EntryContract.java": "4749998b23d5eee1f10d89d294906cbbe2ff47d64118cc5a990d8ac531aa294e",
+    "rom-simplificada/original-p291/entrada-apk/src/EntryIO.java": "2ddd5c74b3aec489dbc5c10950286be542a2e4b4fe311417efa6bc72d66d1d83",
+    "rom-simplificada/original-p291/entrada-apk/src/PreparationHelper.java": "799dbcc90dc5f1ca5c2181f8e1145166d1d4019461d8a0ec598216454bde54d1"
+  },
+  "builder_sha256": "0894f6e320e63a82fefa31499d166d006453db9f7c00afb98cf9de995d2a588e",
+  "generated_policy_sha256": "04cd0926c1de2de2b10d5c27f207f566d995523eb3e02dbed20f3f596d82a20f",
+  "policy": {
+    "zip_name": "TVBASE-P291-A9-0.2.1-RECOVERY.zip",
+    "zip_bytes": 573688933,
+    "zip_sha256": "dcb152c77e55cb067d6e88a8144990a3edb5d06568ea8cdfdc414a0fa21aac58",
+    "env_record_sha256": "4a769455ff8fdfd7a84d65c781259e34ca94657a833d8d55222b16acac2c31f6",
+    "bcb_prefix_sha256": "60e06b0f4afd4db33faef964133a5aa08991e42932b11302c72a36881a834e1b"
+  },
+  "compilation_receipt": "rom-simplificada/original-p291/entrada-apk/COMPILACION-09.json",
+  "compilation_receipt_sha256": "e5e8beb78e8bdb3a86b73ea3492921f694dc6253b5021d08bedf328c4387a4d1",
+  "method_review": "rom-simplificada/original-p291/entrada/REVISION-APK09.json",
+  "method_review_sha256": "2140c3c3b6f20fd7d4f22e7ddff05bc1ed29fbb84061c799480c90f3ee6607cb",
+  "artifact_review": "rom-simplificada/original-p291/entrada/REVISION-APK09-ARTEFACTO.json",
+  "artifact_review_sha256": "cf28000f31912339e8ea4f8607147205b5301d54036b99365a2032bed1f791e3",
+  "rom_receipt_sha256": "076070aee6faa005833dda2ce73658ed3417f4ff919cc9e2c4e878cc89ba5a12",
+  "checks": {
+    "signature_api28_verified": true,
+    "package_version_sdk_verified": true,
+    "apk_zip_crc_verified": true,
+    "independent_recompiled_dex_identical": true,
+    "exact_rom_zip_hash_rechecked": true,
+    "source_hashes_unchanged": true
+  },
+  "tests": {
+    "independent_python_regressions": 13,
+    "independent_java_negative_checks": 11,
+    "independent_adb_fake_pc_checks": 12,
+    "shared_codec_output_hashes_equal": true
+  },
+  "physical_detachment_tested": false,
+  "physical_preparation_tested": false,
+  "usb_fsync_tested": false,
+  "automatic_reset": false,
+  "automatic_zip_installation": false,
+  "usb_delivery_verified": false,
+  "limitations": [
+    "The helper modifies ENV and BCB only after explicit preparation; these writes are not a proven atomic transaction or recovery path.",
+    "Offline source, protocol and bytecode checks do not establish execution on Android, USB durability or the bootloader entering recovery.",
+    "The earlier harmless RootProbe tested a new internal directory only; it did not exercise the detached worker or ENV/BCB mutation.",
+    "A lost observation does not cancel the worker. Incomplete or indeterminate preparation must be reviewed before another attempt or power cycle.",
+    "Bootcmd restoration is conditional on reaching the reviewed bootcmd and successfully saving the environment.",
+    "No physical installation, rollback or restoration is claimed by this release receipt."
+  ]
+}

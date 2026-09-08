@@ -144,6 +144,7 @@ Desktop.ini
 
 # Espacio explícito para evidencia sin saneamiento y copias privadas futuras.
 /privado/
+**/privado/
 /docs/evidencia/crudos/
 /docs/evidencia/privado/
 /docs/inventario.json

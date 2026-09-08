@@ -1,0 +1,40 @@
+{
+  "state": "reviewed_offline",
+  "approved": true,
+  "approval_scope": "Exact source review for offline build only; not TV execution authorization or physical validation",
+  "date_utc": "2026-09-08T01:51:02.488446+00:00",
+  "source_sha256": {
+    "rom-simplificada/original-p291/entrada-apk/src/Acceso.java": "241fa06f78c0bca8a01275fa411b0a7deeeb0ec695d264f628c60107240c5351",
+    "rom-simplificada/original-p291/entrada-apk/src/AdbLocal.java": "154392ce2003ce60b653f23bd0cce1dae777d1c61a12f18be071db38278c9f2d",
+    "rom-simplificada/original-p291/entrada-apk/src/AndroidManifest.xml": "50127452b69b03debede4b57fc5d636406b282be4aa1353215806d95bb4fe2cb",
+    "rom-simplificada/original-p291/entrada-apk/src/EntryCodec.java": "584bcbc99b73a0206232228b6d797db301fea50e9b43c26c3ee8fc90a126c416",
+    "rom-simplificada/original-p291/entrada-apk/src/EntryContract.java": "4749998b23d5eee1f10d89d294906cbbe2ff47d64118cc5a990d8ac531aa294e",
+    "rom-simplificada/original-p291/entrada-apk/src/EntryIO.java": "2ddd5c74b3aec489dbc5c10950286be542a2e4b4fe311417efa6bc72d66d1d83",
+    "rom-simplificada/original-p291/entrada-apk/src/PreparationHelper.java": "799dbcc90dc5f1ca5c2181f8e1145166d1d4019461d8a0ec598216454bde54d1"
+  },
+  "env_record_sha256": "4a769455ff8fdfd7a84d65c781259e34ca94657a833d8d55222b16acac2c31f6",
+  "bcb_prefix_sha256": "60e06b0f4afd4db33faef964133a5aa08991e42932b11302c72a36881a834e1b",
+  "detached_method_reviewed": true,
+  "no_automatic_reset": true,
+  "critical_write_kill_timer_absent": true,
+  "internal_checkpoints_before_mutation": true,
+  "commit_requires_internal_and_usb": true,
+  "reader_lock_does_not_compete_with_startup": true,
+  "api28_compile_receipt_sha256": "bd72f09b8600e8fa7d37886aea65cadea7640111524c6fd4ec3960f9e640fb73",
+  "independent_python_regressions": 13,
+  "independent_java_negative_checks": 11,
+  "independent_adb_fake_pc_checks": 12,
+  "shared_codec_output_hashes_equal": true,
+  "physical_detachment_tested": false,
+  "physical_preparation_tested": false,
+  "usb_fsync_tested": false,
+  "apk_review_complete": false,
+  "tv_accessed_by_reviewer": false,
+  "usb_accessed_by_reviewer": false,
+  "report_sha256": "7d883455052f2d7ce8c7ad40a29e69fde2643be21158989ef478c9c717c3cf73",
+  "review_harness_sha256": {
+    "RevisionEntryCodec.java": "7b835a4a16e7556648b1fbb2f973e218c62319e5adfe1824da8eae40e1c1bfc0",
+    "RevisionAdb09.java": "c2088a4553a2cc3cd932b2880dddf1601abf8b9703048c37457478bcedf772bb",
+    "comparar-codec-java.py": "03e736219c9285c4151f5b2e2a9de5bae6af4d7925d3edd0fb41601b19fc7607"
+  }
+}

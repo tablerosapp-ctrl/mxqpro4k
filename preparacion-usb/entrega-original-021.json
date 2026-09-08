@@ -1,0 +1,71 @@
+{
+  "version": "0.2.1",
+  "profile": "gxlx2_p291_1g",
+  "state": "reviewed_for_usb_copy",
+  "files": [
+    {
+      "name": "TVBASE-P291-A9-0.2.1-RECOVERY.zip",
+      "source": "rom-simplificada/original-p291/instalacion-021/salida/TVBASE-P291-A9-0.2.1-RECOVERY.zip",
+      "bytes": 573688933,
+      "sha256": "dcb152c77e55cb067d6e88a8144990a3edb5d06568ea8cdfdc414a0fa21aac58"
+    },
+    {
+      "name": "TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-RECOVERY.zip",
+      "source": "rom-simplificada/original-p291/restauracion-021/salida/TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-RECOVERY.zip",
+      "bytes": 913294443,
+      "sha256": "42580206f254fab0a2280cd263a48882677e7ddf5cfd609382a840c8d0fb103a"
+    },
+    {
+      "name": "AccesoUSB-0.9.apk",
+      "source": "rom-simplificada/original-p291/entrada-apk/privado/entrada09-20260908-015115-805753/AccesoUSB-0.9.apk",
+      "bytes": 61843,
+      "sha256": "1d0f267e818acca5562048f9961c7c234f36b8cc81f827cb3eac9e3fcd2505a4"
+    },
+    {
+      "name": "LEEME-AHORA.txt",
+      "source": "rom-simplificada/original-p291/LEEME-USB-021.txt",
+      "bytes": 4412,
+      "sha256": "4c4d6586285b36415f0dd7eb12499d9c8970d4f1b21d85647726c85dd1784320"
+    }
+  ],
+  "proofs": [
+    {
+      "source": "rom-simplificada/original-p291/instalacion-021/salida/TVBASE-P291-A9-0.2.1-VERIFICACION.json",
+      "bytes": 6084,
+      "sha256": "076070aee6faa005833dda2ce73658ed3417f4ff919cc9e2c4e878cc89ba5a12"
+    },
+    {
+      "source": "rom-simplificada/original-p291/restauracion-021/salida/TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-VERIFICACION.json",
+      "bytes": 4747,
+      "sha256": "68c42fe445e575f83d65d0d56afd51f5f8a1815df1e6c0580beed515a83225e7"
+    },
+    {
+      "source": "rom-simplificada/original-p291/entrada-apk/LIBERACION-09.json",
+      "bytes": 4515,
+      "sha256": "a5650d5a0e3a19fad08b730a30c7429b72242eb7368d2b6227cf8c0c13124cf1"
+    },
+    {
+      "source": "rom-simplificada/original-p291/restauracion-021/REVISION-INDEPENDIENTE.json",
+      "bytes": 2879,
+      "sha256": "96760bf7924a7d10c84492644794b1b07924d1498de42bcc61c8189ce534061e"
+    },
+    {
+      "source": "rom-simplificada/original-p291/entrada/REVISION-APK09-ARTEFACTO.json",
+      "bytes": 2887,
+      "sha256": "cf28000f31912339e8ea4f8607147205b5301d54036b99365a2032bed1f791e3"
+    },
+    {
+      "source": "rom-simplificada/original-p291/entrada/REVISION-APK09.json",
+      "bytes": 2590,
+      "sha256": "2140c3c3b6f20fd7d4f22e7ddff05bc1ed29fbb84061c799480c90f3ee6607cb"
+    },
+    {
+      "source": "rom-simplificada/original-p291/instalacion-021/EVIDENCIA-TESTS.json",
+      "bytes": 5304,
+      "sha256": "cd122d981774b6838bcf3d92a83179eca32a267ed3a0d8415a7bf833640ec5a1"
+    }
+  ],
+  "physical_recovery_verified": false,
+  "entry_metadata_modified": false,
+  "safe_removal_required": true
+}

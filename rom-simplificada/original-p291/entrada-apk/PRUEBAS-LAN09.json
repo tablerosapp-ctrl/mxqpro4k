@@ -1,0 +1,59 @@
+{
+  "state": "reviewed_offline",
+  "date_utc": "2026-09-08T02:11:49.636847+00:00",
+  "reviewer_received": true,
+  "tests_passed": true,
+  "client": "rom-simplificada/original-p291/entrada-apk/entrada-lan09.py",
+  "runbook": "rom-simplificada/original-p291/entrada-apk/OPERACION-LAN-09.md",
+  "source_sha256": {
+    "rom-simplificada/original-p291/entrada-apk/entrada-lan09.py": "8b60e1ab2e51182d332cc5648ec68f9c0ff1b0248861a62ea5d3aa333d2ba477",
+    "rom-simplificada/original-p291/entrada-apk/test_entrada_lan09.py": "3c9dfb11e37e77c488412c5222a4737d4943edf8a33f99aba7c6347fbeac9bc5",
+    "rom-simplificada/original-p291/entrada-apk/OPERACION-LAN-09.md": "988d47746b51480a9949e2538d7154297f497679be12b377744952211da553b9"
+  },
+  "independent_review": "rom-simplificada/original-p291/entrada-apk/REVISION-LAN09.json",
+  "independent_review_sha256": "336bf0780c2cbe1e3ca9af68c580bd0229641d67ecb15c338469f7f1a725fb2d",
+  "independent_tests": {
+    "cases": 53,
+    "passed": 53,
+    "failed": 0,
+    "real_pc_python_children": 3,
+    "adb_subprocesses": 0,
+    "fixture_log_sha256": "862223cf17799479c5e49541609690e69e82a4298ab3d09d5a7a38e333c4a86b",
+    "private_receipt": "rom-simplificada/original-p291/entrada-apk/privado/revision-lan09-2b1873574300/resultado.json",
+    "private_receipt_sha256": "e3a12e9e56851017711ef851237fc940b18dbd6a6fcb6b545638b002f796b304",
+    "launch_timeout_preserves_nonce_and_one_launch": true,
+    "persistence_failure_prevents_launch": true,
+    "subprocess_guard": "Solo tres payloads Python sinteticos revisados; cualquier otro Popen, incluido ADB, rechazado por el arnes.",
+    "harness_window_policy": "CREATE_NO_WINDOW aplicado a los tres hijos Python; no cambia el cliente revisado."
+  },
+  "original_pc_test_run": {
+    "cases": 53,
+    "passed": 53,
+    "exit_code": 0,
+    "adb_subprocesses": 0
+  },
+  "local_document_links_checked": 5,
+  "sealed_apk_release_sha256": "a5650d5a0e3a19fad08b730a30c7429b72242eb7368d2b6227cf8c0c13124cf1",
+  "sealed_apk_sha256": "1d0f267e818acca5562048f9961c7c234f36b8cc81f827cb3eac9e3fcd2505a4",
+  "sealed_apk_sources_unchanged": true,
+  "one_launch_per_attempt": true,
+  "status_never_launches": true,
+  "explicit_flag_and_authorization_note_required": true,
+  "flag_is_not_conversational_authorization": true,
+  "nonce_persisted_before_launch": true,
+  "remote_cancel_requested": false,
+  "client_tv_execution_tested": false,
+  "usb_fsync_tested_by_client_developer": false,
+  "physical_helper_detachment_tested": false,
+  "env_or_bcb_changed": false,
+  "automatic_reset": false,
+  "automatic_installation": false,
+  "limitations": [
+    "Pruebas de protocolo y flujo con respuestas sinteticas; no acreditan una ejecucion real del cliente ni persistencia del pendrive.",
+    "La bandera del programa registra una eleccion; no comprueba identidad del autorizante ni sustituye confirmacion conversacional.",
+    "El proceso OEM de cierre puede seguir activo. La via LAN no elimina ese dialogo ni garantiza ausencia de concurrencia.",
+    "Una observacion prepared revalida recibos del helper; no vuelve a leer bloques ni descarta cambios externos posteriores.",
+    "La perdida de conexion no cancela necesariamente el helper. Conservar el intento y usar status sin relanzar.",
+    "La guia y el cliente no prometen rescate, instalacion, entrada a recovery o restauracion fisicamente probados."
+  ]
+}

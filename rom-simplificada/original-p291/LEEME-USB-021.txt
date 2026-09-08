@@ -1,0 +1,75 @@
+TV BASE - PRIMER P291 - entrega 0.2.1 / Acceso USB 0.9
+
+Esta entrega contiene Android simplificado desde los originales reales del
+primer P291. No sirve para el segundo P271 ni para otro modelo por su nombre.
+Todavia no se comprobo fisicamente el arranque de recovery ni esta instalacion.
+
+EL PASO NUEVO Y SU RIESGO
+Acceso USB 0.9 cambia temporalmente una orden del cargador de arranque (ENV)
+y prepara el menu de recovery en BCB. Primero respalda y verifica ambos.
+Una interrupcion o fallo al escribir ENV puede impedir que Android arranque.
+El respaldo NO garantiza una via de rescate: no probamos restauracion con
+el equipo sin arranque. La APK muestra esta advertencia antes de confirmar.
+No instala la ROM ni reinicia automaticamente al abrirla.
+
+SI EL TV TODAVIA MUESTRA EL 2 %
+No repetir Update ni cortar alimentacion para intentar abrir la APK.
+Conectar este pendrive al primer TV y mantener la LAN que ya se usa en esta
+prueba. Avisar en la sesion para preparar el acceso existente tras confirmar
+el riesgo. La APK 0.9 ya esta instalada, pero el dialogo del sistema sigue
+tapando su pantalla; abrirla no elimina ese bloqueo. Se usara LAN para
+acompañar este estado y revisar cada resultado, sin pulsar botones ocultos.
+La APK esta diseñada para funcionar sin LAN; esta conexion permite acompañar
+el estado bloqueado actual. No reutilizar el actualizador OEM.
+
+Antes de retirar el pendrive de la PC, usar la expulsion segura de Windows.
+La copia se relee; eso no sustituye la expulsion segura del volumen FAT32.
+
+PREPARACION, DESPUES DE ACEPTAR EL RIESGO EXPLICADO
+1. Si Android permite usar la pantalla, abrir Acceso USB 0.9, ya instalada.
+   El archivo AccesoUSB-0.9.apk queda incluido para reinstalar si hiciera falta.
+2. Pulsar "Preparar entrada a recovery" y leer la confirmacion.
+3. Mantener alimentacion y pendrive. La verificacion puede tardar varios minutos.
+   No cerrar el trabajo suponiendo que eso lo cancela: el proceso es independiente.
+4. Solo si indica "Preparacion guardada y leida", desconectar la alimentacion
+   del TV durante 10 segundos y volver a conectarla, con el pendrive colocado.
+5. Si aparece error, resultado incompleto o desconocido: NO cortar ni repetir.
+   Usar "Ver estado de esta preparacion" y comunicar el texto en la sesion.
+6. Si despues del ciclo vuelve Android o no aparece recovery, no repetir
+   preparacion ni Update. Conservar el USB y comunicar el resultado.
+
+EN EL RECOVERY ORIGINAL
+Elegir "Apply update from EXT" y "Update from udisk".
+Seleccionar unicamente:
+    TVBASE-P291-A9-0.2.1-RECOVERY.zip
+Si el mando no responde, usar un teclado USB. No elegir wipe/factory reset.
+
+El instalador comprobara placa, particiones, ROM y que la orden de arranque
+normal ya haya sido restablecida. Guardara en este USB seis imagenes: datos
+internos y las cinco particiones de Android (unos 6,1 GB). Necesita 6,61 GB libres.
+Solo despues de verificar las copias borrara los datos internos actuales y
+escribira Android simplificado. Se eliminan del TV las aplicaciones, cuentas,
+ajustes y archivos internos anteriores; el respaldo no se reimporta al Android limpio.
+
+Durante copia, relectura y escritura aparecen etapas y cantidades de bytes.
+Mantener el USB y la alimentacion hasta el resultado final. El proceso puede
+tardar varios minutos. Si aparece ERROR, conservar el texto y permanecer en
+recovery; no volver a instalar ni reiniciar por rutina.
+
+Cuando indique "ROM instalada y releida", elegir reiniciar desde recovery.
+El primer arranque puede tardar. Comprobar luego Android desde memoria interna
+sin el pendrive. Chrome/WebView138 y los drivers reales estan en la plataforma;
+su funcionamiento y el rendimiento se validan despues de este primer arranque.
+
+RESTAURACION SEPARADA - NO ELEGIRLA PARA INSTALAR TV BASE
+    TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-RECOVERY.zip
+Repone cinco particiones OEM originales y conserva los datos que existan en
+ese momento. No recupera automaticamente los datos respaldados anteriormente.
+Usarla solo al revisar una restauracion concreta en la sesion. No hay rollback
+automatico ni restauracion fisica probada.
+
+CONSERVAR
+TVBASE-MEDIA.txt y todas las carpetas TVBASE-entrada09-*, TVBASE-respaldo-*,
+informes anteriores y archivos parciales. Pueden contener datos privados:
+no subirlos a GitHub. Los archivos viejos de instalacion se archivan en esta PC
+antes de retirarlos. Este proceso no requiere formatear el pendrive.

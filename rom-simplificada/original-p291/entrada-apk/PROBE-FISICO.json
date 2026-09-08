@@ -1,0 +1,28 @@
+{
+  "state": "physical_probe_passed",
+  "date_local": "2026-09-07",
+  "component": "RootProbe API28",
+  "jar_sha256": "2dd8886340ea68d4bb36301aa65aef9e3afaa0e49359792b9439aa1186a5a24d",
+  "private_receipt_sha256": "da45f801e4853979667d462801a898a588e2b73fa515c11d9988c0d6faca65a7",
+  "uid": 0,
+  "api": 28,
+  "dt": "gxlx2_p291_1g",
+  "build": "ampere-userdebug 9 PPR1.180610.011 20250226 test-keys",
+  "kernel_release": "4.9.113",
+  "probe_bytes": 64,
+  "probe_sha256": "ed902196ce8b230c5577e4bb624e8f9a80016606009760738b06049661bea656",
+  "remote_exit": 0,
+  "file_fsync": true,
+  "directory_fsync": true,
+  "parent_fsync": true,
+  "scope": "one new directory and 64-byte file in /data/local/tmp",
+  "usb_fsync_tested": false,
+  "bcb_accessed": false,
+  "block_devices_accessed": false,
+  "reset_requested": false,
+  "recovery_entry_tested": false,
+  "limitations": [
+    "Only proves this app_process/fsync probe on the internal filesystem during this boot.",
+    "USB FAT32, detached preparation, ENV/BCB writes and recovery entry still require their own evidence."
+  ]
+}

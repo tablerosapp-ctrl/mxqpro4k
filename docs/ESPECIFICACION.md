@@ -1,6 +1,16 @@
 # Especificación del producto y aceptación
 
-## Ampliación vigente · derivación original P291 0.2.0
+## Contrato vigente · plataforma0.2.0, instalador0.2.1 y acceso0.9
+
+REQ-01/11/14 mantienen el objetivo de Android interno por pendrive. **ADR-26** separa tres operaciones: preparar la entrada ENV/BCB, instalar con migración respaldada y restaurar cinco imágenes OEM. La plataforma0.2.0 no cambia; los ejecutables de instalación/restauración0.2.1 corrigen la consulta de tamaño ARM32. Preparar archivos está autorizado; el usuario aún debe decidir el método específico de entrada tras conocer sus riesgos.
+
+La APK0.9 solo podrá preparar la entrada después de esa decisión: perfil y ZIP exactos, respaldo de metadatos, sincronización/relectura, modificación acotada de64KiB ENV y2KiB BCB y neutralización de órdenes antiguas. No selecciona paquete ni reinicia automáticamente. No aceptar una desconexión o un aviso de preparación como prueba de recovery.
+
+El instalador0.2.1 exige data179:20 de3495952384B, sin montajes ni mappings, y seis respaldos crudos verificados en el USB antes de crear ext4. Reserva16KiB para footer; la preparación debe terminar con superblock exacto, contenido vacío comprobado RO y volumen nuevamente desmontado. Exige6603931648B libres; el mayor archivo cabe FAT32. ENV debe haber vuelto a `bootcmd=run storeboot`, con CRC y flujo originales, antes de cualquier formato. [Contrato exacto](../rom-simplificada/original-p291/instalacion-021/CONTRATO-MIGRACION.md).
+
+El restaurador0.2.1 acepta solo las cinco imágenes originales, respalda las cinco actuales antes de escribir y conserva userdata. Recuperar data.img requiere otro paquete fijado al respaldo físico que todavía no existe. No hay rollback, restauración física ni reentrada desde Android nuevo acreditados.
+
+## Base de producto conservada · derivación original P2910.2.0
 
 El usuario autorizó construir desde las particiones originales ya respaldadas, preservando los drivers de video y las APIs de Android. Se mantiene Android 9 para esta primera derivación; cambiar a Linux o a un framework nuevo sigue condicionado a demostrar compatibilidad APK y multimedia. [Composición y límites](../rom-simplificada/original-p291/README.md).
 
@@ -10,11 +20,11 @@ El usuario autorizó construir desde las particiones originales ya respaldadas, 
 
 **VAL-10 · Gestor y comunicaciones.** En PC: probar firma alterada, caducidad, repetición, hosts, metadatos, cancelación y horario; vincular fuentes y APK revisadas. En TV: confirmar permiso de instalación, TLS con servidor propio, instalación válida y rechazada, interrupción, reinicio, persistencia y actualización de Chrome mientras hay consumidores WebView. Capturar destinos y atribuir tráfico. Los resultados locales no acreditan esta salida física. Relaciona REQ-09/14 y M6.
 
-**Migración y confianza.** La primera instalación debe partir de userdata limpia para no reintroducir APK o preferencias OEM desde los datos anteriores. El ZIP 0.2.0 comprueba esa condición; todavía no implementa su preparación. Antes de retirar datos se debe identificar qué se conserva y producir un procedimiento concreto recuperable. El experimento conserva framework original, SELinux permisivo y firma de plataforma heredada: la base de producción exige otro trabajo de integración, claves propias y pruebas. No equiparar el ZIP local con un producto terminado.
+**Migración y confianza.** La primera instalación debe partir de userdata limpia para no reintroducir APK o preferencias OEM desde los datos anteriores. El instalador0.2.1 respalda el volumen completo antes de prepararlo; no vuelve a copiar datos OEM al sistema nuevo. La APK explica el borrado de aplicaciones, cuentas, ajustes y archivos internos. La preparación física y la restauración posterior siguen pendientes. El experimento conserva framework original, SELinux permisivo y firma de plataforma heredada: la base de producción exige otro trabajo de integración, claves propias y pruebas. No equiparar el ZIP local con un producto terminado.
 
 El proveedor WebView efectivo, las dos capas VP9 (una con alfa) y canvas, los controles, Ethernet/WiFi y el arranque interno siguen sujetos a VAL-07/08. Chrome 138 es el techo de Android 9; una versión nueva del navegador no demuestra mayor rendimiento.
 
-Versión documental5, 7/9/2026, tras completar la captura0.6 y probar el ZIP real por el menú OEM, detenido al2%. Recoge el pedido vigente del usuario. La evolución de su APK no bloquea preparar y probar la plataforma. El alcance no incluye investigar la actualización automática que afectó al WiFi del primer equipo.
+Versión documental6, 7/9/2026, tras preparar instalador0.2.1 y acceso0.9; el intento OEM permanece detenido al2%. Recoge el pedido vigente del usuario. La evolución de su APK no bloquea preparar y probar la plataforma. El alcance no incluye investigar la actualización automática que afectó al WiFi del primer equipo.
 
 ## Objetivo y alcance
 
@@ -28,18 +38,18 @@ Sustituir el Android del integrador por una base propia interna, con servicios n
 
 | ID | Requisito | Criterio de aceptación | Estado actual / componentes |
 | --- | --- | --- | --- |
-| REQ-13 | P291 sin Bluetooth, con red conservada | Tras arrancar la nueva ROM no se carga btmtksdio ni se inicia el HAL/servicioBluetooth; WiFi/Ethernet y controles disponibles se prueban por separado. Una preferenciaOFF aislada no basta. | Autorizado; variante en preparación, prueba física pendiente. C-ROM/C-TV |
+| REQ-13 | P291 sin Bluetooth, con red conservada | Tras arrancar la nueva ROM no se carga btmtksdio ni HAL/servicio Bluetooth; WiFi/Ethernet e inputs se prueban por separado | Plataforma0.2.0 verificada en PC; físico pendiente · C-ROM/C-TV |
 | REQ-01 | Android interno mediante pendrive | Instalar en P291, retirar USB y completar arranques normales con identificación TVBASE | ZIP construido/verificado; físico pendiente · C-ROM, C-ZIP, C-USB |
-| REQ-02 | Compatibilidad de hardware por placa | Registrar video/decodificadores, audio, red, almacenamiento, entradas y encendido con su perfil real | Candidato analizado; físico pendiente · C-BASE, C-PERFIL |
-| REQ-03 | Android simplificado con APIs estándar | Inicio propio y ajustes funcionales; APK instala/actualiza; servicios retirados ausentes sin romper framework o drivers | 16 APK retiradas y cambios verificados localmente · C-ROM, C-INICIO |
+| REQ-02 | Compatibilidad por placa | Registrar codecs, audio, red, almacenamiento, inputs y encendido con perfil real | Originales P291 respaldados, geometría/kernel/DTB preservados; ROM sin prueba física · C-ORIG/C-PERFIL |
+| REQ-03 | Android simplificado con APIs estándar | Inicio/ajustes, instalación APK y drivers funcionales sin servicios retirados | 51 APK retiradas,34 originales y5 agregadas; comprobado en imágenes · C-ROM/C-INICIO |
 | REQ-04 | Navegador y proveedor WebView mejorados | Verificar paquete/versión realmente usados por la APK, navegación y su actualización sin Play Store | Chrome138 y overlay integrados; proveedor físico pendiente · C-CHROME, C-WEB |
 | REQ-05 | Conservar video y composición | Reproducir los dos VP9 de referencia, uno con alfa, más canvas; comparar estabilidad, tiempos y memoria con la misma carga | Funciona en sistema viejo según usuario; nueva base sin medir · C-WEB, C-BASE |
 | REQ-06 | Video hasta 1080p sin DRM | Un video 1920×1080, audio, búsqueda, repetición y reproducción sostenida; parámetros de muestra registrados | Pendiente; no implica dos 1080p simultáneos · C-WEB |
 | REQ-07 | Contenido en memoria interna | Descargar/verificar, reproducir offline, buscar dentro del video, consultar espacio y borrar selectivamente sin borrar credenciales | Propuesto · C-APP, C-GESTION |
 | REQ-08 | Misma APK y evolución del producto | APK firmada funciona en nuestra ROM y Android TV; detecta capacidades y no requiere recompilar ROM por cada lógica de negocio | Propuesto; sin exigir APK terminada para avanzar · C-APP |
-| REQ-09 | Actualizaciones propias | Separar APK/motor/sistema/contenido; requisitos y firmas verificados, despliegue por grupos, persistencia de datos y reporte de resultado | Solo instalador local experimental construido · C-GESTION, C-ZIP |
+| REQ-09 | Actualizaciones propias | APK/motor/sistema/contenido separados, firmas, compatibilidad y reporte | Gestor APK/motor integrado y desactivado; servidor y prueba física pendientes, OTA completa no implementada · C-GESTION/C-ZIP |
 | REQ-10 | Controles remotos | Recorrer inicio, ajustes y aplicación con flechas/OK/atrás; registrar mapas IR/USB/Bluetooth/CEC aplicables | Inicio construido; pruebas de control pendientes · C-INICIO, C-PERFIL |
-| REQ-11 | Recuperabilidad y diagnóstico | Antes de escribir, guardar/verificar originales; demostrar restauración desde una entrada disponible cuando Android falle | Entrada0.4 sin recovery; captura0.5 parcial analizada y defecto SHA reproducido. Captura 0.6 completa, firma contra certificado P291 verificada; menú OEM 0.7 observado, Update con ZIP real detenido al 2 %. Recovery, respaldo y restore pendientes · C-ENTRY, C-REC, C-ZIP |
+| REQ-11 | Recuperabilidad y diagnóstico | Respaldar y verificar antes de escribir; demostrar restauración desde una entrada disponible si Android falla | 12 particiones originales respaldadas; instalación0.2.1 prepara seis respaldos futuros. Entrada0.9 pendiente de decisión/uso y restaurador0.2.1 sin ensayo físico · C-ENTRY/C-REC/C-ZIP |
 | REQ-12 | Segundo WebView opcional | Automatización en segundo plano sin degradación inaceptable del video principal, tolerando cierre por memoria | Secundario y propuesto · C-APP |
 
 No se deducen FPS, bitrate, perfil VP9 ni resolución completa de la descripción «1280». La doble composición es referencia obligatoria; sus archivos se incorporarán cuando existan. La limpieza o un motor nuevo pueden cambiar el rendimiento en ambas direcciones: **mejorar rendimiento es una hipótesis que debe medirse**.
@@ -47,13 +57,13 @@ No se deducen FPS, bitrate, perfil VP9 ni resolución completa de la descripció
 ## Contratos entre componentes
 
 - **Perfil de placa:** DT exacto, API/ABI, memoria real, particiones, boot/kernel/DTB, firmware, decodificadores e inputs. Separar confirmado, inferido y no leído. P291 y P271 son perfiles distintos.
-- **Diagnóstico0.8, vigente:** once etapas de lectura con límites, perfil P291/API28/UID2000, carpeta nueva, autocontrol SHA y sellos estrictos. Recopila console/pmsg, log anterior, log actual filtrado y consultas WiFi/BT/batería/espacio/WebView. No cambia radios ni reinicia. COMPLETO acredita recorrido e integridad de archivos; denegaciones, timeouts y truncamiento permanecen explícitos. [Contrato detallado](hipotesis/REVISION-CONJUNTA-FABLE.md). Captura física pendiente.
+- **Diagnóstico0.8, histórico:** once etapas de lectura con límites, perfil P291/API28/UID2000, carpeta nueva, autocontrol SHA y sellos estrictos. Recopila console/pmsg, log anterior, log actual filtrado y consultas WiFi/BT/batería/espacio/WebView. No cambia radios ni reinicia. COMPLETO acredita recorrido e integridad de archivos; denegaciones, timeouts y truncamiento permanecen explícitos. [Contrato detallado](hipotesis/REVISION-CONJUNTA-FABLE.md). Captura física parcial por cierre no persistido; no repetir0.8.
 - **Entrada 0.7, histórica:** usa ADB loopback existente, comprueba UID2000/P291/API28, marcador del USB y tamaños/SHA exactos de ROM 0.1.1 y OTAUpgrade capturado. Autocontrol SHA conocido y digest estricto. Abre únicamente MainActivity del OEM sin extras, Update, reinicio propio ni escritura BCB. La confirmación de apertura no demuestra instalación. Timeout de lectura del ZIP de cinco minutos, sin reintentos automáticos. El menú ya se conocía; cambia el paquete real y su validación previa.
 - **Complemento0.6, completado:** ADB loopback existente en127.0.0.1:5555, perfil P291/API28 y carpeta nueva en USB marcado. Cinco etapas: creación → autocontrol SHA y certificados OTA → APK específico acreditado de OTAUpgrade → configuración/identidad → verificación final. Certificados y APK son obligatorios; origen ilegible, cambio de ruta, tamaño inválido o cualquier digest inválido detiene la captura. Funciones con prefijo propio, toybox explícito, SHA de `abc` conocido y validación de64 caracteres hexadecimales en cada consumidor. No reinicia ni abre el actualizador; tampoco instala ROM ni modifica permisos/autenticación. Fuentes y salida0.6 separadas de0.5; entrega y prueba física requieren evidencia propia.
 - **Recopilador0.5, histórico:** ya se obtuvieron dos capturas parciales del mismo arranque. La cuota consumida por Google Play Services impidió copiar el quinto APK, OTAUpgrade, y no se alcanzaron certificados/configuración. La colisión con el alias `hash` de mksh produjo digests binarios vacíos aceptados como iguales; no se acredita su comprobación en el TV. Conservar código, datos y pruebas Bash originales, que no reprodujeron ese fallo. Los textos sellados y los hashes de adquisición en PC tienen validaciones separadas.
 - **Entrada0.4, histórica:** informe previo → hashes de ROM/recovery → `reboot:update`. En el TV terminó sin señal. Los dos informes recuperados preceden al reinicio y no registran ese fallo. No repetir el intento a partir de sus pruebas locales ni de la existencia de una partición recovery de24MiB cuyo contenido sigue sin leerse.
 - **Recovery externo:** archivo Android boot para carga temporal; clave de prueba agregada a la lista aceptada, verificación activa. No es un contenedor Amlogic de fábrica ni una imagen de disco MBR.
-- **ZIP de ROM:** perfil y marcador explícitos, cinco payloads y hashes. Valida destino, respaldo y lectura posterior. Escribe boot al final; no formatea userdata. El contrato implementado está en `instalador/main_linux.go` y `package.go`.
+- **ZIP0.2.1 vigente:** cinco payloads0.2.0 inmutables; respaldo previo de esas cinco particiones y de userdata. Solo tras persistencia y tres SHA correctos prepara ext4, lo verifica RO/desmontado y escribe boot al final. Fuentes en `original-p291/instalacion-021/`; restaurador separado conserva datos.
 - **Aplicación/administración, propuesto:** interfaz versionada para catálogo, descargas, diagnóstico y limpieza. El contenido web no recibe root. Limpiar videos, caché, sesión o toda la aplicación son órdenes distintas.
 - **Actualizaciones, propuesto:** manifiestos declaran placa, API/ABI, versiones, hashes y firma; conservar continuidad de firma, datos y estado del agente. Actualizar WebView termina procesos que lo cargaron, por lo que la coordinación debe estar fuera de esos procesos.
 
@@ -61,17 +71,19 @@ No se deducen FPS, bitrate, perfil VP9 ni resolución completa de la descripció
 
 | ID | Evidencia necesaria | Estado |
 | --- | --- | --- |
-| VAL-01 | Integridad del candidato y sus particiones | Local registrada en `analisis-rom/integridad-interna.json` |
-| VAL-02 | ext4, contenido/metadatos, firma completa y hashes de payload 0.1.1 | Local registrada en `rom-simplificada/salida/RECOVERY-VERIFICACION-0.1.1.json` y `RECOVERY-COMPROBACION-0.1.1.json` |
-| VAL-03 | Protocolo y contrato de Acceso USB por versión | 0.4: entrada física fallida. 0.5: pruebas locales conservadas, captura real parcial y falso positivo SHA identificado. 0.6: casos y resultados en `EVIDENCIA-TESTS-0.6.json`, incluida regresión pertinente con mksh real; captura física completa comprobada. 0.7: controles en ENTRADA-TESTS-0.7.json, menú físico observado; preparación de actualización detenida al 2 % |
-| VAL-04 | Copia leída del USB, con recibo de cada versión | Copia0.6 verificada el7/9,00:22: `preparacion-usb/evidencia-06-estado.json`, código0 y SHA coincidente. `preparacion-usb/evidencia-05-estado.json` y recibo0.4 son históricos y no acreditan entrega0.6 |
-| VAL-05 | Recovery visible/identificado y aceptación del ZIP en P291 | No superada:0.3/0.4 sin señal; OEM0.7 con ZIP real detenido al2% más de10min, sin recovery visible |
-| VAL-06 | Respaldo completo y escritura verificada de cinco particiones | Pendiente; exigir `respaldo.json` e `instalacion.log` reales |
+| VAL-01 | Integridad y perfil de originales/candidatos | Doce particiones P291 adquiridas; diferencias del candidato documentadas. No es respaldo de toda eMMC. |
+| VAL-02 | ext4/metadatos y composición0.2.0; firma/CRC/payload de paquetes0.2.1 | Instalación y restauración0.2.1 verificadas en PC con recibos propios. No ejecución física. |
+| VAL-03 | Protocolo y contrato por versión de acceso | APK0.9 revisada e instalada por LAN, apertura solicitada pero APK oculta tras diálogo2% confirmado por captura; helpers de archivo/ABI probados en TV. Preparación ENV/BCB y fsync del USB no probados físicamente. |
+| VAL-04 | Copia y relectura del USB con recibo de esta entrega | Completadas0.2.1/Acceso0.9 a23:06:04ART, cuatro SHA y código0 en `preparacion-usb/original-021-estado.json`. Expulsión segura pendiente; vaciado final del volumen no acreditado. |
+| VAL-05 | Recovery identificado, ENV normal y ZIP directo USB aceptado | Pendiente. El nuevo método exige decisión específica del usuario; no repetir OEM/Update al2%. |
+| VAL-06 | Seis respaldos previos, migración y cinco escrituras verificadas | Pendiente. Exigir `00-backup-verified.json`, resultado de formato/RO y `90-installed-verified.json` físicos, sin sustituirlos por pruebas PC. |
 | VAL-07 | Primer arranque sin USB, identificación, hardware y proveedor WebView efectivo | Pendiente |
 | VAL-08 | Suite APK/web/video/local/controles comparada con referencia | Pendiente |
 | VAL-09 | Restauración ensayada, actualización y fallo controlado recuperable | Pendiente |
 
 La suite funcional no equivale a certificación CTS/CDD. Usarlos como referencia de compatibilidad según [arquitectura](../ARQUITECTURA-ANDROID-TV.md). No dar por aceptada una etapa física a partir de simulaciones del protocolo o coincidencia de hashes en PC.
+
+## Evidencia histórica por versión: no sustituye los criterios actuales
 
 La captura0.5 no superó la completitud y no debe aceptarse retroactivamente por comparar sus dos copias en PC. Los [hallazgos físicos](../diagnostico/primer-tv-evidencia-20260907-000948/HALLAZGOS.md) y la [regresión mksh](../rom-simplificada/instalador/MKSH-HALLAZGO-0.5.md) separan observación, defecto del recopilador e inferencia sobre el reinicio.
 

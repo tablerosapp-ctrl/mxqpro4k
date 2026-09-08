@@ -1,6 +1,25 @@
 # Roadmap y propuestas
 
-## Actualización vigente · derivación original 0.2.0
+## Actualización vigente · entrada0.9 e instalador0.2.1
+
+| Etapa | Avance actual | Salida pendiente |
+| --- | --- | --- |
+| M0 · Plataforma y paquete | Plataforma0.2.0 inmutable; instalación0.2.1 firmada/verificada en PC; Acceso0.9 compilado/revisado; restaurador0.2.1 separado | Instalación/restaurador0.2.1 y APK0.9 copiados y releídos en USB, VAL-04 completada. Falta expulsión segura y traslado alTV. |
+| M1 · Entrada | Método ENV/BCB preparado y revisado; probes físicos de formateador en archivo y tamaño ARM32 correctos | Decisión específica del usuario tras riesgos; después preparación persistente y recovery identificado. Los probes no cierran VAL-05. |
+| M2 · Instalación | Migración implementada: seis respaldos íntegros antes de preparar userdata, cinco imágenes0.2.0 y boot al final | Respaldo físico, formato/RO, cinco relecturas y arranque interno sin USB, VAL-06/07. |
+| M3 · Hardware/web/video | Drivers/kernel/DTB preservados y Chrome138 declarado | Proveedor efectivo, WiFi/Ethernet, controles, instalación APK y dos VP9/alfa/canvas medidos. |
+| M4 · Recuperación | Restaurador0.2.1 devuelve cinco OEM conservando userdata | Ensayar entrada desde Android nuevo/fallido y restauración; data.img requiere receta propia fijada al respaldo futuro. |
+| M5–M7 | Gestor APK/motor integrado y desactivado; resto conserva su alcance | App/contenido, servidor y VAL-10, ROM remota, producción y nuevas bases/perfiles. |
+
+**ADR-26 / PROP-01:** la siguiente entrada ya no es repetir Update. Prepararía64KiB de ENV y2KiB BCB para el recovery interno y neutralizaría las órdenes antiguas, sin reset automático. El usuario todavía no decidió usar este método; la escritura de ENV añade riesgo de impedir el arranque. M1 queda pendiente aunque el pendrive se prepare correctamente. La APK0.9 ya está instalada, pero el diálogo2% la oculta: no ordenar una pulsación invisible ni cortar para abrirla. El [cliente LAN](../rom-simplificada/original-p291/entrada-apk/OPERACION-LAN-09.md) está preparado para acompañar la APK sin pulsaciones ocultas; no fue ejecutado y también depende de la decisión específica.
+
+**PROP-02 / C-REC:** restaurar cinco imágenes no recupera los archivos de userdata. No presentar el respaldo de doce particiones actual como copia de toda eMMC, ni el futuro respaldo de seis como ya creado. El Android nuevo elimina su/ADB TCP inicial y no tiene gestor con REBOOT/RECOVERY: la reentrada y actualización completa posterior deben demostrarse.
+
+**C-USB:** copia/relectura0.2.1 completadas a23:06:04ART, cuatro archivos verificados y código0 en [recibo propio](../preparacion-usb/original-021-estado.json). La expulsión segura Windows sigue pendiente y no se verificó el vaciado final de metadatos del volumen. Cuatro archivos viejos fueron archivados y comprobados enPC antes de retirarlos; no hubo formato/reparación. VAL-04 no cierra M1 ni acredita instalación. [Evidencia vigente](evidencia/ENTRADA-ORIGINAL-P291-021.md).
+
+## Revisiones previas conservadas
+
+## Antecedente · derivación original 0.2.0
 
 **M0 / PROP-15:** cinco imágenes y ZIP0.2.0 construidos desde los originales, verificados en PC. Firma según recovery v1 y recorte por política. La copia USB de esta versión está pendiente; M0 no acredita entrada física.
 

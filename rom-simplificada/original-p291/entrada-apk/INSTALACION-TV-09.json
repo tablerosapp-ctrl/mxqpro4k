@@ -1,0 +1,21 @@
+{
+  "date_art": "2026-09-07T22:59:28-03:00",
+  "profile": "gxlx2_p291_1g",
+  "api": 28,
+  "apk_version": "0.9",
+  "apk_bytes": 61843,
+  "apk_sha256": "1d0f267e818acca5562048f9961c7c234f36b8cc81f827cb3eac9e3fcd2505a4",
+  "installation_reported_success": true,
+  "activity_start_acknowledged": true,
+  "activity_visible_in_capture": false,
+  "capture_observation": "Android system update progress dialog remains at 2 percent on a black background. No Acceso USB interface is visible.",
+  "capture_sha256": "8c31f8c324e2150b5b35facc4c203432f3297e24affd54a443c745bb89a3258b",
+  "entry_prepare_requested": false,
+  "env_bcb_modified": false,
+  "reset_requested": false,
+  "limitations": [
+    "Installation and Activity start do not dismiss the system shutdown/update dialog.",
+    "No click on hidden preparation buttons was performed.",
+    "LAN preparation must use a single persisted nonce and an explicit user decision after ENV risk disclosure."
+  ]
+}

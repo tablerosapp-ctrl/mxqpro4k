@@ -1,0 +1,115 @@
+{
+  "state": "reviewed_offline_for_usb_copy",
+  "approved": true,
+  "date_utc": "2026-09-08T02:03:07.575005+00:00",
+  "reviewer": "lecturas_adb_p291",
+  "approval_scope": "Copia por archivos al Kingston identificado por el preparador y retirada de los cuatro archivos exactos tras respaldo verificado; no acredita ejecucion, expulsion segura ni acciones en el TV.",
+  "contract": "preparacion-usb/entrega-original-021.json",
+  "contract_sha256": "b9543e01244c6e3dcef794ce3d129a619879077eae0bbc7c599eed57f780952f",
+  "script": "preparacion-usb/preparar-original-021.ps1",
+  "script_sha256": "309d1d12764c0c510a64866b629c4d192fed60c57162c2a098e43b0f95735b23",
+  "files": [
+    {
+      "name": "TVBASE-P291-A9-0.2.1-RECOVERY.zip",
+      "source": "rom-simplificada/original-p291/instalacion-021/salida/TVBASE-P291-A9-0.2.1-RECOVERY.zip",
+      "bytes": 573688933,
+      "sha256": "dcb152c77e55cb067d6e88a8144990a3edb5d06568ea8cdfdc414a0fa21aac58"
+    },
+    {
+      "name": "TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-RECOVERY.zip",
+      "source": "rom-simplificada/original-p291/restauracion-021/salida/TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-RECOVERY.zip",
+      "bytes": 913294443,
+      "sha256": "42580206f254fab0a2280cd263a48882677e7ddf5cfd609382a840c8d0fb103a"
+    },
+    {
+      "name": "AccesoUSB-0.9.apk",
+      "source": "rom-simplificada/original-p291/entrada-apk/privado/entrada09-20260908-015115-805753/AccesoUSB-0.9.apk",
+      "bytes": 61843,
+      "sha256": "1d0f267e818acca5562048f9961c7c234f36b8cc81f827cb3eac9e3fcd2505a4"
+    },
+    {
+      "name": "LEEME-AHORA.txt",
+      "source": "rom-simplificada/original-p291/LEEME-USB-021.txt",
+      "bytes": 4412,
+      "sha256": "4c4d6586285b36415f0dd7eb12499d9c8970d4f1b21d85647726c85dd1784320"
+    }
+  ],
+  "proofs": [
+    {
+      "source": "rom-simplificada/original-p291/instalacion-021/salida/TVBASE-P291-A9-0.2.1-VERIFICACION.json",
+      "bytes": 6084,
+      "sha256": "076070aee6faa005833dda2ce73658ed3417f4ff919cc9e2c4e878cc89ba5a12"
+    },
+    {
+      "source": "rom-simplificada/original-p291/restauracion-021/salida/TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-VERIFICACION.json",
+      "bytes": 4747,
+      "sha256": "68c42fe445e575f83d65d0d56afd51f5f8a1815df1e6c0580beed515a83225e7"
+    },
+    {
+      "source": "rom-simplificada/original-p291/entrada-apk/LIBERACION-09.json",
+      "bytes": 4515,
+      "sha256": "a5650d5a0e3a19fad08b730a30c7429b72242eb7368d2b6227cf8c0c13124cf1"
+    },
+    {
+      "source": "rom-simplificada/original-p291/restauracion-021/REVISION-INDEPENDIENTE.json",
+      "bytes": 2879,
+      "sha256": "96760bf7924a7d10c84492644794b1b07924d1498de42bcc61c8189ce534061e"
+    },
+    {
+      "source": "rom-simplificada/original-p291/entrada/REVISION-APK09-ARTEFACTO.json",
+      "bytes": 2887,
+      "sha256": "cf28000f31912339e8ea4f8607147205b5301d54036b99365a2032bed1f791e3"
+    },
+    {
+      "source": "rom-simplificada/original-p291/entrada/REVISION-APK09.json",
+      "bytes": 2590,
+      "sha256": "2140c3c3b6f20fd7d4f22e7ddff05bc1ed29fbb84061c799480c90f3ee6607cb"
+    },
+    {
+      "source": "rom-simplificada/original-p291/instalacion-021/EVIDENCIA-TESTS.json",
+      "bytes": 5304,
+      "sha256": "cd122d981774b6838bcf3d92a83179eca32a267ed3a0d8415a7bf833640ec5a1"
+    }
+  ],
+  "source_hashes_rechecked": true,
+  "checks": {
+    "four_delivery_files_sha256_and_bytes_recomputed": true,
+    "seven_proofs_sha256_and_bytes_recomputed": true,
+    "proof_states_and_crosslinks_checked": true,
+    "zip_manifests_and_installer_hashes_rechecked": true,
+    "install_userdata_migration_and_separate_restore_preservation_checked": true,
+    "apk_policy_points_to_exact_install_zip": true,
+    "reviewed_apk_and_installer_source_hashes_unchanged": true,
+    "powershell_parse_errors": 0,
+    "kingston_identity_and_volume_checks_reviewed": true,
+    "root_only_paths_and_four_retirements_reviewed": true,
+    "retirement_hashes_match_historical_delivery_receipts": true,
+    "archive_verified_before_delete": true,
+    "new_payloads_verified_before_old_payloads_deleted": true,
+    "file_flush_and_readback_enforced": true,
+    "guidance_matches_actual_success_messages": true,
+    "guidance_covers_no_recovery_and_unknown_state": true,
+    "safe_removal_limitation_explicit": true
+  },
+  "retirement_scope": [
+    "TVBASE-P291-A9-0.1.2-RECOVERY.zip",
+    "recovery.img",
+    "ControlBluetooth-0.1.apk",
+    "LEEME-AHORA.txt"
+  ],
+  "safe_removal_pending": true,
+  "volume_flush_verified": false,
+  "usb_accessed": false,
+  "tv_accessed": false,
+  "copy_script_executed": false,
+  "physical_preparation_tested": false,
+  "physical_recovery_tested": false,
+  "limits": [
+    "La aprobacion corresponde a los hashes exactos del script y contrato; cualquier cambio requiere otro cotejo.",
+    "La semantica de los siete recibos se cotejo en esta revision. El script comprueba sus hashes, no sustituye esa revision por un verificador generico de recibos.",
+    "No se repitieron pruebas ni descompresion completa de payloads ya acreditados por los recibos sellados; se recalcularon los hashes de ambos ZIP completos y se contrastaron manifiestos e instaladores.",
+    "Flush de cada archivo y lectura desde Windows no acreditan persistencia de todas las modificaciones FAT tras desconexion; completar expulsion segura antes de retirar.",
+    "El estado de APK ya instalada y dialogo 2 por ciento superpuesto proviene de la comprobacion comunicada por el agente principal, no de acceso al TV por este revisor.",
+    "No se ejecutaron formatos, copias al USB, eliminaciones, comandos ADB ni cambios Git durante esta revision."
+  ]
+}

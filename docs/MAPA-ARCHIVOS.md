@@ -12,10 +12,10 @@ flowchart LR
     C_INICIO["Inicio TV 0.2.0 · verificado_local"]
     C_ROM["ROM original P291 0.2.0 · verificado_local"]
     C_WEB["Proveedor WebView · verificado_local"]
-    C_ZIP["ZIP instalación y restauración · verificado_local"]
-    C_REC["Recovery original: entrada pendiente · verificado_local"]
-    C_ENTRY["Diagnóstico USB0.8 · observado_tv"]
-    C_USB["Kingston: entrega 0.1.2 histórica · verificado_local"]
+    C_ZIP["Instalador0.2.1, plataforma0.2.0 · verificado_local"]
+    C_REC["Recovery original y restaurador0.2.1 · verificado_local"]
+    C_ENTRY["AccesoUSB0.9: entrada pendiente de decisión · observado_tv"]
+    C_USB["Kingston: entrega0.2.1 copiada/releída · verificado_local"]
     C_TV["P291: root y bloqueo WiFi confirmados · observado_tv"]
     C_APP["APK del producto · propuesto"]
     C_GESTION["Gestor propio 0.1 · verificado_local"]
@@ -26,9 +26,9 @@ flowchart LR
     C_INICIO -->|"se integra"| C_ROM
     C_WEB -->|"se integra"| C_ROM
     C_ROM -->|"se empaqueta"| C_ZIP
-    C_ZIP -->|"copia 0.2.0 pendiente"| C_USB
+    C_ZIP -->|"copiado y releído0.2.1"| C_USB
     C_ENTRY -->|"se copia"| C_USB
-    C_USB -->|"completar evidencia"| C_TV
+    C_USB -->|"expulsión segura y traslado pendientes"| C_TV
     C_TV -->|"habilita validación"| C_APP
     C_APP -->|"actualización por contrato"| C_GESTION
     C_BTCTRL -->|"inhabilita Bluetooth actual"| C_TV
@@ -36,6 +36,8 @@ flowchart LR
     C_ORIG -->|"fuente original verificada"| C_ROM
     C_GESTION -->|"gestor integrado"| C_ROM
     C_ORIG -->|"recovery adquirido"| C_REC
+    C_ENTRY -->|"ENV/BCB tras decisión específica"| C_REC
+    C_REC -->|"menú físico aún pendiente"| C_ZIP
 ```
 
 ## Archivos por componente
@@ -123,79 +125,82 @@ Requisitos: REQ-04, REQ-05, REQ-06.
 - [rom-simplificada/original-p291/componentes/defaults/res/values/defaults.xml](../rom-simplificada/original-p291/componentes/defaults/res/values/defaults.xml)
 - [rom-simplificada/original-p291/COMPONENTES.json](../rom-simplificada/original-p291/COMPONENTES.json)
 
-### C-ZIP · ZIP instalación y restauración
+### C-ZIP · Instalador0.2.1, plataforma0.2.0
 
-**verificado_local**. Dos paquetes 0.2.0 con geometría original y firma SHA1 acorde a la clave v1. Payloads SHA256, CRC y firma Python/OpenJDK verificados; aceptación física pendiente. Instalación exige userdata limpia, sin borrarla.
+**verificado_local**. Cinco payloads0.2.0 inmutables y seis respaldos previos incluido userdata antes de preparar ext4 y flashear. Firma SHA1/Python/OpenJDK, SHA/CRC y pruebas PC correctos; no instalado.
 
 Requisitos: REQ-01, REQ-09, REQ-11.
 
-- [rom-simplificada/original-p291/empaquetado/README.md](../rom-simplificada/original-p291/empaquetado/README.md)
-- [rom-simplificada/original-p291/empaquetado/main_linux.go](../rom-simplificada/original-p291/empaquetado/main_linux.go)
-- [rom-simplificada/original-p291/empaquetado/package.go](../rom-simplificada/original-p291/empaquetado/package.go)
-- [rom-simplificada/original-p291/empaquetado/data_policy.go](../rom-simplificada/original-p291/empaquetado/data_policy.go)
-- [rom-simplificada/original-p291/empaquetado/package_test.go](../rom-simplificada/original-p291/empaquetado/package_test.go)
-- [rom-simplificada/original-p291/empaquetado/empaquetar_original.py](../rom-simplificada/original-p291/empaquetado/empaquetar_original.py)
-- [rom-simplificada/original-p291/empaquetado/firma_ota_v1.py](../rom-simplificada/original-p291/empaquetado/firma_ota_v1.py)
-- [rom-simplificada/original-p291/empaquetado/EVIDENCIA-TESTS.json](../rom-simplificada/original-p291/empaquetado/EVIDENCIA-TESTS.json)
-- [rom-simplificada/original-p291/empaquetado/salida/TVBASE-P291-A9-0.2.0-VERIFICACION.json](../rom-simplificada/original-p291/empaquetado/salida/TVBASE-P291-A9-0.2.0-VERIFICACION.json)
-- [rom-simplificada/original-p291/empaquetado/salida/TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.0-VERIFICACION.json](../rom-simplificada/original-p291/empaquetado/salida/TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.0-VERIFICACION.json)
+- [rom-simplificada/original-p291/instalacion-021/CONTRATO-MIGRACION.md](../rom-simplificada/original-p291/instalacion-021/CONTRATO-MIGRACION.md)
+- [rom-simplificada/original-p291/instalacion-021/main_linux.go](../rom-simplificada/original-p291/instalacion-021/main_linux.go)
+- [rom-simplificada/original-p291/instalacion-021/package.go](../rom-simplificada/original-p291/instalacion-021/package.go)
+- [rom-simplificada/original-p291/instalacion-021/backup_verified.go](../rom-simplificada/original-p291/instalacion-021/backup_verified.go)
+- [rom-simplificada/original-p291/instalacion-021/transaction_linux.go](../rom-simplificada/original-p291/instalacion-021/transaction_linux.go)
+- [rom-simplificada/original-p291/instalacion-021/userdata_linux.go](../rom-simplificada/original-p291/instalacion-021/userdata_linux.go)
+- [rom-simplificada/original-p291/instalacion-021/env_guard.go](../rom-simplificada/original-p291/instalacion-021/env_guard.go)
+- [rom-simplificada/original-p291/instalacion-021/block_abi.go](../rom-simplificada/original-p291/instalacion-021/block_abi.go)
+- [rom-simplificada/original-p291/instalacion-021/empaquetar_original.py](../rom-simplificada/original-p291/instalacion-021/empaquetar_original.py)
+- [rom-simplificada/original-p291/instalacion-021/EVIDENCIA-TESTS.json](../rom-simplificada/original-p291/instalacion-021/EVIDENCIA-TESTS.json)
+- [rom-simplificada/original-p291/instalacion-021/FORMATEADOR-PRUEBA-TV.json](../rom-simplificada/original-p291/instalacion-021/FORMATEADOR-PRUEBA-TV.json)
+- [rom-simplificada/original-p291/instalacion-021/salida/TVBASE-P291-A9-0.2.1-VERIFICACION.json](../rom-simplificada/original-p291/instalacion-021/salida/TVBASE-P291-A9-0.2.1-VERIFICACION.json)
 
-### C-REC · Recovery original: entrada pendiente
+### C-REC · Recovery original y restaurador0.2.1
 
-**verificado_local**. Recovery real adquirido: clave v1 y geometría conocidas. ZIP nuevos compatibles con esa política en pruebas PC; entrada/aceptación física sin demostrar. Recovery externo anterior es histórico.
+**verificado_local**. Restaurador separado de cinco imágenes OEM, ABI ARM32 corregido y ENV normal exigida. Conserva userdata; no restaura data.img. Recovery físico, reentrada desde Android nuevo y restore sin ensayo.
 
 Requisitos: REQ-11.
 
 - [diagnostico/primer-tv-lan-20260907-184926/RECOVERY-ORIGINAL.md](../diagnostico/primer-tv-lan-20260907-184926/RECOVERY-ORIGINAL.md)
-- [diagnostico/primer-tv-lan-20260907-184926/OPCIONES-INSTALACION-ROOT.md](../diagnostico/primer-tv-lan-20260907-184926/OPCIONES-INSTALACION-ROOT.md)
-- [rom-simplificada/original-p291/empaquetado/EVIDENCIA-TESTS.json](../rom-simplificada/original-p291/empaquetado/EVIDENCIA-TESTS.json)
+- [rom-simplificada/original-p291/restauracion-021/REVISION-INDEPENDIENTE.json](../rom-simplificada/original-p291/restauracion-021/REVISION-INDEPENDIENTE.json)
+- [rom-simplificada/original-p291/restauracion-021/main_linux.go](../rom-simplificada/original-p291/restauracion-021/main_linux.go)
+- [rom-simplificada/original-p291/restauracion-021/package.go](../rom-simplificada/original-p291/restauracion-021/package.go)
+- [rom-simplificada/original-p291/restauracion-021/env_read_linux.go](../rom-simplificada/original-p291/restauracion-021/env_read_linux.go)
+- [rom-simplificada/original-p291/restauracion-021/empaquetar_original.py](../rom-simplificada/original-p291/restauracion-021/empaquetar_original.py)
+- [rom-simplificada/original-p291/instalacion-021/RESTAURACION.md](../rom-simplificada/original-p291/instalacion-021/RESTAURACION.md)
+- [rom-simplificada/original-p291/restauracion-021/salida/TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-VERIFICACION.json](../rom-simplificada/original-p291/restauracion-021/salida/TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-VERIFICACION.json)
 
-### C-ENTRY · Diagnóstico USB0.8
+### C-ENTRY · AccesoUSB0.9: entrada pendiente de decisión
 
-**observado_tv**. 0.8 ejecutada:25sellos de datos válidos; cierre vacío pese al aviso de fin. Corrección de persistencia pendiente, no repetir captura.
+**observado_tv**. APK0.9 liberada/instalada por LAN; captura confirma diálogo2% superpuesto y acceso no visible. Preparación ENV/BCB no ejecutada ni autorizada específicamente; no indicar botones ocultos o corte para abrirla. Cliente LAN preparado para operar la misma APK sin pulsaciones ocultas; 53 pruebas PC y revisión independiente; sin ejecución TV del cliente.
 
 Requisitos: REQ-11.
 
-- [rom-simplificada/componentes/acceso-usb-0.8/Acceso.java](../rom-simplificada/componentes/acceso-usb-0.8/Acceso.java)
-- [rom-simplificada/componentes/acceso-usb-0.8/AdbLocal.java](../rom-simplificada/componentes/acceso-usb-0.8/AdbLocal.java)
-- [rom-simplificada/componentes/acceso-usb-0.8/AndroidManifest.xml](../rom-simplificada/componentes/acceso-usb-0.8/AndroidManifest.xml)
-- [rom-simplificada/componentes/acceso-usb-0.8/Evidencia.java](../rom-simplificada/componentes/acceso-usb-0.8/Evidencia.java)
-- [rom-simplificada/componentes/acceso-usb-0.8/EvidenciaScripts.java](../rom-simplificada/componentes/acceso-usb-0.8/EvidenciaScripts.java)
-- [rom-simplificada/componentes/acceso-usb-0.8/generar-scripts.py](../rom-simplificada/componentes/acceso-usb-0.8/generar-scripts.py)
-- [rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-0.sh](../rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-0.sh)
-- [rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-1.sh](../rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-1.sh)
-- [rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-10.sh](../rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-10.sh)
-- [rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-2.sh](../rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-2.sh)
-- [rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-3.sh](../rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-3.sh)
-- [rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-4.sh](../rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-4.sh)
-- [rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-5.sh](../rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-5.sh)
-- [rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-6.sh](../rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-6.sh)
-- [rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-7.sh](../rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-7.sh)
-- [rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-8.sh](../rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-8.sh)
-- [rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-9.sh](../rom-simplificada/componentes/acceso-usb-0.8/scripts/etapa-9.sh)
-- [rom-simplificada/compilacion/acceso-usb-0.8/componente.json](../rom-simplificada/compilacion/acceso-usb-0.8/componente.json)
-- [rom-simplificada/instalador/compilar-evidencia08.py](../rom-simplificada/instalador/compilar-evidencia08.py)
-- [rom-simplificada/instalador/test_evidencia08.py](../rom-simplificada/instalador/test_evidencia08.py)
-- [rom-simplificada/instalador/EvidenciaHarness08.java](../rom-simplificada/instalador/EvidenciaHarness08.java)
-- [rom-simplificada/instalador/EVIDENCIA-TESTS-0.8.json](../rom-simplificada/instalador/EVIDENCIA-TESTS-0.8.json)
+- [rom-simplificada/original-p291/entrada-apk/README.md](../rom-simplificada/original-p291/entrada-apk/README.md)
+- [rom-simplificada/original-p291/entrada-apk/ESTADO-ENTRADA-09.md](../rom-simplificada/original-p291/entrada-apk/ESTADO-ENTRADA-09.md)
+- [rom-simplificada/original-p291/entrada-apk/COMPILACION-09.json](../rom-simplificada/original-p291/entrada-apk/COMPILACION-09.json)
+- [rom-simplificada/original-p291/entrada-apk/PROBE-FISICO.json](../rom-simplificada/original-p291/entrada-apk/PROBE-FISICO.json)
+- [rom-simplificada/original-p291/entrada-apk/src/Acceso.java](../rom-simplificada/original-p291/entrada-apk/src/Acceso.java)
+- [rom-simplificada/original-p291/entrada-apk/src/AdbLocal.java](../rom-simplificada/original-p291/entrada-apk/src/AdbLocal.java)
+- [rom-simplificada/original-p291/entrada-apk/src/AndroidManifest.xml](../rom-simplificada/original-p291/entrada-apk/src/AndroidManifest.xml)
+- [rom-simplificada/original-p291/entrada-apk/src/EntryCodec.java](../rom-simplificada/original-p291/entrada-apk/src/EntryCodec.java)
+- [rom-simplificada/original-p291/entrada-apk/src/EntryContract.java](../rom-simplificada/original-p291/entrada-apk/src/EntryContract.java)
+- [rom-simplificada/original-p291/entrada-apk/src/EntryIO.java](../rom-simplificada/original-p291/entrada-apk/src/EntryIO.java)
+- [rom-simplificada/original-p291/entrada-apk/src/PreparationHelper.java](../rom-simplificada/original-p291/entrada-apk/src/PreparationHelper.java)
+- [rom-simplificada/original-p291/entrada-apk/compilar-entrada09.py](../rom-simplificada/original-p291/entrada-apk/compilar-entrada09.py)
+- [docs/evidencia/ENTRADA-ORIGINAL-P291-021.md](../docs/evidencia/ENTRADA-ORIGINAL-P291-021.md)
+- [rom-simplificada/original-p291/entrada-apk/LIBERACION-09.json](../rom-simplificada/original-p291/entrada-apk/LIBERACION-09.json)
+- [rom-simplificada/original-p291/entrada-apk/INSTALACION-TV-09.json](../rom-simplificada/original-p291/entrada-apk/INSTALACION-TV-09.json)
+- [rom-simplificada/original-p291/entrada-apk/entrada-lan09.py](../rom-simplificada/original-p291/entrada-apk/entrada-lan09.py)
+- [rom-simplificada/original-p291/entrada-apk/test_entrada_lan09.py](../rom-simplificada/original-p291/entrada-apk/test_entrada_lan09.py)
+- [rom-simplificada/original-p291/entrada-apk/OPERACION-LAN-09.md](../rom-simplificada/original-p291/entrada-apk/OPERACION-LAN-09.md)
+- [rom-simplificada/original-p291/entrada-apk/PRUEBAS-LAN09.json](../rom-simplificada/original-p291/entrada-apk/PRUEBAS-LAN09.json)
+- [rom-simplificada/original-p291/entrada-apk/REVISION-LAN09.json](../rom-simplificada/original-p291/entrada-apk/REVISION-LAN09.json)
 
-### C-USB · Kingston: entrega 0.1.2 histórica
+### C-USB · Kingston: entrega0.2.1 copiada/releída
 
-**verificado_local**. La última copia comprobada conserva 0.1.2; no repetir Update. No se copió 0.2.0 ni se formateó el USB en esta construcción.
+**verificado_local**. Cuatro archivos copiados y releídos con SHA/código0; cuatro viejos archivados/verificados antes de retirarlos. Sin formato ni reparación. Expulsión segura Windows y traslado alTV pendientes; flush final del volumen no acreditado.
 
 Requisitos: REQ-01.
 
-- [preparacion-usb/preparar-postintento-08.ps1](../preparacion-usb/preparar-postintento-08.ps1)
-- [preparacion-usb/postintento-08-estado.json](../preparacion-usb/postintento-08-estado.json)
-- [rom-simplificada/instalador/LEEME-POSTINTENTO-0.8.txt](../rom-simplificada/instalador/LEEME-POSTINTENTO-0.8.txt)
 - [rom-simplificada/INSTALACION-USB.md](../rom-simplificada/INSTALACION-USB.md)
-- [preparacion-usb/preparar-rom-012.ps1](../preparacion-usb/preparar-rom-012.ps1)
 - [preparacion-usb/rom-012-estado.json](../preparacion-usb/rom-012-estado.json)
-- [rom-simplificada/instalador/LEEME-ROM-0.1.2.txt](../rom-simplificada/instalador/LEEME-ROM-0.1.2.txt)
+- [rom-simplificada/original-p291/LEEME-USB-021.txt](../rom-simplificada/original-p291/LEEME-USB-021.txt)
+- [preparacion-usb/original-021-estado.json](../preparacion-usb/original-021-estado.json)
+- [preparacion-usb/preparar-original-021.ps1](../preparacion-usb/preparar-original-021.ps1)
 
 ### C-TV · P291: root y bloqueo WiFi confirmados
 
-**observado_tv**. P291: root incorporado confirmado. Cierre espera estadísticasWiFi cuyo hilo espera arranqueHAL; ZIPinterno íntegro yblock.map ausente.
+**observado_tv**. Primer P291 original al2% y accesible por LAN; captura confirma diálogo encima de Acceso0.9. ENV/misc originales releídos sin cambios. Probes limitados aprobados; no preparación ENV/BCB ni ROM instalada.
 
 Requisitos: REQ-13.
 
@@ -232,6 +237,8 @@ Requisitos: REQ-13.
 - [diagnostico/respaldar-p291-lan.py](../diagnostico/respaldar-p291-lan.py)
 - [diagnostico/primer-tv-lan-20260907-184926/RESPALDO-resumen-saneado.json](../diagnostico/primer-tv-lan-20260907-184926/RESPALDO-resumen-saneado.json)
 - [diagnostico/primer-tv-lan-20260907-184926/OPCIONES-INSTALACION-ROOT.md](../diagnostico/primer-tv-lan-20260907-184926/OPCIONES-INSTALACION-ROOT.md)
+- [docs/evidencia/ENTRADA-ORIGINAL-P291-021.md](../docs/evidencia/ENTRADA-ORIGINAL-P291-021.md)
+- [rom-simplificada/original-p291/instalacion-021/FORMATEADOR-PRUEBA-TV.json](../rom-simplificada/original-p291/instalacion-021/FORMATEADOR-PRUEBA-TV.json)
 
 ### C-APP · APK del producto
 
@@ -292,8 +299,11 @@ Requisitos: REQ-02, REQ-09, REQ-11.
 | `rom-simplificada/trabajo/` | RAW activos y recetas aplicadas | No son respaldo original del TV |
 | `rom-simplificada/instalador/` | ZIP, recovery externo y pruebas | Revisar versión antes de reconstruir |
 | `rom-simplificada/salida/` | Releases históricas 0.1.x | Conservar; no repetir su instalación |
-| `rom-simplificada/original-p291/` | ROM 0.2.0, selección, gestor y empaquetado | Fuentes y recibos versionados; privados excluidos |
-| `rom-simplificada/original-p291/empaquetado/salida/` | ZIP de instalación y restauración | Locales, no sustituyen una recuperación probada |
+| `rom-simplificada/original-p291/` | Plataforma0.2.0 inmutable, selección y gestor | Fuentes y recibos versionados; privados excluidos |
+| `rom-simplificada/original-p291/instalacion-021/` | Instalador0.2.1: seis respaldos y migración de datos | Release inmutable; preparación PC no acredita instalación |
+| `rom-simplificada/original-p291/restauracion-021/` | Restaurador0.2.1 de cinco imágenes OEM | Conserva userdata; no restaura su respaldo ni ofrece rollback |
+| `rom-simplificada/original-p291/entrada-apk/` | AccesoUSB0.9 y contrato ENV/BCB | Uso del método específico pendiente de decisión; no reset automático |
+| `rom-simplificada/original-p291/empaquetado/salida/` | Releases0.2.0 históricas | Conservar; ioctl ARM32 corregido en0.2.1 |
 | `privado/TVBASE-respaldo-*/` | Adquisiciones originales P291 | Inmutables; no publicar ni confundir con userdata |
 | `preparacion-usb/` | Preparadores y recibos de operaciones | Usar identidad estable; no repetir por rutina |
 | `diagnostico/` | Evidencia de ambos equipos | No mezclar perfiles P291 y P271 |
@@ -316,12 +326,12 @@ Requisitos: REQ-02, REQ-09, REQ-11.
 | actualizacion-chrome | 51 | 0.417 |
 | analisis-rom | 15 | 1.822 |
 | diagnostico | 173 | 0.018 |
-| docs | 32 | 0.000 |
+| docs | 33 | 0.000 |
 | dossier-s905l2.html | 1 | 0.000 |
 | images | 1 | 1.352 |
 | platform-tools-latest-windows.zip | 1 | 0.008 |
-| preparacion-usb | 83 | 3.688 |
-| rom-simplificada | 4480 | 11.567 |
+| preparacion-usb | 87 | 3.688 |
+| rom-simplificada | 4564 | 13.055 |
 | tools | 18081 | 1.141 |
 
 El inventario excluye derivados documentales y contenido de claves; los tamaños son de archivos, no bloques físicos ocupados. Los temporales retirados se detallan en [LIMPIEZA](LIMPIEZA.md).

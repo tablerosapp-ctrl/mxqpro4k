@@ -1,5 +1,11 @@
 # Historial local y publicación pública
 
+## Registro instalador0.2.1 y acceso0.9
+
+La nueva entrega agrega preparación de userdata con seis respaldos, restaurador de cinco particiones corregido para ARM32 y acceso ENV/BCB revisado. Se versionan fuentes, pruebas, recibos y [evidencia actual](evidencia/ENTRADA-ORIGINAL-P291-021.md); los ZIP/APK, extracciones y observaciones crudas permanecen locales. La exclusión `**/privado/` cubre también los nuevos directorios anidados. Preparar el pendrive no equivale a aprobar el método de entrada ni a instalar la ROM.
+
+La copia USB se documenta con su recibo, y la publicación continúa en el espejo saneado existente. No se reescriben releases0.2.0 ni la historia pública por esta revisión.
+
 ## Registro 0.2.0 desde originales P291
 
 Se incorporan fuentes de construcción, política de paquetes, auditorías de servicios/gestor, pruebas, manifiestos de las cinco imágenes y recibos de los ZIP de instalación/restauración. [Resultado](evidencia/ROM-ORIGINAL-P291-020.md). El grafo y el estado distinguen verificación PC de instalación física pendiente.

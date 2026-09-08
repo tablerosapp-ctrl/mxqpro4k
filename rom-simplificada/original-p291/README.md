@@ -2,7 +2,11 @@
 
 Esta revisión implementa el pedido de construir una ROM interna simplificada desde los originales adquiridos del **primer P291 / gxlx2_p291_1g**. La preparación trabaja sobre archivos de PC; no instala ni reinicia el TV. El segundo P271 y la ROM candidata anterior no aportan sus drivers a esta imagen.
 
-**Resultado local:** cinco imágenes y dos ZIP construidos y verificados. Instalación: **573.492.264 bytes**, SHA256 `bd4a8dd7df8d61580c5b450867bda2ef2b214b400b4cafcce5a26baa5c48a614`. Restauración original: **913.228.907 bytes**, SHA256 `a10aee68042ef9f945a4160fd897d0db1943e28dd58e0a03918d138e9f1a8e3f`. Los paquetes permanecen en PC, sin copiar al pendrive ni aceptación física del recovery. [Recibo de instalación](empaquetado/salida/TVBASE-P291-A9-0.2.0-VERIFICACION.json) · [Recibo de restauración](empaquetado/salida/TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.0-VERIFICACION.json).
+**Entrega vigente: instalador0.2.1 y plataforma0.2.0.** Las cinco imágenes se conservan; el nuevo instalador respalda seis particiones y prepara userdata limpia antes de escribir Android. ZIP: **573.688.933 bytes**, SHA256 `dcb152c77e55cb067d6e88a8144990a3edb5d06568ea8cdfdc414a0fa21aac58`. El restaurador separado0.2.1 contiene cinco imágenes OEM: **913.294.443 bytes**, SHA256 `42580206f254fab0a2280cd263a48882677e7ddf5cfd609382a840c8d0fb103a`; conserva userdata y no recupera su respaldo. Ambos están sellados/verificados en PC. [Instalación y migración](instalacion-021/CONTRATO-MIGRACION.md) · [Restauración](restauracion-021/README.md) · [Estado de la copia USB](../INSTALACION-USB.md).
+
+[Acceso USB0.9](entrada-apk/README.md) prepara un método nuevo de entrada al recovery interno mediante ENV/BCB. Modificar el entorno de arranque puede impedir iniciar Android; el usuario pidió conocer el riesgo antes de decidir. La APK está instalada, pero el diálogo OEM del2% sigue tapando la pantalla. No se modificaron ENV/BCB ni se reinició el TV. La preparación por LAN, tras esa decisión específica, evita depender de pulsaciones ocultas; no debe ejecutarse como prueba inocua. [Evidencia y límites](../../docs/evidencia/ENTRADA-ORIGINAL-P291-021.md).
+
+Los paquetes0.2.0 permanecen históricos e inmutables; sus ejecutables usaban una consulta de tamaño de64bits incompatible con ARM32. La corrección0.2.1 fue comprobada en lectura en el TV. No repetir los ZIP anteriores.
 
 La base elegida es Android 9, para mantener APK, framework multimedia y controladores conocidos. Es una derivación depurada del original, **no una reconstrucción completa de AOSP ni una certificación de ausencia de código malicioso**. Sustituir también todo el framework necesita otra etapa de integración y pruebas de hardware; Linux con un entorno Android añadiría una compatibilidad aún no probada en esta placa.
 
@@ -17,7 +21,7 @@ La base elegida es Android 9, para mantener APK, framework multimedia y controla
 | Actualizaciones propias | Gestor separado del WebView, HTTPS saliente y manifiesto firmado; política por paquete, certificado y horario. Sin destino ni tareas de red mientras esté desactivado. |
 | Bluetooth | Se retiran APK, HAL, declaraciones y carga de sus módulos; WiFi se conserva, sin afirmar reparación. |
 | Accesos de diagnóstico heredados | TCP ADB desactivado, autenticación requerida para ADB, USB sin depuración por defecto; su, procmem elevado y consola retirados. |
-| Datos anteriores | El instalador exige una migración separada a userdata limpia; no borra ni conserva silenciosamente APK OEM en ella. |
+| Datos anteriores | El instalador0.2.1 respalda y relee userdata completa antes de crear ext4 limpio; no reimporta APK ni datos OEM al Android nuevo. |
 
 La selección retira 51 APK originales y conserva 34 paquetes de plataforma/hardware. Agrega Chrome y cuatro componentes propios (inicio, selección WebView, valores iniciales y gestor). Las bibliotecas y servicios compartidos de video, audio, red, almacenamiento, IR y CEC se preservan según su función. [Política de paquetes](politica-paquetes.json) · [Auditoría de servicios](AUDITORIA-SERVICIOS.md).
 
@@ -45,7 +49,7 @@ El proceso del gestor permanece separado del WebView. Actualizar Chrome puede te
 2. [compilar-componentes.py](compilar-componentes.py) construye inicio y overlays aislados; [COMPONENTES.json](COMPONENTES.json) identifica sus APK. El gestor tiene compilación, pruebas y revisión separadas.
 3. [construir.py](construir.py) aplica [politica-paquetes.json](politica-paquetes.json), conserva metadatos, comprueba ext4, hashes y atributos extendidos. Una copia con `e2image -ra` omite los bloques libres que contenían datos eliminados; se vuelve a comprobar el resultado.
 4. [boot.py](boot.py) cambia únicamente las entradas auditadas del ramdisk, preservando kernel/DTB y verificando la cabecera Android v1.
-5. [Empaquetado](empaquetado/README.md) genera por separado instalación y restauración de cinco particiones. La firma heredada SHA1 se comprueba por dos implementaciones; no sustituye la aceptación física del recovery.
+5. [Instalación0.2.1](instalacion-021/CONTRATO-MIGRACION.md) y [restauración0.2.1](restauracion-021/README.md) generan paquetes separados. El [empaquetado0.2.0](empaquetado/README.md) conserva el antecedente inmutable. La firma heredada SHA1 se comprueba por dos implementaciones; no sustituye la aceptación física del recovery.
 
 Las entradas y salidas privadas, originales y versiones anteriores se conservan. Una comprobación fallida detiene la construcción; no se convierte en éxito por existir un archivo o por terminar debugfs con código 0. Las pruebas locales no acreditan instalación, tráfico limpio, WiFi recuperado ni restauración efectiva.
 

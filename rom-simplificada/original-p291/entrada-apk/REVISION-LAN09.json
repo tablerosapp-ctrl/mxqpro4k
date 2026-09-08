@@ -1,0 +1,65 @@
+{
+  "state": "reviewed_offline",
+  "approved": true,
+  "date_utc": "2026-09-08T02:11:16.361850+00:00",
+  "reviewer": "lecturas_adb_p291",
+  "approval_scope": "Fuentes exactas del cliente LAN y guia aptas para publicacion y revision del operador. La ejecucion de prepare sigue requiriendo decision explicita para ENV/BCB y pendrive conectado al primer TV.",
+  "source_sha256": {
+    "rom-simplificada/original-p291/entrada-apk/entrada-lan09.py": "8b60e1ab2e51182d332cc5648ec68f9c0ff1b0248861a62ea5d3aa333d2ba477",
+    "rom-simplificada/original-p291/entrada-apk/test_entrada_lan09.py": "3c9dfb11e37e77c488412c5222a4737d4943edf8a33f99aba7c6347fbeac9bc5",
+    "rom-simplificada/original-p291/entrada-apk/OPERACION-LAN-09.md": "988d47746b51480a9949e2538d7154297f497679be12b377744952211da553b9"
+  },
+  "sealed_apk_release": "rom-simplificada/original-p291/entrada-apk/LIBERACION-09.json",
+  "sealed_apk_release_sha256": "a5650d5a0e3a19fad08b730a30c7429b72242eb7368d2b6227cf8c0c13124cf1",
+  "sealed_apk_sources_unchanged": true,
+  "checks": {
+    "explicit_flag_and_authorization_note_before_attempt": true,
+    "unique_durable_pointer_blocks_second_prepare": true,
+    "nonce_and_launch_issued_persisted_before_adb": true,
+    "status_has_no_launch_path": true,
+    "preflight_requires_shell_root_api_dt_build_kernel_and_exact_apk": true,
+    "active_absence_required_before_launch": true,
+    "duplicate_json_nonce_remote_exit_and_state_guards_reviewed": true,
+    "launched_is_not_prepared": true,
+    "prepared_requires_helper_readback_flags_and_manifest_hash": true,
+    "output_bounded_during_capture": true,
+    "timeout_or_incomplete_output_never_reports_success": true,
+    "only_local_adb_stopped_on_timeout": true,
+    "runbook_discloses_explicit_authorization_and_concurrent_oem_state": true,
+    "runbook_discloses_activity_cannot_resume_pc_nonce": true,
+    "local_document_links_checked": 5
+  },
+  "resolved_findings": [
+    "Sustituida captura completa sin limite por lectura acotada a 128 KiB por canal durante la ejecucion; exceso/plazo dejan resultado sin confirmacion.",
+    "Sustituida la IP historica escrita por el usuario por una direccion reservada para documentacion en las pruebas publicables."
+  ],
+  "independent_tests": {
+    "cases": 53,
+    "passed": 53,
+    "failed": 0,
+    "real_pc_python_children": 3,
+    "adb_subprocesses": 0,
+    "fixture_log_sha256": "862223cf17799479c5e49541609690e69e82a4298ab3d09d5a7a38e333c4a86b",
+    "private_receipt": "rom-simplificada/original-p291/entrada-apk/privado/revision-lan09-2b1873574300/resultado.json",
+    "private_receipt_sha256": "e3a12e9e56851017711ef851237fc940b18dbd6a6fcb6b545638b002f796b304",
+    "launch_timeout_preserves_nonce_and_one_launch": true,
+    "persistence_failure_prevents_launch": true,
+    "subprocess_guard": "Solo tres payloads Python sinteticos revisados; cualquier otro Popen, incluido ADB, rechazado por el arnes.",
+    "harness_window_policy": "CREATE_NO_WINDOW aplicado a los tres hijos Python; no cambia el cliente revisado."
+  },
+  "physical_client_execution_tested": false,
+  "physical_helper_detachment_tested": false,
+  "env_or_bcb_changed_by_reviewer": false,
+  "tv_accessed": false,
+  "usb_accessed": false,
+  "automatic_reset": false,
+  "automatic_zip_installation": false,
+  "limitations": [
+    "Pruebas de protocolo y flujo con respuestas sinteticas; no acreditan una ejecucion real del cliente ni persistencia del pendrive.",
+    "La bandera del programa registra una eleccion; no comprueba identidad del autorizante ni sustituye confirmacion conversacional.",
+    "El proceso OEM de cierre puede seguir activo. La via LAN no elimina ese dialogo ni garantiza ausencia de concurrencia.",
+    "Una observacion prepared revalida recibos del helper; no vuelve a leer bloques ni descarta cambios externos posteriores.",
+    "La perdida de conexion no cancela necesariamente el helper. Conservar el intento y usar status sin relanzar.",
+    "La guia y el cliente no prometen rescate, instalacion, entrada a recovery o restauracion fisicamente probados."
+  ]
+}

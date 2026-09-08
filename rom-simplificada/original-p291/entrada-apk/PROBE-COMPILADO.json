@@ -1,0 +1,27 @@
+{
+  "state": "compiled_host_checked",
+  "date_utc": "2026-09-08T01:28:47.059517+00:00",
+  "jar": "rom-simplificada/original-p291/entrada-apk/privado/probe-20260908-012842-890442/tvbase-root-probe-0.1.jar",
+  "jar_bytes": 8704,
+  "jar_sha256": "2dd8886340ea68d4bb36301aa65aef9e3afaa0e49359792b9439aa1186a5a24d",
+  "dex": "rom-simplificada/original-p291/entrada-apk/privado/probe-20260908-012842-890442/dex/classes.dex",
+  "dex_sha256": "bc63409c29ce0478cf2f508b2af4b75f8bcf44f752acdede6fc0571c645a83e8",
+  "source_sha256": {
+    "rom-simplificada/original-p291/entrada-apk/RootProbe.java": "f5682a4d4538b5c5a0e2e5552db893f197e832a098efe0649374c42bf8207ee5",
+    "rom-simplificada/original-p291/entrada-apk/ProbeContract.java": "82ea5d656a6f6b079d7dbb502177df049902b8b555ca6201b694513e99f43424"
+  },
+  "test_source_sha256": "927c1e7732292a342e14cf4af6daf5b27283b4975998a202f198fc99459dc290",
+  "compiler_sha256": "1cb34f48e4d4e1845fed81bcdd4de740fc3b0ce340b80a7c2be2c282edfa948f",
+  "min_api": 28,
+  "javac_source_target": "8",
+  "host_contract_checks": 17,
+  "host_result": "Probe contract: 17 host checks passed; no Android APIs executed",
+  "android_apis_tested_on_host": false,
+  "root_app_process_tested": false,
+  "fsync_tested_on_device": false,
+  "tv_accessed": false,
+  "usb_accessed": false,
+  "firmware_written": false,
+  "allowed_destination": "/data/local/tmp/tvbase-entry-probe-<32 lowercase hex nonce>/probe.bin",
+  "repeat_policy": "one explicit execution; an existing directory is rejected; never retry automatically"
+}

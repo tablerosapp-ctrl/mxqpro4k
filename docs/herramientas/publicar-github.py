@@ -92,13 +92,17 @@ def prepare(config):
 
 def classify_private_ipv4(name, body, match):
     """Classify public network constants and explicit offline test fixtures only."""
-    if name == 'diagnostico/respaldar-p291-lan.py' and re.match(
+    if name in ('diagnostico/respaldar-p291-lan.py',
+                'rom-simplificada/original-p291/entrada-apk/entrada-lan09.py') and re.match(
             rb'(?:10\.0\.0\.0/8|172\.16\.0\.0/12|192\.168\.0\.0/16)[\'\"]',
             body[match.start():]):
         return 'rfc1918_network_constant'
     if name in ('diagnostico/test_respaldo_p291_lan.py',
                 'diagnostico/respaldo-p291-lan/EVIDENCIA-SANEADA.json') and re.fullmatch(
                 rb'10\.23\.45\.67', match.group()):
+        return 'declared_offline_test_fixture'
+    if name == 'rom-simplificada/original-p291/entrada-apk/test_entrada_lan09.py' and re.fullmatch(
+            rb'192\.168\.10\.(?:25|26)', match.group()):
         return 'declared_offline_test_fixture'
     return None
 

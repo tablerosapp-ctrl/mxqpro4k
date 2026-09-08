@@ -1,6 +1,33 @@
 # Estado operativo
 
-## Vigente · 7/9/2026 ART, ROM original P291 0.2.0 verificada en PC
+## Vigente · 7/9/2026 ART, instalador0.2.1 y acceso0.9
+
+**La plataforma0.2.0 sigue sin instalarse.** Se completó el instalador0.2.1 que conserva sus cinco imágenes e implementa la preparación de userdata. [Evidencia de esta revisión](evidencia/ENTRADA-ORIGINAL-P291-021.md) · [Migración y límites](../rom-simplificada/original-p291/instalacion-021/CONTRATO-MIGRACION.md).
+
+| Componente | Estado y evidencia |
+| --- | --- |
+| C-ROM / plataforma0.2.0 | Imágenes inmutables y composición verificadas en PC; kernel/DTB y drivers originales conservados. |
+| C-ZIP / instalador0.2.1 | ZIP573688933B, SHA `dcb152c77e55cb067d6e88a8144990a3edb5d06568ea8cdfdc414a0fa21aac58`; firma Python/OpenJDK, CRC y cinco payloadSHA correctos. [Recibo](../rom-simplificada/original-p291/instalacion-021/salida/TVBASE-P291-A9-0.2.1-VERIFICACION.json). |
+| C-ENTRY / AccesoUSB0.9 | APK61843B, SHA `1d0f267e818acca5562048f9961c7c234f36b8cc81f827cb3eac9e3fcd2505a4`; compilada/revisada e instalada por LAN a22:55ART; apertura solicitada con código0; captura posterior muestra diálogo Android2% superpuesto y APK no visible. No se pulsó preparación. [Instalación y pantalla](../rom-simplificada/original-p291/entrada-apk/INSTALACION-TV-09.json). |
+| C-REC / restaurador0.2.1 | ZIP913294443B, SHA `42580206f254fab0a2280cd263a48882677e7ddf5cfd609382a840c8d0fb103a`; firma Python/OpenJDK, CRC/payloadSHA y validador Windows correctos. Conserva userdata; no restaura su respaldo. [Recibo](../rom-simplificada/original-p291/restauracion-021/salida/TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-VERIFICACION.json). |
+| C-USB | Cuatro archivos copiados y releídos a23:06:04ART, código0; cuatro antiguos archivados/verificados antes de retirarlos. [Recibo USB](../preparacion-usb/original-021-estado.json). Pendiente expulsión segura de Windows; vaciado final de metadatos del volumen no acreditado. |
+| C-TV / M1–M2 | Android original seguía al2% y accesible por LAN; sin recovery, instalación ni restauración física acreditadas. |
+
+La nueva entrada propone modificar64KiB de ENV y2KiB de BCB para preparar el menú del recovery interno, sin seleccionar el ZIP ni reiniciar automáticamente. Es una operación distinta del actualizador OEM atascado. El usuario pidió conocer los riesgos antes de elegir: **aún no aprobó este método específico**. La escritura parcial de ENV o una incompatibilidad puede impedir arrancar Android, y tener respaldos no demuestra una vía física de rescate. Antes de ejecutar la preparación o indicar un corte se debe resolver esa decisión. La APK queda oculta tras el diálogo2%; no indicar pulsar un botón invisible ni cortar para abrirla. El [cliente de acompañamiento LAN](../rom-simplificada/original-p291/entrada-apk/OPERACION-LAN-09.md) usa la APK ya instalada y sigue condicionado a la misma decisión. Tiene [53 pruebas PC y revisión independiente](../rom-simplificada/original-p291/entrada-apk/PRUEBAS-LAN09.json); no se ejecutó en el TV ni oculta/cancela el diálogo. La ROM y los respaldos siguen usando el pendrive. No repetir Update.
+
+En esta revisión ENV y misc se releían idénticos a las adquisiciones originales. No se escribió ENV/BCB ni se pidió otro reinicio. Se probó el formateador original únicamente sobre un archivo regular temporal del TV: código0 y superblock esperado. Una sonda de lectura confirmó ioctl ARM32 `0x80041272` y tamaños de ENV/data; el número heredado de64bits devolvió EINVAL. Los temporales propios se retiraron. Estas pruebas no acreditan formato/montaje de particiones, persistencia del USB ni instalación.
+
+El instalador0.2.1 exige seis respaldos nuevos, sincronizados y releídos, incluidos3.495.952.384B de userdata, antes de borrar datos. Requiere6.603.931.648B libres en el USB. Luego crea ext4 limpio, valida contenido vacío mediante montaje RO, desmonta y escribe las cinco imágenes, con boot al final. Si falla copia, SHA, sync o ENV, no formatea; si falla formato/verificación, no inicia el flasheo. El respaldo futuro de userdata **todavía no existe**.
+
+El restaurador0.2.1 devuelve cinco imágenes OEM y conserva los datos que haya. No restaura automáticamente data.img ni ofrece rollback. El restaurador0.2.0 queda histórico por su ioctl incompatible. La ROM nueva retira su y ADB TCP inicial; el gestor no tiene REBOOT/RECOVERY. La siguiente entrada desde Android nuevo y cualquier restauración completa siguen pendientes de demostración.
+
+**VAL-04 de copia/lectura completada.** Se retiraron598.275.472B tras archivarlos y comprobarlos enPC; quedan29.429.121.024B libres, sin formato ni reparación. El recibo mantiene `safe_removal_pending=true` y `volume_flush_verified=false`: falta expulsión segura de Windows y traslado del USB alTV, manteniendoLAN y sin otro Update.
+
+**Próximas salidas:** M1/VAL-05, decisión del método y recovery identificado; M2/VAL-06/07, respaldo real, migración, cinco escrituras y arranque interno sin USB. Después, proveedor WebView, red, mandos y carga VP9/alfa/canvas. No se declara WiFi reparado ni mejor rendimiento por haber simplificado la ROM.
+
+## Historial conservado: los estados siguientes son anteriores
+
+## Antecedente · 7/9/2026 ART, ROM original P291 0.2.0 verificada en PC
 
 La autorización de construir desde los originales se implementó en [original-p291](../rom-simplificada/original-p291/README.md). Las cinco imágenes conservan geometría real, kernel y multi-DTB; los archivos ajenos al recorte conservan bytes, dueño, modo y atributos. Se retiran 51 APK y quedan 34 originales más Chrome y cuatro componentes propios. [Evidencia y grafo del cambio](evidencia/ROM-ORIGINAL-P291-020.md).
 

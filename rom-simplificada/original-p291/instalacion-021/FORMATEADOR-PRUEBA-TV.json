@@ -1,0 +1,50 @@
+{
+  "state": "passed",
+  "target_kind": "exclusive_regular_file",
+  "logical_bytes": 3495936000,
+  "partition_format_requested": false,
+  "mounted": false,
+  "reset_requested": false,
+  "tools_sha256": [
+    "2b1799d99503493f46f130f861889e0f03eb00d39cc633212890823bf1f86525",
+    "dcd4750293852e9b06f6de4c51c24d3d3941e67f221872965c6f02251509cd02"
+  ],
+  "allocated_bytes": 966656,
+  "superblock": {
+    "magic": 61267,
+    "blocks": 853500,
+    "first_data_block": 0,
+    "block_size": 4096,
+    "inode_size": 256,
+    "state": 1,
+    "features": [
+      60,
+      578,
+      123
+    ],
+    "sha256": "5ed320832c3a4538da56776fe90e9c8c1b95524a2ce3eb6ddc034d224bce70df"
+  },
+  "temporary_files_removed": true,
+  "native_codes": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "observed_in_tv": true,
+  "recovery_execution_tested": false,
+  "sparse_creation": {
+    "truncate_failed_before_formatter": true,
+    "error": "3495936000 interpreted as -799031296 on original toybox truncate",
+    "successful_alternative": "one final 4096-byte zero block, count1 seek853499, then exact stat size check"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "state": "compiled_reviewed",
+  "date_utc": "2026-09-08T01:51:17.220273+00:00",
+  "source_sha256": {
+    "rom-simplificada/original-p291/entrada-apk/src/Acceso.java": "241fa06f78c0bca8a01275fa411b0a7deeeb0ec695d264f628c60107240c5351",
+    "rom-simplificada/original-p291/entrada-apk/src/AdbLocal.java": "154392ce2003ce60b653f23bd0cce1dae777d1c61a12f18be071db38278c9f2d",
+    "rom-simplificada/original-p291/entrada-apk/src/AndroidManifest.xml": "50127452b69b03debede4b57fc5d636406b282be4aa1353215806d95bb4fe2cb",
+    "rom-simplificada/original-p291/entrada-apk/src/EntryCodec.java": "584bcbc99b73a0206232228b6d797db301fea50e9b43c26c3ee8fc90a126c416",
+    "rom-simplificada/original-p291/entrada-apk/src/EntryContract.java": "4749998b23d5eee1f10d89d294906cbbe2ff47d64118cc5a990d8ac531aa294e",
+    "rom-simplificada/original-p291/entrada-apk/src/EntryIO.java": "2ddd5c74b3aec489dbc5c10950286be542a2e4b4fe311417efa6bc72d66d1d83",
+    "rom-simplificada/original-p291/entrada-apk/src/PreparationHelper.java": "799dbcc90dc5f1ca5c2181f8e1145166d1d4019461d8a0ec598216454bde54d1"
+  },
+  "generated_policy_sha256": "04cd0926c1de2de2b10d5c27f207f566d995523eb3e02dbed20f3f596d82a20f",
+  "builder_sha256": "0894f6e320e63a82fefa31499d166d006453db9f7c00afb98cf9de995d2a588e",
+  "method_reviewed": true,
+  "apk_built": true,
+  "physical_preparation_tested": false,
+  "usb_fsync_tested": false,
+  "automatic_reset": false,
+  "package": "local.tvbase.acceso",
+  "version": "0.9",
+  "version_code": 9,
+  "apk": "rom-simplificada/original-p291/entrada-apk/privado/entrada09-20260908-015115-805753/AccesoUSB-0.9.apk",
+  "bytes": 61843,
+  "sha256": "1d0f267e818acca5562048f9961c7c234f36b8cc81f827cb3eac9e3fcd2505a4",
+  "dex_sha256": "2e3dd8ee2d7c42e74b15eafb477282643d13ead9acc28a523e681455315ed753",
+  "policy": {
+    "zip_name": "TVBASE-P291-A9-0.2.1-RECOVERY.zip",
+    "zip_bytes": 573688933,
+    "zip_sha256": "dcb152c77e55cb067d6e88a8144990a3edb5d06568ea8cdfdc414a0fa21aac58",
+    "env_record_sha256": "4a769455ff8fdfd7a84d65c781259e34ca94657a833d8d55222b16acac2c31f6",
+    "bcb_prefix_sha256": "60e06b0f4afd4db33faef964133a5aa08991e42932b11302c72a36881a834e1b"
+  },
+  "rom_receipt_sha256": "076070aee6faa005833dda2ce73658ed3417f4ff919cc9e2c4e878cc89ba5a12",
+  "method_review_sha256": "2140c3c3b6f20fd7d4f22e7ddff05bc1ed29fbb84061c799480c90f3ee6607cb",
+  "signature_verification_api28_exit": 0,
+  "signing_inputs_unchanged": true,
+  "limitations": [
+    "ENV/BCB preparation changes boot metadata; no recovery or rollback physical proof.",
+    "No automatic reset; a user power cycle is a separate physical action.",
+    "A failed or lost observation never cancels the detached helper."
+  ]
+}

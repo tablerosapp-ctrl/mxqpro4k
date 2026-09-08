@@ -1,0 +1,39 @@
+{
+  "state": "source_review_passed",
+  "reviewer": "preparador_usb012",
+  "package_id": "TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1",
+  "sources_sha256": {
+    "go.mod": "04aa79d7d5c20ecf0b5759a4d8ee74ca6685bd3fffd29591719ec649f2911fe8",
+    "package.go": "499e76d43bb10aafd276b857a6c16936ee2a871e2fbfe1b075a35ba1e5678342",
+    "package_test.go": "da56070a68e24c8711b6eba69cd2c38d03c5fdf99732de095abf0139856d4f6b",
+    "main_linux.go": "df4af2bd12e5436cba13fa883fe94147da1110cac7fb7347631c0f35e22ea9d0",
+    "main_windows.go": "f3d097f1fc33537dda2ae552e001ca51ec776f43f760445303b328e5a9526040",
+    "block_abi.go": "11fe6dd8b9a29667b71964a64f7312e9d65e4e0a3b99d0d0080090e0812e5ec5",
+    "block_abi_test.go": "47bb71ddb2fc166e5ffa9f4f3247bf4dd996b11763d548274f49777e2c0966ee",
+    "backup_verified.go": "d39deec84a988c7c1b85c9525d6a258f9fcee8e451ee2c0a10bca233c8a71bcf",
+    "backup_verified_test.go": "8be9413e96c4ea8531cd5db19032ee943546b2cac9a35400d0c01f6e86bb34f1",
+    "transaction_linux.go": "b06b292a4a9cd4240395f0a10984f1b58a7b2b63bb2739416aff96d8424ebde7",
+    "env_guard.go": "eeeb557641f684a2101a487688fe85e2a38a137fe279564466e7abff98905562",
+    "env_guard_test.go": "40190395d101a1c86443b8507bc867d426c4edbd27e48b91f1cdd34741456af0",
+    "env_read_linux.go": "2c6a06857aa75088ade6512a5b29e682357a5a786afecfe016017d04d9c95989"
+  },
+  "builder_sha256": "faca496bb8b41483d138167ffc87351df7507e9e523d5b2200a1c25b5fd52beb",
+  "signature_helper_sha256": "aeb2b7d212e6472a9334c3ce7586effff3d7dc767266cb35233c25e02dc3f54e",
+  "all_go_files_accounted_for": true,
+  "reviewed": [
+    "Only five fixed original image hashes and exact P291 geometry are allowed.",
+    "Five current partitions are backed up and triple-hashed before writes; current bytes need not equal OEM originals.",
+    "Userdata is not opened or formatted; no native formatter is present in execution path.",
+    "USB physical marker and mounted destinations are rechecked; no automatic remount after an I/O failure.",
+    "Logs, files, directory receipts and image targets are synchronized with errors propagated; no global sync.",
+    "ARM32 ioctl request uses the helper confirmed on the physical TV.",
+    "ENV is read-only and must have normal bootcmd and original recovery flow before backup and before flash.",
+    "Boot original is written last; no automatic reboot or rollback."
+  ],
+  "resolved_finding": "Added normal ENV gate at entry and immediately before flash; transient pending bootcmd now rejects writes.",
+  "limits": [
+    "Source review and separate read-only native probe do not prove a physical restoration.",
+    "Build, package signatures, payload CRC/SHA and immutable release receipt must pass after this review.",
+    "Restoring OEM images reintroduces original software and privilege configuration; prior userdata backup is not restored."
+  ]
+}

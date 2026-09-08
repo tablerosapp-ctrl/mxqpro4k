@@ -1,5 +1,35 @@
 # Pendrive · estado de la instalación
 
+## Vigente · entrega0.2.1 verificada el7/9/2026 a las23:06ART
+
+El Kingston autorizado contiene los cuatro archivos actuales. La copia terminó con código0 y se releían completos con SHA correcto. [Recibo de entrega](../preparacion-usb/original-021-estado.json) · [Contrato exacto](../preparacion-usb/entrega-original-021.json) · [Revisión independiente](../preparacion-usb/REVISION-ORIGINAL-021.json).
+
+| Archivo en la raíz del USB | Función |
+| --- | --- |
+| `TVBASE-P291-A9-0.2.1-RECOVERY.zip` | Instalar la plataforma simplificada derivada del P291 real; seis respaldos antes de borrar userdata y escribir cinco particiones. |
+| `TVBASE-P291-A9-ORIGINAL-RESTORE-0.2.1-RECOVERY.zip` | Restauración separada de cinco imágenes OEM; conserva los datos actuales, no recupera userdata anterior. No elegir para instalar TV Base. |
+| `AccesoUSB-0.9.apk` | Preparación explícita de entrada al recovery interno; ya instalada en el TV. |
+| `LEEME-AHORA.txt` | [Guía exacta copiada](original-p291/LEEME-USB-021.txt), con riesgos, éxito y condiciones de parada. |
+
+Se archivaron y verificaron enPC los cuatro archivos antiguos antes de retirarlos: ZIP0.1.2, recovery externo, auxiliarBluetooth y guía;598.275.472bytes. El marcador, informes y carpetas de respaldos se conservaron. Quedan29.429.121.024bytes libres, por encima de los6.603.931.648 exigidos para los seis respaldos nuevos. **No se formateó ni reparó el pendrive.** Windows mantiene Warning; la copia y lectura correctas no certifican toda la salud del volumen.
+
+Antes de moverlo al TV, usar la **expulsión segura de Windows**. El recibo acredita Flush de archivos y lectura, no un flush final del volumen ni persistencia de sus metadatos después de desconectarlo. La expulsión todavía está pendiente.
+
+### Continuación desde el diálogo2%
+
+La APK0.9 se instaló correctamente, pero la captura confirma que el diálogo de actualización del sistema sigue tapando la pantalla. No repetir Update, no pulsar botones ocultos ni cortar alimentación para intentar abrir la APK. Conectar el Kingston al primer P291 y mantener LAN permite acompañar el acceso existente desde esta sesión.
+
+La preparación nueva modifica64KiB del entorno de arranque ENV y2KiB de BCB, después de respaldarlos y verificarlos, y neutraliza las órdenes antiguas de cache. Una escritura incompleta o incompatibilidad puede impedir que Android arranque; el respaldo no acredita un rescate físico. **El usuario pidió conocer ese riesgo antes de decidir: aún no se autorizó específicamente ni se ejecutó.** El acceso por LAN debe respetar esa decisión aunque no use la confirmación visual de la APK.
+
+La [operación desde PC](original-p291/entrada-apk/OPERACION-LAN-09.md) conserva un único intento y permite continuar su observación si se pierde la conexión. Usa el helper0.9 ya instalado y no requiere pulsar botones ocultos. Sus pruebas locales no acreditan preparación física.
+
+Solo después de una preparación cuyo cierre y relectura sean verificados se podrá indicar el ciclo de alimentación con USB conectado para intentar llegar al menú original. El helper no reinicia ni instala automáticamente. En recovery, la ruta identificada es «Apply update from EXT» → «Update from udisk», eligiendo el ZIP de instalación0.2.1. Sigue pendiente demostrar ese ingreso físico.
+
+No hay ROM instalada, recuperación ensayada, WiFi reparado ni prueba de WebView/video en la nueva plataforma. [Evidencia completa](../docs/evidencia/ENTRADA-ORIGINAL-P291-021.md) · [Estado](../docs/ESTADO.md).
+
+## Historial conservado: las instrucciones siguientes no son vigentes
+
+
 ## Vigente · ROM 0.2.0 verificada solamente en PC
 
 La [nueva ROM desde originales y la restauración](original-p291/README.md) están construidas y verificadas, pero **todavía no fueron copiadas al Kingston**. No se hizo otro formato, grabación ni limpieza. Se conservan los entregables y recibos anteriores.

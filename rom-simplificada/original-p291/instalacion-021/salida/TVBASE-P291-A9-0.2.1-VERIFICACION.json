@@ -1,0 +1,137 @@
+{
+  "version": "0.2.1",
+  "package_id": "TVBASE-P291-A9-0.2.1",
+  "operation": "install_reviewed_with_userdata_migration",
+  "file": "rom-simplificada/original-p291/instalacion-021/salida/TVBASE-P291-A9-0.2.1-RECOVERY.zip",
+  "bytes": 573688933,
+  "sha256": "dcb152c77e55cb067d6e88a8144990a3edb5d06568ea8cdfdc414a0fa21aac58",
+  "manifest": {
+    "format": 3,
+    "id": "TVBASE-P291-A9-0.2.1",
+    "dt_id": "gxlx2_p291_1g",
+    "media_id": "TVBASE-P291-20260906-4dc82786",
+    "operation": "install_reviewed_with_userdata_migration",
+    "data_policy": "backup_raw_userdata_then_format_ext4",
+    "platform_version": "0.2.0",
+    "data_bytes": 3495952384,
+    "data_major_minor": "179:20",
+    "filesystem_bytes": 3495936000,
+    "images": [
+      {
+        "name": "system",
+        "entry": "tvbase/system.img",
+        "size": 1342177280,
+        "sha256": "e602d62182400f2b785b9044dd28b767791bcafb411146f988b719c6e722dc7b",
+        "major_minor": "179:18",
+        "original_sha256": "249611912b7b1fa277d169f8612f9a719df3abf99dc98ed8e817657e2c9beb2c"
+      },
+      {
+        "name": "vendor",
+        "entry": "tvbase/vendor.img",
+        "size": 943718400,
+        "sha256": "57c1f319e1c1f7df6918b2ffd513b1b0a63611e498fa6000826ee34206ef9fee",
+        "major_minor": "179:16",
+        "original_sha256": "d542fc091469a7c1223c1d5091f8ec6b3456f38dd1218b779d18d1942190d2a7"
+      },
+      {
+        "name": "product",
+        "entry": "tvbase/product.img",
+        "size": 134217728,
+        "sha256": "c8550c937cb85257e58d8d70414b9162141d9e20cf199406d4ca3cfacf8ab00e",
+        "major_minor": "179:19",
+        "original_sha256": "ef2c71f6208e25fa1cc9d5c12cb04972ac20d772e2c11a76972859403b530075"
+      },
+      {
+        "name": "odm",
+        "entry": "tvbase/odm.img",
+        "size": 134217728,
+        "sha256": "97836d5a1b016b64d3875c82cb5f3b4daee0f56d8eea3675b4231086429cbe67",
+        "major_minor": "179:17",
+        "original_sha256": "97836d5a1b016b64d3875c82cb5f3b4daee0f56d8eea3675b4231086429cbe67"
+      },
+      {
+        "name": "boot",
+        "entry": "tvbase/boot.img",
+        "size": 16777216,
+        "sha256": "c1a71479498bdfd8368fb1ade42ae293cb97f6087c43c3a8f8f31535725113fc",
+        "major_minor": "179:11",
+        "original_sha256": "13e027a3aae1af232d1d700421486f32b7958a9fa0a157d8cbd3c47243ab697d"
+      }
+    ]
+  },
+  "original_backup_manifests": [
+    {
+      "path": "privado/TVBASE-respaldo-P291-20260907-194104-0deb291b/manifest.json",
+      "sha256": "f6dfa30b2f06af499e978f4a4cf7b4317eb32743897f7120d325382d79052522"
+    },
+    {
+      "path": "privado/TVBASE-respaldo-P291-20260907-194413-6d502965/manifest.json",
+      "sha256": "9943d0634aad628159869cace6c47034668e2cbb56632fdd2c5337e5fd2ffe2e"
+    }
+  ],
+  "review_report": "rom-simplificada/original-p291/IMAGENES-0.2.0.json",
+  "review_report_sha256": "11927b01a773a6b4dc7e762fb85e86bf7bc15782f34d035a3aa202bc917c7a12",
+  "boot_validation": {
+    "kernel_sha256": "9968c75f691f67dcb805ef8105e1ca534f73430bcf8b3920a066580e326b791a",
+    "dtb_sha256": "13e54b5f1bba959e398da74b9d0859d08ba1747840ed3866eca1f3461c550d01",
+    "ramdisk_sha256": "ab85369fe4883d272be2c1914f45624b0e882393e99b7dbd230189b3cc93feb1",
+    "header_version": 1,
+    "header_size": 1648,
+    "header_id_verified": true,
+    "bytes": 16777216
+  },
+  "signature": {
+    "signature_algorithm": "RSA-PKCS1v1.5/SHA1",
+    "signed_bytes": 573687155,
+    "signed_region_sha256": "b60f061c4ede5fed263cc4c7c208ff8fdc30c2e6c61e944b7b10f836182e3f38",
+    "sha1_policy_replay_verified": true,
+    "certificate_sha256": "a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc",
+    "oem_recovery_executed": false
+  },
+  "recovery_v1_trust": {
+    "key_version": 1,
+    "rsa_exponent": 3,
+    "rsa_bits": 2048,
+    "digest": "SHA1",
+    "keyfile_sha256": "cd0788004cfa998c7bbede4811b791187139504a01415b9d30df5609458398df",
+    "certificate_sha256": "a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc"
+  },
+  "openjdk_signature_verified": true,
+  "payload_sha256_verified": true,
+  "zip_crc_verified": true,
+  "windows_package_verifier_passed": true,
+  "installer_sha256": "5683b97d700d115ef9c4cda869a24d9a9c728aa6ffc61e1fcdca12645880c2f1",
+  "builder_sha256": "0ac78cb09a66ba95625615685cbc05654610e6546f1c5d253b33f5b0a647846e",
+  "signature_helper_sha256": "a7100a026eaea8586fba5c5daa770ffbb6c991daff67df7801f05bb4bb0469ce",
+  "originals_unchanged": true,
+  "data_policy": "backup_raw_userdata_then_format_ext4",
+  "userdata_format_after_verified_backup": true,
+  "formatter_sha256": "2b1799d99503493f46f130f861889e0f03eb00d39cc633212890823bf1f86525",
+  "platform_images_version": "0.2.0",
+  "immutable_platform_proof": {
+    "platform_version": "0.2.0",
+    "release_receipt_sha256": "12f26e3a95a22d330d6af0f6784baefb9b259926bf98206def35439ef81ffac2",
+    "release_zip_sha256": "bd4a8dd7df8d61580c5b450867bda2ef2b214b400b4cafcce5a26baa5c48a614",
+    "image_report_sha256": "11927b01a773a6b4dc7e762fb85e86bf7bc15782f34d035a3aa202bc917c7a12",
+    "composition_receipt_sha256": "69850195fefbacda9c6b1d3ca57f0c2e0677c993078bb85adbda68a7c150238e"
+  },
+  "native_runtime_probes": {
+    "formatter_regular_file_receipt_sha256": "085307e017eaa1475f66cd43616167c97b22b36587945e737ae54547e96d27c4",
+    "block_ioctl_readonly_receipt_sha256": "ca8e5ee80aaf055e2851c48ea30fa181745ee0ec2966940978c8e715ced2b619",
+    "formatter_regular_file_native_passed": true,
+    "arm32_block_ioctl_native_passed": true,
+    "partition_format_in_recovery_tested": false,
+    "recovery_mount_tested": false
+  },
+  "physically_installed": false,
+  "oem_recovery_acceptance_confirmed": false,
+  "restore_path_tested": false,
+  "pending_before_install": [
+    "physical_recovery_entry_with_direct_USB_package"
+  ],
+  "limits": [
+    "Non-A/B; no automatic rollback",
+    "Test key and legacy SHA1 are compatibility measures, not production update security",
+    "Full userdata backup is created in recovery before formatting; restoring that backup requires an exact-backup restore operation, not the old five-partition restore ZIP"
+  ]
+}
