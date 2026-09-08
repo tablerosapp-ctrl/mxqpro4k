@@ -1,0 +1,53 @@
+{
+  "schema": "tvbase-recognition-pc-tests-2",
+  "state": "passed",
+  "created_utc": "2026-09-08T20:02:29.463654+00:00",
+  "compilation_receipt_sha256": "e5e5eacdd9e0e9fec5d825309c52cde5d3515fca48759eea5797db804bfc4716",
+  "groups": [
+    {
+      "receipt": "diagnostico/reconocedor-0.2/privado/test-sequence-eaik1hev/result.json",
+      "sha256": "c89d8c054e68556bad280957266240e249390f19696aa61bd836de57632bb7c9",
+      "state": "passed",
+      "count": 10,
+      "scope": "Java real CaptureSequence/ReportArchive, export ports simulated"
+    },
+    {
+      "receipt": "diagnostico/reconocedor-0.2/privado/pruebas-importador-20260908-195650-911654/RESULTADO.json",
+      "sha256": "88368d9ae77468f89369a02d0d14c8c6c4ed313fc54aaa5b9dc97ddcd230af27",
+      "state": "passed",
+      "count": 30,
+      "scope": "Python importer regression, including real verified P271 ZIP"
+    },
+    {
+      "receipt": "diagnostico/reconocedor-0.2/privado/test-hardware-collector-6maj05s3/result.json",
+      "sha256": "b6055fc69b65e433dfc8b46f45427c58d83924925b4d81bb97b8fa06e0e20fa6",
+      "state": "passed",
+      "count": 5,
+      "scope": "Java worker and byte-limit test groups; no Android API execution"
+    }
+  ],
+  "source_sha256": {
+    "diagnostico/reconocedor-0.2/src/AndroidManifest.xml": "3f6b8cc8dedba3456f9ab8f8cf8d36f57aea54cbab81126d80b1e4120d9922fd",
+    "diagnostico/reconocedor-0.2/src/CaptureSequence.java": "1f7af3b43ea41165723811ddbe7881b590150155a258ce1ce3124e46d67b3096",
+    "diagnostico/reconocedor-0.2/src/HardwareCollector.java": "0e23754e4537df31e2ea180d00dcf93ecc3c085d76c93d973e81986878f61dbf",
+    "diagnostico/reconocedor-0.2/src/MainActivity.java": "8d41f6fc2e3a3930a44d54d55b5504143ca3c3f331231b1816c17a4b84270844",
+    "diagnostico/reconocedor-0.2/src/ReportArchive.java": "b0aba65236622ebb65fed75b5fd976045c4b9ec6264bd2e3aaa15078d4f5253f",
+    "diagnostico/reconocedor-0.2/src/UsbStore.java": "f02d153d7ce50ccde040d7874e6f513c27ea218b5ea03e25c521b60bd6b3a1c8"
+  },
+  "test_source_sha256": {
+    "diagnostico/reconocedor-0.2/tests/CaptureSequenceHarness.java": "993cce4a9d00a9aa43b82cc1d8ff3c174169455ebcdb8b05030f783f6ddd594b",
+    "diagnostico/reconocedor-0.2/tests/HardwareCollectorHarness.java": "8ba520c3481887a459116f2ee66b703eda467c3c64e46d35d1e15714059706cc",
+    "diagnostico/reconocedor-0.2/tests/new_importer_test.py": "a868a1206c18e873cde99de7f7ef45ae74abebc8a5f826b8fde6f2aaf95c678b",
+    "diagnostico/reconocedor-0.2/tests/test_capture_sequence.py": "e62379713f764db24dd1b3c5e68b98a6c78ff7c2851dda7be97b036b30ca28f3",
+    "diagnostico/reconocedor-0.2/tests/test_hardware_collector.py": "23c8d98862173c827d90d415aff032140a9e2abb97e3932d5a456e5b3b334431"
+  },
+  "source_unchanged_after_build": true,
+  "apk_android_tested": false,
+  "usb_export_android02_tested": false,
+  "physical_mx9_hang_resolved": false,
+  "limits": [
+    "Host tests do not execute Android services, real blocking kernel syscalls, UI or document provider.",
+    "P271 report from version0.1 verified in PC; no ROM/recovery backup inferred.",
+    "USB file delivery has its own receipt; no volume flush or physical safe removal claim."
+  ]
+}

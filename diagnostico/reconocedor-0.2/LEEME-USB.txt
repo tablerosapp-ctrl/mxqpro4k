@@ -1,0 +1,31 @@
+RECONOCIMIENTO TV BASE 0.2 — PRÓXIMA PRUEBA: MX9 5G
+
+1. Conectá el pendrive al MX9 encendido en Android.
+2. Abrí TVBASE-RECONOCIMIENTO y ejecutá Reconocimiento-TVBase-0.2.apk.
+   Aceptá actualizar la aplicación existente, sin desinstalarla ni borrar sus datos.
+3. Abrí Reconocimiento TV Base y comprobá que arriba diga 0.2.
+4. Escribí MX9 5G como nombre opcional y pulsá Capturar y guardar este equipo.
+   Guarda primero una ficha inicial en USB; después continúa con el inventario.
+   No recorre ni copia miles de propiedades/archivos de drivers como la 0.1.
+5. Si pide elegir pendrive, seleccioná TVBASE-RECONOCIMIENTO en el USB.
+   Volver a guardar copia la última ficha cerrada, sin repetir lecturas.
+   Si solo quedó la ficha inicial, pulsá Completar inventario desde la ficha inicial.
+6. Esperá INVENTARIO GUARDADO Y RELEÍDO. Expulsá el USB desde Android,
+   retiralo y devolvelo a la PC para revisar los resultados.
+
+Es normal obtener dos ZIP: ficha inicial e inventario enlazado. Los anteriores se conservan.
+Si una consulta de Android no responde, su límite se registra; no se abren consultas
+nuevas mientras aquella siga viva. El informe puede ser parcial. No se garantiza que
+una operación de almacenamiento bloqueada pueda interrumpirse.
+Si aparece un error, conservá el mensaje y devolvé el USB sin repetir por rutina.
+
+P271: su captura 0.1 ya quedó conservada y verificada en PC; no hace falta repetirla.
+Se agregó TVBASE-EXTRACCION/PLANES/P271.json, derivado de ese informe.
+Falta comprobar la entrada y compatibilidad del recovery del P271 antes de usarlo.
+No ejecutar ahora Update, AccesoUSB-0.9 ni la ROM/restaurador del P291 en otros TV.
+
+La 0.2 reconoce hardware declarado, paquetes, codecs y bindings accesibles.
+No es respaldo de ROM: las imágenes originales requieren el extractor por recovery
+compatible, que abre las fuentes solo para lectura. No instala ROM, no pide root,
+no habilita ADB ni accede a Internet. No certifica ausencia de malware.
+Los archivos de versiones anteriores, reportes y respaldos permanecen conservados.

@@ -1,5 +1,17 @@
 # Continuidad de TV Base
 
+## Vigente · P271 capturado y reconocedor0.2 entregado para MX9
+
+- [P271/MX9](diagnostico/reconocimiento-20260908-p271-mx9/HALLAZGOS.md): ZIP P27169.460.957B SHA3824c4355ec7f75d25dd09a5ca406c90cc017ceab3d45b14732c94f62a7e073f,2464entradas/2463archivosmanifest verificados y originales/copias/recibo/foto privados. Exportación Android0.1 real, fileSynctrue/dirSyncfalse; adquisiciónPC íntegra. No MX9ZIP ni captura deextractor.
+- P271 DTgxlx_p271_1g/API28/ARM32; eMMC7.820.083.200B,data3.665.625.088B,WiFi8822bs distintoP291. Nuevo mapaAndroidsysfs20particiones constarts; NOioctl/recovery/ROM/respaldo departiciones. Chrome70 observadoenreconocedor, lista50codecs sinVP9/AV1 aunque móduloVP9Live, noinferir funcionalidad. No repetir capturaP271.
+- UserconfirmóMX9másde15min sincontadorescambiar antesretirarUSB. FotoMX9 1410entradas/1246copias/0MB redondeados: noidentifica operación niSoC.0.1 DTwalkantesdrivers+fsyncporarchivo+límitecooperativo podíaimpedir guardado. Nuncaafirmarcausaexacta o flashMX9. NuevaAPK0.2separada: ficha inicialsellada/exportada antesinventario, dossesiones/ZIP enlazados; sin copiasbinarios/DTprofundo; slotúnico bloqueado hastafinreal, sinlatewriters. Reanudainventario desdebaseline, reexportasiya terminó. AlmacenamientoUSB/local aúnpuedebloquear. [Contrato](diagnostico/reconocedor-0.2/README.md).
+- Entrega0.2 enKingston verificada/código0: APK90515B SHA336bfab87d9d4d2983cad8f920545988cb2bbea44b6ff31edde066b5b0604b51, guía0.2 yplanP271376B SHA112e438c447c64257d897a7d0947cb4cf07e2884a52b5e3960e471756c9eeac3. [Recibo](preparacion-usb/reconocimiento-02-estado.json), [pruebas](docs/evidencia/RECONOCEDOR-USB-02.md).205anterioresSHA+8grandesmetadatos preservados,23.271.522.304B libres; sinborrados/formato/repair/TVcontact. No repetirpreparador; fuentes0.2/COMPILACIONselladas. Flusharchivos sí, volumen/expulsiónnoacreditados.
+- SiguienteMX9: actualizarAPKexistente0.2 desdeTVBASE-RECONOCIMIENTO, conservar datos; Capturar (oCompletar desdefichainicial), esperarINVENTARIOGUARDADO,expulsarAndroid,devolverUSB. No usar0.1ni repetirlaslecturasfallidas. PlanP271ya enTVBASE-EXTRACCION/PLANES/P271.jsonderivadodeZIPíntegro; entrada/firma/recoveryporcomprobar, noUpdate/Acceso09/ENV/BCB/ROMP291 a ciegas.
+- Importador0.2corrige capture_state/parent_capture_id;0.1catalogohistórico decíaunspecified porcampo incorrecto, noinformeinválido. P291instaladoHome/WebView/rendimiento/auditoríamalware/servidor siguenpendientes. Publicarsoloespejosaneado, no reportesplanesoimágenes enclaroni claves. ADR-32rige flujo nuevo.
+
+## Antecedente · entrega combinada inicial
+
+
 ## Vigente · extractor combinado 0.1 entregado
 
 - Usuario aprobó APK + paquete de extracción desde recovery basado en informeAPK. [Contrato](diagnostico/extractor-recovery-0.1/README.md), [evidencia](docs/evidencia/EXTRACTOR-RECOVERY-01.md), [P271](docs/evidencia/RECOVERY-P271-ALCANCE.md). No se modifica/flashea recovery ni se ejecuta el instalador022 parcialmente.

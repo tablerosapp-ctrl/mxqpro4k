@@ -1,0 +1,54 @@
+{
+  "schema": "tvbase-recognition-usb-delivery-1",
+  "state": "verified",
+  "version": "0.2",
+  "created_at": "2026-09-08T17:00:34.2435775-03:00",
+  "completed_at": "2026-09-08T17:00:41.7874149-03:00",
+  "exit_code": 0,
+  "compilation_receipt_sha256": "e5e5eacdd9e0e9fec5d825309c52cde5d3515fca48759eea5797db804bfc4716",
+  "source_files_checked": 6,
+  "files": [
+    {
+      "name": "Reconocimiento-TVBase-0.2.apk",
+      "bytes": 90515,
+      "sha256": "336bfab87d9d4d2983cad8f920545988cb2bbea44b6ff31edde066b5b0604b51",
+      "file_flush_verified": true,
+      "readback_verified": true,
+      "relative_path": "TVBASE-RECONOCIMIENTO/Reconocimiento-TVBase-0.2.apk"
+    },
+    {
+      "name": "LEEME-0.2.txt",
+      "bytes": 2082,
+      "sha256": "19fcb246fee86a23bab502d2253f346114a45107a0ba515c50036c009b01fb0d",
+      "file_flush_verified": true,
+      "readback_verified": true,
+      "relative_path": "TVBASE-RECONOCIMIENTO/LEEME-0.2.txt"
+    },
+    {
+      "name": "P271.json",
+      "bytes": 376,
+      "sha256": "112e438c447c64257d897a7d0947cb4cf07e2884a52b5e3960e471756c9eeac3",
+      "file_flush_verified": true,
+      "readback_verified": true,
+      "relative_path": "TVBASE-EXTRACCION/PLANES/P271.json"
+    }
+  ],
+  "existing_inventory_preserved": true,
+  "old_small_files_sha_verified": 205,
+  "old_large_files_metadata_verified": 8,
+  "old_large_files_content_rehashed": false,
+  "small_file_limit_bytes": 67108864,
+  "before_file_bytes": 7650428310,
+  "after_file_bytes": 7650521283,
+  "free_bytes_after": 23271522304,
+  "reports_preserved": true,
+  "plan_operation": "capture_read_only",
+  "android_tested": false,
+  "android_usb_export_tested": false,
+  "tv_contacted": false,
+  "format_requested": false,
+  "repair_requested": false,
+  "existing_files_removed": 0,
+  "safe_removal_pending": true,
+  "volume_flush_verified": false
+}

@@ -185,3 +185,13 @@ CLAVE-PRIVADA-RESPALDO-*.txt
 !/diagnostico/extractor-recovery-0.1/COMPILACION.json
 !/diagnostico/extractor-recovery-0.1/PRUEBAS-PC.json
 !/diagnostico/extractor-recovery-0.1/LEEME-USB.txt
+
+# Reconocimiento0.2: nueva versión; informes y compilaciones permanecen privados.
+!/diagnostico/reconocedor-0.2/src/*.java
+!/diagnostico/reconocedor-0.2/src/AndroidManifest.xml
+!/diagnostico/reconocedor-0.2/tests/*.java
+!/diagnostico/reconocedor-0.2/tests/stubs/
+!/diagnostico/reconocedor-0.2/tests/stubs/**/*.java
+!/diagnostico/reconocedor-0.2/COMPILACION.json
+!/diagnostico/reconocedor-0.2/PRUEBAS-PC.json
+!/diagnostico/reconocedor-0.2/LEEME-USB.txt

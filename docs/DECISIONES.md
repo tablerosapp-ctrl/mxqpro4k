@@ -135,3 +135,9 @@ El usuario dio OK para implementar el paso0 y preparar Kingston, con distintos T
 Se conserva todo el contenido previo del USB. La carpeta nueva contiene APK/guía/marcador y acumula ZIP en INFORMES. Copia local, manifiesto/hash, relectura y recibo por transporte permiten revisar exportaciones; un archivo parcial no se convierte en éxito. El importadorPC no extrae ni ejecuta drivers, y almacena datos privados. [Entrega, revisión y pruebas](evidencia/RECONOCEDOR-USB-01.md).
 
 La autorización no activa servidor, modifica ROM ni corrige Home. La captura física y escritura desde Android siguen pendientes al entregar; no se declara reconocimiento completo de toda placa o respaldo de la ROM. Fuentes/entrega0.1 se conservan para comparar con los ZIP que devuelva el usuario.
+
+## ADR-32 · Ficha inicial persistida antes del inventario y copia profunda separada
+
+La captura P271 0.1 llegó íntegra, pero el usuario informó que MX9 5G quedaba detenido durante copias. La operación exacta no está acreditada. Se constató en código que 0.1 recorría todo DT antes de drivers y su límite solo actuaba entre llamadas. Una operación de archivos bloqueada podía impedir la primera exportación.
+
+Reconocedor 0.2 guarda y exporta una ficha inicial antes de consultas adicionales. El inventario usa otra sesión/ZIP enlazado; nunca empaqueta una carpeta que un trabajador tardío pueda escribir. Las observaciones comparten un solo trabajador real, sin cola; un timeout no libera el slot hasta que termina. El estado inicial permite reanudar inventario sin releer DT, y la exportación permite reutilizar archivos cerrados. La copia de binarios/particiones sigue en el extractor por recovery compatible; no se elimina ni modifica su contrato. [Implementación](../diagnostico/reconocedor-0.2/README.md), [evidencia P271/MX9](../diagnostico/reconocimiento-20260908-p271-mx9/HALLAZGOS.md). C-RECON/C-EXTRACT/C-USB, REQ-18/19, VAL-12. Sin nuevos cambios de ROM, root o arranque.

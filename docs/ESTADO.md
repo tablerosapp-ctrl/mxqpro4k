@@ -1,5 +1,16 @@
 # Estado operativo
 
+## Vigente · captura P271 verificada; reconocedor0.2 preparado para MX9
+
+El USB volvió con un informe P271 íntegro y sin informe MX9 ni extracción desde recovery. [Hallazgos](../diagnostico/reconocimiento-20260908-p271-mx9/HALLAZGOS.md). La captura P271 agrega mapa sysfs con inicios y 157.174.723 bytes de archivos accesibles. No equivale a un respaldo de particiones. P271 difiere de P291 en memoria y WiFi; no reutilizar su ROM.
+
+[Reconocedor0.2](../diagnostico/reconocedor-0.2/README.md) construido y entregado: ficha inicial exportada antes del inventario, sin copias masivas de drivers/DT, consultas con un solo trabajador real y sin escrituras tardías. [Evidencia y pruebas](evidencia/RECONOCEDOR-USB-02.md), [reciboUSB](../preparacion-usb/reconocimiento-02-estado.json). APK90515B más guía y planP271 copiados/releídos; todos los archivos anteriores conservados. No repetir preparador ni modificar fuentes/recibo sellados. No hay prueba física0.2 todavía.
+
+Siguiente: actualizar APK del MX9 desde TVBASE-RECONOCIMIENTO, capturar, esperar inventario guardado y devolver USB expulsado. El usuario confirmó más de15min sin progreso en0.1. La foto no permite conocer SoC ni operación bloqueada; 0MB era compatible con redondeo. P271 no necesita repetir captura; su plan ya está derivado y en el USB. Entrada/firma/ejecución de recoveryP271 pendientes. No usar Update/AccesoUSB09/ENV/BCB ni ROMP291 en otros perfiles por semejanza. Home, capa común, video/WebView, auditoría de servicios y servidor siguen pendientes.
+
+## Antecedente · entrega inicial del modo combinado
+
+
 ## Vigente · modo combinado y extractor0.1 entregados
 
 El usuario aprobó APK de identificación y paquete independiente para extraer originales desde recovery según esa información. [Contrato](../diagnostico/extractor-recovery-0.1/README.md) · [Entrega verificada](evidencia/EXTRACTOR-RECOVERY-01.md). DosZIP ARM32/ARM64 compilados, firmas Python/OpenJDK y copia/relectura Kingston comprobadas. La APK anterior y todos los respaldos permanecen; nueva carpeta TVBASE-EXTRACCION con CAPTURAS/PLANES vacíos. Recibo extractor-01-estado.json código0; no repetir preparador ni modificar la guía sellada.

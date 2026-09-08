@@ -23,7 +23,7 @@ flowchart LR
     C_ORIG["Originales del P291 · observado_tv"]
     C_PRODUCTO["Producto común · propuesto"]
     C_LOTES["Dos recorridos de lote · propuesto"]
-    C_RECON["Reconocimiento0.1 · construido"]
+    C_RECON["Reconocimiento0.2 · construido"]
     C_EXTRACT["Extracción recovery0.1 · construido"]
     C_PERFIL -->|"selecciona"| C_BASE
     C_CHROME -->|"motor admitido"| C_WEB
@@ -276,6 +276,8 @@ Requisitos: REQ-01.
 - [preparacion-usb/preparar-reconocimiento-01.ps1](../preparacion-usb/preparar-reconocimiento-01.ps1)
 - [preparacion-usb/reconocimiento-01-estado.json](../preparacion-usb/reconocimiento-01-estado.json)
 - [docs/evidencia/RECONOCEDOR-USB-01.md](../docs/evidencia/RECONOCEDOR-USB-01.md)
+- [preparacion-usb/preparar-reconocimiento-02.ps1](../preparacion-usb/preparar-reconocimiento-02.ps1)
+- [preparacion-usb/reconocimiento-02-estado.json](../preparacion-usb/reconocimiento-02-estado.json)
 
 ### C-TV · P291: TV Base y WiFi
 
@@ -401,9 +403,9 @@ Requisitos: REQ-15, REQ-16, REQ-17.
 - [docs/PROPUESTA-LOTES-Y-ACTUALIZACIONES.md](../docs/PROPUESTA-LOTES-Y-ACTUALIZACIONES.md)
 - [docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md](../docs/PLAN-RECONOCIMIENTO-Y-PRODUCTO.md)
 
-### C-RECON · Reconocimiento0.1
+### C-RECON · Reconocimiento0.2
 
-**construido**. APK normal API21+ con informes secuenciales, archivos accesibles y límites. Entregada/releída en Kingston; Android físico pendiente, sin root/ADB/red.
+**construido**. P2710.1 recibido y verificado; correcciónMX9 con ficha inicial exportada, inventario acotado y un solo lector real.0.2 USBverificado, pruebaAndroidpendiente.
 
 Requisitos: REQ-02, REQ-14, REQ-18.
 
@@ -424,10 +426,29 @@ Requisitos: REQ-02, REQ-14, REQ-18.
 - [diagnostico/reconocedor-0.1/src/MainActivity.java](../diagnostico/reconocedor-0.1/src/MainActivity.java)
 - [diagnostico/reconocedor-0.1/src/ReportArchive.java](../diagnostico/reconocedor-0.1/src/ReportArchive.java)
 - [diagnostico/reconocedor-0.1/src/UsbStore.java](../diagnostico/reconocedor-0.1/src/UsbStore.java)
+- [diagnostico/reconocedor-0.2/COMPILACION.json](../diagnostico/reconocedor-0.2/COMPILACION.json)
+- [diagnostico/reconocedor-0.2/compilar.py](../diagnostico/reconocedor-0.2/compilar.py)
+- [diagnostico/reconocedor-0.2/importar-informes.py](../diagnostico/reconocedor-0.2/importar-informes.py)
+- [diagnostico/reconocedor-0.2/LEEME-USB.txt](../diagnostico/reconocedor-0.2/LEEME-USB.txt)
+- [diagnostico/reconocedor-0.2/README.md](../diagnostico/reconocedor-0.2/README.md)
+- [diagnostico/reconocedor-0.2/src/AndroidManifest.xml](../diagnostico/reconocedor-0.2/src/AndroidManifest.xml)
+- [diagnostico/reconocedor-0.2/src/CaptureSequence.java](../diagnostico/reconocedor-0.2/src/CaptureSequence.java)
+- [diagnostico/reconocedor-0.2/src/HardwareCollector.java](../diagnostico/reconocedor-0.2/src/HardwareCollector.java)
+- [diagnostico/reconocedor-0.2/src/MainActivity.java](../diagnostico/reconocedor-0.2/src/MainActivity.java)
+- [diagnostico/reconocedor-0.2/src/ReportArchive.java](../diagnostico/reconocedor-0.2/src/ReportArchive.java)
+- [diagnostico/reconocedor-0.2/src/UsbStore.java](../diagnostico/reconocedor-0.2/src/UsbStore.java)
+- [diagnostico/reconocedor-0.2/tests/CaptureSequenceHarness.java](../diagnostico/reconocedor-0.2/tests/CaptureSequenceHarness.java)
+- [diagnostico/reconocedor-0.2/tests/HardwareCollectorHarness.java](../diagnostico/reconocedor-0.2/tests/HardwareCollectorHarness.java)
+- [diagnostico/reconocedor-0.2/tests/new_importer_test.py](../diagnostico/reconocedor-0.2/tests/new_importer_test.py)
+- [diagnostico/reconocedor-0.2/tests/test_capture_sequence.py](../diagnostico/reconocedor-0.2/tests/test_capture_sequence.py)
+- [diagnostico/reconocedor-0.2/tests/test_hardware_collector.py](../diagnostico/reconocedor-0.2/tests/test_hardware_collector.py)
+- [docs/evidencia/RECONOCEDOR-USB-02.md](../docs/evidencia/RECONOCEDOR-USB-02.md)
+- [diagnostico/reconocimiento-20260908-p271-mx9/HALLAZGOS.md](../diagnostico/reconocimiento-20260908-p271-mx9/HALLAZGOS.md)
+- [diagnostico/reconocedor-0.2/PRUEBAS-PC.json](../diagnostico/reconocedor-0.2/PRUEBAS-PC.json)
 
 ### C-EXTRACT · Extracción recovery0.1
 
-**construido**. APK verificada→plan DT→inventario y copias eMMCRO desde recovery compatible. Entregado USB; física y aceptación por perfil pendientes.
+**construido**. ExtractorRO compilado y entregado, sin prueba física. Plan P271 derivado de ZIP íntegro y copiado; entrada/firma recovery pendientes.
 
 Requisitos: REQ-11, REQ-18, REQ-19.
 
@@ -493,12 +514,12 @@ Requisitos: REQ-11, REQ-18, REQ-19.
 | README.md | 1 | 0.000 |
 | actualizacion-chrome | 51 | 0.417 |
 | analisis-rom | 15 | 1.822 |
-| diagnostico | 213 | 0.018 |
-| docs | 55 | 0.001 |
+| diagnostico | 231 | 0.018 |
+| docs | 56 | 0.001 |
 | dossier-s905l2.html | 1 | 0.000 |
 | images | 1 | 1.352 |
 | platform-tools-latest-windows.zip | 1 | 0.008 |
-| preparacion-usb | 96 | 3.688 |
+| preparacion-usb | 98 | 3.688 |
 | rom-simplificada | 4619 | 14.542 |
 | tools | 18088 | 1.173 |
 

@@ -1,5 +1,10 @@
 # P271: alcance comprobado para un extractor desde recovery
 
+## Actualización · captura APK recibida el 8/9/2026
+
+El [nuevo informe P271](../../diagnostico/reconocimiento-20260908-p271-mx9/HALLAZGOS.md) ya aporta starts, nombres lógicos y topología sysfs para 20 particiones, además de archivos accesibles. La ausencia de esos datos que se describe debajo corresponde a la captura anterior. Se confirma el tamaño diferente respecto de P291. Se generó un plan privado de extracción desde el ZIP verificado. No se adquirieron imágenes de particiones ni se acreditó entrada/firma/ejecución en recovery. Los apartados siguientes conservan el alcance histórico de la revisión inicial.
+
+
 Revisión local del 8/9/2026. El usuario pide ahora extraer los originales desde recovery, sin instalar una ROM ni una APK; informa que la entrada del P271 es parecida a la del P291 y que puede entrar con facilidad en otros equipos. Esa observación orienta el trabajo, pero no acredita todavía una secuencia concreta de entrada, un ZIP aceptado ni una captura de bloques del P271. Esta revisión no contactó ningún TV, no escribió al pendrive y no montó ni modificó firmware.
 
 ## Evidencia del segundo TV
