@@ -1,5 +1,13 @@
 # Decisiones y lecciones
 
+## ADR-37 · Backup al final y dos lecturas antes de escribir SD
+
+La captura físicaRK2 muestra SHA de destino coincidente con primera lectura de p10backup y segunda lectura distinta. El usuario pide conservar el avance e intentar esa zona al final, no excluirla. Se construye0.3/RK3 vinculada al CID y mapa recoveryC adquiridos, sin lectura de todaeMMC que impida controlar el orden.
+
+Las fuentes elegibles ordinarias mantienen sus tres comprobaciones; se ordenan físicamente y backup64MiB queda última. Para ella se verifica memoria, se leen dos veces consecutivas origen usandoRAM y, solo conSHAiguales, se escribe/sincroniza/releeSD. NoO_DIRECT, atomicidad ni causa demostrada. Error conserva estadosprevios; nunca se acepta origen cambiante. MontajesRW/holders siguen siendo guardas, no se remonta ni escribeinterno.
+
+Se conserva captura anterior enPCySD. Lector parcial separado valida archivos y estados sin promover cierre total. Fuentes/build/recibos anteriores inmutables; nueva entrega sustituye soloZIP/guía trasarchivar y revalidar. [Evidencia](evidencia/ERROR-RK2-BACKUP-C.md), [entrega](evidencia/EXTRACTOR-SD-03.md). C-EXTRACT/C-USB/C-PERFIL,REQ-11/18/19,VAL-12. PruebaRK3 y restauración pendientes.
+
 ## ADR-36 · SD de carga y respaldo, sin depender del montaje USB
 
 La prueba física RK1 ejecutó el extractor pero terminó con cero destinos USB válidos. No prueba ausencia universal de soporte USB ni inició una copia. El usuario pidió evaluar SD como destino y autorizó completar la preparación. [Fallo y conservación](evidencia/ERROR-RK1-DESTINO-USB.md).

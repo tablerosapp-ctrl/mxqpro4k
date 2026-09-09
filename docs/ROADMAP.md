@@ -3,8 +3,8 @@
 ## Reconocimiento combinado · prioridad actual
 
 1. P271 y tres variantes RK3229 reconocidos; [C recibido por copia manual](../diagnostico/reconocimiento-20260908-rk3229-manual/HALLAZGOS.md). Esta captura no necesita repetición. [Matriz de bases](MATRIZ-PERFILES.md): RAM anómala en B y diferentes particiones/radios; API25 impide trasladar directamente el motor138 deP291.
-2. Primera extracción en el último RK3229-C: RK1 ejecutó pero abortó antes de capturar por destinoUSB no encontrado. SD0.2/RK2 preparada y verificada para cargar y guardar en la misma SD; usar sólo SD, sin Kingston. [Entrega nueva](evidencia/EXTRACTOR-SD-02.md). La copia física sigue pendiente, sin ROMP291 ni UpdateAndroid.
-3. Verificar en PC imágenes, inventario nuevo y omisiones; conservar privado. Cambiar el plan antes de A/B porque comparten DT. P271 conserva su plan diferente y entrada por resolver. No hay extracción física nueva acreditada todavía.
+2. Continuar originales del mismo RK3229-C: RK2 dejó parameter verificado y falló en backup. RK3 copia primero el resto e intenta backup al final mediante RAM. [EntregaSD nueva](evidencia/EXTRACTOR-SD-03.md); prueba física pendiente, sin ROMP291 ni UpdateAndroid.
+3. Importar y verificar por fuente la nueva captura, aunque el último paso falle; conservar originales y omisiones. Antes de A/B preparar su propia política tras revisar C: compartirDT no basta y RK3 está vinculado a esta unidad. P271 conserva su plan diferente y entrada por resolver.
 4. Calificar capa común, Home, WebView/video y recursos. Prioridad expresa: [revisión de telefonía, servicios heredados y malware](REVISION-COMPONENTES-HEREDADOS.md). Mantener auditoría de consumo/tráfico y dependencias antes de retirar paquetes.
 5. Instalación rápida por perfil y actualización propia siguen separadas del reconocedor y pendientes de validación/implementación.
 

@@ -1,5 +1,11 @@
 # Especificación del producto y aceptación
 
+## Ampliación ADR-37 · intento diferido de backup
+
+REQ-11/18/19 y VAL-12: RK2 produjo una captura parcial física verificada enPC. Solo parameter4MiB tiene origen estable acreditado; backup64MiB difirió entre lecturas. El usuario exige intentar también esa zona alfinal. RK3 vincula CID/maparecoveryC y copia antes las demás fuentes elegibles; backup usa doslecturasorigen consecutivas enRAM y solo guardaSD conSHAiguales, seguido de sincronización/relecturaSD. El resto conserva sus comprobaciones; no se omiten fuentes por espacio ni se aceptan diferencias. No se lee todaeMMC para poder controlar el orden. ÁreasRW/holders siguen protegidas.
+
+El lector parcial registra fuentes verificadas sin declarar captura completa; la verificación físicaRK3 y restauración siguen pendientes. [Contrato y entrega](evidencia/EXTRACTOR-SD-03.md), [evidencia recuperada](evidencia/ERROR-RK2-BACKUP-C.md). Sin nuevaROM, root, formato ni cambio delrecovery.
+
 ## ADR-36 · destinoSD para la primera extracción C
 
 REQ-11/18/19 y VAL-12: RK1 aceptado/ejecutado físicamente, sin captura porque findUSB no encontró destino válido. Nueva0.2/RK2 exige la SD física preparada y el paquete en ese mismo volumen; separación eMMC, espacio real, reserva128MiB, partes1GiB e integridad permanecen. Construcción/revisión/copiaPC no cierran VAL-12. [Contrato y entrega](evidencia/EXTRACTOR-SD-02.md). Sin formato, montaje forzado, ROM ni cambios de Kingston.

@@ -1,5 +1,9 @@
 # Bases conocidas y siguiente extracción
 
+## Actualización de evidencia de C
+
+RecoveryC confirmó eMMC7818182656B y quinceparticiones; Android había mostrado catorce. `parameter` p1 quedó verificada; `backup` p10 cambió entre lecturas. `system` y `userdata` son p14/p15 en recovery. [Evidencia](evidencia/ERROR-RK2-BACKUP-C.md). No trasladar índices/offsets entre entornos ni variantes. RK3 se vinculó solo a esta unidad para intentar el resto y backup alfinal; no hay aún ROMRockchip ni respaldo completo.
+
 Actualizado el 8 de septiembre de 2026. Esta matriz reúne las configuraciones observadas; no autoriza intercambiar ROM entre ellas. A/B/C son etiquetas locales de inventario. El nombre comercial MXQ Pro 4K 5G se repite en placas distintas.
 
 | Base | Android observado | Memoria interna expuesta | Radio observada | Originales / estado |

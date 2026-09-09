@@ -1,0 +1,25 @@
+{
+  "schema": "tvbase-pc-capture-reader-tests-3",
+  "state": "passed",
+  "utc": "2026-09-09T01:04:13.497862+00:00",
+  "tests": 38,
+  "passed": 37,
+  "skipped": [
+    {
+      "test": "test_symlink_file_and_root (test_verificar_captura.VerificationTests.test_symlink_file_and_root)",
+      "reason": "OS does not permit this test account to create symbolic links"
+    }
+  ],
+  "failures": 0,
+  "errors": 0,
+  "files": {
+    "verificar-captura.py": "e0702cb1bc11e328857e846925908285fc1dcd592829788c0ca58ac48f92b6c4",
+    "verificar-parcial.py": "8e83ad634aced1e4bfa85a1f04d5a8a49e0aa24119915e30cf5325ee579d30a0",
+    "test_verificar_captura.py": "6cb715069a4bcd6898cefd375388a12de6ab18cc8d9732aef24df4cd16266bb1",
+    "test_verificar_parcial.py": "0519a2c5edaedc8ae9e520effad975a7adee33a31371b305daa1a5c5a07a97b5"
+  },
+  "real_rk2_failed_capture_checked": true,
+  "real_verified_source_bytes": 4194304,
+  "real_failed_source_bytes_not_accepted": 67108864,
+  "scope": "PC regular-file fixtures and acquired RK2 files only. No device paths opened, no media modified, no RK3 physical test, no restoration."
+}

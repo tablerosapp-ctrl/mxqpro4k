@@ -108,6 +108,28 @@ mxqpro4k/
 │   │   ├── selection_test.go
 │   │   ├── test_verificar_captura.py
 │   │   └── verificar-captura.py
+│   ├── extractor-recovery-0.3/
+│   │   ├── buffered_backup.go
+│   │   ├── buffered_backup_test.go
+│   │   ├── capture.go
+│   │   ├── capture_test.go
+│   │   ├── go.mod
+│   │   ├── main_linux.go
+│   │   ├── main_windows.go
+│   │   ├── platform_linux.go
+│   │   ├── PRUEBAS-LECTOR-PC.json
+│   │   ├── README.md
+│   │   ├── sd_linux.go
+│   │   ├── sd_policy.go
+│   │   ├── sd_policy_test.go
+│   │   ├── selection.go
+│   │   ├── selection_test.go
+│   │   ├── source_policy.go
+│   │   ├── source_policy_test.go
+│   │   ├── test_verificar_captura.py
+│   │   ├── test_verificar_parcial.py
+│   │   ├── verificar-captura.py
+│   │   └── verificar-parcial.py
 │   ├── extractor-recovery-rk1/
 │   │   ├── COMPILACION.json
 │   │   ├── empaquetar.py
@@ -116,6 +138,12 @@ mxqpro4k/
 │   │   ├── REVISION.json
 │   │   └── VerifyWholeZip.java
 │   ├── extractor-recovery-rk2/
+│   │   ├── COMPILACION.json
+│   │   ├── compilar.py
+│   │   ├── README.md
+│   │   ├── REVISION.json
+│   │   └── REVISION.md
+│   ├── extractor-recovery-rk3/
 │   │   ├── COMPILACION.json
 │   │   ├── compilar.py
 │   │   ├── README.md
@@ -260,15 +288,18 @@ mxqpro4k/
 │   │   ├── ERROR-INSTALADOR-P291-021.json
 │   │   ├── ERROR-INSTALADOR-P291-021.md
 │   │   ├── ERROR-RK1-DESTINO-USB.md
+│   │   ├── ERROR-RK2-BACKUP-C.md
 │   │   ├── EXTRACCION-RK3229-C.md
 │   │   ├── EXTRACTOR-RECOVERY-01.md
 │   │   ├── EXTRACTOR-SD-02.md
+│   │   ├── EXTRACTOR-SD-03.md
 │   │   ├── git-inicial.json
 │   │   ├── HERRAMIENTA-SD-ROCKCHIP.md
 │   │   ├── INSTALACION-FISICA-P291-022.md
 │   │   ├── INSTALADOR-P291-022.md
 │   │   ├── LEEME-EXTRACCION-RK3229-C.txt
 │   │   ├── LEEME-SD-RK3229-C-02.txt
+│   │   ├── LEEME-SD-RK3229-C-03.txt
 │   │   ├── LEEME-SD-RK3229-C.txt
 │   │   ├── limpieza-plan.json
 │   │   ├── limpieza-resultado.json
@@ -285,8 +316,10 @@ mxqpro4k/
 │   │   ├── REINICIOS-P291-SIN-USB.md
 │   │   ├── RESPALDO-CIFRADO.json
 │   │   ├── RESPALDO-GITHUB-PUBLICADO.json
+│   │   ├── RK2-C-CAPTURA-PARCIAL-PC.json
 │   │   ├── ROM-ORIGINAL-P291-020.md
 │   │   ├── SD-02-LECTURA-FINAL.json
+│   │   ├── SD-03-LECTURA-FINAL.json
 │   │   ├── SD-CONTINUACION-PRUEBAS-PC.json
 │   │   ├── SD-LECTURA-FINAL.json
 │   │   ├── SD-PREPARADOR-PRUEBAS-PC.json
@@ -386,6 +419,7 @@ mxqpro4k/
 │   ├── preparar-reconocimiento-03.ps1
 │   ├── preparar-rom-012.ps1
 │   ├── preparar-sd-rk3229-c-02.ps1
+│   ├── preparar-sd-rk3229-c-03.ps1
 │   ├── preparar-sd-rk3229-c.ps1
 │   ├── probar-archivo-kingston.ps1
 │   ├── reconocimiento-01-estado.json
@@ -399,6 +433,7 @@ mxqpro4k/
 │   ├── REVISION-ORIGINAL-022.json
 │   ├── rom-012-estado.json
 │   ├── sd-rk3229-c-02-estado.json
+│   ├── sd-rk3229-c-03-estado.json
 │   ├── sd-rk3229-c-continuacion-estado.json
 │   ├── sd-rk3229-c-entrega-estado.json
 │   ├── sd-rk3229-c-final-estado.json

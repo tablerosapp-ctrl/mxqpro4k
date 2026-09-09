@@ -1,8 +1,8 @@
 {
-  "date_utc": "2026-09-09T00:36:21.370884+00:00",
+  "date_utc": "2026-09-09T01:10:34.478719+00:00",
   "state": "passed",
-  "links_checked": 1039,
-  "component_paths_checked": 364,
+  "links_checked": 1106,
+  "component_paths_checked": 397,
   "graph_valid": true,
   "roadmap_acyclic": true,
   "html_embedded_data_matches": true,
@@ -110,6 +110,11 @@
     {
       "name": "TVBASE-EXTRACTOR-0.2-RK2-ARM32-RECOVERY.zip",
       "sha256": "3d9e6a18c023ccc4a355aab738537655049016634dcf855990b307aa619486cd",
+      "matched": true
+    },
+    {
+      "name": "TVBASE-EXTRACTOR-0.3-RK3-ARM32-RECOVERY.zip",
+      "sha256": "ff9595f7a64a64df77f1c1d4904a896922e62a6be51d6a9e94247e79da985d01",
       "matched": true
     }
   ],

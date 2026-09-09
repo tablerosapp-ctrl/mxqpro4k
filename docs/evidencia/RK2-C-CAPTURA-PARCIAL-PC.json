@@ -1,0 +1,100 @@
+{
+  "schema": "tvbase-partial-capture-verification-1",
+  "status": "failed_capture_files_verified_pc",
+  "capture_complete": false,
+  "capture_modified": false,
+  "verified_source_bytes": 4194304,
+  "sources": [
+    {
+      "name": "mmcblk0p1",
+      "state": "verified",
+      "copied_bytes_checked": 4194304,
+      "verified_source_bytes": 4194304
+    },
+    {
+      "name": "mmcblk0p10",
+      "state": "failed",
+      "copied_bytes_checked": 67108864,
+      "verified_source_bytes": 0
+    },
+    {
+      "name": "mmcblk0p12",
+      "state": "omitted",
+      "copied_bytes_checked": 0,
+      "verified_source_bytes": 0
+    },
+    {
+      "name": "mmcblk0p13",
+      "state": "omitted",
+      "copied_bytes_checked": 0,
+      "verified_source_bytes": 0
+    },
+    {
+      "name": "mmcblk0p14",
+      "state": "omitted",
+      "copied_bytes_checked": 0,
+      "verified_source_bytes": 0
+    },
+    {
+      "name": "mmcblk0p15",
+      "state": "omitted",
+      "copied_bytes_checked": 0,
+      "verified_source_bytes": 0
+    },
+    {
+      "name": "mmcblk0p2",
+      "state": "omitted",
+      "copied_bytes_checked": 0,
+      "verified_source_bytes": 0
+    },
+    {
+      "name": "mmcblk0p3",
+      "state": "omitted",
+      "copied_bytes_checked": 0,
+      "verified_source_bytes": 0
+    },
+    {
+      "name": "mmcblk0p4",
+      "state": "omitted",
+      "copied_bytes_checked": 0,
+      "verified_source_bytes": 0
+    },
+    {
+      "name": "mmcblk0p5",
+      "state": "omitted",
+      "copied_bytes_checked": 0,
+      "verified_source_bytes": 0
+    },
+    {
+      "name": "mmcblk0p6",
+      "state": "omitted",
+      "copied_bytes_checked": 0,
+      "verified_source_bytes": 0
+    },
+    {
+      "name": "mmcblk0p7",
+      "state": "omitted",
+      "copied_bytes_checked": 0,
+      "verified_source_bytes": 0
+    },
+    {
+      "name": "mmcblk0p8",
+      "state": "omitted",
+      "copied_bytes_checked": 0,
+      "verified_source_bytes": 0
+    },
+    {
+      "name": "mmcblk0p9",
+      "state": "omitted",
+      "copied_bytes_checked": 0,
+      "verified_source_bytes": 0
+    }
+  ],
+  "failed_report_sha256": "92207c5085c8b78c440ff17c3ba34fdb290abbd32382aacbc36b77378f9f73f6",
+  "all_device_storage_copied": false,
+  "restore_tested": false,
+  "scope": "Previously verified sources only; failed source bytes are not a stable original.",
+  "utc": "2026-09-09T01:03:31.126196+00:00",
+  "reader_sha256": "8e83ad634aced1e4bfa85a1f04d5a8a49e0aa24119915e30cf5325ee579d30a0",
+  "full_reader_sha256": "e0702cb1bc11e328857e846925908285fc1dcd592829788c0ca58ac48f92b6c4"
+}

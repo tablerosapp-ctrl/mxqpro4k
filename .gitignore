@@ -218,3 +218,10 @@ CLAVE-PRIVADA-RESPALDO-*.txt
 !/diagnostico/extractor-recovery-0.2/PRUEBAS-LECTOR-PC.json
 !/diagnostico/extractor-recovery-rk2/COMPILACION.json
 !/diagnostico/extractor-recovery-rk2/REVISION.json
+
+# Extractor C0.3/RK3: fuentes y recibos; CID, informes y binarios privados.
+!/diagnostico/extractor-recovery-0.3/*.go
+!/diagnostico/extractor-recovery-0.3/go.mod
+!/diagnostico/extractor-recovery-0.3/PRUEBAS-LECTOR-PC.json
+!/diagnostico/extractor-recovery-rk3/COMPILACION.json
+!/diagnostico/extractor-recovery-rk3/REVISION.json

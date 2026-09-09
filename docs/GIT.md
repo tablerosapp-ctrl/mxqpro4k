@@ -1,5 +1,9 @@
 # Historial local y publicación pública
 
+## Cierre SD0.3 / RK3
+
+Se versionan evidencia del fallo p10, políticaC/varianteRAM, lectores completo/parcial y pruebas, construcción/revisión y entregaSD. Se preservan builds fallidos y releases anteriores en privado. Los nueve archivos adquiridos y el CID no se publican; solo fuentes, resúmenes y recibos saneados. El espejo público se actualiza mediante la auditoría existente.
+
 ## Cierre SD0.2 / RK2
 
 Se versionan el fallo físicoRK1, el extractorSD0.2 y su empaquetadoRK2, pruebas/revisión, preparador y recibos nuevos. Los originales y planes permanecen privados; el espejo público se audita y publica por el flujo existente. Los recibos previos no se reescriben para atribuirles aceptación o entrega posterior.

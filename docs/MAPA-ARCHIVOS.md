@@ -15,7 +15,7 @@ flowchart LR
     C_ZIP["Instalador 0.2.2 usado · observado_tv"]
     C_REC["Restaurador022 · verificado_local"]
     C_ENTRY["Entrada 0.9 lograda · observado_tv"]
-    C_USB["SD de carga y copias para C · verificado_local"]
+    C_USB["SD RK3 con captura anterior · verificado_local"]
     C_TV["P291: TV Base y WiFi · observado_tv"]
     C_APP["APK del producto · propuesto"]
     C_GESTION["Gestor propio 0.1 · verificado_local"]
@@ -24,7 +24,7 @@ flowchart LR
     C_PRODUCTO["Producto común · propuesto"]
     C_LOTES["Dos recorridos de lote · propuesto"]
     C_RECON["Reconocimiento0.3 · observado_tv"]
-    C_EXTRACT["Extracción SD0.2 / RK2 · construido"]
+    C_EXTRACT["Extracción SD0.3 / RK3 · construido"]
     C_PERFIL -->|"selecciona"| C_BASE
     C_CHROME -->|"motor admitido"| C_WEB
     C_INICIO -->|"se integra"| C_ROM
@@ -251,9 +251,9 @@ Requisitos: REQ-11.
 - [rom-simplificada/original-p291/entrada-apk/EJECUCION-TV-09.json](../rom-simplificada/original-p291/entrada-apk/EJECUCION-TV-09.json)
 - [docs/evidencia/PREPARACION-ENTRADA-P291-09.md](../docs/evidencia/PREPARACION-ENTRADA-P291-09.md)
 
-### C-USB · SD de carga y copias para C
+### C-USB · SD RK3 con captura anterior
 
-**verificado_local**. SD0.2/RK2 copiada/releída sin formato; Kingston conservado. Misma SD como carga/destino, primer respaldo físico pendiente. RK1 ejecutó y encontró0destinosUSB.
+**verificado_local**. ZIP/guía03 copiados y releídos, siete archivos previos iguales. Sin formato ni cambios Kingston; pruebaTV pendiente.
 
 Requisitos: REQ-01.
 
@@ -304,6 +304,13 @@ Requisitos: REQ-01.
 - [docs/evidencia/EXTRACTOR-SD-02.md](../docs/evidencia/EXTRACTOR-SD-02.md)
 - [docs/evidencia/ERROR-RK1-DESTINO-USB.md](../docs/evidencia/ERROR-RK1-DESTINO-USB.md)
 - [docs/evidencia/LEEME-SD-RK3229-C-02.txt](../docs/evidencia/LEEME-SD-RK3229-C-02.txt)
+- [preparacion-usb/preparar-sd-rk3229-c-03.ps1](../preparacion-usb/preparar-sd-rk3229-c-03.ps1)
+- [preparacion-usb/sd-rk3229-c-03-estado.json](../preparacion-usb/sd-rk3229-c-03-estado.json)
+- [docs/evidencia/SD-03-LECTURA-FINAL.json](../docs/evidencia/SD-03-LECTURA-FINAL.json)
+- [docs/evidencia/LEEME-SD-RK3229-C-03.txt](../docs/evidencia/LEEME-SD-RK3229-C-03.txt)
+- [docs/evidencia/EXTRACTOR-SD-03.md](../docs/evidencia/EXTRACTOR-SD-03.md)
+- [docs/evidencia/ERROR-RK2-BACKUP-C.md](../docs/evidencia/ERROR-RK2-BACKUP-C.md)
+- [docs/evidencia/RK2-C-CAPTURA-PARCIAL-PC.json](../docs/evidencia/RK2-C-CAPTURA-PARCIAL-PC.json)
 
 ### C-TV · P291: TV Base y WiFi
 
@@ -493,9 +500,9 @@ Requisitos: REQ-02, REQ-14, REQ-18.
 - [diagnostico/reconocimiento-20260908-rk3229-manual/HALLAZGOS.md](../diagnostico/reconocimiento-20260908-rk3229-manual/HALLAZGOS.md)
 - [diagnostico/reconocimiento-20260908-rk3229-manual/EVIDENCIA-SANEADA.json](../diagnostico/reconocimiento-20260908-rk3229-manual/EVIDENCIA-SANEADA.json)
 
-### C-EXTRACT · Extracción SD0.2 / RK2
+### C-EXTRACT · Extracción SD0.3 / RK3
 
-**construido**. RK1 ejecutado, detuvo antescaptura por destinoUSB no encontrado. Nuevo0.2/RK2 usa SD física, misma quepaquete; firma/pruebasPC/entrega verificadas, extracción física pendiente.
+**construido**. RK2 parcial preservado. VarianteC: otrasparticionesprimero, backup64MiBúltima enRAM conSHAestricto. Build/revisión/entregaPC; ejecuciónTVpendiente.
 
 Requisitos: REQ-11, REQ-18, REQ-19.
 
@@ -554,6 +561,32 @@ Requisitos: REQ-11, REQ-18, REQ-19.
 - [diagnostico/extractor-recovery-rk2/README.md](../diagnostico/extractor-recovery-rk2/README.md)
 - [diagnostico/extractor-recovery-rk2/REVISION.json](../diagnostico/extractor-recovery-rk2/REVISION.json)
 - [diagnostico/extractor-recovery-rk2/REVISION.md](../diagnostico/extractor-recovery-rk2/REVISION.md)
+- [diagnostico/extractor-recovery-0.3/PRUEBAS-LECTOR-PC.json](../diagnostico/extractor-recovery-0.3/PRUEBAS-LECTOR-PC.json)
+- [diagnostico/extractor-recovery-0.3/README.md](../diagnostico/extractor-recovery-0.3/README.md)
+- [diagnostico/extractor-recovery-0.3/buffered_backup.go](../diagnostico/extractor-recovery-0.3/buffered_backup.go)
+- [diagnostico/extractor-recovery-0.3/buffered_backup_test.go](../diagnostico/extractor-recovery-0.3/buffered_backup_test.go)
+- [diagnostico/extractor-recovery-0.3/capture.go](../diagnostico/extractor-recovery-0.3/capture.go)
+- [diagnostico/extractor-recovery-0.3/capture_test.go](../diagnostico/extractor-recovery-0.3/capture_test.go)
+- [diagnostico/extractor-recovery-0.3/go.mod](../diagnostico/extractor-recovery-0.3/go.mod)
+- [diagnostico/extractor-recovery-0.3/main_linux.go](../diagnostico/extractor-recovery-0.3/main_linux.go)
+- [diagnostico/extractor-recovery-0.3/main_windows.go](../diagnostico/extractor-recovery-0.3/main_windows.go)
+- [diagnostico/extractor-recovery-0.3/platform_linux.go](../diagnostico/extractor-recovery-0.3/platform_linux.go)
+- [diagnostico/extractor-recovery-0.3/sd_linux.go](../diagnostico/extractor-recovery-0.3/sd_linux.go)
+- [diagnostico/extractor-recovery-0.3/sd_policy.go](../diagnostico/extractor-recovery-0.3/sd_policy.go)
+- [diagnostico/extractor-recovery-0.3/sd_policy_test.go](../diagnostico/extractor-recovery-0.3/sd_policy_test.go)
+- [diagnostico/extractor-recovery-0.3/selection.go](../diagnostico/extractor-recovery-0.3/selection.go)
+- [diagnostico/extractor-recovery-0.3/selection_test.go](../diagnostico/extractor-recovery-0.3/selection_test.go)
+- [diagnostico/extractor-recovery-0.3/source_policy.go](../diagnostico/extractor-recovery-0.3/source_policy.go)
+- [diagnostico/extractor-recovery-0.3/source_policy_test.go](../diagnostico/extractor-recovery-0.3/source_policy_test.go)
+- [diagnostico/extractor-recovery-0.3/test_verificar_captura.py](../diagnostico/extractor-recovery-0.3/test_verificar_captura.py)
+- [diagnostico/extractor-recovery-0.3/test_verificar_parcial.py](../diagnostico/extractor-recovery-0.3/test_verificar_parcial.py)
+- [diagnostico/extractor-recovery-0.3/verificar-captura.py](../diagnostico/extractor-recovery-0.3/verificar-captura.py)
+- [diagnostico/extractor-recovery-0.3/verificar-parcial.py](../diagnostico/extractor-recovery-0.3/verificar-parcial.py)
+- [diagnostico/extractor-recovery-rk3/COMPILACION.json](../diagnostico/extractor-recovery-rk3/COMPILACION.json)
+- [diagnostico/extractor-recovery-rk3/README.md](../diagnostico/extractor-recovery-rk3/README.md)
+- [diagnostico/extractor-recovery-rk3/REVISION.json](../diagnostico/extractor-recovery-rk3/REVISION.json)
+- [diagnostico/extractor-recovery-rk3/REVISION.md](../diagnostico/extractor-recovery-rk3/REVISION.md)
+- [diagnostico/extractor-recovery-rk3/compilar.py](../diagnostico/extractor-recovery-rk3/compilar.py)
 
 ## Directorios y cuidado
 
@@ -594,12 +627,12 @@ Requisitos: REQ-11, REQ-18, REQ-19.
 | README.md | 1 | 0.000 |
 | actualizacion-chrome | 51 | 0.417 |
 | analisis-rom | 15 | 1.822 |
-| diagnostico | 278 | 0.019 |
-| docs | 71 | 0.001 |
+| diagnostico | 304 | 0.019 |
+| docs | 76 | 0.001 |
 | dossier-s905l2.html | 1 | 0.000 |
 | images | 1 | 1.352 |
 | platform-tools-latest-windows.zip | 1 | 0.008 |
-| preparacion-usb | 114 | 3.688 |
+| preparacion-usb | 116 | 3.688 |
 | rom-simplificada | 4619 | 14.542 |
 | tools | 18088 | 1.173 |
 

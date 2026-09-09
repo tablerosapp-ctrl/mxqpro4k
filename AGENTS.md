@@ -1,5 +1,17 @@
 # Continuidad de TV Base
 
+## Vigente · RK2 parcial conservado; RK3 intenta backup al final
+
+- Leer [falloRK2](docs/evidencia/ERROR-RK2-BACKUP-C.md), [entregaRK3](docs/evidencia/EXTRACTOR-SD-03.md) y [contrato0.3](diagnostico/extractor-recovery-0.3/README.md). Recovery real ejecutóRK2; parameter p1/4MiB verified, backup p10/64MiB source_changed, doce fuentes no intentadas. Cache p11 montadaRW omitida; p10 no montada/holders. No atribuir causa exacta ni aceptar backup como original estable.
+- Adquisición privada9archivos/72719981B con copia/sync/SHA origen-destino-origen. Fotos/failed-report/inventario/partes intactos. [Lector parcialPC](docs/evidencia/RK2-C-CAPTURA-PARCIAL-PC.json) solo acredita4194304B deorigen. No respaldo completo ni restauración RK.
+- Usuario corrigió: NO excluir zona inestable; intentar al final convariante. Nueva0.3/RK3 obliga CID privado y mapa EXACTO recoveryC (15particiones, parameterp1/systemp14/datap15); no mapaAndroid ni otrosRK. Política backup-last, wholeeMMC prohibida para ordenar. Copia las otras elegibles primero; backup64MiB última: lecturaRAM→segundaorigen→soloSHAiguales escribe/sync/releeSD. TresSHAiguales; sinO_DIRECT, cachekernelposible. MemAvailable o estimación3.10 conguardas/margen64MiB. Falla mantiene fuentespreviasverified e informeparcial; no ignorarerrores ni reintento automático.
+- Fuentes0.3/RK3, construcción/revisión y recibos nuevos; 0.1/0.2/RK1/RK2 inmutables. Primer buildRK3 falló en guardaPC de buildinfo/trimpath, conservado; construcción siguiente verificó símbolo enlazado, no fue un intentoTV/SD. CIDhash solo en material privado/binary; no incluirlo enrepo público.
+- SD exacta8053063680B, partición8052015104B desde1MiB,FAT32TVBASESD. [Entrega03](preparacion-usb/sd-rk3229-c-03-estado.json) y [relecturaindependiente](docs/evidencia/SD-03-LECTURA-FINAL.json). Solo ZIP+guía reemplazados trasarchivar; 7archivos anteriores SHAiguales, captura sigueSD. Kingston conservado, sinformato/reparación/raw. No repetir preparador03 ni limpieza. Flusharchivos sí; expulsiónWindows/flushvolumen noobservados.
+- Siguiente: expulsarSD dePC, mismoRK3229-C/CNV8b.20230725, Apply update from SD card→update.zip. NoKingstonnecesario, niA/B/P271/otros. Esperarfin; errorconservartexto sinrepetir/wipe. Trasmenú reiniciarAndroid yexpulsarSD; devolverPC paraimportar/verificar antesotroTV. NoROMinstalada por extractor; ejecuciónfísicaRK3pendiente.
+- Actualizar estado/grafo y publicar soloespejosaneado. Imágenes,userdata,planes,CID,claves yreportes crudos privados. La autorización actual es extracción; Home/WebView/auditoría/ROMcomún/actualizador siguenetapassiguientes.
+
+## Antecedente · entrega RK2 anterior al fallo de backup
+
 ## Vigente · RK1 ejecutó y no encontró USB; SD0.2/RK2 entregada
 
 - Leer [fallo físico RK1](docs/evidencia/ERROR-RK1-DESTINO-USB.md) y [entrega SD0.2](docs/evidencia/EXTRACTOR-SD-02.md). Foto: firma result0, update-binary0.1 ejecutado, findUSB encontró0 y abortó antesDT/plan/inventory/newDestination/Capture. No hay copia de bloques iniciada por ese intento; no atribuir causa exacta de no montaje. Aviso metadata no fue fatal.

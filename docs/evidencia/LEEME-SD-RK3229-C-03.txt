@@ -1,0 +1,27 @@
+TV Base - Extraccion de originales 0.3 / RK3
+SOLO para el ultimo Rockchip RK3229-C (recovery CNV8b.20230725).
+No instala una ROM ni modifica las particiones internas.
+
+1. Expulsar la SD TVBASESD desde Windows y conectarla al mismo TV C.
+   El Kingston no hace falta para esta captura.
+2. Entrar al recovery y elegir Apply update from SD card -> update.zip.
+   No elegir wipe, Recovery System ni paquetes de instalacion P291.
+3. Mantener la alimentacion y la tarjeta conectadas hasta el mensaje final.
+   Primero copia y verifica las otras particiones disponibles. Los 64 MB de
+   backup (mmcblk0p10) quedan para el final: lectura a RAM, otra lectura del
+   origen, y solo si coinciden guarda y verifica la copia en la SD.
+   El progreso cambia entre copia y verificaciones; no es una instalacion.
+4. Si termina correctamente, conservar el mensaje. Si aparece un error,
+   conservar su texto y no repetir automaticamente. Las fuentes que ya
+   terminaron verificadas permanecen guardadas, incluso si backup falla.
+5. Al volver al menu, elegir Reboot system now. Ya en Android, expulsar la
+   tarjeta antes de retirarla y conectarla a la PC para revisar los archivos.
+
+La captura anterior sigue en TVBASE-EXTRACCION/CAPTURAS. No borrarla.
+Cada intento crea una carpeta nueva. No usar esta SD en A/B o P271 aun:
+este ZIP exige identidad eMMC y mapa recovery exactos del C observado.
+Si falta memoria para los 64 MB finales, guarda el error sin aceptar backup.
+Las dos lecturas usan la cache normal del kernel: no prueban acceso fisico
+sin cache, autenticidad del firmware ni ausencia de malware.
+Cache montada en escritura permanece fuera de la captura por seguridad.
+No es una copia de toda la eMMC ni acredita una restauracion probada.

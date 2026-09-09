@@ -46,3 +46,12 @@
 # Recibos sellados: conservar CRLF de ConvertTo-Json y el cierre LF exactos.
 /preparacion-usb/sd-rk3229-c-02-estado.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 /docs/evidencia/SD-02-LECTURA-FINAL.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+/preparacion-usb/preparar-sd-rk3229-c-03.ps1 text eol=lf
+/diagnostico/extractor-recovery-0.3/*.go text eol=lf
+/diagnostico/extractor-recovery-0.3/go.mod text eol=lf
+/preparacion-usb/sd-rk3229-c-03-estado.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/docs/evidencia/SD-03-LECTURA-FINAL.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+/diagnostico/extractor-recovery-0.3/PRUEBAS-LECTOR-PC.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/docs/evidencia/RK2-C-CAPTURA-PARCIAL-PC.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

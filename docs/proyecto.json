@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "title": "TV Base",
-  "snapshot": "2026-09-09T00:36:06.729523+00:00",
-  "state": "P291 instalado; P271/RK reconocidos. RK1 ejecutó y abortó por destino USB. SD0.2/RK2 preparada para copia en la misma SD; extracción física pendiente.",
+  "snapshot": "2026-09-09T01:10:08.780173+00:00",
+  "state": "P291 instalado; P271/RK reconocidos. RK2 parcial: parameter verificado, backup cambiante. SD0.3/RK3 entregada: resto primero, backup al final con RAM; prueba física pendiente.",
   "installed": true,
   "original_tv_backup_confirmed": true,
   "source_of_truth": {
@@ -40,16 +40,16 @@
     "recognition": "diagnostico/reconocedor-0.3/README.md",
     "recognition_delivery": "preparacion-usb/reconocimiento-03-estado.json",
     "recognition_evidence": "docs/evidencia/RECONOCEDOR-USB-03.md",
-    "extractor": "diagnostico/extractor-recovery-0.2/README.md",
-    "extractor_delivery": "preparacion-usb/sd-rk3229-c-02-estado.json",
-    "extractor_build": "diagnostico/extractor-recovery-rk2/COMPILACION.json",
-    "extractor_evidence": "docs/evidencia/EXTRACTOR-RECOVERY-01.md",
+    "extractor": "diagnostico/extractor-recovery-0.3/README.md",
+    "extractor_delivery": "preparacion-usb/sd-rk3229-c-03-estado.json",
+    "extractor_build": "diagnostico/extractor-recovery-rk3/COMPILACION.json",
+    "extractor_evidence": "docs/evidencia/EXTRACTOR-SD-03.md",
     "inherited_services": "docs/REVISION-COMPONENTES-HEREDADOS.md",
     "latest_recognition_capture": "diagnostico/reconocimiento-20260908-rk3229-manual/HALLAZGOS.md",
     "profile_matrix": "docs/MATRIZ-PERFILES.md",
-    "current_extraction_delivery": "preparacion-usb/sd-rk3229-c-entrega-estado.json",
+    "current_extraction_delivery": "preparacion-usb/sd-rk3229-c-03-estado.json",
     "recognition_acquisition_summary": "diagnostico/reconocimiento-20260908-rk3229-manual/EVIDENCIA-SANEADA.json",
-    "current_extraction_evidence": "docs/evidencia/SD-RK3229-C.md",
+    "current_extraction_evidence": "docs/evidencia/EXTRACTOR-SD-03.md",
     "sd_recovery_analysis": "docs/evidencia/RECOVERY-CNV8B-SD.md",
     "sd_evidence": "docs/evidencia/SD-RK3229-C.md",
     "rk1_build": "diagnostico/extractor-recovery-rk1/COMPILACION.json",
@@ -60,7 +60,11 @@
     "rk1_physical_error": "docs/evidencia/ERROR-RK1-DESTINO-USB.md",
     "sd02_evidence": "docs/evidencia/EXTRACTOR-SD-02.md",
     "sd02_readback": "docs/evidencia/SD-02-LECTURA-FINAL.json",
-    "rk2_review": "diagnostico/extractor-recovery-rk2/REVISION.json"
+    "rk2_review": "diagnostico/extractor-recovery-rk2/REVISION.json",
+    "rk2_physical_result": "docs/evidencia/ERROR-RK2-BACKUP-C.md",
+    "rk2_partial_pc": "docs/evidencia/RK2-C-CAPTURA-PARCIAL-PC.json",
+    "rk3_review": "diagnostico/extractor-recovery-rk3/REVISION.json",
+    "sd03_readback": "docs/evidencia/SD-03-LECTURA-FINAL.json"
   },
   "components": [
     {
@@ -326,9 +330,9 @@
     },
     {
       "id": "C-USB",
-      "label": "SD de carga y copias para C",
+      "label": "SD RK3 con captura anterior",
       "state": "verificado_local",
-      "description": "SD0.2/RK2 copiada/releída sin formato; Kingston conservado. Misma SD como carga/destino, primer respaldo físico pendiente. RK1 ejecutó y encontró0destinosUSB.",
+      "description": "ZIP/guía03 copiados y releídos, siete archivos previos iguales. Sin formato ni cambios Kingston; pruebaTV pendiente.",
       "files": [
         "rom-simplificada/INSTALACION-USB.md",
         "preparacion-usb/rom-012-estado.json",
@@ -376,7 +380,14 @@
         "docs/evidencia/SD-02-LECTURA-FINAL.json",
         "docs/evidencia/EXTRACTOR-SD-02.md",
         "docs/evidencia/ERROR-RK1-DESTINO-USB.md",
-        "docs/evidencia/LEEME-SD-RK3229-C-02.txt"
+        "docs/evidencia/LEEME-SD-RK3229-C-02.txt",
+        "preparacion-usb/preparar-sd-rk3229-c-03.ps1",
+        "preparacion-usb/sd-rk3229-c-03-estado.json",
+        "docs/evidencia/SD-03-LECTURA-FINAL.json",
+        "docs/evidencia/LEEME-SD-RK3229-C-03.txt",
+        "docs/evidencia/EXTRACTOR-SD-03.md",
+        "docs/evidencia/ERROR-RK2-BACKUP-C.md",
+        "docs/evidencia/RK2-C-CAPTURA-PARCIAL-PC.json"
       ],
       "x": 3,
       "y": 1,
@@ -633,9 +644,9 @@
     },
     {
       "id": "C-EXTRACT",
-      "label": "Extracción SD0.2 / RK2",
+      "label": "Extracción SD0.3 / RK3",
       "state": "construido",
-      "description": "RK1 ejecutado, detuvo antescaptura por destinoUSB no encontrado. Nuevo0.2/RK2 usa SD física, misma quepaquete; firma/pruebasPC/entrega verificadas, extracción física pendiente.",
+      "description": "RK2 parcial preservado. VarianteC: otrasparticionesprimero, backup64MiBúltima enRAM conSHAestricto. Build/revisión/entregaPC; ejecuciónTVpendiente.",
       "files": [
         "diagnostico/extractor-recovery-0.1/COMPILACION.json",
         "diagnostico/extractor-recovery-0.1/LEEME-USB.txt",
@@ -691,7 +702,33 @@
         "diagnostico/extractor-recovery-rk2/compilar.py",
         "diagnostico/extractor-recovery-rk2/README.md",
         "diagnostico/extractor-recovery-rk2/REVISION.json",
-        "diagnostico/extractor-recovery-rk2/REVISION.md"
+        "diagnostico/extractor-recovery-rk2/REVISION.md",
+        "diagnostico/extractor-recovery-0.3/PRUEBAS-LECTOR-PC.json",
+        "diagnostico/extractor-recovery-0.3/README.md",
+        "diagnostico/extractor-recovery-0.3/buffered_backup.go",
+        "diagnostico/extractor-recovery-0.3/buffered_backup_test.go",
+        "diagnostico/extractor-recovery-0.3/capture.go",
+        "diagnostico/extractor-recovery-0.3/capture_test.go",
+        "diagnostico/extractor-recovery-0.3/go.mod",
+        "diagnostico/extractor-recovery-0.3/main_linux.go",
+        "diagnostico/extractor-recovery-0.3/main_windows.go",
+        "diagnostico/extractor-recovery-0.3/platform_linux.go",
+        "diagnostico/extractor-recovery-0.3/sd_linux.go",
+        "diagnostico/extractor-recovery-0.3/sd_policy.go",
+        "diagnostico/extractor-recovery-0.3/sd_policy_test.go",
+        "diagnostico/extractor-recovery-0.3/selection.go",
+        "diagnostico/extractor-recovery-0.3/selection_test.go",
+        "diagnostico/extractor-recovery-0.3/source_policy.go",
+        "diagnostico/extractor-recovery-0.3/source_policy_test.go",
+        "diagnostico/extractor-recovery-0.3/test_verificar_captura.py",
+        "diagnostico/extractor-recovery-0.3/test_verificar_parcial.py",
+        "diagnostico/extractor-recovery-0.3/verificar-captura.py",
+        "diagnostico/extractor-recovery-0.3/verificar-parcial.py",
+        "diagnostico/extractor-recovery-rk3/COMPILACION.json",
+        "diagnostico/extractor-recovery-rk3/README.md",
+        "diagnostico/extractor-recovery-rk3/REVISION.json",
+        "diagnostico/extractor-recovery-rk3/REVISION.md",
+        "diagnostico/extractor-recovery-rk3/compilar.py"
       ],
       "x": 2,
       "y": 3,
@@ -1152,7 +1189,7 @@
         "C-LOTES",
         "C-RECON"
       ],
-      "exit": "Reconocimiento propuesto como siguiente entregable independiente. Después calificar P291, P271 y Rockchip por identificar; instalación rápida solo por perfil aprobado.",
+      "exit": "P271 y RK A/B/C reconocidos. C: extracción parcial conservada y varianteRK3 entregada; pendientes resto de originales, calificación y bases. No instalación rápida aún.",
       "x": 3,
       "y": 1
     }
@@ -1442,6 +1479,16 @@
         "C-PERFIL"
       ],
       "state": "verificado_local"
+    },
+    {
+      "id": "ADR-37",
+      "file": "docs/DECISIONES.md",
+      "components": [
+        "C-EXTRACT",
+        "C-USB",
+        "C-PERFIL"
+      ],
+      "state": "verificado_local"
     }
   ],
   "validations": [
@@ -1556,6 +1603,17 @@
         "REQ-18"
       ],
       "note": "P271 y tres RK3229 capturados/importados; C0.3 recibido por traslado manual íntegro, no acredita escritura directa APK enUSB."
+    },
+    {
+      "id": "VAL-12",
+      "file": "docs/ESPECIFICACION.md",
+      "state": "pendiente",
+      "requirements": [
+        "REQ-11",
+        "REQ-18",
+        "REQ-19"
+      ],
+      "note": "Parcial físicoRK2: parameter4MiBverificado, backup64MiBcambiante, doce fuentes no intentadas. RK3entregada para resto+backupúltimaRAM. No respaldo completo ni restauración probada."
     }
   ],
   "artifacts": [
@@ -1701,7 +1759,14 @@
       "path": "privado/extractor-rk2-release-20260909-0138/TVBASE-EXTRACTOR-0.2-RK2-ARM32-RECOVERY.zip",
       "bytes": 1387097,
       "sha256": "3d9e6a18c023ccc4a355aab738537655049016634dcf855990b307aa619486cd",
-      "scope": "SD0.2 RK2: PC build signature review and media readback verified; physical capture pending"
+      "scope": "Executed in C recovery; partial capture acquired: parameter verified, backup source reread mismatch. Not a complete backup."
+    },
+    {
+      "name": "TVBASE-EXTRACTOR-0.3-RK3-ARM32-RECOVERY.zip",
+      "path": "privado/extractor-rk3-release-20260909-02/TVBASE-EXTRACTOR-0.3-RK3-ARM32-RECOVERY.zip",
+      "bytes": 1463158,
+      "sha256": "ff9595f7a64a64df77f1c1d4904a896922e62a6be51d6a9e94247e79da985d01",
+      "scope": "RK3 PC build/signature/review and SD readback verified. C-bound backup-last RAM variant; physical extraction pending."
     }
   ],
   "protected_paths": [
@@ -1880,9 +1945,9 @@
       ]
     }
   ],
-  "delivery_label": "SD RK1 + Kingston preparados",
-  "date_label": "8/9/2026 ART · primer P291 funcionando",
-  "next_step_label": "C: ambos medios → recovery → SD/update.zip",
+  "delivery_label": "SD0.3 / RK3: backup al final",
+  "date_label": "9/9/2026 UTC · captura parcial conservada",
+  "next_step_label": "Mismo RK3229-C: recovery → Apply update from SD card → update.zip. Devolver SD para verificar antes de otros TV.",
   "public_repository": {
     "url": "https://github.com/tablerosapp-ctrl/mxqpro4k",
     "visibility_requested": "public",
@@ -2040,9 +2105,17 @@
         "restore_zip_instructed": false,
         "superseded_by": "Do not repeat installation. Document results and await userOK."
       }
+    },
+    "rk2_extraction": {
+      "result": "partial_failed_source_reread",
+      "verified_source_bytes": 4194304,
+      "failed_source_bytes": 67108864,
+      "capture_retained_pc_and_sd": true,
+      "complete_backup": false,
+      "evidence": "docs/evidencia/ERROR-RK2-BACKUP-C.md"
     }
   },
-  "current_instruction": "Use SD RK1 as loader and existing Kingston as capture destination only on RK3229-C. Connect both before recovery. Select Apply update from SD card, update.zip. Return capture to PC before changing profile. No wipe, ROM installation, or preparer repetition.",
+  "current_instruction": "Use only SD RK3 on the same CID-bound RK3229-C. Select Apply update from SD card, update.zip. Ordinary eligible partitions first; backup last with consecutive RAM source reads. Preserve previous capture. No wipe, ROM installation, automatic retry, or other profiles. Return SD to PC after safe removal.",
   "encrypted_backup": {
     "state": "published_verified",
     "url": "https://github.com/tablerosapp-ctrl/mxqpro4k/releases/tag/respaldo-p291-20260908",
@@ -2093,12 +2166,12 @@
     "historical": true
   },
   "extractor_delivery": {
-    "receipt": "preparacion-usb/sd-rk3229-c-02-estado.json",
+    "receipt": "preparacion-usb/sd-rk3229-c-03-estado.json",
     "format_receipt": "preparacion-usb/sd-rk3229-c-final-estado.json",
     "verified_pc": true,
     "physical_recovery_tested": false,
     "plan_present": true,
-    "package_variant": "RK2",
+    "package_variant": "RK3",
     "sd_loader": true,
     "usb_destination": false,
     "historical_receipt": "preparacion-usb/extractor-01-estado.json",
@@ -2108,6 +2181,11 @@
     ],
     "prior_rk1_recovery_executed": true,
     "prior_rk1_capture_started": false,
-    "sd_destination": true
+    "sd_destination": true,
+    "prior_rk2_recovery_executed": true,
+    "prior_rk2_capture_complete": false,
+    "prior_capture_preserved": true,
+    "source_policy": "rk3229-c-backup-last-1",
+    "backup_variant": "source_source_destination_via_ram"
   }
 }

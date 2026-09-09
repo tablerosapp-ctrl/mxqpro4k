@@ -1,0 +1,36 @@
+{
+  "schema": "tvbase-sd03-independent-readback-1",
+  "utc": "2026-09-09T01:08:41.7705744Z",
+  "state": "verified",
+  "sd_bytes": 8053063680,
+  "partition_offset": 1048576,
+  "partition_bytes": 8052015104,
+  "filesystem": "FAT32",
+  "label": "TVBASESD",
+  "free_bytes": 7962386432,
+  "files": [
+    {
+      "bytes": 1463158,
+      "name": "update.zip",
+      "sha256": "ff9595f7a64a64df77f1c1d4904a896922e62a6be51d6a9e94247e79da985d01"
+    },
+    {
+      "bytes": 1735,
+      "name": "LEEME-SD.txt",
+      "sha256": "828d15eabeafe9ca517e4a605159e7882a8177fee26f2cf3cd78d821db21116a"
+    }
+  ],
+  "preserved_files_verified": 7,
+  "prior_capture_files_verified": 5,
+  "capture_complete": false,
+  "delivery_receipt_sha256": "763f635bb87f51bbd28dd0b11a15388e07c8c3ef3ed75e722d88368c16cdc071",
+  "build_receipt_sha256": "5480f011b29597e9e2533056066dc3952787a616b64e926f21c72db3cae2800a",
+  "readback_script_sha256": "39df546336712722553f49310c51024b0bc185283c6d229d853909d58b76061d",
+  "kingston_plan_verified": true,
+  "kingston_auto_update_names_absent": true,
+  "kingston_modified": false,
+  "media_writes_in_this_readback": false,
+  "tv_contacted": false,
+  "safe_removal_pending": true,
+  "volume_flush_verified": false
+}

@@ -1,0 +1,192 @@
+{
+  "schema": "tvbase-extractor-rk3-independent-review-1",
+  "state": "verified_pc_no_blocking_findings",
+  "created_utc": "2026-09-09T01:09:52.956639+00:00",
+  "build_receipt_sha256": "5480f011b29597e9e2533056066dc3952787a616b64e926f21c72db3cae2800a",
+  "private_artifact_review_sha256": "84a3b1edb466f1bb418afb0ca26e80f0b91432c552c77757d320fa8127b60322",
+  "private_real_inventory_replay_sha256": "ed1f94ceaf1bb1abe3c4382b7b67b38bf61a3613fc1d8ce143e4d2b058cf0183",
+  "package": {
+    "name": "TVBASE-EXTRACTOR-0.3-RK3-ARM32-RECOVERY.zip",
+    "bytes": 1463158,
+    "sha256": "ff9595f7a64a64df77f1c1d4904a896922e62a6be51d6a9e94247e79da985d01"
+  },
+  "core_source_sha256": {
+    "diagnostico/extractor-recovery-0.3/buffered_backup.go": "f68534cb38329d36005c1f09a42cdc416cd25cd2b161cf266dd5e971ef850705",
+    "diagnostico/extractor-recovery-0.3/buffered_backup_test.go": "58452fc9542b5e5c63074cf8365c87098142877ba33eeed647ba76530c5318dd",
+    "diagnostico/extractor-recovery-0.3/capture.go": "3d83c8afbfacd84cae9f21da628b4c1745e6cc5760557e6b3f08bc4b235b8798",
+    "diagnostico/extractor-recovery-0.3/capture_test.go": "bc79b9624545663b157defc7d82ce75257ab5539ea317c5559e579b796ff73a0",
+    "diagnostico/extractor-recovery-0.3/main_linux.go": "1034bf00b58a1306643d5aafc2e2790b37f9d1136ec26613617f830990e6e93e",
+    "diagnostico/extractor-recovery-0.3/main_windows.go": "401018af1c445ba9f3cfd47e4d93b5e117cc2ef09b821d820bd2fb35a50e7dac",
+    "diagnostico/extractor-recovery-0.3/platform_linux.go": "5f7e4ccedb033889a57e707698e2bb9cc926cc0dc9765e8256057b04083cba54",
+    "diagnostico/extractor-recovery-0.3/sd_linux.go": "200ac918281541daa7c27d0a466e287f5338e8f9fcd89508f7c7a5811be82784",
+    "diagnostico/extractor-recovery-0.3/sd_policy.go": "f417d628ab5e479db6118cdbbb5cef33cf90db39400131bca2fa3c067c8c5d2b",
+    "diagnostico/extractor-recovery-0.3/sd_policy_test.go": "8ee5372325efd2078be4407058a547471c7d3fa7be1ca34c901ff358b4c5864b",
+    "diagnostico/extractor-recovery-0.3/selection.go": "a9a71f32b78d9abedc3534ed0385dee5019d2e57042a470c62548fb671e1f1bd",
+    "diagnostico/extractor-recovery-0.3/selection_test.go": "8c52da642d7f629ee975adb540df0eca89bad311213c40ba19c8611fc6d80d75",
+    "diagnostico/extractor-recovery-0.3/source_policy.go": "f90d413ffd498d32dece919ed1f3883cd1df1a5c63aa44cf00ee3a33cff41d68",
+    "diagnostico/extractor-recovery-0.3/source_policy_test.go": "8b328ab56b9e277eb9f2a9d7bf2b018b4a69c737c04899aec125780ba42f3ea4",
+    "diagnostico/extractor-recovery-0.3/go.mod": "0419c40702daf109b6ed79a8802d1ddf82aa9e30bdd3ea56c05e480df54166c9",
+    "diagnostico/extractor-recovery-rk3/compilar.py": "3ea3fae2edccf289f0484a4156ed2832dad25103c60e8d1c7838c4de34173934"
+  },
+  "reader_source_sha256": {
+    "diagnostico/extractor-recovery-0.3/verificar-captura.py": "e0702cb1bc11e328857e846925908285fc1dcd592829788c0ca58ac48f92b6c4",
+    "diagnostico/extractor-recovery-0.3/verificar-parcial.py": "8e83ad634aced1e4bfa85a1f04d5a8a49e0aa24119915e30cf5325ee579d30a0",
+    "diagnostico/extractor-recovery-0.3/test_verificar_captura.py": "6cb715069a4bcd6898cefd375388a12de6ab18cc8d9732aef24df4cd16266bb1",
+    "diagnostico/extractor-recovery-0.3/test_verificar_parcial.py": "0519a2c5edaedc8ae9e520effad975a7adee33a31371b305daa1a5c5a07a97b5"
+  },
+  "artifact_method": "Sealed independent strict DER parser plus direct RSA modular exponentiation using public res/keys; no signer import or private key read",
+  "signature": {
+    "signed_bytes": 1461539,
+    "signed_region_sha256": "06980c79ede917f436df96c966b60570b34cb91f4a11e52d1fcd8dfde6a2f688",
+    "comment_bytes": 1617,
+    "pkcs7_bytes": 1549,
+    "rsa_bits": 2048,
+    "exponent": 3,
+    "direct_modular_exponentiation_verified": true,
+    "signed_attributes_present": false
+  },
+  "elf": {
+    "class_bits": 32,
+    "machine": "ARM",
+    "type": "ET_EXEC",
+    "static": true,
+    "flags": "0x5000002",
+    "bytes": 3621965,
+    "sha256": "b788619ef93b0d4df7ad7f55121df3aa019988f67954aab5bac20191c1188f50"
+  },
+  "members": [
+    {
+      "name": "META-INF/com/google/android/update-binary",
+      "bytes": 3621965,
+      "sha256": "b788619ef93b0d4df7ad7f55121df3aa019988f67954aab5bac20191c1188f50"
+    },
+    {
+      "name": "tvbase/extractor.json",
+      "bytes": 4178,
+      "sha256": "a35bd90f8c4671c5852c3d290361967afc6324601878a861bb7dda83fbbfcfc5"
+    },
+    {
+      "name": "META-INF/com/google/android/updater-script",
+      "bytes": 86,
+      "sha256": "e6a14b3e93f48dd5322182b37df5e9734ee6352e4a496259480695d752dcfdfc"
+    },
+    {
+      "name": "META-INF/com/android/otacert",
+      "bytes": 1440,
+      "sha256": "10a7b524d14750a12b44472524340df6b300f1b648fb63c3b17a161bde1e08d7"
+    }
+  ],
+  "negative_tests": [
+    {
+      "name": "signed data modified",
+      "rejected": true,
+      "reason": "Direct RSA PKCS1/SHA256 verification failed"
+    },
+    {
+      "name": "OTA footer modified",
+      "rejected": true,
+      "reason": "Invalid OTA footer"
+    },
+    {
+      "name": "RSA signature modified",
+      "rejected": true,
+      "reason": "Direct RSA PKCS1/SHA256 verification failed"
+    },
+    {
+      "name": "duplicate EOCD marker",
+      "rejected": true,
+      "reason": "Missing or duplicate EOCD"
+    },
+    {
+      "name": "P291 key instead of RK key",
+      "rejected": true,
+      "reason": "Direct RSA PKCS1/SHA256 verification failed"
+    }
+  ],
+  "private_identity_binding": {
+    "method": "Independent ELF32 symbol/object/Go string pointer+length within PT_LOAD",
+    "linked_variable": "main.rk3229CExpectedCID",
+    "linked_value_verified_against_acquired_inventory": true,
+    "private_value_published": false,
+    "source_and_public_metadata_do_not_contain_value": true,
+    "relies_on_runtime_kernel_truth": true
+  },
+  "static_checks": [
+    "Exact RK3229-C recovery map and private eMMC identity are required before selection and revalidated during capture. Other units and Android partition numbering are not substituted.",
+    "All eligible ordinary partitions are ordered by physical start; backup p10 is last. Whole eMMC user-area capture is prohibited so it cannot include backup indirectly.",
+    "Existing mounted-RW/superblock/holders/swap guards remain. Cache RW remains omitted; nothing is remounted or changed to force eligibility.",
+    "Only exact p10/179:10/64MiB/backup aliases may use the new branch. It requires a memory callback and remains last in the plan.",
+    "Memory guard requires 64MiB data plus 64MiB margin. MemAvailable is preferred; Linux 3.10 fallback requires MemTotal >=512MiB, valid kB fields and checked arithmetic, subtracting Shmem, Dirty and Writeback.",
+    "Backup is read completely into RAM, source is closed/revalidated/reopened and reread for SHA. No backup destination part is created unless both source hashes match.",
+    "After equality, RAM bytes are written to one exclusive SD file, synced, closed and reread. Copy SHA and SD SHA must equal both source reads; final identity and directory sync remain required.",
+    "Any mismatch or IO/revalidation/sync failure remains fatal. Previous verified sources remain in failed-report.json; a failed source is not accepted as stable.",
+    "Ordinary captureOne and following helper bodies are unchanged from 0.2. capture_test, Linux block/SD adapter and SD policy bytes are unchanged.",
+    "Internal blocks remain O_RDONLY. No O_DIRECT, mount, unmount, remount, format, flash, raw write, reboot, network operation or USB fallback is introduced.",
+    "Recorded source_policy and optional verification_order are validated by the full PC reader. Whole disk and wrong backup ordering are rejected.",
+    "Partial PC reader retains authoritative failure markers and counts only sources with verified part states plus matching copy/source-reread/PC hashes. Failed backup bytes cannot become a completed capture.",
+    "SD preparer pins the acquisition receipt and validates the exact nine previous files before changes. It identifies SD and Kingston, verifies archived predecessors, stages/re-reads two new files, then replaces only the two old known files and rechecks seven preserved files."
+  ],
+  "tests_scope": {
+    "go_host_top_level_tests": 38,
+    "go_host_pass_events": 187,
+    "go_host_environment": "Windows amd64; events include subtests and groups",
+    "linux_arm32_tests_compiled": true,
+    "linux_arm32_tests_executed": false,
+    "reviewer_reran_build_tests": false,
+    "new_buffered_tests": "Ordering; memory and both source failures before any backup file; destination/sync/revalidation errors; full 64MiB simulated mismatch preserves preceding verified source",
+    "real_inventory_replay": {
+      "state": "passed_pc",
+      "inventory_sha256": "4191609c6241c99d7a6c9754de4aa95c78d7b264cc173d8551ff85c91c24258a",
+      "source_count": 14,
+      "selected_bytes": 7679770624,
+      "backup_position": "last",
+      "skipped": [
+        "mmcblk0 whole area by policy",
+        "mmcblk0p11 cache mounted RW"
+      ],
+      "wrong_cid_rejected": true,
+      "changed_system_start_rejected": true,
+      "physical_io": false,
+      "source_files_unchanged": true
+    },
+    "reader_test_methods": 38,
+    "reader_passed": 37,
+    "reader_skipped": 1,
+    "reader_skip": "OS does not permit this test account to create symbolic links",
+    "reader_receipt_sha256": "4b8550c3a47a4ce8cca2979c83d324bb1f9db547fda4d98c39c154dcee303b30",
+    "reviewer_reran_reader_tests": false,
+    "acquired_rk2_partial_result_checked_in_reader_receipt": true,
+    "acquired_rk2_verified_parameter_bytes": 4194304,
+    "acquired_rk2_failed_backup_bytes_not_accepted": 67108864
+  },
+  "pc_preparer_review": {
+    "file": "preparacion-usb/preparar-sd-rk3229-c-03.ps1",
+    "sha256": "0e41bd9161a181922c78a68fc288d06328c28425b07b7d5838da38dae3799daf",
+    "static_review_no_blocker": true,
+    "reviewer_parser_exit": 0,
+    "physical_media_actions_by_this_reviewer": false,
+    "preparation_execution_not_certified_by_this_review": true
+  },
+  "nonblocking_observations": [
+    "The first RK3 build was rejected before signing because trimpath omits ldflags from Go build-info. It was preserved. Final build retains ELF symbols and verifies the actual Go string, rather than the presence of a command in metadata.",
+    "Four-entry ZIP still has no META-INF/com/android/metadata. RK2 entered the extractor despite that warning; final RK3 acceptance remains pending.",
+    "No universal deadline can interrupt blocked kernel IO. Memory accounting is an estimate, so allocation or a host crash can still interrupt receipt creation."
+  ],
+  "limitations": [
+    "This is code, PC artifact and recorded-inventory validation, not a physical execution of RK3.",
+    "Both source reads use normal buffered kernel IO. Their agreement does not demonstrate uncached physical reads, a stopped writer or an atomic snapshot.",
+    "Observed p10 mismatch does not establish the writer, SD failure, eMMC failure or malware. The RAM sequence is a changed experiment, not a confirmed repair to a known cause.",
+    "Recovery can write its own logs/cache/metadata although the extractor reads internal blocks only.",
+    "Busy/inaccessible regions remain omitted. No complete-device backup, firmware authenticity, malware absence, restoration or production trust is certified.",
+    "The publicly known Rockchip development trust is for laboratory compatibility, not exclusive remote-update security.",
+    "No volume flush, physical ejection, SD delivery or TV execution is certified by this independent review."
+  ],
+  "blocking_findings": [],
+  "reviewed_artifact_inputs_unchanged": true,
+  "sd_written_by_reviewer": false,
+  "usb_written_by_reviewer": false,
+  "tv_contacted": false,
+  "rk3_physical_acceptance": false,
+  "rk3_physical_extraction": false,
+  "restoration_tested": false
+}

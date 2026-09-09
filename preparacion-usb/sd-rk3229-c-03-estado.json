@@ -1,0 +1,52 @@
+{
+  "schema": "tvbase-sd-extractor-delivery-3",
+  "state": "copied_readback_verified",
+  "utc": "2026-09-09T01:08:08.9117202Z",
+  "script_sha256": "0e41bd9161a181922c78a68fc288d06328c28425b07b7d5838da38dae3799daf",
+  "build_receipt_sha256": "5480f011b29597e9e2533056066dc3952787a616b64e926f21c72db3cae2800a",
+  "acquisition_receipt_sha256": "474bf6104cbea70adec4c8e410b29613f048efbf752835d10db415e083ae26b9",
+  "sd_bytes": 8053063680,
+  "partition_bytes": 8052015104,
+  "partition_offset": 1048576,
+  "label": "TVBASESD",
+  "archived_before_removal": [
+    {
+      "hash": "3d9e6a18c023ccc4a355aab738537655049016634dcf855990b307aa619486cd",
+      "name": "update.zip",
+      "archive": "update.zip"
+    },
+    {
+      "hash": "5d26a40a11a23ad27209b0cbc992759582d40ecaefc9e6c6d2563b0f96b15d98",
+      "name": "LEEME-SD.txt",
+      "archive": "LEEME-SD.txt"
+    }
+  ],
+  "files": [
+    {
+      "readback_verified": true,
+      "name": "update.zip",
+      "bytes": 1463158,
+      "sha256": "ff9595f7a64a64df77f1c1d4904a896922e62a6be51d6a9e94247e79da985d01",
+      "file_flush": true
+    },
+    {
+      "readback_verified": true,
+      "name": "LEEME-SD.txt",
+      "bytes": 1735,
+      "sha256": "828d15eabeafe9ca517e4a605159e7882a8177fee26f2cf3cd78d821db21116a",
+      "file_flush": true
+    }
+  ],
+  "prior_capture_preserved": true,
+  "preserved_files": 7,
+  "kingston_modified": false,
+  "sd_formatted": false,
+  "raw_writes": false,
+  "tv_contacted": false,
+  "physical_extraction": false,
+  "same_sd_load_and_destination": true,
+  "profile": "RK3229-C",
+  "safe_removal_pending": true,
+  "volume_flush_verified": false,
+  "free_bytes_after": 7962386432
+}

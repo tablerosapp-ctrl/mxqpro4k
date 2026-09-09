@@ -1,5 +1,9 @@
 # Mensaje para Fable 5.1 en Claude Desktop
 
+## Actualización · RK3 y backup al final
+
+Revisar [fallo RK2](evidencia/ERROR-RK2-BACKUP-C.md) y [entregaRK3](evidencia/EXTRACTOR-SD-03.md). El origenbackup64MiB cambió entre lecturas; la SD conservó exactamente la primera. No se demostró escritor ni avería. Usuario pidió intentarloúltimo, sinexcluirlo. Se construyó/entregó varianteRAM ligada a CID/maparecoveryC, con doslecturasorigen antesdeescrituraSD y conservación de fuentesprevias. Prueba física pendiente. Los originales y reportes privados están conservados en estaPC; repositorio trae contratos/resúmenes, no CID ni userdata.
+
 ## Trabajo actual · captura combinada
 
 El usuario pidió APK + extracción de originales en recovery. [Extractor0.1](../diagnostico/extractor-recovery-0.1/README.md) implementa mapa eMMC observado, apertura RO, salida USB con descriptores fijados, partes1GiB y hashes. No modifica el instalador022 ni entra por sí mismo a recovery. Sin plan derivado del ZIP APK íntegro solo inventario. Física y aceptación por perfil pendientes. [Límites P271](evidencia/RECOVERY-P271-ALCANCE.md).

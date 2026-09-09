@@ -1,5 +1,15 @@
 # Estado operativo
 
+## Vigente · RK3 entregado; backup se intenta al final
+
+El extractor0.2/RK2 funcionó desdeSD y copió4MiB de `parameter` correctamente. Se detuvo en64MiB de `backup` porque dos lecturas del origen dieronSHA distintos. La captura parcial quedó conservada y verificada enPC; las doce fuentes posteriores no se intentaron. [Evidencia](evidencia/ERROR-RK2-BACKUP-C.md).
+
+Por indicación del usuario, **0.3/RK3 no excluye backup: copia las otras particiones antes y lo intenta al final mediante RAM**, con dos lecturas de origen iguales antes de guardar y verificarSD. El paquete está compilado, revisado y copiado/releído; siete archivos anteriores siguen iguales y el Kingston no cambió. [Entrega y límites](evidencia/EXTRACTOR-SD-03.md).
+
+**Siguiente:** soloSD, en el mismo RK3229-C: recovery → Apply update from SD card → update.zip. Esperar cierre y devolverSD tras expulsar. Ante error conservartexto sinrepetir/wipe. No usarA/B/P271. La ejecución físicaRK3, respaldo de las demás particiones y restauración permanecen pendientes. Home, WebView, auditoría y capa común no se modificaron.
+
+## Antecedente · entrega RK2 antes de la prueba física
+
 ## Vigente · extractor SD0.2/RK2 preparado para C
 
 El recovery real aceptó y ejecutó RK1, pero el extractor no encontró un destino USB válido y abortó antes de crear una captura. [Evidencia](evidencia/ERROR-RK1-DESTINO-USB.md). No hay respaldo nuevo de Rockchip en ese intento.
