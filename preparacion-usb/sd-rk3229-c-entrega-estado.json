@@ -1,0 +1,32 @@
+{
+    "schema":  "tvbase-sd-extractor-delivery-1",
+    "state":  "copied_readback_verified",
+    "utc":  "2026-09-09T00:11:17.5426704Z",
+    "script_sha256":  "b89b501c0c31ba48adaaeb8383ce8cb025b7dccabb41f52268d77d25e096f9ae",
+    "format_receipt_sha256":  "ccf4ce318a173794852d7228978842d767c078de12dcebd236163d457ac0064e",
+    "sd_bytes":  8053063680,
+    "label":  "TVBASESD",
+    "files":  [
+                  {
+                      "file_flush":  true,
+                      "sha256":  "0f7fe7a5f609290f69597c599ac8c72954b4fc7e04957cd27b279a368f060c38",
+                      "name":  "update.zip",
+                      "bytes":  1380273,
+                      "readback_verified":  true
+                  },
+                  {
+                      "file_flush":  true,
+                      "sha256":  "e0f0ed9fe72f6d30cc9b18a01aa8968321b0b38845c7838d49ff812efab17e24",
+                      "name":  "LEEME-SD.txt",
+                      "bytes":  2125,
+                      "readback_verified":  true
+                  }
+              ],
+    "kingston_modified":  false,
+    "kingston_plan_c_sha256":  "f5f15963b2d8d98eb81e17b45f824f541ef2b47f7d511ac0b29e12d5a7b67311",
+    "usb_auto_update_names_absent":  true,
+    "tv_contacted":  false,
+    "physical_extraction":  false,
+    "safe_removal_pending":  true,
+    "volume_flush_verified":  false
+}

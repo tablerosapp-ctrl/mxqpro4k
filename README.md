@@ -1,10 +1,8 @@
 # TV Base · empezar aquí
 
-**La preparación de la SD sigue pendiente: Windows canceló la solicitud de administrador.** La SD está sin particiones; el continuador y el extractor RK1 están listos. El Kingston se conserva. [Estado actual](docs/ESTADO.md).
-
 **El último Rockchip ya está reconocido: RK3229-C. La copia manual llegó íntegra y quedó guardada en PC.** [Hallazgos C](diagnostico/reconocimiento-20260908-rk3229-manual/HALLAZGOS.md) · [Matriz P291/P271/RK3229-A/B/C](docs/MATRIZ-PERFILES.md). Son tres configuraciones RK distintas aunque compartan nombre comercial y DT; cambian memoria, firmware y radio. Sus API corresponden a Android7.1, pese a las etiquetas11.1/13.0.
 
-**Siguiente: extraer los originales del último C desde su recovery**, que el usuario confirma que puede abrir. El [pendrive ya está preparado y verificado](docs/evidencia/EXTRACCION-RK3229-C.md) con un único plan RK para el extractor ARM32 0.1 existente. No se vuelve a capturar Android ni se instala otra ROM en este paso. La copia de bloques y aceptación por recovery todavía requieren la prueba física; después se devuelve el USB a PC antes de cambiar de aparato. [Contrato de extracción](diagnostico/extractor-recovery-0.1/README.md).
+**SD preparada para extraer los originales del último RK3229-C.** [Entrega SD y guía](docs/evidencia/SD-RK3229-C.md): conectar SD y Kingston antes de entrar al recovery; Apply update from SD card → update.zip. La SD carga RK1 y Kingston guarda las copias. Formato, firma y copia están verificados en PC; aceptación física y extracción pendientes. No se instala otra ROM en este paso ni se reutiliza el plan C en A/B antes de volver a PC.
 
 **TV Base funciona en el primer P291: el usuario confirma WiFi y varios reinicios correctos sin pendrive. La instalación 0.2.2 y los seis respaldos están verificados. Queda pendiente el botón Home del control.** [Resultado físico y respaldos](docs/evidencia/INSTALACION-FISICA-P291-022.md) · [Reinicios informados](docs/evidencia/REINICIOS-P291-SIN-USB.md).
 

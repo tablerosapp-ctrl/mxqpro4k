@@ -1,6 +1,15 @@
 # Continuidad de TV Base
 
-## Vigente · elevación SD cancelada; continuación preparada pero no ejecutada
+## Vigente · SD RK1 entregada para RK3229-C; finalización nativa verificada
+
+- Leer [entrega SD](docs/evidencia/SD-RK3229-C.md) y [recovery CNV8b](docs/evidencia/RECOVERY-CNV8B-SD.md). SD8GB FAT32 TVBASESD contiene update.zip RK1 y LEEME-SD.txt, con flush y SHA releídos; [recibo de entrega](preparacion-usb/sd-rk3229-c-entrega-estado.json). Kingston32GB conserva respaldos y plan C, sin escrituras de esta entrega. No repetir preparadores, continuador, finalizador ni limpieza.
+- Formato que prevalece: [finalizador separado](preparacion-usb/finalizar-sd-rk3229-c.ps1) y [recibo final](preparacion-usb/sd-rk3229-c-final-estado.json). DiskPart nativo terminó código0 y después se verificaron MBR, partición desde1MiB, FAT32, etiqueta, raíz vacía y ceros512..1MiB. [Entregador final](preparacion-usb/entregar-sd-rk3229-c-final.ps1) enlaza ese recibo. Los dos fallos anteriores se conservan sin convertirlos en éxito.
+- Historia acotada: respaldo96MiB y auxiliares verificados; primer Clear-Disk dejó MBR0 y guardaRAW abortó. La solicitud de elevación siguiente se canceló sin iniciar wrapper. Tras «estoy» del usuario, continuador ejecutó zero96MiB/flush/relectura, pero Windows expuso una partición offset0/tamaño completo y la guarda abortó antesdeUpdate-Disk/NewPartition. [Fallo continuación](preparacion-usb/sd-rk3229-c-continuacion-estado.json). Superfloppy es explicación compatible, no causa demostrada del rótulo FAT16. Finalizador nuevo usa una sesión DiskPart, sin otro zero96MiB ni convertmbr, y valida el resultado. No se ejecutó firmware ni utilidad Rockchip.
+- ZIP RK1:1380273B SHA0f7fe7a5f609290f69597c599ac8c72954b4fc7e04957cd27b279a368f060c38. ARM32 0.1 idéntico05221a82892e3aa6958d128d497c81645f8fdeae5cd494f320385f1e6d060e48; variante cambia firma/certificado/metadatos. Firma v3 RK/SHA256 comprobada en PC y revisión independiente. El recovery aportado coincide en compilación con foto C, sin hash físico de recoveryTV. No usar firmaP291 ni editar releases sellados.
+- Siguiente: expulsar SD+Kingston deWindows; conectar AMBOS alúltimoRK3229-C antesdeentrarrecovery; Apply update from SD card → update.zip. Ruta fija acreditada enELF. Su montajeUSB sólo se intenta alinicio bajo argc<=1; no garantiza montaje físico. Kingston sinupdate.zip/update.img raíz. Sinwipe/RecoverySystem/instaladoresP291. Esperar fin yconservarmensaje; error sinrepetir. Trasvolvermenú, Reboot system now, expulsaralmacenamientoAndroid ydevolverKingstonPC antesdeA/B. El planC no esunplanfamilia.
+- Aceptación física, montaje real, extracción y restauración siguenpendientes. SincontactoTV; extractor abre fuentesRO yrecoverypuedeescribirregistros. Flusharchivo/relectura sí; flushvolumen/expulsiónWindowsnoprobados. Publicar sóloespejosaneado; claves, imágenes, respaldoSD yreportescrudos privados.
+
+## Antecedente · elevación SD cancelada antes de la continuación
 
 SD8GB autorizada: respaldo prefijo96MiB/aux verificados, Clear-Disk dejó MBR sin particiones y el preparador abortó por exigir RAW. No volver a ejecutar preparar-sd-rk3229-c.ps1; su recibo failed_preserved es histórico e inmutable. Kingston intacto. PaqueteRK1 y guía terminados y revisados en PC; SD todavía NO entregable.
 

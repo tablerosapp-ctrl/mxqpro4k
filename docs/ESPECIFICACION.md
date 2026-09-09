@@ -1,5 +1,9 @@
 # Especificación del producto y aceptación
 
+## Actualización · SD de carga para REQ-19
+
+ADR-35 incorpora la evidencia de recovery CNV8b y la SD autorizada. Variante RK1 conserva el ejecutable ARM32 y cambia firma/certificado/metadatos; SD/update.zip tiene ruta fija comprobada en ese ELF. Kingston permanece como destino marcado. Construcción, firma, formato final y copia verificados en PC; VAL-12 sigue pendiente de aceptación y extracción física. [Entrega con recibos finales y fallos conservados](evidencia/SD-RK3229-C.md).
+
 ## Actualización · inventario C y primera extracción seleccionada
 
 REQ-18/VAL-11 tienen capturas importadas del P271 y tres variantes RK3229. En C,0.3 permitió conservar la ficha en Descargas y el usuario la trasladó al USB; PC comprobó su integridad. Esto no acredita exportación directa desde la APK ni capacidades de video. [Matriz de variantes y versiones reales](MATRIZ-PERFILES.md).

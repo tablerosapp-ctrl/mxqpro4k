@@ -3,7 +3,7 @@
 ## Reconocimiento combinado · prioridad actual
 
 1. P271 y tres variantes RK3229 reconocidos; [C recibido por copia manual](../diagnostico/reconocimiento-20260908-rk3229-manual/HALLAZGOS.md). Esta captura no necesita repetición. [Matriz de bases](MATRIZ-PERFILES.md): RAM anómala en B y diferentes particiones/radios; API25 impide trasladar directamente el motor138 deP291.
-2. Primera extracción en el último RK3229-C: usuario confirma acceso a recovery; plan único seleccionado en PC y extractor0.1 ARM32 existente. Aceptación de firma/ejecución/USB y lectura reales pendientes. No usar actualizador Android ni ROM P291.
+2. Primera extracción en el último RK3229-C: SD de carga preparada con RK1, firma específica CNV8b y entrega verificadas en PC; Kingston conservado como destino con plan único C. Ambos medios antes de entrar a recovery. Aceptación física y lectura real pendientes. [Entrega](evidencia/SD-RK3229-C.md). No usar actualizador Android ni ROM P291.
 3. Verificar en PC imágenes, inventario nuevo y omisiones; conservar privado. Cambiar el plan antes de A/B porque comparten DT. P271 conserva su plan diferente y entrada por resolver. No hay extracción física nueva acreditada todavía.
 4. Calificar capa común, Home, WebView/video y recursos. Prioridad expresa: [revisión de telefonía, servicios heredados y malware](REVISION-COMPONENTES-HEREDADOS.md). Mantener auditoría de consumo/tráfico y dependencias antes de retirar paquetes.
 5. Instalación rápida por perfil y actualización propia siguen separadas del reconocedor y pendientes de validación/implementación.

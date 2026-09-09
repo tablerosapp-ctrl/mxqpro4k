@@ -1,6 +1,16 @@
 # Estado operativo
 
-## Vigente · SD sin particiones; elevación Windows cancelada
+## Vigente · SD RK1 y Kingston preparados para extraer RK3229-C
+
+La SD de8GB quedó FAT32 TVBASESD, con extractor RK1 idéntico como `update.zip` y guía; ambos archivos fueron copiados, sincronizados y releídos. El Kingston de32GB se conservó como destino con el plan C existente. [Entrega y recibos](evidencia/SD-RK3229-C.md). El [recibo final](../preparacion-usb/sd-rk3229-c-final-estado.json) acredita DiskPart terminado y comprobaciones independientes de MBR, geometría y FAT32; la [entrega](../preparacion-usb/sd-rk3229-c-entrega-estado.json) acredita las dos copias.
+
+Se conservaron los fallos anteriores: Clear-Disk dejó MBR sin particiones y se detuvo una guarda; luego se canceló una elevación. Tras el aviso «estoy», el continuador puso a cero y releyó96MiB, pero Windows expuso una partición de todo el medio desdeoffset0 y otra guarda abortó. La interpretación como superfloppy es compatible con documentación Microsoft, no una causa confirmada. La finalización separada usó DiskPart y verificó el resultado; no se repitieron los preparadores ni se reescribieron sus recibos.
+
+El recovery del firmware aportado coincide en compilación con la foto y exige clave Rockchip v3/SHA256. RK1 conserva el ejecutable ARM32 0.1; firma y contenido están comprobados en PC. El ELF usa ruta fija SD/update.zip e intenta montar USB al inicio cuando `argc <= 1`; falta observar ese montaje en C. [Análisis y límites](evidencia/RECOVERY-CNV8B-SD.md). Aceptación del ZIP y extracción física siguen pendientes; preparar los medios no cierra VAL-12.
+
+Siguiente: expulsar ambos medios en Windows, conectarlos al último C antes de entrar al recovery y elegir Apply update from SD card → update.zip. Mantener alimentación y medios hasta terminar; conservar el resultado. No wipe, Recovery System ni instaladores P291. Tras volver al menú, reiniciar Android y expulsar el almacenamiento; devolver Kingston a PC antes de cambiar a A/B. No repetir ninguna preparación completada.
+
+## Antecedente · SD sin particiones y elevación Windows cancelada
 
 El respaldo anterior de la SD está guardado. El formato se detuvo tras quitar la partición porque Windows conservó MBR en su estado. El continuador nuevo está listo, pero Windows canceló la solicitud de administrador; el proceso no llegó a iniciarse. No hay una continuación activa. Hace falta volver a mostrar esa solicitud cuando el usuario pueda aceptarla. Kingston sigue conservado. [Detalle y entregable preparado en PC](evidencia/SD-RK3229-C.md). No retirar medios hasta comprobar el cierre y la copia. La guía final aún no está copiada a la SD.
 

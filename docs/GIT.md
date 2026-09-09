@@ -1,5 +1,9 @@
 # Historial local y publicación pública
 
+## Cierre SD del 8/9/2026 ART
+
+Finalización nativa comprobada, extractor RK1 y guía copiados/releídos. Fuentes nuevas y recibos separados conservan los dos fallos de preparación y su causa observada; el estado vigente ahora es SD lista y extracción física pendiente. Kingston y respaldos previos conservados; publicación exclusivamente del espejo saneado.
+
 ## Registro del 8/9/2026 · recovery CNV8b y SD
 
 Se versionan inspector de paquete RKFW/RKAF, variante de firma RK1 del extractor, verificación Java/Python, preparadores SD y documentación del recovery/medio. La herramienta y firmware aportados, el prefijo de la tarjeta y las extracciones permanecen privados. Los recibos anteriores y el respaldo cifrado publicado no se modifican. La publicación usa exclusivamente el espejo saneado.

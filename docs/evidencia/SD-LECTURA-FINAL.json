@@ -1,0 +1,37 @@
+{
+  "schema": "tvbase-sd-final-independent-readback-1",
+  "state": "verified_pc",
+  "recorded_utc": "2026-09-09T00:12:50.565340+00:00",
+  "method": "Independent Get-Disk/Get-Partition/Get-Volume and SHA256 reads after the completed administrative wrapper; command exit0.",
+  "format_receipt_sha256": "ccf4ce318a173794852d7228978842d767c078de12dcebd236163d457ac0064e",
+  "delivery_receipt_sha256": "530b1704ce217f7f7eccd3f5e43f88c82dab829531de3d1b2b9fb1efd9501b2f",
+  "sd_bytes": 8053063680,
+  "partition_offset": 1048576,
+  "partition_bytes": 8052015104,
+  "free_bytes": 8033841152,
+  "filesystem": "FAT32",
+  "label": "TVBASESD",
+  "files": [
+    {
+      "file_flush": true,
+      "sha256": "0f7fe7a5f609290f69597c599ac8c72954b4fc7e04957cd27b279a368f060c38",
+      "name": "update.zip",
+      "bytes": 1380273,
+      "readback_verified": true
+    },
+    {
+      "file_flush": true,
+      "sha256": "e0f0ed9fe72f6d30cc9b18a01aa8968321b0b38845c7838d49ff812efab17e24",
+      "name": "LEEME-SD.txt",
+      "bytes": 2125,
+      "readback_verified": true
+    }
+  ],
+  "kingston_plan_c_verified": true,
+  "kingston_auto_update_names_absent": true,
+  "kingston_modified": false,
+  "tv_contacted": false,
+  "physical_extraction": false,
+  "volume_flush_verified": false,
+  "safe_removal_pending": true
+}

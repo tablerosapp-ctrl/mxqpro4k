@@ -262,6 +262,7 @@ mxqpro4k/
 │   │   ├── RESPALDO-GITHUB-PUBLICADO.json
 │   │   ├── ROM-ORIGINAL-P291-020.md
 │   │   ├── SD-CONTINUACION-PRUEBAS-PC.json
+│   │   ├── SD-LECTURA-FINAL.json
 │   │   ├── SD-PREPARADOR-PRUEBAS-PC.json
 │   │   └── SD-RK3229-C.md
 │   ├── herramientas/
@@ -319,6 +320,7 @@ mxqpro4k/
 │   ├── entrada-oem-07-estado.json
 │   ├── entrega-original-021.json
 │   ├── entrega-original-022.json
+│   ├── entregar-sd-rk3229-c-final.ps1
 │   ├── entregar-sd-rk3229-c.ps1
 │   ├── estado-grabacion-anterior-20260904-225502.json
 │   ├── estado-grabacion.json
@@ -329,6 +331,7 @@ mxqpro4k/
 │   ├── evidencia-06-estado.json
 │   ├── extraccion-rk3229-c-estado.json
 │   ├── extractor-01-estado.json
+│   ├── finalizar-sd-rk3229-c.ps1
 │   ├── fuentes-imager-2.0.11.1/ [5 archivos; 0.3 MB; agrupado]
 │   ├── grabacion-20260904-234011-a03e047f/ [5 archivos; 0.0 MB; agrupado]
 │   ├── grabacion-20260905-000644-562f503b/ [6 archivos; 0.0 MB; agrupado]
@@ -368,6 +371,9 @@ mxqpro4k/
 │   ├── REVISION-ORIGINAL-021.json
 │   ├── REVISION-ORIGINAL-022.json
 │   ├── rom-012-estado.json
+│   ├── sd-rk3229-c-continuacion-estado.json
+│   ├── sd-rk3229-c-entrega-estado.json
+│   ├── sd-rk3229-c-final-estado.json
 │   ├── sd-rk3229-c-formato-estado.json
 │   ├── tests/ [1 archivos; 0.0 MB; agrupado]
 │   ├── update.zip

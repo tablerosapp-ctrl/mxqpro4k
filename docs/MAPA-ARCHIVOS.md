@@ -253,7 +253,7 @@ Requisitos: REQ-11.
 
 ### C-USB · SD de carga y Kingston de copias
 
-**observado_tv**. SD8GB autorizada para recrear; prefijo y firmware preservados. Kingston32GB se conserva como destino con plan C único entre RK. Preparación actual detallada en recibos.
+**observado_tv**. SD8GB FAT32 TVBASESD finalizada con DiskPart y validada por lectura independiente; update.zip RK1 y guía copiados/releídos. Dos fallos previos conservados. Kingston32GB sigue como destino con plan C único entre RK. Extracción física pendiente.
 
 Requisitos: REQ-01.
 
@@ -292,6 +292,12 @@ Requisitos: REQ-01.
 - [docs/evidencia/SD-PREPARADOR-PRUEBAS-PC.json](../docs/evidencia/SD-PREPARADOR-PRUEBAS-PC.json)
 - [preparacion-usb/continuar-sd-rk3229-c.ps1](../preparacion-usb/continuar-sd-rk3229-c.ps1)
 - [docs/evidencia/SD-CONTINUACION-PRUEBAS-PC.json](../docs/evidencia/SD-CONTINUACION-PRUEBAS-PC.json)
+- [preparacion-usb/finalizar-sd-rk3229-c.ps1](../preparacion-usb/finalizar-sd-rk3229-c.ps1)
+- [preparacion-usb/entregar-sd-rk3229-c-final.ps1](../preparacion-usb/entregar-sd-rk3229-c-final.ps1)
+- [preparacion-usb/sd-rk3229-c-continuacion-estado.json](../preparacion-usb/sd-rk3229-c-continuacion-estado.json)
+- [preparacion-usb/sd-rk3229-c-final-estado.json](../preparacion-usb/sd-rk3229-c-final-estado.json)
+- [preparacion-usb/sd-rk3229-c-entrega-estado.json](../preparacion-usb/sd-rk3229-c-entrega-estado.json)
+- [docs/evidencia/SD-LECTURA-FINAL.json](../docs/evidencia/SD-LECTURA-FINAL.json)
 
 ### C-TV · P291: TV Base y WiFi
 
@@ -563,11 +569,11 @@ Requisitos: REQ-11, REQ-18, REQ-19.
 | actualizacion-chrome | 51 | 0.417 |
 | analisis-rom | 15 | 1.822 |
 | diagnostico | 258 | 0.019 |
-| docs | 66 | 0.001 |
+| docs | 67 | 0.001 |
 | dossier-s905l2.html | 1 | 0.000 |
 | images | 1 | 1.352 |
 | platform-tools-latest-windows.zip | 1 | 0.008 |
-| preparacion-usb | 107 | 3.688 |
+| preparacion-usb | 112 | 3.688 |
 | rom-simplificada | 4619 | 14.542 |
 | tools | 18088 | 1.173 |
 
