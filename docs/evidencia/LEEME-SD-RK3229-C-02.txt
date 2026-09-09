@@ -1,0 +1,31 @@
+TV BASE - EXTRACTOR 0.2 / RK2 - COPIAS EN LA MISMA SD
+
+Solo para el ultimo Rockchip RK3229-C, recovery CNV8b.20230725.
+No instala una ROM, no formatea ni cambia la memoria interna.
+
+1. Expulsar la SD TVBASESD de Windows. El Kingston no se necesita en el TV.
+2. Con el TV box apagado, insertar la SD y entrar al recovery por el metodo
+   que ya funciono en este equipo.
+3. Elegir Apply update from SD card -> update.zip.
+4. Dejar la SD y la alimentacion conectadas. El extractor copia y verifica
+   las areas internas estables; la copia puede tardar bastante.
+5. Conservar el mensaje final. Ante error no repetir ni elegir Wipe data
+   o Recovery System. Anotar o fotografiar el texto exacto.
+6. Si termino y volvio al menu, elegir Reboot system now. Desde Android,
+   expulsar la SD antes de retirarla. Conectarla a la PC para verificar.
+
+Las copias aparecen en TVBASE-EXTRACCION/CAPTURAS de esta SD, divididas en
+archivos de hasta 1 GiB para FAT32. La extension .partial permanece incluso
+en partes verificadas; el informe final determina el estado. No renombrar
+ni borrar esos archivos. Si no termina o no vuelve al menu, conservar la
+pantalla y consultar antes de desconectar.
+
+No usar en los otros Rockchip todavia: el plan es de C. Una vez recibida y
+verificada la captura en PC se preparara el siguiente equipo. El programa
+comprueba el espacio real y deja constancia de zonas ocupadas o no admitidas.
+No se garantiza una copia de todos los chips ni una restauracion probada.
+
+La version anterior RK1 ya fue aceptada y ejecutada por recovery, pero no
+encontro destino USB. Esta nueva version usa la SD que contiene update.zip
+como destino, con marcador y comprobaciones de separacion de la eMMC.
+Su copia efectiva desde este recovery sigue pendiente de esta prueba.

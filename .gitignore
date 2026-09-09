@@ -211,3 +211,10 @@ CLAVE-PRIVADA-RESPALDO-*.txt
 !/diagnostico/extractor-recovery-rk1/VerifyWholeZip.java
 !/diagnostico/extractor-recovery-rk1/COMPILACION.json
 !/diagnostico/extractor-recovery-rk1/REVISION.json
+
+# Extractor SD0.2/RK2: fuentes y recibos, sin imagenes/planes privados.
+!/diagnostico/extractor-recovery-0.2/*.go
+!/diagnostico/extractor-recovery-0.2/go.mod
+!/diagnostico/extractor-recovery-0.2/PRUEBAS-LECTOR-PC.json
+!/diagnostico/extractor-recovery-rk2/COMPILACION.json
+!/diagnostico/extractor-recovery-rk2/REVISION.json

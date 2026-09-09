@@ -40,3 +40,9 @@
 /preparacion-usb/tests/test-preparar-sd-rk3229-c.ps1 text eol=lf
 /preparacion-usb/finalizar-sd-rk3229-c.ps1 text eol=lf
 /preparacion-usb/entregar-sd-rk3229-c-final.ps1 text eol=lf
+/preparacion-usb/preparar-sd-rk3229-c-02.ps1 text eol=lf
+/diagnostico/extractor-recovery-0.2/*.go text eol=lf
+/diagnostico/extractor-recovery-0.2/go.mod text eol=lf
+# Recibos sellados: conservar CRLF de ConvertTo-Json y el cierre LF exactos.
+/preparacion-usb/sd-rk3229-c-02-estado.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/docs/evidencia/SD-02-LECTURA-FINAL.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

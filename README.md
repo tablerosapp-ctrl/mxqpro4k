@@ -2,7 +2,7 @@
 
 **El último Rockchip ya está reconocido: RK3229-C. La copia manual llegó íntegra y quedó guardada en PC.** [Hallazgos C](diagnostico/reconocimiento-20260908-rk3229-manual/HALLAZGOS.md) · [Matriz P291/P271/RK3229-A/B/C](docs/MATRIZ-PERFILES.md). Son tres configuraciones RK distintas aunque compartan nombre comercial y DT; cambian memoria, firmware y radio. Sus API corresponden a Android7.1, pese a las etiquetas11.1/13.0.
 
-**SD preparada para extraer los originales del último RK3229-C.** [Entrega SD y guía](docs/evidencia/SD-RK3229-C.md): conectar SD y Kingston antes de entrar al recovery; Apply update from SD card → update.zip. La SD carga RK1 y Kingston guarda las copias. Formato, firma y copia están verificados en PC; aceptación física y extracción pendientes. No se instala otra ROM en este paso ni se reutiliza el plan C en A/B antes de volver a PC.
+**SD0.2/RK2 preparada para cargar el extractor y guardar las copias en la misma tarjeta.** La pruebaRK1 ejecutó el programa, pero no encontró destinoUSB; [fallo conservado](docs/evidencia/ERROR-RK1-DESTINO-USB.md). La nueva [entregaSD](docs/evidencia/EXTRACTOR-SD-02.md) está compilada, revisada y copiada/releída en PC. Usar sólo SD en RK3229-C: Apply update from SD card → update.zip. Kingston no hace falta. Copia física pendiente; devolver SD a PC antes de pasar a otro TV. No instala una ROM.
 
 **TV Base funciona en el primer P291: el usuario confirma WiFi y varios reinicios correctos sin pendrive. La instalación 0.2.2 y los seis respaldos están verificados. Queda pendiente el botón Home del control.** [Resultado físico y respaldos](docs/evidencia/INSTALACION-FISICA-P291-022.md) · [Reinicios informados](docs/evidencia/REINICIOS-P291-SIN-USB.md).
 

@@ -1,0 +1,42 @@
+{
+  "schema": "tvbase-sd02-independent-readback-1",
+  "utc": "2026-09-09T00:35:58.1746361Z",
+  "state": "verified_pc",
+  "sd_bytes": 8053063680,
+  "partition_offset": 1048576,
+  "partition_bytes": 8052015104,
+  "filesystem": "FAT32",
+  "label": "TVBASESD",
+  "free_bytes": 8033808384,
+  "files": [
+    {
+      "sha256": "3d9e6a18c023ccc4a355aab738537655049016634dcf855990b307aa619486cd",
+      "name": "update.zip",
+      "bytes": 1387097
+    },
+    {
+      "sha256": "5d26a40a11a23ad27209b0cbc992759582d40ecaefc9e6c6d2563b0f96b15d98",
+      "name": "LEEME-SD.txt",
+      "bytes": 1772
+    },
+    {
+      "sha256": "d37797fa17cfda34f6b9d8d2eab5d0f40fa5a9be030b790c057ebbe1204bc748",
+      "name": "TVBASE-EXTRACCION/MEDIA.json",
+      "bytes": 96
+    },
+    {
+      "sha256": "f5f15963b2d8d98eb81e17b45f824f541ef2b47f7d511ac0b29e12d5a7b67311",
+      "name": "TVBASE-EXTRACCION/PLANES/RK3229-C.json",
+      "bytes": 401
+    }
+  ],
+  "build_receipt_sha256": "a8d24f1c6058dce18fd04e06c4d823813b16eac3ddb3254790fa89e97f4ebb8b",
+  "delivery_receipt_sha256": "1144b28636a4c2706bbc46b66a494450c36cc660aba653f817665865da8d15fb",
+  "kingston_plan_verified": true,
+  "kingston_auto_update_names_absent": true,
+  "capture_directories_empty": true,
+  "media_writes_in_this_readback": false,
+  "tv_contacted": false,
+  "safe_removal_pending": true,
+  "volume_flush_verified": false
+}

@@ -15,7 +15,7 @@ flowchart LR
     C_ZIP["Instalador 0.2.2 usado · observado_tv"]
     C_REC["Restaurador022 · verificado_local"]
     C_ENTRY["Entrada 0.9 lograda · observado_tv"]
-    C_USB["SD de carga y Kingston de copias · observado_tv"]
+    C_USB["SD de carga y copias para C · verificado_local"]
     C_TV["P291: TV Base y WiFi · observado_tv"]
     C_APP["APK del producto · propuesto"]
     C_GESTION["Gestor propio 0.1 · verificado_local"]
@@ -24,7 +24,7 @@ flowchart LR
     C_PRODUCTO["Producto común · propuesto"]
     C_LOTES["Dos recorridos de lote · propuesto"]
     C_RECON["Reconocimiento0.3 · observado_tv"]
-    C_EXTRACT["Extracción recovery 0.1 / RK1 · construido"]
+    C_EXTRACT["Extracción SD0.2 / RK2 · construido"]
     C_PERFIL -->|"selecciona"| C_BASE
     C_CHROME -->|"motor admitido"| C_WEB
     C_INICIO -->|"se integra"| C_ROM
@@ -251,9 +251,9 @@ Requisitos: REQ-11.
 - [rom-simplificada/original-p291/entrada-apk/EJECUCION-TV-09.json](../rom-simplificada/original-p291/entrada-apk/EJECUCION-TV-09.json)
 - [docs/evidencia/PREPARACION-ENTRADA-P291-09.md](../docs/evidencia/PREPARACION-ENTRADA-P291-09.md)
 
-### C-USB · SD de carga y Kingston de copias
+### C-USB · SD de carga y copias para C
 
-**observado_tv**. SD8GB FAT32 TVBASESD finalizada con DiskPart y validada por lectura independiente; update.zip RK1 y guía copiados/releídos. Dos fallos previos conservados. Kingston32GB sigue como destino con plan C único entre RK. Extracción física pendiente.
+**verificado_local**. SD0.2/RK2 copiada/releída sin formato; Kingston conservado. Misma SD como carga/destino, primer respaldo físico pendiente. RK1 ejecutó y encontró0destinosUSB.
 
 Requisitos: REQ-01.
 
@@ -298,6 +298,12 @@ Requisitos: REQ-01.
 - [preparacion-usb/sd-rk3229-c-final-estado.json](../preparacion-usb/sd-rk3229-c-final-estado.json)
 - [preparacion-usb/sd-rk3229-c-entrega-estado.json](../preparacion-usb/sd-rk3229-c-entrega-estado.json)
 - [docs/evidencia/SD-LECTURA-FINAL.json](../docs/evidencia/SD-LECTURA-FINAL.json)
+- [preparacion-usb/preparar-sd-rk3229-c-02.ps1](../preparacion-usb/preparar-sd-rk3229-c-02.ps1)
+- [preparacion-usb/sd-rk3229-c-02-estado.json](../preparacion-usb/sd-rk3229-c-02-estado.json)
+- [docs/evidencia/SD-02-LECTURA-FINAL.json](../docs/evidencia/SD-02-LECTURA-FINAL.json)
+- [docs/evidencia/EXTRACTOR-SD-02.md](../docs/evidencia/EXTRACTOR-SD-02.md)
+- [docs/evidencia/ERROR-RK1-DESTINO-USB.md](../docs/evidencia/ERROR-RK1-DESTINO-USB.md)
+- [docs/evidencia/LEEME-SD-RK3229-C-02.txt](../docs/evidencia/LEEME-SD-RK3229-C-02.txt)
 
 ### C-TV · P291: TV Base y WiFi
 
@@ -487,9 +493,9 @@ Requisitos: REQ-02, REQ-14, REQ-18.
 - [diagnostico/reconocimiento-20260908-rk3229-manual/HALLAZGOS.md](../diagnostico/reconocimiento-20260908-rk3229-manual/HALLAZGOS.md)
 - [diagnostico/reconocimiento-20260908-rk3229-manual/EVIDENCIA-SANEADA.json](../diagnostico/reconocimiento-20260908-rk3229-manual/EVIDENCIA-SANEADA.json)
 
-### C-EXTRACT · Extracción recovery 0.1 / RK1
+### C-EXTRACT · Extracción SD0.2 / RK2
 
-**construido**. Ejecutable ARM32 0.1 conservado; variante RK1 con firma CNV8b v3/SHA256 comprobada en PC. SD de carga y Kingston destino; aceptación física pendiente.
+**construido**. RK1 ejecutado, detuvo antescaptura por destinoUSB no encontrado. Nuevo0.2/RK2 usa SD física, misma quepaquete; firma/pruebasPC/entrega verificadas, extracción física pendiente.
 
 Requisitos: REQ-11, REQ-18, REQ-19.
 
@@ -528,6 +534,26 @@ Requisitos: REQ-11, REQ-18, REQ-19.
 - [diagnostico/extractor-recovery-rk1/VerifyWholeZip.java](../diagnostico/extractor-recovery-rk1/VerifyWholeZip.java)
 - [docs/evidencia/RECOVERY-CNV8B-SD.md](../docs/evidencia/RECOVERY-CNV8B-SD.md)
 - [diagnostico/rockchip-sd-20260908/inspeccionar-paquete.py](../diagnostico/rockchip-sd-20260908/inspeccionar-paquete.py)
+- [diagnostico/extractor-recovery-0.2/capture.go](../diagnostico/extractor-recovery-0.2/capture.go)
+- [diagnostico/extractor-recovery-0.2/capture_test.go](../diagnostico/extractor-recovery-0.2/capture_test.go)
+- [diagnostico/extractor-recovery-0.2/go.mod](../diagnostico/extractor-recovery-0.2/go.mod)
+- [diagnostico/extractor-recovery-0.2/main_linux.go](../diagnostico/extractor-recovery-0.2/main_linux.go)
+- [diagnostico/extractor-recovery-0.2/main_windows.go](../diagnostico/extractor-recovery-0.2/main_windows.go)
+- [diagnostico/extractor-recovery-0.2/platform_linux.go](../diagnostico/extractor-recovery-0.2/platform_linux.go)
+- [diagnostico/extractor-recovery-0.2/PRUEBAS-LECTOR-PC.json](../diagnostico/extractor-recovery-0.2/PRUEBAS-LECTOR-PC.json)
+- [diagnostico/extractor-recovery-0.2/README.md](../diagnostico/extractor-recovery-0.2/README.md)
+- [diagnostico/extractor-recovery-0.2/sd_linux.go](../diagnostico/extractor-recovery-0.2/sd_linux.go)
+- [diagnostico/extractor-recovery-0.2/sd_policy.go](../diagnostico/extractor-recovery-0.2/sd_policy.go)
+- [diagnostico/extractor-recovery-0.2/sd_policy_test.go](../diagnostico/extractor-recovery-0.2/sd_policy_test.go)
+- [diagnostico/extractor-recovery-0.2/selection.go](../diagnostico/extractor-recovery-0.2/selection.go)
+- [diagnostico/extractor-recovery-0.2/selection_test.go](../diagnostico/extractor-recovery-0.2/selection_test.go)
+- [diagnostico/extractor-recovery-0.2/test_verificar_captura.py](../diagnostico/extractor-recovery-0.2/test_verificar_captura.py)
+- [diagnostico/extractor-recovery-0.2/verificar-captura.py](../diagnostico/extractor-recovery-0.2/verificar-captura.py)
+- [diagnostico/extractor-recovery-rk2/COMPILACION.json](../diagnostico/extractor-recovery-rk2/COMPILACION.json)
+- [diagnostico/extractor-recovery-rk2/compilar.py](../diagnostico/extractor-recovery-rk2/compilar.py)
+- [diagnostico/extractor-recovery-rk2/README.md](../diagnostico/extractor-recovery-rk2/README.md)
+- [diagnostico/extractor-recovery-rk2/REVISION.json](../diagnostico/extractor-recovery-rk2/REVISION.json)
+- [diagnostico/extractor-recovery-rk2/REVISION.md](../diagnostico/extractor-recovery-rk2/REVISION.md)
 
 ## Directorios y cuidado
 
@@ -568,12 +594,12 @@ Requisitos: REQ-11, REQ-18, REQ-19.
 | README.md | 1 | 0.000 |
 | actualizacion-chrome | 51 | 0.417 |
 | analisis-rom | 15 | 1.822 |
-| diagnostico | 258 | 0.019 |
-| docs | 67 | 0.001 |
+| diagnostico | 278 | 0.019 |
+| docs | 71 | 0.001 |
 | dossier-s905l2.html | 1 | 0.000 |
 | images | 1 | 1.352 |
 | platform-tools-latest-windows.zip | 1 | 0.008 |
-| preparacion-usb | 112 | 3.688 |
+| preparacion-usb | 114 | 3.688 |
 | rom-simplificada | 4619 | 14.542 |
 | tools | 18088 | 1.173 |
 

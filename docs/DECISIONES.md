@@ -1,5 +1,13 @@
 # Decisiones y lecciones
 
+## ADR-36 · SD de carga y respaldo, sin depender del montaje USB
+
+La prueba física RK1 ejecutó el extractor pero terminó con cero destinos USB válidos. No prueba ausencia universal de soporte USB ni inició una copia. El usuario pidió evaluar SD como destino y autorizó completar la preparación. [Fallo y conservación](evidencia/ERROR-RK1-DESTINO-USB.md).
+
+Se construye0.2/RK2 separado: mismo protocolo y clave de recovery RK ya aceptada, ejecutable nuevo que exige la SD física preparada y el paquete en ese mismo volumen. Se identifica por tipoSD/sysfs/CID/geometría/montaje, se separa de todos los orígenes eMMC y se revalida. Sin remontar, formatear ni instalar. La reserva128MiB, partes1GiB y comprobaciones de integridad permanecen; se calcula el espacio real antes de copiar. No se omiten fuentes para hacerlo caber ni se clona el plan C a otros TV. [Contrato de entrega](evidencia/EXTRACTOR-SD-02.md).
+
+Kingston se conserva, con lectura y sin reparación por su estado Windows Warning. Solo los dos archivos previos de la SD se sustituyen después de archivarlos y verificarlos en PC; no se repiten preparadores de particiones. Los recibos RK1 conservan su alcance histórico. C-EXTRACT/C-USB/C-PERFIL, REQ-11/18/19, VAL-12. La aceptación física de RK1 no cierra la captura ni valida RK2.
+
 ## ADR-35 · SD de carga separada del Kingston y firma RK1
 
 La foto de recovery exige SD y la tarjeta aportada contiene una actualización automática (`fw_update=1`) con loader previo a la partición. El usuario autorizó borrarla. Se prepara una SD normal MBR/FAT32 después de preservar y verificar sus primeros96MiB y auxiliares; la imagen de firmware debe ser idéntica a la ya conservada en PC. Se elimina ese prefijo antes del nuevo layout, sin ejecutar Rockchip SD Firmware Tool ni instalar su firmware. El Kingston queda como destino, conservado.

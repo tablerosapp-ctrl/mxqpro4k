@@ -1,5 +1,7 @@
 # Recovery CNV8b: firma Rockchip y carga desde SD
 
+> Actualización posterior: RK1 fue aceptado y ejecutado, pero no encontró un destinoUSB válido. [Prueba y límites](ERROR-RK1-DESTINO-USB.md). El siguiente entregable es [SD0.2/RK2 con copias en la misma tarjeta](EXTRACTOR-SD-02.md); la ruta de dos medios descrita debajo queda como antecedente. No repetir la entregaRK1 ni su formato.
+
 Revisión del 8/9/2026. El firmware aportado identifica la compilación `CNV8b.20230725`, coincidente con el informe del RK3229-C y la pantalla comunicada por el usuario. Se examinó su recovery extraído en PC. **No se leyó ni calculó el hash de la partición recovery del TV:** la coincidencia de compilación no acredita igualdad binaria con el ejemplar instalado.
 
 El ejecutable examinado exige una clave distinta de la usada en el extractor 0.1 y contiene una ruta fija para la instalación desde SD. Hay una pareja pública de desarrollo Rockchip que coincide con esa clave. Esto permite preparar una variante de firma y de entrega, conservando el ejecutable extractor, sin atribuir todavía aceptación física ni una captura realizada.

@@ -92,6 +92,22 @@ mxqpro4k/
 │   │   ├── test_preparar_plan.py
 │   │   ├── test_verificar_captura.py
 │   │   └── verificar-captura.py
+│   ├── extractor-recovery-0.2/
+│   │   ├── capture.go
+│   │   ├── capture_test.go
+│   │   ├── go.mod
+│   │   ├── main_linux.go
+│   │   ├── main_windows.go
+│   │   ├── platform_linux.go
+│   │   ├── PRUEBAS-LECTOR-PC.json
+│   │   ├── README.md
+│   │   ├── sd_linux.go
+│   │   ├── sd_policy.go
+│   │   ├── sd_policy_test.go
+│   │   ├── selection.go
+│   │   ├── selection_test.go
+│   │   ├── test_verificar_captura.py
+│   │   └── verificar-captura.py
 │   ├── extractor-recovery-rk1/
 │   │   ├── COMPILACION.json
 │   │   ├── empaquetar.py
@@ -99,6 +115,12 @@ mxqpro4k/
 │   │   ├── README.md
 │   │   ├── REVISION.json
 │   │   └── VerifyWholeZip.java
+│   ├── extractor-recovery-rk2/
+│   │   ├── COMPILACION.json
+│   │   ├── compilar.py
+│   │   ├── README.md
+│   │   ├── REVISION.json
+│   │   └── REVISION.md
 │   ├── fable-20260907/
 │   │   └── resumen-saneado.json
 │   ├── h1-cierre-android/
@@ -237,13 +259,16 @@ mxqpro4k/
 │   │   ├── ENTRADA-ORIGINAL-P291-021.md
 │   │   ├── ERROR-INSTALADOR-P291-021.json
 │   │   ├── ERROR-INSTALADOR-P291-021.md
+│   │   ├── ERROR-RK1-DESTINO-USB.md
 │   │   ├── EXTRACCION-RK3229-C.md
 │   │   ├── EXTRACTOR-RECOVERY-01.md
+│   │   ├── EXTRACTOR-SD-02.md
 │   │   ├── git-inicial.json
 │   │   ├── HERRAMIENTA-SD-ROCKCHIP.md
 │   │   ├── INSTALACION-FISICA-P291-022.md
 │   │   ├── INSTALADOR-P291-022.md
 │   │   ├── LEEME-EXTRACCION-RK3229-C.txt
+│   │   ├── LEEME-SD-RK3229-C-02.txt
 │   │   ├── LEEME-SD-RK3229-C.txt
 │   │   ├── limpieza-plan.json
 │   │   ├── limpieza-resultado.json
@@ -261,6 +286,7 @@ mxqpro4k/
 │   │   ├── RESPALDO-CIFRADO.json
 │   │   ├── RESPALDO-GITHUB-PUBLICADO.json
 │   │   ├── ROM-ORIGINAL-P291-020.md
+│   │   ├── SD-02-LECTURA-FINAL.json
 │   │   ├── SD-CONTINUACION-PRUEBAS-PC.json
 │   │   ├── SD-LECTURA-FINAL.json
 │   │   ├── SD-PREPARADOR-PRUEBAS-PC.json
@@ -359,6 +385,7 @@ mxqpro4k/
 │   ├── preparar-reconocimiento-02.ps1
 │   ├── preparar-reconocimiento-03.ps1
 │   ├── preparar-rom-012.ps1
+│   ├── preparar-sd-rk3229-c-02.ps1
 │   ├── preparar-sd-rk3229-c.ps1
 │   ├── probar-archivo-kingston.ps1
 │   ├── reconocimiento-01-estado.json
@@ -371,6 +398,7 @@ mxqpro4k/
 │   ├── REVISION-ORIGINAL-021.json
 │   ├── REVISION-ORIGINAL-022.json
 │   ├── rom-012-estado.json
+│   ├── sd-rk3229-c-02-estado.json
 │   ├── sd-rk3229-c-continuacion-estado.json
 │   ├── sd-rk3229-c-entrega-estado.json
 │   ├── sd-rk3229-c-final-estado.json

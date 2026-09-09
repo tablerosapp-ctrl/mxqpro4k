@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "title": "TV Base",
-  "snapshot": "2026-09-09T00:13:46.231868+00:00",
-  "state": "P291 instalado; P271 y tres RK reconocidos. SD RK1 finalizada y copia verificada para C; Kingston conservado. Extracción física pendiente.",
+  "snapshot": "2026-09-09T00:36:06.729523+00:00",
+  "state": "P291 instalado; P271/RK reconocidos. RK1 ejecutó y abortó por destino USB. SD0.2/RK2 preparada para copia en la misma SD; extracción física pendiente.",
   "installed": true,
   "original_tv_backup_confirmed": true,
   "source_of_truth": {
@@ -40,9 +40,9 @@
     "recognition": "diagnostico/reconocedor-0.3/README.md",
     "recognition_delivery": "preparacion-usb/reconocimiento-03-estado.json",
     "recognition_evidence": "docs/evidencia/RECONOCEDOR-USB-03.md",
-    "extractor": "diagnostico/extractor-recovery-0.1/README.md",
-    "extractor_delivery": "preparacion-usb/extractor-01-estado.json",
-    "extractor_build": "diagnostico/extractor-recovery-0.1/COMPILACION.json",
+    "extractor": "diagnostico/extractor-recovery-0.2/README.md",
+    "extractor_delivery": "preparacion-usb/sd-rk3229-c-02-estado.json",
+    "extractor_build": "diagnostico/extractor-recovery-rk2/COMPILACION.json",
     "extractor_evidence": "docs/evidencia/EXTRACTOR-RECOVERY-01.md",
     "inherited_services": "docs/REVISION-COMPONENTES-HEREDADOS.md",
     "latest_recognition_capture": "diagnostico/reconocimiento-20260908-rk3229-manual/HALLAZGOS.md",
@@ -56,7 +56,11 @@
     "rk1_review": "diagnostico/extractor-recovery-rk1/REVISION.json",
     "sd_final_preparation": "preparacion-usb/sd-rk3229-c-final-estado.json",
     "sd_continuation_historical_failure": "preparacion-usb/sd-rk3229-c-continuacion-estado.json",
-    "sd_independent_readback": "docs/evidencia/SD-LECTURA-FINAL.json"
+    "sd_independent_readback": "docs/evidencia/SD-LECTURA-FINAL.json",
+    "rk1_physical_error": "docs/evidencia/ERROR-RK1-DESTINO-USB.md",
+    "sd02_evidence": "docs/evidencia/EXTRACTOR-SD-02.md",
+    "sd02_readback": "docs/evidencia/SD-02-LECTURA-FINAL.json",
+    "rk2_review": "diagnostico/extractor-recovery-rk2/REVISION.json"
   },
   "components": [
     {
@@ -322,9 +326,9 @@
     },
     {
       "id": "C-USB",
-      "label": "SD de carga y Kingston de copias",
-      "state": "observado_tv",
-      "description": "SD8GB FAT32 TVBASESD finalizada con DiskPart y validada por lectura independiente; update.zip RK1 y guía copiados/releídos. Dos fallos previos conservados. Kingston32GB sigue como destino con plan C único entre RK. Extracción física pendiente.",
+      "label": "SD de carga y copias para C",
+      "state": "verificado_local",
+      "description": "SD0.2/RK2 copiada/releída sin formato; Kingston conservado. Misma SD como carga/destino, primer respaldo físico pendiente. RK1 ejecutó y encontró0destinosUSB.",
       "files": [
         "rom-simplificada/INSTALACION-USB.md",
         "preparacion-usb/rom-012-estado.json",
@@ -366,7 +370,13 @@
         "preparacion-usb/sd-rk3229-c-continuacion-estado.json",
         "preparacion-usb/sd-rk3229-c-final-estado.json",
         "preparacion-usb/sd-rk3229-c-entrega-estado.json",
-        "docs/evidencia/SD-LECTURA-FINAL.json"
+        "docs/evidencia/SD-LECTURA-FINAL.json",
+        "preparacion-usb/preparar-sd-rk3229-c-02.ps1",
+        "preparacion-usb/sd-rk3229-c-02-estado.json",
+        "docs/evidencia/SD-02-LECTURA-FINAL.json",
+        "docs/evidencia/EXTRACTOR-SD-02.md",
+        "docs/evidencia/ERROR-RK1-DESTINO-USB.md",
+        "docs/evidencia/LEEME-SD-RK3229-C-02.txt"
       ],
       "x": 3,
       "y": 1,
@@ -623,9 +633,9 @@
     },
     {
       "id": "C-EXTRACT",
-      "label": "Extracción recovery 0.1 / RK1",
+      "label": "Extracción SD0.2 / RK2",
       "state": "construido",
-      "description": "Ejecutable ARM32 0.1 conservado; variante RK1 con firma CNV8b v3/SHA256 comprobada en PC. SD de carga y Kingston destino; aceptación física pendiente.",
+      "description": "RK1 ejecutado, detuvo antescaptura por destinoUSB no encontrado. Nuevo0.2/RK2 usa SD física, misma quepaquete; firma/pruebasPC/entrega verificadas, extracción física pendiente.",
       "files": [
         "diagnostico/extractor-recovery-0.1/COMPILACION.json",
         "diagnostico/extractor-recovery-0.1/LEEME-USB.txt",
@@ -661,7 +671,27 @@
         "diagnostico/extractor-recovery-rk1/firma_ota_v3.py",
         "diagnostico/extractor-recovery-rk1/VerifyWholeZip.java",
         "docs/evidencia/RECOVERY-CNV8B-SD.md",
-        "diagnostico/rockchip-sd-20260908/inspeccionar-paquete.py"
+        "diagnostico/rockchip-sd-20260908/inspeccionar-paquete.py",
+        "diagnostico/extractor-recovery-0.2/capture.go",
+        "diagnostico/extractor-recovery-0.2/capture_test.go",
+        "diagnostico/extractor-recovery-0.2/go.mod",
+        "diagnostico/extractor-recovery-0.2/main_linux.go",
+        "diagnostico/extractor-recovery-0.2/main_windows.go",
+        "diagnostico/extractor-recovery-0.2/platform_linux.go",
+        "diagnostico/extractor-recovery-0.2/PRUEBAS-LECTOR-PC.json",
+        "diagnostico/extractor-recovery-0.2/README.md",
+        "diagnostico/extractor-recovery-0.2/sd_linux.go",
+        "diagnostico/extractor-recovery-0.2/sd_policy.go",
+        "diagnostico/extractor-recovery-0.2/sd_policy_test.go",
+        "diagnostico/extractor-recovery-0.2/selection.go",
+        "diagnostico/extractor-recovery-0.2/selection_test.go",
+        "diagnostico/extractor-recovery-0.2/test_verificar_captura.py",
+        "diagnostico/extractor-recovery-0.2/verificar-captura.py",
+        "diagnostico/extractor-recovery-rk2/COMPILACION.json",
+        "diagnostico/extractor-recovery-rk2/compilar.py",
+        "diagnostico/extractor-recovery-rk2/README.md",
+        "diagnostico/extractor-recovery-rk2/REVISION.json",
+        "diagnostico/extractor-recovery-rk2/REVISION.md"
       ],
       "x": 2,
       "y": 3,
@@ -1392,6 +1422,26 @@
         "C-USB"
       ],
       "state": "verificado_local"
+    },
+    {
+      "id": "ADR-35",
+      "file": "docs/DECISIONES.md",
+      "components": [
+        "C-EXTRACT",
+        "C-USB",
+        "C-PERFIL"
+      ],
+      "state": "verificado_local"
+    },
+    {
+      "id": "ADR-36",
+      "file": "docs/DECISIONES.md",
+      "components": [
+        "C-EXTRACT",
+        "C-USB",
+        "C-PERFIL"
+      ],
+      "state": "verificado_local"
     }
   ],
   "validations": [
@@ -1644,7 +1694,14 @@
       "path": "privado/extractor-rk1-20260908/TVBASE-EXTRACTOR-0.1-RK1-ARM32-RECOVERY.zip",
       "bytes": 1380273,
       "sha256": "0f7fe7a5f609290f69597c599ac8c72954b4fc7e04957cd27b279a368f060c38",
-      "scope": "verified_pc_signature_CNV8b_v3_physical_pending"
+      "scope": "Accepted and executed in physical recovery; aborted before capture because no qualifying USB destination"
+    },
+    {
+      "name": "TVBASE-EXTRACTOR-0.2-RK2-ARM32-RECOVERY.zip",
+      "path": "privado/extractor-rk2-release-20260909-0138/TVBASE-EXTRACTOR-0.2-RK2-ARM32-RECOVERY.zip",
+      "bytes": 1387097,
+      "sha256": "3d9e6a18c023ccc4a355aab738537655049016634dcf855990b307aa619486cd",
+      "scope": "SD0.2 RK2: PC build signature review and media readback verified; physical capture pending"
     }
   ],
   "protected_paths": [
@@ -2036,18 +2093,21 @@
     "historical": true
   },
   "extractor_delivery": {
-    "receipt": "preparacion-usb/sd-rk3229-c-entrega-estado.json",
+    "receipt": "preparacion-usb/sd-rk3229-c-02-estado.json",
     "format_receipt": "preparacion-usb/sd-rk3229-c-final-estado.json",
     "verified_pc": true,
     "physical_recovery_tested": false,
     "plan_present": true,
-    "package_variant": "RK1",
+    "package_variant": "RK2",
     "sd_loader": true,
-    "usb_destination": true,
+    "usb_destination": false,
     "historical_receipt": "preparacion-usb/extractor-01-estado.json",
     "historical_preparation_failures": [
       "preparacion-usb/sd-rk3229-c-formato-estado.json",
       "preparacion-usb/sd-rk3229-c-continuacion-estado.json"
-    ]
+    ],
+    "prior_rk1_recovery_executed": true,
+    "prior_rk1_capture_started": false,
+    "sd_destination": true
   }
 }

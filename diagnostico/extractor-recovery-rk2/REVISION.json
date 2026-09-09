@@ -1,0 +1,152 @@
+{
+  "schema": "tvbase-extractor-rk2-independent-review-1",
+  "state": "verified_pc_no_blocking_findings",
+  "created_utc": "2026-09-09T00:34:51.067230+00:00",
+  "build_receipt_sha256": "a8d24f1c6058dce18fd04e06c4d823813b16eac3ddb3254790fa89e97f4ebb8b",
+  "private_artifact_review_sha256": "be01a3dc55f2aaf150b31f67a4a120b12305441839956801c3f01dfb0d474c98",
+  "package": {
+    "name": "TVBASE-EXTRACTOR-0.2-RK2-ARM32-RECOVERY.zip",
+    "bytes": 1387097,
+    "sha256": "3d9e6a18c023ccc4a355aab738537655049016634dcf855990b307aa619486cd"
+  },
+  "core_source_sha256": {
+    "diagnostico/extractor-recovery-0.2/capture.go": "33da14782b3c9a7a9fba521e3a46a3d95c255c27ee395f855d5aef1ab0b04604",
+    "diagnostico/extractor-recovery-0.2/capture_test.go": "bc79b9624545663b157defc7d82ce75257ab5539ea317c5559e579b796ff73a0",
+    "diagnostico/extractor-recovery-0.2/main_linux.go": "22f59ce6ea1ead6b57030879df1e9693182400e8fd36baf1c84652440c515edf",
+    "diagnostico/extractor-recovery-0.2/main_windows.go": "5e67a591e3d452fbc3c75ee435ffb5dbc1c07532847e68c67b7f72fe08074dc9",
+    "diagnostico/extractor-recovery-0.2/platform_linux.go": "5f7e4ccedb033889a57e707698e2bb9cc926cc0dc9765e8256057b04083cba54",
+    "diagnostico/extractor-recovery-0.2/sd_linux.go": "200ac918281541daa7c27d0a466e287f5338e8f9fcd89508f7c7a5811be82784",
+    "diagnostico/extractor-recovery-0.2/sd_policy.go": "f417d628ab5e479db6118cdbbb5cef33cf90db39400131bca2fa3c067c8c5d2b",
+    "diagnostico/extractor-recovery-0.2/sd_policy_test.go": "8ee5372325efd2078be4407058a547471c7d3fa7be1ca34c901ff358b4c5864b",
+    "diagnostico/extractor-recovery-0.2/selection.go": "2556d881ca4b51fc1ed1ece57b31047d0e7791991189ebd9cb7c49c2212e1ea4",
+    "diagnostico/extractor-recovery-0.2/selection_test.go": "8c52da642d7f629ee975adb540df0eca89bad311213c40ba19c8611fc6d80d75",
+    "diagnostico/extractor-recovery-0.2/go.mod": "0419c40702daf109b6ed79a8802d1ddf82aa9e30bdd3ea56c05e480df54166c9",
+    "diagnostico/extractor-recovery-rk2/compilar.py": "3269dbbd55a3a868b3c08e5606c06ba8f52c0a59299742e924c36f5336f8bb5c"
+  },
+  "reader_source_sha256": {
+    "diagnostico/extractor-recovery-0.2/verificar-captura.py": "9ed406887ddfaeb068530d882e7e6aec132d200000df7b7abdb4692e4adfd1af",
+    "diagnostico/extractor-recovery-0.2/test_verificar_captura.py": "89c7794dc3aaa38aba6e5168120fbda1fa12308d8b83da7314912e14f065d966"
+  },
+  "artifact_method": "Sealed independent strict DER parser plus direct RSA modular exponentiation using public res/keys; no signer import or private key read",
+  "signature": {
+    "signed_bytes": 1385478,
+    "signed_region_sha256": "d203a23bf795aa0f82117b47a02b4818dd60206aaf8ba9c55561042051aec821",
+    "comment_bytes": 1617,
+    "pkcs7_bytes": 1549,
+    "rsa_bits": 2048,
+    "exponent": 3,
+    "direct_modular_exponentiation_verified": true,
+    "signed_attributes_present": false
+  },
+  "elf": {
+    "class_bits": 32,
+    "machine": "ARM",
+    "type": "ET_EXEC",
+    "static": true,
+    "flags": "0x5000002",
+    "bytes": 3342496,
+    "sha256": "b750e354db6eb1053b4edda7abf35f91a147e1ad0108fb55a004c4f2ea36a7b0"
+  },
+  "members": [
+    {
+      "name": "META-INF/com/google/android/update-binary",
+      "bytes": 3342496,
+      "sha256": "b750e354db6eb1053b4edda7abf35f91a147e1ad0108fb55a004c4f2ea36a7b0"
+    },
+    {
+      "name": "tvbase/extractor.json",
+      "bytes": 2853,
+      "sha256": "a6c42305a0497b0908b228d0531b062c21e543f67c01ed691794f26b65c5e833"
+    },
+    {
+      "name": "META-INF/com/google/android/updater-script",
+      "bytes": 86,
+      "sha256": "da82525ac1d0aaf9df6350db84233cdfe7ef9293b8159d1511fdb4b14dc6ab9a"
+    },
+    {
+      "name": "META-INF/com/android/otacert",
+      "bytes": 1440,
+      "sha256": "10a7b524d14750a12b44472524340df6b300f1b648fb63c3b17a161bde1e08d7"
+    }
+  ],
+  "negative_tests": [
+    {
+      "name": "signed data modified",
+      "rejected": true,
+      "reason": "Direct RSA PKCS1/SHA256 verification failed"
+    },
+    {
+      "name": "OTA footer modified",
+      "rejected": true,
+      "reason": "Invalid OTA footer"
+    },
+    {
+      "name": "RSA signature modified",
+      "rejected": true,
+      "reason": "Direct RSA PKCS1/SHA256 verification failed"
+    },
+    {
+      "name": "duplicate EOCD marker",
+      "rejected": true,
+      "reason": "Missing or duplicate EOCD"
+    },
+    {
+      "name": "P291 key instead of RK key",
+      "rejected": true,
+      "reason": "Direct RSA PKCS1/SHA256 verification failed"
+    }
+  ],
+  "static_checks": [
+    "RK1 photograph reached extractor findUSB and stopped before inventory/destination/capture; absence of accepted USB is not proof of absent hardware.",
+    "SD destination requires exact /mnt/external_sd root mount, vfat, both mount and superblock RW, physical mmc topology, card type SD, CID, exact delivered geometry, and matching read-only ioctl/stat/sysfs evidence.",
+    "Package must be regular /mnt/external_sd/update.zip on the same st_dev; later checks pin inode, size, marker, CID, topology and mount.",
+    "All inventoried eMMC sources are separated from SD major/minor and sysfs ancestry before creating output and during capture revalidation.",
+    "Internal block opens remain O_RDONLY. No mount, remount, unmount, format, raw writes, reboot or USB fallback was introduced.",
+    "capture.go and selection.go remain byte-identical to 0.1, retaining source stability checks, 1GiB parts, 128MiB reserve, exclusive destination creation, fsync, destination reread and full source reread.",
+    "SD available space is checked against all selected sources plus reserve; the software does not omit a selected source just to fit.",
+    "New Python reader accepts legacy inventories and checks optional SD proof, mount agreement and source separation without opening device/sysfs paths from reports.",
+    "PC preparer identifies both physical media, copies staged files before retiring exactly two hash-verified archived SD predecessors, and preserves Kingston; no reformat or raw write."
+  ],
+  "tests_scope": {
+    "go_host_pass_events": 104,
+    "go_host_environment": "Windows amd64; events include subtests and groups",
+    "linux_arm32_tests_compiled": true,
+    "linux_arm32_tests_executed": false,
+    "reader_test_methods": 27,
+    "reader_passed": 26,
+    "reader_skipped": 1,
+    "reader_skip": "real symlink creation unavailable to Windows test account; recorded separately",
+    "reader_receipt_sha256": "0298ebb3f2a8b72a4e4ae25015a1519a6f873bfc8f62c3d236a33ba5e08f4afc",
+    "reviewer_reran_build_or_reader_tests": false
+  },
+  "pc_preparer_review": {
+    "file": "preparacion-usb/preparar-sd-rk3229-c-02.ps1",
+    "sha256": "5ef2b7751c79a03e7a5c43459c8e75b58b1de3ecea56caee624b7ba2b56980d6",
+    "static_review_no_blocker": true,
+    "reviewer_parser_strict_mode_exit": 0,
+    "unique_imported_functions": 4,
+    "real_check_only_exit_reported_by_root": 0,
+    "physical_media_actions_by_this_reviewer": false,
+    "preparation_execution_not_certified_by_this_review": true
+  },
+  "nonblocking_observations": [
+    "Four-entry ZIP intentionally retains absent META-INF/com/android/metadata. On RK1 the warning did not prevent executable entry; RK2 physical acceptance remains pending.",
+    "The current plan is C only. DT matching and a plan reference do not prove the physical device equals a prior Android capture.",
+    "Package identity is pinned by ordinary file/device/inode/size, not repeatedly hashed at runtime. Recovery verifies the selected ZIP before entry; PC copy has its own hash verification.",
+    "Directory/file descriptors preserve destination confinement after mount loss; no universal hard deadline exists for a blocked kernel operation."
+  ],
+  "limitations": [
+    "This is static and PC artifact validation, not observed SD/RW sysfs execution in the physical recovery.",
+    "Recovery can write its own cache/logs/metadata even though extractor opens internal blocks only for reading.",
+    "Busy/inaccessible regions and unsupported storage remain omitted. This is not an atomic snapshot, complete-device guarantee, malware attestation or tested restoration.",
+    "Rockchip development trust provides laboratory compatibility, not exclusive production update security.",
+    "No claims of volume flush, safe physical ejection or TV execution follow from this review."
+  ],
+  "blocking_findings": [],
+  "reviewed_artifact_inputs_unchanged": true,
+  "sd_written_by_reviewer": false,
+  "usb_written_by_reviewer": false,
+  "tv_contacted": false,
+  "rk2_physical_acceptance": false,
+  "physical_extraction": false
+}

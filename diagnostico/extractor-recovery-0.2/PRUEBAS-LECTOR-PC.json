@@ -1,0 +1,34 @@
+{
+  "schema": "tvbase-recovery-sd-reader-tests-1",
+  "created_at_utc": "2026-09-09T00:33:46.745848+00:00",
+  "state": "passed_with_explicit_skip",
+  "command": "python -B -X utf8 -m unittest -v test_verificar_captura.py",
+  "exit_code": 0,
+  "test_methods": 27,
+  "passed": 26,
+  "skipped": 1,
+  "skip_reason": "Windows test account cannot create real symbolic links; reparse and hardlink guards tested separately",
+  "scope": "Small regular-file fixtures in the new version directory; no physical SD, USB or TV access",
+  "sources": {
+    "verificar-captura.py": "9ed406887ddfaeb068530d882e7e6aec132d200000df7b7abdb4692e4adfd1af",
+    "test_verificar_captura.py": "89c7794dc3aaa38aba6e5168120fbda1fa12308d8b83da7314912e14f065d966"
+  },
+  "unchanged_from_0_1": {
+    "capture.go": "33da14782b3c9a7a9fba521e3a46a3d95c255c27ee395f855d5aef1ab0b04604",
+    "capture_test.go": "bc79b9624545663b157defc7d82ce75257ab5539ea317c5559e579b796ff73a0",
+    "selection.go": "2556d881ca4b51fc1ed1ece57b31047d0e7791991189ebd9cb7c49c2212e1ea4",
+    "selection_test.go": "8c52da642d7f629ee975adb540df0eca89bad311213c40ba19c8611fc6d80d75",
+    "go.mod": "0419c40702daf109b6ed79a8802d1ddf82aa9e30bdd3ea56c05e480df54166c9"
+  },
+  "new_coverage": [
+    "SD destination proof validation",
+    "SD card type and exact geometry",
+    "SD RW mount and inventory agreement",
+    "SD/source topology separation",
+    "Legacy 0.1 inventory compatibility"
+  ],
+  "physical_capture_tested": false,
+  "linux_sd_runtime_executed": false,
+  "restoration_tested": false,
+  "private_sources_or_paths_published": false
+}

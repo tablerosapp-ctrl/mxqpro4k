@@ -1,5 +1,9 @@
 # Especificación del producto y aceptación
 
+## ADR-36 · destinoSD para la primera extracción C
+
+REQ-11/18/19 y VAL-12: RK1 aceptado/ejecutado físicamente, sin captura porque findUSB no encontró destino válido. Nueva0.2/RK2 exige la SD física preparada y el paquete en ese mismo volumen; separación eMMC, espacio real, reserva128MiB, partes1GiB e integridad permanecen. Construcción/revisión/copiaPC no cierran VAL-12. [Contrato y entrega](evidencia/EXTRACTOR-SD-02.md). Sin formato, montaje forzado, ROM ni cambios de Kingston.
+
 ## Actualización · SD de carga para REQ-19
 
 ADR-35 incorpora la evidencia de recovery CNV8b y la SD autorizada. Variante RK1 conserva el ejecutable ARM32 y cambia firma/certificado/metadatos; SD/update.zip tiene ruta fija comprobada en ese ELF. Kingston permanece como destino marcado. Construcción, firma, formato final y copia verificados en PC; VAL-12 sigue pendiente de aceptación y extracción física. [Entrega con recibos finales y fallos conservados](evidencia/SD-RK3229-C.md).

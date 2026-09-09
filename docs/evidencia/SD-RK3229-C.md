@@ -1,5 +1,7 @@
 # SD para extraer el último Rockchip
 
+> Actualización posterior: RK1 fue aceptado y ejecutado, pero no encontró un destinoUSB válido. [Prueba y límites](ERROR-RK1-DESTINO-USB.md). El siguiente entregable es [SD0.2/RK2 con copias en la misma tarjeta](EXTRACTOR-SD-02.md); la ruta de dos medios descrita debajo queda como antecedente. No repetir la entregaRK1 ni su formato.
+
 El usuario aportó una SD grabada, autorizó borrarla y confirmó que el Kingston estaba en otro puerto USB. La foto del último RK3229-C ofrece **Apply update from SD card** y declara `CNV8b.20230725`. El reconocimiento Android de ese mismo equipo ya está adquirido; no se repite.
 
 ## Decisión y correspondencia con el recovery

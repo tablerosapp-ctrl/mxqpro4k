@@ -1,5 +1,15 @@
 # Estado operativo
 
+## Vigente · extractor SD0.2/RK2 preparado para C
+
+El recovery real aceptó y ejecutó RK1, pero el extractor no encontró un destino USB válido y abortó antes de crear una captura. [Evidencia](evidencia/ERROR-RK1-DESTINO-USB.md). No hay respaldo nuevo de Rockchip en ese intento.
+
+Por pedido del usuario se preparó **0.2/RK2 con carga y copias en la misma SD**. Compilación, firma, revisión y entrega están verificadas en PC. Kingston se conservó; se archivaron los dos archivos anteriores de SD antes de sustituirlos, sin formato. [Entrega y alcance](evidencia/EXTRACTOR-SD-02.md).
+
+**Siguiente:** usar solo SD en el último RK3229-C, recovery CNV8b.20230725; Apply update from SD card → update.zip. Esperar cierre, conservar error sin repetir/wipe y devolver SD a PC tras expulsarla desde Android. No usar todavía en A/B. La copia física0.2, su adquisiciónPC y restauración siguen pendientes; aceptaciónRK1 no equivale a éxitoRK2.
+
+## Antecedente · preparación RK1 antes de la prueba
+
 ## Vigente · SD RK1 y Kingston preparados para extraer RK3229-C
 
 La SD de8GB quedó FAT32 TVBASESD, con extractor RK1 idéntico como `update.zip` y guía; ambos archivos fueron copiados, sincronizados y releídos. El Kingston de32GB se conservó como destino con el plan C existente. [Entrega y recibos](evidencia/SD-RK3229-C.md). El [recibo final](../preparacion-usb/sd-rk3229-c-final-estado.json) acredita DiskPart terminado y comprobaciones independientes de MBR, geometría y FAT32; la [entrega](../preparacion-usb/sd-rk3229-c-entrega-estado.json) acredita las dos copias.

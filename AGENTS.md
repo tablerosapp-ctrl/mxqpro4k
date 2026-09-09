@@ -1,5 +1,16 @@
 # Continuidad de TV Base
 
+## Vigente · RK1 ejecutó y no encontró USB; SD0.2/RK2 entregada
+
+- Leer [fallo físico RK1](docs/evidencia/ERROR-RK1-DESTINO-USB.md) y [entrega SD0.2](docs/evidencia/EXTRACTOR-SD-02.md). Foto: firma result0, update-binary0.1 ejecutado, findUSB encontró0 y abortó antesDT/plan/inventory/newDestination/Capture. No hay copia de bloques iniciada por ese intento; no atribuir causa exacta de no montaje. Aviso metadata no fue fatal.
+- Nueva versión0.2/RK2 construida/revisada y copiada/releída en SD. Misma SD carga y guarda; marcadorSD específico y planC401B. [Construcción](diagnostico/extractor-recovery-rk2/COMPILACION.json), [revisión](diagnostico/extractor-recovery-rk2/REVISION.json), [entrega](preparacion-usb/sd-rk3229-c-02-estado.json), [lectura final](docs/evidencia/SD-02-LECTURA-FINAL.json). No repetir preparador02 ni los formatosanteriores.
+- SD exacta8053063680B/part8052015104 desde1MiB, FAT32TVBASESD. DestinoLinux typeSD/CID/sysfs/ioctl/montajeRW y update.zip mismo volumen, separado de todas las fuentesMMC y revalidado. No exigirremovable1 ni confundir seriallector conCIDSD. Reserva128MiB/partes1GiB/SHA3lecturas conservadas; mapa/áreasboot/espacio se recalculan. Sinmontaje/remonte/format/flash/reboot automático. Fuentes0.1/RK1 y sus recibos inmutables.
+- Ambos medios regresaronPC; números de disco cambiaron, siempre identificarporUniqueId+tamaño. Foto/ZIPRK1/guía/plan archivadosprivado y verificados antes sustituir dosarchivosSD. Kingston conservarespaldos/planes, CAPTURAS vacío; WindowsWarning registrado sinreparación. Esta entrega solo modificóarchivosSD.
+- Siguiente usuario: expulsar SD deWindows, insertar SOLOSD enúltimoRK3229-C/CNV8b.20230725 apagado, entrarrecovery→Apply update from SD card→update.zip. Kingstonnoesnecesario. Esperarfin; errorconservartexto yno repetir/wipe. Si vuelvealmenútrasfin, Reboot system now, expulsarSDdesdeAndroid ydevolverSDPC antesotrosTV. Verificador0.2 compruebaSDProofyformatlegacy; no borrarpartes .partial.
+- Aceptación física RK1 sí; ejecución/copiaRK2 yrestauración pendientes. Recoverypuedeescribirregistros, extractororígenesRO. Flusharchivos/relectura sí; expulsiónWindows/flushvolumennoobservados. Publicar soloespejosaneado; planes, CIDcrudos, claves eimágenes privados.
+
+## Antecedente · entrega RK1 anterior a la prueba física
+
 ## Vigente · SD RK1 entregada para RK3229-C; finalización nativa verificada
 
 - Leer [entrega SD](docs/evidencia/SD-RK3229-C.md) y [recovery CNV8b](docs/evidencia/RECOVERY-CNV8B-SD.md). SD8GB FAT32 TVBASESD contiene update.zip RK1 y LEEME-SD.txt, con flush y SHA releídos; [recibo de entrega](preparacion-usb/sd-rk3229-c-entrega-estado.json). Kingston32GB conserva respaldos y plan C, sin escrituras de esta entrega. No repetir preparadores, continuador, finalizador ni limpieza.

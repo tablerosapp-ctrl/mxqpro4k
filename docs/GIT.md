@@ -1,5 +1,9 @@
 # Historial local y publicación pública
 
+## Cierre SD0.2 / RK2
+
+Se versionan el fallo físicoRK1, el extractorSD0.2 y su empaquetadoRK2, pruebas/revisión, preparador y recibos nuevos. Los originales y planes permanecen privados; el espejo público se audita y publica por el flujo existente. Los recibos previos no se reescriben para atribuirles aceptación o entrega posterior.
+
 ## Cierre SD del 8/9/2026 ART
 
 Finalización nativa comprobada, extractor RK1 y guía copiados/releídos. Fuentes nuevas y recibos separados conservan los dos fallos de preparación y su causa observada; el estado vigente ahora es SD lista y extracción física pendiente. Kingston y respaldos previos conservados; publicación exclusivamente del espejo saneado.
