@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "title": "TV Base",
-  "snapshot": "2026-09-09T01:10:08.780173+00:00",
+  "snapshot": "2026-09-09T02:11:03.810265+00:00",
   "state": "P291 instalado; P271/RK reconocidos. RK2 parcial: parameter verificado, backup cambiante. SD0.3/RK3 entregada: resto primero, backup al final con RAM; prueba física pendiente.",
   "installed": true,
   "original_tv_backup_confirmed": true,
@@ -64,7 +64,8 @@
     "rk2_physical_result": "docs/evidencia/ERROR-RK2-BACKUP-C.md",
     "rk2_partial_pc": "docs/evidencia/RK2-C-CAPTURA-PARCIAL-PC.json",
     "rk3_review": "diagnostico/extractor-recovery-rk3/REVISION.json",
-    "sd03_readback": "docs/evidencia/SD-03-LECTURA-FINAL.json"
+    "sd03_readback": "docs/evidencia/SD-03-LECTURA-FINAL.json",
+    "current_handoff": "docs/ENTREGA-FABLE.md"
   },
   "components": [
     {
@@ -2187,5 +2188,15 @@
     "prior_capture_preserved": true,
     "source_policy": "rk3229-c-backup-last-1",
     "backup_variant": "source_source_destination_via_ram"
+  },
+  "handoff": {
+    "recipient": "Fable 5.1 via user, Claude Desktop on another PC/account",
+    "guide": "docs/ENTREGA-FABLE.md",
+    "coordination": "docs/COLABORACION.md",
+    "technical_delivery_public_base": "57eb693a967fb9a9c1155ad7a48fa7856d1f2ddd",
+    "physical_rk3_result_received": false,
+    "documentation_only": true,
+    "media_or_tv_contacted": false,
+    "historical_versions_retained_in_git": true
   }
 }

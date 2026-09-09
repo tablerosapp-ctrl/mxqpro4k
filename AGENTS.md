@@ -1,5 +1,9 @@
 # Continuidad de TV Base
 
+## Relevo documental a Fable después de la prueba RK3
+
+El usuario pidió dejar todo documentado en GitHub y seguirá con Fable desde otra PC después de esta prueba. Leer [ENTREGA-FABLE](docs/ENTREGA-FABLE.md) y [COLABORACION](docs/COLABORACION.md), reescritos como guías vigentes con enlaces a sus versiones históricas. No se recibió resultado físico RK3 aún: recabar lo que comunique el usuario y adquirir/verificar la SD antes de otra decisión. Esta revisión solo cambia documentación/Git, sin contactoTV ni medios. La entrega03 y sus fuentes/recibos siguen sellados. No retomar H1/H2/P291 ni antiguas instrucciones de Update/ENV/formato como tarea activa.
+
 ## Vigente · RK2 parcial conservado; RK3 intenta backup al final
 
 - Leer [falloRK2](docs/evidencia/ERROR-RK2-BACKUP-C.md), [entregaRK3](docs/evidencia/EXTRACTOR-SD-03.md) y [contrato0.3](diagnostico/extractor-recovery-0.3/README.md). Recovery real ejecutóRK2; parameter p1/4MiB verified, backup p10/64MiB source_changed, doce fuentes no intentadas. Cache p11 montadaRW omitida; p10 no montada/holders. No atribuir causa exacta ni aceptar backup como original estable.

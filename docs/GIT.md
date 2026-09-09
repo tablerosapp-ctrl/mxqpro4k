@@ -1,5 +1,9 @@
 # Historial local y publicación pública
 
+## Relevo documentado para Fable
+
+Se reescribieron ENTREGA-FABLE y COLABORACION para separar el estado actual de RK3 de las antiguas hipótesis P291. Las versiones anteriores siguen accesibles mediante enlaces a su commit público. Se documentan archivos disponibles/privados, cómo adquirir y validar la captura posterior, errores de desarrollo conservados, límites y roadmap. Esta publicación solo modifica documentación; no repite preparaciónSD, extracción ni instalación.
+
 ## Cierre SD0.3 / RK3
 
 Se versionan evidencia del fallo p10, políticaC/varianteRAM, lectores completo/parcial y pruebas, construcción/revisión y entregaSD. Se preservan builds fallidos y releases anteriores en privado. Los nueve archivos adquiridos y el CID no se publican; solo fuentes, resúmenes y recibos saneados. El espejo público se actualiza mediante la auditoría existente.

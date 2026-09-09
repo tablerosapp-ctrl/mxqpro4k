@@ -1,76 +1,125 @@
-# Mensaje para Fable 5.1 en Claude Desktop
+# Continuidad para Fable 5.1 · prueba RK3
 
-## Actualización · RK3 y backup al final
+Este es el punto de entrada vigente para continuar desde Claude Desktop en otra PC. El usuario pidió documentar todo antes del relevo y continuará con Fable después de esta prueba. **El resultado físico de RK3 todavía no fue comunicado a esta sesión.** No inferir éxito, error ni estado actual del TV a partir de la entrega de la SD.
 
-Revisar [fallo RK2](evidencia/ERROR-RK2-BACKUP-C.md) y [entregaRK3](evidencia/EXTRACTOR-SD-03.md). El origenbackup64MiB cambió entre lecturas; la SD conservó exactamente la primera. No se demostró escritor ni avería. Usuario pidió intentarloúltimo, sinexcluirlo. Se construyó/entregó varianteRAM ligada a CID/maparecoveryC, con doslecturasorigen antesdeescrituraSD y conservación de fuentesprevias. Prueba física pendiente. Los originales y reportes privados están conservados en estaPC; repositorio trae contratos/resúmenes, no CID ni userdata.
+La última entrega publicada antes de este relevo corresponde al commit público `57eb693a967fb9a9c1155ad7a48fa7856d1f2ddd` (Git operativo local `9a682b383377955db927fa4a686a7f5c07e1bf4b`). Esta guía se publica después. Al comenzar, registrar el HEAD público realmente recibido y leer cualquier evidencia posterior; no quedarse fijado a ese commit si ya llegaron resultados nuevos.
 
-## Trabajo actual · captura combinada
+## Lectura inicial y objetivo
 
-El usuario pidió APK + extracción de originales en recovery. [Extractor0.1](../diagnostico/extractor-recovery-0.1/README.md) implementa mapa eMMC observado, apertura RO, salida USB con descriptores fijados, partes1GiB y hashes. No modifica el instalador022 ni entra por sí mismo a recovery. Sin plan derivado del ZIP APK íntegro solo inventario. Física y aceptación por perfil pendientes. [Límites P271](evidencia/RECOVERY-P271-ALCANCE.md).
+1. Esta guía y [ESTADO](ESTADO.md): qué ocurrió y qué sigue pendiente.
+2. [Fallo físico RK2](evidencia/ERROR-RK2-BACKUP-C.md) y [entrega RK3](evidencia/EXTRACTOR-SD-03.md).
+3. [Contrato del extractor0.3](../diagnostico/extractor-recovery-0.3/README.md), [revisión independiente](../diagnostico/extractor-recovery-rk3/REVISION.md) y sus recibos.
+4. [Matriz de perfiles](MATRIZ-PERFILES.md), [especificación](ESPECIFICACION.md), [grafo](index.html), [mapa de archivos](MAPA-ARCHIVOS.md) y [roadmap](ROADMAP.md).
 
-También priorizó retirar residuos de telefonía y auditar malware; ver [matriz](REVISION-COMPONENTES-HEREDADOS.md). No afirmar que nombres como KeyChain o StatementService prueban malware; identificar los binarios OEM y probar dependencias/tráfico.
+El producto final es Android simplificado instalado en memoria interna, conservando los drivers adecuados de cada placa, especialmente video. Debe ejecutar APK Flutter y contenido web en WebView, reproducir y almacenar video local, eliminar contenido y recibir actualizaciones propias de APK/navegador y, después de validar su mecanismo, del sistema. Sin Play Store ni cuentas o servicios OEM innecesarios. El usuario toleraría Linux solo si resuelve también la ejecución de APK; esa alternativa no está implementada ni sustituye por decisión tácita la base Android.
 
-## Reconocedor 0.1 implementado y entregado
+La carga multimedia real incluye dos videos de aproximadamente1280 superpuestos, uno con transparencia, y canvas; VP9 es prioritario. La respuesta anterior «un video hasta1080p sinDRM» fue ampliada por esa prueba posterior. No deducir mejor rendimiento solo por quitar aplicaciones o subir la versión del navegador.
 
-El usuario autorizó empezar. [Entrega](evidencia/RECONOCEDOR-USB-01.md): APK normal API21+ y formato de capturas secuenciales, ya copiados/releídos en Kingston; primera ejecución Android pendiente. [Fuentes y límites](../diagnostico/reconocedor-0.1/README.md). El importador verifica ZIP/manifiesto/tamaños/CRC/SHA sin extraer, conserva copias privadas y no convierte un perfil candidato en permiso de instalación. Las fuentes y el recibo vinculan la APK exacta; conservar esta versión para comparar con próximos informes. No publicar capturas/binarios crudos.
+El diseño contempla una capa común de producto y bases por hardware: reconocimiento y copia profunda para nuevos equipos/lotes, instalación rápida para unidades calificadas y catálogo firmado compartido por USB e Internet. [Plan de producto](PLAN-RECONOCIMIENTO-Y-PRODUCTO.md), [lotes y actualizaciones](PROPUESTA-LOTES-Y-ACTUALIZACIONES.md). Esas propuestas no son funciones ya operativas.
 
-## Resultado físico y trabajo siguiente, pendiente de OK
+## Estado por equipo
 
-**Nuevo alcance del 8/9/2026:** el usuario confirma varios reinicios correctos sin pendrive. [Registro](evidencia/REINICIOS-P291-SIN-USB.md). [PROP-17](PLAN-RECONOCIMIENTO-Y-PRODUCTO.md) reordena el siguiente trabajo: reconocimiento sobre Android para varias familias, calificación P291/P271/Rockchip, capa común con logo y catálogo firmado compartido por USB/Internet. Se requieren mediciones de proveedor WebView en la APK, VP9/alfa/canvas, recursos y tráfico. No hay adaptación Rockchip ni actualización remota de ROM implementadas. Las revisiones de código confirman piezas reutilizables, no un diagnóstico universal ya listo.
+| Equipo | Evidencia alcanzada | Pendiente |
+| --- | --- | --- |
+| P291, gxlx2_p291_1g | TV Base instalado mediante0.2.2 sobre plataforma0.2.0; cinco escrituras y seis respaldos verificados. Usuario confirma WiFi y varios reinicios sin USB. | Home no vuelve al menú. Proveedor WebView efectivo de la APK, VP9/alfa/canvas, recursos/tráfico, recuperación y actualizaciones remotas por validar. |
+| P271, gxlx_p271_1g | Reconocimiento Android e inventario adquiridos; archivos accesibles conservados. | Copia profunda/entrada y ROM propias. No es intercambiable con P291. |
+| RK3229-A y B | Capturas APK e inventarios importados. Mismo DT comercial, diferencias de firmware, radio y memoria; RAM anómala en B. | Copias profundas y calificación independiente. |
+| RK3229-C, último Rockchip, CNV8b.20230725 | Reconocimiento recibido mediante copia manual; recovery accesible; RK2 ejecutó y dejó captura parcial en SD. | Nueva prueba RK3 y adquisición de sus resultados. No existe ROM Rockchip construida. |
 
-El primer P291 arrancó TV Base; el usuario confirma que puede conectarse por WiFi. El pendrive trajo seis respaldos y los recibos de formato correcto, montaje vacío de solo lectura y cinco escrituras verificadas por lectura. El cierre del instalador 0.2.2 indica `installed_verified`. Se guardaron y verificaron en PC 199 archivos, con un total de 6.091.261.673 bytes; los seis respaldos incluidos suman 6.067.060.736 bytes. [Evidencia](evidencia/INSTALACION-FISICA-P291-022.md) · [Hallazgos y resumen](../diagnostico/primer-tv-instalado-20260908/HALLAZGOS.md).
+Las carcasas MXQPro4K5G/MX9 no identifican una base compatible. Las etiquetas Android11/13 de algunos RK contradicen API25/fingerprint7.1.2: usar la evidencia técnica de la matriz. P291 integra Chrome/WebView138, pero el proveedor usado por la APK aún debe medirse; no trasladarlo directamente a los RK API25.
 
-Incidencia abierta: Home, la tecla de la casita del control, no vuelve al inicio. El usuario prueba su APK; todavía no están comprobados el proveedor WebView efectivo ni el rendimiento multimedia. [ISSUE-HOME-01](INCIDENCIAS.md). La [revisión local de Home](hipotesis/HOME-P291.md) plantea hipótesis sobre la configuración inicial y la traducción de la tecla; los datos actuales del TV son desconocidos.
+## Qué pasó en Rockchip C
 
-La [propuesta PROP-16](PROPUESTA-LOTES-Y-ACTUALIZACIONES.md) separa una capa común de producto de las bases por perfil de hardware. Distingue la calificación del primer ejemplar de la instalación rápida del resto, con identidad y respaldos individuales, y plantea actualizaciones por componente. REQ-15/16/17 y ADR-28 registran ese diseño como propuesto. Se deben medir las fases: no todo el tiempo de instalación correspondió a copiar respaldos, y aún no se puede prometer un ahorro.
+- RK1 fue aceptado y ejecutado por recovery, pero no encontró un pendrive montado que cumpliera las guardas. Abortó antes de capturar bloques. El aviso de metadata no impidió ejecutar el extractor.
+- Se preparó SD0.2/RK2 para cargar el ZIP y guardar las copias en la misma SD. No requiere Kingston como destino.
+- RK2 copió y verificó `parameter`, p1, 4MiB. Después falló al releer `backup`, p10, 64MiB: el SHA de la primera lectura y del archivo SD coincidió; el de la segunda lectura del origen fue distinto. Doce fuentes posteriores quedaron sin intentar por el orden alfabético p1→p10. Cache p11 estaba montada RW y se omitió por la guarda normal.
+- Se adquirieron y verificaron en PC nueve archivos de la SD, 72.719.981B, más la foto archivada aparte. La captura tiene dos imágenes, inventario y dos registros de fallo; no hay cierre de éxito. [Verificación parcial PC](evidencia/RK2-C-CAPTURA-PARCIAL-PC.json) acredita únicamente4MiB como origen verificado.
+- El usuario rechazó excluir directamente la zona cambiante. Pidió intentar el resto antes y dejar esa zona para el final con otra variante. Esto rige [ADR-37](DECISIONES.md) y la entrega RK3.
 
-El usuario pidió revisar las propuestas antes de actuar: no modificar el TV, construir o instalar otra ROM, corregir Home ni activar el servidor sin su OK explícito. Se permiten revisiones documentales; los cambios siguientes siguen pendientes. La recuperación y la reentrada desde el Android nuevo no se probaron.
+La diferencia de SHA no prueba malware, un escritor concreto ni una avería de eMMC/SD. `backup` no aparece montada ni con holders en el inventario. No confundirla con cache. El mapa de recovery tiene quince particiones: parameterp1, backupp10, systemp14, userdatap15. Android había mostrado catorce; no reutilizar sus índices ni offsets.
 
+## Qué cambió en RK3 y qué está en la SD
 
-## Antecedente: estado anterior a la prueba física de 0.2.2
+**Paquete:** `TVBASE-EXTRACTOR-0.3-RK3-ARM32-RECOVERY.zip`, 1.463.158B, SHA256 `ff9595f7a64a64df77f1c1d4904a896922e62a6be51d6a9e94247e79da985d01`. En SD se llama `update.zip`. [Construcción](../diagnostico/extractor-recovery-rk3/COMPILACION.json), [revisión](../diagnostico/extractor-recovery-rk3/REVISION.json), [entrega](../preparacion-usb/sd-rk3229-c-03-estado.json), [relectura independiente](evidencia/SD-03-LECTURA-FINAL.json).
 
-## Vigente · error de nombre Amlogic corregido en0.2.2
+- Fuentes elegibles ordenadas físicamente; backup se intenta última. No se clona todaeMMC porque impediría separar su orden. Guardas RW/holders permanecen y no se desmonta para forzar lecturas.
+- Orígenes ordinarios: copia/SHA → sincronización y relectura SD → segunda lectura de origen. El cuerpo `captureOne` conserva la lógica de0.2.
+- Backup64MiB: verifica memoria, lee a RAM, relee el origen y compara ambos SHA antes de escribir datos de backup en SD. Solo si coinciden guarda RAM, sincroniza y relee SD, exigiendo el mismo SHA. Presupuesto mínimo128MiB; si Linux3.10 no tiene MemAvailable, usa una estimación conservadora documentada. No se garantiza que no pueda agotarse la memoria.
+- Acceso normal con caché de kernel, sinO_DIRECT ni snapshot atómico. La hipótesis es reducir el intervalo y evitar alternar escrituraSD con lecturaeMMC; su efectividad física sigue pendiente.
+- Exige DT, CID de esta eMMC y mapa recoveryC completo. El CID real se vincula en el binario privado; fuente pública sin esa vinculación rechaza la operación. **No es un ZIP genérico para A/B, P271 ni otro ejemplar.**
+- Si backup falla, los archivos de fuentes anteriores y sus estados verified permanecen. Si falla una fuente anterior, el motor se detiene y backup no se intenta. No hay modo general de ignorar errores.
 
-La preparaciónENV/BCB09 funcionó: menú recovery y ejecución021 observados. El instalador abortó con destino no eMMC particionada: system antes debackup/formato/flash. [Error y alcance](evidencia/ERROR-INSTALADOR-P291-021.md). La fuenteAmlogic asigna nombres lógicos manteniendo parent/part_type; [referencias fijadas y geometría](evidencia/PARTICIONES-AMLOGIC-P291-022.md).
+SD8053063680B, FAT32TVBASESD, partición8052015104B desde1MiB. Quedaron7962386432B libres. Con cacheRW se seleccionan14fuentes/7679770624B, incluido backup; exige7813988352B con reserva128MiB. La capacidad se recalcula en recovery; no se elimina una fuente para hacerla caber.
 
-022 corrige instalación y restauración con validación completa de padreMMC, rdev/atributos/tamaños/rangos y revalidación. Misma plataforma0.2.0; dosZIP022 entregados/releídos, TV todavíarecovery. [Estado y evidencias](evidencia/INSTALADOR-P291-022.md). No repetir entrada09/Update, no proponer quitar la guarda. Próximas dos líneas de revisión: compatibilidad real del preflight de022 y plan de reentrada/actualización desdeAndroid nuevo. No hay respaldo deuserdata ni instalación física concluida.
+Se sustituyeron únicamente ZIP y guía, tras archivar/verificar los anteriores. Los otros siete archivos —marcador, planC y cinco de la captura— permanecen iguales. Copia, flush de archivos y relectura SD comprobados; expulsiónWindows y flush del volumen no observados. No se formateó, reparó ni escribió en crudo; Kingston se conservó. El preparador03 ya terminó: **no repetirlo** ni reconstruir releases selladas por rutina.
 
+## Pruebas y errores de desarrollo conservados
 
-## Antecedente de la entrega 0.2.1
+- Go:38 pruebas principales/187 eventos pass; incluye backup simulado64MiB cambiante, dos lecturas antes de crear archivoSD y conservación de una fuente previa. PruebasLinux compiladas paraARM32, no ejecutadas en recovery.
+- LectoresPC:38 métodos,37pasados/1omitido porque esa cuenta Windows no podía crear symlinks reales. Comprobaciones de reparse/hardlinks y demás casos sí ejecutadas. [Recibo](../diagnostico/extractor-recovery-0.3/PRUEBAS-LECTOR-PC.json).
+- Firma integral v3/RSA-SHA256 verificada con Python/OpenJDK y un parserDER/RSA independiente; cinco alteraciones rechazadas. CID enlazado comprobado desde símboloELF, puntero/longitud y segmentosPT_LOAD. Replay del inventario real confirmó selección de14fuentes y backupúltima; CID distinto y geometría modificada rechazados.
+- Primer buildRK3 abortó en una guardaPC que buscaba ldflags en buildinfo pese a `-trimpath`. No fue un intento enTV/SD. Se conservó el fallo y se corrigió la comprobación leyendo el valor real enlazado del ELF. Build02 es la entrega sellada.
+- Git inicialmente normalizó dos recibos. Se añadieron reglas de conservación y se reaplicaron al índice; el siguiente commit preserva bytes exactos. Los archivos originales y la SD no cambiaron. El commit público de entrega incluye esa corrección.
 
-## Resultado físico posterior · preparación0.9 completada
+Estos ensayos no acreditan aceptación física deRK3, captura completa, ausencia de malware ni restauración delTV.
 
-Ya existe [evidencia física de la preparación ENV/BCB](evidencia/PREPARACION-ENTRADA-P291-09.md), autorizada expresamente y ejecutada una sola vez en el primer P291. Cierre `prepared`, respaldos/recibos verificados y adquisición posterior de ENV/misc exacta. La preparación no instaló Android ni reinició. Después del ciclo físico posterior, el usuario informó un menú de recovery; aún falta confirmar la aceptación del ZIP y la instalación. No repetir launch/Update. Los apartados inferiores conservan el pedido de revisión previo a esta ejecución.
+## Cómo continuar después de la prueba del usuario
 
-## Revisión vigente · instalador0.2.1 y entrada0.9
+Primero registrar el mensaje final que vio, si volvió al menú y si hubo interrupciones. La selección indicada fue **mismoC → recovery → Apply update from SD card → update.zip**, soloSD, sinwipe ni instaladoresP291. No repetir la prueba automáticamente. Si todavía está copiando/verificando, mantener alimentación y SD; la pantalla muestra etapas de extracción, no instalación deROM.
 
-Empezar por [ESTADO](ESTADO.md) y la [evidencia0.2.1](evidencia/ENTRADA-ORIGINAL-P291-021.md). La plataforma deriva de las particiones originales del primer P291; root se obtuvo mediante el `su` existente con autorización del usuario. Las restricciones y afirmaciones sobre ausencia de root/respaldos que siguen abajo son antecedentes, no el estado actual. No instalar ni probar en otro equipo.
+Cuando la SD regrese a una PC:
 
-La entrada propuesta ya está implementada y revisada en [Acceso USB0.9](../rom-simplificada/original-p291/entrada-apk/README.md): copia/verifica ENV y BCB, neutraliza órdenes antiguas y prepara una orden de arranque transitoria para mostrar recovery interno. **No se ejecutó: modifica ENV con riesgo de impedir el arranque y el usuario pidió decidir tras conocer ese riesgo.** La APK está instalada, pero el diálogo del sistema al2% continúa superpuesto. Instalarla o abrirla no lo cancela; el siguiente acompañamiento será por LAN, después de esa decisión.
+1. Identificar el medio por identidad/capacidad/partición y contenido, nunca solo por letra. Antes de limpiarlo, copiar a una carpeta privada nueva todos sus archivos, incluida la captura anterior y cada carpeta nueva de CAPTURAS. Mantener el árbol y los registros originales.
+2. Registrar un manifiesto de adquisición con rutas relativas, tamaños, SHA de origen antes de copiar, SHA de copiaPC y otra lectura del origen; sincronizar los archivos. No montar las imágenes ni ejecutar su contenido. Toda diferencia conserva un estado incompleto. La adquisición PC es una evidencia separada de lo que afirmó el extractor.
+3. Elegir cada captura por sus propios registros e identidad; el reloj delTV no es fiable. No mezclar partes de intentos distintos. `.img.partial` no significa por sí mismo fallo: también se conserva esa extensión en fuentes verificadas.
+4. Si tiene `resultado.json` y `report.json` de cierre favorable, usar el lector completo. Si tiene ambos registros de fallo, usar el lector parcial. Trabajar sobre la copiaPC y conservar salida/código de la herramienta.
 
-La revisión externa útil puede seguir dos líneas independientes:
+Desde la raíz del clon, con Python3.11+ y sustituyendo `CAPTURA_LOCAL` por la carpeta copiada:
 
-- Entrada: [análisis de recovery/ENV](../rom-simplificada/original-p291/entrada/ANALISIS-RECOVERY.md), orden preboot/bootcmd, limitaciones de saveenv, concurrencia del cierre OEM pendiente y persistencia del helper. No proponer como probado un rescate de un equipo sin arranque.
-- Instalación/restauración: [contrato de migración](../rom-simplificada/original-p291/instalacion-021/CONTRATO-MIGRACION.md), seis copias antes del formato, verificación de ext4 vacío, cinco destinos/boot al final y [restaurador separado](../rom-simplificada/original-p291/restauracion-021/README.md). La constante ARM32 de tamaño fue confirmada físicamente en lectura; los ZIP anteriores0.2.0 quedan históricos.
+```text
+python diagnostico/extractor-recovery-0.3/verificar-captura.py --capture CAPTURA_LOCAL
+python diagnostico/extractor-recovery-0.3/verificar-parcial.py --capture CAPTURA_LOCAL
+```
 
-Registrar commit público, hallazgo con ruta/línea, evidencia, supuesto y condición de parada. Los recibos acreditan firma/copia o pruebas locales según su alcance; recuperación, instalación, WebView activo y video físico siguen pendientes. El [estado USB vigente](../rom-simplificada/INSTALACION-USB.md) distingue la copia del resultado en TV.
+Se elige uno según los registros, no se ejecuta el segundo para convertir un rechazo del primero en éxito. `selected_sources_verified_pc` acredita la selección verificada con sus omisiones; no todaeMMC. `failed_capture_files_verified_pc` significa que se comprobaron archivos de una captura fallida: contar solamente `verified_source_bytes` y conservar el estado global incompleto. Backup con hashes distintos nunca es un original estable.
 
-## Historial del pedido anterior
+Si faltan registros, existen marcadores contradictorios o el lector rechaza los archivos, conservarlos para revisión específica. El lector parcial es estricto y no cubre todas las interrupciones posibles; no alterar el JSON ni inventar un cierre para que pase. Si falta evidencia de verificación de una parte, registrar pendiente.
 
-## Actualización para la revisión conjunta · ROM original 0.2.0
+| Resultado nuevo | Acción útil siguiente |
+| --- | --- |
+| Selección completa verificada | Comparar con inventarioC/plan, documentar fuentes y omisiones; preparar inspección de drivers/firmware de esas copias. Restauración continúa sin probar. |
+| Solo backup falla al final | Conservar y verificar el resto; registrar ambos SHA/etapa. Analizar qué cambió sin desechar fuentes buenas ni debilitar la comprobación. |
+| Falla antes de backup | Identificar primera fuente/etapa y alcance real; no atribuirlo automáticamente a p10. |
+| Error de memoria en backup | Las fuentes anteriores pueden estar verificadas; documentar el presupuesto observado antes de proponer otra variante. |
+| Perfil/SD/espacio rechazado | Revisar inventario y guardas concretas; no quitar la validación de identidad ni elegir otro disco por letra. |
 
-Ya se construyó una derivación desde los originales del primer P291 y un ZIP separado de restauración. Revisar [composición/evidencias](evidencia/ROM-ORIGINAL-P291-020.md) y [receta](../rom-simplificada/original-p291/README.md). No hay instalación física ni entrega USB nueva. La candidata0.1.2 y el menú OEM bloqueado no son la próxima prueba.
+Después de esta adquisición, decidir con el usuario si se trabaja sobre C o se prepara otra unidad. A/B requieren una política propia y sus evidencias. No dar por completada la capa común ni instalarROM como consecuencia automática de tener un respaldo.
 
-La revisión externa puede concentrarse en dependencias tras el recorte, entrada/recovery con geometría original, migración de userdata y límites de confianza del framework heredado. El gestor APK/Chrome ya tiene revisión independiente offline; faltan pruebas Android y el servidor del dueño. No ejecutar scripts sobre otro TV ni inferir compatibilidad del P271.
+## Archivos disponibles y privados
 
-Revisá el repositorio público https://github.com/tablerosapp-ctrl/mxqpro4k. Trabajamos sobre un TV box P291 y necesitamos una revisión independiente de la hipótesis H2, coordinada con Codex, que revisará H1. Primero leé docs/COLABORACION.md y el estado actual; registrá el commit público que recibiste.
+| Material | Ubicación/alcance |
+| --- | --- |
+| Fuentes y contratos del extractor | `diagnostico/extractor-recovery-0.3/`: Go, lectoresPython, tests y README. |
+| Receta y recibosRK3 | `diagnostico/extractor-recovery-rk3/`: compilar.py, COMPILACION, REVISION y README. |
+| Evidencia de la SD | `docs/evidencia/EXTRACTOR-SD-03.md`, `SD-03-LECTURA-FINAL.json`, `preparacion-usb/sd-rk3229-c-03-estado.json`. |
+| CapturaRK2 y foto originales | EnPCoperadora: `privado/rk3229-c-rk2-p10-20260909/`, con ADQUISICION.json y árbolSD. Son privados. |
+| ZIP/binaryRK3 | `privado/extractor-rk3-release-20260909-02/` y `privado/extractor-rk3-build-20260909-02/`; el ZIP exacto también está enSD como update.zip. |
+| Intento de build descartado | `privado/extractor-rk3-build-20260909-01/`; no usarlo como release. |
+| RespaldoP291 publicado | [Release cifrada](https://github.com/tablerosapp-ctrl/mxqpro4k/releases/tag/respaldo-p291-20260908), [alcance y recuperación de archivos](RESPALDO-GITHUB.md). Clave separada, nunca pública; restauraciónTV no probada. |
+| CapturaRockchip enGitHub | Solo resumen saneado/hashes, no bloques niuserdata. La ReleaseP291 no incluye Rockchip. |
 
-Queremos instalar en su memoria interna una ROM Android simplificada desde un pendrive, conservar drivers de video y APIs para APK Flutter/WebView, videos locales y actualización propia. No buscamos solo actualizar Chrome en el Android existente. El primer TV no tendrá red como requisito. Su ADB local ya funciona como shell UID2000; no habilites root ni cambies autenticación.
+Documentar todo no significa publicar claves, CID, userdata, ROM o registros privados en claro. GitHub contiene fuentes, decisiones, evidencia saneada y el historial; algunos enlaces a insumos privados estarán ausentes en el clon. Las herramientas y claves no vienen con Git. Los preparadores públicos tienen identidades anonimizadas y no deben ejecutarse sobre medios reales sin restituir una configuración privada comprobada. No cambiar guardas para hacer funcionar el clon.
 
-Estado comprobado: la captura0.6 obtuvo el APK exacto de OTAUpgrade y otacerts del P291. La firma integral de nuestra ROM0.1.1 verifica en PC contra ese almacén. El recovery interno, sus claves y el bootloader instalado no se extrajeron. Al elegir y confirmar el ZIP completo en el menú OEM aparece Copying y luego preparación Android al2%, detenida más de diez minutos. No se observó recovery ni instalación; no hay respaldo original del TV confirmado. El resultado del último ciclo manual indicado todavía no fue comunicado.
+## Trabajo de producto que sigue abierto
 
-Tu línea H2 está en docs/hipotesis/H2-PREPARACION-RECOVERY.md. Auditá la cadena de preparación persistente: copia a /data/cache/update.zip, uncrypt_file, block.map, setupBcb, bootloader e ingreso al recovery interno. Contrastá el código del APK real con AOSP9 y con la referencia Amlogic, sin confundir referencias con el firmware instalado. Identificá si tenemos un error en la interpretación o en el paquete, y qué evidencia mínima permitiría distinguirlo.
+Home del P291; logo e inicio; proveedorWebView usado por la APK; videoVP9/transparencia/canvas y almacenamientooffline; consumo y tráfico; revisión de servicios de teléfono/contactos/mensajes, KeyChain e IntentFilterVerification y dependencias; actualización remota firmada y mecanismo de recuperación; reconocimiento porfamilia e instalación rápida porlote. [Incidencias](INCIDENCIAS.md), [componentes heredados](REVISION-COMPONENTES-HEREDADOS.md), [roadmap](ROADMAP.md).
 
-Antes de proponer una prueba física, devolvé: evidencia a favor/en contra, supuesto más débil, dato que refutaría H2, cambios concretos si los hubiera y condición de detención. No repitas Update ni propongas otra APK que solo solicite reboot. No presentes como instalado lo verificado en PC, ni el pstore de intentos viejos como un registro del intento actual. H1 y H2 pueden coexistir.
+No clasificar un paquete como malware solo por el nombre. P291 conserva framework/firmaOEM y SELinuxpermisivo: no es AOSP limpio ni tiene certificado antimalware. El gestor propio está incluido y desactivado; el usuario tiene servidor pero no proporcionó URL para configurarlo. No inventar endpoint ni afirmar que actualizaROM/remotamente ya.
 
-Podés responder mediante issue, fork/PR o texto para el usuario. No necesitás credenciales de esta cuenta GitHub. No publiques claves, firmware, APK de terceros o logs crudos. Si falta un archivo imprescindible, indicá su ruta y por qué cambiaría la conclusión; primero usá las conclusiones saneadas, hashes y fuentes ya incluidas.
+## Coordinación e historial
+
+La prueba y preparación de extracción fueron autorizadas. Este relevo documental no ordena otra operación física ni cancela autorizaciones previas; cualquier instrucción nueva del usuario debe incorporarse explícitamente. Fable trabaja desde otra cuenta/PC: registrar commit, archivos revisados, resultado observado, hipótesis, cambio propuesto y criterio de detención. Puede devolver documento o PR/fork; no necesita las credenciales de esta cuenta.
+
+No reescribir recibos ni releases para documentar un resultado posterior. Hacer la siguiente corrección como versión nueva si cambia código sellado. No repetir UpdateOEM al2%, entradaENV/BCBP291, instaladoresP291 o formatosSD por leer instrucciones históricas.
+
+La [entrega anterior para Fable](https://github.com/tablerosapp-ctrl/mxqpro4k/blob/57eb693a967fb9a9c1155ad7a48fa7856d1f2ddd/docs/ENTREGA-FABLE.md) conserva la crónica previa. La [colaboración histórica H1/H2](https://github.com/tablerosapp-ctrl/mxqpro4k/blob/57eb693a967fb9a9c1155ad7a48fa7856d1f2ddd/docs/COLABORACION.md) corresponde al bloqueo delP291 antes de su instalación; no es el trabajo activo deRK3. Todo sigue disponible enGit y en los documentos de evidencia enlazados.

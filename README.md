@@ -1,5 +1,7 @@
 # TV Base · empezar aquí
 
+**Para continuar con Fable después de la prueba RK3:** [guía completa de relevo](docs/ENTREGA-FABLE.md). Incluye estado, archivos, pruebas, errores, recepción de la SD y próximos pasos. El resultado físico RK3 todavía no fue comunicado.
+
 **El último Rockchip ya está reconocido: RK3229-C. La copia manual llegó íntegra y quedó guardada en PC.** [Hallazgos C](diagnostico/reconocimiento-20260908-rk3229-manual/HALLAZGOS.md) · [Matriz P291/P271/RK3229-A/B/C](docs/MATRIZ-PERFILES.md). Son tres configuraciones RK distintas aunque compartan nombre comercial y DT; cambian memoria, firmware y radio. Sus API corresponden a Android7.1, pese a las etiquetas11.1/13.0.
 
 **SD0.3/RK3 preparada: copia las demás particiones y deja `backup` para el final con una variante en RAM.** RK2 ya ejecutó: `parameter` pasó y `backup` cambió entre lecturas; [captura parcial conservada](docs/evidencia/ERROR-RK2-BACKUP-C.md). La [entrega nueva](docs/evidencia/EXTRACTOR-SD-03.md) está compilada, revisada y copiada/releída, sin borrar esa captura. Usar soloSD en el mismo RK3229-C: Apply update from SD card → update.zip. La prueba físicaRK3 sigue pendiente. No instala una ROM ni sirve aún para otros ejemplares.

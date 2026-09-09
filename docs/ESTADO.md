@@ -1,5 +1,9 @@
 # Estado operativo
 
+## Relevo actual a Fable
+
+El usuario continuará con Fable después de probar RK3. [Guía completa de continuidad](ENTREGA-FABLE.md): estado por equipo, artefactos y hashes, corrección aplicada, adquisición posterior, interpretación de éxito/fallo, pendientes e historial. Resultado físico RK3 todavía no comunicado; no se modificaron TV, SD ni artefactos durante este relevo documental.
+
 ## Vigente · RK3 entregado; backup se intenta al final
 
 El extractor0.2/RK2 funcionó desdeSD y copió4MiB de `parameter` correctamente. Se detuvo en64MiB de `backup` porque dos lecturas del origen dieronSHA distintos. La captura parcial quedó conservada y verificada enPC; las doce fuentes posteriores no se intentaron. [Evidencia](evidencia/ERROR-RK2-BACKUP-C.md).
