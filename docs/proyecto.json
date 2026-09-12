@@ -754,7 +754,8 @@
         "colaboracion/drive/conectar.py",
         "colaboracion/drive/test_drive.py",
         "docs/DRIVE-PRIVACIDAD-PROPUESTA.md",
-        "colaboracion/drive/test_conectar.py"
+        "colaboracion/drive/test_conectar.py",
+        "docs/DRIVE-PRIVACIDAD.md"
       ]
     }
   ],

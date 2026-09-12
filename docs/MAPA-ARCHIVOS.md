@@ -602,6 +602,7 @@ Requisitos: .
 - [colaboracion/drive/test_drive.py](../colaboracion/drive/test_drive.py)
 - [docs/DRIVE-PRIVACIDAD-PROPUESTA.md](../docs/DRIVE-PRIVACIDAD-PROPUESTA.md)
 - [colaboracion/drive/test_conectar.py](../colaboracion/drive/test_conectar.py)
+- [docs/DRIVE-PRIVACIDAD.md](../docs/DRIVE-PRIVACIDAD.md)
 
 ## Directorios y cuidado
 
@@ -644,7 +645,7 @@ Requisitos: .
 | analisis-rom | 15 | 1.822 |
 | colaboracion | 4 | 0.000 |
 | diagnostico | 304 | 0.019 |
-| docs | 78 | 0.001 |
+| docs | 79 | 0.001 |
 | dossier-s905l2.html | 1 | 0.000 |
 | images | 1 | 1.352 |
 | platform-tools-latest-windows.zip | 1 | 0.008 |
