@@ -592,7 +592,7 @@ Requisitos: REQ-11, REQ-18, REQ-19.
 
 ### C-DRIVE · Drive compartido
 
-**construido**. Cliente propio de lectura conectado; 9355 archivos coinciden por SHA. Descarga288B y refresh verificados. Revision horaria solo de seleccion; modo Prueba, permanencia pendiente. Sin subidas/borrados.
+**construido**. Cliente propio conectado; 9355 archivos iguales por SHA, descarga y refresh verificados. Aviso aprobado y configurado. Produccion pendiente de autorizacion explicita sobre usuarios; revision horaria solo de seleccion, sin subidas/borrados.
 
 Requisitos: .
 

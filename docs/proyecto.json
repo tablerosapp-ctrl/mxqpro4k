@@ -744,7 +744,7 @@
       "id": "C-DRIVE",
       "label": "Drive compartido",
       "state": "construido",
-      "description": "Cliente propio de lectura conectado; 9355 archivos coinciden por SHA. Descarga288B y refresh verificados. Revision horaria solo de seleccion; modo Prueba, permanencia pendiente. Sin subidas/borrados.",
+      "description": "Cliente propio conectado; 9355 archivos iguales por SHA, descarga y refresh verificados. Aviso aprobado y configurado. Produccion pendiente de autorizacion explicita sobre usuarios; revision horaria solo de seleccion, sin subidas/borrados.",
       "x": 0,
       "y": 4,
       "requirements": [],
