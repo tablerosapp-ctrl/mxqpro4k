@@ -1,5 +1,9 @@
 # Continuidad de TV Base
 
+## Drive compartido · alcance del 12/9/2026
+
+Tarea actual: conectar e inventariar la carpeta Drive proporcionada por el usuario; preparar descarga selectiva/sincronización de lo ya subido y documentar para Fable. Leer [DRIVE-COMPARTIDO](docs/DRIVE-COMPARTIDO.md). NO subir lo omitido ni material nuevo sin explicar relevancia/tamaño y recibir OK; tampoco borrar Drive/local. No reemplazar la carpeta compartida por backup-github-20260908: es P291, contiene clave privada y copias de pruebas. Credenciales propias por PC fuera del proyecto/privado. Programa colaboracion/drive solo lectura; baseline de IDs existente, descargas en objetos separados, sin alterar originales sellados ni ampliar selección automáticamente. Conector conectado no prueba daemon/sincronización activa; verificar recibos y estado local. RK3 físico sigue pendiente en esta sesión; no tocar TV/SD/USB por esta tarea.
+
 ## Relevo documental a Fable después de la prueba RK3
 
 El usuario pidió dejar todo documentado en GitHub y seguirá con Fable desde otra PC después de esta prueba. Leer [ENTREGA-FABLE](docs/ENTREGA-FABLE.md) y [COLABORACION](docs/COLABORACION.md), reescritos como guías vigentes con enlaces a sus versiones históricas. No se recibió resultado físico RK3 aún: recabar lo que comunique el usuario y adquirir/verificar la SD antes de otra decisión. Esta revisión solo cambia documentación/Git, sin contactoTV ni medios. La entrega03 y sus fuentes/recibos siguen sellados. No retomar H1/H2/P291 ni antiguas instrucciones de Update/ENV/formato como tarea activa.

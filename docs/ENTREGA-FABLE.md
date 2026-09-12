@@ -1,5 +1,7 @@
 # Continuidad para Fable 5.1 · prueba RK3
 
+**Actualización de colaboración del 12/9/2026:** el usuario compartió los insumos privados mediante Drive. Leer [DRIVE-COMPARTIDO](DRIVE-COMPARTIDO.md) antes de descargar, sincronizar o proponer subidas; contiene preparación de Git/Python/rclone en la otra PC y el límite a archivos ya subidos. No reemplazar esa carpeta por el respaldo cifrado P291 ni compartir credenciales entre cuentas.
+
 Este es el punto de entrada vigente para continuar desde Claude Desktop en otra PC. El usuario pidió documentar todo antes del relevo y continuará con Fable después de esta prueba. **El resultado físico de RK3 todavía no fue comunicado a esta sesión.** No inferir éxito, error ni estado actual del TV a partir de la entrega de la SD.
 
 La última entrega publicada antes de este relevo corresponde al commit público `57eb693a967fb9a9c1155ad7a48fa7856d1f2ddd` (Git operativo local `9a682b383377955db927fa4a686a7f5c07e1bf4b`). Esta guía se publica después. Al comenzar, registrar el HEAD público realmente recibido y leer cualquier evidencia posterior; no quedarse fijado a ese commit si ya llegaron resultados nuevos.

@@ -72,6 +72,11 @@ mxqpro4k/
 │   ├── origen-github.json
 │   ├── RESULTADO.md
 │   └── verificar-integridad-interna.py
+├── colaboracion/
+│   └── drive/
+│       ├── conectar.py
+│       ├── drive.py
+│       └── test_drive.py
 ├── diagnostico/
 │   ├── extractor-recovery-0.1/
 │   │   ├── capture.go
@@ -350,6 +355,7 @@ mxqpro4k/
 │   ├── COLABORACION.md
 │   ├── DECISIONES.md
 │   ├── DESARROLLO.md
+│   ├── DRIVE-COMPARTIDO.md
 │   ├── ENTREGA-FABLE.md
 │   ├── ESPECIFICACION.md
 │   ├── ESTADO.md
@@ -1017,6 +1023,7 @@ mxqpro4k/
 │   ├── mksh-audit/ [16 archivos; 4.2 MB; agrupado]
 │   ├── platform-tools/ [14 archivos; 17.5 MB; agrupado]
 │   ├── pruebas-reconocedor-json/ [2 archivos; 0.1 MB; agrupado]
+│   ├── rclone-1.75.1/ [4 archivos; 116.7 MB; agrupado]
 │   ├── rufus-4.15p.exe
 │   └── verificacion-apk/ [488 archivos; 407.7 MB; agrupado]
 ├── .gitattributes

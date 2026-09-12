@@ -1,5 +1,9 @@
 # Estado operativo
 
+## Colaboración mediante Drive · 12/9/2026
+
+Se revisa la carpeta que el usuario ya subió para Fable y se prepara acceso local de lectura y descarga selectiva verificada. [Contrato y estado](DRIVE-COMPARTIDO.md). Lo omitido continúa excluido: cualquier subida adicional requiere justificación y OK. No se recibieron nuevos resultados físicos RK3 durante esta revisión ni se contactaron TV/SD/USB. La conexión del conector no equivale a sincronización local continua.
+
 ## Relevo actual a Fable
 
 El usuario continuará con Fable después de probar RK3. [Guía completa de continuidad](ENTREGA-FABLE.md): estado por equipo, artefactos y hashes, corrección aplicada, adquisición posterior, interpretación de éxito/fallo, pendientes e historial. Resultado físico RK3 todavía no comunicado; no se modificaron TV, SD ni artefactos durante este relevo documental.

@@ -1,5 +1,7 @@
 # TV Base · empezar aquí
 
+**Trabajo entre PCs mediante Drive:** [acceso, archivos excluidos y preparación para Fable](docs/DRIVE-COMPARTIDO.md). GitHub conserva código y documentación saneada; Drive contiene los insumos privados que el usuario ya compartió. No subir carpetas omitidas automáticamente.
+
 **Para continuar con Fable después de la prueba RK3:** [guía completa de relevo](docs/ENTREGA-FABLE.md). Incluye estado, archivos, pruebas, errores, recepción de la SD y próximos pasos. El resultado físico RK3 todavía no fue comunicado.
 
 **El último Rockchip ya está reconocido: RK3229-C. La copia manual llegó íntegra y quedó guardada en PC.** [Hallazgos C](diagnostico/reconocimiento-20260908-rk3229-manual/HALLAZGOS.md) · [Matriz P291/P271/RK3229-A/B/C](docs/MATRIZ-PERFILES.md). Son tres configuraciones RK distintas aunque compartan nombre comercial y DT; cambian memoria, firmware y radio. Sus API corresponden a Android7.1, pese a las etiquetas11.1/13.0.

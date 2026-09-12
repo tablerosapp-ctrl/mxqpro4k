@@ -25,6 +25,7 @@ flowchart LR
     C_LOTES["Dos recorridos de lote · propuesto"]
     C_RECON["Reconocimiento0.3 · observado_tv"]
     C_EXTRACT["Extracción SD0.3 / RK3 · construido"]
+    C_DRIVE["Drive compartido · construido"]
     C_PERFIL -->|"selecciona"| C_BASE
     C_CHROME -->|"motor admitido"| C_WEB
     C_INICIO -->|"se integra"| C_ROM
@@ -53,6 +54,7 @@ flowchart LR
     C_RECON -->|"informa plan DT"| C_EXTRACT
     C_EXTRACT -->|"adquiere originales verificables"| C_ORIG
     C_EXTRACT -->|"contrasta mapa real"| C_PERFIL
+    C_DRIVE -->|"comparte insumos privados; conserva originales"| C_ORIG
 ```
 
 ## Archivos por componente
@@ -588,6 +590,17 @@ Requisitos: REQ-11, REQ-18, REQ-19.
 - [diagnostico/extractor-recovery-rk3/REVISION.md](../diagnostico/extractor-recovery-rk3/REVISION.md)
 - [diagnostico/extractor-recovery-rk3/compilar.py](../diagnostico/extractor-recovery-rk3/compilar.py)
 
+### C-DRIVE · Drive compartido
+
+**construido**. Acceso por conector confirmado. Conexion local de lectura y descarga selectiva preparadas; OAuth y prueba de transferencia pendientes. Sin subidas ni borrados.
+
+Requisitos: .
+
+- [docs/DRIVE-COMPARTIDO.md](../docs/DRIVE-COMPARTIDO.md)
+- [colaboracion/drive/drive.py](../colaboracion/drive/drive.py)
+- [colaboracion/drive/conectar.py](../colaboracion/drive/conectar.py)
+- [colaboracion/drive/test_drive.py](../colaboracion/drive/test_drive.py)
+
 ## Directorios y cuidado
 
 | Ruta | Función | Regla |
@@ -627,13 +640,14 @@ Requisitos: REQ-11, REQ-18, REQ-19.
 | README.md | 1 | 0.000 |
 | actualizacion-chrome | 51 | 0.417 |
 | analisis-rom | 15 | 1.822 |
+| colaboracion | 3 | 0.000 |
 | diagnostico | 304 | 0.019 |
-| docs | 76 | 0.001 |
+| docs | 77 | 0.001 |
 | dossier-s905l2.html | 1 | 0.000 |
 | images | 1 | 1.352 |
 | platform-tools-latest-windows.zip | 1 | 0.008 |
 | preparacion-usb | 116 | 3.688 |
 | rom-simplificada | 4619 | 14.542 |
-| tools | 18088 | 1.173 |
+| tools | 18092 | 1.290 |
 
 El inventario excluye derivados documentales y contenido de claves; los tamaños son de archivos, no bloques físicos ocupados. Los temporales retirados se detallan en [LIMPIEZA](LIMPIEZA.md).

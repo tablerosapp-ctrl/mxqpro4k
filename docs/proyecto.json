@@ -65,7 +65,8 @@
     "rk2_partial_pc": "docs/evidencia/RK2-C-CAPTURA-PARCIAL-PC.json",
     "rk3_review": "diagnostico/extractor-recovery-rk3/REVISION.json",
     "sd03_readback": "docs/evidencia/SD-03-LECTURA-FINAL.json",
-    "current_handoff": "docs/ENTREGA-FABLE.md"
+    "current_handoff": "docs/ENTREGA-FABLE.md",
+    "shared_private_files": "docs/DRIVE-COMPARTIDO.md"
   },
   "components": [
     {
@@ -738,6 +739,21 @@
         "REQ-18",
         "REQ-19"
       ]
+    },
+    {
+      "id": "C-DRIVE",
+      "label": "Drive compartido",
+      "state": "construido",
+      "description": "Acceso por conector confirmado. Conexion local de lectura y descarga selectiva preparadas; OAuth y prueba de transferencia pendientes. Sin subidas ni borrados.",
+      "x": 0,
+      "y": 4,
+      "requirements": [],
+      "files": [
+        "docs/DRIVE-COMPARTIDO.md",
+        "colaboracion/drive/drive.py",
+        "colaboracion/drive/conectar.py",
+        "colaboracion/drive/test_drive.py"
+      ]
     }
   ],
   "edges": [
@@ -880,6 +896,11 @@
       "source": "C-EXTRACT",
       "target": "C-PERFIL",
       "relation": "contrasta mapa real"
+    },
+    {
+      "source": "C-DRIVE",
+      "target": "C-ORIG",
+      "relation": "comparte insumos privados; conserva originales"
     }
   ],
   "requirements": [
@@ -2195,8 +2216,10 @@
     "coordination": "docs/COLABORACION.md",
     "technical_delivery_public_base": "57eb693a967fb9a9c1155ad7a48fa7856d1f2ddd",
     "physical_rk3_result_received": false,
-    "documentation_only": true,
+    "documentation_only": false,
     "media_or_tv_contacted": false,
-    "historical_versions_retained_in_git": true
+    "historical_versions_retained_in_git": true,
+    "private_cloud_guide": "docs/DRIVE-COMPARTIDO.md",
+    "current_work": "Drive access and selected downloads; no TV or media contact"
   }
 }

@@ -1,5 +1,9 @@
 # Colaboración: Codex y Fable 5.1
 
+## Archivos compartidos en Drive · 12 de septiembre de 2026
+
+El usuario ya compartió parte de `privado` en Drive. [Guía de acceso, límites y preparación de la otra PC](DRIVE-COMPARTIDO.md). Mantener lo que ya subió; no sustituirlo por `backup-github-20260908`, que es específico del P291, incluye copias de comprobación y una clave privada. No subir lo omitido ni incorporar nuevos archivos sin justificarlo y obtener su OK. Cada PC conecta su propia cuenta; las credenciales quedan fuera del repositorio y de Drive. GitHub sigue siendo el canal para código/PR y conclusiones saneadas.
+
 ## Estado vigente del relevo
 
 El usuario continuará con Fable desde Claude Desktop en otraPC después de probar RK3. La guía actual es [ENTREGA-FABLE](ENTREGA-FABLE.md): reúne objetivo, estado de cada equipo, hechos/hipótesis, paquete entregado, adquisición posterior, lectores, archivos privados y trabajo pendiente. **El resultado de la pruebaRK3 aún no fue recibido en esta sesión.**
