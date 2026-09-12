@@ -225,3 +225,7 @@ CLAVE-PRIVADA-RESPALDO-*.txt
 !/diagnostico/extractor-recovery-0.3/PRUEBAS-LECTOR-PC.json
 !/diagnostico/extractor-recovery-rk3/COMPILACION.json
 !/diagnostico/extractor-recovery-rk3/REVISION.json
+
+# Credenciales de conexion: siempre fuera del repositorio.
+client_secret*.json
+rclone.conf

@@ -55,6 +55,8 @@ def connection():
     cfg = c['tvbase']
     if cfg.get('scope') != 'drive.readonly' or not cfg.get('token'):
         raise ValueError('Se exige conexion de solo lectura')
+    if not cfg.get('client_id') or not cfg.get('client_secret'):
+        raise ValueError('Configurar cliente propio; no reintentar el cliente compartido')
     folder = cfg.get('root_folder_id', '')
     if not re.fullmatch(r'[A-Za-z0-9_-]{10,}', folder):
         raise ValueError('Falta ID de carpeta compartida')

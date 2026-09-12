@@ -744,7 +744,7 @@
       "id": "C-DRIVE",
       "label": "Drive compartido",
       "state": "construido",
-      "description": "Acceso por conector confirmado. Conexion local de lectura y descarga selectiva preparadas; OAuth y prueba de transferencia pendientes. Sin subidas ni borrados.",
+      "description": "Cliente propio de lectura conectado; 9355 archivos coinciden por SHA. Descarga288B y refresh verificados. Revision horaria solo de seleccion; modo Prueba, permanencia pendiente. Sin subidas/borrados.",
       "x": 0,
       "y": 4,
       "requirements": [],
@@ -752,7 +752,9 @@
         "docs/DRIVE-COMPARTIDO.md",
         "colaboracion/drive/drive.py",
         "colaboracion/drive/conectar.py",
-        "colaboracion/drive/test_drive.py"
+        "colaboracion/drive/test_drive.py",
+        "docs/DRIVE-PRIVACIDAD-PROPUESTA.md",
+        "colaboracion/drive/test_conectar.py"
       ]
     }
   ],

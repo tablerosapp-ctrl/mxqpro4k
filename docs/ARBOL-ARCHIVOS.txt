@@ -76,6 +76,7 @@ mxqpro4k/
 │   └── drive/
 │       ├── conectar.py
 │       ├── drive.py
+│       ├── test_conectar.py
 │       └── test_drive.py
 ├── diagnostico/
 │   ├── extractor-recovery-0.1/
@@ -356,6 +357,7 @@ mxqpro4k/
 │   ├── DECISIONES.md
 │   ├── DESARROLLO.md
 │   ├── DRIVE-COMPARTIDO.md
+│   ├── DRIVE-PRIVACIDAD-PROPUESTA.md
 │   ├── ENTREGA-FABLE.md
 │   ├── ESPECIFICACION.md
 │   ├── ESTADO.md

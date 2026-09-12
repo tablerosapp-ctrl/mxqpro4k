@@ -24,6 +24,14 @@ Estos tamaños explican la acumulación de copias de trabajo, sin afirmar iguald
 
 La comparación inicial encontró 108 entradas en la raíz de Drive. Además del respaldo, no aparecen dos carpetas locales de pruebas de solo 47.900 y 44.386 bytes. No se identificó otra carpeta omitida de 9 GiB en ese nivel. **La coincidencia de carpetas no prueba que sus archivos internos estén completos**: el control por archivo y SHA es un paso separado. Los nuevos registros de esta revisión también quedan fuera del alcance subido.
 
+## Uso del plan de 5 TB
+
+La conexión utiliza el mismo almacenamiento de Google Drive de la cuenta propietaria. El proyecto exclusivo de Google Cloud identifica el cliente que accede a Drive; no cambia el destino de los archivos ni crea almacenamiento Cloud Storage. No se activó facturación ni prueba gratuita.
+
+Para aprovechar el plan del usuario, las futuras subidas grandes autorizadas deben realizarse con la cuenta titular de ese almacenamiento. Fable puede consultar y descargar con su propia cuenta. En una carpeta compartida de Mi unidad, el espacio se descuenta al propietario de cada archivo: subir desde otra cuenta consume el almacenamiento de esa otra cuenta. [Regla oficial de Google](https://support.google.com/drive/answer/9312312?hl=es). Los 5 TB son la capacidad total del plan, compartida con los otros servicios aplicables y el contenido que ya ocupa espacio; no 5 TB libres exclusivos para TV Base.
+
+Los límites de solicitudes de la API son independientes del espacio ocupado. La configuración actual sigue siendo de lectura: esta explicación no autoriza subidas adicionales.
+
 ## Diseño de sincronización de esta etapa
 
 La conexión local usa rclone con permiso Google `drive.readonly`. Las credenciales viven en `LOCALAPPDATA/TVBaseDrive`, fuera del repositorio y de `privado`; cada PC inicia sesión con su propia cuenta. El límite `root_folder_id` dirige el programa a la carpeta compartida, pero no reduce por sí mismo el alcance del permiso OAuth sobre la cuenta. No copiar tokens entre PCs. [Documentación oficial de Drive en rclone](https://rclone.org/drive/).
@@ -48,14 +56,16 @@ Clonar el [repositorio público](https://github.com/tablerosapp-ctrl/mxqpro4k), 
 Desde la raíz del clon, sustituyendo los valores de ejemplo por rutas reales y el ID recibido privadamente:
 
 ```powershell
-python colaboracion/drive/conectar.py --rclone C:/Herramientas/rclone.exe --folder-id ID_RECIBIDO_DEL_USUARIO
+python colaboracion/drive/conectar.py --rclone C:/Herramientas/rclone.exe --folder-id ID_RECIBIDO_DEL_USUARIO --client-json C:/ConfiguracionPrivada/cliente-escritorio.json
 python colaboracion/drive/drive.py --rclone C:/Herramientas/rclone.exe inventory
 python colaboracion/drive/drive.py --rclone C:/Herramientas/rclone.exe compare --manifest privado/drive-compartido/BASELINE.json
 python colaboracion/drive/drive.py --rclone C:/Herramientas/rclone.exe select --path RUTA_EXACTA_DEL_INVENTARIO
 python colaboracion/drive/drive.py --rclone C:/Herramientas/rclone.exe refresh
 ```
 
-El inicio de sesión se completa en el navegador. El log de conexión puede contener secretos: queda fuera del proyecto y no se pega en chats ni PR. Si la conexión se interrumpe y deja configuración parcial, revisar el estado; el script no la reemplaza automáticamente. [Configuración oficial](https://rclone.org/commands/rclone_config_create/).
+La conexión requiere un cliente OAuth propio de tipo escritorio; el cliente compartido de rclone ya no debe utilizarse. El JSON se entrega por un canal privado y se guarda fuera del clon y de Drive. El JSON identifica la aplicación; no sustituye la autorización de la cuenta de cada participante ni contiene su token de usuario. Mientras el proyecto esté en Prueba, el administrador debe registrar la cuenta Google de Fable antes de conectar. No asumir su dirección a partir de la cuenta GitHub.
+
+El inicio de sesión se completa en el navegador. El log de conexión puede contener secretos: queda fuera del proyecto y no se pega en chats ni PR. Si la conexión se interrumpe, revisar el estado y usar `--reconnect` únicamente con el mismo JSON y la misma carpeta. La migración inicial desde el cliente compartido usa `--replace-shared-client`, verifica alcance e identidad, conserva la configuración previa y no imprime credenciales. Una configuración ajena o de otro cliente se rechaza. No repetir una migración ya completada. [Configuración oficial](https://rclone.org/commands/rclone_config_create/).
 
 Los objetos descargados quedan bajo `privado/drive-compartido/objetos`, separados por ID y hash; las selecciones y recibos están junto a ellos. No subir esa carpeta nueva sin autorización: contiene copias y metadatos privados de la sincronización. El usuario puede ver la selección en los JSON de `seleccion`; detener la revisión periódica no borra objetos.
 
@@ -65,8 +75,22 @@ Las pruebas locales del programa cubren rutas inseguras, nombres duplicados, fal
 
 La lectura del conector ya confirmó acceso a la carpeta. La conexión local y sus primeras transferencias se acreditarán mediante recibos nuevos en esta revisión. No afirmar sincronización continua por haber instalado un conector: requiere conexión local válida, selección de archivos y revisión periódica activa. Con la PC apagada o sin Internet no hay actualizaciones locales; Drive sigue disponible para la otra PC.
 
-**Cierre de esta revisión:** el navegador abrió la elección de cuenta Google, pero la conexión local venció a los 15 minutos sin completarse. No hay inventario recursivo verificado, descarga real acreditada ni actualización periódica activa. Conservar la configuración parcial fuera del proyecto; al retomar, comprobar su estado y reabrir la autorización con el usuario presente. Las pruebas del programa fueron cinco métodos con casos adicionales, todos correctos; Git/grafo/enlaces validados. No se subió ni borró contenido de Drive.
+**Estado actualizado:** la segunda autorización local sí terminó y dejó un token de solo lectura. El primer inventario recursivo falló con HTTP 403 `RATE_LIMIT_EXCEEDED` en el proyecto compartido del cliente de rclone: no es un error de cuota de almacenamiento. La [documentación de rclone](https://rclone.org/drive/#making-your-own-client-id) indica que ese cliente compartido se retira durante 2026 y exige un cliente propio.
 
-**Faltante observado:** `extractor-rk3-release-20260909-02` aparece vacía tanto en el conector como en el navegador. La copia local del ZIP RK3 sigue conservada y verificada, 1.463.158 bytes; su [construcción y alcance](evidencia/EXTRACTOR-SD-03.md) están documentados. No se subió. Puede ser útil para que Fable contraste el paquete ejecutable con las fuentes, pero requiere aprobación específica como archivo faltante; completar el inventario antes de proponer la lista final. No se determinó por qué quedó vacía.
+El usuario autorizó un proyecto exclusivo para TV Base. Se creó el proyecto y se habilitó Google Drive API, sin activar facturación. El usuario autorizó explícitamente aceptar la Política de Datos del Usuario de los Servicios de las APIs de Google. Se creó la aplicación y su cliente de escritorio, se descargó y verificó una copia privada del JSON fuera del proyecto, y se migró la conexión conservando la configuración anterior fuera de Git y Drive. El usuario completó la nueva autorización: proceso terminado con código 0, token presente, cliente propio y permiso `drive.readonly`.
+
+La aplicación está en modo Prueba, con la cuenta propietaria registrada. En ese modo Google limita el token de renovación a siete días para estos permisos ([fuente oficial](https://developers.google.com/identity/protocols/oauth2#expiration)). El paso a uso permanente está pendiente: la consola exige completar presentación y política de privacidad. Se preparó una [propuesta de aviso](DRIVE-PRIVACIDAD-PROPUESTA.md); no se configuró ni aprobó como política vigente. No prometer conexión indefinida por el éxito de esta autorización.
+
+El inventario propio terminó con código 0: **9.355 archivos nativos / 6.421.648.788 bytes (5,98 GiB)**. La comparación local terminó con **9.355 `equal_sha256`**, sin diferencias. Se descargó a una copia separada un informe existente de 288 bytes, se comprobó su identidad remota antes y después y su SHA256 local; una segunda revisión terminó con código 0. Son evidencias reales adicionales a las siete pruebas locales del programa, que también pasaron. No se subió ni borró contenido de Drive.
+
+La primera solicitud de descarga coincidió con la comparación todavía activa y fue rechazada por el bloqueo de operación, antes de transferir; tras finalizar la comparación se realizó una nueva descarga correctamente. No se eliminó el bloqueo de otra operación.
+
+Se creó una revisión horaria en esta tarea de Codex para `refresh`: solo actualiza copias de archivos expresamente seleccionados y conserva versiones. **La selección inicial contiene únicamente el informe de prueba de 288 bytes**, no los 9.355 archivos ni todos los gigabytes. El resto ya coincide con los originales locales y se descarga/selecta en cada PC según necesidad. La revisión no incorpora nuevos IDs ni publica cambios locales. Su ejecución depende de que la aplicación y el equipo estén disponibles, de la conexión y de los límites de uso; no es un servicio independiente de Windows. Registro de creación conservado privadamente; primera ejecución programada aún no observada. [Tareas programadas](https://learn.chatgpt.com/docs/automations?surface=app).
+
+**Comparación recursiva de rutas:** se registraron 23.266 archivos locales / 52.066.303.898 bytes sin la misma ruta en la lista remota, excluyendo los registros nuevos de esta integración. De ellos, 37.266.285.610 bytes son `backup-github-20260908`; los demás suman 14.800.018.288 bytes. Esta revisión de ausencias no buscó copias idénticas bajo otros nombres y no acredita que todo falte por contenido. No atribuir la causa a un fallo de subida sin evidencia.
+
+Entre las rutas ausentes se encuentran cinco imágenes de la adquisición de instalación P291 (incluida `data.img`), dos respaldos de entrada, copias de la APK del actualizador, parte de `original-p291-empaquetado` y cachés de compilación. No proponer subir todo como bloque: userdata puede contener datos de la unidad; cachés y copias de trabajo no tienen la misma utilidad que originales y recibos. Fable ya puede trabajar con el material disponible; evaluar faltantes concretos cuando una tarea los requiera.
+
+**Faltante observado:** `extractor-rk3-release-20260909-02` aparece vacía tanto en el conector como en el navegador. La copia local del ZIP RK3 sigue conservada y verificada, 1.463.158 bytes; su [construcción y alcance](evidencia/EXTRACTOR-SD-03.md) están documentados. No se subió. Puede ser útil para que Fable contraste el paquete ejecutable con las fuentes, pero requiere aprobación específica como archivo faltante; el inventario recursivo confirmó que también falta su `COMPILACION.json` de 25.906 bytes. Ambos suman 1.489.064 bytes y pueden proponerse juntos para revisar RK3, con autorización antes de subir. No se determinó por qué quedó vacía.
 
 Antes de ampliar a subidas: lista de archivos exactos, motivo, tamaños, origen/hash y aprobación. Después, implementar una versión separada con control de conflictos. No usar `rclone sync`, `bisync --resync` ni sincronizar `privado` completo como atajo: [sync puede borrar elementos del destino](https://rclone.org/commands/rclone_sync/).

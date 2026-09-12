@@ -13,6 +13,21 @@ spec.loader.exec_module(d)
 
 
 class Guards(unittest.TestCase):
+    def test_connection_requires_own_readonly_client(self):
+        with tempfile.TemporaryDirectory(dir=d.ROOT / 'privado') as temp:
+            cfg = Path(temp) / 'test.conf'
+            base = '[tvbase]\ntype = drive\nscope = drive.readonly\nroot_folder_id = example_folder_id\ntoken = fixture\n'
+            with patch.object(d, 'CFG', cfg):
+                cfg.write_text(base, encoding='utf8')
+                with self.assertRaises(ValueError):
+                    d.connection()
+                own = base + 'client_id = fixture\nclient_secret = fixture\n'
+                cfg.write_text(own, encoding='utf8')
+                self.assertEqual(d.connection(), 'example_folder_id')
+                cfg.write_text(own.replace('drive.readonly', 'drive'), encoding='utf8')
+                with self.assertRaises(ValueError):
+                    d.connection()
+
     def test_paths(self):
         for path in ('../secret', '/secret', 'a/../b', 'a\\b', 'C:/data',
                      'a//b', 'a\nfile', 'a/NUL.txt', 'a/end.', 'a/end ', ''):

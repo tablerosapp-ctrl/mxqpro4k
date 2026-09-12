@@ -4,6 +4,8 @@
 
 Se revisa la carpeta que el usuario ya subió para Fable y se prepara acceso local de lectura y descarga selectiva verificada. [Contrato y estado](DRIVE-COMPARTIDO.md). Lo omitido continúa excluido: cualquier subida adicional requiere justificación y OK. No se recibieron nuevos resultados físicos RK3 durante esta revisión ni se contactaron TV/SD/USB. La conexión del conector no equivale a sincronización local continua.
 
+La autorización local de lectura terminó; el inventario falló por el límite de solicitudes del cliente compartido de rclone. Proyecto propio creado, API habilitada, política aceptada por autorización explícita y cliente de escritorio conectado con código 0. Inventario propio de 9.355 archivos / 6.421.648.788 bytes, todos coinciden con SHA local. Descarga de prueba y refresh verificados; modo Prueba de Google, permanencia pendiente. El plan de 5 TB se conserva para archivos propiedad de la cuenta titular. Revisión horaria creada solo para la selección actual de un informe de prueba; no es sincronización de toda la carpeta.
+
 ## Relevo actual a Fable
 
 El usuario continuará con Fable después de probar RK3. [Guía completa de continuidad](ENTREGA-FABLE.md): estado por equipo, artefactos y hashes, corrección aplicada, adquisición posterior, interpretación de éxito/fallo, pendientes e historial. Resultado físico RK3 todavía no comunicado; no se modificaron TV, SD ni artefactos durante este relevo documental.

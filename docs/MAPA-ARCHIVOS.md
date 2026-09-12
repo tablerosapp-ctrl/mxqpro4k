@@ -592,7 +592,7 @@ Requisitos: REQ-11, REQ-18, REQ-19.
 
 ### C-DRIVE · Drive compartido
 
-**construido**. Acceso por conector confirmado. Conexion local de lectura y descarga selectiva preparadas; OAuth y prueba de transferencia pendientes. Sin subidas ni borrados.
+**construido**. Cliente propio de lectura conectado; 9355 archivos coinciden por SHA. Descarga288B y refresh verificados. Revision horaria solo de seleccion; modo Prueba, permanencia pendiente. Sin subidas/borrados.
 
 Requisitos: .
 
@@ -600,6 +600,8 @@ Requisitos: .
 - [colaboracion/drive/drive.py](../colaboracion/drive/drive.py)
 - [colaboracion/drive/conectar.py](../colaboracion/drive/conectar.py)
 - [colaboracion/drive/test_drive.py](../colaboracion/drive/test_drive.py)
+- [docs/DRIVE-PRIVACIDAD-PROPUESTA.md](../docs/DRIVE-PRIVACIDAD-PROPUESTA.md)
+- [colaboracion/drive/test_conectar.py](../colaboracion/drive/test_conectar.py)
 
 ## Directorios y cuidado
 
@@ -640,9 +642,9 @@ Requisitos: .
 | README.md | 1 | 0.000 |
 | actualizacion-chrome | 51 | 0.417 |
 | analisis-rom | 15 | 1.822 |
-| colaboracion | 3 | 0.000 |
+| colaboracion | 4 | 0.000 |
 | diagnostico | 304 | 0.019 |
-| docs | 77 | 0.001 |
+| docs | 78 | 0.001 |
 | dossier-s905l2.html | 1 | 0.000 |
 | images | 1 | 1.352 |
 | platform-tools-latest-windows.zip | 1 | 0.008 |
