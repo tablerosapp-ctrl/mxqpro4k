@@ -744,7 +744,7 @@
       "id": "C-DRIVE",
       "label": "Drive compartido",
       "state": "construido",
-      "description": "Cliente propio conectado; 9355 archivos iguales por SHA, descarga y refresh verificados. Aviso aprobado y configurado. Produccion pendiente de autorizacion explicita sobre usuarios; revision horaria solo de seleccion, sin subidas/borrados.",
+      "description": "Drive en produccion autorizado; token renovado de lectura y refresh0. 9355 archivos iguales por SHA. Aviso publicado/configurado; revision horaria solo de seleccion, sin subidas/borrados. Otra PC pendiente de comprobacion.",
       "x": 0,
       "y": 4,
       "requirements": [],
