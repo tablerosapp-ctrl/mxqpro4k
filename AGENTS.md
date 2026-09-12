@@ -1,5 +1,9 @@
 # Continuidad de TV Base
 
+## Ampliación concreta Drive para Fable · 12/9/2026
+
+Usuario aprobó cinco archivos tras justificación: ZIP RK3 + COMPILACION, FALLO.json + compilar-fallido.py build01, instalador P2910.2.2. Ya subidos por cuenta titular; 575330503B, SHA256 Google iguales a relectura local/manifiesto. Ver primera sección de [DRIVE-COMPARTIDO](docs/DRIVE-COMPARTIDO.md) para rutas y hashes; recibos privados en drive-sync-20260912. No repetir subidas. P291 en releases/P291/0.2.2, no fixture15B. Conector rechazó límite512MiB antes de subirP291; navegador completó ZIP íntegro. No subidos restaurador913MB ni claves/respaldos. Baseline inicial y selección horaria no ampliadas: para nuevosID descargar manual a derivados y compararSHA; no borrarbaseline ni cambiarreadonly. Resto omitido sigue requiriendo justificación+OK. RK3 físico pendiente, ningún TV/medio tocado.
+
 ## Drive compartido · alcance del 12/9/2026
 
 Tarea actual: conectar e inventariar la carpeta Drive proporcionada por el usuario; preparar descarga selectiva/sincronización de lo ya subido y documentar para Fable. Leer [DRIVE-COMPARTIDO](docs/DRIVE-COMPARTIDO.md). NO subir lo omitido ni material nuevo sin explicar relevancia/tamaño y recibir OK; tampoco borrar Drive/local. No reemplazar la carpeta compartida por backup-github-20260908: es P291, contiene clave privada y copias de pruebas. Credenciales propias por PC fuera del proyecto/privado. Programa colaboracion/drive solo lectura; baseline de IDs existente, descargas en objetos separados, sin alterar originales sellados ni ampliar selección automáticamente. Conector conectado no prueba daemon/sincronización activa; verificar recibos y estado local. RK3 físico sigue pendiente en esta sesión; no tocar TV/SD/USB por esta tarea.

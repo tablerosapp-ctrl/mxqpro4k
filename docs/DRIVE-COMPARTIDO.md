@@ -1,6 +1,30 @@
 # Archivos privados compartidos: Drive y GitHub
 
-## Alcance autorizado el 12 de septiembre de 2026
+## Ampliación aprobada y subida para Fable · 12/9/2026
+
+Después de revisar la petición de Fable, explicar los cinco archivos, destinos y un total de **575.330.503 bytes**, el usuario dio su OK explícito. Se subieron exclusivamente esos cinco archivos con la cuenta titular del almacenamiento de Drive. Se comprobaron por lectura posterior sus tamaños, ubicación, propietario y permisos; los SHA256 informados por Google coinciden con la relectura de los originales locales y el manifiesto aprobado. Esta comprobación no fue una descarga integral de los archivos desde Drive.
+
+Rutas relativas a la carpeta privada compartida:
+
+| Ruta | Bytes | SHA256 |
+| --- | ---: | --- |
+| `extractor-rk3-release-20260909-02/TVBASE-EXTRACTOR-0.3-RK3-ARM32-RECOVERY.zip` | 1463158 | `ff9595f7a64a64df77f1c1d4904a896922e62a6be51d6a9e94247e79da985d01` |
+| `extractor-rk3-release-20260909-02/COMPILACION.json` | 25906 | `5480f011b29597e9e2533056066dc3952787a616b64e926f21c72db3cae2800a` |
+| `extractor-rk3-build-20260909-01/FALLO.json` | 1134 | `7af66c06ff0ee758fb4b6a44b17b272718c5973cd325b0715fcbac41232530ae` |
+| `extractor-rk3-build-20260909-01/compilar-fallido.py` | 20300 | `fc858dfe736742459cb2bdc3db40fee45709b214c5193d3b9f0b101a0824c5bb` |
+| `releases/P291/0.2.2/TVBASE-P291-A9-0.2.2-RECOVERY.zip` | 573820005 | `163d4ce6e6fd4e02f06cb6646c53c259d1d3100547ee5c616c578782c3e54421` |
+
+Los cuatro archivos RK3 se agregaron a sus carpetas existentes. El instalador P291 se colocó en la nueva ruta `releases/P291/0.2.2`. La revisión encontró un ZIP homónimo de solo 15 bytes en una carpeta de pruebas: contiene `fixture-new-zip` y no es un instalador. Se conserva como evidencia histórica; usar la ruta y el hash de esta tabla.
+
+`FALLO.json` y `compilar-fallido.py` documentan el fallo de una guarda del primer build en PC, no un intento de instalación ni un nuevo fallo físico del TV. El ZIP RK3 es el extractor específico de RK3229-C; su vinculación privada permanece en el binario y no habilita otros equipos. El P291 es el instalador 0.2.2, no el restaurador adicional de 913.294.443 bytes. No se subieron ese restaurador, respaldos, userdata, claves de firma ni credenciales de Google.
+
+El conector cargó los cuatro archivos pequeños. Rechazó el P291 antes de transmitirlo porque 573.820.005 bytes superan su límite de 536.870.912 bytes; se cargó el ZIP íntegro desde la interfaz de Drive, sin dividirlo ni reconstruirlo. No se modificaron permisos de la carpeta ni originales locales. Los recibos con IDs y enlaces permanecen privados.
+
+**Para Fable:** descargar los archivos necesarios desde estas rutas y verificar el SHA256 de la tabla. Si ya tiene una `BASELINE.json` anterior, estos cinco IDs nuevos quedan fuera de esa lista: `inventory` no la amplía y `select` no los admite automáticamente. Puede descargarlos manualmente desde Drive a una carpeta de trabajo separada y verificar sus hashes. No borrar ni reemplazar la baseline para eludir ese control. Esta entrega no implementa una ampliación automática del programa de sincronización.
+
+La conexión rclone y la revisión horaria siguen siendo de solo lectura y mantienen su selección previa. Esta autorización se limita a los cinco archivos de la tabla; el resto de faltantes sigue pendiente de justificación y OK. No hubo contacto con TV, SD o USB; el resultado físico RK3 continúa pendiente en esta sesión.
+
+## Alcance inicial autorizado el 12 de septiembre de 2026
 
 El usuario compartió en Drive parte de `privado` para trabajar con Fable desde otra PC y otra cuenta. Autorizó revisar y preparar la sincronización **solo del contenido ya subido**. No subir archivos omitidos ni incorporar futuras capturas automáticamente: antes explicar su utilidad, tamaño y destino y obtener su OK. No se autorizaron borrados locales ni en Drive. El enlace de la carpeta y sus IDs se guardan localmente; solicitar el enlace al usuario en la otra sesión, sin publicarlo en este repositorio.
 

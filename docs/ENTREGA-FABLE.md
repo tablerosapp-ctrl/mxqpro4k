@@ -1,5 +1,7 @@
 # Continuidad para Fable 5.1 · prueba RK3
 
+**Entrega adicional aprobada y verificada:** ya están en Drive el ZIP RK3, su COMPILACION, los dos archivos del build fallido y el instalador P291 0.2.2: cinco archivos / 575.330.503 bytes. Ver rutas, hashes y descarga para una baseline anterior en [DRIVE-COMPARTIDO](DRIVE-COMPARTIDO.md). No confundir el ZIP P291 real con el archivo homónimo de pruebas de 15 bytes.
+
 **Actualización de colaboración del 12/9/2026:** el usuario compartió los insumos privados mediante Drive. Leer [DRIVE-COMPARTIDO](DRIVE-COMPARTIDO.md) antes de descargar, sincronizar o proponer subidas; contiene preparación de Git/Python/rclone en la otra PC y el límite a archivos ya subidos. No reemplazar esa carpeta por el respaldo cifrado P291 ni compartir credenciales entre cuentas.
 
 Este es el punto de entrada vigente para continuar desde Claude Desktop en otra PC. El usuario pidió documentar todo antes del relevo y continuará con Fable después de esta prueba. **El resultado físico de RK3 todavía no fue comunicado a esta sesión.** No inferir éxito, error ni estado actual del TV a partir de la entrega de la SD.
